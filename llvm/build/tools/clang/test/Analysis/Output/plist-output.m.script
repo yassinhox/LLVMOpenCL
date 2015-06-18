@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --analyze /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/plist-output.m -Xanalyzer -analyzer-checker=osx.cocoa.RetainCount -o /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/plist-output.m.tmp.plist &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Analysis/Output/plist-output.m.tmp.plist /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/plist-output.m

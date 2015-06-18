@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/X86/2012-01-13-phielim.ll -O3 -march=x86-64 -mcpu=core2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/X86/2012-01-13-phielim.ll

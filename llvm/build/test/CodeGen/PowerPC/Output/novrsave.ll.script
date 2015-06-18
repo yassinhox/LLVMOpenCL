@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 -mtriple=powerpc-unknown-linux-gnu   < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/novrsave.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/novrsave.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 -mtriple=powerpc64-unknown-linux-gnu < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/novrsave.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/novrsave.ll

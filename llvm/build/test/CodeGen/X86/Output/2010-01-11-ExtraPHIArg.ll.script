@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -verify-machineinstrs < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-01-11-ExtraPHIArg.ll

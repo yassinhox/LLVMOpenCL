@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/pr3154.ll -mtriple=i386-pc-linux-gnu -mattr=+sse2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/pr3154.ll -mtriple=i386-pc-linux-gnu -mattr=+sse2 -relocation-model=pic -disable-fp-elim

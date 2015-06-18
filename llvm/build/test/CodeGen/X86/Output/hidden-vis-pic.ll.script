@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/hidden-vis-pic.ll -disable-cfi -mtriple=i386-apple-darwin9 -relocation-model=pic -disable-fp-elim | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/hidden-vis-pic.ll

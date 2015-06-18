@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -reassociate < /home/jazouani/llvm/llvm-3.2/test/Transforms/Reassociate/secondary.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/Reassociate/secondary.ll

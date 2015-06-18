@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -x86-asm-syntax=intel -triple i386-unknown-unknown --show-encoding /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86-32-ms-inline-asm.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86-32-ms-inline-asm.s

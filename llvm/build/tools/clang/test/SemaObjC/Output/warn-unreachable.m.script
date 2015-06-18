@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaObjC/warn-unreachable.m -fsyntax-only -Xclang -verify -fblocks -Wunreachable-code -Wno-unused-value -Wno-covered-switch-default

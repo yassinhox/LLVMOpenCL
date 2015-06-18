@@ -1,0 +1,88 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/objc2-write-barrier-3.m'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%0 = type opaque
+%1 = type opaque
+%struct.Slice = type { i8** }
+
+@"OBJC_IVAR_$_ISlice.IvarItem" = external global i64
+@"OBJC_IVAR_$_Observer.block" = external global i64
+
+define void @_Z3fooi(i32 %i) nounwind {
+entry:
+  %i.addr = alloca i32, align 4
+  %items = alloca i8**, align 8
+  %vitems = alloca i8***, align 8
+  %slice = alloca %struct.Slice*, align 8
+  %islice = alloca %0*, align 8
+  %observer = alloca %1*, align 8
+  store i32 %i, i32* %i.addr, align 4
+  %0 = load i32* %i.addr, align 4
+  %idxprom = sext i32 %0 to i64
+  %1 = load i8*** %items, align 8
+  %arrayidx = getelementptr inbounds i8** %1, i64 %idxprom
+  %weakassign = call i8* @objc_assign_strongCast(i8* null, i8** %arrayidx)
+  %2 = load i32* %i.addr, align 4
+  %idxprom1 = sext i32 %2 to i64
+  %3 = load i8**** %vitems, align 8
+  %arrayidx2 = getelementptr inbounds i8*** %3, i64 %idxprom1
+  %4 = load i8*** %arrayidx2, align 8
+  %weakassign3 = call i8* @objc_assign_strongCast(i8* null, i8** %4)
+  %5 = load %struct.Slice** %slice, align 8
+  %items4 = getelementptr inbounds %struct.Slice* %5, i32 0, i32 0
+  %6 = bitcast i8*** %items4 to i8**
+  %weakassign5 = call i8* @objc_assign_strongCast(i8* null, i8** %6)
+  %7 = load i32* %i.addr, align 4
+  %idxprom6 = sext i32 %7 to i64
+  %8 = load %struct.Slice** %slice, align 8
+  %items7 = getelementptr inbounds %struct.Slice* %8, i32 0, i32 0
+  %9 = load i8*** %items7, align 8
+  %arrayidx8 = getelementptr inbounds i8** %9, i64 %idxprom6
+  %weakassign9 = call i8* @objc_assign_strongCast(i8* null, i8** %arrayidx8)
+  %10 = load %0** %islice, align 8
+  %ivar = load i64* @"OBJC_IVAR_$_ISlice.IvarItem", !invariant.load !4
+  %11 = bitcast %0* %10 to i8*
+  %add.ptr = getelementptr inbounds i8* %11, i64 %ivar
+  %12 = bitcast i8* %add.ptr to i8***
+  %13 = load %0** %islice, align 8
+  %sub.ptr.rhs.cast = ptrtoint %0* %13 to i64
+  %sub.ptr.lhs.cast = ptrtoint i8*** %12 to i64
+  %ivar.offset = sub i64 %sub.ptr.lhs.cast, %sub.ptr.rhs.cast
+  %14 = bitcast %0* %13 to i8**
+  %15 = call i8* @objc_assign_ivar(i8* null, i8** %14, i64 %ivar.offset)
+  %16 = load i32* %i.addr, align 4
+  %idxprom10 = sext i32 %16 to i64
+  %17 = load %0** %islice, align 8
+  %ivar11 = load i64* @"OBJC_IVAR_$_ISlice.IvarItem", !invariant.load !4
+  %18 = bitcast %0* %17 to i8*
+  %add.ptr12 = getelementptr inbounds i8* %18, i64 %ivar11
+  %19 = bitcast i8* %add.ptr12 to i8***
+  %20 = load i8*** %19, align 8
+  %arrayidx13 = getelementptr inbounds i8** %20, i64 %idxprom10
+  %weakassign14 = call i8* @objc_assign_strongCast(i8* null, i8** %arrayidx13)
+  %21 = load %1** %observer, align 8
+  %ivar15 = load i64* @"OBJC_IVAR_$_Observer.block", !invariant.load !4
+  %22 = bitcast %1* %21 to i8*
+  %add.ptr16 = getelementptr inbounds i8* %22, i64 %ivar15
+  %23 = bitcast i8* %add.ptr16 to void (i8*)**
+  %24 = load %1** %observer, align 8
+  %sub.ptr.rhs.cast17 = ptrtoint %1* %24 to i64
+  %sub.ptr.lhs.cast18 = ptrtoint void (i8*)** %23 to i64
+  %ivar.offset19 = sub i64 %sub.ptr.lhs.cast18, %sub.ptr.rhs.cast17
+  %25 = bitcast %1* %24 to i8**
+  %26 = call i8* @objc_assign_ivar(i8* null, i8** %25, i64 %ivar.offset19)
+  ret void
+}
+
+declare i8* @objc_assign_strongCast(i8*, i8**)
+
+declare i8* @objc_assign_ivar(i8*, i8**, i64)
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 2}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__DATA, __objc_imageinfo, regular, no_dead_strip"}
+!3 = metadata !{i32 1, metadata !"Objective-C Garbage Collection", i32 2}
+!4 = metadata !{}

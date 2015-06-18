@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/2006-11-03-BasicAAVectorCrash.ll -basicaa -licm -disable-output

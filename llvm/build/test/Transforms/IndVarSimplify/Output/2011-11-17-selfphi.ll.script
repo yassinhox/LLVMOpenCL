@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/2011-11-17-selfphi.ll -indvars -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/2011-11-17-selfphi.ll

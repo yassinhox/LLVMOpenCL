@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O1 -mtriple=x86_64-unknown-linux-gnu -mcpu=core2 -relocation-model=pic -disable-fp-elim < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-06-25-CoalescerSubRegDefDead.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-06-25-CoalescerSubRegDefDead.ll

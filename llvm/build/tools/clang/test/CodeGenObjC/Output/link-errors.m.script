@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple i386-apple-darwin9 -fobjc-runtime=macosx-fragile-10.5 -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/link-errors.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/link-errors.m &&
+grep '.lazy_reference .objc_class_name_A' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/link-errors.m.tmp | count 1 &&
+grep '.lazy_reference .objc_class_name_Unknown' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/link-errors.m.tmp | count 1 &&
+grep '.lazy_reference .objc_class_name_Protocol' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/link-errors.m.tmp | count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple i386-apple-darwin9 -fobjc-runtime=macosx-fragile-10.5 -DWITH_IMPL -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/link-errors.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/link-errors.m &&
+grep '.lazy_reference .objc_class_name_Root' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/link-errors.m.tmp | count 1

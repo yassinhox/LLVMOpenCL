@@ -1,0 +1,3 @@
+rm -f /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/domtest.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -analyze -analyzer-checker=debug.DumpDominators /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/domtest.c > /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/domtest.c.tmp 2>&1 &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Analysis/Output/domtest.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/domtest.c

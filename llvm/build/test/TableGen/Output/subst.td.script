@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/subst.td | grep "Smith" | /home/jazouani/llvm/build/Release+Asserts/bin/count 7 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/subst.td | grep "Johnson" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/subst.td | grep "FIRST" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/subst.td | grep "LAST" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/subst.td | grep "TVAR" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/subst.td | grep "Bogus" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

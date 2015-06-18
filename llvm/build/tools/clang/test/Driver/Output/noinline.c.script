@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10    -fno-inline -fno-inline-functions -### -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/noinline.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/noinline.c.tmp &&
+FileCheck --check-prefix=CHECK < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/noinline.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/noinline.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Instrumentation/AddressSanitizer/X86/bug_11395.ll -asan -S | /home/jazouani/llvm/build/Release+Asserts/bin/llc -o /dev/null

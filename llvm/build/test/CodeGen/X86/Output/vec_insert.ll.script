@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_insert.ll -march=x86 -mattr=+sse2,-sse41 | grep movss | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_insert.ll -march=x86 -mattr=+sse2,-sse41 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep pinsrw

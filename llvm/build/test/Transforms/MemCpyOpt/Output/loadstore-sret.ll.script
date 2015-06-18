@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/MemCpyOpt/loadstore-sret.ll -basicaa -memcpyopt | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/MemCpyOpt/loadstore-sret.ll

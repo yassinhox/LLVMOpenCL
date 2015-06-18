@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-apple-darwin9 /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/hello.s -o - &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-apple-darwin9 /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/hello.s -o - -output-asm-variant=1

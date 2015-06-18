@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2009-05-28-LegalizeBRCC.ll -mtriple=powerpc-apple-darwin10

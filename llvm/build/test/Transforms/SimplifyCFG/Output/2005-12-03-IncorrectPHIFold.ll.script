@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/2005-12-03-IncorrectPHIFold.ll -simplifycfg -constprop -simplifycfg |   /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep bb86

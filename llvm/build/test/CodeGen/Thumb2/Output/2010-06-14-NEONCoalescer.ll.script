@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-06-14-NEONCoalescer.ll -O3 -relocation-model=pic -mattr=+thumb2 -mcpu=cortex-a8 -disable-branch-fold | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-06-14-NEONCoalescer.ll

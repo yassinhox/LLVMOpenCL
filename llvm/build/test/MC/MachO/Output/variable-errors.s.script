@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-apple-darwin10 /home/jazouani/llvm/llvm-3.2/test/MC/MachO/variable-errors.s -filetype=obj -o /home/jazouani/llvm/build/test/MC/MachO/Output/variable-errors.s.tmp.o 2> /home/jazouani/llvm/build/test/MC/MachO/Output/variable-errors.s.tmp.err &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/MC/MachO/Output/variable-errors.s.tmp.err /home/jazouani/llvm/llvm-3.2/test/MC/MachO/variable-errors.s

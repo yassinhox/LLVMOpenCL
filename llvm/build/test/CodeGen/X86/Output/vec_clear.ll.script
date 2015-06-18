@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_clear.ll -march=x86 -mattr=+sse2 -mtriple=i386-apple-darwin -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_clear.ll.tmp &&
+not grep and /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_clear.ll.tmp &&
+not grep psrldq /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_clear.ll.tmp &&
+grep xorps /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_clear.ll.tmp

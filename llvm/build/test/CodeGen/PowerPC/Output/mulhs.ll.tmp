@@ -1,0 +1,13 @@
+	.file	"<stdin>"
+	.text
+	.globl	mulhs
+	.align	2
+	.type	mulhs,@function
+mulhs:                                  # @mulhs
+# BB#0:                                 # %entry
+	mulhw 3, 4, 3
+	blr 
+.Ltmp0:
+	.size	mulhs, .Ltmp0-mulhs
+
+

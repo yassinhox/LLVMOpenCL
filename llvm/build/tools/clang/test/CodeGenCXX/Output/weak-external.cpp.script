@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fexceptions /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/weak-external.cpp -S -emit-llvm -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/weak-external.cpp

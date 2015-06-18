@@ -1,0 +1,15 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/immed64.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s &&
+grep lqa        /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 13 &&
+grep ilhu       /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 15 &&
+grep ila        /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep -w il      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep shufb      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 13 &&
+grep      65520 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  1 &&
+grep      43981 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  1 &&
+grep      13702 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  1 &&
+grep      28225 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  1 &&
+grep      30720 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  1 &&
+grep 3233857728 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  8 &&
+grep 2155905152 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  6 &&
+grep      66051 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count  7 &&
+grep  471670303 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/immed64.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 11

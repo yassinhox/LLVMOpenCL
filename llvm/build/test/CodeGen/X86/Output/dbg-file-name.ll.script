@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -enable-dwarf-directory -mtriple x86_64-apple-darwin10.0.0  < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/dbg-file-name.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/dbg-file-name.ll

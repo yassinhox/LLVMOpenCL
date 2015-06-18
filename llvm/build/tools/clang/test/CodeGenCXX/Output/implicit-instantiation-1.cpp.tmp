@@ -1,0 +1,59 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/implicit-instantiation-1.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.X = type { i8 }
+%struct.X.0 = type { i8 }
+
+define void @_Z3fooR1XIiEPS_IfEif(%struct.X* %xi, %struct.X.0* %xfp, i32 %i, float %f) nounwind {
+entry:
+  %xi.addr = alloca %struct.X*, align 8
+  %xfp.addr = alloca %struct.X.0*, align 8
+  %i.addr = alloca i32, align 4
+  %f.addr = alloca float, align 4
+  store %struct.X* %xi, %struct.X** %xi.addr, align 8
+  store %struct.X.0* %xfp, %struct.X.0** %xfp.addr, align 8
+  store i32 %i, i32* %i.addr, align 4
+  store float %f, float* %f.addr, align 4
+  %0 = load %struct.X** %xi.addr, align 8
+  %1 = load i32* %i.addr, align 4
+  call void @_ZN1XIiE1fEi(%struct.X* %0, i32 %1)
+  %2 = load %struct.X** %xi.addr, align 8
+  %3 = load float* %f.addr, align 4
+  %conv = fptosi float %3 to i32
+  call void @_ZN1XIiE1gEi(%struct.X* %2, i32 %conv)
+  %4 = load %struct.X.0** %xfp.addr, align 8
+  %5 = load float* %f.addr, align 4
+  call void @_ZN1XIfE1fEf(%struct.X.0* %4, float %5)
+  ret void
+}
+
+define linkonce_odr void @_ZN1XIiE1fEi(%struct.X* %this, i32) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.X*, align 8
+  %.addr = alloca i32, align 4
+  store %struct.X* %this, %struct.X** %this.addr, align 8
+  store i32 %0, i32* %.addr, align 4
+  %this1 = load %struct.X** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1XIiE1gEi(%struct.X* %this, i32) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.X*, align 8
+  %.addr = alloca i32, align 4
+  store %struct.X* %this, %struct.X** %this.addr, align 8
+  store i32 %0, i32* %.addr, align 4
+  %this1 = load %struct.X** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1XIfE1fEf(%struct.X.0* %this, float) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.X.0*, align 8
+  %.addr = alloca float, align 4
+  store %struct.X.0* %this, %struct.X.0** %this.addr, align 8
+  store float %0, float* %.addr, align 4
+  %this1 = load %struct.X.0** %this.addr
+  ret void
+}

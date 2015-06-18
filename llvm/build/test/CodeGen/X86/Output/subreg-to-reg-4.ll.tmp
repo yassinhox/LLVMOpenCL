@@ -1,0 +1,181 @@
+	.file	"<stdin>"
+	.text
+	.globl	bar
+	.align	16, 0x90
+	.type	bar,@function
+bar:                                    # @bar
+# BB#0:                                 # %entry
+	addl	%esi, %edi
+	movq	%rdi, (%rdx)
+	ret
+.Ltmp0:
+	.size	bar, .Ltmp0-bar
+
+	.globl	easy
+	.align	16, 0x90
+	.type	easy,@function
+easy:                                   # @easy
+# BB#0:                                 # %entry
+                                        # kill: EDI<def> EDI<kill> RDI<def>
+	addl	%esi, %edi
+	movq	%rdi, (%rdx)
+	ret
+.Ltmp1:
+	.size	easy, .Ltmp1-easy
+
+	.globl	cola
+	.align	16, 0x90
+	.type	cola,@function
+cola:                                   # @cola
+# BB#0:                                 # %entry
+	addl	(%rdi), %esi
+	xorq	%rcx, %rsi
+	movq	%rsi, (%rdx)
+	ret
+.Ltmp2:
+	.size	cola, .Ltmp2-cola
+
+	.globl	yaks
+	.align	16, 0x90
+	.type	yaks,@function
+yaks:                                   # @yaks
+# BB#0:                                 # %entry
+	addl	(%rdi), %esi
+	xorl	%esi, %ecx
+	movq	%rcx, (%rdx)
+	ret
+.Ltmp3:
+	.size	yaks, .Ltmp3-yaks
+
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	movl	(%rdi), %eax
+	addl	(%rsi), %eax
+	movq	%rax, (%rdx)
+	ret
+.Ltmp4:
+	.size	foo, .Ltmp4-foo
+
+	.globl	avo
+	.align	16, 0x90
+	.type	avo,@function
+avo:                                    # @avo
+# BB#0:                                 # %entry
+	addl	$734847, %edi           # imm = 0xB367F
+	xorq	%rdx, %rdi
+	movq	%rdi, (%rsi)
+	ret
+.Ltmp5:
+	.size	avo, .Ltmp5-avo
+
+	.globl	phe
+	.align	16, 0x90
+	.type	phe,@function
+phe:                                    # @phe
+# BB#0:                                 # %entry
+	addl	$734847, %edi           # imm = 0xB367F
+	xorl	%edx, %edi
+	movq	%rdi, (%rsi)
+	ret
+.Ltmp6:
+	.size	phe, .Ltmp6-phe
+
+	.globl	oze
+	.align	16, 0x90
+	.type	oze,@function
+oze:                                    # @oze
+# BB#0:                                 # %entry
+	incl	%edi
+	movq	%rdi, (%rsi)
+	ret
+.Ltmp7:
+	.size	oze, .Ltmp7-oze
+
+	.globl	sbar
+	.align	16, 0x90
+	.type	sbar,@function
+sbar:                                   # @sbar
+# BB#0:                                 # %entry
+	subl	%esi, %edi
+	movq	%rdi, (%rdx)
+	ret
+.Ltmp8:
+	.size	sbar, .Ltmp8-sbar
+
+	.globl	seasy
+	.align	16, 0x90
+	.type	seasy,@function
+seasy:                                  # @seasy
+# BB#0:                                 # %entry
+                                        # kill: EDI<def> EDI<kill> RDI<def>
+	subl	%esi, %edi
+	movq	%rdi, (%rdx)
+	ret
+.Ltmp9:
+	.size	seasy, .Ltmp9-seasy
+
+	.globl	scola
+	.align	16, 0x90
+	.type	scola,@function
+scola:                                  # @scola
+# BB#0:                                 # %entry
+	movl	(%rdi), %eax
+	subl	%esi, %eax
+	xorq	%rcx, %rax
+	movq	%rax, (%rdx)
+	ret
+.Ltmp10:
+	.size	scola, .Ltmp10-scola
+
+	.globl	syaks
+	.align	16, 0x90
+	.type	syaks,@function
+syaks:                                  # @syaks
+# BB#0:                                 # %entry
+	movl	(%rdi), %eax
+	subl	%esi, %eax
+	xorl	%eax, %ecx
+	movq	%rcx, (%rdx)
+	ret
+.Ltmp11:
+	.size	syaks, .Ltmp11-syaks
+
+	.globl	sfoo
+	.align	16, 0x90
+	.type	sfoo,@function
+sfoo:                                   # @sfoo
+# BB#0:                                 # %entry
+	movl	(%rdi), %eax
+	subl	(%rsi), %eax
+	movq	%rax, (%rdx)
+	ret
+.Ltmp12:
+	.size	sfoo, .Ltmp12-sfoo
+
+	.globl	swya
+	.align	16, 0x90
+	.type	swya,@function
+swya:                                   # @swya
+# BB#0:                                 # %entry
+	negl	%edi
+	movq	%rdi, (%rsi)
+	ret
+.Ltmp13:
+	.size	swya, .Ltmp13-swya
+
+	.globl	soze
+	.align	16, 0x90
+	.type	soze,@function
+soze:                                   # @soze
+# BB#0:                                 # %entry
+	decl	%edi
+	movq	%rdi, (%rsi)
+	ret
+.Ltmp14:
+	.size	soze, .Ltmp14-soze
+
+
+	.section	".note.GNU-stack","",@progbits

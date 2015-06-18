@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/PruneEH/2008-06-02-Weak.ll -prune-eh -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep nounwind

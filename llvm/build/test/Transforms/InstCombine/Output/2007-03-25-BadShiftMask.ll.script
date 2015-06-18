@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2007-03-25-BadShiftMask.ll -instcombine -S |     grep "icmp eq i32 .tmp.*, 2146435072"

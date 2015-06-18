@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple armv7-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/ARM/arm_fixups.s --show-encoding > /home/jazouani/llvm/build/test/MC/ARM/Output/arm_fixups.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/MC/ARM/Output/arm_fixups.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/ARM/arm_fixups.s

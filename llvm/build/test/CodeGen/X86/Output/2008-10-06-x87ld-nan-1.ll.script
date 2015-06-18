@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-10-06-x87ld-nan-1.ll -march=x86 -mattr=-sse2,-sse3,-sse | grep fldl

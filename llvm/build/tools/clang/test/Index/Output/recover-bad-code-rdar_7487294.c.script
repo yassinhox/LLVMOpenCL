@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recover-bad-code-rdar_7487294.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recover-bad-code-rdar_7487294.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=x86_64-apple-macosx -mcpu=corei7 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2012-10-03-DAGCycle.ll

@@ -1,0 +1,3 @@
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-missing-self-in-block.m /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-missing-self-in-block.m.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c -fobjc-arc -fblocks -fixit /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-missing-self-in-block.m.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c -fobjc-arc -fblocks -Werror /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-missing-self-in-block.m.tmp

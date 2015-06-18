@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -x c++-header /home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/Inputs/pch.h -o /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/pch.cpp.tmp1 &&
+clang-check "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/Inputs/pch.cpp" "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/pch.cpp" -- -include-pch /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/pch.cpp.tmp1 -I "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling" -c >/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/pch.cpp.tmp2 2>&1 &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/pch.cpp < /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/pch.cpp.tmp2

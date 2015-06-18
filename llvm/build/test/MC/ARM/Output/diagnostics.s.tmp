@@ -1,0 +1,258 @@
+<stdin>:7:9: error: instruction 'mls' can not set flags, but 's' suffix specified
+        mlss r1, r2, r3, r4
+        ^
+<stdin>:13:30: error: invalid immediate shift value
+        adc r1, r2, r3, lsl #invalid
+                             ^
+<stdin>:14:30: error: immediate shift value out of range
+        adc r4, r5, r6, lsl #-1
+                             ^
+<stdin>:15:30: error: immediate shift value out of range
+        adc r4, r5, r6, lsl #32
+                             ^
+<stdin>:16:30: error: immediate shift value out of range
+        adc r4, r5, r6, lsr #-1
+                             ^
+<stdin>:17:30: error: immediate shift value out of range
+        adc r4, r5, r6, lsr #33
+                             ^
+<stdin>:18:30: error: immediate shift value out of range
+        adc r4, r5, r6, asr #-1
+                             ^
+<stdin>:19:30: error: immediate shift value out of range
+        adc r4, r5, r6, asr #33
+                             ^
+<stdin>:20:30: error: immediate shift value out of range
+        adc r4, r5, r6, ror #-1
+                             ^
+<stdin>:21:30: error: immediate shift value out of range
+        adc r4, r5, r6, ror #32
+                             ^
+<stdin>:51:30: error: shift amount must be an immediate
+        str r1, [r2, r3, lsl #invalid]
+                             ^
+<stdin>:52:31: error: immediate shift value out of range
+        ldr r4, [r5], r6, lsl #-1
+                              ^
+<stdin>:53:30: error: immediate shift value out of range
+        pld r4, [r5, r6, lsl #32]
+                             ^
+<stdin>:54:31: error: immediate shift value out of range
+        str r4, [r5], r6, lsr #-1
+                              ^
+<stdin>:55:30: error: immediate shift value out of range
+        ldr r4, [r5, r6, lsr #33]
+                             ^
+<stdin>:56:30: error: immediate shift value out of range
+        pld r4, [r5, r6, asr #-1]
+                             ^
+<stdin>:57:30: error: immediate shift value out of range
+        str r4, [r5, r6, asr #33]
+                             ^
+<stdin>:58:30: error: immediate shift value out of range
+        ldr r4, [r5, r6, ror #-1]
+                             ^
+<stdin>:59:30: error: immediate shift value out of range
+        pld r4, [r5, r6, ror #32]
+                             ^
+<stdin>:60:30: error: ']' expected
+        pld r4, [r5, r6, rrx #0]
+                             ^
+<stdin>:92:14: error: invalid operand for instruction
+        bkpt #65536
+             ^
+<stdin>:99:34: error: invalid operand for instruction
+        cdp  p7, #2, c1, c1, c1, #8
+                                 ^
+<stdin>:100:34: error: invalid operand for instruction
+        cdp  p7, #1, c1, c1, c1, #8
+                                 ^
+<stdin>:101:35: error: invalid operand for instruction
+        cdp2  p7, #2, c1, c1, c1, #8
+                                  ^
+<stdin>:102:35: error: invalid operand for instruction
+        cdp2  p7, #1, c1, c1, c1, #8
+                                  ^
+<stdin>:110:13: error: immediate operand must be in the range [0,15]
+        dbg #-1
+            ^
+<stdin>:111:13: error: immediate operand must be in the range [0,15]
+        dbg #16
+            ^
+<stdin>:119:18: error: invalid operand for instruction
+        mcr  p7, #8, r5, c1, c1, #4
+                 ^
+<stdin>:120:34: error: invalid operand for instruction
+        mcr  p7, #2, r5, c1, c1, #8
+                                 ^
+<stdin>:121:19: error: invalid operand for instruction
+        mcr2  p7, #8, r5, c1, c1, #4
+                  ^
+<stdin>:122:35: error: invalid operand for instruction
+        mcr2  p7, #1, r5, c1, c1, #8
+                                  ^
+<stdin>:123:19: error: immediate operand must be in the range [0,15]
+        mcrr  p7, #16, r5, r4, c1
+                  ^
+<stdin>:124:20: error: immediate operand must be in the range [0,15]
+        mcrr2  p7, #16, r5, r4, c1
+                   ^
+<stdin>:134:18: error: invalid operand for instruction
+        movw r9, 0x10000
+                 ^
+<stdin>:138:18: error: invalid operand for instruction
+        movs r6, #0xffff
+                 ^
+<stdin>:139:9: error: instruction 'movw' can not set flags, but 's' suffix specified
+        movwseq r9, #0xffff
+        ^
+<stdin>:144:18: error: invalid operand for instruction
+        movt r9, 0x10000
+                 ^
+<stdin>:148:19: error: invalid operand for instruction
+        mrc  p14, #8, r1, c1, c2, #4
+                  ^
+<stdin>:149:35: error: invalid operand for instruction
+        mrc  p14, #1, r1, c1, c2, #8
+                                  ^
+<stdin>:150:20: error: invalid operand for instruction
+        mrc2  p14, #8, r1, c1, c2, #4
+                   ^
+<stdin>:151:36: error: invalid operand for instruction
+        mrc2  p14, #0, r1, c1, c2, #9
+                                   ^
+<stdin>:152:19: error: immediate operand must be in the range [0,15]
+        mrrc  p7, #16, r5, r4, c1
+                  ^
+<stdin>:153:20: error: immediate operand must be in the range [0,15]
+        mrrc2  p7, #17, r5, r4, c1
+                   ^
+<stdin>:162:32: error: immediate value out of range
+        pkhbt r2, r2, r3, lsl #-1
+                               ^
+<stdin>:163:32: error: immediate value out of range
+        pkhbt r2, r2, r3, lsl #32
+                               ^
+<stdin>:164:32: error: immediate value out of range
+        pkhtb r2, r2, r3, asr #0
+                               ^
+<stdin>:165:32: error: immediate value out of range
+        pkhtb r2, r2, r3, asr #33
+                               ^
+<stdin>:166:27: error: lsl operand expected.
+        pkhbt r2, r2, r3, asr #3
+                          ^
+<stdin>:167:27: error: asr operand expected.
+        pkhtb r2, r2, r3, lsl #3
+                          ^
+<stdin>:190:9: error: instruction 'setend' is not predicable, but condition code specified
+        setendne be
+        ^
+<stdin>:191:18: error: 'be' or 'le' operand expected
+        setend me
+                 ^
+<stdin>:192:16: error: 'be' or 'le' operand expected
+        setend 1
+               ^
+<stdin>:206:11: error: invalid operand for instruction
+        ssat    r8, #0, r10, lsl #8
+                    ^
+<stdin>:207:11: error: invalid operand for instruction
+        ssat    r8, #33, r10, lsl #8
+                    ^
+<stdin>:208:25: error: 'lsr' shift amount must be in range [0,31]
+        ssat    r8, #1, r10, lsl #-1
+                                  ^
+<stdin>:209:25: error: 'lsr' shift amount must be in range [0,31]
+        ssat    r8, #1, r10, lsl #32
+                                  ^
+<stdin>:210:25: error: 'asr' shift amount must be in range [1,32]
+        ssat    r8, #1, r10, asr #0
+                                  ^
+<stdin>:211:25: error: 'asr' shift amount must be in range [1,32]
+        ssat    r8, #1, r10, asr #33
+                                  ^
+<stdin>:212:30: error: shift operator 'asr' or 'lsl' expected
+        ssat    r8, #1, r10, lsr #5
+                             ^
+<stdin>:213:34: error: '#' expected
+        ssat    r8, #1, r10, lsl fred
+                                 ^
+<stdin>:214:35: error: shift amount must be an immediate
+        ssat    r8, #1, r10, lsl #fred
+                                  ^
+<stdin>:245:13: error: invalid operand for instruction
+        ssat16  r2, #0, r7
+                    ^
+<stdin>:246:13: error: invalid operand for instruction
+        ssat16  r3, #17, r5
+                    ^
+<stdin>:257:25: warning: register list not in ascending order
+        stmda sp!, {r5, r2}
+                        ^
+<stdin>:265:13: error: invalid operand for instruction
+        svc #0x1000000
+            ^
+<stdin>:272:21: error: destination operands must be sequential
+        ldrexd  r4, r3, [r8]
+                    ^
+<stdin>:273:21: error: source operands must be sequential
+        strexd  r6, r5, r3, [r8]
+                    ^
+<stdin>:283:22: error: invalid operand for instruction
+        sxtb r8, r3, #8
+                     ^
+<stdin>:284:26: error: '#' expected
+        sxtb r8, r3, ror 24
+                         ^
+<stdin>:285:30: error: unknown token in expression
+        sxtb r8, r3, ror #8 -
+                             ^
+<stdin>:285:27: error: malformed rotate expression
+        sxtb r8, r3, ror #8 -
+                          ^
+<stdin>:286:32: error: rotate amount must be an immediate
+        sxtab r3, r8, r3, ror #(fred - wilma)
+                               ^
+<stdin>:287:32: error: 'ror' rotate amount must be 8, 16, or 24
+        sxtab r7, r8, r3, ror #25
+                               ^
+<stdin>:288:32: error: 'ror' rotate amount must be 8, 16, or 24
+        sxtah r9, r3, r3, ror #-8
+                               ^
+<stdin>:289:26: error: invalid operand for instruction
+        sxtb16ge r2, r3, lsr #24
+                         ^
+<stdin>:317:27: error: bitfield width must be in range [1,32-lsb]
+        sbfx r4, r5, #31, #2
+                          ^
+<stdin>:318:29: error: bitfield width must be in range [1,32-lsb]
+        ubfxgt r4, r5, #16, #17
+                            ^
+<stdin>:328:19: error: destination operands must be sequential
+        ldrd  r4, r3, [r8]
+                  ^
+<stdin>:329:19: error: destination operands must be sequential
+        ldrd  r4, r3, [r8, #8]!
+                  ^
+<stdin>:330:19: error: destination operands must be sequential
+        ldrd  r4, r3, [r8], #8
+                  ^
+<stdin>:343:20: error: non-contiguous register range
+        vpush {s0, s3}
+                   ^
+<stdin>:349:30: error: coprocessor option must be an immediate in range [0, 255]
+        ldc2 p2, c8, [r1], { 256 }
+                             ^
+<stdin>:350:30: error: coprocessor option must be an immediate in range [0, 255]
+        ldc2 p2, c8, [r1], { -1 }
+                             ^
+<stdin>:360:15: error: invalid operand for instruction
+        cps f,#1
+              ^
+<stdin>:366:13: error: invalid operand for instruction
+        msr #0, #0
+            ^
+<stdin>:367:13: error: invalid operand for instruction
+        msr foo, #0
+            ^

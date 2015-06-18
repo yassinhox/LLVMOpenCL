@@ -1,0 +1,32 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-07-31-asm-labels.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@_renamed = external global i32
+
+define void @f0() nounwind {
+entry:
+  call void (...)* bitcast (void (i32)* @_thisIsNotAPipe to void (...)*)()
+  ret void
+}
+
+define void @f1() nounwind {
+entry:
+  call void @_thisIsNotAPipe(i32 1)
+  ret void
+}
+
+define void @_thisIsNotAPipe(i32 %arg) nounwind {
+entry:
+  %arg.addr = alloca i32, align 4
+  %x = alloca i32, align 4
+  store i32 %arg, i32* %arg.addr, align 4
+  store i32 10, i32* %x, align 4
+  ret void
+}
+
+define i32 @f2() nounwind {
+entry:
+  %0 = load i32* @_renamed, align 4
+  ret i32 %0
+}

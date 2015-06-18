@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/pragma-pack-apple.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/pragma-pack-apple.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -fapple-pragma-pack /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/pragma-pack-apple.c 2>&1 | FileCheck -check-prefix=CHECK-APPLE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/pragma-pack-apple.c

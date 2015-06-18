@@ -1,0 +1,15 @@
+; ModuleID = '<stdin>'
+
+@foo1 = alias void ()* @foo2
+@foo2 = alias weak void ()* @bar2
+@bar1 = alias void ()* @bar2
+
+declare void @bar2()
+
+define void @baz() {
+entry:
+  call void @foo2()
+  call void @foo2()
+  call void @bar2()
+  ret void
+}

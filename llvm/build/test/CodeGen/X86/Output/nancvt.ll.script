@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/nancvt.ll -std-compile-opts | /home/jazouani/llvm/build/Release+Asserts/bin/llc > /home/jazouani/llvm/build/test/CodeGen/X86/Output/nancvt.ll.tmp &&
+grep 2147027116 /home/jazouani/llvm/build/test/CodeGen/X86/Output/nancvt.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep 2147228864 /home/jazouani/llvm/build/test/CodeGen/X86/Output/nancvt.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep 2146502828 /home/jazouani/llvm/build/test/CodeGen/X86/Output/nancvt.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep 2143034560 /home/jazouani/llvm/build/test/CodeGen/X86/Output/nancvt.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

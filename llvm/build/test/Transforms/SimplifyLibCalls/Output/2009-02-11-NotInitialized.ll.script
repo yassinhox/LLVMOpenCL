@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/2009-02-11-NotInitialized.ll -inline -simplify-libcalls -functionattrs |    /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep nocapture | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

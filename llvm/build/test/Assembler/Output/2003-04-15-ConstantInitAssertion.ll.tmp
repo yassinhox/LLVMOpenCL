@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as: <stdin>:5:18: error: element 0 of struct initializer doesn't match struct element type
+constant { i32 } { float 1.0 }
+                 ^

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/2009-03-17-MRE-Invoke.ll -deadargelim | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis

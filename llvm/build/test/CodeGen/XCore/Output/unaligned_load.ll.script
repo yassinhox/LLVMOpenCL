@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/XCore/unaligned_load.ll -march=xcore > /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s &&
+grep "bl __misaligned_load" /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep ld16s /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep ldw /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep shl /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep shr /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep zext /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "or " /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_load.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

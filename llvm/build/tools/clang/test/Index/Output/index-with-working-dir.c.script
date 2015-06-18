@@ -1,0 +1,1 @@
+c-index-test -index-file -working-directory=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-with-working-dir.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-with-working-dir.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-ipsccp1.ll -ipsccp -S | grep -v "ret i512 undef" |    grep "ret i8 2"

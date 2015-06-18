@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel -mxgot < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/biggot.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/biggot.ll -check-prefix=O32 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips64el -mcpu=mips64r2 -mattr=+n64 -mxgot < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/biggot.ll |  /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/biggot.ll -check-prefix=N64

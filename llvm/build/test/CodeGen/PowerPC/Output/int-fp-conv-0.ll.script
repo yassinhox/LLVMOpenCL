@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/int-fp-conv-0.ll -march=ppc64 > /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/int-fp-conv-0.ll.tmp &&
+grep  __floattitf /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/int-fp-conv-0.ll.tmp &&
+grep  __fixunstfti /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/int-fp-conv-0.ll.tmp

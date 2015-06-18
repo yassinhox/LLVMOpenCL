@@ -1,0 +1,37 @@
+	.file	"<stdin>"
+	.text
+	.align	3
+	.type	.Lfoo,@function
+.Lfoo:                                  # @foo
+# BB#0:
+	nop
+	bi	$lr
+.Ltmp0:
+	.size	.Lfoo, .Ltmp0-.Lfoo
+
+	.globl	bar
+	.align	3
+	.type	bar,@function
+bar:                                    # @bar
+# BB#0:
+	stqd	$lr, 16($sp)
+	stqd	$sp, -48($sp)
+	ai	$sp, $sp, -48
+	brsl	$lr, .Lfoo
+	ila	$3, .Lbaz
+	lqd	$4, 0($3)
+	rotqby	$3, $4, $3
+	lqd	$lr, 64($sp)
+	ai	$sp, $sp, 48
+	bi	$lr
+.Ltmp1:
+	.size	bar, .Ltmp1-bar
+
+	.type	.Lbaz,@object           # @baz
+	.data
+	.align	4
+.Lbaz:
+	.long	4                       # 0x4
+	.size	.Lbaz, 4
+
+

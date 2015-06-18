@@ -1,0 +1,29 @@
+; ModuleID = '<stdin>'
+
+define void @foo(i64* nocapture %x, i32 %n) nounwind {
+entry:
+  %tmp102 = icmp sgt i32 %n, 0
+  br i1 %tmp102, label %bb.nph, label %return
+
+bb.nph:                                           ; preds = %entry
+  br label %bb
+
+bb:                                               ; preds = %bb7, %bb.nph
+  %indvars.iv = phi i64 [ %indvars.iv.next, %bb7 ], [ 0, %bb.nph ]
+  %0 = trunc i64 %indvars.iv to i32
+  %tmp4 = getelementptr i64* %x, i32 %0
+  store i64 %indvars.iv, i64* %tmp4, align 8
+  %indvars.iv.next = add i64 %indvars.iv, 1
+  br label %bb7
+
+bb7:                                              ; preds = %bb
+  %lftr.wideiv = trunc i64 %indvars.iv.next to i32
+  %exitcond = icmp ne i32 %lftr.wideiv, %n
+  br i1 %exitcond, label %bb, label %bb7.return_crit_edge
+
+bb7.return_crit_edge:                             ; preds = %bb7
+  br label %return
+
+return:                                           ; preds = %bb7.return_crit_edge, %entry
+  ret void
+}

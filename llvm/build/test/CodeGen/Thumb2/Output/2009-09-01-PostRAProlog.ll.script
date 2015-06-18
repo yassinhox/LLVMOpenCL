@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -asm-verbose=false -O3 -relocation-model=pic -disable-fp-elim -mtriple=thumbv7-apple-darwin -mcpu=cortex-a8 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2009-09-01-PostRAProlog.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2009-09-01-PostRAProlog.ll

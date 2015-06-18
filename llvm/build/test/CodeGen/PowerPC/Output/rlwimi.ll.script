@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/rlwimi.ll -march=ppc32 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep and &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/rlwimi.ll -march=ppc32 | grep rlwimi | /home/jazouani/llvm/build/Release+Asserts/bin/count 8

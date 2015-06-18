@@ -1,0 +1,30 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/casts.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%"struct.PR5248::A" = type { i8 }
+
+define void @_ZN6PR52481A8copyFromERKS0_(%"struct.PR5248::A"* %this, %"struct.PR5248::A"* %src) nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR5248::A"*, align 8
+  %src.addr = alloca %"struct.PR5248::A"*, align 8
+  store %"struct.PR5248::A"* %this, %"struct.PR5248::A"** %this.addr, align 8
+  store %"struct.PR5248::A"* %src, %"struct.PR5248::A"** %src.addr, align 8
+  %this1 = load %"struct.PR5248::A"** %this.addr
+  %0 = load %"struct.PR5248::A"** %src.addr, align 8
+  call void @_ZN6PR52481A6addRefEv(%"struct.PR5248::A"* %0)
+  ret void
+}
+
+declare void @_ZN6PR52481A6addRefEv(%"struct.PR5248::A"*)
+
+define void @_Z4testPN6PR52481AE(%"struct.PR5248::A"* %a) nounwind {
+entry:
+  %a.addr = alloca %"struct.PR5248::A"*, align 8
+  store %"struct.PR5248::A"* %a, %"struct.PR5248::A"** %a.addr, align 8
+  %0 = load %"struct.PR5248::A"** %a.addr, align 8
+  %call = call %"struct.PR5248::A"* @_ZN6PR52481AaSEi(%"struct.PR5248::A"* %0, i32 17)
+  ret void
+}
+
+declare %"struct.PR5248::A"* @_ZN6PR52481AaSEi(%"struct.PR5248::A"*, i32)

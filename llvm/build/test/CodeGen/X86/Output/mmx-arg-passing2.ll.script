@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/mmx-arg-passing2.ll -mtriple=x86_64-apple-darwin -mattr=+mmx,+sse2 | grep movdq2q | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

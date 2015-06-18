@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -mergefunc /home/jazouani/llvm/llvm-3.2/test/Transforms/MergeFunc/2011-02-08-RemoveEqual.ll -disable-output

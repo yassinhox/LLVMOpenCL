@@ -1,0 +1,6 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/ELF/bracket.s:5:14: error: expected ']' in brackets expression
+.size   x, [.-x)
+               ^
+/home/jazouani/llvm/llvm-3.2/test/MC/ELF/bracket.s:8:14: error: expected ')' in parentheses expression
+.size   y, (.-y]
+               ^

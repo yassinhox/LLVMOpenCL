@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/2003-07-03-BasicAACrash.ll -basicaa -aa-eval -disable-output 2>/dev/null

@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2003-05-21-MalformedStructCrash.ll  > /dev/null 2> /home/jazouani/llvm/build/test/Assembler/Output/2003-05-21-MalformedStructCrash.ll.tmp &&
+grep "initializer with struct type has wrong # elements" /home/jazouani/llvm/build/test/Assembler/Output/2003-05-21-MalformedStructCrash.ll.tmp

@@ -1,0 +1,104 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/reference-in-block-args.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.ST = type { i32, i32 }
+%struct.__block_descriptor = type { i64, i64 }
+%struct.__block_literal_generic = type { i8*, i32, i32, i8*, %struct.__block_descriptor* }
+
+@_ZZ11OUTER_BLOCKU13block_pointerFvR2STEE3ref = private unnamed_addr constant %struct.ST { i32 2, i32 100 }, align 4
+@.str = private unnamed_addr constant [4 x i8] c"%d\0A\00", align 1
+@_NSConcreteStackBlock = external global i8*
+@.str1 = private unnamed_addr constant [6 x i8] c"i8@?0\00", align 1
+@__block_descriptor_tmp = internal constant { i64, i64, i8*, i8* } { i64 0, i64 40, i8* getelementptr inbounds ([6 x i8]* @.str1, i32 0, i32 0), i8* null }
+@_NSConcreteGlobalBlock = external global i8*
+@.str2 = private unnamed_addr constant [16 x i8] c"v16@?0^{ST=ii}8\00", align 1
+@__block_descriptor_tmp3 = internal constant { i64, i64, i8*, i8* } { i64 0, i64 32, i8* getelementptr inbounds ([16 x i8]* @.str2, i32 0, i32 0), i8* null }
+@__block_literal_global = internal constant { i8**, i32, i32, i8*, %struct.__block_descriptor* } { i8** @_NSConcreteGlobalBlock, i32 1342177280, i32 0, i8* bitcast (void (i8*, %struct.ST*)* @___Z4scanv_block_invoke to i8*), %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp3 to %struct.__block_descriptor*) }, align 8
+
+define void @_Z11OUTER_BLOCKU13block_pointerFvR2STE(void (%struct.ST*)* %fixer) nounwind {
+entry:
+  %fixer.addr = alloca void (%struct.ST*)*, align 8
+  %ref = alloca %struct.ST, align 4
+  store void (%struct.ST*)* %fixer, void (%struct.ST*)** %fixer.addr, align 8
+  %0 = bitcast %struct.ST* %ref to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %0, i8* bitcast (%struct.ST* @_ZZ11OUTER_BLOCKU13block_pointerFvR2STEE3ref to i8*), i64 8, i32 4, i1 false)
+  %1 = load void (%struct.ST*)** %fixer.addr, align 8
+  %block.literal = bitcast void (%struct.ST*)* %1 to %struct.__block_literal_generic*
+  %2 = getelementptr inbounds %struct.__block_literal_generic* %block.literal, i32 0, i32 3
+  %3 = bitcast %struct.__block_literal_generic* %block.literal to i8*
+  %4 = load i8** %2
+  %5 = bitcast i8* %4 to void (i8*, %struct.ST*)*
+  call void %5(i8* %3, %struct.ST* %ref)
+  ret void
+}
+
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture, i8* nocapture, i64, i32, i1) nounwind
+
+define void @_Z11INNER_BLOCKU13block_pointerFivE(i32 ()* %largeDo) nounwind {
+entry:
+  %largeDo.addr = alloca i32 ()*, align 8
+  store i32 ()* %largeDo, i32 ()** %largeDo.addr, align 8
+  %0 = load i32 ()** %largeDo.addr, align 8
+  %block.literal = bitcast i32 ()* %0 to %struct.__block_literal_generic*
+  %1 = getelementptr inbounds %struct.__block_literal_generic* %block.literal, i32 0, i32 3
+  %2 = bitcast %struct.__block_literal_generic* %block.literal to i8*
+  %3 = load i8** %1
+  %4 = bitcast i8* %3 to i32 (i8*)*
+  %call = call i32 %4(i8* %2)
+  %call1 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str, i32 0, i32 0), i32 %call)
+  ret void
+}
+
+declare i32 @printf(i8*, ...)
+
+define void @_Z4scanv() nounwind {
+entry:
+  call void @_Z11OUTER_BLOCKU13block_pointerFvR2STE(void (%struct.ST*)* bitcast ({ i8**, i32, i32, i8*, %struct.__block_descriptor* }* @__block_literal_global to void (%struct.ST*)*))
+  ret void
+}
+
+define internal void @___Z4scanv_block_invoke(i8* %.block_descriptor, %struct.ST* %ref) nounwind {
+entry:
+  %ref.addr = alloca %struct.ST*, align 8
+  %block1 = alloca <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>, align 8
+  store %struct.ST* %ref, %struct.ST** %ref.addr, align 8
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor* }>*
+  %block.isa = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block1, i32 0, i32 0
+  store i8* bitcast (i8** @_NSConcreteStackBlock to i8*), i8** %block.isa
+  %block.flags = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block1, i32 0, i32 1
+  store i32 1073741824, i32* %block.flags
+  %block.reserved = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block1, i32 0, i32 2
+  store i32 0, i32* %block.reserved
+  %block.invoke = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block1, i32 0, i32 3
+  store i8* bitcast (i32 (i8*)* @___Z4scanv_block_invoke_2 to i8*), i8** %block.invoke
+  %block.descriptor = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block1, i32 0, i32 4
+  store %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp to %struct.__block_descriptor*), %struct.__block_descriptor** %block.descriptor
+  %block.captured = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block1, i32 0, i32 5
+  %ref.val = load %struct.ST** %ref.addr
+  store %struct.ST* %ref.val, %struct.ST** %block.captured
+  %0 = bitcast <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block1 to i32 ()*
+  call void @_Z11INNER_BLOCKU13block_pointerFivE(i32 ()* %0)
+  ret void
+}
+
+define internal i32 @___Z4scanv_block_invoke_2(i8* %.block_descriptor) nounwind {
+entry:
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>*
+  %block.capture.addr = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block, i32 0, i32 5
+  %ref.tmp = load %struct.ST** %block.capture.addr
+  %referrer = getelementptr inbounds %struct.ST* %ref.tmp, i32 0, i32 1
+  %0 = load i32* %referrer, align 4
+  %block.capture.addr1 = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.ST* }>* %block, i32 0, i32 5
+  %ref.tmp2 = load %struct.ST** %block.capture.addr1
+  %filler = getelementptr inbounds %struct.ST* %ref.tmp2, i32 0, i32 0
+  %1 = load i32* %filler, align 4
+  %add = add nsw i32 %0, %1
+  ret i32 %add
+}
+
+define i32 @main() nounwind {
+entry:
+  call void @_Z4scanv()
+  ret i32 0
+}

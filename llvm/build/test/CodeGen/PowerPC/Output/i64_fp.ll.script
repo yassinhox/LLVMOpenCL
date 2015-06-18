@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mattr=+64bit |    grep fcfid &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mattr=+64bit |    grep fctidz &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mcpu=g5 |    grep fcfid &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mcpu=g5 |    grep fctidz &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mattr=-64bit |    not grep fcfid &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mattr=-64bit |    not grep fctidz &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mcpu=g4 |    not grep fcfid &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp.ll -march=ppc32 -mcpu=g4 |    not grep fctidz

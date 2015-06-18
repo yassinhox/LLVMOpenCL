@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/macro-multiline.c "-DX=A &&
+THIS_SHOULD_NOT_EXIST_IN_THE_OUTPUT" > /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/macro-multiline.c.tmp &&
+grep "GOOD: A" /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/macro-multiline.c.tmp &&
+not grep THIS_SHOULD_NOT_EXIST_IN_THE_OUTPUT /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/macro-multiline.c.tmp

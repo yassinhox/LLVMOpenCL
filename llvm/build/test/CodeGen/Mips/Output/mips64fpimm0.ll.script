@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/mips64fpimm0.ll -march=mips64el -mcpu=mips64 -mattr=n64 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/mips64fpimm0.ll

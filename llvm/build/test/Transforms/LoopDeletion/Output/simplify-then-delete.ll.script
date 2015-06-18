@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopDeletion/simplify-then-delete.ll -S -indvars -loop-deletion -simplifycfg | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopDeletion/simplify-then-delete.ll

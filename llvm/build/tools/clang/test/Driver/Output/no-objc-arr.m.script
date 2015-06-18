@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang   -Werror -fobjc-arc -fsyntax-only -fno-objc-arc -Xclang -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/no-objc-arr.m

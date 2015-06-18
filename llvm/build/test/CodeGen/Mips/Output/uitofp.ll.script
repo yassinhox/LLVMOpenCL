@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips -mattr=+single-float < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/uitofp.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopVectorize/runtime-check.ll  -loop-vectorize -force-vector-width=4 -dce -instcombine -licm -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopVectorize/runtime-check.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple=thumbv7-apple-darwin -mcpu=cortex-a8 -mdis < /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/marked-up-thumb.txt | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/marked-up-thumb.txt

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopDeletion/dcetest.ll -sccp -simplifycfg -indvars -loop-deletion -dce -simplifycfg -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep br

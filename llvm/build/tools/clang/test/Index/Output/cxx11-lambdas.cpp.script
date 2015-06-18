@@ -1,0 +1,2 @@
+c-index-test -test-load-source all -std=c++11 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/cxx11-lambdas.cpp | FileCheck -check-prefix=CHECK-LOAD /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/cxx11-lambdas.cpp &&
+env CINDEXTEST_INDEXLOCALSYMBOLS=1 c-index-test -index-file -std=c++11 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/cxx11-lambdas.cpp | FileCheck -check-prefix=CHECK-INDEX /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/cxx11-lambdas.cpp

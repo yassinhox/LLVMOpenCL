@@ -1,0 +1,6 @@
+c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c 2>&1|FileCheck -check-prefix=CHECK-BOTH-WARNINGS /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c &&
+c-index-test -test-load-source-reparse 5 all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c 2>&1|FileCheck -check-prefix=CHECK-BOTH-WARNINGS /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c &&
+c-index-test -test-load-source all -Wno-return-type  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c 2>&1|FileCheck -check-prefix=CHECK-SECOND-WARNING /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c &&
+c-index-test -test-load-source-reparse 5 all -Wno-return-type /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c 2>&1|FileCheck -check-prefix=CHECK-SECOND-WARNING /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c &&
+c-index-test -test-load-source all -w /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c 2>&1|not grep warning: &&
+c-index-test -test-load-source-reparse 5 all -w /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/warning-flags.c 2>&1|not grep warning:

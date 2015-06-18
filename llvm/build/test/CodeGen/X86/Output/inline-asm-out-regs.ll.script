@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inline-asm-out-regs.ll -mtriple=i386-unknown-linux-gnu

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fp-stack-ret-conv.ll -mcpu=yonah | grep cvtss2sd &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fp-stack-ret-conv.ll -mcpu=yonah | grep fstps &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fp-stack-ret-conv.ll -mcpu=yonah | /home/jazouani/llvm/build/Release+Asserts/bin/not grep cvtsd2ss

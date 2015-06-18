@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/peep-vector-extract-insert.ll -march=x86-64 | grep "xorps	%xmm0, %xmm0" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

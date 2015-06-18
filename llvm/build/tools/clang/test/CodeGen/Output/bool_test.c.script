@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple powerpc-apple-darwin -emit-llvm -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bool_test.c| FileCheck -check-prefix=DARWINPPC-CHECK /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bool_test.c

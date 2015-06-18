@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=thumb -mattr=+v6t2 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/bfi.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/bfi.ll

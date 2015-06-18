@@ -1,0 +1,67 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:
+	.cfi_startproc
+	pushl	%ebp
+.Ltmp5:
+	.cfi_def_cfa_offset 8
+	pushl	%ebx
+.Ltmp6:
+	.cfi_def_cfa_offset 12
+	pushl	%edi
+.Ltmp7:
+	.cfi_def_cfa_offset 16
+	pushl	%esi
+.Ltmp8:
+	.cfi_def_cfa_offset 20
+	subl	$12, %esp
+.Ltmp9:
+	.cfi_def_cfa_offset 32
+.Ltmp10:
+	.cfi_offset %esi, -20
+.Ltmp11:
+	.cfi_offset %edi, -16
+.Ltmp12:
+	.cfi_offset %ebx, -12
+.Ltmp13:
+	.cfi_offset %ebp, -8
+	movl	bar_i, %edi
+	movl	foo2, %ebx
+	movl	foo1, %ebp
+	calll	foo_f
+	movl	%eax, %esi
+	addl	%ebp, %esi
+	calll	bar_f
+	addl	%esi, %eax
+	addl	%ebx, %eax
+	addl	%edi, %eax
+	addl	$12, %esp
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+.Ltmp14:
+	.size	test, .Ltmp14-test
+	.cfi_endproc
+
+
+	.globl	foo1
+foo1 = bar
+	.globl	foo2
+foo2 = bar
+	.weak	bar_f
+bar_f = foo_f
+bar_i = bar
+	.globl	A
+A = bar
+	.globl	bar_h
+	.hidden	bar_h
+bar_h = bar
+	.globl	bar_p
+	.protected	bar_p
+bar_p = bar
+	.section	".note.GNU-stack","",@progbits

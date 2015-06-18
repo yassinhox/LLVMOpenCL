@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -x objective-c -arch x86_64 -fobjc-arc -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/arc-exceptions.m 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/arc-exceptions.m.tmp.log &&
+grep objective-c /home/jazouani/llvm/build/tools/clang/test/Driver/Output/arc-exceptions.m.tmp.log &&
+not grep "fobjc-arc-exceptions" /home/jazouani/llvm/build/tools/clang/test/Driver/Output/arc-exceptions.m.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -x objective-c++ -arch x86_64 -fobjc-arc -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/arc-exceptions.m 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/arc-exceptions.m.tmp.log &&
+grep "fobjc-arc-exceptions" /home/jazouani/llvm/build/tools/clang/test/Driver/Output/arc-exceptions.m.tmp.log

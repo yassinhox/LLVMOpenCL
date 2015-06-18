@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2007-11-23-cttz.ll -constprop -S | grep "ret i13 13"

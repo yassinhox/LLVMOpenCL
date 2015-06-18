@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2007-10-21-LocalRegAllocAssert2.ll -mtriple=powerpc64-apple-darwin9 -regalloc=fast -optimize-regalloc=0 -relocation-model=pic

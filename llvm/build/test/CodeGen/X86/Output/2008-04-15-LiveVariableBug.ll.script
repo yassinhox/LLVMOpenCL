@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-04-15-LiveVariableBug.ll -mtriple=x86_64-apple-darwin &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-04-15-LiveVariableBug.ll -mtriple=x86_64-apple-darwin -relocation-model=pic -disable-fp-elim -O0 -regalloc=fast

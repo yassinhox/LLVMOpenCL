@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-02-24-BigStack.ll -O0 -relocation-model=pic -disable-fp-elim -mcpu=cortex-a8 -mattr=+vfp2

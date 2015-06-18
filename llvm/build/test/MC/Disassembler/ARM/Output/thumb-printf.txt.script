@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/thumb-printf.txt -triple=thumbv7-apple-darwin9 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/thumb-printf.txt

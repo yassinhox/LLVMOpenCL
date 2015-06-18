@@ -1,0 +1,26 @@
+	.file	"<stdin>"
+	.text
+	.align	16, 0x90
+	.type	__unnamed_1,@function
+__unnamed_1:                            # @1
+# BB#0:
+	movss	__unnamed_2, %xmm0
+	rsqrtss	%xmm0, %xmm0
+	movss	%xmm0, __unnamed_2
+	ret
+.Ltmp0:
+	.size	__unnamed_1, .Ltmp0-__unnamed_1
+
+	.align	16, 0x90
+	.type	__unnamed_3,@function
+__unnamed_3:                            # @2
+# BB#0:
+	pshufd	$81, __unnamed_2, %xmm0 # xmm0 = mem[1,0,1,1]
+	rsqrtss	%xmm0, %xmm0
+	extractps	$1, %xmm0, __unnamed_2
+	ret
+.Ltmp1:
+	.size	__unnamed_3, .Ltmp1-__unnamed_3
+
+
+	.section	".note.GNU-stack","",@progbits

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/tailcallpic1.ll  -tailcallopt -mtriple=powerpc-apple-darwin -relocation-model=pic | grep TC_RETURN

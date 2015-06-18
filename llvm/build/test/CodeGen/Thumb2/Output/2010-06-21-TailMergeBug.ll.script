@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-06-21-TailMergeBug.ll -mtriple=thumbv7-apple-darwin -O3 -relocation-model=pic | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-06-21-TailMergeBug.ll

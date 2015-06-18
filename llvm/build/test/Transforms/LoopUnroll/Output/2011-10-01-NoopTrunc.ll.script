@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2011-10-01-NoopTrunc.ll -S -loop-unroll -unroll-threshold=150 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2011-10-01-NoopTrunc.ll

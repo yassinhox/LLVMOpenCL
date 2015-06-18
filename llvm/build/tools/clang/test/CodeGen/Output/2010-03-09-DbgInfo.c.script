@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -O0 -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2010-03-09-DbgInfo.c -o - | grep DW_TAG_variable

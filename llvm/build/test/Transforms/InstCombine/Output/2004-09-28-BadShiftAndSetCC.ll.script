@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2004-09-28-BadShiftAndSetCC.ll -instcombine -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep -- -65536

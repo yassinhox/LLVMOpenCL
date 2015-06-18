@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 -mtriple=armv7-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fast-isel-pred.ll

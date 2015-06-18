@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/lshr-phi.ll -instcombine -S > /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/lshr-phi.ll.tmp &&
+not grep lshr /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/lshr-phi.ll.tmp &&
+grep add /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/lshr-phi.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

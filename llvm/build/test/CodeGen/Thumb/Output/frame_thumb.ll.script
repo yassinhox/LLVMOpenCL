@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb/frame_thumb.ll -mtriple=thumb-apple-darwin      -disable-fp-elim | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "r11" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb/frame_thumb.ll -mtriple=thumb-linux-gnueabi      -disable-fp-elim | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "r11"

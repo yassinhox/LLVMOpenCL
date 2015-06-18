@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2007-08-06-Unsigned.ll -scalar-evolution -analyze | grep "Loop %bb: backedge-taken count is (-1 + (-1 \* %x) + %y)"

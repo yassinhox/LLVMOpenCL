@@ -1,0 +1,2 @@
+c-index-test -index-file /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-decls.m -target x86_64-apple-macosx10.7 > /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-decls.m.tmp &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-decls.m -input-file=/home/jazouani/llvm/build/tools/clang/test/Index/Output/index-decls.m.tmp

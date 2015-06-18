@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/aligned-spill.ll -mcpu=cortex-a8 -align-neon-spills=0 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/aligned-spill.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/aligned-spill.ll -mcpu=cortex-a8 -align-neon-spills=1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/aligned-spill.ll --check-prefix=NEON

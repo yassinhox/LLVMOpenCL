@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -O1 -debug-pass=Arguments 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/optimize-options.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -O2 -debug-pass=Arguments 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/optimize-options.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -Os -debug-pass=Arguments 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/optimize-options.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -Oz -debug-pass=Arguments 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/optimize-options.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -O3 -debug-pass=Arguments 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/optimize-options.ll

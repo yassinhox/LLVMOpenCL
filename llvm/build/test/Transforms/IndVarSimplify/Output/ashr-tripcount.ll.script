@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/ashr-tripcount.ll -indvars -S > /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/ashr-tripcount.ll.tmp &&
+grep sext /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/ashr-tripcount.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

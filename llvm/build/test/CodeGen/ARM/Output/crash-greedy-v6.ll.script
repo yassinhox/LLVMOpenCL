@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -disable-fp-elim -relocation-model=pic < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/crash-greedy-v6.ll

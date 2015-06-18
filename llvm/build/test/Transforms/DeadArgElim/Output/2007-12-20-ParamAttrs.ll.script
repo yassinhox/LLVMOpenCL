@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/2007-12-20-ParamAttrs.ll -deadargelim -S > /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2007-12-20-ParamAttrs.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2007-12-20-ParamAttrs.ll.tmp | grep nounwind | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2007-12-20-ParamAttrs.ll.tmp | grep signext | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2007-12-20-ParamAttrs.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/not grep inreg &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2007-12-20-ParamAttrs.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/not grep zeroext &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2007-12-20-ParamAttrs.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/not grep byval

@@ -1,0 +1,1 @@
+[{"directory":"/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp","command":"clang -c test.cpp -I.","file":"/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp/test.cpp"}]

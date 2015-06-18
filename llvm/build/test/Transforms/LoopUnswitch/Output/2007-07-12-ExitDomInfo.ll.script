@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/2007-07-12-ExitDomInfo.ll -loop-unswitch -instcombine -disable-output

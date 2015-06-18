@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/compare-simm.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 |    grep "cmpwi cr0, r3, -1"

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/invariant_value_first.ll -loop-reduce -S |    not grep "getelementptr.*%outer.*%INDVAR"

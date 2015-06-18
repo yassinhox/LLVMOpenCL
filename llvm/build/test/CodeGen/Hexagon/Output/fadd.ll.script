@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=hexagon -mcpu=hexagonv5  < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Hexagon/fadd.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Hexagon/fadd.ll

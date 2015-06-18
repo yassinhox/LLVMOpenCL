@@ -1,0 +1,42 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+	.cfi_startproc
+# BB#0:
+	pushl	%edi
+.Ltmp3:
+	.cfi_def_cfa_offset 8
+	pushl	%esi
+.Ltmp4:
+	.cfi_def_cfa_offset 12
+.Ltmp5:
+	.cfi_offset %esi, -12
+.Ltmp6:
+	.cfi_offset %edi, -8
+	movl	12(%esp), %eax
+	movl	16(%esp), %ecx
+	movl	20(%esp), %edx
+	movl	24(%esp), %esi
+	movl	28(%esp), %edi
+	#APP
+	push %ebp
+push %ebx
+movl 4(%eax),%ebp
+movl 0(%eax), %ebx
+movl $192,%eax
+int  $0x80
+pop  %ebx
+pop %ebp
+	#NO_APP
+	popl	%esi
+	popl	%edi
+	ret
+.Ltmp7:
+	.size	foo, .Ltmp7-foo
+	.cfi_endproc
+
+
+	.section	".note.GNU-stack","",@progbits

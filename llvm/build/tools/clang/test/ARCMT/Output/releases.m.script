@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fobjc-exceptions -fblocks -fsyntax-only -fobjc-arc -x objective-c /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/releases.m.result &&
+arcmt-test --args -triple x86_64-apple-darwin10 -fobjc-exceptions -fblocks -fsyntax-only -x objective-c /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/releases.m > /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/releases.m.tmp &&
+diff /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/releases.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/releases.m.result

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/2007-10-04-DomFrontier.ll -licm -loop-unroll -disable-output

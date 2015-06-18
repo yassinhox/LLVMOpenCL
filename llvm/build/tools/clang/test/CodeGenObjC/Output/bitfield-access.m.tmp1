@@ -1,0 +1,47 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/bitfield-access.m'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:128:128-n8:16:32-S128"
+target triple = "i386-apple-darwin10"
+
+%0 = type opaque
+%1 = type opaque
+%struct._objc_module = type { i32, i32, i8*, %struct._objc_symtab* }
+%struct._objc_symtab = type { i32, i8*, i16, i16, [0 x i8*] }
+
+@"\01L_OBJC_CLASS_NAME_" = internal global [1 x i8] zeroinitializer, section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_MODULES" = internal global %struct._objc_module { i32 7, i32 16, i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct._objc_symtab* null }, section "__OBJC,__module_info,regular,no_dead_strip", align 4
+@llvm.used = appending global [2 x i8*] [i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), i8* bitcast (%struct._objc_module* @"\01L_OBJC_MODULES" to i8*)], section "llvm.metadata"
+
+define i32 @f0(%0* %a) nounwind {
+entry:
+  %a.addr = alloca %0*, align 4
+  store %0* %a, %0** %a.addr, align 4
+  %0 = load %0** %a.addr, align 4
+  %1 = bitcast %0* %0 to i8*
+  %add.ptr = getelementptr inbounds i8* %1, i32 1
+  %2 = bitcast i8* %add.ptr to i32*
+  %3 = bitcast i32* %2 to i16*
+  %4 = load i16* %3, align 1
+  %5 = lshr i16 %4, 7
+  %bf.clear = and i16 %5, 1
+  %6 = zext i16 %bf.clear to i32
+  ret i32 %6
+}
+
+define i32 @f1(%1* %a) nounwind {
+entry:
+  %a.addr = alloca %1*, align 4
+  store %1* %a, %1** %a.addr, align 4
+  %0 = load %1** %a.addr, align 4
+  %1 = bitcast %1* %0 to i8*
+  %add.ptr = getelementptr inbounds i8* %1, i32 4
+  %2 = bitcast i8* %add.ptr to i32*
+  %3 = load i32* %2, align 1
+  ret i32 %3
+}
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 1}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__OBJC, __image_info,regular"}
+!3 = metadata !{i32 4, metadata !"Objective-C Garbage Collection", i32 0}

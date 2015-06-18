@@ -1,0 +1,1 @@
+env CINDEXTEST_EDITING=1 c-index-test -test-load-source-reparse 2 all -I/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/Inputs -fno-delayed-template-parsing -fno-ms-compatibility -fno-ms-extensions /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/redeclarations.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/redeclarations.cpp

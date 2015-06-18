@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -O3 -emit-llvm -S -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-promote.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-promote.c

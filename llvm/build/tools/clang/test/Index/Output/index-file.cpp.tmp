@@ -1,0 +1,4 @@
+[enteredMainFile]: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-file.cpp
+[startedTranslationUnit]
+[indexDeclaration]: kind: type-alias | name: MyTypeAlias | USR: c:@MyTypeAlias | lang: C++ | cursor: TypeAliasDecl=MyTypeAlias:1:7 (Definition) | loc: 1:7 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 0 | isDef: 1 | isContainer: 0 | isImplicit: 0
+[diagnostic]: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-file.cpp:1:21: warning: alias declarations are a C++11 extension [-Wc++11-extensions]

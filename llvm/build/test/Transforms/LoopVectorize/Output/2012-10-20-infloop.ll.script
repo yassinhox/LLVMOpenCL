@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopVectorize/2012-10-20-infloop.ll  -loop-vectorize -force-vector-width=4 -dce

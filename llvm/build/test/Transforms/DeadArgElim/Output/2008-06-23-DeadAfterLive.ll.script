@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/2008-06-23-DeadAfterLive.ll -deadargelim -die -S > /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2008-06-23-DeadAfterLive.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/2008-06-23-DeadAfterLive.ll.tmp | grep 123

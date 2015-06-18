@@ -1,0 +1,3 @@
+echo "@X = appending global [1 x i32] [i32 8] " |    /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /home/jazouani/llvm/build/test/Linker/Output/AppendingLinkage2.ll.tmp.2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/AppendingLinkage2.ll > /home/jazouani/llvm/build/test/Linker/Output/AppendingLinkage2.ll.tmp.1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/AppendingLinkage2.ll.tmp.1.bc /home/jazouani/llvm/build/test/Linker/Output/AppendingLinkage2.ll.tmp.2.bc -S | grep 7 | grep 8

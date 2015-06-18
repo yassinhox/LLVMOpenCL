@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/loadtest.ll -default-data-layout="e-p:32:32" -sccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/loadtest.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/loadtest.ll -default-data-layout="E-p:32:32" -sccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/loadtest.ll

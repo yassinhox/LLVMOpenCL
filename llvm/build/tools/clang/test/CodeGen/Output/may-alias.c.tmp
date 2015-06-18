@@ -1,0 +1,39 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/may-alias.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i386-unknown-unknown"
+
+%struct.Test1MA = type { i32 }
+%struct.Test1 = type { i32 }
+
+define void @test0(i32* %ai, i32* %i) nounwind {
+entry:
+  %ai.addr = alloca i32*, align 4
+  %i.addr = alloca i32*, align 4
+  store i32* %ai, i32** %ai.addr, align 4, !tbaa !0
+  store i32* %i, i32** %i.addr, align 4, !tbaa !0
+  %0 = load i32** %ai.addr, align 4, !tbaa !0
+  store i32 0, i32* %0, align 4, !tbaa !1
+  %1 = load i32** %i.addr, align 4, !tbaa !0
+  store i32 1, i32* %1, align 4, !tbaa !3
+  ret void
+}
+
+define void @test1(%struct.Test1MA* %p1, %struct.Test1* %p2) nounwind {
+entry:
+  %p1.addr = alloca %struct.Test1MA*, align 4
+  %p2.addr = alloca %struct.Test1*, align 4
+  store %struct.Test1MA* %p1, %struct.Test1MA** %p1.addr, align 4, !tbaa !0
+  store %struct.Test1* %p2, %struct.Test1** %p2.addr, align 4, !tbaa !0
+  %0 = load %struct.Test1MA** %p1.addr, align 4, !tbaa !0
+  %x = getelementptr inbounds %struct.Test1MA* %0, i32 0, i32 0
+  store i32 2, i32* %x, align 4, !tbaa !1
+  %1 = load %struct.Test1** %p2.addr, align 4, !tbaa !0
+  %x1 = getelementptr inbounds %struct.Test1* %1, i32 0, i32 0
+  store i32 3, i32* %x1, align 4, !tbaa !3
+  ret void
+}
+
+!0 = metadata !{metadata !"any pointer", metadata !1}
+!1 = metadata !{metadata !"omnipotent char", metadata !2}
+!2 = metadata !{metadata !"Simple C/C++ TBAA"}
+!3 = metadata !{metadata !"int", metadata !1}

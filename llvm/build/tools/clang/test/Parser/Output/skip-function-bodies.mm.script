@@ -1,0 +1,1 @@
+env CINDEXTEST_SKIP_FUNCTION_BODIES=1 c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Parser/skip-function-bodies.mm | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Parser/skip-function-bodies.mm

@@ -1,0 +1,7 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/tentative-decls.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/tentative-decls.c &&
+grep '@r = common global \[1 x .*\] zeroinitializer' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/tentative-decls.c.tmp &&
+grep '@x = common global .struct.s0 zeroinitializer' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/tentative-decls.c.tmp &&
+grep '@y = common global .struct.s0 zeroinitializer' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/tentative-decls.c.tmp &&
+grep '@b = common global \[1 x .*\] zeroinitializer' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/tentative-decls.c.tmp &&
+grep '@c = common global \[4 x .*\] zeroinitializer' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/tentative-decls.c.tmp &&
+grep '@c5 = internal global \[1 x .*\] zeroinitializer' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/tentative-decls.c.tmp

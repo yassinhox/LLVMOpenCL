@@ -1,0 +1,2 @@
+echo "%X = type { i32 } @G2 = global %X { i32 4 }" > /home/jazouani/llvm/build/test/Linker/Output/link-type-names.ll.tmp.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/link-type-names.ll /home/jazouani/llvm/build/test/Linker/Output/link-type-names.ll.tmp.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Linker/link-type-names.ll

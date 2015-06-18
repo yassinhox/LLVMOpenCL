@@ -1,0 +1,9 @@
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/dependencies-and-pp.c"
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/dependencies-and-pp.c" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 153 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/dependencies-and-pp.c" 2
+

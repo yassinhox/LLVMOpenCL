@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple i386-pc-linux-gnu -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/staticinit.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/staticinit.c &&
+grep "g.b = internal global i8. getelementptr" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/staticinit.c.tmp &&
+grep "f1.l0 = internal global i32 ptrtoint (i32 ()\* @f1 to i32)" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/staticinit.c.tmp

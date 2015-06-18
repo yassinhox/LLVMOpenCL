@@ -1,0 +1,78 @@
+	.section	__TEXT,__text,regular,pure_instructions
+
+
+
+
+	.text
+g:
+h:
+j:
+k:
+	.data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c = 10
+	.no_dead_strip	c
+
+
+d = e+10
+	.long	d
+
+f = (g-h)+5
+	.long	f
+
+i = (j+10)-(k+2)
+	.long	i
+
+l = (m-n)+4
+
+	.text
+m:
+n:
+	nop
+
+
+	movw	$8, 42+66(%eax)
+
+
+_f0:
+L0:
+	jmp	L1
+.Ltmp0:
+	.long	.Ltmp0-L0
+L1:
+	jmp	A
+.Ltmp1:
+	.long	.Ltmp1-L1

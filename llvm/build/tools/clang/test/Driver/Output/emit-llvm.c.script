@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-print-phases -c -O4 -O0 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/emit-llvm.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/emit-llvm.c.tmp &&
+FileCheck --check-prefix=O4_AND_O0 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/emit-llvm.c < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/emit-llvm.c.tmp

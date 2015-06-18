@@ -1,0 +1,1 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-qualified.cpp:14:8 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-qualified.cpp -o - | FileCheck -check-prefix=CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-qualified.cpp

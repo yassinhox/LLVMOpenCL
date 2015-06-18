@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/X86/2009-11-10-LSRCrash.ll -mtriple=i386-apple-darwin11

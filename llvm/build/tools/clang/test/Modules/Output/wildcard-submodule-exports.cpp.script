@@ -1,0 +1,2 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Modules/Output/wildcard-submodule-exports.cpp.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c++ -fmodule-cache-path /home/jazouani/llvm/build/tools/clang/test/Modules/Output/wildcard-submodule-exports.cpp.tmp -fmodules -I /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/Inputs/wildcard-submodule-exports /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/wildcard-submodule-exports.cpp -verify

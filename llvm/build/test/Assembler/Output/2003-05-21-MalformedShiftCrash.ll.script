@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2003-05-21-MalformedShiftCrash.ll > /dev/null 2> /home/jazouani/llvm/build/test/Assembler/Output/2003-05-21-MalformedShiftCrash.ll.tmp &&
+grep "constexpr requires integer operands" /home/jazouani/llvm/build/test/Assembler/Output/2003-05-21-MalformedShiftCrash.ll.tmp

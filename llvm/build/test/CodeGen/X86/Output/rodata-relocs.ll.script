@@ -1,0 +1,7 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rodata-relocs.ll -relocation-model=static | grep rodata | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rodata-relocs.ll -relocation-model=static | grep -F "rodata.cst" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rodata-relocs.ll -relocation-model=pic | grep rodata | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rodata-relocs.ll -relocation-model=pic | grep -F ".data.rel.ro" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rodata-relocs.ll -relocation-model=pic | grep -F ".data.rel.ro.local" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rodata-relocs.ll -relocation-model=pic | grep -F ".data.rel" | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rodata-relocs.ll -relocation-model=pic | grep -F ".data.rel.local" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

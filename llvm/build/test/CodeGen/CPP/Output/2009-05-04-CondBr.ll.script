@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CPP/2009-05-04-CondBr.ll -march=cpp -cppgen=program -o /home/jazouani/llvm/build/test/CodeGen/CPP/Output/2009-05-04-CondBr.ll.tmp &&
+grep "BranchInst::Create(label_if_then, label_if_end, int1_cmp, label_entry);" /home/jazouani/llvm/build/test/CodeGen/CPP/Output/2009-05-04-CondBr.ll.tmp

@@ -1,0 +1,92 @@
+	.file	"<stdin>"
+	.text
+	.globl	shuf_8i16_0
+	.align	16, 0x90
+	.type	shuf_8i16_0,@function
+shuf_8i16_0:                            # @shuf_8i16_0
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0    # xmm0 = xmm0[0,0,1,1,2,2,3,3]
+	pshufd	$0, %xmm0, %xmm0        # xmm0 = xmm0[0,0,0,0]
+	ret
+.Ltmp0:
+	.size	shuf_8i16_0, .Ltmp0-shuf_8i16_0
+
+	.globl	shuf_8i16_1
+	.align	16, 0x90
+	.type	shuf_8i16_1,@function
+shuf_8i16_1:                            # @shuf_8i16_1
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0    # xmm0 = xmm0[0,0,1,1,2,2,3,3]
+	pshufd	$85, %xmm0, %xmm0       # xmm0 = xmm0[1,1,1,1]
+	ret
+.Ltmp1:
+	.size	shuf_8i16_1, .Ltmp1-shuf_8i16_1
+
+	.globl	shuf_8i16_2
+	.align	16, 0x90
+	.type	shuf_8i16_2,@function
+shuf_8i16_2:                            # @shuf_8i16_2
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0    # xmm0 = xmm0[0,0,1,1,2,2,3,3]
+	pshufd	$-86, %xmm0, %xmm0      # xmm0 = xmm0[2,2,2,2]
+	ret
+.Ltmp2:
+	.size	shuf_8i16_2, .Ltmp2-shuf_8i16_2
+
+	.globl	shuf_8i16_3
+	.align	16, 0x90
+	.type	shuf_8i16_3,@function
+shuf_8i16_3:                            # @shuf_8i16_3
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0    # xmm0 = xmm0[0,0,1,1,2,2,3,3]
+	pshufd	$-1, %xmm0, %xmm0       # xmm0 = xmm0[3,3,3,3]
+	ret
+.Ltmp3:
+	.size	shuf_8i16_3, .Ltmp3-shuf_8i16_3
+
+	.globl	shuf_8i16_4
+	.align	16, 0x90
+	.type	shuf_8i16_4,@function
+shuf_8i16_4:                            # @shuf_8i16_4
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0    # xmm0 = xmm0[4,4,5,5,6,6,7,7]
+	pshufd	$0, %xmm0, %xmm0        # xmm0 = xmm0[0,0,0,0]
+	ret
+.Ltmp4:
+	.size	shuf_8i16_4, .Ltmp4-shuf_8i16_4
+
+	.globl	shuf_8i16_5
+	.align	16, 0x90
+	.type	shuf_8i16_5,@function
+shuf_8i16_5:                            # @shuf_8i16_5
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0    # xmm0 = xmm0[4,4,5,5,6,6,7,7]
+	pshufd	$85, %xmm0, %xmm0       # xmm0 = xmm0[1,1,1,1]
+	ret
+.Ltmp5:
+	.size	shuf_8i16_5, .Ltmp5-shuf_8i16_5
+
+	.globl	shuf_8i16_6
+	.align	16, 0x90
+	.type	shuf_8i16_6,@function
+shuf_8i16_6:                            # @shuf_8i16_6
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0    # xmm0 = xmm0[4,4,5,5,6,6,7,7]
+	pshufd	$-86, %xmm0, %xmm0      # xmm0 = xmm0[2,2,2,2]
+	ret
+.Ltmp6:
+	.size	shuf_8i16_6, .Ltmp6-shuf_8i16_6
+
+	.globl	shuf_8i16_7
+	.align	16, 0x90
+	.type	shuf_8i16_7,@function
+shuf_8i16_7:                            # @shuf_8i16_7
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0    # xmm0 = xmm0[4,4,5,5,6,6,7,7]
+	pshufd	$-1, %xmm0, %xmm0       # xmm0 = xmm0[3,3,3,3]
+	ret
+.Ltmp7:
+	.size	shuf_8i16_7, .Ltmp7-shuf_8i16_7
+
+
+	.section	".note.GNU-stack","",@progbits

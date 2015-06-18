@@ -1,0 +1,1 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-with-annotations.cpp:13:9 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-with-annotations.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-with-annotations.cpp

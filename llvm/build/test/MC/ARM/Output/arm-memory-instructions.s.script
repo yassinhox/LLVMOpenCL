@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple=armv7-apple-darwin -show-encoding < /home/jazouani/llvm/llvm-3.2/test/MC/ARM/arm-memory-instructions.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ARM/arm-memory-instructions.s

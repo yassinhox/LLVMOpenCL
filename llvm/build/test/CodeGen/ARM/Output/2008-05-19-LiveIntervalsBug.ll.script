@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2008-05-19-LiveIntervalsBug.ll -mtriple=arm-apple-darwin

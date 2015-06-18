@@ -1,0 +1,17 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c:13:12: error: no member named 'wobble' in 'struct X'; did you mean 'wibble'?
+Number FIX-ITs = 1
+FIX-IT: Replace [13:12 - 13:18] with "wibble"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c:7:18: note: expanded from macro 'MACRO'
+Number FIX-ITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c:4:7: note: 'wibble' declared here
+Number FIX-ITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c:17:6: error: no member named 'wabble' in 'struct X'; did you mean 'wibble'?
+Number FIX-ITs = 1
+FIX-IT: Replace [17:6 - 17:12] with "wibble"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c:4:7: note: 'wibble' declared here
+Number FIX-ITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c:26:22:{26:22-26:27}{26:17-26:19}: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+Number FIX-ITs = 1
+FIX-IT: Replace [26:17 - 26:19] with "%ld"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c:7:18: note: expanded from macro 'MACRO'
+Number FIX-ITs = 0

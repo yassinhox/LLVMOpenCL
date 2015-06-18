@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Feature/packed_struct.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Feature/Output/packed_struct.ll.tmp1.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/build/test/Feature/Output/packed_struct.ll.tmp1.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Feature/Output/packed_struct.ll.tmp2.ll &&
+diff /home/jazouani/llvm/build/test/Feature/Output/packed_struct.ll.tmp1.ll /home/jazouani/llvm/build/test/Feature/Output/packed_struct.ll.tmp2.ll &&
+not grep cast /home/jazouani/llvm/build/test/Feature/Output/packed_struct.ll.tmp2.ll &&
+grep "}>" /home/jazouani/llvm/build/test/Feature/Output/packed_struct.ll.tmp2.ll

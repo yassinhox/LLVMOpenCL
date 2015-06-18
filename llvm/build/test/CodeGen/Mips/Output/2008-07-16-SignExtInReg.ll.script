@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/2008-07-16-SignExtInReg.ll -march=mips -mcpu=mips32r2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/2008-07-16-SignExtInReg.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/2008-07-16-SignExtInReg.ll -march=mips64 -mcpu=mips64r2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/2008-07-16-SignExtInReg.ll

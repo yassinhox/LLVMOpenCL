@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/externally_available.ll -inline -constprop -S > /home/jazouani/llvm/build/test/Transforms/Inline/Output/externally_available.ll.tmp &&
+not grep test_function /home/jazouani/llvm/build/test/Transforms/Inline/Output/externally_available.ll.tmp &&
+grep "ret i32 5" /home/jazouani/llvm/build/test/Transforms/Inline/Output/externally_available.ll.tmp

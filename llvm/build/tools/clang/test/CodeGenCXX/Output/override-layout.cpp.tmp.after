@@ -1,0 +1,81 @@
+
+*** Dumping AST Record Layout
+Type: struct Empty1
+
+Layout: <ASTRecordLayout
+  Size:8
+  DataSize:8
+  Alignment:8
+  FieldOffsets: []>
+
+*** Dumping AST Record Layout
+Type: struct X0
+
+Layout: <ASTRecordLayout
+  Size:192
+  DataSize:192
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping AST Record Layout
+Type: struct Empty2
+
+Layout: <ASTRecordLayout
+  Size:8
+  DataSize:8
+  Alignment:8
+  FieldOffsets: []>
+
+*** Dumping AST Record Layout
+Type: struct X1
+
+Layout: <ASTRecordLayout
+  Size:488
+  DataSize:488
+  Alignment:8
+  FieldOffsets: [192, 296]>
+
+*** Dumping AST Record Layout
+Type: struct X2
+
+Layout: <ASTRecordLayout
+  Size:728
+  DataSize:728
+  Alignment:8
+  FieldOffsets: [680, 696]>
+
+*** Dumping AST Record Layout
+Type: struct X3
+
+Layout: <ASTRecordLayout
+  Size:792
+  DataSize:792
+  Alignment:8
+  FieldOffsets: [256, 272]>
+
+*** Dumping AST Record Layout
+Type: struct X4
+
+Layout: <ASTRecordLayout
+  Size:16
+  DataSize:16
+  Alignment:8
+  FieldOffsets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]>
+
+*** Dumping AST Record Layout
+Type: union X5::<anonymous at /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/override-layout.cpp:59:3>
+
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:64
+  FieldOffsets: [0, 0]>
+
+*** Dumping AST Record Layout
+Type: struct X5
+
+Layout: <ASTRecordLayout
+  Size:96
+  DataSize:96
+  Alignment:8
+  FieldOffsets: [0, 64, 80]>

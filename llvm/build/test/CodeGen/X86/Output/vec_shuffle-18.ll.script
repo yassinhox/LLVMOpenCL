@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_shuffle-18.ll -march=x86 -mattr=+sse2 -mtriple=i686-apple-darwin8.8.0 | grep mov | /home/jazouani/llvm/build/Release+Asserts/bin/count 7

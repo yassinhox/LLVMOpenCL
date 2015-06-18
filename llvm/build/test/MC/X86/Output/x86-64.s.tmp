@@ -1,0 +1,1283 @@
+	.section	__TEXT,__text,regular,pure_instructions
+
+
+
+
+	monitor                         # encoding: [0x0f,0x01,0xc8]
+
+
+	monitor                         # encoding: [0x0f,0x01,0xc8]
+
+
+	mwait                           # encoding: [0x0f,0x01,0xc9]
+
+
+	mwait                           # encoding: [0x0f,0x01,0xc9]
+
+
+
+
+
+
+	addl	$0, %eax                # encoding: [0x83,0xc0,0x00]
+
+	addb	$255, %al               # encoding: [0x04,0xff]
+
+	orq	%rax, %rdx              # encoding: [0x48,0x09,0xc2]
+
+	shlq	$3, %rax                # encoding: [0x48,0xc1,0xe0,0x03]
+
+
+
+	subb	%al, %al                # encoding: [0x28,0xc0]
+
+
+	addl	$24, %eax               # encoding: [0x83,0xc0,0x18]
+
+
+	movl	%eax, 10(%ebp)          # encoding: [0x67,0x89,0x45,0x0a]
+
+	movl	%eax, 10(%ebp,%ebx)     # encoding: [0x67,0x89,0x44,0x1d,0x0a]
+
+	movl	%eax, 10(%ebp,%ebx,4)   # encoding: [0x67,0x89,0x44,0x9d,0x0a]
+
+	movl	%eax, 10(,%ebx,4)       # encoding: [0x67,0x89,0x04,0x9d,0x0a,0x00,0x00,0x00]
+
+
+	movl	0, %eax                 # encoding: [0x8b,0x04,0x25,0x00,0x00,0x00,0x00]
+
+	movl	$0, %eax                # encoding: [0xb8,0x00,0x00,0x00,0x00]
+
+
+	ret                             # encoding: [0xc3]
+
+
+	retw                            # encoding: [0x66,0xc3]
+
+
+
+	subl	$1, %eax                # encoding: [0x83,0xe8,0x01]
+
+
+
+	subl	$-1, %eax               # encoding: [0x83,0xe8,0xff]
+
+
+
+	subl	$256, %eax              # encoding: [0x2d,0x00,0x01,0x00,0x00]
+                                        # imm = 0x100
+
+
+
+	xorq	$1, %rax                # encoding: [0x48,0x83,0xf0,0x01]
+
+
+
+	xorq	$256, %rax              # encoding: [0x48,0x35,0x00,0x01,0x00,0x00]
+                                        # imm = 0x100
+
+
+
+	subb	%al, %bl                # encoding: [0x28,0xc3]
+
+
+
+	subw	%ax, %bx                # encoding: [0x66,0x29,0xc3]
+
+
+
+	subl	%eax, %ebx              # encoding: [0x29,0xc3]
+
+
+
+	callq	*%rax                   # encoding: [0xff,0xd0]
+
+
+
+	shldl	%cl, %eax, %ebx         # encoding: [0x0f,0xa5,0xc3]
+
+
+	shll	$2, %eax                # encoding: [0xc1,0xe0,0x02]
+
+
+	shll	$2, %eax                # encoding: [0xc1,0xe0,0x02]
+
+
+
+	rep                             # encoding: [0xf3]
+	insb                            # encoding: [0x6c]
+
+
+
+	rep                             # encoding: [0xf3]
+	outsb                           # encoding: [0x6e]
+
+
+
+	rep                             # encoding: [0xf3]
+	movsb                           # encoding: [0xa4]
+
+
+
+	movsb                           # encoding: [0xa4]
+	movsw                           # encoding: [0x66,0xa5]
+	movsd                           # encoding: [0xa5]
+	movsq                           # encoding: [0x48,0xa5]
+
+
+
+
+	rep                             # encoding: [0xf3]
+	movsd                           # encoding: [0xa5]
+
+
+
+	rep                             # encoding: [0xf3]
+	lodsb                           # encoding: [0xac]
+
+
+
+	rep                             # encoding: [0xf3]
+	stosb                           # encoding: [0xaa]
+
+
+
+
+	rep                             # encoding: [0xf3]
+	cmpsb                           # encoding: [0xa6]
+
+
+
+
+	repne                           # encoding: [0xf2]
+	cmpsb                           # encoding: [0xa6]
+
+
+
+
+	rep                             # encoding: [0xf3]
+	scasb                           # encoding: [0xae]
+
+
+
+	repne                           # encoding: [0xf2]
+	scasb                           # encoding: [0xae]
+
+
+
+	lock                            # encoding: [0xf0]
+	cmpxchgb	%al, (%ebx)     # encoding: [0x67,0x0f,0xb0,0x03]
+
+
+
+	cs                              # encoding: [0x2e]
+	movb	(%eax), %al             # encoding: [0x67,0x8a,0x00]
+
+
+
+	ss                              # encoding: [0x36]
+	movb	(%eax), %al             # encoding: [0x67,0x8a,0x00]
+
+
+
+	ds                              # encoding: [0x3e]
+	movb	(%eax), %al             # encoding: [0x67,0x8a,0x00]
+
+
+
+	es                              # encoding: [0x26]
+	movb	(%eax), %al             # encoding: [0x67,0x8a,0x00]
+
+
+
+	fs                              # encoding: [0x64]
+	movb	(%eax), %al             # encoding: [0x67,0x8a,0x00]
+
+
+
+	gs                              # encoding: [0x65]
+	movb	(%eax), %al             # encoding: [0x67,0x8a,0x00]
+
+
+
+
+
+	fadd	%st(0)                  # encoding: [0xd8,0xc0]
+	fadd	%st(1)                  # encoding: [0xd8,0xc1]
+	fadd	%st(7)                  # encoding: [0xd8,0xc7]
+
+
+	leal	0, %eax                 # encoding: [0x8d,0x04,0x25,0x00,0x00,0x00,0x00]
+
+
+
+	int3                            # encoding: [0xcc]
+
+
+
+	int3                            # encoding: [0xcc]
+
+
+
+
+
+	movaps	%xmm3, (%esi)           # encoding: [0x67,0x0f,0x29,0x1e]
+
+
+	imull	$12, %eax, %eax         # encoding: [0x6b,0xc0,0x0c]
+
+
+	imull	%ecx, %eax              # encoding: [0x0f,0xaf,0xc1]
+
+
+
+
+	outb	%al, $161               # encoding: [0xe6,0xa1]
+
+	outw	%ax, $128               # encoding: [0x66,0xe7,0x80]
+
+	inb	$161, %al               # encoding: [0xe4,0xa1]
+
+
+
+	pushq	$1                      # encoding: [0x6a,0x01]
+
+
+	pushq	$1                      # encoding: [0x6a,0x01]
+
+	pushq	$1111111                # encoding: [0x68,0x47,0xf4,0x10,0x00]
+                                        # imm = 0x10F447
+
+
+
+
+	sldtw	4                       # encoding: [0x0f,0x00,0x04,0x25,0x04,0x00,0x00,0x00]
+
+
+
+	cmovnew	%bx, %ax                # encoding: [0x66,0x0f,0x45,0xc3]
+
+	cmovneq	%rbx, %rax              # encoding: [0x48,0x0f,0x45,0xc3]
+
+
+
+
+
+
+
+
+	inb	$127, %al               # encoding: [0xe4,0x7f]
+	inw	%dx                     # encoding: [0x66,0xed]
+	outb	%al, $127               # encoding: [0xe6,0x7f]
+	outw	%dx                     # encoding: [0x66,0xef]
+	inl	%dx                     # encoding: [0xed]
+
+
+
+
+
+
+
+
+
+
+	outb	%dx                     # encoding: [0xee]
+	outb	%dx                     # encoding: [0xee]
+	outw	%dx                     # encoding: [0x66,0xef]
+	outw	%dx                     # encoding: [0x66,0xef]
+	outl	%dx                     # encoding: [0xef]
+	outl	%dx                     # encoding: [0xef]
+
+
+
+
+
+
+
+
+	inb	%dx                     # encoding: [0xec]
+	inb	%dx                     # encoding: [0xec]
+	inw	%dx                     # encoding: [0x66,0xed]
+	inw	%dx                     # encoding: [0x66,0xed]
+	inl	%dx                     # encoding: [0xed]
+	inl	%dx                     # encoding: [0xed]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	fxch                            # encoding: [0xd9,0xc9]
+	fucom                           # encoding: [0xdd,0xe1]
+	fucomp                          # encoding: [0xdd,0xe9]
+	faddp	%st(1)                  # encoding: [0xde,0xc1]
+	faddp	%st(0)                  # encoding: [0xde,0xc0]
+	fsubp                           # encoding: [0xde,0xe1]
+	fsubrp                          # encoding: [0xde,0xe9]
+	fmulp                           # encoding: [0xde,0xc9]
+	fdivp                           # encoding: [0xde,0xf1]
+	fdivrp                          # encoding: [0xde,0xf9]
+
+
+
+
+
+
+
+	fcomi                           # encoding: [0xdb,0xf1]
+	fcomi	%st(2)                  # encoding: [0xdb,0xf2]
+	fucomi                          # encoding: [0xdb,0xe9]
+	fucomi	%st(2)                  # encoding: [0xdb,0xea]
+	fucomi	%st(2)                  # encoding: [0xdb,0xea]
+
+
+
+
+
+
+	fnstsw                          # encoding: [0xdf,0xe0]
+	fnstsw                          # encoding: [0xdf,0xe0]
+	fnstsw                          # encoding: [0xdf,0xe0]
+	fnstsw                          # encoding: [0xdf,0xe0]
+
+
+
+
+
+
+	rclb	%bl                     # encoding: [0xd0,0xd3]
+	rcll	3735928559(%ebx,%ecx,8) # encoding: [0x67,0xd1,0x94,0xcb,0xef,0xbe,0xad,0xde]
+	rcrl	%ecx                    # encoding: [0xd1,0xd9]
+	rcrl	305419896               # encoding: [0xd1,0x1c,0x25,0x78,0x56,0x34,0x12]
+
+	rclb	%bl                     # encoding: [0xd0,0xd3]
+	rclb	%bl                     # encoding: [0xd0,0xd3]
+	rclb	$2, %bl                 # encoding: [0xc0,0xd3,0x02]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	shldw	%cl, %bx, %dx           # encoding: [0x66,0x0f,0xa5,0xda]
+	shldw	%cl, %bx, %dx           # encoding: [0x66,0x0f,0xa5,0xda]
+	shldw	$1, %bx, %dx            # encoding: [0x66,0x0f,0xa4,0xda,0x01]
+	shldw	%cl, %bx, (%rax)        # encoding: [0x66,0x0f,0xa5,0x18]
+	shldw	%cl, %bx, (%rax)        # encoding: [0x66,0x0f,0xa5,0x18]
+	shrdw	%cl, %bx, %dx           # encoding: [0x66,0x0f,0xad,0xda]
+	shrdw	%cl, %bx, %dx           # encoding: [0x66,0x0f,0xad,0xda]
+	shrdw	$1, %bx, %dx            # encoding: [0x66,0x0f,0xac,0xda,0x01]
+	shrdw	%cl, %bx, (%rax)        # encoding: [0x66,0x0f,0xad,0x18]
+	shrdw	%cl, %bx, (%rax)        # encoding: [0x66,0x0f,0xad,0x18]
+
+
+
+
+
+
+	sldtl	%ecx                    # encoding: [0x0f,0x00,0xc1]
+	sldtw	%cx                     # encoding: [0x66,0x0f,0x00,0xc1]
+
+
+
+	lcalll	*3135175374             # encoding: [0xff,0x1c,0x25,0xce,0xfa,0xde,0xba]
+	ljmpl	*3135175374             # encoding: [0xff,0x2c,0x25,0xce,0xfa,0xde,0xba]
+
+
+
+
+
+
+
+
+
+	enter	$31438, $0              # encoding: [0xc8,0xce,0x7a,0x00]
+                                        # imm = 0x7ACE
+	enter	$31438, $1              # encoding: [0xc8,0xce,0x7a,0x01]
+                                        # imm = 0x7ACE
+	enter	$31438, $127            # encoding: [0xc8,0xce,0x7a,0x7f]
+                                        # imm = 0x7ACE
+
+
+
+
+	movw	%cs, %ax                # encoding: [0x66,0x8c,0xc8]
+
+
+	fcmovb	%st(1), %st(0)          # encoding: [0xda,0xc1]
+	fcmove	%st(1), %st(0)          # encoding: [0xda,0xc9]
+	fcmovbe	%st(1), %st(0)          # encoding: [0xda,0xd1]
+	fcmovu	 %st(1), %st(0)         # encoding: [0xda,0xd9]
+
+	fcmovnb	%st(1), %st(0)          # encoding: [0xdb,0xc1]
+	fcmovne	%st(1), %st(0)          # encoding: [0xdb,0xc9]
+	fcmovnbe	%st(1), %st(0)  # encoding: [0xdb,0xd1]
+	fcmovnu	%st(1), %st(0)          # encoding: [0xdb,0xd9]
+
+	fcmovb	%st(1), %st(0)          # encoding: [0xda,0xc1]
+	fcmovbe	%st(1), %st(0)          # encoding: [0xda,0xd1]
+
+	fcmovnb	%st(1), %st(0)          # encoding: [0xdb,0xc1]
+	fcmovnbe	%st(1), %st(0)  # encoding: [0xdb,0xd1]
+
+
+	.byte	9
+
+
+	movq	%rdx, %cr0              # encoding: [0x0f,0x22,0xc2]
+
+
+	movq	%rdx, %cr4              # encoding: [0x0f,0x22,0xe2]
+
+
+	movq	%rdx, %cr8              # encoding: [0x44,0x0f,0x22,0xc2]
+
+
+	movq	%rdx, %cr15             # encoding: [0x44,0x0f,0x22,0xfa]
+
+
+
+
+
+
+	faddp	%st(1)                  # encoding: [0xde,0xc1]
+	fmulp	%st(2)                  # encoding: [0xde,0xca]
+
+
+
+
+
+
+	fmul	%st(0), %st(1)          # encoding: [0xdc,0xc9]
+	fmul	%st(1)                  # encoding: [0xd8,0xc9]
+
+
+
+
+
+	fadd	%st(0), %st(1)          # encoding: [0xdc,0xc1]
+	fadd	%st(1)                  # encoding: [0xd8,0xc1]
+
+
+
+
+
+
+
+
+
+
+
+	xorb	%al, %al                # encoding: [0x30,0xc0]
+	xorw	%di, %di                # encoding: [0x66,0x31,0xff]
+	xorl	%esi, %esi              # encoding: [0x31,0xf6]
+	xorq	%rsi, %rsi              # encoding: [0x48,0x31,0xf6]
+
+
+	cltq                            # encoding: [0x48,0x98]
+	cltq                            # encoding: [0x48,0x98]
+	cwtl                            # encoding: [0x98]
+	cwtl                            # encoding: [0x98]
+
+
+	cbtw                            # encoding: [0x66,0x98]
+	cwtd                            # encoding: [0x66,0x99]
+	cltd                            # encoding: [0x99]
+	cqto                            # encoding: [0x48,0x99]
+
+
+	wait                            # encoding: [0x9b]
+	fnstsw                          # encoding: [0xdf,0xe0]
+
+
+	wait                            # encoding: [0x9b]
+	fnstsw	(%rax)                  # encoding: [0xdd,0x38]
+
+
+
+
+	wait                            # encoding: [0x9b]
+	fnstcw	(%rsp)                  # encoding: [0xd9,0x3c,0x24]
+
+
+
+
+	wait                            # encoding: [0x9b]
+	fnstcw	(%rsp)                  # encoding: [0xd9,0x3c,0x24]
+
+
+
+
+	wait                            # encoding: [0x9b]
+	fninit                          # encoding: [0xdb,0xe3]
+
+
+
+	wait                            # encoding: [0x9b]
+	fnsave	32493                   # encoding: [0xdd,0x34,0x25,0xed,0x7e,0x00,0x00]
+
+
+
+
+
+	cvtsd2siq	%xmm1, %rax     # encoding: [0xf2,0x48,0x0f,0x2d,0xc1]
+
+
+	cvtsd2sil	%xmm1, %eax     # encoding: [0xf2,0x0f,0x2d,0xc1]
+
+
+
+	cvtsd2siq	%xmm0, %rax     # encoding: [0xf2,0x48,0x0f,0x2d,0xc0]
+	cvtsd2sil	%xmm0, %eax     # encoding: [0xf2,0x0f,0x2d,0xc0]
+	cvtsd2siq	%xmm0, %rax     # encoding: [0xf2,0x48,0x0f,0x2d,0xc0]
+
+
+	cvttpd2dq	%xmm1, %xmm0    # encoding: [0x66,0x0f,0xe6,0xc1]
+	cvttpd2dq	(%rax), %xmm0   # encoding: [0x66,0x0f,0xe6,0x00]
+
+	cvttps2dq	%xmm1, %xmm0    # encoding: [0xf3,0x0f,0x5b,0xc1]
+	cvttps2dq	(%rax), %xmm0   # encoding: [0xf3,0x0f,0x5b,0x00]
+
+
+	roundss	$14, %xmm0, %xmm0       # encoding: [0x66,0x0f,0x3a,0x0a,0xc0,0x0e]
+	roundps	$14, %xmm0, %xmm0       # encoding: [0x66,0x0f,0x3a,0x08,0xc0,0x0e]
+	roundsd	$14, %xmm0, %xmm0       # encoding: [0x66,0x0f,0x3a,0x0b,0xc0,0x0e]
+	roundpd	$14, %xmm0, %xmm0       # encoding: [0x66,0x0f,0x3a,0x09,0xc0,0x0e]
+
+
+
+	leal	8(%eax), %esi           # encoding: [0x67,0x8d,0x70,0x08]
+
+
+	leaq	8(%eax), %rsi           # encoding: [0x67,0x48,0x8d,0x70,0x08]
+
+
+	leaq	8(%rax), %rsi           # encoding: [0x48,0x8d,0x70,0x08]
+
+
+
+
+	cvttpd2dq	3735928559(%ebx,%ecx,8), %xmm5 # encoding: [0x67,0x66,0x0f,0xe6,0xac,0xcb,0xef,0xbe,0xad,0xde]
+
+
+
+
+	movmskpd	%xmm6, %rax     # encoding: [0x66,0x48,0x0f,0x50,0xc6]
+
+
+	movmskpd	%xmm6, %eax     # encoding: [0x66,0x0f,0x50,0xc6]
+
+
+
+
+	fdivrp                          # encoding: [0xde,0xf9]
+	fdivrp                          # encoding: [0xde,0xf9]
+
+	fsubrp                          # encoding: [0xde,0xe9]
+	fsubrp                          # encoding: [0xde,0xe9]
+
+
+	fdivp                           # encoding: [0xde,0xf1]
+	fdivp                           # encoding: [0xde,0xf1]
+
+
+	movl	foo(%rip), %eax         # encoding: [0x8b,0x05,A,A,A,A]
+                                        #   fixup A - offset: 2, value: foo-4, kind: reloc_riprel_4byte
+
+
+
+
+	movb	$12, foo(%rip)          # encoding: [0xc6,0x05,A,A,A,A,0x0c]
+                                        #   fixup A - offset: 2, value: foo-5, kind: reloc_riprel_4byte
+
+
+
+
+	movw	$12, foo(%rip)          # encoding: [0x66,0xc7,0x05,A,A,A,A,0x0c,0x00]
+                                        #   fixup A - offset: 3, value: foo-6, kind: reloc_riprel_4byte
+
+
+
+
+	movl	$12, foo(%rip)          # encoding: [0xc7,0x05,A,A,A,A,0x0c,0x00,0x00,0x00]
+                                        #   fixup A - offset: 2, value: foo-8, kind: reloc_riprel_4byte
+
+
+
+
+	movq	$12, foo(%rip)          # encoding: [0x48,0xc7,0x05,A,A,A,A,0x0c,0x00,0x00,0x00]
+                                        #   fixup A - offset: 3, value: foo-8, kind: reloc_riprel_4byte
+
+
+
+
+
+
+	addq	$-424, %rax             # encoding: [0x48,0x05,0x58,0xfe,0xff,0xff]
+                                        # imm = 0xFFFFFFFFFFFFFE58
+
+
+
+
+
+	movq	_foo@GOTPCREL(%rip), %rax # encoding: [0x48,0x8b,0x05,A,A,A,A]
+                                        #   fixup A - offset: 3, value: _foo@GOTPCREL-4, kind: reloc_riprel_4byte_movq_load
+
+
+
+
+	movq	_foo@GOTPCREL(%rip), %r14 # encoding: [0x4c,0x8b,0x35,A,A,A,A]
+                                        #   fixup A - offset: 3, value: _foo@GOTPCREL-4, kind: reloc_riprel_4byte_movq_load
+
+
+
+
+	movq	(%r13,%rax,8), %r13     # encoding: [0x4d,0x8b,0x6c,0xc5,0x00]
+
+
+
+	testq	%rax, %rbx              # encoding: [0x48,0x85,0xd8]
+
+
+
+	cmpq	%rbx, %r14              # encoding: [0x49,0x39,0xde]
+
+
+
+	movsq                           # encoding: [0x48,0xa5]
+
+
+
+	movsd                           # encoding: [0xa5]
+
+
+
+	stosq                           # encoding: [0x48,0xab]
+
+
+	stosl                           # encoding: [0xab]
+
+
+
+
+
+	movb	0, %al                  # encoding: [0x8a,0x04,0x25,0x00,0x00,0x00,0x00]
+	movw	0, %ax                  # encoding: [0x66,0x8b,0x04,0x25,0x00,0x00,0x00,0x00]
+	movl	0, %eax                 # encoding: [0x8b,0x04,0x25,0x00,0x00,0x00,0x00]
+
+
+	pushfq                          # encoding: [0x9c]
+
+	pushfq                          # encoding: [0x9c]
+
+	popfq                           # encoding: [0x9d]
+
+	popfq                           # encoding: [0x9d]
+
+
+
+	movabsq	$-281474976710654, %rax # encoding: [0x48,0xb8,0x02,0x00,0x00,0x00,0x00,0x00,0xff,0xff]
+                                        # imm = 0xFFFF000000000002
+
+
+
+	movabsq	$-281474976710654, %rax # encoding: [0x48,0xb8,0x02,0x00,0x00,0x00,0x00,0x00,0xff,0xff]
+                                        # imm = 0xFFFF000000000002
+
+
+
+	movq	$-65536, %rax           # encoding: [0x48,0xc7,0xc0,0x00,0x00,0xff,0xff]
+                                        # imm = 0xFFFFFFFFFFFF0000
+
+
+
+	movq	$-256, %rax             # encoding: [0x48,0xc7,0xc0,0x00,0xff,0xff,0xff]
+
+
+
+	movq	$10, %rax               # encoding: [0x48,0xc7,0xc0,0x0a,0x00,0x00,0x00]
+
+
+
+
+
+	ret                             # encoding: [0xc3]
+
+
+
+	sete	%al                     # encoding: [0x0f,0x94,0xc0]
+
+
+
+	setne	%al                     # encoding: [0x0f,0x95,0xc0]
+
+
+
+	je	0                       # encoding: [0x74,A]
+                                        #   fixup A - offset: 1, value: 0-1, kind: FK_PCRel_1
+
+
+
+	jne	0                       # encoding: [0x75,A]
+                                        #   fixup A - offset: 1, value: 0-1, kind: FK_PCRel_1
+
+
+	btl	$1, 0                   # encoding: [0x0f,0xba,0x24,0x25,0x00,0x00,0x00,0x00,0x01]
+	btl	$1, 0                   # encoding: [0x0f,0xba,0x24,0x25,0x00,0x00,0x00,0x00,0x01]
+
+
+	btq	$1, %rdx                # encoding: [0x48,0x0f,0xba,0xe2,0x01]
+
+
+
+
+
+
+	movzbl	%al, %esi               # encoding: [0x0f,0xb6,0xf0]
+
+
+
+	movzbq	%al, %rsi               # encoding: [0x48,0x0f,0xb6,0xf0]
+
+
+
+	movsbw	%al, %ax                # encoding: [0x66,0x0f,0xbe,0xc0]
+
+
+
+	movsbl	%al, %eax               # encoding: [0x0f,0xbe,0xc0]
+
+
+
+	movswl	%ax, %eax               # encoding: [0x0f,0xbf,0xc0]
+
+
+
+	movsbq	%bl, %rax               # encoding: [0x48,0x0f,0xbe,0xc3]
+
+
+
+	movswq	%cx, %rax               # encoding: [0x48,0x0f,0xbf,0xc1]
+
+
+
+	movslq	%edi, %rax              # encoding: [0x48,0x63,0xc7]
+
+
+
+	movzbw	%al, %ax                # encoding: [0x66,0x0f,0xb6,0xc0]
+
+
+
+	movzbl	%al, %eax               # encoding: [0x0f,0xb6,0xc0]
+
+
+
+	movzwl	%ax, %eax               # encoding: [0x0f,0xb7,0xc0]
+
+
+
+	movzbq	%bl, %rax               # encoding: [0x48,0x0f,0xb6,0xc3]
+
+
+
+	movzwq	%cx, %rax               # encoding: [0x48,0x0f,0xb7,0xc1]
+
+
+
+	movsbw	(%rax), %ax             # encoding: [0x66,0x0f,0xbe,0x00]
+
+
+
+	movzbw	(%rax), %ax             # encoding: [0x66,0x0f,0xb6,0x00]
+
+
+
+
+	movl	%gs:124, %eax           # encoding: [0x65,0x8b,0x04,0x25,0x7c,0x00,0x00,0x00]
+
+
+
+	jmpq	*8(%rax)                # encoding: [0xff,0x60,0x08]
+
+
+
+	btq	$61, -216(%rbp)         # encoding: [0x48,0x0f,0xba,0xa5,0x28,0xff,0xff,0xff,0x3d]
+
+
+
+L1:
+	jecxz	L1                      # encoding: [0x67,0xe3,A]
+                                        #   fixup A - offset: 2, value: L1-1, kind: FK_PCRel_1
+
+
+	jrcxz	L1                      # encoding: [0xe3,A]
+                                        #   fixup A - offset: 1, value: L1-1, kind: FK_PCRel_1
+
+
+
+
+	xchgl	%ecx, 368(%rax)         # encoding: [0x87,0x88,0x70,0x01,0x00,0x00]
+
+	xchgl	%ecx, 368(%rax)         # encoding: [0x87,0x88,0x70,0x01,0x00,0x00]
+
+
+
+	xchgb	%bl, 3735928559(%rbx,%rcx,8) # encoding: [0x86,0x9c,0xcb,0xef,0xbe,0xad,0xde]
+
+
+
+
+
+	lock                            # encoding: [0xf0]
+	incl	1(%rsp)                 # encoding: [0xff,0x44,0x24,0x01]
+
+
+
+
+	lock                            # encoding: [0xf0]
+	incl	1(%rsp)                 # encoding: [0xff,0x44,0x24,0x01]
+
+
+
+
+	rep                             # encoding: [0xf3]
+	movsd                           # encoding: [0xa5]
+
+
+
+
+
+
+
+	iretl                           # encoding: [0xcf]
+
+
+	iretw                           # encoding: [0x66,0xcf]
+
+
+	iretl                           # encoding: [0xcf]
+
+
+	iretq                           # encoding: [0x48,0xcf]
+
+
+
+
+
+
+	retw	$31438                  # encoding: [0x66,0xc2,0xce,0x7a]
+                                        # imm = 0x7ACE
+
+
+
+	lretw	$31438                  # encoding: [0x66,0xca,0xce,0x7a]
+                                        # imm = 0x7ACE
+
+
+	lretq                           # encoding: [0x48,0xcb]
+	lretl                           # encoding: [0xcb]
+	lretl                           # encoding: [0xcb]
+	lretw                           # encoding: [0x66,0xcb]
+
+
+	sysretl                         # encoding: [0x0f,0x07]
+
+
+	sysretl                         # encoding: [0x0f,0x07]
+
+
+	sysretq                         # encoding: [0x48,0x0f,0x07]
+
+
+
+
+	pushq	%fs                     # encoding: [0x0f,0xa0]
+
+
+	pushq	%gs                     # encoding: [0x0f,0xa8]
+
+
+
+	pushw	%fs                     # encoding: [0x66,0x0f,0xa0]
+
+
+	pushw	%gs                     # encoding: [0x66,0x0f,0xa8]
+
+
+
+
+	popq	%fs                     # encoding: [0x0f,0xa1]
+
+
+	popq	%gs                     # encoding: [0x0f,0xa9]
+
+
+
+	popw	%fs                     # encoding: [0x66,0x0f,0xa1]
+
+
+	popw	%gs                     # encoding: [0x66,0x0f,0xa9]
+
+
+
+
+	fildll	-8(%rsp)                # encoding: [0xdf,0x6c,0x24,0xf8]
+	fildll	-8(%rsp)                # encoding: [0xdf,0x6c,0x24,0xf8]
+
+
+
+
+
+
+	callq	a                       # encoding: [0xe8,A,A,A,A]
+                                        #   fixup A - offset: 1, value: a-4, kind: FK_PCRel_4
+
+
+	leaq	-40(%rbp), %r15         # encoding: [0x4c,0x8d,0x7d,0xd8]
+
+
+
+
+	movq	%dr6, %rax              # encoding: [0x0f,0x21,0xf0]
+	movq	%dr6, %rax              # encoding: [0x0f,0x21,0xf0]
+
+
+
+
+
+	incb	%al                     # encoding: [0xfe,0xc0]
+	incw	%ax                     # encoding: [0x66,0xff,0xc0]
+	incl	%eax                    # encoding: [0xff,0xc0]
+	decb	%al                     # encoding: [0xfe,0xc8]
+	decw	%ax                     # encoding: [0x66,0xff,0xc8]
+	decl	%eax                    # encoding: [0xff,0xc8]
+
+
+
+
+	lgdt	4(%rax)                 # encoding: [0x0f,0x01,0x50,0x04]
+
+
+
+	lgdt	4(%rax)                 # encoding: [0x0f,0x01,0x50,0x04]
+
+
+
+	lidt	4(%rax)                 # encoding: [0x0f,0x01,0x58,0x04]
+
+
+
+	lidt	4(%rax)                 # encoding: [0x0f,0x01,0x58,0x04]
+
+
+
+	sgdt	4(%rax)                 # encoding: [0x0f,0x01,0x40,0x04]
+
+
+
+	sgdt	4(%rax)                 # encoding: [0x0f,0x01,0x40,0x04]
+
+
+
+	sidt	4(%rax)                 # encoding: [0x0f,0x01,0x48,0x04]
+
+
+
+	sidt	4(%rax)                 # encoding: [0x0f,0x01,0x48,0x04]
+
+
+
+	movl	(%rsi), %gs             # encoding: [0x8e,0x2e]
+	movl	%gs, (%rsi)             # encoding: [0x8c,0x2e]
+
+
+
+	divb	%bl                     # encoding: [0xf6,0xf3]
+	divw	%bx                     # encoding: [0x66,0xf7,0xf3]
+	divl	%ecx                    # encoding: [0xf7,0xf1]
+	divl	3735928559(%ebx,%ecx,8) # encoding: [0x67,0xf7,0xb4,0xcb,0xef,0xbe,0xad,0xde]
+	divl	69                      # encoding: [0xf7,0x34,0x25,0x45,0x00,0x00,0x00]
+	divl	32493                   # encoding: [0xf7,0x34,0x25,0xed,0x7e,0x00,0x00]
+	divl	3133065982              # encoding: [0xf7,0x34,0x25,0xfe,0xca,0xbe,0xba]
+	divl	305419896               # encoding: [0xf7,0x34,0x25,0x78,0x56,0x34,0x12]
+	idivb	%bl                     # encoding: [0xf6,0xfb]
+	idivw	%bx                     # encoding: [0x66,0xf7,0xfb]
+	idivl	%ecx                    # encoding: [0xf7,0xf9]
+	idivl	3735928559(%ebx,%ecx,8) # encoding: [0x67,0xf7,0xbc,0xcb,0xef,0xbe,0xad,0xde]
+	idivl	69                      # encoding: [0xf7,0x3c,0x25,0x45,0x00,0x00,0x00]
+	idivl	32493                   # encoding: [0xf7,0x3c,0x25,0xed,0x7e,0x00,0x00]
+	idivl	3133065982              # encoding: [0xf7,0x3c,0x25,0xfe,0xca,0xbe,0xba]
+	idivl	305419896               # encoding: [0xf7,0x3c,0x25,0x78,0x56,0x34,0x12]
+
+
+	movd	%rax, %mm5              # encoding: [0x48,0x0f,0x6e,0xe8]
+	movd	%mm5, %rbx              # encoding: [0x48,0x0f,0x7e,0xeb]
+	movd	%rax, %mm5              # encoding: [0x48,0x0f,0x6e,0xe8]
+	movd	%mm5, %rbx              # encoding: [0x48,0x0f,0x7e,0xeb]
+
+	rex64                           # encoding: [0x48]
+	data16                          # encoding: [0x66]
+
+
+	movq	-1, %rbx                # encoding: [0x48,0x8b,0x1c,0x25,0xff,0xff,0xff,0xff]
+
+
+	movdqu	%xmm0, %xmm1            # encoding: [0xf3,0x0f,0x6f,0xc8]
+
+
+	xgetbv                          # encoding: [0x0f,0x01,0xd0]
+	xsetbv                          # encoding: [0x0f,0x01,0xd1]
+
+
+
+	loope	0                       # encoding: [0xe1,A]
+                                        #   fixup A - offset: 1, value: 0-1, kind: FK_PCRel_1
+
+
+
+	loopne	0                       # encoding: [0xe0,A]
+                                        #   fixup A - offset: 1, value: 0-1, kind: FK_PCRel_1
+
+
+
+
+	outsb                           # encoding: [0x6e]
+	outsb                           # encoding: [0x6e]
+	outsb                           # encoding: [0x6e]
+
+
+
+
+	outsw                           # encoding: [0x66,0x6f]
+	outsw                           # encoding: [0x66,0x6f]
+	outsw                           # encoding: [0x66,0x6f]
+
+
+
+	outsl                           # encoding: [0x6f]
+	outsl                           # encoding: [0x6f]
+	outsl                           # encoding: [0x6f]
+
+
+
+	insb                            # encoding: [0x6c]
+	insb                            # encoding: [0x6c]
+
+
+
+	insw                            # encoding: [0x66,0x6d]
+	insw                            # encoding: [0x66,0x6d]
+
+
+
+	insl                            # encoding: [0x6d]
+	insl                            # encoding: [0x6d]
+
+
+
+
+	movsb                           # encoding: [0xa4]
+	movsb                           # encoding: [0xa4]
+	movsb                           # encoding: [0xa4]
+
+
+
+
+	movsw                           # encoding: [0x66,0xa5]
+	movsw                           # encoding: [0x66,0xa5]
+	movsw                           # encoding: [0x66,0xa5]
+
+
+
+
+	movsd                           # encoding: [0xa5]
+	movsd                           # encoding: [0xa5]
+	movsd                           # encoding: [0xa5]
+
+
+	movsd                           # encoding: [0xa5]
+
+
+
+
+	movsq                           # encoding: [0x48,0xa5]
+	movsq                           # encoding: [0x48,0xa5]
+	movsq                           # encoding: [0x48,0xa5]
+
+
+
+
+
+
+	lodsb                           # encoding: [0xac]
+	lodsb                           # encoding: [0xac]
+	lodsb                           # encoding: [0xac]
+	lodsb                           # encoding: [0xac]
+	lodsb                           # encoding: [0xac]
+
+
+
+
+
+
+	lodsw                           # encoding: [0x66,0xad]
+	lodsw                           # encoding: [0x66,0xad]
+	lodsw                           # encoding: [0x66,0xad]
+	lodsw                           # encoding: [0x66,0xad]
+	lodsw                           # encoding: [0x66,0xad]
+
+
+
+
+
+
+	lodsl                           # encoding: [0xad]
+	lodsl                           # encoding: [0xad]
+	lodsl                           # encoding: [0xad]
+	lodsl                           # encoding: [0xad]
+	lodsl                           # encoding: [0xad]
+
+
+
+
+
+
+	lodsq                           # encoding: [0x48,0xad]
+	lodsq                           # encoding: [0x48,0xad]
+	lodsq                           # encoding: [0x48,0xad]
+	lodsq                           # encoding: [0x48,0xad]
+	lodsq                           # encoding: [0x48,0xad]
+
+
+
+
+	stosb                           # encoding: [0xaa]
+	stosb                           # encoding: [0xaa]
+	stosb                           # encoding: [0xaa]
+
+
+
+
+	stosw                           # encoding: [0x66,0xab]
+	stosw                           # encoding: [0x66,0xab]
+	stosw                           # encoding: [0x66,0xab]
+
+
+
+
+	stosl                           # encoding: [0xab]
+	stosl                           # encoding: [0xab]
+	stosl                           # encoding: [0xab]
+
+
+
+
+	stosq                           # encoding: [0x48,0xab]
+	stosq                           # encoding: [0x48,0xab]
+	stosq                           # encoding: [0x48,0xab]
+
+
+
+	strw	%ax                     # encoding: [0x66,0x0f,0x00,0xc8]
+
+
+
+	strl	%eax                    # encoding: [0x0f,0x00,0xc8]
+
+
+
+	strw	%ax                     # encoding: [0x66,0x0f,0x00,0xc8]
+
+
+
+	strq	%rax                    # encoding: [0x48,0x0f,0x00,0xc8]
+
+
+
+	movd	%rdi, %xmm0             # encoding: [0x66,0x48,0x0f,0x6e,0xc7]
+
+
+
+	movd	%rdi, %xmm0             # encoding: [0x66,0x48,0x0f,0x6e,0xc7]
+
+
+
+	movd	%xmm0, %rax             # encoding: [0x66,0x48,0x0f,0x7e,0xc0]
+
+
+
+
+	movntil	%eax, (%rdi)            # encoding: [0x0f,0xc3,0x07]
+	movntil	%eax, (%rdi)            # encoding: [0x0f,0xc3,0x07]
+
+
+
+
+	movntiq	%rax, (%rdi)            # encoding: [0x48,0x0f,0xc3,0x07]
+	movntiq	%rax, (%rdi)            # encoding: [0x48,0x0f,0xc3,0x07]
+
+
+
+	pclmulqdq	$17, %xmm0, %xmm1 # encoding: [0x66,0x0f,0x3a,0x44,0xc8,0x11]
+
+
+
+	pclmulqdq	$1, %xmm0, %xmm1 # encoding: [0x66,0x0f,0x3a,0x44,0xc8,0x01]
+
+
+
+	pclmulqdq	$16, (%rdi), %xmm1 # encoding: [0x66,0x0f,0x3a,0x44,0x0f,0x10]
+
+
+
+	pclmulqdq	$0, (%rdi), %xmm1 # encoding: [0x66,0x0f,0x3a,0x44,0x0f,0x00]
+
+
+
+
+	xchgq	%rax, %rax              # encoding: [0x48,0x90]
+
+
+
+	xchgl	%eax, %eax              # encoding: [0x87,0xc0]
+
+
+
+	xchgw	%ax, %ax                # encoding: [0x66,0x90]
+
+
+
+	xchgl	%ecx, %eax              # encoding: [0x91]
+
+
+
+	xchgl	%ecx, %eax              # encoding: [0x91]
+
+
+
+	sysexitl                        # encoding: [0x0f,0x35]
+
+
+
+	sysexitl                        # encoding: [0x0f,0x35]
+
+
+
+	sysexitq                        # encoding: [0x48,0x0f,0x35]

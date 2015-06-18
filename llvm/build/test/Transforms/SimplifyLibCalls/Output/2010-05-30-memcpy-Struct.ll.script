@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -simplify-libcalls /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/2010-05-30-memcpy-Struct.ll -S -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/2010-05-30-memcpy-Struct.ll

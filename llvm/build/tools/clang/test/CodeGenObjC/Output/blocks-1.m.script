@@ -1,0 +1,20 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/blocks-1.m -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp -fobjc-gc -fblocks -triple i386-apple-darwin10 -fobjc-runtime=macosx-fragile-10.5 &&
+grep "_Block_object_dispose" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 6 &&
+grep "__copy_helper_block_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 4 &&
+grep "__destroy_helper_block_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 4 &&
+grep "__Block_byref_object_copy_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 2 &&
+grep "__Block_byref_object_dispose_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 2 &&
+grep "i32 135)" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 0 &&
+grep "_Block_object_assign" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 4 &&
+grep "objc_read_weak" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 2 &&
+grep "objc_assign_weak" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c++ /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/blocks-1.m -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp -fobjc-gc -fblocks -triple i386-apple-darwin10 -fobjc-runtime=macosx-fragile-10.5 &&
+grep "_Block_object_dispose" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 6 &&
+grep "__copy_helper_block_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 4 &&
+grep "__destroy_helper_block_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 4 &&
+grep "__Block_byref_object_copy_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 2 &&
+grep "__Block_byref_object_dispose_" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 2 &&
+grep "i32 135)" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 0 &&
+grep "_Block_object_assign" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 4 &&
+grep "objc_read_weak" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 2 &&
+grep "objc_assign_weak" /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/blocks-1.m.tmp | count 3

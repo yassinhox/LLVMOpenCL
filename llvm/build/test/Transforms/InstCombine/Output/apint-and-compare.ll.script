@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/apint-and-compare.ll -instcombine -S | grep and | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

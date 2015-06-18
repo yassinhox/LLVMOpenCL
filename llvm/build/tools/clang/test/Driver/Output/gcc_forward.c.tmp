@@ -1,0 +1,5 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: powerpc-unknown-unknown
+Thread model: posix
+ "/home/jazouani/llvm/build/Release+Asserts/bin/clang" "-cc1" "-triple" "powerpc-unknown-unknown" "-S" "-disable-free" "-main-file-name" "gcc_forward.c" "-mrelocation-model" "static" "-mdisable-fp-elim" "-fmath-errno" "-mconstructor-aliases" "-target-cpu" "ppc" "-target-linker-version" "10" "-momit-leaf-frame-pointer" "-coverage-file" "/tmp/gcc_forward-dIkP7F.s" "-resource-dir" "/home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2" "-fmodule-cache-path" "/var/tmp/clang-module-cache" "-fno-dwarf-directory-asm" "-fdebug-compilation-dir" "/home/jazouani/llvm/build/tools/clang/test/Driver" "-ferror-limit" "19" "-fmessage-length" "0" "-mstackrealign" "-fno-signed-char" "-fobjc-runtime=gcc" "-fdiagnostics-show-option" "foo-bar" "-o" "/tmp/gcc_forward-dIkP7F.s" "-x" "c" "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/gcc_forward.c"
+ "/usr/bin/gcc" "-c" "-m32" "-o" "gcc_forward.o" "-x" "assembler" "/tmp/gcc_forward-dIkP7F.s"

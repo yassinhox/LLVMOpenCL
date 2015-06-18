@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Generic/2006-07-03-schedulers.ll -pre-RA-sched=default &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Generic/2006-07-03-schedulers.ll -pre-RA-sched=list-burr &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Generic/2006-07-03-schedulers.ll -pre-RA-sched=fast

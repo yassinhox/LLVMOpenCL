@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -ccc-arcmt-migrate /foo/bar -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/driver-migrate.m 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/driver-migrate.m &&
+touch /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/driver-migrate.m.tmp.o &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-arcmt-check -target i386-apple-darwin9 -### /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/driver-migrate.m.tmp.o 2> /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/driver-migrate.m.tmp.log &&
+FileCheck -check-prefix=LINK /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/driver-migrate.m < /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/driver-migrate.m.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-arcmt-migrate /foo/bar -target i386-apple-darwin9 -### /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/driver-migrate.m.tmp.o 2> /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/driver-migrate.m.tmp.log &&
+FileCheck -check-prefix=LINK /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/driver-migrate.m < /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/driver-migrate.m.tmp.log

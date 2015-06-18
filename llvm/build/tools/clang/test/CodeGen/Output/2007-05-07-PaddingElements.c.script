@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2007-05-07-PaddingElements.c -emit-llvm -O0 -o - | grep {struct.s} | not grep "4 x i8] zeroinitializer" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2007-05-07-PaddingElements.c -emit-llvm -O0 -o - | not grep "i32 0, i32 2"

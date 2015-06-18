@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -E -o /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/cpp-output.c.tmp -C /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/cpp-output.c &&
+grep '^int x; // comment' /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/cpp-output.c.tmp &&
+grep '^x x' /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/cpp-output.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -E -o /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/cpp-output.c.tmp -CC /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/cpp-output.c &&
+grep '^int x; // comment' /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/cpp-output.c.tmp &&
+grep '^x /\* comment \*/ x /\* comment \*/' /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/cpp-output.c.tmp

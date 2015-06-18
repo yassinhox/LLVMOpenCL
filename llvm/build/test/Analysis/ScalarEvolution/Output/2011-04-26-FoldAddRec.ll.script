@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2011-04-26-FoldAddRec.ll -analyze -iv-users

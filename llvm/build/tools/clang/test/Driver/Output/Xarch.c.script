@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -m32 -Xarch_i386 -O2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Xarch.c -S -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log &&
+grep ' "-O2" ' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log | count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -m64 -Xarch_i386 -O2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Xarch.c -S -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log &&
+grep ' "-O2" ' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log | count 0 &&
+grep "argument unused during compilation: '-Xarch_i386 -O2'" /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log &&
+not  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -m32 -Xarch_i386 -o -Xarch_i386 -S /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Xarch.c -S -Xarch_i386 -o 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log &&
+grep "error: invalid Xarch argument: '-Xarch_i386 -o'" /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log | count 2 &&
+grep "error: invalid Xarch argument: '-Xarch_i386 -S'" /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Xarch.c.tmp.log

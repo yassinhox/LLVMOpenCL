@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -triple x86_64-apple-darwin10 -DNON_FIXITS -verify -Wno-objc-root-class /home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/typo.m &&
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/typo.m /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/typo.m.tmp &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c -fsyntax-only -triple x86_64-apple-darwin10 -fixit -Wno-objc-root-class /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/typo.m.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c -fsyntax-only -triple x86_64-apple-darwin10 -pedantic -Werror -Wno-objc-root-class /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/typo.m.tmp &&
+grep "@implementation Sub3" /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/typo.m.tmp

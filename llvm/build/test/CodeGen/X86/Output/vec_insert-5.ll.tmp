@@ -1,0 +1,56 @@
+	.file	"<stdin>"
+	.text
+	.globl	t1
+	.align	16, 0x90
+	.type	t1,@function
+t1:                                     # @t1
+# BB#0:
+	movl	4(%esp), %eax
+	shll	$12, %eax
+	vmovd	%eax, %xmm0
+	vpshufd	$69, %xmm0, %xmm0       # xmm0 = xmm0[1,1,0,1]
+	vpshufd	$8, %xmm0, %xmm0        # xmm0 = xmm0[0,2,0,0]
+	movl	8(%esp), %eax
+	vmovlpd	%xmm0, (%eax)
+	ret
+.Ltmp0:
+	.size	t1, .Ltmp0-t1
+
+	.globl	t2
+	.align	16, 0x90
+	.type	t2,@function
+t2:                                     # @t2
+# BB#0:
+	movl	4(%esp), %eax
+	vmovdqa	(%eax), %xmm0
+	vpslldq	$12, %xmm0, %xmm0
+	ret
+.Ltmp1:
+	.size	t2, .Ltmp1-t2
+
+	.globl	t3
+	.align	16, 0x90
+	.type	t3,@function
+t3:                                     # @t3
+# BB#0:
+	movl	4(%esp), %eax
+	vmovdqa	(%eax), %xmm0
+	vpsrldq	$8, %xmm0, %xmm0
+	ret
+.Ltmp2:
+	.size	t3, .Ltmp2-t3
+
+	.globl	t4
+	.align	16, 0x90
+	.type	t4,@function
+t4:                                     # @t4
+# BB#0:
+	movl	4(%esp), %eax
+	vmovdqa	(%eax), %xmm0
+	vpsrldq	$12, %xmm0, %xmm0
+	ret
+.Ltmp3:
+	.size	t4, .Ltmp3-t4
+
+
+	.section	".note.GNU-stack","",@progbits

@@ -1,0 +1,2 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Modules/Output/decldef.mm.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fmodules -I /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/Inputs -fmodule-cache-path /home/jazouani/llvm/build/tools/clang/test/Modules/Output/decldef.mm.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/decldef.mm -verify

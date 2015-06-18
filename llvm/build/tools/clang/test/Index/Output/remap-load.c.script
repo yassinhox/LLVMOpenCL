@@ -1,0 +1,1 @@
+c-index-test -test-load-source all -remap-file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/remap-load.c;/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/Inputs/remap-load-to.c" /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/remap-load.c | FileCheck -check-prefix=CHECK /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/remap-load.c

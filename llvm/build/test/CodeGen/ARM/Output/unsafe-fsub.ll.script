@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=arm -mcpu=cortex-a9 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/unsafe-fsub.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=SAFE /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/unsafe-fsub.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=arm -mcpu=cortex-a9 -enable-unsafe-fp-math < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/unsafe-fsub.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=FAST /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/unsafe-fsub.ll

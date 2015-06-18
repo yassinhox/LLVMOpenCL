@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2011-02-14-InfLoop.ll -instcombine -disable-output

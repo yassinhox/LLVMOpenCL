@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/sse-load-ret.ll -march=x86 -mcpu=yonah | /home/jazouani/llvm/build/Release+Asserts/bin/not grep movss &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/sse-load-ret.ll -march=x86 -mcpu=yonah | /home/jazouani/llvm/build/Release+Asserts/bin/not grep xmm

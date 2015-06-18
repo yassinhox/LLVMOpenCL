@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target armv7a-unknown-linux-gnueabi -S -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/arch.c -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/arch.c

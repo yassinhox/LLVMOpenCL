@@ -1,0 +1,31 @@
+	.machine ppc
+	.section	__TEXT,__textcoal_nt,coalesced,pure_instructions
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.section	__TEXT,__text,regular,pure_instructions
+	.align	4
+L_foo:                                  ; @foo
+; BB#0:
+	blr 
+
+	.globl	_bar
+	.align	4
+_bar:                                   ; @bar
+; BB#0:
+	mflr r0
+	stw r0, 8(r1)
+	stwu r1, -64(r1)
+	bl L_foo
+	lis r3, ha16(L_baz)
+	lwz r3, lo16(L_baz)(r3)
+	addi r1, r1, 64
+	lwz r0, 8(r1)
+	mtlr r0
+	blr 
+
+.subsections_via_symbols
+	.section	__DATA,__data
+	.align	2                       ; @baz
+L_baz:
+	.long	4                       ; 0x4
+
+

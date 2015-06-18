@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=i686-linux < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/block-placement.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/block-placement.ll

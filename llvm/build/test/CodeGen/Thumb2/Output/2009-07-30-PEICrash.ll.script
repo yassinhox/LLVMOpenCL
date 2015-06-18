@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2009-07-30-PEICrash.ll -mtriple=thumbv7-apple-darwin9 -mcpu=cortex-a8 -relocation-model=pic -disable-fp-elim

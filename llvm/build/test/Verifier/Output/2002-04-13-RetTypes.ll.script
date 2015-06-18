@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Verifier/2002-04-13-RetTypes.ll 2>&1 | grep "value doesn't match function result type 'i32'"

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -faddress-sanitizer /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-asan-nofortify.c -E -dM -target x86_64-darwin - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-asan-nofortify.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsanitize=address  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-asan-nofortify.c -E -dM -target x86_64-darwin - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-asan-nofortify.c

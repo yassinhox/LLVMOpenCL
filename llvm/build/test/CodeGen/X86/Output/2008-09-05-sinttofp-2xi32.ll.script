@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-09-05-sinttofp-2xi32.ll -march=x86 -mattr=+sse2 -mattr=+mmx | /home/jazouani/llvm/build/Release+Asserts/bin/not grep unpcklpd &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-09-05-sinttofp-2xi32.ll -march=x86 -mattr=+sse2 -mattr=+mmx | /home/jazouani/llvm/build/Release+Asserts/bin/not grep unpckhpd &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-09-05-sinttofp-2xi32.ll -march=x86 -mattr=+sse2 | grep cvttpd2pi | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-09-05-sinttofp-2xi32.ll -march=x86 -mattr=+sse2 | grep cvtpi2pd | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

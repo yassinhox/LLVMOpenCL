@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Integer/BitPacked.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Integer/Output/BitPacked.ll.tmp1.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/build/test/Integer/Output/BitPacked.ll.tmp1.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Integer/Output/BitPacked.ll.tmp2.ll &&
+diff /home/jazouani/llvm/build/test/Integer/Output/BitPacked.ll.tmp1.ll /home/jazouani/llvm/build/test/Integer/Output/BitPacked.ll.tmp2.ll

@@ -1,0 +1,18 @@
+; ModuleID = '<stdin>'
+
+define internal zeroext i32 @test1() nounwind {
+  ret i32 1
+}
+
+define internal <{ i32, i32 }> @test2() {
+  ret <{ i32, i32 }> <{ i32 1, i32 2 }>
+}
+
+declare void @user(i32, <{ i32, i32 }>)
+
+define void @caller() {
+  %B = call i32 @test1()
+  %C = call <{ i32, i32 }> @test2()
+  call void @user(i32 %B, <{ i32, i32 }> %C)
+  ret void
+}

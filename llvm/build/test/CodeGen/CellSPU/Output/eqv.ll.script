@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/eqv.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/eqv.ll.tmp1.s &&
+grep eqv  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/eqv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 18 &&
+grep xshw /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/eqv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep xsbh /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/eqv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep andi /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/eqv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

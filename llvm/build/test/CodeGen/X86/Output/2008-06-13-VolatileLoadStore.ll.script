@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-06-13-VolatileLoadStore.ll -mtriple=i686-linux -mattr=+sse2 | grep movsd | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-06-13-VolatileLoadStore.ll -mtriple=i686-linux -mattr=+sse2 | grep movl | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

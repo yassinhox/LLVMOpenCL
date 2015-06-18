@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/fp-ret-bitcast.ll -instcombine -S |     grep "call float bitcast" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

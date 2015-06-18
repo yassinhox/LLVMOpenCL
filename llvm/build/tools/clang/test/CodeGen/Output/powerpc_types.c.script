@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple powerpc-unknown-freebsd -emit-llvm -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/powerpc_types.c| FileCheck -check-prefix=SVR4-CHECK /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/powerpc_types.c

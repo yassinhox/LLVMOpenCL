@@ -1,0 +1,1 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-tabs.c:5:5 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-tabs.c | FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-tabs.c

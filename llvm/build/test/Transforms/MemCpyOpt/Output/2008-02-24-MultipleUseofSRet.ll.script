@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/MemCpyOpt/2008-02-24-MultipleUseofSRet.ll -basicaa -memcpyopt -dse -S | grep "call.*initialize" | /home/jazouani/llvm/build/Release+Asserts/bin/not grep memtmp

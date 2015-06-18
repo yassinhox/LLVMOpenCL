@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -O2 /home/jazouani/llvm/llvm-3.2/test/Transforms/PhaseOrdering/2010-03-22-empty-baseclass.ll -S -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/PhaseOrdering/2010-03-22-empty-baseclass.ll

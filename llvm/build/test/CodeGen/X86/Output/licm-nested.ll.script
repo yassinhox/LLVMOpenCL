@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=x86_64-apple-darwin -march=x86-64 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/licm-nested.ll -o /dev/null -stats -info-output-file - | grep "hoisted out of loops" | grep 3

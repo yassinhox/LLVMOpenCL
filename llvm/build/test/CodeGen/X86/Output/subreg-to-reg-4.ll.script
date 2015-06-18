@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/subreg-to-reg-4.ll -march=x86-64 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp &&
+not grep leaq /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp &&
+not grep incq /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp &&
+not grep decq /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp &&
+not grep negq /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp &&
+not grep addq /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp &&
+not grep subq /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp &&
+not grep "movl	%" /home/jazouani/llvm/build/test/CodeGen/X86/Output/subreg-to-reg-4.ll.tmp

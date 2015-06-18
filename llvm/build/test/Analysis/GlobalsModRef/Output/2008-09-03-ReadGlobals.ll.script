@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/GlobalsModRef/2008-09-03-ReadGlobals.ll -globalsmodref-aa -gvn -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Analysis/GlobalsModRef/2008-09-03-ReadGlobals.ll

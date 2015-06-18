@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c++ -triple x86_64-apple-darwin11 -fsyntax-only -fobjc-runtime=macosx-fragile-10.5 -verify -Wno-objc-root-class /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaObjCXX/fragile-abi-object-assign.m

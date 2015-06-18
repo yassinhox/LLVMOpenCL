@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/palignr.ll -march=x86 -mcpu=core2 -mattr=+ssse3 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/palignr.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/palignr.ll -march=x86 -mcpu=yonah | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=YONAH /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/palignr.ll

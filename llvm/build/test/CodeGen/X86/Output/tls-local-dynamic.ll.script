@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/tls-local-dynamic.ll -march=x86-64 -mtriple=x86_64-linux-gnu -relocation-model=pic | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck  /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/tls-local-dynamic.ll

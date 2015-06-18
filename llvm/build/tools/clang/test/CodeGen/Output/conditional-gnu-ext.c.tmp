@@ -1,0 +1,161 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/conditional-gnu-ext.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@getComplex.count = internal global i32 0, align 4
+
+define i32 @foo(i32 %x, i16 signext %y) nounwind {
+entry:
+  %x.addr = alloca i32, align 4
+  %y.addr = alloca i16, align 2
+  store i32 %x, i32* %x.addr, align 4
+  store i16 %y, i16* %y.addr, align 2
+  %0 = load i32* %x.addr, align 4
+  %tobool = icmp ne i32 %0, 0
+  br i1 %tobool, label %cond.true, label %cond.false
+
+cond.true:                                        ; preds = %entry
+  br label %cond.end
+
+cond.false:                                       ; preds = %entry
+  %1 = load i16* %y.addr, align 2
+  %conv = sext i16 %1 to i32
+  br label %cond.end
+
+cond.end:                                         ; preds = %cond.false, %cond.true
+  %cond = phi i32 [ %0, %cond.true ], [ %conv, %cond.false ]
+  ret i32 %cond
+}
+
+define float @test(float %x, i32 %Y) nounwind {
+entry:
+  %x.addr = alloca float, align 4
+  %Y.addr = alloca i32, align 4
+  store float %x, float* %x.addr, align 4
+  store i32 %Y, i32* %Y.addr, align 4
+  %0 = load i32* %Y.addr, align 4
+  %cmp = icmp ne i32 %0, 0
+  %conv = zext i1 %cmp to i32
+  br i1 %cmp, label %cond.true, label %cond.false
+
+cond.true:                                        ; preds = %entry
+  %conv1 = sitofp i32 %conv to float
+  br label %cond.end
+
+cond.false:                                       ; preds = %entry
+  %1 = load float* %x.addr, align 4
+  br label %cond.end
+
+cond.end:                                         ; preds = %cond.false, %cond.true
+  %cond = phi float [ %conv1, %cond.true ], [ %1, %cond.false ]
+  ret float %cond
+}
+
+define void @test1() nounwind {
+entry:
+  %x = alloca [1 x i8], align 1
+  %y = alloca i8*, align 8
+  %arraydecay = getelementptr inbounds [1 x i8]* %x, i32 0, i32 0
+  %tobool = icmp ne i8* %arraydecay, null
+  br i1 %tobool, label %cond.true, label %cond.false
+
+cond.true:                                        ; preds = %entry
+  br label %cond.end
+
+cond.false:                                       ; preds = %entry
+  br label %cond.end
+
+cond.end:                                         ; preds = %cond.false, %cond.true
+  %cond = phi i8* [ %arraydecay, %cond.true ], [ null, %cond.false ]
+  store i8* %cond, i8** %y, align 8
+  %arraydecay1 = getelementptr inbounds [1 x i8]* %x, i32 0, i32 0
+  %0 = load i8** %y, align 8
+  %cmp = icmp ne i8* %arraydecay1, %0
+  br i1 %cmp, label %if.then, label %if.end
+
+if.then:                                          ; preds = %cond.end
+  call void @abort() noreturn
+  unreachable
+
+if.end:                                           ; preds = %cond.end
+  ret void
+}
+
+declare void @abort() noreturn
+
+define i64 @getComplex(i64 %val.coerce) nounwind {
+entry:
+  %retval = alloca { i32, i32 }, align 4
+  %val = alloca { i32, i32 }, align 8
+  %0 = bitcast { i32, i32 }* %val to i64*
+  store i64 %val.coerce, i64* %0, align 1
+  %1 = load i32* @getComplex.count, align 4
+  %inc = add nsw i32 %1, 1
+  store i32 %inc, i32* @getComplex.count, align 4
+  %tobool = icmp ne i32 %1, 0
+  br i1 %tobool, label %if.then, label %if.end
+
+if.then:                                          ; preds = %entry
+  call void @abort() noreturn
+  unreachable
+
+if.end:                                           ; preds = %entry
+  %val.realp = getelementptr inbounds { i32, i32 }* %val, i32 0, i32 0
+  %val.real = load i32* %val.realp
+  %val.imagp = getelementptr inbounds { i32, i32 }* %val, i32 0, i32 1
+  %val.imag = load i32* %val.imagp
+  %real = getelementptr inbounds { i32, i32 }* %retval, i32 0, i32 0
+  %imag = getelementptr inbounds { i32, i32 }* %retval, i32 0, i32 1
+  store i32 %val.real, i32* %real
+  store i32 %val.imag, i32* %imag
+  %2 = bitcast { i32, i32 }* %retval to i64*
+  %3 = load i64* %2, align 1
+  ret i64 %3
+}
+
+define i64 @complx() nounwind {
+entry:
+  %retval = alloca { i32, i32 }, align 4
+  %cond = alloca { i32, i32 }, align 4
+  %rhs = alloca { i32, i32 }, align 4
+  %coerce = alloca { i32, i32 }, align 4
+  %coerce1 = alloca { i32, i32 }, align 4
+  %real = getelementptr inbounds { i32, i32 }* %coerce, i32 0, i32 0
+  %imag = getelementptr inbounds { i32, i32 }* %coerce, i32 0, i32 1
+  store i32 1, i32* %real
+  store i32 2, i32* %imag
+  %0 = bitcast { i32, i32 }* %coerce to i64*
+  %1 = load i64* %0, align 1
+  %call = call i64 @getComplex(i64 %1)
+  %2 = bitcast { i32, i32 }* %coerce1 to i64*
+  store i64 %call, i64* %2, align 1
+  %coerce1.realp = getelementptr inbounds { i32, i32 }* %coerce1, i32 0, i32 0
+  %coerce1.real = load i32* %coerce1.realp
+  %coerce1.imagp = getelementptr inbounds { i32, i32 }* %coerce1, i32 0, i32 1
+  %coerce1.imag = load i32* %coerce1.imagp
+  %tobool = icmp ne i32 %coerce1.real, 0
+  %tobool2 = icmp ne i32 %coerce1.imag, 0
+  %tobool3 = or i1 %tobool, %tobool2
+  br i1 %tobool3, label %cond.true, label %cond.false
+
+cond.true:                                        ; preds = %entry
+  br label %cond.end
+
+cond.false:                                       ; preds = %entry
+  %rhs.realp = getelementptr inbounds { i32, i32 }* %rhs, i32 0, i32 0
+  %rhs.real = load i32* %rhs.realp
+  %rhs.imagp = getelementptr inbounds { i32, i32 }* %rhs, i32 0, i32 1
+  %rhs.imag = load i32* %rhs.imagp
+  br label %cond.end
+
+cond.end:                                         ; preds = %cond.false, %cond.true
+  %cond.r = phi i32 [ %coerce1.real, %cond.true ], [ %rhs.real, %cond.false ]
+  %cond.i = phi i32 [ %coerce1.imag, %cond.true ], [ %rhs.imag, %cond.false ]
+  %real4 = getelementptr inbounds { i32, i32 }* %retval, i32 0, i32 0
+  %imag5 = getelementptr inbounds { i32, i32 }* %retval, i32 0, i32 1
+  store i32 %cond.r, i32* %real4
+  store i32 %cond.i, i32* %imag5
+  %3 = bitcast { i32, i32 }* %retval to i64*
+  %4 = load i64* %3, align 1
+  ret i64 %4
+}

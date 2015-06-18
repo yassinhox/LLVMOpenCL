@@ -1,0 +1,3 @@
+c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/availability.c > /home/jazouani/llvm/build/tools/clang/test/Index/Output/availability.c.tmp &&
+FileCheck -check-prefix=CHECK-1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/availability.c < /home/jazouani/llvm/build/tools/clang/test/Index/Output/availability.c.tmp &&
+FileCheck -check-prefix=CHECK-2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/availability.c < /home/jazouani/llvm/build/tools/clang/test/Index/Output/availability.c.tmp

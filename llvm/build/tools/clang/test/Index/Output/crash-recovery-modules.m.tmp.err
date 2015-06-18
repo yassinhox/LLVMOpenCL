@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/crash-recovery-modules.m:16:32:{16:2-16:37}: fatal error: could not build module 'Crash'
+Number FIX-ITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/crash-recovery-modules.m:16:32: fatal error: could not build module 'Crash'

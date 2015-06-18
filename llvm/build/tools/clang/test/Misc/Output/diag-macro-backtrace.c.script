@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -fmacro-backtrace-limit=0 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/diag-macro-backtrace.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/diag-macro-backtrace.c

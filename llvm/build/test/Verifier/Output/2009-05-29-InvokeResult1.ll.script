@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Verifier/2009-05-29-InvokeResult1.ll >& /dev/null

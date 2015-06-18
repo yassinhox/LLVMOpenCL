@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/CostModel/X86/i32.ll  -cost-model -analyze -mtriple=i386 -mcpu=corei7-avx | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Analysis/CostModel/X86/i32.ll

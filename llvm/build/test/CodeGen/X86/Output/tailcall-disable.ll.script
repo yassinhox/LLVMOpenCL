@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -disable-tail-calls < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/tailcall-disable.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CALL /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/tailcall-disable.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/tailcall-disable.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=JMP /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/tailcall-disable.ll

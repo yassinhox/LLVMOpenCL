@@ -1,0 +1,1 @@
+c-index-test -test-load-source-usrs local /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/cindex-on-invalid-usrs.m 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/cindex-on-invalid-usrs.m

@@ -1,0 +1,15 @@
+<instantiation>:1:1: error: unknown directive
+.macrobody0
+^
+<instantiation>:1:1: note: while in macro instantiation
+.test0
+^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros.s:11:1: note: while in macro instantiation
+.test1
+^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros.s:85:12: error: macro argument '_c' is missing
+test8 1,2 3
+           ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros.s:90:10: error: expected ' ' for macro argument separator
+test8 1 2, 3
+         ^

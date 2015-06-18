@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/aliases.ll -mtriple=arm-linux-gnueabi -o /home/jazouani/llvm/build/test/CodeGen/ARM/Output/aliases.ll.tmp &&
+grep " = " /home/jazouani/llvm/build/test/CodeGen/ARM/Output/aliases.ll.tmp   | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep globl /home/jazouani/llvm/build/test/CodeGen/ARM/Output/aliases.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep weak /home/jazouani/llvm/build/test/CodeGen/ARM/Output/aliases.ll.tmp  | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

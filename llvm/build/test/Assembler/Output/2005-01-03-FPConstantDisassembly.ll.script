@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2005-01-03-FPConstantDisassembly.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep 1.0

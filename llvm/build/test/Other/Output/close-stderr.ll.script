@@ -1,0 +1,1 @@
+sh -c '/home/jazouani/llvm/build/Release+Asserts/bin/opt --reject-this-option 2>&-; echo $?; /home/jazouani/llvm/build/Release+Asserts/bin/opt -o /dev/null /dev/null 2>&-; echo $?;'    | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/close-stderr.ll

@@ -1,0 +1,355 @@
+	.machine ppc
+	.section	__TEXT,__textcoal_nt,coalesced,pure_instructions
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_plus
+	.align	4
+_plus:                                  ; @plus
+	.cfi_startproc
+; BB#0:                                 ; %entry
+	mflr r0
+	stw r0, 8(r1)
+	stwu r1, -160(r1)
+Ltmp1:
+	.cfi_def_cfa_offset 160
+Ltmp2:
+	.cfi_offset lr, 8
+Ltmp3:
+	.cfi_offset r29, -4
+Ltmp4:
+	.cfi_offset r30, -8
+	stfd f1, 80(r1)
+	stfd f2, 72(r1)
+	stfd f3, 112(r1)
+	stfd f4, 104(r1)
+	addi r3, r1, 80
+	addi r6, r1, 72
+	addi r10, r1, 112
+	addi r7, r1, 104
+	stw r29, 156(r1)                ; 4-byte Folded Spill
+	lwz r3, 4(r3)
+	lwz r5, 80(r1)
+	lwz r6, 4(r6)
+	lwz r9, 72(r1)
+	lwz r10, 4(r10)
+	lwz r12, 112(r1)
+	lwz r7, 4(r7)
+	lwz r29, 104(r1)
+	stw r30, 152(r1)                ; 4-byte Folded Spill
+	addi r4, r1, 96
+	addi r8, r1, 88
+	addi r11, r1, 128
+	addi r30, r1, 120
+	stw r3, 4(r4)
+	stw r5, 96(r1)
+	stw r6, 4(r8)
+	stw r9, 88(r1)
+	stw r10, 4(r11)
+	stw r12, 128(r1)
+	stw r7, 4(r30)
+	stw r29, 120(r1)
+	lfd f1, 96(r1)
+	lfd f2, 88(r1)
+	lfd f3, 128(r1)
+	lfd f4, 120(r1)
+	bl ___gcc_qadd$stub
+	stfd f1, 56(r1)
+	stfd f2, 64(r1)
+	addi r3, r1, 56
+	addi r4, r1, 64
+	lwz r3, 4(r3)
+	lwz r6, 56(r1)
+	lwz r4, 4(r4)
+	lwz r8, 64(r1)
+	addi r5, r1, 144
+	addi r7, r1, 136
+	lwz r30, 152(r1)                ; 4-byte Folded Reload
+	lwz r29, 156(r1)                ; 4-byte Folded Reload
+	stw r3, 4(r5)
+	stw r6, 144(r1)
+	stw r4, 4(r7)
+	stw r8, 136(r1)
+	lfd f1, 144(r1)
+	lfd f2, 136(r1)
+	addi r1, r1, 160
+	lwz r0, 8(r1)
+	mtlr r0
+	blr 
+	.cfi_endproc
+
+	.globl	_minus
+	.align	4
+_minus:                                 ; @minus
+	.cfi_startproc
+; BB#0:                                 ; %entry
+	mflr r0
+	stw r0, 8(r1)
+	stwu r1, -160(r1)
+Ltmp6:
+	.cfi_def_cfa_offset 160
+Ltmp7:
+	.cfi_offset lr, 8
+Ltmp8:
+	.cfi_offset r29, -4
+Ltmp9:
+	.cfi_offset r30, -8
+	stfd f1, 80(r1)
+	stfd f2, 72(r1)
+	stfd f3, 112(r1)
+	stfd f4, 104(r1)
+	addi r3, r1, 80
+	addi r6, r1, 72
+	addi r10, r1, 112
+	addi r7, r1, 104
+	stw r29, 156(r1)                ; 4-byte Folded Spill
+	lwz r3, 4(r3)
+	lwz r5, 80(r1)
+	lwz r6, 4(r6)
+	lwz r9, 72(r1)
+	lwz r10, 4(r10)
+	lwz r12, 112(r1)
+	lwz r7, 4(r7)
+	lwz r29, 104(r1)
+	stw r30, 152(r1)                ; 4-byte Folded Spill
+	addi r4, r1, 96
+	addi r8, r1, 88
+	addi r11, r1, 128
+	addi r30, r1, 120
+	stw r3, 4(r4)
+	stw r5, 96(r1)
+	stw r6, 4(r8)
+	stw r9, 88(r1)
+	stw r10, 4(r11)
+	stw r12, 128(r1)
+	stw r7, 4(r30)
+	stw r29, 120(r1)
+	lfd f1, 96(r1)
+	lfd f2, 88(r1)
+	lfd f3, 128(r1)
+	lfd f4, 120(r1)
+	bl ___gcc_qsub$stub
+	stfd f1, 56(r1)
+	stfd f2, 64(r1)
+	addi r3, r1, 56
+	addi r4, r1, 64
+	lwz r3, 4(r3)
+	lwz r6, 56(r1)
+	lwz r4, 4(r4)
+	lwz r8, 64(r1)
+	addi r5, r1, 144
+	addi r7, r1, 136
+	lwz r30, 152(r1)                ; 4-byte Folded Reload
+	lwz r29, 156(r1)                ; 4-byte Folded Reload
+	stw r3, 4(r5)
+	stw r6, 144(r1)
+	stw r4, 4(r7)
+	stw r8, 136(r1)
+	lfd f1, 144(r1)
+	lfd f2, 136(r1)
+	addi r1, r1, 160
+	lwz r0, 8(r1)
+	mtlr r0
+	blr 
+	.cfi_endproc
+
+	.globl	_times
+	.align	4
+_times:                                 ; @times
+	.cfi_startproc
+; BB#0:                                 ; %entry
+	mflr r0
+	stw r0, 8(r1)
+	stwu r1, -160(r1)
+Ltmp11:
+	.cfi_def_cfa_offset 160
+Ltmp12:
+	.cfi_offset lr, 8
+Ltmp13:
+	.cfi_offset r29, -4
+Ltmp14:
+	.cfi_offset r30, -8
+	stfd f1, 80(r1)
+	stfd f2, 72(r1)
+	stfd f3, 112(r1)
+	stfd f4, 104(r1)
+	addi r3, r1, 80
+	addi r6, r1, 72
+	addi r10, r1, 112
+	addi r7, r1, 104
+	stw r29, 156(r1)                ; 4-byte Folded Spill
+	lwz r3, 4(r3)
+	lwz r5, 80(r1)
+	lwz r6, 4(r6)
+	lwz r9, 72(r1)
+	lwz r10, 4(r10)
+	lwz r12, 112(r1)
+	lwz r7, 4(r7)
+	lwz r29, 104(r1)
+	stw r30, 152(r1)                ; 4-byte Folded Spill
+	addi r4, r1, 96
+	addi r8, r1, 88
+	addi r11, r1, 128
+	addi r30, r1, 120
+	stw r3, 4(r4)
+	stw r5, 96(r1)
+	stw r6, 4(r8)
+	stw r9, 88(r1)
+	stw r10, 4(r11)
+	stw r12, 128(r1)
+	stw r7, 4(r30)
+	stw r29, 120(r1)
+	lfd f1, 96(r1)
+	lfd f2, 88(r1)
+	lfd f3, 128(r1)
+	lfd f4, 120(r1)
+	bl ___gcc_qmul$stub
+	stfd f1, 56(r1)
+	stfd f2, 64(r1)
+	addi r3, r1, 56
+	addi r4, r1, 64
+	lwz r3, 4(r3)
+	lwz r6, 56(r1)
+	lwz r4, 4(r4)
+	lwz r8, 64(r1)
+	addi r5, r1, 144
+	addi r7, r1, 136
+	lwz r30, 152(r1)                ; 4-byte Folded Reload
+	lwz r29, 156(r1)                ; 4-byte Folded Reload
+	stw r3, 4(r5)
+	stw r6, 144(r1)
+	stw r4, 4(r7)
+	stw r8, 136(r1)
+	lfd f1, 144(r1)
+	lfd f2, 136(r1)
+	addi r1, r1, 160
+	lwz r0, 8(r1)
+	mtlr r0
+	blr 
+	.cfi_endproc
+
+	.globl	_divide
+	.align	4
+_divide:                                ; @divide
+	.cfi_startproc
+; BB#0:                                 ; %entry
+	mflr r0
+	stw r0, 8(r1)
+	stwu r1, -160(r1)
+Ltmp16:
+	.cfi_def_cfa_offset 160
+Ltmp17:
+	.cfi_offset lr, 8
+Ltmp18:
+	.cfi_offset r29, -4
+Ltmp19:
+	.cfi_offset r30, -8
+	stfd f1, 80(r1)
+	stfd f2, 72(r1)
+	stfd f3, 112(r1)
+	stfd f4, 104(r1)
+	addi r3, r1, 80
+	addi r6, r1, 72
+	addi r10, r1, 112
+	addi r7, r1, 104
+	stw r29, 156(r1)                ; 4-byte Folded Spill
+	lwz r3, 4(r3)
+	lwz r5, 80(r1)
+	lwz r6, 4(r6)
+	lwz r9, 72(r1)
+	lwz r10, 4(r10)
+	lwz r12, 112(r1)
+	lwz r7, 4(r7)
+	lwz r29, 104(r1)
+	stw r30, 152(r1)                ; 4-byte Folded Spill
+	addi r4, r1, 96
+	addi r8, r1, 88
+	addi r11, r1, 128
+	addi r30, r1, 120
+	stw r3, 4(r4)
+	stw r5, 96(r1)
+	stw r6, 4(r8)
+	stw r9, 88(r1)
+	stw r10, 4(r11)
+	stw r12, 128(r1)
+	stw r7, 4(r30)
+	stw r29, 120(r1)
+	lfd f1, 96(r1)
+	lfd f2, 88(r1)
+	lfd f3, 128(r1)
+	lfd f4, 120(r1)
+	bl ___gcc_qdiv$stub
+	stfd f1, 56(r1)
+	stfd f2, 64(r1)
+	addi r3, r1, 56
+	addi r4, r1, 64
+	lwz r3, 4(r3)
+	lwz r6, 56(r1)
+	lwz r4, 4(r4)
+	lwz r8, 64(r1)
+	addi r5, r1, 144
+	addi r7, r1, 136
+	lwz r30, 152(r1)                ; 4-byte Folded Reload
+	lwz r29, 156(r1)                ; 4-byte Folded Reload
+	stw r3, 4(r5)
+	stw r6, 144(r1)
+	stw r4, 4(r7)
+	stw r8, 136(r1)
+	lfd f1, 144(r1)
+	lfd f2, 136(r1)
+	addi r1, r1, 160
+	lwz r0, 8(r1)
+	mtlr r0
+	blr 
+	.cfi_endproc
+
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.align	4
+___gcc_qadd$stub:
+	.indirect_symbol	___gcc_qadd
+	lis r11,ha16(___gcc_qadd$lazy_ptr)
+	lwzu r12,lo16(___gcc_qadd$lazy_ptr)(r11)
+	mtctr r12
+	bctr
+	.section	__DATA,__la_symbol_ptr,lazy_symbol_pointers
+___gcc_qadd$lazy_ptr:
+	.indirect_symbol	___gcc_qadd
+	.long dyld_stub_binding_helper
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.align	4
+___gcc_qdiv$stub:
+	.indirect_symbol	___gcc_qdiv
+	lis r11,ha16(___gcc_qdiv$lazy_ptr)
+	lwzu r12,lo16(___gcc_qdiv$lazy_ptr)(r11)
+	mtctr r12
+	bctr
+	.section	__DATA,__la_symbol_ptr,lazy_symbol_pointers
+___gcc_qdiv$lazy_ptr:
+	.indirect_symbol	___gcc_qdiv
+	.long dyld_stub_binding_helper
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.align	4
+___gcc_qmul$stub:
+	.indirect_symbol	___gcc_qmul
+	lis r11,ha16(___gcc_qmul$lazy_ptr)
+	lwzu r12,lo16(___gcc_qmul$lazy_ptr)(r11)
+	mtctr r12
+	bctr
+	.section	__DATA,__la_symbol_ptr,lazy_symbol_pointers
+___gcc_qmul$lazy_ptr:
+	.indirect_symbol	___gcc_qmul
+	.long dyld_stub_binding_helper
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.align	4
+___gcc_qsub$stub:
+	.indirect_symbol	___gcc_qsub
+	lis r11,ha16(___gcc_qsub$lazy_ptr)
+	lwzu r12,lo16(___gcc_qsub$lazy_ptr)(r11)
+	mtctr r12
+	bctr
+	.section	__DATA,__la_symbol_ptr,lazy_symbol_pointers
+___gcc_qsub$lazy_ptr:
+	.indirect_symbol	___gcc_qsub
+	.long dyld_stub_binding_helper
+
+.subsections_via_symbols
+

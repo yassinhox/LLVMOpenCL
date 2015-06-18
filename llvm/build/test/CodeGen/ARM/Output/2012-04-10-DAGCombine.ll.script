@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-04-10-DAGCombine.ll -march=arm -mcpu=cortex-a9 -enable-unsafe-fp-math

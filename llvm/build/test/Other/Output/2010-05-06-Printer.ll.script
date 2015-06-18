@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O2 -print-after-all < /home/jazouani/llvm/llvm-3.2/test/Other/2010-05-06-Printer.ll 2>/dev/null

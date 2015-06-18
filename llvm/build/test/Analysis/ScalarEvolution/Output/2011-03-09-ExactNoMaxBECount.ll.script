@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -indvars  /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2011-03-09-ExactNoMaxBECount.ll

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/tls1.ll -mtriple=thumbv7-linux-gnueabi |      grep "i(tpoff)" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/tls1.ll -mtriple=thumbv7-linux-gnueabi |      grep "__aeabi_read_tp" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/tls1.ll -mtriple=thumbv7-linux-gnueabi      -relocation-model=pic | grep "__tls_get_addr"

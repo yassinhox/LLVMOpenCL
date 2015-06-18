@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fast-isel-fneg.ll -fast-isel -fast-isel-abort -mtriple=x86_64-apple-darwin10 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fast-isel-fneg.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fast-isel-fneg.ll -fast-isel -march=x86 -mattr=+sse2 | grep xor | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

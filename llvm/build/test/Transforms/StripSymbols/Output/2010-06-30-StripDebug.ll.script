@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -strip-debug < /home/jazouani/llvm/llvm-3.2/test/Transforms/StripSymbols/2010-06-30-StripDebug.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep -v llvm.dbg

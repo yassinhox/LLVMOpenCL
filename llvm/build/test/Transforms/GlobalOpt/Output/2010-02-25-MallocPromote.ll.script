@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -globalopt -S /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/2010-02-25-MallocPromote.ll

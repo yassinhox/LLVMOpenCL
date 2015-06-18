@@ -1,0 +1,6 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: arm-apple-darwin9
+Thread model: posix
+clang: warning: argument unused during compilation: '-fbuiltin-strcat'
+clang: warning: argument unused during compilation: '-fbuiltin-strcpy'
+ "/home/jazouani/llvm/build/Release+Asserts/bin/clang" "-cc1" "-triple" "armv4t-apple-macosx10.5.0" "-fsyntax-only" "-disable-free" "-main-file-name" "arm-darwin-builtin.c" "-mrelocation-model" "pic" "-pic-level" "2" "-mdisable-fp-elim" "-masm-verbose" "-target-abi" "apcs-gnu" "-target-cpu" "arm7tdmi" "-msoft-float" "-mfloat-abi" "soft" "-target-feature" "+soft-float" "-target-feature" "+soft-float-abi" "-target-feature" "-neon" "-target-linker-version" "2.23.2" "-resource-dir" "/home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2" "-fmodule-cache-path" "/var/tmp/clang-module-cache" "-fdebug-compilation-dir" "/home/jazouani/llvm/build/tools/clang/test/Driver" "-ferror-limit" "19" "-fmessage-length" "0" "-stack-protector" "1" "-mstackrealign" "-fblocks" "-fblocks-runtime-optional" "-fobjc-runtime=macosx-10.5.0" "-fobjc-default-synthesize-properties" "-fencode-extended-block-signature" "-fsjlj-exceptions" "-fdiagnostics-show-option" "-x" "c" "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/arm-darwin-builtin.c"

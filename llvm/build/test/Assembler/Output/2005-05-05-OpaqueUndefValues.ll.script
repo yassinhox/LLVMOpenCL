@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2005-05-05-OpaqueUndefValues.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /dev/null

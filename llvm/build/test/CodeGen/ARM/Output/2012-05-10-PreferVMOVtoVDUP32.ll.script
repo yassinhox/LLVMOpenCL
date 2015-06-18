@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=arm -mcpu=swift < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-05-10-PreferVMOVtoVDUP32.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-05-10-PreferVMOVtoVDUP32.ll

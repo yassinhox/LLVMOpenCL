@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2009-05-09-PointerEdgeCount.ll -analyze -scalar-evolution | grep "count is 2"

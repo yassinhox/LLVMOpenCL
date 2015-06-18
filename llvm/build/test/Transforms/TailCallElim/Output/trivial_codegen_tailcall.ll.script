@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/TailCallElim/trivial_codegen_tailcall.ll -tailcallelim -S |     grep "tail call void @foo"

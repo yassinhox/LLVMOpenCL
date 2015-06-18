@@ -1,0 +1,21 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_errors.s:9:1: error: ambiguous instructions require an explicit suffix (could be 'cmpb', 'cmpw', 'cmpl', or 'cmpq')
+cmp $0, 0(%eax)
+^
+/home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_errors.s:12:12: error: register %rax is only available in 64-bit mode
+addl $0, 0(%rax)
+           ^~~~
+test.s:8:2: error: invalid instruction mnemonic 'movi'
+ movi $8,%eax
+ ^          ~~
+test.s:10:8: error: register %rax is only available in 64-bit mode
+movl 0(%rax), 0(%edx)  // error: invalid operand for instruction
+       ^~~~
+test.s:13:1: error: instruction requires a CPU feature not currently enabled
+sysexitq
+^
+test.s:17:6: error: register %rsp is only available in 64-bit mode
+lea (%rsp, %rbp, $4), %rax
+     ^~~~
+test.s:21:7: error: register %rsi is only available in 64-bit mode
+movq (%rsi,%ecx),%xmm0
+      ^~~~

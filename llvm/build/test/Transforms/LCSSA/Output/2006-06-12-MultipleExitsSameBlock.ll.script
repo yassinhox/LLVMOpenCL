@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LCSSA/2006-06-12-MultipleExitsSameBlock.ll -lcssa -S |     grep "%X.1.lcssa" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LCSSA/2006-06-12-MultipleExitsSameBlock.ll -lcssa -S |     not grep "%X.1.lcssa1"

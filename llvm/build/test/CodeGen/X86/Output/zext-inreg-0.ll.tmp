@@ -1,0 +1,124 @@
+	.file	"<stdin>"
+	.text
+	.globl	a
+	.align	16, 0x90
+	.type	a,@function
+a:                                      # @a
+# BB#0:
+	incl	%edi
+	movzbl	%dil, %eax
+	ret
+.Ltmp0:
+	.size	a, .Ltmp0-a
+
+	.globl	b
+	.align	16, 0x90
+	.type	b,@function
+b:                                      # @b
+# BB#0:
+	cvttss2si	%xmm0, %eax
+	movzbl	%al, %eax
+	ret
+.Ltmp1:
+	.size	b, .Ltmp1-b
+
+	.globl	c
+	.align	16, 0x90
+	.type	c,@function
+c:                                      # @c
+# BB#0:
+	incl	%edi
+	movzwl	%di, %eax
+	ret
+.Ltmp2:
+	.size	c, .Ltmp2-c
+
+	.globl	d
+	.align	16, 0x90
+	.type	d,@function
+d:                                      # @d
+# BB#0:
+	incl	%edi
+	movzbl	%dil, %eax
+	ret
+.Ltmp3:
+	.size	d, .Ltmp3-d
+
+	.globl	e
+	.align	16, 0x90
+	.type	e,@function
+e:                                      # @e
+# BB#0:
+	incl	%edi
+	movzwl	%di, %eax
+	ret
+.Ltmp4:
+	.size	e, .Ltmp4-e
+
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:
+	leal	1(%rdi), %eax
+	ret
+.Ltmp5:
+	.size	f, .Ltmp5-f
+
+	.globl	g
+	.align	16, 0x90
+	.type	g,@function
+g:                                      # @g
+# BB#0:
+	incb	%dil
+	movzbl	%dil, %eax
+	ret
+.Ltmp6:
+	.size	g, .Ltmp6-g
+
+	.globl	h
+	.align	16, 0x90
+	.type	h,@function
+h:                                      # @h
+# BB#0:
+	incl	%edi
+	movzwl	%di, %eax
+	ret
+.Ltmp7:
+	.size	h, .Ltmp7-h
+
+	.globl	i
+	.align	16, 0x90
+	.type	i,@function
+i:                                      # @i
+# BB#0:
+	incb	%dil
+	movzbl	%dil, %eax
+	ret
+.Ltmp8:
+	.size	i, .Ltmp8-i
+
+	.globl	j
+	.align	16, 0x90
+	.type	j,@function
+j:                                      # @j
+# BB#0:
+                                        # kill: EDI<def> EDI<kill> RDI<def>
+	incl	%edi
+	movzwl	%di, %eax
+	ret
+.Ltmp9:
+	.size	j, .Ltmp9-j
+
+	.globl	k
+	.align	16, 0x90
+	.type	k,@function
+k:                                      # @k
+# BB#0:
+	leal	1(%rdi), %eax
+	ret
+.Ltmp10:
+	.size	k, .Ltmp10-k
+
+
+	.section	".note.GNU-stack","",@progbits

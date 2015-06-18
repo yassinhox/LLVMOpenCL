@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -filetype=obj -mtriple i686-pc-win32 /home/jazouani/llvm/llvm-3.2/test/MC/COFF/switch-relocations.ll -o /home/jazouani/llvm/build/test/MC/COFF/Output/switch-relocations.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -filetype=obj -mtriple x86_64-pc-win32 /home/jazouani/llvm/llvm-3.2/test/MC/COFF/switch-relocations.ll -o /home/jazouani/llvm/build/test/MC/COFF/Output/switch-relocations.ll.tmp

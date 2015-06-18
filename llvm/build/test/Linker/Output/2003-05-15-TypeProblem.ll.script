@@ -1,0 +1,3 @@
+echo "%M = type { %N*} %N = type opaque" | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /home/jazouani/llvm/build/test/Linker/Output/2003-05-15-TypeProblem.ll.tmp.2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2003-05-15-TypeProblem.ll > /home/jazouani/llvm/build/test/Linker/Output/2003-05-15-TypeProblem.ll.tmp.1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2003-05-15-TypeProblem.ll.tmp.1.bc /home/jazouani/llvm/build/test/Linker/Output/2003-05-15-TypeProblem.ll.tmp.2.bc

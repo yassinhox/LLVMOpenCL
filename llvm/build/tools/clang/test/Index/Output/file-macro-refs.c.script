@@ -1,0 +1,2 @@
+c-index-test -file-refs-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/file-macro-refs.c:3:2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/file-macro-refs.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/file-macro-refs.c &&
+env CINDEXTEST_EDITING=1 c-index-test -file-refs-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/file-macro-refs.c:3:2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/file-macro-refs.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/file-macro-refs.c

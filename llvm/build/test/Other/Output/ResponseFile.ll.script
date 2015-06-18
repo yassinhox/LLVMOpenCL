@@ -1,0 +1,3 @@
+echo /home/jazouani/llvm/llvm-3.2/test/Other/ResponseFile.ll > /home/jazouani/llvm/build/test/Other/Output/ResponseFile.ll.tmp.list &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as @/home/jazouani/llvm/build/test/Other/Output/ResponseFile.ll.tmp.list -o /home/jazouani/llvm/build/test/Other/Output/ResponseFile.ll.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-nm /home/jazouani/llvm/build/test/Other/Output/ResponseFile.ll.tmp.bc 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/ResponseFile.ll

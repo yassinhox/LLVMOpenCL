@@ -1,0 +1,18 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	xorps	%xmm0, %xmm0
+	xorps	%xmm1, %xmm1
+	subps	%xmm1, %xmm1
+	mulps	%xmm0, %xmm1
+	addps	%xmm0, %xmm1
+	movaps	%xmm1, 0
+.Ltmp0:
+	.size	foo, .Ltmp0-foo
+
+
+	.section	".note.GNU-stack","",@progbits

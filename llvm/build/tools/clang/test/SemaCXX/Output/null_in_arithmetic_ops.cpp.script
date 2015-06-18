@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple x86_64-unknown-unknown -fsyntax-only -fblocks -Wnull-arithmetic -verify -Wno-string-plus-int /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/null_in_arithmetic_ops.cpp

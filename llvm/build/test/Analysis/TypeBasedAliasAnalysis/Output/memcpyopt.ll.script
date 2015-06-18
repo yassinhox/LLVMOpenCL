@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -tbaa -basicaa -memcpyopt -instcombine < /home/jazouani/llvm/llvm-3.2/test/Analysis/TypeBasedAliasAnalysis/memcpyopt.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Analysis/TypeBasedAliasAnalysis/memcpyopt.ll

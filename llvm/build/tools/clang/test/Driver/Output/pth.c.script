@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -ccc-pch-is-pth -x c-header /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/pth.c -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/pth.c.tmp.h.pth -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/pth.c.tmp.log &&
+FileCheck -check-prefix CHECK1 -input-file /home/jazouani/llvm/build/tools/clang/test/Driver/Output/pth.c.tmp.log /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/pth.c &&
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/pth.c.tmp.h.pth &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -ccc-pch-is-pth -E -include /home/jazouani/llvm/build/tools/clang/test/Driver/Output/pth.c.tmp.h /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/pth.c -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/pth.c.tmp.log &&
+FileCheck -check-prefix CHECK2 -input-file /home/jazouani/llvm/build/tools/clang/test/Driver/Output/pth.c.tmp.log /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/pth.c

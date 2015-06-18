@@ -1,0 +1,49 @@
+; ModuleID = '<stdin>'
+
+@P = external global i32
+
+define internal void @test() {
+  ret void
+}
+
+define internal void @test2() {
+  call void @test()
+  ret void
+}
+
+define void @test3(i32 %X) {
+  call void @test2()
+  ret void
+}
+
+define internal void @foo() {
+  ret void
+}
+
+define internal void @id() {
+  ret void
+}
+
+define void @test4() {
+  call void @foo()
+  call void @id()
+  ret void
+}
+
+define internal i32 @test5() {
+  ret i32 123
+}
+
+define i32 @test6() {
+  %LIVE = call i32 @test5()
+  ret i32 %LIVE
+}
+
+define i32 @test7() {
+  %LIVE = call i32 @test8()
+  ret i32 %LIVE
+}
+
+define internal i32 @test8() {
+  ret i32 124
+}

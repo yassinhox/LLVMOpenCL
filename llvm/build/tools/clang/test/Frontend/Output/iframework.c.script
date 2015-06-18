@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -iframework /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/Inputs /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/iframework.c -Xclang -verify

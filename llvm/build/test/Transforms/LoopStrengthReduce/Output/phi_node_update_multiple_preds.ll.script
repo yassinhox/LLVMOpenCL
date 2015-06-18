@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/phi_node_update_multiple_preds.ll -loop-reduce -disable-output

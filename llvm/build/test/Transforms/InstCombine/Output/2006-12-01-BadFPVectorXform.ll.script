@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2006-12-01-BadFPVectorXform.ll -instcombine -S | grep sub &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2006-12-01-BadFPVectorXform.ll -instcombine -S | grep add

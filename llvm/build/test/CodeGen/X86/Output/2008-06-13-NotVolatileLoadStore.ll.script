@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-06-13-NotVolatileLoadStore.ll -march=x86 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep movsd &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-06-13-NotVolatileLoadStore.ll -march=x86 | grep movw &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-06-13-NotVolatileLoadStore.ll -march=x86 | grep addw

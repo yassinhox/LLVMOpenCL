@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/2009-01-14-IPSCCP-Invoke.ll -ipsccp -S | grep "ret i32 42" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/2009-01-14-IPSCCP-Invoke.ll -ipsccp -S | grep "ret i32 undef"

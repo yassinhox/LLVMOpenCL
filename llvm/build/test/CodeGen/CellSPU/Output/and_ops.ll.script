@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/and_ops.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/and_ops.ll.tmp1.s &&
+grep and    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/and_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 234 &&
+grep andc   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/and_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 85 &&
+grep andi   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/and_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 37 &&
+grep andhi  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/and_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 30 &&
+grep andbi  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/and_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

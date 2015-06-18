@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/imm.ll -march=mblaze | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/imm.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/imm.ll -march=mblaze -mattr=+fpu | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=FPU /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/imm.ll

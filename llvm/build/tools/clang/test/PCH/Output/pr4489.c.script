@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -x c-header -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pr4489.c.tmp.pch /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/pr4489.c &&
+echo > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pr4489.c.tmp.empty.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -include /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pr4489.c.tmp -x c /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pr4489.c.tmp.empty.c -emit-llvm -S -o - &&
+false

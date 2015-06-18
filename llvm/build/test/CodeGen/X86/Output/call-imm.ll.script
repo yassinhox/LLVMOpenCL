@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/call-imm.ll -mtriple=i386-apple-darwin -relocation-model=static | grep "call.*12345678" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/call-imm.ll -mtriple=i386-apple-darwin -relocation-model=pic | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "call.*12345678" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/call-imm.ll -mtriple=i386-pc-linux -relocation-model=dynamic-no-pic | grep "call.*12345678" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/call-imm.ll -march=x86-64 | grep "call.*\*%rax"

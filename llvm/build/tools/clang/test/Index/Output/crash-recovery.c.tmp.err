@@ -1,0 +1,7 @@
+libclang: crash detected during parsing: {
+  'source_filename' : '(null)'
+  'command_line_args' : ['/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/crash-recovery.c'],
+  'unsaved_files' : [],
+  'options' : 1,
+}
+Unable to load translation unit!

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/unord.ll -march=arm | grep movne | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/unord.ll -march=arm | grep moveq | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

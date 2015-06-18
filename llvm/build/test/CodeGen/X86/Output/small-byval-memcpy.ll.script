@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/small-byval-memcpy.ll -mtriple=i386-apple-darwin -mcpu=core2   | grep movsd  | /home/jazouani/llvm/build/Release+Asserts/bin/count 8 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/small-byval-memcpy.ll -mtriple=i386-apple-darwin -mcpu=nehalem | grep movups | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

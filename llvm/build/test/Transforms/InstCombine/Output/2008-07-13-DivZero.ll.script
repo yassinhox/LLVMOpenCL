@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-07-13-DivZero.ll -instcombine -S | grep "lshr.*3" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-07-13-DivZero.ll -instcombine -S | grep "call .*%cond"

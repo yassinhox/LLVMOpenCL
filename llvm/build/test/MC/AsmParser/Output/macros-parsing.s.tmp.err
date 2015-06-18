@@ -1,0 +1,12 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros-parsing.s:9:1: error: unknown directive
+.test0
+^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros-parsing.s:15:1: error: macro '.test0' is already defined
+.macro .test0
+^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros-parsing.s:19:10: error: unexpected '.endmacro' in file, no current macro definition
+.endmacro
+         ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros-parsing.s:22:1: error: no matching '.endmacro' in definition
+.macro dummy
+^

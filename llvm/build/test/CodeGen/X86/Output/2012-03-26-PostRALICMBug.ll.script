@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2012-03-26-PostRALICMBug.ll -mtriple=x86_64-apple-darwin10 -stats 2>&1 |    not grep "Number of machine instructions hoisted out of loops post regalloc"

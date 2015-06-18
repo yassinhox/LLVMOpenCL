@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/noalias-geps.ll -basicaa -aa-eval -print-all-alias-modref-info -disable-output 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/noalias-geps.ll

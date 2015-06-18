@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/long-compare.ll -march=ppc32 | grep cntlzw &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/long-compare.ll -march=ppc32 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep xori &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/long-compare.ll -march=ppc32 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "li " &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/long-compare.ll -march=ppc32 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "mr "

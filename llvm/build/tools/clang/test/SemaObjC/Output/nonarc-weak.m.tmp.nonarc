@@ -1,0 +1,7 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaObjC/nonarc-weak.m:9:13: warning: __weak attribute cannot be specified on an automatic variable when ARC is not enabled
+  __weak id weakSelf = self;
+            ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaObjC/nonarc-weak.m:6:13: warning: unused function 'bar'
+static void bar() {} // Intentionally unused.
+            ^
+2 warnings generated.

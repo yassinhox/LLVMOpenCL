@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -instsimplify -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstSimplify/undef.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/InstSimplify/undef.ll

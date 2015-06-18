@@ -1,0 +1,3 @@
+echo "#include <stddef.h>" > /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/lineno-dbginfo.c.tmp.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -g -include /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/lineno-dbginfo.c.tmp.h /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lineno-dbginfo.c -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/lineno-dbginfo.c.tmp.ll &&
+grep "i32 5" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/lineno-dbginfo.c.tmp.ll

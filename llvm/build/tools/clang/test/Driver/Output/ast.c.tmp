@@ -1,0 +1,4 @@
+0: input, "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp.ast", ast
+1: compiler, {0}, assembler
+2: assembler, {1}, object
+END

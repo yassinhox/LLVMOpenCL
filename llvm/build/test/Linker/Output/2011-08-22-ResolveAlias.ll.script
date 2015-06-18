@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/2011-08-22-ResolveAlias.ll /home/jazouani/llvm/llvm-3.2/test/Linker/2011-08-22-ResolveAlias2.ll

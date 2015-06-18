@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/PhiEliminate.ll -simplifycfg -S > /home/jazouani/llvm/build/test/Transforms/SimplifyCFG/Output/PhiEliminate.ll.tmp.xform &&
+not grep phi /home/jazouani/llvm/build/test/Transforms/SimplifyCFG/Output/PhiEliminate.ll.tmp.xform &&
+grep ret /home/jazouani/llvm/build/test/Transforms/SimplifyCFG/Output/PhiEliminate.ll.tmp.xform

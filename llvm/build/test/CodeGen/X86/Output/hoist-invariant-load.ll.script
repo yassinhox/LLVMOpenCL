@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/hoist-invariant-load.ll -stats -O2 2>&1 | grep "1 machine-licm"

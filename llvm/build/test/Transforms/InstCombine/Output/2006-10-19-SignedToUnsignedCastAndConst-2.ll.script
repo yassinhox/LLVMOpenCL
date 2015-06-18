@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2006-10-19-SignedToUnsignedCastAndConst-2.ll -instcombine -S |     not grep sext.*i32

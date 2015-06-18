@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -regions -analyze < /home/jazouani/llvm/llvm-3.2/test/Analysis/RegionInfo/infinite_loop.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -regions -stats < /home/jazouani/llvm/llvm-3.2/test/Analysis/RegionInfo/infinite_loop.ll 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=STAT /home/jazouani/llvm/llvm-3.2/test/Analysis/RegionInfo/infinite_loop.ll

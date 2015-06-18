@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/2012-04-30-LoopUnswitch-LPad-Crash.ll -basicaa -instcombine -inline -functionattrs -licm -loop-unswitch -gvn -verify

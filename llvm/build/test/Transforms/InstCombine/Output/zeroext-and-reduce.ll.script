@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/zeroext-and-reduce.ll -instcombine -S |    grep "and i32 %Y, 8"

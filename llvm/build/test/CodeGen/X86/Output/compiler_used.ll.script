@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/compiler_used.ll -mtriple=i386-apple-darwin9 | grep no_dead_strip | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

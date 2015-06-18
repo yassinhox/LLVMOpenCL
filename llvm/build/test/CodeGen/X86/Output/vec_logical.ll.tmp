@@ -1,0 +1,64 @@
+	.file	"<stdin>"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI0_0:
+	.long	2147483648              # float -0.000000e+00
+	.long	2147483648              # float -0.000000e+00
+	.long	2147483648              # float -0.000000e+00
+	.long	2147483648              # float -0.000000e+00
+	.text
+	.globl	t
+	.align	16, 0x90
+	.type	t,@function
+t:                                      # @t
+	.cfi_startproc
+# BB#0:
+	vxorps	.LCPI0_0, %xmm0, %xmm0
+	vmovaps	%xmm0, 0
+	ret
+.Ltmp0:
+	.size	t, .Ltmp0-t
+	.cfi_endproc
+
+	.globl	t1
+	.align	16, 0x90
+	.type	t1,@function
+t1:                                     # @t1
+	.cfi_startproc
+# BB#0:                                 # %entry
+	vxorps	%xmm1, %xmm0, %xmm0
+	ret
+.Ltmp1:
+	.size	t1, .Ltmp1-t1
+	.cfi_endproc
+
+	.globl	t2
+	.align	16, 0x90
+	.type	t2,@function
+t2:                                     # @t2
+	.cfi_startproc
+# BB#0:                                 # %entry
+	vandps	%xmm1, %xmm0, %xmm0
+	ret
+.Ltmp2:
+	.size	t2, .Ltmp2-t2
+	.cfi_endproc
+
+	.globl	t3
+	.align	16, 0x90
+	.type	t3,@function
+t3:                                     # @t3
+	.cfi_startproc
+# BB#0:                                 # %entry
+	vandnps	%xmm1, %xmm0, %xmm0
+	movl	4(%esp), %eax
+	vorps	(%eax), %xmm0, %xmm0
+	movl	8(%esp), %eax
+	vmovaps	%xmm0, (%eax)
+	ret
+.Ltmp3:
+	.size	t3, .Ltmp3-t3
+	.cfi_endproc
+
+
+	.section	".note.GNU-stack","",@progbits

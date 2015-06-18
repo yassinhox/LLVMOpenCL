@@ -1,0 +1,1 @@
+c-index-test -test-print-typekind /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/print-typekind.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/print-typekind.c

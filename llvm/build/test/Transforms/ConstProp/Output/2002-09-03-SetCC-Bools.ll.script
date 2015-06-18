@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2002-09-03-SetCC-Bools.ll -constprop -die -S |    not grep set

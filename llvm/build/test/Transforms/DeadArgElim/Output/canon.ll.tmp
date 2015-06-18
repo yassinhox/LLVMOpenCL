@@ -1,0 +1,21 @@
+; ModuleID = '<stdin>'
+
+define internal void @test() {
+  ret void
+}
+
+define internal i32 @test2() {
+  %oldret = extractvalue { i32 } undef, 0
+  ret i32 %oldret
+}
+
+define void @caller() {
+  call void @test()
+  %X = call i32 @test2()
+  %oldret = insertvalue { i32 } undef, i32 %X, 0
+  %Y = extractvalue { i32 } %oldret, 0
+  call void @user(i32 %Y, { i32 } %oldret)
+  ret void
+}
+
+declare void @user(i32, { i32 })

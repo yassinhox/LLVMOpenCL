@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/keepalive.ll -deadargelim -S > /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/keepalive.ll.tmp &&
+grep "define internal zeroext i32 @test1() nounwind" /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/keepalive.ll.tmp &&
+grep "define internal <{ i32, i32 }> @test2" /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/keepalive.ll.tmp

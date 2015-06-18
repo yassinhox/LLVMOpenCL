@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target powerpc-apple-darwin8 -###    -ccc-print-phases /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-arch-default.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-arch-default.c.tmp &&
+FileCheck --check-prefix=CHECK-POWERPC < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-arch-default.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-arch-default.c

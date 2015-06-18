@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Assembler/2009-02-28-StripOpaqueName.ll -strip -S | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis

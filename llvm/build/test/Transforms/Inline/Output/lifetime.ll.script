@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -inline /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/lifetime.ll -S -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/lifetime.ll

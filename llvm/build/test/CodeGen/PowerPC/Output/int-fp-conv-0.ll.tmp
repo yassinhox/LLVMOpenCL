@@ -1,0 +1,66 @@
+	.machine ppc64
+	.section	__TEXT,__textcoal_nt,coalesced,pure_instructions
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.section	__TEXT,__text,regular,pure_instructions
+	.section	__TEXT,__literal4,4byte_literals
+	.align	2
+LCPI0_0:
+	.long	0                       ; float 0.000000e+00
+                                        ;  (0x0)
+	.section	__TEXT,__literal8,8byte_literals
+	.align	3
+LCPI0_1:
+	.quad	5183643171103440896     ; double 3.402824e+38
+                                        ;  (0x47f0000000000000)
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_foo
+	.align	4
+_foo:                                   ; @foo
+; BB#0:                                 ; %entry
+	mflr r0
+	std r0, 16(r1)
+	stdu r1, -144(r1)
+	std r30, 136(r1)                ; 8-byte Folded Spill
+	stfd f30, 128(r1)               ; 8-byte Folded Spill
+	stfd f31, 120(r1)               ; 8-byte Folded Spill
+	mr r30, r3
+	bl ___floattitf
+	lis r3, ha16(LCPI0_0)
+	lis r4, ha16(LCPI0_1)
+	fmr f30, f1
+	fmr f31, f2
+	lfs f4, lo16(LCPI0_0)(r3)
+	lfd f3, lo16(LCPI0_1)(r4)
+	bl ___gcc_qadd
+	cmpdi cr0, r30, 0
+	blt cr0, LBB0_2
+; BB#1:                                 ; %entry
+	fmr f1, f30
+LBB0_2:                                 ; %entry
+	blt cr0, LBB0_4
+; BB#3:                                 ; %entry
+	fmr f2, f31
+LBB0_4:                                 ; %entry
+	lfd f31, 120(r1)                ; 8-byte Folded Reload
+	lfd f30, 128(r1)                ; 8-byte Folded Reload
+	ld r30, 136(r1)                 ; 8-byte Folded Reload
+	addi r1, r1, 144
+	ld r0, 16(r1)
+	mtlr r0
+	blr 
+
+	.globl	_boo
+	.align	4
+_boo:                                   ; @boo
+; BB#0:                                 ; %entry
+	mflr r0
+	std r0, 16(r1)
+	stdu r1, -112(r1)
+	bl ___fixunstfti
+	addi r1, r1, 112
+	ld r0, 16(r1)
+	mtlr r0
+	blr 
+
+.subsections_via_symbols
+

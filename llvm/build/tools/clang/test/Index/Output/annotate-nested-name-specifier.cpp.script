@@ -1,0 +1,1 @@
+c-index-test -test-annotate-tokens=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-nested-name-specifier.cpp:13:1:137:1 -fno-delayed-template-parsing /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-nested-name-specifier.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-nested-name-specifier.cpp

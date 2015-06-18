@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/GC/badrootproto.ll >& /dev/null

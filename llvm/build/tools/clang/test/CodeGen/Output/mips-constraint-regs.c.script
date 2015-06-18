@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target mipsel-unknown-linux -S -o - -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/mips-constraint-regs.c  | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/mips-constraint-regs.c

@@ -1,0 +1,10 @@
+===-------------------------------------------------------------------------===
+                          ... Statistics Collected ...
+===-------------------------------------------------------------------------===
+
+  1 assembler - Number of assembler layout and relaxation steps
+  4 assembler - Number of emitted assembler fragments
+717 assembler - Number of emitted object file bytes
+  5 assembler - Number of fragment layouts
+  6 mcexpr    - Number of MCExpr evaluations
+

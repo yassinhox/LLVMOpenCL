@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/MC/Mips/do_switch.ll -filetype=obj -march=mips -relocation-model=static &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/MC/Mips/do_switch.ll -filetype=obj -march=mips -relocation-model=pic &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/MC/Mips/do_switch.ll -filetype=obj -march=mips64 -relocation-model=pic -mcpu=mips64 -mattr=n64

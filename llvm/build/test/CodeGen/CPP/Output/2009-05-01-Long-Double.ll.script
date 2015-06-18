@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CPP/2009-05-01-Long-Double.ll -march=cpp -cppgen=program -o /home/jazouani/llvm/build/test/CodeGen/CPP/Output/2009-05-01-Long-Double.ll.tmp

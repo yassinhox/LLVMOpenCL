@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -basicaa -inline -S -scalarrepl -gvn -instcombine /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/devirtualize-3.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/devirtualize-3.ll

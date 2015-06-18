@@ -1,0 +1,30 @@
+	.file	"<stdin>"
+	.text
+	.globl	handle_vector_size_attribute
+	.align	16, 0x90
+	.type	handle_vector_size_attribute,@function
+handle_vector_size_attribute:           # @handle_vector_size_attribute
+# BB#0:                                 # %entry
+	movl	0, %eax
+	decl	%eax
+	cmpl	$2, %eax
+	jae	.LBB0_2
+# BB#1:                                 # %cond_next129
+	xorl	%ecx, %ecx
+	xorl	%eax, %eax
+	xorl	%edx, %edx
+	divq	%rcx
+	movq	%rax, %rcx
+	movb	0, %al
+	movzbl	%al, %eax
+                                        # kill: EAX<def> EAX<kill> AX<def>
+	divb	%al
+	movzbl	%al, %eax
+	cmpq	%rcx, %rax
+.LBB0_2:                                # %bb84
+	ret
+.Ltmp0:
+	.size	handle_vector_size_attribute, .Ltmp0-handle_vector_size_attribute
+
+
+	.section	".note.GNU-stack","",@progbits

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/stack-frame.ll -march=arm &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/stack-frame.ll -march=arm | grep add | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

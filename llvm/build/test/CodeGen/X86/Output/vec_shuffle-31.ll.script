@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_shuffle-31.ll -march=x86 -mcpu=core2 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-31.ll.tmp &&
+grep pshufb /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-31.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

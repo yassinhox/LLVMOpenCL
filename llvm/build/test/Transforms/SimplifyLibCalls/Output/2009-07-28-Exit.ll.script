@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/2009-07-28-Exit.ll -simplify-libcalls -disable-output

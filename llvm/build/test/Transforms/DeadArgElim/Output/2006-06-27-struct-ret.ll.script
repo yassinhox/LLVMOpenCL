@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/2006-06-27-struct-ret.ll -deadargelim -disable-output

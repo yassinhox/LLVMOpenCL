@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-pc-linux-gnu /home/jazouani/llvm/llvm-3.2/test/MC/ELF/elf_directive_previous.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ELF/elf_directive_previous.s

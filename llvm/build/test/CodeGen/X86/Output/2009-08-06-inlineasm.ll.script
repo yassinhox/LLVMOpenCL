@@ -1,0 +1,2 @@
+false &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=i386-pc-linux-gnu < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-08-06-inlineasm.ll

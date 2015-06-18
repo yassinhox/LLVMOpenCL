@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<title>/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/plist-html-macros.c</title>
+<style type="text/css">
+ body { color:#000000; background-color:#ffffff }
+ body { font-family:Helvetica, sans-serif; font-size:10pt }
+ h1 { font-size:14pt }
+ .code { border-collapse:collapse; width:100%; }
+ .code { font-family: "Monospace", monospace; font-size:10pt }
+ .code { line-height: 1.2em }
+ .comment { color: green; font-style: oblique }
+ .keyword { color: blue }
+ .string_literal { color: red }
+ .directive { color: darkmagenta }
+ .expansion { display: none; }
+ .macro:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal;   -webkit-border-radius:5px;  -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 } 
+ .macro { color: darkmagenta; background-color:LemonChiffon; position: relative }
+ .num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+ .num { text-align:right; font-size:8pt }
+ .num { color:#444444 }
+ .line { padding-left: 1ex; border-left: 3px solid #ccc }
+ .line { white-space: pre }
+ .msg { -webkit-box-shadow:1px 1px 7px #000 }
+ .msg { -webkit-border-radius:5px }
+ .msg { font-family:Helvetica, sans-serif; font-size:8pt }
+ .msg { float:left }
+ .msg { padding:0.25em 1ex 0.25em 1ex }
+ .msg { margin-top:10px; margin-bottom:10px }
+ .msg { font-weight:bold }
+ .msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap }
+ .msgT { padding:0x; spacing:0x }
+ .msgEvent { background-color:#fff8b4; color:#000000 }
+ .msgControl { background-color:#bbbbbb; color:#000000 }
+ .mrange { background-color:#dfddf3 }
+ .mrange { border-bottom:1px solid #6F9DBE }
+ .PathIndex { font-weight: bold; padding:0px 5px; margin-right:5px; }
+ .PathIndex { -webkit-border-radius:8px }
+ .PathIndexEvent { background-color:#bfba87 }
+ .PathIndexControl { background-color:#8c8c8c }
+ .PathNav a { text-decoration:none; font-size: larger }
+ .CodeInsertionHint { font-weight: bold; background-color: #10dd10 }
+ .CodeRemovalHint { background-color:#de1010 }
+ .CodeRemovalHint { border-bottom:1px solid #6F9DBE }
+ table.simpletable {
+   padding: 5px;
+   font-size:12pt;
+   margin:20px;
+   border-collapse: collapse; border-spacing: 0px;
+ }
+ td.rowname {
+   text-align:right; font-weight:bold; color:#444444;
+   padding-right:2ex; }
+</style>
+</head>
+<body>
+<!-- BUGDESC Dereference of null pointer (loaded from variable 'a') -->
+
+<!-- BUGTYPE Dereference of null pointer -->
+
+<!-- BUGCATEGORY Logic error -->
+
+<!-- BUGFILE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/plist-html-macros.c -->
+
+<!-- BUGLINE 22 -->
+
+<!-- BUGPATHLENGTH 5 -->
+
+<!-- BUGMETAEND -->
+<!-- REPORTHEADER -->
+<h3>Bug Summary</h3>
+<table class="simpletable">
+<tr><td class="rowname">File:</td><td>/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/plist-html-macros.c</td></tr>
+<tr><td class="rowname">Location:</td><td><a href="#EndPath">line 22, column 3</a></td></tr>
+<tr><td class="rowname">Description:</td><td>Dereference of null pointer (loaded from variable 'a')</td></tr>
+</table>
+<!-- REPORTSUMMARYEXTRA -->
+<h3>Annotated Source Code</h3>
+<table class="code">
+<tr><td class="num" id="LN1">1</td><td class="line"><span class='comment'>// REQUIRES: shell</span></td></tr>
+<tr><td class="num" id="LN2">2</td><td class="line"><span class='comment'>// RUN: %clang_cc1 -analyze -analyzer-checker=core -verify %s</span></td></tr>
+<tr><td class="num" id="LN3">3</td><td class="line"><span class='comment'>// (sanity check)</span></td></tr>
+<tr><td class="num" id="LN4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LN5">5</td><td class="line"><span class='comment'>// RUN: rm -rf %t.dir</span></td></tr>
+<tr><td class="num" id="LN6">6</td><td class="line"><span class='comment'>// RUN: mkdir -p %t.dir</span></td></tr>
+<tr><td class="num" id="LN7">7</td><td class="line"><span class='comment'>// RUN: %clang_cc1 -analyze -analyzer-checker=core -analyzer-output=plist-html -o %t.dir/index.plist %s</span></td></tr>
+<tr><td class="num" id="LN8">8</td><td class="line"><span class='comment'>// RUN: ls %t.dir | grep \\.html | count 1</span></td></tr>
+<tr><td class="num" id="LN9">9</td><td class="line"><span class='comment'>// RUN: grep \\.html %t.dir/index.plist | count 1</span></td></tr>
+<tr><td class="num" id="LN10">10</td><td class="line"> </td></tr>
+<tr><td class="num" id="LN11">11</td><td class="line"><span class='comment'>// This tests two things: that the two calls to null_deref below are coalesced</span></td></tr>
+<tr><td class="num" id="LN12">12</td><td class="line"><span class='comment'>// into a single bug by both the plist and HTML diagnostics, and that the plist</span></td></tr>
+<tr><td class="num" id="LN13">13</td><td class="line"><span class='comment'>// diagnostics have a reference to the HTML diagnostics. (It would be nice to</span></td></tr>
+<tr><td class="num" id="LN14">14</td><td class="line"><span class='comment'>// check more carefully that the two actually match, but that's hard to write</span></td></tr>
+<tr><td class="num" id="LN15">15</td><td class="line"><span class='comment'>// in a lit RUN line.)</span></td></tr>
+<tr><td class="num" id="LN16">16</td><td class="line"> </td></tr>
+<tr><td class="num" id="LN17">17</td><td class="line"><span class='directive'>#define <span class='macro'>CALL_FN(a)<span class='expansion'>null_deref(a)</span></span> null_deref(a)</span></td></tr>
+<tr><td class="num" id="LN18">18</td><td class="line"> </td></tr>
+<tr><td class="num" id="LN19">19</td><td class="line"><span class='keyword'>void</span> null_deref(<span class='keyword'>int</span> *a) {</td></tr>
+<tr><td class="num" id="LN20">20</td><td class="line">  <span class='keyword'>if</span> (<span class="mrange"><span class="mrange">a</span></span>)</td></tr>
+<tr><td class="num"></td><td class="line"><div id="Path2" class="msg msgEvent" style="margin-left:7ex"><table class="msgT"><tr><td valign="top"><div class="PathIndex PathIndexEvent">2</div></td><td><div class="PathNav"><a href="#Path1" title="Previous event (1)">&#x2190;</a></div></td></td><td>Assuming 'a' is null</td><td><div class="PathNav"><a href="#Path3" title="Next event (3)">&#x2192;</a></div></td></tr></table></div></td></tr>
+<tr><td class="num"></td><td class="line"><div id="Path3" class="msg msgEvent" style="margin-left:7ex"><table class="msgT"><tr><td valign="top"><div class="PathIndex PathIndexEvent">3</div></td><td><div class="PathNav"><a href="#Path2" title="Previous event (2)">&#x2190;</a></div></td></td><td>Assuming pointer value is null</td><td><div class="PathNav"><a href="#Path4" title="Next event (4)">&#x2192;</a></div></td></tr></table></div></td></tr>
+<tr><td class="num"></td><td class="line"><div id="Path4" class="msg msgControl" style="margin-left:3ex"><table class="msgT"><tr><td valign="top"><div class="PathIndex PathIndexControl">4</div></td><td><div class="PathNav"><a href="#Path3" title="Previous event (3)">&#x2190;</a></div></td></td><td>Taking false branch</td><td><div class="PathNav"><a href="#EndPath" title="Next event (5)">&#x2192;</a></div></td></tr></table></div></td></tr>
+<tr><td class="num" id="LN21">21</td><td class="line">    <span class='keyword'>return</span>;</td></tr>
+<tr><td class="num" id="LN22">22</td><td class="line">  *<span class="mrange">a</span> = 1; <span class='comment'>// expected-warning{{null}}</span></td></tr>
+<tr><td class="num"></td><td class="line"><div id="EndPath" class="msg msgEvent" style="margin-left:3ex"><table class="msgT"><tr><td valign="top"><div class="PathIndex PathIndexEvent">5</div></td><td><div class="PathNav"><a href="#Path4" title="Previous event (4)">&#x2190;</a></div></td></td><td>Dereference of null pointer (loaded from variable 'a')</td></tr></table></div></td></tr>
+<tr><td class="num" id="LN23">23</td><td class="line">}</td></tr>
+<tr><td class="num" id="LN24">24</td><td class="line"> </td></tr>
+<tr><td class="num" id="LN25">25</td><td class="line"><span class='keyword'>void</span> test1() {</td></tr>
+<tr><td class="num" id="LN26">26</td><td class="line">  <span class='macro'>CALL_FN(0)<span class='expansion'>null_deref(0)</span></span>;</td></tr>
+<tr><td class="num" id="LN27">27</td><td class="line">}</td></tr>
+<tr><td class="num" id="LN28">28</td><td class="line"> </td></tr>
+<tr><td class="num" id="LN29">29</td><td class="line"><span class='keyword'>void</span> test2(<span class='keyword'>int</span> *p) {</td></tr>
+<tr><td class="num" id="LN30">30</td><td class="line">  <span class='macro'>CALL_FN(p)<span class='expansion'>null_deref(p)</span></span>;</td></tr>
+<tr><td class="num"></td><td class="line"><div id="Path1" class="msg msgControl" style="margin-left:3ex; max-width:100em"><table class="msgT"><tr><td valign="top"><div class="PathIndex PathIndexControl">1</div></td><td>Within the expansion of the macro 'CALL_FN':
+</td><td><div class="PathNav"><a href="#Path2" title="Next event (2)">&#x2192;</a></div></td></tr></table><div class="msg msgEvent" style="width:94%; margin-left:5px"><table class="msgT"><tr><td valign="top"><div class="PathIndex PathIndexEvent">a</div></td><td valign="top">Passing value via 1st parameter 'a'</td></tr></table></div>
+<div class="msg msgEvent" style="width:94%; margin-left:5px"><table class="msgT"><tr><td valign="top"><div class="PathIndex PathIndexEvent">b</div></td><td valign="top">Calling 'null_deref'</td></tr></table></div>
+</div></td></tr>
+<tr><td class="num" id="LN31">31</td><td class="line">}</td></tr>
+</table></body></html>

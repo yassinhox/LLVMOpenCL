@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalDCE/2009-01-05-DeadAliases.ll -globaldce -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep @D &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalDCE/2009-01-05-DeadAliases.ll -globaldce -S | grep @L | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

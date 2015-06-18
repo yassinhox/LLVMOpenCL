@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=x86-64 -mattr=+avx,-fma4 -mtriple=x86_64-apple-darwin -enable-unsafe-fp-math < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fp-fast.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fp-fast.ll

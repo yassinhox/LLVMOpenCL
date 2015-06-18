@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -target i686-pc-openbsd /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/openbsd.c -### 2>&1    | FileCheck --check-prefix=CHECK-LD /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/openbsd.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -target i686-pc-openbsd -pg -pthread /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/openbsd.c -### 2>&1    | FileCheck --check-prefix=CHECK-PG /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/openbsd.c

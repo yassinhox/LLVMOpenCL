@@ -1,0 +1,2 @@
+c-index-test -cursor-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/unmatched-braces.c:2:7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/unmatched-braces.c > /home/jazouani/llvm/build/tools/clang/test/Index/Output/unmatched-braces.c.tmp &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/unmatched-braces.c -input-file /home/jazouani/llvm/build/tools/clang/test/Index/Output/unmatched-braces.c.tmp

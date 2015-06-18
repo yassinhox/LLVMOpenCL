@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -g -triple i386-apple-darwin10 /home/jazouani/llvm/llvm-3.2/test/MC/MachO/gen-dwarf-macro-cpp.s -filetype=obj -o /home/jazouani/llvm/build/test/MC/MachO/Output/gen-dwarf-macro-cpp.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dwarfdump /home/jazouani/llvm/build/test/MC/MachO/Output/gen-dwarf-macro-cpp.s.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/MachO/gen-dwarf-macro-cpp.s

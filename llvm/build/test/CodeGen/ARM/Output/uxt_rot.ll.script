@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/uxt_rot.ll -march=arm -mattr=+v6 | grep uxtb | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/uxt_rot.ll -march=arm -mattr=+v6 | grep uxtab | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/uxt_rot.ll -march=arm -mattr=+v6 | grep uxth | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

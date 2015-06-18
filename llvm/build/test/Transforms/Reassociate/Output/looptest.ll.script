@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Reassociate/looptest.ll -reassociate -S | grep 115 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep 117

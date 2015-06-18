@@ -1,0 +1,2 @@
+diagtool list-warnings > /home/jazouani/llvm/build/tools/clang/test/Misc/Output/warning-flags.c.tmp 2>&1 &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Misc/Output/warning-flags.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/warning-flags.c

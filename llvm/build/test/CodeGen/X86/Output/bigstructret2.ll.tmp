@@ -1,0 +1,42 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+	.cfi_startproc
+# BB#0:
+	pushl	%edi
+.Ltmp3:
+	.cfi_def_cfa_offset 8
+	pushl	%esi
+.Ltmp4:
+	.cfi_def_cfa_offset 12
+	subl	$20, %esp
+.Ltmp5:
+	.cfi_def_cfa_offset 32
+.Ltmp6:
+	.cfi_offset %esi, -12
+.Ltmp7:
+	.cfi_offset %edi, -8
+	leal	(%esp), %ecx
+	calll	ReturnBigStruct
+	movl	(%esp), %eax
+	movl	4(%esp), %ecx
+	movl	8(%esp), %edx
+	movl	12(%esp), %edi
+	movl	32(%esp), %esi
+	movl	%edi, 12(%esi)
+	movl	%edx, 8(%esi)
+	movl	%ecx, 4(%esi)
+	movl	%eax, (%esi)
+	addl	$20, %esp
+	popl	%esi
+	popl	%edi
+	ret
+.Ltmp8:
+	.size	test, .Ltmp8-test
+	.cfi_endproc
+
+
+	.section	".note.GNU-stack","",@progbits

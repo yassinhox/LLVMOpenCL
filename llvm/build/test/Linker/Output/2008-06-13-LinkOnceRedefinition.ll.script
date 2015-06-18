@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/2008-06-13-LinkOnceRedefinition.ll -o /home/jazouani/llvm/build/test/Linker/Output/2008-06-13-LinkOnceRedefinition.ll.tmp.foo1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/2008-06-13-LinkOnceRedefinition.ll -o /home/jazouani/llvm/build/test/Linker/Output/2008-06-13-LinkOnceRedefinition.ll.tmp.foo2.bc &&
+echo "define linkonce void @foo(i32 %x) { ret void }" | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as -o /home/jazouani/llvm/build/test/Linker/Output/2008-06-13-LinkOnceRedefinition.ll.tmp.foo3.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2008-06-13-LinkOnceRedefinition.ll.tmp.foo1.bc /home/jazouani/llvm/build/test/Linker/Output/2008-06-13-LinkOnceRedefinition.ll.tmp.foo2.bc -S &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2008-06-13-LinkOnceRedefinition.ll.tmp.foo1.bc /home/jazouani/llvm/build/test/Linker/Output/2008-06-13-LinkOnceRedefinition.ll.tmp.foo3.bc -S

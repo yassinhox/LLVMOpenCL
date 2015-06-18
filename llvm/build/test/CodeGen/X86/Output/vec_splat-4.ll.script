@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_splat-4.ll -march=x86 -mcpu=penryn -mattr=sse41 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_splat-4.ll.tmp &&
+grep punpcklbw /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_splat-4.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 16 &&
+grep punpckhbw /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_splat-4.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 16 &&
+grep "pshufd" /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_splat-4.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 16

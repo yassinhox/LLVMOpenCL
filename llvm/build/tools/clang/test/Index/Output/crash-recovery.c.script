@@ -1,0 +1,2 @@
+not c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/crash-recovery.c 2> /home/jazouani/llvm/build/tools/clang/test/Index/Output/crash-recovery.c.tmp.err &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Index/Output/crash-recovery.c.tmp.err -check-prefix=CHECK-LOAD-SOURCE-CRASH /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/crash-recovery.c

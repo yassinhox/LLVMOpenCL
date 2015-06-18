@@ -1,0 +1,9 @@
+; ModuleID = '<stdin>'
+
+define i64 @test(i64 %X, i1 %Cond) {
+entry:
+  %quotient1 = lshr i64 %X, 4
+  %quotient2 = lshr i64 %X, 3
+  %sum = add i64 %quotient1, %quotient2
+  ret i64 %sum
+}

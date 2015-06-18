@@ -1,0 +1,1 @@
+c-index-test -test-annotate-tokens=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-literals.m:33:1:37:1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-literals.m | FileCheck -check-prefix=CHECK-LITERALS /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-literals.m

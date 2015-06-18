@@ -1,0 +1,13 @@
+; ModuleID = '<stdin>'
+
+@g = global i8 0
+
+define internal void @foo(i8 signext %y) nounwind {
+  store i8 %y, i8* @g
+  ret void
+}
+
+define i32 @bar() {
+  call void @foo(i8 signext 1) nounwind
+  ret i32 0
+}

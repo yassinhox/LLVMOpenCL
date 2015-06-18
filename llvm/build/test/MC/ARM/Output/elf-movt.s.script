@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-movt.s -triple=armv7-linux-gnueabi | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=ASM /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-movt.s &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-movt.s -triple=armv7-linux-gnueabi -filetype=obj -o - |     elf-dump --dump-section-data | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=OBJ /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-movt.s

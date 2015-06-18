@@ -1,0 +1,3 @@
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-c90.c /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-c90.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -std=c90 -pedantic -fixit /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-c90.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -pedantic -x c -std=c90 -Werror /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-c90.c.tmp

@@ -1,0 +1,145 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/copy-constructor-elim.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.C = type { i32 }
+%struct.S = type { i8 }
+%class.X = type { i8 }
+
+@.str = private unnamed_addr constant [5 x i8] c"S()\0A\00", align 1
+@.str1 = private unnamed_addr constant [25 x i8] c"X(const X&, %d, %d, %d)\0A\00", align 1
+@.str2 = private unnamed_addr constant [5 x i8] c"C()\0A\00", align 1
+
+define void @_Z3foov(%struct.C* noalias sret %agg.result) nounwind {
+entry:
+  call void @_ZN1CC1Ev(%struct.C* %agg.result)
+  ret void
+}
+
+define linkonce_odr void @_ZN1CC1Ev(%struct.C* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.C*, align 8
+  store %struct.C* %this, %struct.C** %this.addr, align 8
+  %this1 = load %struct.C** %this.addr
+  call void @_ZN1CC2Ev(%struct.C* %this1)
+  ret void
+}
+
+define void @_ZN1SC1Ev(%struct.S* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  call void @_ZN1SC2Ev(%struct.S* %this1)
+  ret void
+}
+
+define void @_ZN1SC2Ev(%struct.S* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0))
+  ret void
+}
+
+declare i32 @printf(...)
+
+define void @_Z4Call1S() nounwind {
+entry:
+  %0 = alloca %struct.S, align 1
+  ret void
+}
+
+define i32 @main() nounwind {
+entry:
+  %a = alloca %class.X, align 1
+  %b = alloca %class.X, align 1
+  %agg.tmp = alloca %struct.C, align 4
+  %c = alloca %class.X, align 1
+  %agg.tmp1 = alloca %struct.C, align 4
+  %d = alloca %class.X, align 1
+  %agg.tmp2 = alloca %struct.C, align 4
+  %s = alloca %struct.S, align 1
+  %agg.tmp3 = alloca %struct.S, align 1
+  call void @_ZN1XC1Ei(%class.X* %a, i32 1)
+  call void @_Z3foov(%struct.C* sret %agg.tmp)
+  call void @_ZN1XC1ERKS_ii1C(%class.X* %b, %class.X* %a, i32 2, i32 2, %struct.C* %agg.tmp)
+  call void @_Z3foov(%struct.C* sret %agg.tmp1)
+  call void @_ZN1XC1ERKS_ii1C(%class.X* %c, %class.X* %b, i32 1, i32 2, %struct.C* %agg.tmp1)
+  call void @_Z3foov(%struct.C* sret %agg.tmp2)
+  call void @_ZN1XC1ERKS_ii1C(%class.X* %d, %class.X* %a, i32 5, i32 6, %struct.C* %agg.tmp2)
+  call void @_ZN1SC1Ev(%struct.S* %s)
+  call void @_Z4Call1S()
+  ret i32 0
+}
+
+define linkonce_odr void @_ZN1XC1Ei(%class.X* %this, i32) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.X*, align 8
+  %.addr = alloca i32, align 4
+  store %class.X* %this, %class.X** %this.addr, align 8
+  store i32 %0, i32* %.addr, align 4
+  %this1 = load %class.X** %this.addr
+  %1 = load i32* %.addr, align 4
+  call void @_ZN1XC2Ei(%class.X* %this1, i32 %1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1XC1ERKS_ii1C(%class.X* %this, %class.X*, i32 %i, i32 %j, %struct.C* %c) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.X*, align 8
+  %.addr = alloca %class.X*, align 8
+  %i.addr = alloca i32, align 4
+  %j.addr = alloca i32, align 4
+  store %class.X* %this, %class.X** %this.addr, align 8
+  store %class.X* %0, %class.X** %.addr, align 8
+  store i32 %i, i32* %i.addr, align 4
+  store i32 %j, i32* %j.addr, align 4
+  %this1 = load %class.X** %this.addr
+  %1 = load i32* %i.addr, align 4
+  %2 = load i32* %j.addr, align 4
+  %3 = load %class.X** %.addr
+  call void @_ZN1XC2ERKS_ii1C(%class.X* %this1, %class.X* %3, i32 %1, i32 %2, %struct.C* %c)
+  ret void
+}
+
+define linkonce_odr void @_ZN1XC2ERKS_ii1C(%class.X* %this, %class.X*, i32 %i, i32 %j, %struct.C* %c) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.X*, align 8
+  %.addr = alloca %class.X*, align 8
+  %i.addr = alloca i32, align 4
+  %j.addr = alloca i32, align 4
+  store %class.X* %this, %class.X** %this.addr, align 8
+  store %class.X* %0, %class.X** %.addr, align 8
+  store i32 %i, i32* %i.addr, align 4
+  store i32 %j, i32* %j.addr, align 4
+  %this1 = load %class.X** %this.addr
+  %1 = load i32* %i.addr, align 4
+  %2 = load i32* %j.addr, align 4
+  %iC = getelementptr inbounds %struct.C* %c, i32 0, i32 0
+  %3 = load i32* %iC, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([25 x i8]* @.str1, i32 0, i32 0), i32 %1, i32 %2, i32 %3)
+  ret void
+}
+
+define linkonce_odr void @_ZN1XC2Ei(%class.X* %this, i32) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.X*, align 8
+  %.addr = alloca i32, align 4
+  store %class.X* %this, %class.X** %this.addr, align 8
+  store i32 %0, i32* %.addr, align 4
+  %this1 = load %class.X** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1CC2Ev(%struct.C* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.C*, align 8
+  store %struct.C* %this, %struct.C** %this.addr, align 8
+  %this1 = load %struct.C** %this.addr
+  %iC = getelementptr inbounds %struct.C* %this1, i32 0, i32 0
+  store i32 6, i32* %iC, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str2, i32 0, i32 0))
+  ret void
+}

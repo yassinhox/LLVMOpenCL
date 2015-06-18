@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/LargeAbsoluteAddr.ll -march=ppc32 -mtriple=powerpc-apple-darwin |    grep "stw r4, 32751" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/LargeAbsoluteAddr.ll -march=ppc64 -mtriple=powerpc-apple-darwin |    grep "stw r4, 32751" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/LargeAbsoluteAddr.ll -march=ppc64 -mtriple=powerpc-apple-darwin |    grep "std r4, 9024"

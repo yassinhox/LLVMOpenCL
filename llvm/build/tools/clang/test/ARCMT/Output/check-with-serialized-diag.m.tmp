@@ -1,0 +1,14 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:32:4: error: [rewriter] it is not safe to remove 'retain' message on an __unsafe_unretained type [] []
+Number FIXITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:34:4: error: [rewriter] it is not safe to remove 'retain' message on a global variable [] []
+Number FIXITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:32:4: error: ARC forbids explicit message send of 'retain' [] [ARC Restrictions]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:32:23 /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:32:29
+Number FIXITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:34:4: error: ARC forbids explicit message send of 'retain' [] [ARC Restrictions]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:34:15 /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:34:21
+Number FIXITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:35:4: error: ARC forbids explicit message send of 'retainCount' [] [ARC Restrictions]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:35:6 /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/check-with-serialized-diag.m:35:17
+Number FIXITs = 0
+Number of diagnostics: 5

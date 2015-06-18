@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/arguments_f64_backfill.ll -mtriple=arm-linux-gnueabi -mattr=+vfp2 -float-abi=hard | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/arguments_f64_backfill.ll

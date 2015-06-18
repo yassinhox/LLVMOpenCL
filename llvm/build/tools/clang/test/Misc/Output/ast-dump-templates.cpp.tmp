@@ -1,0 +1,92 @@
+typedef __int128 __int128_t;
+typedef unsigned __int128 __uint128_t;
+typedef __va_list_tag __builtin_va_list[1];
+template <int X = 5, typename Y = int, int Z = 5> struct foo {
+    struct foo;
+    int constant;
+     (CompoundStmt 0x1cbaaa8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:8:9, col:10>)
+
+
+    int getSum() (CompoundStmt 0x1cc4360 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:9:14, col:33>
+  (ReturnStmt 0x1cc4340 <col:16, col:30>
+    (CXXFunctionalCastExpr 0x1cc4318 <col:23, col:30> 'int':'int' functional cast to int <NoOp>
+      (BinaryOperator 0x1cc42f0 <col:25, col:29> 'int' '+'
+        (SubstNonTypeTemplateParmExpr 0x1cc4280 <col:25> 'int'
+          (IntegerLiteral 0x1cc4260 <col:25> 'int' 5))
+        (SubstNonTypeTemplateParmExpr 0x1cc42c8 <col:29> 'int'
+          (IntegerLiteral 0x1cc42a8 <col:29> 'int' 5))))))
+
+
+    inline ;
+    inline void ~foo() throw() (CompoundStmt 0x1cc2c98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:6:8>)
+
+
+}
+template <int X = 2, typename Y = double, int Z = 3> struct foo {
+    struct foo;
+    int constant;
+     (CompoundStmt 0x1cbaaa8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:8:9, col:10>)
+
+
+    double getSum() (CompoundStmt 0x1cc44a8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:9:14, col:33>
+  (ReturnStmt 0x1cc4488 <col:16, col:30>
+    (CXXFunctionalCastExpr 0x1cc4460 <col:23, col:30> 'double':'double' functional cast to double <NoOp>
+      (ImplicitCastExpr 0x1cc4448 <col:25, col:29> 'double':'double' <IntegralToFloating>
+        (BinaryOperator 0x1cc4420 <col:25, col:29> 'int' '+'
+          (SubstNonTypeTemplateParmExpr 0x1cc43b0 <col:25> 'int'
+            (IntegerLiteral 0x1cc4390 <col:25> 'int' 2))
+          (SubstNonTypeTemplateParmExpr 0x1cc43f8 <col:29> 'int'
+            (IntegerLiteral 0x1cc43d8 <col:29> 'int' 3)))))))
+
+
+    inline ;
+    inline void ~foo() throw() (CompoundStmt 0x1cc40a8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:6:8>)
+
+
+}
+template <int X, typename Y, int Z = (IntegerLiteral 0x1c8c7b8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:5:38> 'int' 5)
+> struct foo {
+    struct foo;
+    int constant;
+     (CompoundStmt 0x1cbaaa8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:8:9, col:10>)
+
+
+    Y getSum() (CompoundStmt 0x1cbab98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:9:14, col:33>
+  (ReturnStmt 0x1cbab78 <col:16, col:30>
+    (CXXUnresolvedConstructExpr 0x1cbab48 <col:23, col:30> 'Y'
+      (BinaryOperator 0x1cbab20 <col:25, col:29> 'int' '+'
+        (DeclRefExpr 0x1cbaad0 <col:25> 'int' NonTypeTemplateParm 0x1c8c6c0 'X' 'int')
+        (DeclRefExpr 0x1cbaaf8 <col:29> 'int' NonTypeTemplateParm 0x1c8c7f0 'Z' 'int')))))
+
+
+};
+template <int A = 5, typename B = int> int bar() (CompoundStmt 0x1cc4230 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:13:9, line:15:1>
+  (ReturnStmt 0x1cc4210 <line:14:3, col:13>
+    (CXXFunctionalCastExpr 0x1cc41e8 <col:10, col:13> 'int':'int' functional cast to int <NoOp>
+      (SubstNonTypeTemplateParmExpr 0x1cc41c0 <col:12> 'int'
+        (IntegerLiteral 0x1cc41a0 <col:12> 'int' 5)))))
+
+template <int A, typename B> B bar() (CompoundStmt 0x1cbae80 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:13:9, line:15:1>
+  (ReturnStmt 0x1cbae60 <line:14:3, col:13>
+    (CXXUnresolvedConstructExpr 0x1cbae30 <col:10, col:13> 'B'
+      (DeclRefExpr 0x1cbae08 <col:12> 'int' NonTypeTemplateParm 0x1cbabd0 'A' 'int'))))
+
+;
+void baz() (CompoundStmt 0x1cc4160 </home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp:17:12, line:21:1>
+  (DeclStmt 0x1cc22c8 <line:18:3, col:24>
+    (0x1cbaf70 "int x =
+      (CallExpr 0x1cc22a0 <col:11, col:23> 'int':'int'
+        (ImplicitCastExpr 0x1cc2288 <col:11, col:21> 'int (*)(void)' <FunctionToPointerDecay>
+          (DeclRefExpr 0x1cc2170 <col:11, col:21> 'int (void)' lvalue Function 0x1cbb2d0 'bar' 'int (void)' (FunctionTemplate 0x1cbadb0 'bar'))))"))
+  (DeclStmt 0x1cc2d68 <line:19:3, col:33>
+    (0x1cc22f0 "int y =
+      (CXXMemberCallExpr 0x1cc2d10 <col:11, col:32> 'int':'int'
+        (MemberExpr 0x1cc2ce0 <col:11, col:25> '<bound member function type>' .getSum 0x1cc28d0
+          (CXXTemporaryObjectExpr 0x1cc2b50 <col:11, col:23> 'foo<5, int>':'struct foo<5, int, 5>''void (void)')))"))
+  (DeclStmt 0x1cc4148 <line:20:3, col:42>
+    (0x1cc2d90 "double z =
+      (CXXMemberCallExpr 0x1cc40f0 <col:14, col:41> 'double':'double'
+        (MemberExpr 0x1cc40c0 <col:14, col:34> '<bound member function type>' .getSum 0x1cc3ce0
+          (CXXTemporaryObjectExpr 0x1cc3f60 <col:14, col:32> 'foo<2, double, 3>':'struct foo<2, double, 3>''void (void)')))")))
+
+

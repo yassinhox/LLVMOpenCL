@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Assembler/2002-08-19-BytecodeReader.ll -instcombine | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis

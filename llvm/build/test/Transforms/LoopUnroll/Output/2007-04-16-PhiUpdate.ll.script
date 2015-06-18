@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2007-04-16-PhiUpdate.ll -loop-unroll -disable-output

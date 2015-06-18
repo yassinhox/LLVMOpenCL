@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/load-constant-mem.ll -basicaa -gvn -instcombine -S | grep "ret i32 0"

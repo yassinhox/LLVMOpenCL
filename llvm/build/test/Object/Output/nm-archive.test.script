@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-nm /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/archive-test.a-coff-i386          | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/nm-archive.test -check-prefix COFF &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/trivial.ll -o=/home/jazouani/llvm/build/test/Object/Output/nm-archive.test.tmp1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-ar rcs /home/jazouani/llvm/build/test/Object/Output/nm-archive.test.tmp2 /home/jazouani/llvm/build/test/Object/Output/nm-archive.test.tmp1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-nm /home/jazouani/llvm/build/test/Object/Output/nm-archive.test.tmp2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/nm-archive.test -check-prefix BITCODE

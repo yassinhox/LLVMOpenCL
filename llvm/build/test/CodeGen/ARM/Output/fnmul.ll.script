@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fnmul.ll -march=arm -mattr=+v6,+vfp2 | grep vnmul.f64 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fnmul.ll -march=arm -mattr=+v6,+vfp2 -enable-sign-dependent-rounding-fp-math | grep vmul.f64

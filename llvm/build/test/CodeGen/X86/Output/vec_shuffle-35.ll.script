@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_shuffle-35.ll -march=x86 -mcpu=yonah -stack-alignment=16 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp &&
+grep pextrw /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 12 &&
+grep pinsrw /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 13 &&
+grep rolw /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 13 &&
+not grep esp /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp &&
+not grep ebp /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_shuffle-35.ll -march=x86 -mcpu=core2 -stack-alignment=16 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp &&
+grep pshufb /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_shuffle-35.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

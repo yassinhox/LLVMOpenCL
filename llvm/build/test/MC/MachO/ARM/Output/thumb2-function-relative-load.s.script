@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -n -triple thumbv7-apple-darwin10 /home/jazouani/llvm/llvm-3.2/test/MC/MachO/ARM/thumb2-function-relative-load.s -filetype=obj -o /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/thumb2-function-relative-load.s.tmp.obj &&
+/home/jazouani/llvm/build/Release+Asserts/bin/macho-dump --dump-section-data < /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/thumb2-function-relative-load.s.tmp.obj > /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/thumb2-function-relative-load.s.tmp.dump &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/thumb2-function-relative-load.s.tmp.dump /home/jazouani/llvm/llvm-3.2/test/MC/MachO/ARM/thumb2-function-relative-load.s

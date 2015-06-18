@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -arcmt-check -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/verify.m &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -arcmt-check -verify /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/verify.m.tmp.invalid 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/verify.m

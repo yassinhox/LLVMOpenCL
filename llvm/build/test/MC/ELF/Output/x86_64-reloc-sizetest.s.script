@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-linux-gnu -filetype=obj /home/jazouani/llvm/llvm-3.2/test/MC/ELF/x86_64-reloc-sizetest.s | elf-dump | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ELF/x86_64-reloc-sizetest.s

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=powerpc64-unknown-linux-gnu -filetype=obj /home/jazouani/llvm/llvm-3.2/test/MC/PowerPC/ppc64-initial-cfa.ll -o - |  elf-dump --dump-section-data | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/PowerPC/ppc64-initial-cfa.ll

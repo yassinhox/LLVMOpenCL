@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple=thumbv7-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb2-diagnostics.s 2> /home/jazouani/llvm/build/test/MC/ARM/Output/thumb2-diagnostics.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CHECK-ERRORS < /home/jazouani/llvm/build/test/MC/ARM/Output/thumb2-diagnostics.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb2-diagnostics.s

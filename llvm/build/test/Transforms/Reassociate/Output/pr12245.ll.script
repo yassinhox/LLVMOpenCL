@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Reassociate/pr12245.ll -basicaa -inline -instcombine -reassociate -dse -disable-output

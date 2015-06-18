@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/implicit-def.c -std=c89 &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/implicit-def.c -std=c99 -pedantic-errors

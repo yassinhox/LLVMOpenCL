@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fast-cc-merge-stack-adj.ll -mcpu=generic -march=x86 -x86-asm-syntax=intel |    grep "add	ESP, 8"

@@ -1,0 +1,13 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/mul_ops.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s &&
+grep mpy     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 44 &&
+grep mpyu    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep mpyh    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 10 &&
+grep mpyhh   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep rotma   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 12 &&
+grep rotmahi /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep and     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep selb    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep fsmbi   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep shli    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep shlhi   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep ila     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/mul_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

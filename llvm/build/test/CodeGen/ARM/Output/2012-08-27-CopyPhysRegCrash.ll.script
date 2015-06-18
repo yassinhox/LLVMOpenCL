@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-08-27-CopyPhysRegCrash.ll -mcpu=cortex-a8 -march=thumb

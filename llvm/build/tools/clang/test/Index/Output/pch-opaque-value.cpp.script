@@ -1,0 +1,2 @@
+c-index-test -write-pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/pch-opaque-value.cpp.tmp.pch /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/pch-opaque-value.cpp &&
+c-index-test -test-load-tu-usrs /home/jazouani/llvm/build/tools/clang/test/Index/Output/pch-opaque-value.cpp.tmp.pch local | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/pch-opaque-value.cpp

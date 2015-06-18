@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Bitcode/flags.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Bitcode/Output/flags.ll.tmp0 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S < /home/jazouani/llvm/llvm-3.2/test/Bitcode/flags.ll > /home/jazouani/llvm/build/test/Bitcode/Output/flags.ll.tmp1 &&
+diff /home/jazouani/llvm/build/test/Bitcode/Output/flags.ll.tmp0 /home/jazouani/llvm/build/test/Bitcode/Output/flags.ll.tmp1

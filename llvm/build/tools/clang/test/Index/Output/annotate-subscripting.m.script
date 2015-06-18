@@ -1,0 +1,1 @@
+c-index-test -test-annotate-tokens=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-subscripting.m:22:1:36:1 -target x86_64-apple-macosx10.7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-subscripting.m | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-subscripting.m

@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/stfiwx.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -mattr=stfiwx -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/stfiwx.ll.tmp1 &&
+grep stfiwx /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/stfiwx.ll.tmp1 &&
+not grep r1 /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/stfiwx.ll.tmp1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/stfiwx.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -mattr=-stfiwx    -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/stfiwx.ll.tmp2 &&
+not grep stfiwx /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/stfiwx.ll.tmp2 &&
+grep r1 /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/stfiwx.ll.tmp2

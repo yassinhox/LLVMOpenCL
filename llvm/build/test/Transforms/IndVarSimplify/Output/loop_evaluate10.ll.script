@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/loop_evaluate10.ll -indvars -S    | grep "%b.1 = phi i32 [ 2, %bb ], [ 1, %bb2 ]"

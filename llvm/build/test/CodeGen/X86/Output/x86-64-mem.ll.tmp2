@@ -1,0 +1,50 @@
+	.file	"<stdin>"
+	.text
+	.globl	test1
+	.align	16, 0x90
+	.type	test1,@function
+test1:                                  # @test1
+# BB#0:
+	movl	src(%rip), %eax
+	movl	%eax, dst(%rip)
+	ret
+.Ltmp0:
+	.size	test1, .Ltmp0-test1
+
+	.globl	test2
+	.align	16, 0x90
+	.type	test2,@function
+test2:                                  # @test2
+# BB#0:
+	movq	$dst, ptr(%rip)
+	ret
+.Ltmp1:
+	.size	test2, .Ltmp1-test2
+
+	.globl	test3
+	.align	16, 0x90
+	.type	test3,@function
+test3:                                  # @test3
+# BB#0:
+	movq	$ldst, lptr(%rip)
+	ret
+.Ltmp2:
+	.size	test3, .Ltmp2-test3
+
+	.type	lptr,@object            # @lptr
+	.local	lptr
+	.comm	lptr,8,8
+	.type	ldst,@object            # @ldst
+	.local	ldst
+	.comm	ldst,2000,32
+	.type	lsrc,@object            # @lsrc
+	.local	lsrc
+	.comm	lsrc,2000,32
+	.type	bsrc,@object            # @bsrc
+	.local	bsrc
+	.comm	bsrc,2000000,32
+	.type	bdst,@object            # @bdst
+	.local	bdst
+	.comm	bdst,2000000,32
+
+	.section	".note.GNU-stack","",@progbits

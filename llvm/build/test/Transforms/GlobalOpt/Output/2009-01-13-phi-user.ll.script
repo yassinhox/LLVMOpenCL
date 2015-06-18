@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/2009-01-13-phi-user.ll -globalopt -S | grep "phi.*@head"

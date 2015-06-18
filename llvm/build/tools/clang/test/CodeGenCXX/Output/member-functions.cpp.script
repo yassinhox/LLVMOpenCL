@@ -1,0 +1,12 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/member-functions.cpp -triple x86_64-apple-darwin9 -o /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "define void @_ZN1C1fEv" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp | count 1 &&
+grep "call void @_ZN1C1fEv" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp | count 1 &&
+grep "call void (.struct.C\*, i32, ...)\* @_ZN1C1gEiz" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp | count 1 &&
+grep "define linkonce_odr void @_ZN1SC1Ev.*unnamed_addr" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "define linkonce_odr void @_ZN1SC1Ev.*unnamed_addr" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "define linkonce_odr void @_ZN1S9f_inline1Ev" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "define linkonce_odr void @_ZN1S9f_inline2Ev" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "define linkonce_odr void @_ZN1S1gEv" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "define linkonce_odr void @_ZN1S1vEv.*unnamed_addr" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "define void @_ZN1S1fEv" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp &&
+grep "call void @_ZN1TplERKS_" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/member-functions.cpp.tmp

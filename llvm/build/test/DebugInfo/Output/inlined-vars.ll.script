@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 < /home/jazouani/llvm/llvm-3.2/test/DebugInfo/inlined-vars.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/DebugInfo/inlined-vars.ll -check-prefix ARGUMENT &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 < /home/jazouani/llvm/llvm-3.2/test/DebugInfo/inlined-vars.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/DebugInfo/inlined-vars.ll -check-prefix VARIABLE

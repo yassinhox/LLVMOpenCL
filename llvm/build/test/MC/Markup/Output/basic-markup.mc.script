@@ -1,0 +1,1 @@
+llvm-mcmarkup /home/jazouani/llvm/llvm-3.2/test/MC/Markup/basic-markup.mc | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Markup/basic-markup.mc

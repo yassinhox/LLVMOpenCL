@@ -1,0 +1,88 @@
+	.file	"<stdin>"
+	.text
+	.globl	splat
+	.align	2
+	.type	splat,@function
+splat:                                  # @splat
+# BB#0:
+	addi 5, 1, -16
+	stfs 1, -16(1)
+	lvx 3, 0, 4
+	lvx 2, 0, 5
+	vspltw 2, 2, 0
+	vaddfp 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp0:
+	.size	splat, .Ltmp0-splat
+
+	.globl	splat_i4
+	.align	2
+	.type	splat_i4,@function
+splat_i4:                               # @splat_i4
+# BB#0:
+	addi 6, 1, -16
+	stw 5, -16(1)
+	lvx 3, 0, 4
+	lvx 2, 0, 6
+	vspltw 2, 2, 0
+	vadduwm 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp1:
+	.size	splat_i4, .Ltmp1-splat_i4
+
+	.globl	splat_imm_i32
+	.align	2
+	.type	splat_imm_i32,@function
+splat_imm_i32:                          # @splat_imm_i32
+# BB#0:
+	lvx 2, 0, 4
+	vspltisb 3, -1
+	vadduwm 2, 2, 3
+	stvx 2, 0, 3
+	blr 
+.Ltmp2:
+	.size	splat_imm_i32, .Ltmp2-splat_imm_i32
+
+	.globl	splat_imm_i16
+	.align	2
+	.type	splat_imm_i16,@function
+splat_imm_i16:                          # @splat_imm_i16
+# BB#0:
+	lvx 2, 0, 4
+	vspltish 3, 1
+	vadduwm 2, 2, 3
+	stvx 2, 0, 3
+	blr 
+.Ltmp3:
+	.size	splat_imm_i16, .Ltmp3-splat_imm_i16
+
+	.globl	splat_h
+	.align	2
+	.type	splat_h,@function
+splat_h:                                # @splat_h
+# BB#0:
+	addi 5, 1, -16
+	sth 3, -16(1)
+	lvx 2, 0, 5
+	vsplth 2, 2, 0
+	stvx 2, 0, 4
+	blr 
+.Ltmp4:
+	.size	splat_h, .Ltmp4-splat_h
+
+	.globl	spltish
+	.align	2
+	.type	spltish,@function
+spltish:                                # @spltish
+# BB#0:
+	lvx 2, 0, 4
+	vspltish 3, 15
+	vsububm 2, 2, 3
+	stvx 2, 0, 3
+	blr 
+.Ltmp5:
+	.size	spltish, .Ltmp5-spltish
+
+

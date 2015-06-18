@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=x86 -O0 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-01-18-DbgValue.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-01-18-DbgValue.ll

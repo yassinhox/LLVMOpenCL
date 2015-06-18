@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=armv7-- < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2011-09-09-OddVectorDivision.ll -mattr=-neon

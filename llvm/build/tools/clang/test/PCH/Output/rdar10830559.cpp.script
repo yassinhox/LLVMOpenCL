@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -emit-llvm-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/rdar10830559.cpp &&
+touch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/rdar10830559.cpp.tmp.empty.cpp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-pch -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/rdar10830559.cpp.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/rdar10830559.cpp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -include-pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/rdar10830559.cpp.tmp -emit-llvm-only /home/jazouani/llvm/build/tools/clang/test/PCH/Output/rdar10830559.cpp.tmp.empty.cpp

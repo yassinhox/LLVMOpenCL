@@ -1,0 +1,8 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/source-manager-stack.c:12:7: error: redefinition of 'x' with a different type: 'float' vs 'int'
+float x;
+      ^
+In file included from /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/source-manager-stack.c:1:
+/home/jazouani/llvm/build/tools/clang/test/PCH/Output/source-manager-stack.c.tmp.prefix.h:1:5: note: previous definition is here
+int x;
+    ^
+1 error generated.

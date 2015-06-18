@@ -1,0 +1,13 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/i64ops.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s &&
+grep xswd	     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep xsbh	     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep xshw	     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep shufb        /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 7 &&
+grep cg           /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep addx         /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep fsmbi        /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep il           /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep mpy          /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 10 &&
+grep mpyh         /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep mpyhhu       /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep mpyu         /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/i64ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/2008-06-26-AddressSpace.ll -o /home/jazouani/llvm/build/test/Linker/Output/2008-06-26-AddressSpace.ll.tmp.foo1.bc &&
+echo | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as -o /home/jazouani/llvm/build/test/Linker/Output/2008-06-26-AddressSpace.ll.tmp.foo2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2008-06-26-AddressSpace.ll.tmp.foo2.bc /home/jazouani/llvm/build/test/Linker/Output/2008-06-26-AddressSpace.ll.tmp.foo1.bc -S | grep "addrspace(2)" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2008-06-26-AddressSpace.ll.tmp.foo1.bc /home/jazouani/llvm/build/test/Linker/Output/2008-06-26-AddressSpace.ll.tmp.foo2.bc -S | grep "addrspace(2)"

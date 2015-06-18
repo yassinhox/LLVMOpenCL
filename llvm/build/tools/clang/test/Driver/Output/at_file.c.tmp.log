@@ -1,0 +1,23 @@
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/at_file.c"
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/at_file.c" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 153 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/at_file.c" 2
+# 17 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/at_file.c"
+bar1
+bar2 zed2
+bar3 zed3
+bar4 zed4
+bar5 zed5
+'bar6 zed6'
+"bar7 zed7"
+foo8bar8zed8
+foo9'bar9'zed9
+foo10"bar10"zed10
+
+bar
+
+zed12

@@ -1,0 +1,93 @@
+; ModuleID = '<stdin>'
+
+define void @foo(float* %Ar, float* %Ai, i64 %As, float* %Cr, float* %Ci, i64 %Cs, i64 %n) nounwind {
+entry:
+  %0 = mul i64 %n, %As
+  %1 = getelementptr inbounds float* %Ar, i64 %0
+  %2 = mul i64 %n, %As
+  %3 = getelementptr inbounds float* %Ai, i64 %2
+  %4 = shl i64 %n, 1
+  %5 = mul i64 %4, %As
+  %6 = getelementptr inbounds float* %Ar, i64 %5
+  %7 = shl i64 %n, 1
+  %8 = mul i64 %7, %As
+  %9 = getelementptr inbounds float* %Ai, i64 %8
+  %10 = mul i64 %n, %Cs
+  %11 = getelementptr inbounds float* %Cr, i64 %10
+  %12 = mul i64 %n, %Cs
+  %13 = getelementptr inbounds float* %Ci, i64 %12
+  %14 = shl i64 %n, 1
+  %15 = mul i64 %14, %Cs
+  %16 = getelementptr inbounds float* %Cr, i64 %15
+  %17 = shl i64 %n, 1
+  %18 = mul i64 %17, %Cs
+  %19 = getelementptr inbounds float* %Ci, i64 %18
+  br label %bb13
+
+bb:                                               ; preds = %bb13
+  %20 = load float* %A0r.0, align 4
+  %21 = load float* %A0i.0, align 4
+  %22 = load float* %A1r.0, align 4
+  %23 = load float* %A1i.0, align 4
+  %24 = load float* %A2r.0, align 4
+  %25 = load float* %A2i.0, align 4
+  %26 = fadd float %22, %24
+  %27 = fadd float %23, %25
+  %28 = fsub float %22, %24
+  %29 = fsub float %23, %25
+  %30 = fadd float %20, %26
+  %31 = fadd float %21, %27
+  %32 = fmul float %26, -1.500000e+00
+  %33 = fmul float %27, -1.500000e+00
+  %34 = fadd float %30, %32
+  %35 = fadd float %31, %33
+  %36 = fmul float %28, 0x3FEBB67AE0000000
+  %37 = fmul float %29, 0x3FEBB67AE0000000
+  %38 = fadd float %34, %37
+  %39 = fsub float %35, %36
+  %40 = fsub float %34, %37
+  %41 = fadd float %35, %36
+  store float %30, float* %C0r.0, align 4
+  store float %31, float* %C0i.0, align 4
+  store float %38, float* %C1r.0, align 4
+  store float %39, float* %C1i.0, align 4
+  store float %40, float* %C2r.0, align 4
+  store float %41, float* %C2i.0, align 4
+  %42 = getelementptr inbounds float* %A0r.0, i64 %As
+  %43 = getelementptr inbounds float* %A0i.0, i64 %As
+  %44 = getelementptr inbounds float* %A1r.0, i64 %As
+  %45 = getelementptr inbounds float* %A1i.0, i64 %As
+  %46 = getelementptr inbounds float* %A2r.0, i64 %As
+  %47 = getelementptr inbounds float* %A2i.0, i64 %As
+  %48 = getelementptr inbounds float* %C0r.0, i64 %Cs
+  %49 = getelementptr inbounds float* %C0i.0, i64 %Cs
+  %50 = getelementptr inbounds float* %C1r.0, i64 %Cs
+  %51 = getelementptr inbounds float* %C1i.0, i64 %Cs
+  %52 = getelementptr inbounds float* %C2r.0, i64 %Cs
+  %53 = getelementptr inbounds float* %C2i.0, i64 %Cs
+  %54 = add nsw i64 %i.0, 1
+  br label %bb13
+
+bb13:                                             ; preds = %bb, %entry
+  %i.0 = phi i64 [ 0, %entry ], [ %54, %bb ]
+  %C2i.0 = phi float* [ %19, %entry ], [ %53, %bb ]
+  %C2r.0 = phi float* [ %16, %entry ], [ %52, %bb ]
+  %C1i.0 = phi float* [ %13, %entry ], [ %51, %bb ]
+  %C1r.0 = phi float* [ %11, %entry ], [ %50, %bb ]
+  %C0i.0 = phi float* [ %Ci, %entry ], [ %49, %bb ]
+  %C0r.0 = phi float* [ %Cr, %entry ], [ %48, %bb ]
+  %A2i.0 = phi float* [ %9, %entry ], [ %47, %bb ]
+  %A2r.0 = phi float* [ %6, %entry ], [ %46, %bb ]
+  %A1i.0 = phi float* [ %3, %entry ], [ %45, %bb ]
+  %A1r.0 = phi float* [ %1, %entry ], [ %44, %bb ]
+  %A0i.0 = phi float* [ %Ai, %entry ], [ %43, %bb ]
+  %A0r.0 = phi float* [ %Ar, %entry ], [ %42, %bb ]
+  %55 = icmp slt i64 %i.0, %n
+  br i1 %55, label %bb, label %bb14
+
+bb14:                                             ; preds = %bb13
+  br label %return
+
+return:                                           ; preds = %bb14
+  ret void
+}

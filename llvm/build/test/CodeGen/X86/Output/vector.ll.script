@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vector.ll -march=x86 -mcpu=i386 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/vector.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vector.ll -march=x86 -mcpu=yonah >> /home/jazouani/llvm/build/test/CodeGen/X86/Output/vector.ll.tmp

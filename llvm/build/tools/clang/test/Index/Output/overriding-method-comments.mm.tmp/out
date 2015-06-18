@@ -1,0 +1,451 @@
+// CHECK: <invalid loc>:2:9: macro definition=__llvm__
+// CHECK: <invalid loc>:3:9: macro definition=__clang__
+// CHECK: <invalid loc>:4:9: macro definition=__clang_major__
+// CHECK: <invalid loc>:5:9: macro definition=__clang_minor__
+// CHECK: <invalid loc>:6:9: macro definition=__clang_patchlevel__
+// CHECK: <invalid loc>:7:9: macro definition=__clang_version__
+// CHECK: <invalid loc>:8:9: macro definition=__GNUC_MINOR__
+// CHECK: <invalid loc>:9:9: macro definition=__GNUC_PATCHLEVEL__
+// CHECK: <invalid loc>:10:9: macro definition=__GNUC__
+// CHECK: <invalid loc>:11:9: macro definition=__GXX_ABI_VERSION
+// CHECK: <invalid loc>:12:9: macro definition=__ATOMIC_RELAXED
+// CHECK: <invalid loc>:13:9: macro definition=__ATOMIC_CONSUME
+// CHECK: <invalid loc>:14:9: macro definition=__ATOMIC_ACQUIRE
+// CHECK: <invalid loc>:15:9: macro definition=__ATOMIC_RELEASE
+// CHECK: <invalid loc>:16:9: macro definition=__ATOMIC_ACQ_REL
+// CHECK: <invalid loc>:17:9: macro definition=__ATOMIC_SEQ_CST
+// CHECK: <invalid loc>:18:9: macro definition=__PRAGMA_REDEFINE_EXTNAME
+// CHECK: <invalid loc>:19:9: macro definition=__VERSION__
+// CHECK: <invalid loc>:20:9: macro definition=IBOutlet
+// CHECK: <invalid loc>:21:9: macro definition=IBOutletCollection
+// CHECK: <invalid loc>:22:9: macro definition=IBAction
+// CHECK: <invalid loc>:23:9: macro definition=__CONSTANT_CFSTRINGS__
+// CHECK: <invalid loc>:24:9: macro definition=OBJC_NEW_PROPERTIES
+// CHECK: <invalid loc>:25:9: macro definition=__EXCEPTIONS
+// CHECK: <invalid loc>:26:9: macro definition=__GXX_RTTI
+// CHECK: <invalid loc>:27:9: macro definition=__DEPRECATED
+// CHECK: <invalid loc>:28:9: macro definition=__GNUG__
+// CHECK: <invalid loc>:29:9: macro definition=__GXX_WEAK__
+// CHECK: <invalid loc>:30:9: macro definition=__private_extern__
+// CHECK: <invalid loc>:31:9: macro definition=__ORDER_LITTLE_ENDIAN__
+// CHECK: <invalid loc>:32:9: macro definition=__ORDER_BIG_ENDIAN__
+// CHECK: <invalid loc>:33:9: macro definition=__ORDER_PDP_ENDIAN__
+// CHECK: <invalid loc>:34:9: macro definition=__BYTE_ORDER__
+// CHECK: <invalid loc>:35:9: macro definition=_LP64
+// CHECK: <invalid loc>:36:9: macro definition=__LP64__
+// CHECK: <invalid loc>:37:9: macro definition=__CHAR_BIT__
+// CHECK: <invalid loc>:38:9: macro definition=__SCHAR_MAX__
+// CHECK: <invalid loc>:39:9: macro definition=__SHRT_MAX__
+// CHECK: <invalid loc>:40:9: macro definition=__INT_MAX__
+// CHECK: <invalid loc>:41:9: macro definition=__LONG_MAX__
+// CHECK: <invalid loc>:42:9: macro definition=__LONG_LONG_MAX__
+// CHECK: <invalid loc>:43:9: macro definition=__WCHAR_MAX__
+// CHECK: <invalid loc>:44:9: macro definition=__INTMAX_MAX__
+// CHECK: <invalid loc>:45:9: macro definition=__SIZEOF_DOUBLE__
+// CHECK: <invalid loc>:46:9: macro definition=__SIZEOF_FLOAT__
+// CHECK: <invalid loc>:47:9: macro definition=__SIZEOF_INT__
+// CHECK: <invalid loc>:48:9: macro definition=__SIZEOF_LONG__
+// CHECK: <invalid loc>:49:9: macro definition=__SIZEOF_LONG_DOUBLE__
+// CHECK: <invalid loc>:50:9: macro definition=__SIZEOF_LONG_LONG__
+// CHECK: <invalid loc>:51:9: macro definition=__SIZEOF_POINTER__
+// CHECK: <invalid loc>:52:9: macro definition=__SIZEOF_SHORT__
+// CHECK: <invalid loc>:53:9: macro definition=__SIZEOF_PTRDIFF_T__
+// CHECK: <invalid loc>:54:9: macro definition=__SIZEOF_SIZE_T__
+// CHECK: <invalid loc>:55:9: macro definition=__SIZEOF_WCHAR_T__
+// CHECK: <invalid loc>:56:9: macro definition=__SIZEOF_WINT_T__
+// CHECK: <invalid loc>:57:9: macro definition=__INTMAX_TYPE__
+// CHECK: <invalid loc>:58:9: macro definition=__UINTMAX_TYPE__
+// CHECK: <invalid loc>:59:9: macro definition=__INTMAX_WIDTH__
+// CHECK: <invalid loc>:60:9: macro definition=__PTRDIFF_TYPE__
+// CHECK: <invalid loc>:61:9: macro definition=__PTRDIFF_WIDTH__
+// CHECK: <invalid loc>:62:9: macro definition=__INTPTR_TYPE__
+// CHECK: <invalid loc>:63:9: macro definition=__INTPTR_WIDTH__
+// CHECK: <invalid loc>:64:9: macro definition=__SIZE_TYPE__
+// CHECK: <invalid loc>:65:9: macro definition=__SIZE_WIDTH__
+// CHECK: <invalid loc>:66:9: macro definition=__WCHAR_TYPE__
+// CHECK: <invalid loc>:67:9: macro definition=__WCHAR_WIDTH__
+// CHECK: <invalid loc>:68:9: macro definition=__WINT_TYPE__
+// CHECK: <invalid loc>:69:9: macro definition=__WINT_WIDTH__
+// CHECK: <invalid loc>:70:9: macro definition=__SIG_ATOMIC_WIDTH__
+// CHECK: <invalid loc>:71:9: macro definition=__CHAR16_TYPE__
+// CHECK: <invalid loc>:72:9: macro definition=__CHAR32_TYPE__
+// CHECK: <invalid loc>:73:9: macro definition=__FLT_DENORM_MIN__
+// CHECK: <invalid loc>:74:9: macro definition=__FLT_HAS_DENORM__
+// CHECK: <invalid loc>:75:9: macro definition=__FLT_DIG__
+// CHECK: <invalid loc>:76:9: macro definition=__FLT_EPSILON__
+// CHECK: <invalid loc>:77:9: macro definition=__FLT_HAS_INFINITY__
+// CHECK: <invalid loc>:78:9: macro definition=__FLT_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:79:9: macro definition=__FLT_MANT_DIG__
+// CHECK: <invalid loc>:80:9: macro definition=__FLT_MAX_10_EXP__
+// CHECK: <invalid loc>:81:9: macro definition=__FLT_MAX_EXP__
+// CHECK: <invalid loc>:82:9: macro definition=__FLT_MAX__
+// CHECK: <invalid loc>:83:9: macro definition=__FLT_MIN_10_EXP__
+// CHECK: <invalid loc>:84:9: macro definition=__FLT_MIN_EXP__
+// CHECK: <invalid loc>:85:9: macro definition=__FLT_MIN__
+// CHECK: <invalid loc>:86:9: macro definition=__DBL_DENORM_MIN__
+// CHECK: <invalid loc>:87:9: macro definition=__DBL_HAS_DENORM__
+// CHECK: <invalid loc>:88:9: macro definition=__DBL_DIG__
+// CHECK: <invalid loc>:89:9: macro definition=__DBL_EPSILON__
+// CHECK: <invalid loc>:90:9: macro definition=__DBL_HAS_INFINITY__
+// CHECK: <invalid loc>:91:9: macro definition=__DBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:92:9: macro definition=__DBL_MANT_DIG__
+// CHECK: <invalid loc>:93:9: macro definition=__DBL_MAX_10_EXP__
+// CHECK: <invalid loc>:94:9: macro definition=__DBL_MAX_EXP__
+// CHECK: <invalid loc>:95:9: macro definition=__DBL_MAX__
+// CHECK: <invalid loc>:96:9: macro definition=__DBL_MIN_10_EXP__
+// CHECK: <invalid loc>:97:9: macro definition=__DBL_MIN_EXP__
+// CHECK: <invalid loc>:98:9: macro definition=__DBL_MIN__
+// CHECK: <invalid loc>:99:9: macro definition=__LDBL_DENORM_MIN__
+// CHECK: <invalid loc>:100:9: macro definition=__LDBL_HAS_DENORM__
+// CHECK: <invalid loc>:101:9: macro definition=__LDBL_DIG__
+// CHECK: <invalid loc>:102:9: macro definition=__LDBL_EPSILON__
+// CHECK: <invalid loc>:103:9: macro definition=__LDBL_HAS_INFINITY__
+// CHECK: <invalid loc>:104:9: macro definition=__LDBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:105:9: macro definition=__LDBL_MANT_DIG__
+// CHECK: <invalid loc>:106:9: macro definition=__LDBL_MAX_10_EXP__
+// CHECK: <invalid loc>:107:9: macro definition=__LDBL_MAX_EXP__
+// CHECK: <invalid loc>:108:9: macro definition=__LDBL_MAX__
+// CHECK: <invalid loc>:109:9: macro definition=__LDBL_MIN_10_EXP__
+// CHECK: <invalid loc>:110:9: macro definition=__LDBL_MIN_EXP__
+// CHECK: <invalid loc>:111:9: macro definition=__LDBL_MIN__
+// CHECK: <invalid loc>:112:9: macro definition=__POINTER_WIDTH__
+// CHECK: <invalid loc>:113:9: macro definition=__WINT_UNSIGNED__
+// CHECK: <invalid loc>:114:9: macro definition=__INT8_TYPE__
+// CHECK: <invalid loc>:115:9: macro definition=__INT16_TYPE__
+// CHECK: <invalid loc>:116:9: macro definition=__INT32_TYPE__
+// CHECK: <invalid loc>:117:9: macro definition=__INT64_TYPE__
+// CHECK: <invalid loc>:118:9: macro definition=__INT64_C_SUFFIX__
+// CHECK: <invalid loc>:119:9: macro definition=__USER_LABEL_PREFIX__
+// CHECK: <invalid loc>:120:9: macro definition=__FINITE_MATH_ONLY__
+// CHECK: <invalid loc>:121:9: macro definition=__GNUC_GNU_INLINE__
+// CHECK: <invalid loc>:122:9: macro definition=__GCC_ATOMIC_TEST_AND_SET_TRUEVAL
+// CHECK: <invalid loc>:123:9: macro definition=__GCC_ATOMIC_BOOL_LOCK_FREE
+// CHECK: <invalid loc>:124:9: macro definition=__GCC_ATOMIC_CHAR_LOCK_FREE
+// CHECK: <invalid loc>:125:9: macro definition=__GCC_ATOMIC_CHAR16_T_LOCK_FREE
+// CHECK: <invalid loc>:126:9: macro definition=__GCC_ATOMIC_CHAR32_T_LOCK_FREE
+// CHECK: <invalid loc>:127:9: macro definition=__GCC_ATOMIC_WCHAR_T_LOCK_FREE
+// CHECK: <invalid loc>:128:9: macro definition=__GCC_ATOMIC_SHORT_LOCK_FREE
+// CHECK: <invalid loc>:129:9: macro definition=__GCC_ATOMIC_INT_LOCK_FREE
+// CHECK: <invalid loc>:130:9: macro definition=__GCC_ATOMIC_LONG_LOCK_FREE
+// CHECK: <invalid loc>:131:9: macro definition=__GCC_ATOMIC_LLONG_LOCK_FREE
+// CHECK: <invalid loc>:132:9: macro definition=__GCC_ATOMIC_POINTER_LOCK_FREE
+// CHECK: <invalid loc>:133:9: macro definition=__NO_INLINE__
+// CHECK: <invalid loc>:134:9: macro definition=__FLT_EVAL_METHOD__
+// CHECK: <invalid loc>:135:9: macro definition=__FLT_RADIX__
+// CHECK: <invalid loc>:136:9: macro definition=__DECIMAL_DIG__
+// CHECK: <invalid loc>:137:9: macro definition=__amd64__
+// CHECK: <invalid loc>:138:9: macro definition=__amd64
+// CHECK: <invalid loc>:139:9: macro definition=__x86_64
+// CHECK: <invalid loc>:140:9: macro definition=__x86_64__
+// CHECK: <invalid loc>:141:9: macro definition=__k8
+// CHECK: <invalid loc>:142:9: macro definition=__k8__
+// CHECK: <invalid loc>:143:9: macro definition=__tune_k8__
+// CHECK: <invalid loc>:144:9: macro definition=__LITTLE_ENDIAN__
+// CHECK: <invalid loc>:145:9: macro definition=__REGISTER_PREFIX__
+// CHECK: <invalid loc>:146:9: macro definition=__NO_MATH_INLINES
+// CHECK: <invalid loc>:147:9: macro definition=__SSE2__
+// CHECK: <invalid loc>:148:9: macro definition=__SSE2_MATH__
+// CHECK: <invalid loc>:149:9: macro definition=__SSE__
+// CHECK: <invalid loc>:150:9: macro definition=__SSE_MATH__
+// CHECK: <invalid loc>:151:9: macro definition=__MMX__
+// CHECK: <invalid loc>:152:9: macro definition=unix
+// CHECK: <invalid loc>:153:9: macro definition=__unix
+// CHECK: <invalid loc>:154:9: macro definition=__unix__
+// CHECK: <invalid loc>:155:9: macro definition=linux
+// CHECK: <invalid loc>:156:9: macro definition=__linux
+// CHECK: <invalid loc>:157:9: macro definition=__linux__
+// CHECK: <invalid loc>:158:9: macro definition=__gnu_linux__
+// CHECK: <invalid loc>:159:9: macro definition=__ELF__
+// CHECK: <invalid loc>:160:9: macro definition=_GNU_SOURCE
+// CHECK: <invalid loc>:161:9: macro definition=__STDC__
+// CHECK: <invalid loc>:162:9: macro definition=__STDC_HOSTED__
+// CHECK: <invalid loc>:163:9: macro definition=__cplusplus
+// CHECK: <invalid loc>:164:9: macro definition=__OBJC__
+// CHECK: <invalid loc>:0:0: TypedefDecl=__int128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=__uint128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=SEL:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypeRef=SEL:0:0
+// CHECK: <invalid loc>:0:0: TypedefDecl=id:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypeRef=id:0:0
+// CHECK: <invalid loc>:0:0: TypedefDecl=Class:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypeRef=Class:0:0
+// CHECK: <invalid loc>:0:0: ObjCClassRef=Protocol:0:0
+// CHECK: <invalid loc>:0:0: TypedefDecl=__builtin_va_list:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypeRef=__va_list_tag:0:0
+// CHECK: overriding-method-comments.mm:11:11: ObjCProtocolDecl=P:11:11 (Definition) Extent=[11:1 - 13:5]
+// CHECK: overriding-method-comments.mm:12:9: ObjCInstanceMethodDecl=METH::12:9 Extent=[12:1 - 12:22]
+// CHECK: overriding-method-comments.mm:12:18: ParmDecl=PPP:12:18 (Definition) Extent=[12:15 - 12:21]
+// CHECK: overriding-method-comments.mm:12:15: TypeRef=id:0:0 Extent=[12:15 - 12:17]
+// CHECK: overriding-method-comments.mm:15:12: ObjCInterfaceDecl=Root:15:12 Extent=[15:1 - 20:5]
+// CHECK: overriding-method-comments.mm:15:17: ObjCProtocolRef=P:11:11 Extent=[15:17 - 15:18]
+// CHECK: overriding-method-comments.mm:19:9: ObjCInstanceMethodDecl=METH::19:9 [Overrides @12:9] RawComment=[/**\n * \param[in] AAA ZZZ\n */] RawCommentRange=[16:1 - 18:4] FullCommentAsHTML=[<dl><dt class="param-name-index-0">AAA</dt><dd class="param-descr-index-0"> ZZZ </dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="19" column="1"><Name>METH:</Name><USR>c:objc(cs)Root(im)METH:</USR><Declaration>- (void) METH:(id)AAA</Declaration><Parameters><Parameter><Name>AAA</Name><Index>0</Index><Direction isExplicit="1">in</Direction><Discussion><Para> ZZZ </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in explicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ ZZZ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace))))] Extent=[19:1 - 19:22]
+// CHECK: overriding-method-comments.mm:19:18: ParmDecl=AAA:19:18 (Definition) Extent=[19:15 - 19:21]
+// CHECK: overriding-method-comments.mm:19:15: TypeRef=id:0:0 Extent=[19:15 - 19:17]
+// CHECK: overriding-method-comments.mm:22:12: ObjCInterfaceDecl=Sub:22:12 Extent=[22:1 - 23:5]
+// CHECK: overriding-method-comments.mm:22:18: ObjCSuperClassRef=Root:15:12 Extent=[22:18 - 22:22]
+// CHECK: overriding-method-comments.mm:25:12: ObjCCategoryDecl=CAT:25:12 Extent=[25:1 - 27:5]
+// CHECK: overriding-method-comments.mm:25:12: ObjCClassRef=Sub:22:12 Extent=[25:12 - 25:15]
+// CHECK: overriding-method-comments.mm:26:9: ObjCInstanceMethodDecl=METH::26:9 [Overrides @19:9] FullCommentAsHTML=[<dl><dt class="param-name-index-0">BBB</dt><dd class="param-descr-index-0"> ZZZ </dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="26" column="1"><Name>METH:</Name><USR>c:objc(cs)Root(im)METH:</USR><Declaration>- (void) METH:(id)BBB</Declaration><Parameters><Parameter><Name>BBB</Name><Index>0</Index><Direction isExplicit="1">in</Direction><Discussion><Para> ZZZ </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in explicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ ZZZ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace))))] Extent=[26:1 - 26:22]
+// CHECK: overriding-method-comments.mm:26:18: ParmDecl=BBB:26:18 (Definition) Extent=[26:15 - 26:21]
+// CHECK: overriding-method-comments.mm:26:15: TypeRef=id:0:0 Extent=[26:15 - 26:17]
+// CHECK: overriding-method-comments.mm:29:17: ObjCCategoryImplDecl=CAT:29:17 (Definition) Extent=[29:1 - 31:2]
+// CHECK: overriding-method-comments.mm:29:17: ObjCClassRef=Sub:22:12 Extent=[29:17 - 29:20]
+// CHECK: overriding-method-comments.mm:30:9: ObjCInstanceMethodDecl=METH::30:9 (Definition) [Overrides @19:9] FullCommentAsHTML=[<dl><dt class="param-name-index-0">III</dt><dd class="param-descr-index-0"> ZZZ </dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="30" column="1"><Name>METH:</Name><USR>c:objc(cs)Root(im)METH:</USR><Declaration>- (void) METH:(id)III</Declaration><Parameters><Parameter><Name>III</Name><Index>0</Index><Direction isExplicit="1">in</Direction><Discussion><Para> ZZZ </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in explicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ ZZZ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace))))] Extent=[30:1 - 30:24]
+// CHECK: overriding-method-comments.mm:30:18: ParmDecl=III:30:18 (Definition) Extent=[30:15 - 30:21]
+// CHECK: overriding-method-comments.mm:30:15: TypeRef=id:0:0 Extent=[30:15 - 30:17]
+// CHECK: overriding-method-comments.mm:30:22: CompoundStmt= Extent=[30:22 - 30:24]
+// CHECK: overriding-method-comments.mm:33:12: ObjCInterfaceDecl=Redec:33:12 Extent=[33:1 - 34:5]
+// CHECK: overriding-method-comments.mm:33:20: ObjCSuperClassRef=Root:15:12 Extent=[33:20 - 33:24]
+// CHECK: overriding-method-comments.mm:36:12: ObjCCategoryDecl=:36:12 Extent=[36:1 - 43:5]
+// CHECK: overriding-method-comments.mm:36:12: ObjCClassRef=Redec:33:12 Extent=[36:12 - 36:17]
+// CHECK: overriding-method-comments.mm:42:9: ObjCInstanceMethodDecl=EXT_METH::::42:9 RawComment=[/**\n * \param[in] AAA input value  \n * \param[out] CCC output value is int \n * \param[in] BBB 2nd input value is double \n */] RawCommentRange=[37:1 - 41:4] FullCommentAsHTML=[<dl><dt class="param-name-index-0">AAA</dt><dd class="param-descr-index-0"> input value   </dd><dt class="param-name-index-1">BBB</dt><dd class="param-descr-index-1"> 2nd input value is double  </dd><dt class="param-name-index-2">CCC</dt><dd class="param-descr-index-2"> output value is int  </dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="42" column="1"><Name>EXT_METH:::</Name><USR>c:objc(cs)Redec(im)EXT_METH:::</USR><Declaration>- (void) EXT_METH:(id)AAA :(double)BBB :(int)CCC</Declaration><Parameters><Parameter><Name>AAA</Name><Index>0</Index><Direction isExplicit="1">in</Direction><Discussion><Para> input value   </Para></Discussion></Parameter><Parameter><Name>BBB</Name><Index>1</Index><Direction isExplicit="1">in</Direction><Discussion><Para> 2nd input value is double  </Para></Discussion></Parameter><Parameter><Name>CCC</Name><Index>2</Index><Direction isExplicit="1">out</Direction><Discussion><Para> output value is int  </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in explicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ input value  ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand out explicitly ParamName=[CCC] ParamIndex=2
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ output value is int ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in explicitly ParamName=[BBB] ParamIndex=1
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ 2nd input value is double ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace))))] Extent=[42:1 - 42:51]
+// CHECK: overriding-method-comments.mm:42:22: ParmDecl=AAA:42:22 (Definition) Extent=[42:19 - 42:25]
+// CHECK: overriding-method-comments.mm:42:19: TypeRef=id:0:0 Extent=[42:19 - 42:21]
+// CHECK: overriding-method-comments.mm:42:36: ParmDecl=BBB:42:36 (Definition) Extent=[42:29 - 42:39]
+// CHECK: overriding-method-comments.mm:42:47: ParmDecl=CCC:42:47 (Definition) Extent=[42:43 - 42:50]
+// CHECK: overriding-method-comments.mm:45:17: ObjCImplementationDecl=Redec:45:17 (Definition) Extent=[45:1 - 47:2]
+// CHECK: overriding-method-comments.mm:46:9: ObjCInstanceMethodDecl=EXT_METH::::46:9 (Definition) FullCommentAsHTML=[<dl><dt class="param-name-index-0">PPP</dt><dd class="param-descr-index-0"> input value   </dd><dt class="param-name-index-1">QQQ</dt><dd class="param-descr-index-1"> 2nd input value is double  </dd><dt class="param-name-index-2">RRR</dt><dd class="param-descr-index-2"> output value is int  </dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="46" column="1"><Name>EXT_METH:::</Name><USR>c:objc(cs)Redec(im)EXT_METH:::</USR><Declaration>- (void) EXT_METH:(id)PPP :(double)QQQ :(int)RRR</Declaration><Parameters><Parameter><Name>PPP</Name><Index>0</Index><Direction isExplicit="1">in</Direction><Discussion><Para> input value   </Para></Discussion></Parameter><Parameter><Name>QQQ</Name><Index>1</Index><Direction isExplicit="1">in</Direction><Discussion><Para> 2nd input value is double  </Para></Discussion></Parameter><Parameter><Name>RRR</Name><Index>2</Index><Direction isExplicit="1">out</Direction><Discussion><Para> output value is int  </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in explicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ input value  ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand out explicitly ParamName=[CCC] ParamIndex=2
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ output value is int ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in explicitly ParamName=[BBB] ParamIndex=1
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ 2nd input value is double ] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace))))] Extent=[46:1 - 46:53]
+// CHECK: overriding-method-comments.mm:46:22: ParmDecl=PPP:46:22 (Definition) Extent=[46:19 - 46:25]
+// CHECK: overriding-method-comments.mm:46:19: TypeRef=id:0:0 Extent=[46:19 - 46:21]
+// CHECK: overriding-method-comments.mm:46:36: ParmDecl=QQQ:46:36 (Definition) Extent=[46:29 - 46:39]
+// CHECK: overriding-method-comments.mm:46:47: ParmDecl=RRR:46:47 (Definition) Extent=[46:43 - 46:50]
+// CHECK: overriding-method-comments.mm:46:51: CompoundStmt= Extent=[46:51 - 46:53]
+// CHECK: overriding-method-comments.mm:49:8: StructDecl=Base:49:8 (Definition) Extent=[49:1 - 61:2]
+// CHECK: overriding-method-comments.mm:52:16: CXXMethod=foo_pure:52:16 (virtual) RawComment=[/// \brief Does something.\n  /// \param AAA argument to foo_pure.] RawCommentRange=[50:3 - 51:39] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">AAA</dt><dd class="param-descr-index-0"> argument to foo_pure.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="52" column="16"><Name>foo_pure</Name><USR>c:@S@Base@F@foo_pure#I#</USR><Declaration>virtual void foo_pure(int AAA) = 0</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>AAA</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to foo_pure.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to foo_pure.]))))] Extent=[52:3 - 52:37]
+// CHECK: overriding-method-comments.mm:52:29: ParmDecl=AAA:52:29 (Definition) Extent=[52:25 - 52:32]
+// CHECK: overriding-method-comments.mm:56:16: CXXMethod=foo_inline:56:16 (Definition) (virtual) RawComment=[/// \brief Does something.\n  /// \param BBB argument to defined virtual.] RawCommentRange=[54:3 - 55:46] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">BBB</dt><dd class="param-descr-index-0"> argument to defined virtual.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="56" column="16"><Name>foo_inline</Name><USR>c:@S@Base@F@foo_inline#I#</USR><Declaration>virtual void foo_inline(int BBB)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>BBB</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to defined virtual.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[BBB] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to defined virtual.]))))] Extent=[56:3 - 56:38]
+// CHECK: overriding-method-comments.mm:56:31: ParmDecl=BBB:56:31 (Definition) Extent=[56:27 - 56:34]
+// CHECK: overriding-method-comments.mm:56:36: CompoundStmt= Extent=[56:36 - 56:38]
+// CHECK: overriding-method-comments.mm:60:16: CXXMethod=foo_outofline:60:16 (virtual) RawComment=[/// \brief Does something.\n  /// \param CCC argument to undefined virtual.] RawCommentRange=[58:3 - 59:48] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">CCC</dt><dd class="param-descr-index-0"> argument to undefined virtual.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="60" column="16"><Name>foo_outofline</Name><USR>c:@S@Base@F@foo_outofline#I#</USR><Declaration>virtual void foo_outofline(int CCC)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>CCC</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to undefined virtual.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[CCC] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to undefined virtual.]))))] Extent=[60:3 - 60:38]
+// CHECK: overriding-method-comments.mm:60:34: ParmDecl=CCC:60:34 (Definition) Extent=[60:30 - 60:37]
+// CHECK: overriding-method-comments.mm:63:12: CXXMethod=foo_outofline:63:12 (Definition) (virtual) RawComment=[/// \brief Does something.\n  /// \param CCC argument to undefined virtual.] RawCommentRange=[58:3 - 59:48] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">RRR</dt><dd class="param-descr-index-0"> argument to undefined virtual.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="63" column="12"><Name>foo_outofline</Name><USR>c:@S@Base@F@foo_outofline#I#</USR><Declaration>void foo_outofline(int RRR)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>RRR</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to undefined virtual.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[CCC] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to undefined virtual.]))))] Extent=[63:1 - 63:37]
+// CHECK: overriding-method-comments.mm:63:6: TypeRef=struct Base:49:8 Extent=[63:6 - 63:10]
+// CHECK: overriding-method-comments.mm:63:30: ParmDecl=RRR:63:30 (Definition) Extent=[63:26 - 63:33]
+// CHECK: overriding-method-comments.mm:63:35: CompoundStmt= Extent=[63:35 - 63:37]
+// CHECK: overriding-method-comments.mm:65:8: StructDecl=Derived:65:8 (Definition) Extent=[65:1 - 69:2]
+// CHECK: overriding-method-comments.mm:65:25: C++ base class specifier=struct Base:49:8 [access=public isVirtual=false] Extent=[65:18 - 65:29]
+// CHECK: overriding-method-comments.mm:65:25: TypeRef=struct Base:49:8 Extent=[65:25 - 65:29]
+// CHECK: overriding-method-comments.mm:66:16: CXXMethod=foo_pure:66:16 (virtual) [Overrides @52:16] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">PPP</dt><dd class="param-descr-index-0"> argument to foo_pure.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="66" column="16"><Name>foo_pure</Name><USR>c:@S@Base@F@foo_pure#I#</USR><Declaration>virtual void foo_pure(int PPP)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>PPP</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to foo_pure.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to foo_pure.]))))] Extent=[66:3 - 66:33]
+// CHECK: overriding-method-comments.mm:66:29: ParmDecl=PPP:66:29 (Definition) Extent=[66:25 - 66:32]
+// CHECK: overriding-method-comments.mm:68:16: CXXMethod=foo_inline:68:16 (Definition) (virtual) [Overrides @56:16] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">QQQ</dt><dd class="param-descr-index-0"> argument to defined virtual.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="68" column="16"><Name>foo_inline</Name><USR>c:@S@Base@F@foo_inline#I#</USR><Declaration>virtual void foo_inline(int QQQ)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>QQQ</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to defined virtual.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[BBB] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to defined virtual.]))))] Extent=[68:3 - 68:38]
+// CHECK: overriding-method-comments.mm:68:31: ParmDecl=QQQ:68:31 (Definition) Extent=[68:27 - 68:34]
+// CHECK: overriding-method-comments.mm:68:36: CompoundStmt= Extent=[68:36 - 68:38]
+// CHECK: overriding-method-comments.mm:73:6: FunctionDecl=foo:73:6 RawComment=[/// \brief Does something.\n/// \param DDD a value.] RawCommentRange=[71:1 - 72:24] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">DDD</dt><dd class="param-descr-index-0"> a value.</dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="73" column="6"><Name>foo</Name><USR>c:@F@foo#I#</USR><Declaration>void foo(int DDD)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>DDD</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> a value.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[DDD] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ a value.]))))] Extent=[73:1 - 73:18]
+// CHECK: overriding-method-comments.mm:73:14: ParmDecl=DDD:73:14 (Definition) Extent=[73:10 - 73:17]
+// CHECK: overriding-method-comments.mm:75:6: FunctionDecl=foo:75:6 (Definition) RawComment=[/// \brief Does something.\n/// \param DDD a value.] RawCommentRange=[71:1 - 72:24] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">SSS</dt><dd class="param-descr-index-0"> a value.</dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="75" column="6"><Name>foo</Name><USR>c:@F@foo#I#</USR><Declaration>void foo(int SSS)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>SSS</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> a value.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[DDD] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ a value.]))))] Extent=[75:1 - 75:21]
+// CHECK: overriding-method-comments.mm:75:14: ParmDecl=SSS:75:14 (Definition) Extent=[75:10 - 75:17]
+// CHECK: overriding-method-comments.mm:75:19: CompoundStmt= Extent=[75:19 - 75:21]
+// CHECK: overriding-method-comments.mm:79:6: FunctionDecl=foo1:79:6 RawComment=[/// \brief Does something.\n/// \param EEE argument to function decl. ] RawCommentRange=[77:1 - 78:43] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">EEE</dt><dd class="param-descr-index-0"> argument to function decl. </dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="79" column="6"><Name>foo1</Name><USR>c:@F@foo1#I#</USR><Declaration>void foo1(int EEE)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>EEE</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to function decl. </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[EEE] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to function decl. ]))))] Extent=[79:1 - 79:19]
+// CHECK: overriding-method-comments.mm:79:15: ParmDecl=EEE:79:15 (Definition) Extent=[79:11 - 79:18]
+// CHECK: overriding-method-comments.mm:81:6: FunctionDecl=foo1:81:6 RawComment=[/// \brief Does something.\n/// \param EEE argument to function decl. ] RawCommentRange=[77:1 - 78:43] BriefComment=[Does something.] FullCommentAsHTML=[<p class="para-brief"> Does something. </p><dl><dt class="param-name-index-0">TTT</dt><dd class="param-descr-index-0"> argument to function decl. </dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="81" column="6"><Name>foo1</Name><USR>c:@F@foo1#I#</USR><Declaration>void foo1(int TTT)</Declaration><Abstract><Para> Does something. </Para></Abstract><Parameters><Parameter><Name>TTT</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> argument to function decl. </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Does something.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[EEE] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ argument to function decl. ]))))] Extent=[81:1 - 81:19]
+// CHECK: overriding-method-comments.mm:81:15: ParmDecl=TTT:81:15 (Definition) Extent=[81:11 - 81:18]
+// CHECK: overriding-method-comments.mm:87:6: FunctionTemplate=foo:87:6 RawComment=[/// \brief Documentation\n/// \tparam BBB The type, silly.\n/// \tparam AAA The type, silly as well.] RawCommentRange=[83:1 - 85:41] BriefComment=[Documentation] FullCommentAsHTML=[<p class="para-brief"> Documentation </p><dl><dt class="tparam-name-index-0">AAA</dt><dd class="tparam-descr-index-0"> The type, silly as well.</dd><dt class="tparam-name-index-1">BBB</dt><dd class="tparam-descr-index-1"> The type, silly. </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="87" column="6"><Name>foo</Name><USR>c:@FT@&gt;2#T#Tfoo#t0.0#t0.1#</USR><Declaration>template &lt;typename AAA, typename BBB&gt; void foo(AAA, BBB)</Declaration><Abstract><Para> Documentation </Para></Abstract><TemplateParameters><Parameter><Name>AAA</Name><Index>0</Index><Discussion><Para> The type, silly as well.</Para></Discussion></Parameter><Parameter><Name>BBB</Name><Index>1</Index><Discussion><Para> The type, silly. </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Documentation] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ The type, silly.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ The type, silly as well.]))))] Extent=[86:1 - 87:19]
+// CHECK: overriding-method-comments.mm:86:19: TemplateTypeParameter=AAA:86:19 (Definition) Extent=[86:10 - 86:22]
+// CHECK: overriding-method-comments.mm:86:33: TemplateTypeParameter=BBB:86:33 (Definition) Extent=[86:24 - 86:36]
+// CHECK: overriding-method-comments.mm:87:13: ParmDecl=:87:13 (Definition) Extent=[87:10 - 87:14]
+// CHECK: overriding-method-comments.mm:87:10: TypeRef=AAA:86:19 Extent=[87:10 - 87:13]
+// CHECK: overriding-method-comments.mm:87:18: ParmDecl=:87:18 (Definition) Extent=[87:15 - 87:19]
+// CHECK: overriding-method-comments.mm:87:15: TypeRef=BBB:86:33 Extent=[87:15 - 87:18]
+// CHECK: overriding-method-comments.mm:90:6: FunctionTemplate=foo:90:6 RawComment=[/// \brief Documentation\n/// \tparam BBB The type, silly.\n/// \tparam AAA The type, silly as well.] RawCommentRange=[83:1 - 85:41] BriefComment=[Documentation] FullCommentAsHTML=[<p class="para-brief"> Documentation </p><dl><dt class="tparam-name-index-0">PPP</dt><dd class="tparam-descr-index-0"> The type, silly as well.</dd><dt class="tparam-name-index-1">QQQ</dt><dd class="tparam-descr-index-1"> The type, silly. </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-method-comments.mm" line="90" column="6"><Name>foo</Name><USR>c:@FT@&gt;2#T#Tfoo#t0.0#t0.1#</USR><Declaration>template &lt;typename PPP, typename QQQ&gt; void foo(PPP, QQQ)</Declaration><Abstract><Para> Documentation </Para></Abstract><TemplateParameters><Parameter><Name>PPP</Name><Index>0</Index><Discussion><Para> The type, silly as well.</Para></Discussion></Parameter><Parameter><Name>QQQ</Name><Index>1</Index><Discussion><Para> The type, silly. </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Documentation] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ The type, silly.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ The type, silly as well.]))))] Extent=[89:1 - 90:19]
+// CHECK: overriding-method-comments.mm:89:19: TemplateTypeParameter=PPP:89:19 (Definition) Extent=[89:10 - 89:22]
+// CHECK: overriding-method-comments.mm:89:33: TemplateTypeParameter=QQQ:89:33 (Definition) Extent=[89:24 - 89:36]
+// CHECK: overriding-method-comments.mm:90:13: ParmDecl=:90:13 (Definition) Extent=[90:10 - 90:14]
+// CHECK: overriding-method-comments.mm:90:10: TypeRef=PPP:89:19 Extent=[90:10 - 90:13]
+// CHECK: overriding-method-comments.mm:90:18: ParmDecl=:90:18 (Definition) Extent=[90:15 - 90:19]
+// CHECK: overriding-method-comments.mm:90:15: TypeRef=QQQ:89:33 Extent=[90:15 - 90:18]

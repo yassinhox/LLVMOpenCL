@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/TailDup/2008-06-11-AvoidDupLoopHeader.ll -tailduplicate -taildup-threshold=3 -stats -disable-output 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep tailduplicate

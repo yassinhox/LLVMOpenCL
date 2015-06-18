@@ -1,0 +1,523 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/vtable-linkage.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%struct.anon = type { %struct.D }
+%struct.D = type { i32 (...)** }
+%"struct.<anonymous namespace>::A" = type { i32 (...)** }
+%struct.B = type { i32 (...)** }
+%struct.C = type { %struct.B }
+%struct.E = type { i32 (...)** }
+%struct.E.0 = type { i32 (...)** }
+%struct.E.1 = type { i32 (...)** }
+%struct.E.2 = type { i32 (...)** }
+%struct.F = type { i32 (...)** }
+%struct.F.3 = type { i32 (...)** }
+%struct.F.4 = type { i32 (...)** }
+%struct.F.5 = type { i32 (...)** }
+%class.G = type { i32 (...)** }
+%class.H = type { i32 (...)** }
+
+@_ZTV1B = external unnamed_addr constant [3 x i8*]
+@_ZTV1C = linkonce_odr hidden unnamed_addr constant [5 x i8*] [i8* null, i8* null, i8* null, i8* bitcast ({ i8*, i8*, i32, i32, i8*, i64 }* @_ZTI1C to i8*), i8* bitcast (void (%struct.C*)* @_ZN1C1fEv to i8*)]
+@_ZL1e = internal global %struct.anon zeroinitializer, align 8
+@_ZTV1D = unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1D to i8*), i8* bitcast (void (%struct.D*)* @_ZN1D1fEv to i8*)]
+@_ZTVN10__cxxabiv117__class_type_infoE = external global i8*
+@_ZTS1D = constant [3 x i8] c"1D\00"
+@_ZTI1D = unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([3 x i8]* @_ZTS1D, i32 0, i32 0) }
+@_ZTV1EIsE = weak_odr unnamed_addr constant [4 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1EIsE to i8*), i8* bitcast (void (%struct.E.0*)* @_ZN1EIsED1Ev to i8*), i8* bitcast (void (%struct.E.0*)* @_ZN1EIsED0Ev to i8*)]
+@_ZTS1EIsE = weak_odr constant [6 x i8] c"1EIsE\00"
+@_ZTI1EIsE = weak_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1EIsE, i32 0, i32 0) }
+@_ZTV1FIsE = weak_odr unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1FIsE to i8*), i8* bitcast (void (%struct.F*)* @_ZN1FIsE3fooEv to i8*)]
+@_ZTS1FIsE = weak_odr constant [6 x i8] c"1FIsE\00"
+@_ZTI1FIsE = weak_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1FIsE, i32 0, i32 0) }
+@_ZTV1EIcE = unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1EIcE to i8*), i8* bitcast (void (%struct.E*)* @_ZN1EIcE6anchorEv to i8*)]
+@_ZTS1EIcE = constant [6 x i8] c"1EIcE\00"
+@_ZTI1EIcE = unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1EIcE, i32 0, i32 0) }
+@_ZTVN10__cxxabiv121__vmi_class_type_infoE = external global i8*
+@_ZTS1C = linkonce_odr constant [3 x i8] c"1C\00"
+@_ZTI1B = external constant i8*
+@_ZTI1C = linkonce_odr hidden unnamed_addr constant { i8*, i8*, i32, i32, i8*, i64 } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv121__vmi_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([3 x i8]* @_ZTS1C, i32 0, i32 0), i32 0, i32 1, i8* bitcast (i8** @_ZTI1B to i8*), i64 -8189 }
+@_ZTT1C = linkonce_odr hidden unnamed_addr constant [2 x i8*] [i8* bitcast (i8** getelementptr inbounds ([5 x i8*]* @_ZTV1C, i64 0, i64 4) to i8*), i8* bitcast (i8** getelementptr inbounds ([5 x i8*]* @_ZTV1C, i64 0, i64 4) to i8*)]
+@_ZTV1GIiE = linkonce_odr unnamed_addr constant [4 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1GIiE to i8*), i8* bitcast (void (%class.G*)* @_ZN1GIiE2f0Ev to i8*), i8* bitcast (void (%class.G*)* @_ZN1GIiE2f1Ev to i8*)]
+@_ZTS1GIiE = linkonce_odr constant [6 x i8] c"1GIiE\00"
+@_ZTI1GIiE = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1GIiE, i32 0, i32 0) }
+@_ZTV1HIiE = linkonce_odr unnamed_addr constant [4 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1HIiE to i8*), i8* bitcast (void (%class.H*)* @_ZN1HIiED1Ev to i8*), i8* bitcast (void (%class.H*)* @_ZN1HIiED0Ev to i8*)]
+@_ZTS1HIiE = linkonce_odr constant [6 x i8] c"1HIiE\00"
+@_ZTI1HIiE = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1HIiE, i32 0, i32 0) }
+@_ZTV1FIlE = linkonce_odr unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1FIlE to i8*), i8* bitcast (void (%struct.F.5*)* @_ZN1FIlE3fooEv to i8*)]
+@_ZTS1FIlE = linkonce_odr constant [6 x i8] c"1FIlE\00"
+@_ZTI1FIlE = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1FIlE, i32 0, i32 0) }
+@_ZTV1FIiE = external unnamed_addr constant [3 x i8*]
+@_ZTV1FIcE = linkonce_odr unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1FIcE to i8*), i8* bitcast (void (%struct.F.3*)* @_ZN1FIcE3fooEv to i8*)]
+@_ZTS1FIcE = linkonce_odr constant [6 x i8] c"1FIcE\00"
+@_ZTI1FIcE = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1FIcE, i32 0, i32 0) }
+@_ZTV1EIlE = linkonce_odr unnamed_addr constant [4 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1EIlE to i8*), i8* bitcast (void (%struct.E.2*)* @_ZN1EIlED1Ev to i8*), i8* bitcast (void (%struct.E.2*)* @_ZN1EIlED0Ev to i8*)]
+@_ZTS1EIlE = linkonce_odr constant [6 x i8] c"1EIlE\00"
+@_ZTI1EIlE = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([6 x i8]* @_ZTS1EIlE, i32 0, i32 0) }
+@_ZTV1EIiE = external unnamed_addr constant [4 x i8*]
+@"_ZTV3$_0" = internal unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @"_ZTI3$_0" to i8*), i8* bitcast (void (%struct.D*)* @_ZN1D1fEv to i8*)]
+@_ZTVN10__cxxabiv120__si_class_type_infoE = external global i8*
+@"_ZTS3$_0" = internal constant [5 x i8] c"3$_0\00"
+@"_ZTI3$_0" = internal unnamed_addr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([5 x i8]* @"_ZTS3$_0", i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTI1D to i8*) }
+@_ZTVN12_GLOBAL__N_11AE = internal unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTIN12_GLOBAL__N_11AE to i8*), i8* bitcast (void (%"struct.<anonymous namespace>::A"*)* @_ZN12_GLOBAL__N_11A1fEv to i8*)]
+@_ZTSN12_GLOBAL__N_11AE = internal constant [19 x i8] c"N12_GLOBAL__N_11AE\00"
+@_ZTIN12_GLOBAL__N_11AE = internal unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([19 x i8]* @_ZTSN12_GLOBAL__N_11AE, i32 0, i32 0) }
+@llvm.global_ctors = appending global [1 x { i32, void ()* }] [{ i32, void ()* } { i32 65535, void ()* @_GLOBAL__I_a }]
+
+define void @_Z1fv() nounwind {
+entry:
+  %b = alloca %"struct.<anonymous namespace>::A", align 8
+  call void @_ZN12_GLOBAL__N_11AC1Ev(%"struct.<anonymous namespace>::A"* %b) nounwind
+  ret void
+}
+
+define internal void @_ZN12_GLOBAL__N_11AC1Ev(%"struct.<anonymous namespace>::A"* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %"struct.<anonymous namespace>::A"*, align 8
+  store %"struct.<anonymous namespace>::A"* %this, %"struct.<anonymous namespace>::A"** %this.addr, align 8
+  %this1 = load %"struct.<anonymous namespace>::A"** %this.addr
+  call void @_ZN12_GLOBAL__N_11AC2Ev(%"struct.<anonymous namespace>::A"* %this1) nounwind
+  ret void
+}
+
+define void @_ZN1BC1Ev(%struct.B* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.B*, align 8
+  store %struct.B* %this, %struct.B** %this.addr, align 8
+  %this1 = load %struct.B** %this.addr
+  call void @_ZN1BC2Ev(%struct.B* %this1)
+  ret void
+}
+
+define void @_ZN1BC2Ev(%struct.B* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.B*, align 8
+  store %struct.B* %this, %struct.B** %this.addr, align 8
+  %this1 = load %struct.B** %this.addr
+  %0 = bitcast %struct.B* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTV1B, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define void @_ZN1CC1Ev(%struct.C* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.C*, align 8
+  store %struct.C* %this, %struct.C** %this.addr, align 8
+  %this1 = load %struct.C** %this.addr
+  %0 = bitcast %struct.C* %this1 to %struct.B*
+  call void @_ZN1BC2Ev(%struct.B* %0)
+  %1 = bitcast %struct.C* %this1 to i8***
+  store i8** getelementptr inbounds ([5 x i8*]* @_ZTV1C, i64 0, i64 4), i8*** %1
+  %2 = bitcast %struct.C* %this1 to i8***
+  store i8** getelementptr inbounds ([5 x i8*]* @_ZTV1C, i64 0, i64 4), i8*** %2
+  ret void
+}
+
+define void @_ZN1CC2Ev(%struct.C* %this, i8** %vtt) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.C*, align 8
+  %vtt.addr = alloca i8**, align 8
+  store %struct.C* %this, %struct.C** %this.addr, align 8
+  store i8** %vtt, i8*** %vtt.addr, align 8
+  %this1 = load %struct.C** %this.addr
+  %vtt2 = load i8*** %vtt.addr
+  %0 = load i8** %vtt2
+  %1 = bitcast %struct.C* %this1 to i8**
+  store i8* %0, i8** %1
+  %2 = getelementptr inbounds i8** %vtt2, i64 1
+  %3 = load i8** %2
+  %4 = bitcast %struct.C* %this1 to i8**
+  %vtable = load i8** %4
+  %vbase.offset.ptr = getelementptr i8* %vtable, i64 -32
+  %5 = bitcast i8* %vbase.offset.ptr to i64*
+  %vbase.offset = load i64* %5
+  %6 = bitcast %struct.C* %this1 to i8*
+  %add.ptr = getelementptr inbounds i8* %6, i64 %vbase.offset
+  %7 = bitcast i8* %add.ptr to i8**
+  store i8* %3, i8** %7
+  ret void
+}
+
+define void @_ZN1D1fEv(%struct.D* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.D*, align 8
+  store %struct.D* %this, %struct.D** %this.addr, align 8
+  %this1 = load %struct.D** %this.addr
+  ret void
+}
+
+define internal void @__cxx_global_var_init() nounwind section "__TEXT,__StaticInit,regular,pure_instructions" {
+entry:
+  call void @"_ZN3$_0C1Ev"(%struct.anon* @_ZL1e) nounwind
+  ret void
+}
+
+define internal void @"_ZN3$_0C1Ev"(%struct.anon* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.anon*, align 8
+  store %struct.anon* %this, %struct.anon** %this.addr, align 8
+  %this1 = load %struct.anon** %this.addr
+  call void @"_ZN3$_0C2Ev"(%struct.anon* %this1) nounwind
+  ret void
+}
+
+define void @_ZN1EIcE6anchorEv(%struct.E* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.E*, align 8
+  store %struct.E* %this, %struct.E** %this.addr, align 8
+  %this1 = load %struct.E** %this.addr
+  ret void
+}
+
+define weak_odr void @_ZN1EIsED0Ev(%struct.E.0* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.E.0*, align 8
+  store %struct.E.0* %this, %struct.E.0** %this.addr, align 8
+  %this1 = load %struct.E.0** %this.addr
+  call void @_ZN1EIsED1Ev(%struct.E.0* %this1)
+  %0 = bitcast %struct.E.0* %this1 to i8*
+  call void @_ZdlPv(i8* %0) nounwind
+  ret void
+}
+
+define weak_odr void @_ZN1EIsED1Ev(%struct.E.0* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.E.0*, align 8
+  store %struct.E.0* %this, %struct.E.0** %this.addr, align 8
+  %this1 = load %struct.E.0** %this.addr
+  call void @_ZN1EIsED2Ev(%struct.E.0* %this1)
+  ret void
+}
+
+declare void @_ZdlPv(i8*) nounwind
+
+define weak_odr void @_ZN1EIsED2Ev(%struct.E.0* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.E.0*, align 8
+  store %struct.E.0* %this, %struct.E.0** %this.addr, align 8
+  %this1 = load %struct.E.0** %this.addr
+  ret void
+}
+
+define void @_Z5use_Ev() nounwind {
+entry:
+  %ei = alloca %struct.E.1, align 8
+  %el = alloca %struct.E.2, align 8
+  call void @_ZN1EIiEC1Ev(%struct.E.1* %ei) nounwind
+  call void @_ZN1EIlEC1Ev(%struct.E.2* %el) nounwind
+  call void @_ZN1EIlED1Ev(%struct.E.2* %el)
+  call void @_ZN1EIiED1Ev(%struct.E.1* %ei)
+  ret void
+}
+
+define linkonce_odr void @_ZN1EIiEC1Ev(%struct.E.1* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.E.1*, align 8
+  store %struct.E.1* %this, %struct.E.1** %this.addr, align 8
+  %this1 = load %struct.E.1** %this.addr
+  call void @_ZN1EIiEC2Ev(%struct.E.1* %this1) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1EIlEC1Ev(%struct.E.2* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.E.2*, align 8
+  store %struct.E.2* %this, %struct.E.2** %this.addr, align 8
+  %this1 = load %struct.E.2** %this.addr
+  call void @_ZN1EIlEC2Ev(%struct.E.2* %this1) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1EIlED1Ev(%struct.E.2* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.E.2*, align 8
+  store %struct.E.2* %this, %struct.E.2** %this.addr, align 8
+  %this1 = load %struct.E.2** %this.addr
+  call void @_ZN1EIlED2Ev(%struct.E.2* %this1)
+  ret void
+}
+
+declare void @_ZN1EIiED1Ev(%struct.E.1*)
+
+define weak_odr void @_ZN1FIsE3fooEv(%struct.F* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.F*, align 8
+  store %struct.F* %this, %struct.F** %this.addr, align 8
+  %this1 = load %struct.F** %this.addr
+  ret void
+}
+
+define void @_Z5use_Fv() nounwind {
+entry:
+  %fc = alloca %struct.F.3, align 8
+  %fi = alloca %struct.F.4, align 8
+  %fl = alloca %struct.F.5, align 8
+  call void @_ZN1FIcEC1Ev(%struct.F.3* %fc) nounwind
+  call void @_ZN1FIcE3fooEv(%struct.F.3* %fc)
+  call void @_ZN1FIiEC1Ev(%struct.F.4* %fi) nounwind
+  call void @_ZN1FIiE3fooEv(%struct.F.4* %fi)
+  call void @_ZN1FIlEC1Ev(%struct.F.5* %fl) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1FIcEC1Ev(%struct.F.3* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.F.3*, align 8
+  store %struct.F.3* %this, %struct.F.3** %this.addr, align 8
+  %this1 = load %struct.F.3** %this.addr
+  call void @_ZN1FIcEC2Ev(%struct.F.3* %this1) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1FIcE3fooEv(%struct.F.3* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.F.3*, align 8
+  store %struct.F.3* %this, %struct.F.3** %this.addr, align 8
+  %this1 = load %struct.F.3** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1FIiEC1Ev(%struct.F.4* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.F.4*, align 8
+  store %struct.F.4* %this, %struct.F.4** %this.addr, align 8
+  %this1 = load %struct.F.4** %this.addr
+  call void @_ZN1FIiEC2Ev(%struct.F.4* %this1) nounwind
+  ret void
+}
+
+declare void @_ZN1FIiE3fooEv(%struct.F.4*)
+
+define linkonce_odr void @_ZN1FIlEC1Ev(%struct.F.5* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.F.5*, align 8
+  store %struct.F.5* %this, %struct.F.5** %this.addr, align 8
+  %this1 = load %struct.F.5** %this.addr
+  call void @_ZN1FIlEC2Ev(%struct.F.5* %this1) nounwind
+  ret void
+}
+
+define void @_ZN1GIiE2f1Ev(%class.G* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.G*, align 8
+  store %class.G* %this, %class.G** %this.addr, align 8
+  %this1 = load %class.G** %this.addr
+  ret void
+}
+
+define void @_Z4G_f0v() nounwind {
+entry:
+  %call = call noalias i8* @_Znwm(i64 8)
+  %0 = bitcast i8* %call to %class.G*
+  call void @_ZN1GIiEC1Ev(%class.G* %0)
+  ret void
+}
+
+declare noalias i8* @_Znwm(i64)
+
+define linkonce_odr void @_ZN1GIiEC1Ev(%class.G* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.G*, align 8
+  store %class.G* %this, %class.G** %this.addr, align 8
+  %this1 = load %class.G** %this.addr
+  call void @_ZN1GIiEC2Ev(%class.G* %this1)
+  ret void
+}
+
+define void @_Z5use_Hv() nounwind {
+entry:
+  %h = alloca %class.H, align 8
+  call void @_ZN1HIiEC1Ev(%class.H* %h) nounwind
+  call void @_ZN1HIiED1Ev(%class.H* %h)
+  ret void
+}
+
+define linkonce_odr void @_ZN1HIiEC1Ev(%class.H* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %class.H*, align 8
+  store %class.H* %this, %class.H** %this.addr, align 8
+  %this1 = load %class.H** %this.addr
+  call void @_ZN1HIiEC2Ev(%class.H* %this1) nounwind
+  ret void
+}
+
+declare void @_ZN1HIiED1Ev(%class.H*)
+
+define linkonce_odr void @_ZN1C1fEv(%struct.C* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.C*, align 8
+  store %struct.C* %this, %struct.C** %this.addr, align 8
+  %this1 = load %struct.C** %this.addr
+  ret void
+}
+
+define linkonce_odr hidden void @_ZTv0_n24_N1C1fEv(%struct.C* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.C*, align 8
+  store %struct.C* %this, %struct.C** %this.addr, align 8
+  %this1 = load %struct.C** %this.addr
+  %0 = bitcast %struct.C* %this1 to i8*
+  %1 = bitcast i8* %0 to i8**
+  %2 = load i8** %1
+  %3 = getelementptr inbounds i8* %2, i64 -24
+  %4 = bitcast i8* %3 to i64*
+  %5 = load i64* %4
+  %6 = getelementptr inbounds i8* %0, i64 %5
+  %7 = bitcast i8* %6 to %struct.C*
+  call void @_ZN1C1fEv(%struct.C* %7)
+  ret void
+}
+
+define linkonce_odr void @_ZN1GIiEC2Ev(%class.G* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.G*, align 8
+  store %class.G* %this, %class.G** %this.addr, align 8
+  %this1 = load %class.G** %this.addr
+  %0 = bitcast %class.G* %this1 to i8***
+  store i8** getelementptr inbounds ([4 x i8*]* @_ZTV1GIiE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define linkonce_odr void @_ZN1GIiE2f0Ev(%class.G* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.G*, align 8
+  store %class.G* %this, %class.G** %this.addr, align 8
+  %this1 = load %class.G** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1EIlED2Ev(%struct.E.2* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.E.2*, align 8
+  store %struct.E.2* %this, %struct.E.2** %this.addr, align 8
+  %this1 = load %struct.E.2** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1HIiEC2Ev(%class.H* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %class.H*, align 8
+  store %class.H* %this, %class.H** %this.addr, align 8
+  %this1 = load %class.H** %this.addr
+  %0 = bitcast %class.H* %this1 to i8***
+  store i8** getelementptr inbounds ([4 x i8*]* @_ZTV1HIiE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+declare void @_ZN1HIiED0Ev(%class.H*)
+
+define linkonce_odr void @_ZN1FIlEC2Ev(%struct.F.5* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.F.5*, align 8
+  store %struct.F.5* %this, %struct.F.5** %this.addr, align 8
+  %this1 = load %struct.F.5** %this.addr
+  %0 = bitcast %struct.F.5* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTV1FIlE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define linkonce_odr void @_ZN1FIlE3fooEv(%struct.F.5* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.F.5*, align 8
+  store %struct.F.5* %this, %struct.F.5** %this.addr, align 8
+  %this1 = load %struct.F.5** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1FIiEC2Ev(%struct.F.4* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.F.4*, align 8
+  store %struct.F.4* %this, %struct.F.4** %this.addr, align 8
+  %this1 = load %struct.F.4** %this.addr
+  %0 = bitcast %struct.F.4* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTV1FIiE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define linkonce_odr void @_ZN1FIcEC2Ev(%struct.F.3* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.F.3*, align 8
+  store %struct.F.3* %this, %struct.F.3** %this.addr, align 8
+  %this1 = load %struct.F.3** %this.addr
+  %0 = bitcast %struct.F.3* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTV1FIcE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define linkonce_odr void @_ZN1EIlEC2Ev(%struct.E.2* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.E.2*, align 8
+  store %struct.E.2* %this, %struct.E.2** %this.addr, align 8
+  %this1 = load %struct.E.2** %this.addr
+  %0 = bitcast %struct.E.2* %this1 to i8***
+  store i8** getelementptr inbounds ([4 x i8*]* @_ZTV1EIlE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define linkonce_odr void @_ZN1EIlED0Ev(%struct.E.2* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.E.2*, align 8
+  store %struct.E.2* %this, %struct.E.2** %this.addr, align 8
+  %this1 = load %struct.E.2** %this.addr
+  call void @_ZN1EIlED1Ev(%struct.E.2* %this1)
+  %0 = bitcast %struct.E.2* %this1 to i8*
+  call void @_ZdlPv(i8* %0) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1EIiEC2Ev(%struct.E.1* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.E.1*, align 8
+  store %struct.E.1* %this, %struct.E.1** %this.addr, align 8
+  %this1 = load %struct.E.1** %this.addr
+  %0 = bitcast %struct.E.1* %this1 to i8***
+  store i8** getelementptr inbounds ([4 x i8*]* @_ZTV1EIiE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define internal void @"_ZN3$_0C2Ev"(%struct.anon* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.anon*, align 8
+  store %struct.anon* %this, %struct.anon** %this.addr, align 8
+  %this1 = load %struct.anon** %this.addr
+  %0 = bitcast %struct.anon* %this1 to %struct.D*
+  call void @_ZN1DC2Ev(%struct.D* %0) nounwind
+  %1 = bitcast %struct.anon* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @"_ZTV3$_0", i64 0, i64 2), i8*** %1
+  ret void
+}
+
+define linkonce_odr void @_ZN1DC2Ev(%struct.D* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.D*, align 8
+  store %struct.D* %this, %struct.D** %this.addr, align 8
+  %this1 = load %struct.D** %this.addr
+  %0 = bitcast %struct.D* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTV1D, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define internal void @_ZN12_GLOBAL__N_11AC2Ev(%"struct.<anonymous namespace>::A"* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %"struct.<anonymous namespace>::A"*, align 8
+  store %"struct.<anonymous namespace>::A"* %this, %"struct.<anonymous namespace>::A"** %this.addr, align 8
+  %this1 = load %"struct.<anonymous namespace>::A"** %this.addr
+  %0 = bitcast %"struct.<anonymous namespace>::A"* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTVN12_GLOBAL__N_11AE, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define internal void @_ZN12_GLOBAL__N_11A1fEv(%"struct.<anonymous namespace>::A"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.<anonymous namespace>::A"*, align 8
+  store %"struct.<anonymous namespace>::A"* %this, %"struct.<anonymous namespace>::A"** %this.addr, align 8
+  %this1 = load %"struct.<anonymous namespace>::A"** %this.addr
+  ret void
+}
+
+define internal void @_GLOBAL__I_a() nounwind section "__TEXT,__StaticInit,regular,pure_instructions" {
+entry:
+  call void @__cxx_global_var_init()
+  ret void
+}

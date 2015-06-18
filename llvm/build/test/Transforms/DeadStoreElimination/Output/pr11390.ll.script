@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -basicaa -dse -S -o - /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadStoreElimination/pr11390.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadStoreElimination/pr11390.ll

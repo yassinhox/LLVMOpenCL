@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2007-02-01-LoadSinkAlloca.ll -instcombine -mem2reg -S | grep "%A = alloca" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2007-02-01-LoadSinkAlloca.ll -instcombine -mem2reg -S |     not grep "%B = alloca"

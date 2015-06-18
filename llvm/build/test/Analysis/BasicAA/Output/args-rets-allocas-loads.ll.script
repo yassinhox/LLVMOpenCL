@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -basicaa -aa-eval -print-all-alias-modref-info -disable-output < /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/args-rets-allocas-loads.ll 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck  /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/args-rets-allocas-loads.ll

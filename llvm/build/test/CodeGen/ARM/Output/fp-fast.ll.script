@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=arm -mcpu=cortex-a9 -mattr=+vfp4 -enable-unsafe-fp-math < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fp-fast.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fp-fast.ll

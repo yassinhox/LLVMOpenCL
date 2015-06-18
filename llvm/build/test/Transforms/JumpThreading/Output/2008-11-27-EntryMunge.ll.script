@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/JumpThreading/2008-11-27-EntryMunge.ll -jump-threading -S | grep "ret i32 0"

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc --mtriple=cellspu-unknown-elf /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/fcmp32.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/fcmp32.ll

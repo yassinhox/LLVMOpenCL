@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -x objc++-cpp-output -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/objc++-cpp-output.mm -o /dev/null

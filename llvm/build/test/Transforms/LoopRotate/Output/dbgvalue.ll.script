@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -loop-rotate  /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopRotate/dbgvalue.ll  | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopRotate/dbgvalue.ll

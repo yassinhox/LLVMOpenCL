@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ArgumentPromotion/2008-07-02-array-indexing.ll -argpromotion -S > /home/jazouani/llvm/build/test/Transforms/ArgumentPromotion/Output/2008-07-02-array-indexing.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/ArgumentPromotion/Output/2008-07-02-array-indexing.ll.tmp | grep "define.*@callee(.*i32\*"

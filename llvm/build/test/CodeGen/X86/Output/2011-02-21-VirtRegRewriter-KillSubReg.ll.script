@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2011-02-21-VirtRegRewriter-KillSubReg.ll -O2 -march=x86 -mtriple=i386-pc-linux-gnu -relocation-model=pic | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2011-02-21-VirtRegRewriter-KillSubReg.ll

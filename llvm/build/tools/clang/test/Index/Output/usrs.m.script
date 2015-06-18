@@ -1,0 +1,2 @@
+c-index-test -test-load-source-usrs all -target x86_64-apple-macosx10.7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/usrs.m | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/usrs.m &&
+c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/usrs.m | FileCheck -check-prefix=CHECK-source /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/usrs.m

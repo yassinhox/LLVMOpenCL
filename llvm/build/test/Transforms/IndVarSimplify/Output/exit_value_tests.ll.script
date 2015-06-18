@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/exit_value_tests.ll -indvars -loop-deletion -simplifycfg |    /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | /home/jazouani/llvm/build/Release+Asserts/bin/not grep br

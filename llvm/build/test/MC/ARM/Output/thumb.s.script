@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple thumbv6-apple-darwin -show-encoding < /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb.s

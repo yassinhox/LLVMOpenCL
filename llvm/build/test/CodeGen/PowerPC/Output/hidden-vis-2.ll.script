@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/hidden-vis-2.ll -mtriple=powerpc-apple-darwin9 | grep non_lazy_ptr | /home/jazouani/llvm/build/Release+Asserts/bin/count 6

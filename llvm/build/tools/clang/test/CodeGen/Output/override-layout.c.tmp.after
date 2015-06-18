@@ -1,0 +1,153 @@
+
+*** Dumping AST Record Layout
+Type: struct X0
+
+Layout: <ASTRecordLayout
+  Size:192
+  DataSize:192
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping AST Record Layout
+Type: struct X1
+
+Layout: <ASTRecordLayout
+  Size:296
+  DataSize:296
+  Alignment:8
+  FieldOffsets: [0, 104]>
+
+*** Dumping AST Record Layout
+Type: struct X2
+
+Layout: <ASTRecordLayout
+  Size:48
+  DataSize:48
+  Alignment:8
+  FieldOffsets: [0, 16]>
+
+*** Dumping AST Record Layout
+Type: struct X3
+
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:32
+  FieldOffsets: [0, 32]>
+
+*** Dumping AST Record Layout
+Type: struct X4
+
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:16
+  FieldOffsets: [0, 32]>
+
+*** Dumping AST Record Layout
+Type: struct X5
+
+Layout: <ASTRecordLayout
+  Size:1224
+  DataSize:1224
+  Alignment:8
+  FieldOffsets: [0, 1216]>
+
+*** Dumping AST Record Layout
+Type: struct X6
+
+Layout: <ASTRecordLayout
+  Size:136
+  DataSize:136
+  Alignment:8
+  FieldOffsets: [0, 128]>
+
+*** Dumping AST Record Layout
+Type: struct X7
+
+Layout: <ASTRecordLayout
+  Size:40
+  DataSize:40
+  Alignment:8
+  FieldOffsets: [0, 32]>
+
+*** Dumping AST Record Layout
+Type: union X8
+
+Layout: <ASTRecordLayout
+  Size:40
+  DataSize:40
+  Alignment:8
+  FieldOffsets: [0, 0]>
+
+*** Dumping AST Record Layout
+Type: struct X9
+
+Layout: <ASTRecordLayout
+  Size:128
+  DataSize:128
+  Alignment:32
+  FieldOffsets: [0, 64, 96]>
+
+*** Dumping AST Record Layout
+Type: struct X10
+
+Layout: <ASTRecordLayout
+  Size:128
+  DataSize:128
+  Alignment:8
+  FieldOffsets: [0, 64, 96]>
+
+*** Dumping AST Record Layout
+Type: struct X11
+
+Layout: <ASTRecordLayout
+  Size:128
+  DataSize:128
+  Alignment:8
+  FieldOffsets: [0, 64, 96]>
+
+*** Dumping AST Record Layout
+Type: struct X12
+
+Layout: <ASTRecordLayout
+  Size:24
+  DataSize:24
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping AST Record Layout
+Type: struct X13
+
+Layout: <ASTRecordLayout
+  Size:24
+  DataSize:24
+  Alignment:8
+  FieldOffsets: [0, 10]>
+
+*** Dumping AST Record Layout
+Type: union X14
+
+Layout: <ASTRecordLayout
+  Size:8
+  DataSize:8
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping AST Record Layout
+Type: struct X15
+
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:32
+  FieldOffsets: [0, 16]>
+
+*** Dumping AST Record Layout
+Type: struct X16
+
+Layout: <ASTRecordLayout
+  Size:256
+  DataSize:256
+  Alignment:128
+  FieldOffsets: [0, 32, 64, 96, 128]>

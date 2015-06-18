@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-07-19-movups-spills.ll -mtriple=i686-pc-linux -realign-stack=1 -mattr=sse2 | grep movups | /home/jazouani/llvm/build/Release+Asserts/bin/count 33 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-07-19-movups-spills.ll -mtriple=i686-pc-linux -realign-stack=0 -mattr=sse2 | grep movups | /home/jazouani/llvm/build/Release+Asserts/bin/count 33

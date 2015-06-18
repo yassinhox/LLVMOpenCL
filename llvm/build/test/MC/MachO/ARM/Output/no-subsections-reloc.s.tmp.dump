@@ -1,0 +1,90 @@
+('cputype', 12)
+('cpusubtype', 9)
+('filetype', 1)
+('num_load_commands', 3)
+('load_commands_size', 228)
+('flag', 0)
+('load_commands', [
+  # Load Command 0
+ (('command', 1)
+  ('size', 124)
+  ('segment_name', '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+  ('vm_addr', 0)
+  ('vm_size', 8)
+  ('file_offset', 256)
+  ('file_size', 8)
+  ('maxprot', 7)
+  ('initprot', 7)
+  ('num_sections', 1)
+  ('flags', 0)
+  ('sections', [
+    # Section 0
+   (('section_name', '__text\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('segment_name', '__TEXT\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('address', 0)
+    ('size', 8)
+    ('offset', 256)
+    ('alignment', 0)
+    ('reloc_offset', 0)
+    ('num_reloc', 0)
+    ('flags', 0x80000400)
+    ('reserved1', 0)
+    ('reserved2', 0)
+   ),
+  ('_relocations', [
+  ])
+  ('_section_data', 'dff80030 00000000')
+  ])
+ ),
+  # Load Command 1
+ (('command', 2)
+  ('size', 24)
+  ('symoff', 264)
+  ('nsyms', 2)
+  ('stroff', 288)
+  ('strsize', 12)
+  ('_string_data', '\x00_foo\x00bar\x00\x00\x00')
+  ('_symbols', [
+    # Symbol 0
+   (('n_strx', 1)
+    ('n_type', 0xe)
+    ('n_sect', 1)
+    ('n_desc', 8)
+    ('n_value', 0)
+    ('_string', '_foo')
+   ),
+    # Symbol 1
+   (('n_strx', 6)
+    ('n_type', 0xe)
+    ('n_sect', 1)
+    ('n_desc', 0)
+    ('n_value', 4)
+    ('_string', 'bar')
+   ),
+  ])
+ ),
+  # Load Command 2
+ (('command', 11)
+  ('size', 80)
+  ('ilocalsym', 0)
+  ('nlocalsym', 2)
+  ('iextdefsym', 2)
+  ('nextdefsym', 0)
+  ('iundefsym', 2)
+  ('nundefsym', 0)
+  ('tocoff', 0)
+  ('ntoc', 0)
+  ('modtaboff', 0)
+  ('nmodtab', 0)
+  ('extrefsymoff', 0)
+  ('nextrefsyms', 0)
+  ('indirectsymoff', 0)
+  ('nindirectsyms', 0)
+  ('extreloff', 0)
+  ('nextrel', 0)
+  ('locreloff', 0)
+  ('nlocrel', 0)
+  ('_indirect_symbols', [
+  ])
+ ),
+])

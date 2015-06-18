@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2009-09-28-ITBlockBug.ll -mtriple=thumbv7-apple-darwin -mcpu=cortex-a8 -disable-cgp-branch-opts | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2009-09-28-ITBlockBug.ll

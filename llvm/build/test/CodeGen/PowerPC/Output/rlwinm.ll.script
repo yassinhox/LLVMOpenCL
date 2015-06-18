@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/rlwinm.ll -march=ppc32 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/rlwinm.ll.tmp &&
+not grep and /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/rlwinm.ll.tmp &&
+not grep srawi /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/rlwinm.ll.tmp &&
+not grep srwi /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/rlwinm.ll.tmp &&
+not grep slwi /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/rlwinm.ll.tmp &&
+grep rlwinm /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/rlwinm.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 8

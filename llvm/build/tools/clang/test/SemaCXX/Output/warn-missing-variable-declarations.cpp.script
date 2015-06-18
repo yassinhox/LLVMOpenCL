@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -Wmissing-variable-declarations -fsyntax-only -Xclang -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/warn-missing-variable-declarations.cpp

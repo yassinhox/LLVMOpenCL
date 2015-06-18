@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2007-12-18-AddSelCmpSub.ll -instcombine -S | grep "add" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

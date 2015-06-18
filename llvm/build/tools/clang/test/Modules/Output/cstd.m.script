@@ -1,0 +1,2 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Modules/Output/cstd.m.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -isystem /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/Inputs/System/usr/include -fmodules -fmodule-cache-path /home/jazouani/llvm/build/tools/clang/test/Modules/Output/cstd.m.tmp -D__need_wint_t -Werror=implicit-function-declaration /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/cstd.m

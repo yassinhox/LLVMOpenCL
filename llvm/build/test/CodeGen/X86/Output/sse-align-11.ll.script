@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/sse-align-11.ll -march=x86 -mcpu=yonah -mtriple=i686-apple-darwin8 | grep movaps &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/sse-align-11.ll -march=x86 -mcpu=yonah -mtriple=i686-linux-gnu | grep movaps

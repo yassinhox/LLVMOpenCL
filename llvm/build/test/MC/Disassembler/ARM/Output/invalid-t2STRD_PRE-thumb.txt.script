@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-t2STRD_PRE-thumb.txt -triple=thumbv7-apple-darwin9 2>&1 | grep "invalid instruction encoding"

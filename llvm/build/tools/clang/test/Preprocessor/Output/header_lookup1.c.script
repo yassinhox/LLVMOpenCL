@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fno-ms-extensions /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/header_lookup1.c -E | grep 'stddef.h.*3'

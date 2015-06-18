@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2007-02-23-sdiv.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "global i32 0"

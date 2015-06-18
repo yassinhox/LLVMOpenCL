@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/canon.ll -deadargelim -S > /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/canon.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/canon.ll.tmp | grep "define internal void @test" &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/canon.ll.tmp | grep "define internal i32 @test2"

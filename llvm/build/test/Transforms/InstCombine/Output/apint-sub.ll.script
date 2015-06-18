@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/apint-sub.ll -instcombine -S |    grep -v "sub i19 %Cok, %Bok" | grep -v "sub i25 0, %Aok" | /home/jazouani/llvm/build/Release+Asserts/bin/not grep sub

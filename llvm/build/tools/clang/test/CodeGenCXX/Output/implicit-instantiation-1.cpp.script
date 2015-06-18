@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/implicit-instantiation-1.cpp -o /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/implicit-instantiation-1.cpp.tmp &&
+grep "linkonce_odr.*_ZN1XIiE1fEi" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/implicit-instantiation-1.cpp.tmp | count 1 &&
+grep "linkonce_odr.*_ZN1XIiE1gEi" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/implicit-instantiation-1.cpp.tmp | count 1 &&
+grep "linkonce_odr.*_ZN1XIfE1fEf" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/implicit-instantiation-1.cpp.tmp | count 1 &&
+grep "linkonce_odr.*_ZN1XIfE1hEf" /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/implicit-instantiation-1.cpp.tmp | count 0

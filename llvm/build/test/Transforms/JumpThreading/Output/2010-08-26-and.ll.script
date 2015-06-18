@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -jump-threading -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/JumpThreading/2010-08-26-and.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/JumpThreading/2010-08-26-and.ll

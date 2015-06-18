@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2003-11-18-TypeResolution.ll > /home/jazouani/llvm/build/test/Linker/Output/2003-11-18-TypeResolution.ll.tmp.out2.bc &&
+echo "%T1 = type opaque  @GVar = external global %T1*" | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /home/jazouani/llvm/build/test/Linker/Output/2003-11-18-TypeResolution.ll.tmp.out1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2003-11-18-TypeResolution.ll.tmp.out1.bc /home/jazouani/llvm/build/test/Linker/Output/2003-11-18-TypeResolution.ll.tmp.out2.bc

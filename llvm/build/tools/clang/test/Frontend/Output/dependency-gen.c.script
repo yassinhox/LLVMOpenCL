@@ -1,0 +1,11 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/dependency-gen.c.tmp.dir &&
+mkdir -p /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/dependency-gen.c.tmp.dir/a/b &&
+echo > /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/dependency-gen.c.tmp.dir/a/b/x.h &&
+cd /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/dependency-gen.c.tmp.dir &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -MD -MF - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c -fsyntax-only -I a/b | FileCheck -check-prefix=CHECK-ONE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -MD -MF - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c -fsyntax-only -include a/b/x.h -DINCLUDE_FLAG_TEST | FileCheck -check-prefix=CHECK-TWO /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -MD -MF - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c -fsyntax-only -I ./a/b | FileCheck -check-prefix=CHECK-THREE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -MD -MF - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c -fsyntax-only -I .//./a/b/ | FileCheck -check-prefix=CHECK-FOUR /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -MD -MF - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c -fsyntax-only -I a/b/. | FileCheck -check-prefix=CHECK-FIVE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c &&
+cd a/b &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -MD -MF - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c -fsyntax-only -I ./ | FileCheck -check-prefix=CHECK-SIX /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/dependency-gen.c

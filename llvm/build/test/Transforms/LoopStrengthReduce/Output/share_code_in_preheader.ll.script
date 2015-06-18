@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/share_code_in_preheader.ll -loop-reduce -S | grep mul | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

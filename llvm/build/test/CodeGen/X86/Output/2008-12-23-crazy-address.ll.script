@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-12-23-crazy-address.ll -march=x86 -relocation-model=static | grep "lea.*X.*esp" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/masked-iv-unsafe.ll -march=x86-64 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-unsafe.ll.tmp &&
+grep and /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-unsafe.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep movzb /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-unsafe.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep sar /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-unsafe.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 12

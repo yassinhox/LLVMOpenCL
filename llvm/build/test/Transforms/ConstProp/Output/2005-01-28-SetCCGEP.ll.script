@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2005-01-28-SetCCGEP.ll -constprop -S |     not grep "ret i1 false"

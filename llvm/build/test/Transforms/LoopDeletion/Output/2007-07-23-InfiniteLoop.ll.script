@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopDeletion/2007-07-23-InfiniteLoop.ll -loop-deletion -S | grep switch

@@ -1,0 +1,69 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_main
+	.align	4, 0x90
+_main:                                  ## @main
+## BB#0:                                ## %entry
+	movl	L_var$non_lazy_ptr, %eax
+	movl	$2147027116, (%eax)     ## imm = 0x7FF908AC
+	movl	$-1610612736, (%eax)    ## imm = 0xFFFFFFFFA0000000
+	movl	$2147027116, (%eax)     ## imm = 0x7FF908AC
+	movl	$-2147483648, (%eax)    ## imm = 0xFFFFFFFF80000000
+	movl	$2147027116, (%eax)     ## imm = 0x7FF908AC
+	movl	$-1073741824, (%eax)    ## imm = 0xFFFFFFFFC0000000
+	movl	$2147228864, (%eax)     ## imm = 0x7FFC1CC0
+	movl	$2147228864, (%eax)     ## imm = 0x7FFC1CC0
+	movl	$2147228864, (%eax)     ## imm = 0x7FFC1CC0
+	movl	$2146502828, (%eax)     ## imm = 0x7FF108AC
+	movl	$-1610612736, (%eax)    ## imm = 0xFFFFFFFFA0000000
+	movl	$2146502828, (%eax)     ## imm = 0x7FF108AC
+	movl	$-2147483648, (%eax)    ## imm = 0xFFFFFFFF80000000
+	movl	$2146502828, (%eax)     ## imm = 0x7FF108AC
+	movl	$-1073741824, (%eax)    ## imm = 0xFFFFFFFFC0000000
+	movl	$2143034560, (%eax)     ## imm = 0x7FBC1CC0
+	movl	$2143034560, (%eax)     ## imm = 0x7FBC1CC0
+	movl	$2143034560, (%eax)     ## imm = 0x7FBC1CC0
+                                        ## implicit-def: EAX
+	ret
+
+	.section	__TEXT,__const
+	.globl	_fnan                   ## @fnan
+	.align	2
+_fnan:
+	.long	2143831397              ## 0x7fc84565
+	.long	2143831396              ## 0x7fc84564
+	.long	2143831398              ## 0x7fc84566
+
+	.globl	_dnan                   ## @dnan
+	.align	3
+_dnan:
+	.long	305419896               ## 0x7fff839812345678
+	.long	2147451800
+	.long	305419897               ## 0x7fff839812345679
+	.long	2147451800
+	.long	36984439                ## 0x7fff839802345677
+	.long	2147451800
+
+	.globl	_fsnan                  ## @fsnan
+	.align	2
+_fsnan:
+	.long	2139637093              ## 0x7f884565
+	.long	2139637092              ## 0x7f884564
+	.long	2139637094              ## 0x7f884566
+
+	.globl	_dsnan                  ## @dsnan
+	.align	3
+_dsnan:
+	.long	305419896               ## 0x7ff7839812345678
+	.long	2146927512
+	.long	305419897               ## 0x7ff7839812345679
+	.long	2146927512
+	.long	36984439                ## 0x7ff7839802345677
+	.long	2146927512
+
+
+	.section	__IMPORT,__pointers,non_lazy_symbol_pointers
+L_var$non_lazy_ptr:
+	.indirect_symbol	_var
+	.long	0
+
+.subsections_via_symbols

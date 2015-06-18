@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-04-15-DynAllocBug.ll -mtriple=thumbv7-apple-darwin -mcpu=cortex-a8 -O3 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-04-15-DynAllocBug.ll

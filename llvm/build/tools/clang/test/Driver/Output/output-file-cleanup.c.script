@@ -1,0 +1,12 @@
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o &&
+not  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -DCRASH -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o -MMD -MF /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.d /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/output-file-cleanup.c &&
+test ! -f /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o &&
+test ! -f /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.d &&
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o &&
+not  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -DMISSING -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o -MMD -MF /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.d /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/output-file-cleanup.c &&
+test ! -f /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o &&
+test ! -f /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.d &&
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o &&
+not  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o -MMD -MF /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.d /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/output-file-cleanup.c &&
+test ! -f /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.o &&
+test -f /home/jazouani/llvm/build/tools/clang/test/Driver/Output/output-file-cleanup.c.tmp.d

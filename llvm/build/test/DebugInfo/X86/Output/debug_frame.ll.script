@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/debug_frame.ll -mtriple=i686-pc-linux-gnu -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/debug_frame.ll

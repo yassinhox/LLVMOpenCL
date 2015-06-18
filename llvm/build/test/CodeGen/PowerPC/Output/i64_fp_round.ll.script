@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mcpu=pwr7 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp_round.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp_round.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mcpu=pwr7 -enable-unsafe-fp-math < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp_round.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i64_fp_round.ll -check-prefix=UNSAFE

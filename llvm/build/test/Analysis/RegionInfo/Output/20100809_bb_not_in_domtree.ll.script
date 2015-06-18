@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -regions /home/jazouani/llvm/llvm-3.2/test/Analysis/RegionInfo/20100809_bb_not_in_domtree.ll

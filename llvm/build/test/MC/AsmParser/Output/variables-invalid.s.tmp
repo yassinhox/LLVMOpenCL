@@ -1,0 +1,15 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/variables-invalid.s:6:17: error: Recursive use of 't0_v0'
+        t0_v0 = t0_v0 + 1
+                ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/variables-invalid.s:13:17: error: redefinition of 't2_s0'
+        t2_s0 = 2
+                ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/variables-invalid.s:18:17: error: invalid reassignment of non-absolute variable 't3_s0'
+        t3_s0 = 1
+                ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/variables-invalid.s:24:17: error: Recursive use of 't4_s2'
+        t4_s2 = t4_s0
+                ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/variables-invalid.s:28:17: error: Recursive use of 't5_s1'
+        t5_s1 = t5_s0
+                ^

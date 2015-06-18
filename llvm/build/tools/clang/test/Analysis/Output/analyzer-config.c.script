@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --analyze /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/analyzer-config.c -o /dev/null -Xclang -analyzer-checker=debug.ConfigDumper > /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/analyzer-config.c.tmp 2>&1 &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Analysis/Output/analyzer-config.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/analyzer-config.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/add3.ll -instcombine -S | grep inttoptr | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

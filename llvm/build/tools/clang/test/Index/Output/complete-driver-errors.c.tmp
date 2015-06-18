@@ -1,0 +1,5 @@
+error: invalid value '' in '-std='
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-driver-errors.c:1:6:{1:13-1:14}: warning: incompatible integer to pointer conversion initializing 'int *' with an expression of type 'int' [-Wint-conversion]
+Number FIX-ITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-driver-errors.c:24:52: error: expected identifier or '('
+Number FIX-ITs = 0

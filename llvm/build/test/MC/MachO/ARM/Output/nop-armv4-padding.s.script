@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple armv4-apple-darwin /home/jazouani/llvm/llvm-3.2/test/MC/MachO/ARM/nop-armv4-padding.s -filetype=obj -o /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/nop-armv4-padding.s.tmp.obj &&
+/home/jazouani/llvm/build/Release+Asserts/bin/macho-dump --dump-section-data < /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/nop-armv4-padding.s.tmp.obj > /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/nop-armv4-padding.s.tmp.dump &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/MachO/ARM/nop-armv4-padding.s < /home/jazouani/llvm/build/test/MC/MachO/ARM/Output/nop-armv4-padding.s.tmp.dump

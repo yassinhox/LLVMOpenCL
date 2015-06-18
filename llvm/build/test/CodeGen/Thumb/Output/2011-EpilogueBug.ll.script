@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=thumbv6-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb/2011-EpilogueBug.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb/2011-EpilogueBug.ll

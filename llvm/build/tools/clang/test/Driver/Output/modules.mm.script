@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fmodules -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/modules.mm 2>&1 | FileCheck -check-prefix=CHECK-NO-MODULES /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/modules.mm &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fcxx-modules -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/modules.mm 2>&1 | FileCheck -check-prefix=CHECK-NO-MODULES /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/modules.mm &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fcxx-modules -fmodules -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/modules.mm 2>&1 | FileCheck -check-prefix=CHECK-HAS-MODULES /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/modules.mm

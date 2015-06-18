@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/builtinshufflevector2.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/builtinshufflevector2.c

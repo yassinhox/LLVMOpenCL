@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O3 -mtriple=armv6-apple-darwin -relocation-model=pic < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2011-08-29-ldr_pre_imm.ll

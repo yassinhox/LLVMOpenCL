@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/XCore/2008-11-17-Shl64.ll -march=xcore > /home/jazouani/llvm/build/test/CodeGen/XCore/Output/2008-11-17-Shl64.ll.tmp1.s

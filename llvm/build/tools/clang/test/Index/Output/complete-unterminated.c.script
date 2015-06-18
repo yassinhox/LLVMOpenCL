@@ -1,0 +1,10 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c:5:1 -pedantic /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c 2> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c &&
+not grep error /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c:8:6 -pedantic /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c 2> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+not grep error /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c:10:28 -pedantic /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c 2> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+not grep unterminated /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c:11:17 -pedantic /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c 2> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+not grep unterminated /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c:18:10 -pedantic /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-unterminated.c 2> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err &&
+not grep unterminated /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-unterminated.c.tmp.err

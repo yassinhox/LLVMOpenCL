@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i686-pc-win32 -lkernel32.lib -luser32.lib -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/msvc_forward.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/msvc_forward.c

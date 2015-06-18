@@ -1,0 +1,6 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/directive_file-errors.s:6:9: error: input can't have .file dwarf directives when -g is used to generate dwarf debug info for assembly code
+        .file 1 "world"
+        ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/directive_file-errors.s:6:15: error: file number already allocated
+        .file 1 "world"
+              ^

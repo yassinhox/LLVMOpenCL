@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=sparc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/2011-01-22-SRet.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/2011-01-22-SRet.ll

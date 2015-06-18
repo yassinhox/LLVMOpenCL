@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -loop-unroll -disable-output < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/pr11361.ll

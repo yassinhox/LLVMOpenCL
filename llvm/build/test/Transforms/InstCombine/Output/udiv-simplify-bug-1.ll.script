@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/udiv-simplify-bug-1.ll -instcombine -S > /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/udiv-simplify-bug-1.ll.tmp1.ll &&
+grep udiv /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/udiv-simplify-bug-1.ll.tmp1.ll | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep zext /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/udiv-simplify-bug-1.ll.tmp1.ll | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

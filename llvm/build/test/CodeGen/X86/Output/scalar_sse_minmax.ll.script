@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/scalar_sse_minmax.ll -march=x86 -mattr=+sse,+sse2 |    grep mins | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/scalar_sse_minmax.ll -march=x86 -mattr=+sse,+sse2 |    grep maxs | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

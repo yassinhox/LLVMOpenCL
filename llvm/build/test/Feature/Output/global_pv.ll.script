@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -instcombine -S -o - /home/jazouani/llvm/llvm-3.2/test/Feature/global_pv.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -instcombine -globalopt -S -o - /home/jazouani/llvm/llvm-3.2/test/Feature/global_pv.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/ldrd-memoper.ll -o /dev/null -mtriple=thumbv7-apple-ios -mcpu=cortex-a8 -debug-only=arm-ldst-opt 2> /home/jazouani/llvm/build/test/CodeGen/ARM/Output/ldrd-memoper.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/ldrd-memoper.ll < /home/jazouani/llvm/build/test/CodeGen/ARM/Output/ldrd-memoper.ll.tmp

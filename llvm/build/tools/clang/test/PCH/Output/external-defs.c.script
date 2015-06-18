@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple x86_64-apple-darwin9 -emit-pch -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp.pch /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/external-defs.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple x86_64-apple-darwin9 -include-pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp.pch -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/external-defs.c &&
+grep "@x = common global i32 0" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp | count 1 &&
+grep "@z" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp | count 0 &&
+grep "@x2 = global i32 19" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp | count 1 &&
+grep "@incomplete_array = common global .*1 x i32" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp | count 1 &&
+grep "@incomplete_array2 = common global .*17 x i32" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp | count 1 &&
+grep "@incomplete_array3 = common global .*1 x i32" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/external-defs.c.tmp | count 1

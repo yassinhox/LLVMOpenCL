@@ -1,0 +1,27 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -march=core2 -msse4 -x c -E -dM -o /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/x86_target_features.c &&
+grep '#define __SSE2_MATH__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE2__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE3__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE4_1__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE4_2__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE_MATH__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSSE3__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -march=core2 -msse4 -mno-sse2 -x c -E -dM -o /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/x86_target_features.c &&
+grep '#define __SSE2_MATH__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE2__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE3__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE4_1__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE4_2__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE_MATH__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSSE3__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -march=pentium-m -x c -E -dM -o /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/x86_target_features.c &&
+grep '#define __SSE2_MATH__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE2__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE3__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE4_1__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE4_2__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0 &&
+grep '#define __SSE_MATH__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSE__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp &&
+grep '#define __SSSE3__ 1' /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/x86_target_features.c.tmp | count 0

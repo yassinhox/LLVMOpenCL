@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Feature/alignment.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Feature/Output/alignment.ll.tmp1.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/build/test/Feature/Output/alignment.ll.tmp1.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Feature/Output/alignment.ll.tmp2.ll &&
+diff /home/jazouani/llvm/build/test/Feature/Output/alignment.ll.tmp1.ll /home/jazouani/llvm/build/test/Feature/Output/alignment.ll.tmp2.ll

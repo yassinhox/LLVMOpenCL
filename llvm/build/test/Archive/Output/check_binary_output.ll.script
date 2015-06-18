@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-ar p /home/jazouani/llvm/llvm-3.2/test/Archive/GNU.a very_long_bytecode_file_name.bc | cmp -s /home/jazouani/llvm/llvm-3.2/test/Archive/very_long_bytecode_file_name.bc -

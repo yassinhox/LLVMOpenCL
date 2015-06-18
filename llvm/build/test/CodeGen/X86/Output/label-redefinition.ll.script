@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llc /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/label-redefinition.ll -o - 2>&1 | grep "'_foo' label emitted multiple times to assembly"

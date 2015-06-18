@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-apple-darwin10 /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros-parsing.s 2> /home/jazouani/llvm/build/test/MC/AsmParser/Output/macros-parsing.s.tmp.err &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CHECK-ERRORS /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macros-parsing.s < /home/jazouani/llvm/build/test/MC/AsmParser/Output/macros-parsing.s.tmp.err

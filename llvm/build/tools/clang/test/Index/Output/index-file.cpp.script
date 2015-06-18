@@ -1,0 +1,2 @@
+c-index-test -index-file /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-file.cpp > /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-file.cpp.tmp &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-file.cpp -input-file=/home/jazouani/llvm/build/tools/clang/test/Index/Output/index-file.cpp.tmp

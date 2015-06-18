@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/2009-03-06-Anonymous.ll -globalopt -S | grep internal | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

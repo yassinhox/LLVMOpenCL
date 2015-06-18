@@ -1,0 +1,21 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/trunc.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s &&
+grep shufb   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 19 &&
+grep "ilhu.*1799"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "ilhu.*771"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "ilhu.*1543"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "ilhu.*1029"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "ilhu.*515"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "ilhu.*3855"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "ilhu.*3599"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "ilhu.*3085"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "iohl.*3855"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "iohl.*3599"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "iohl.*1543"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "iohl.*771"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "iohl.*515"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "iohl.*1799"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep lqa  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep cbd  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep chd  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep cwd  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep cdd  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/trunc.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

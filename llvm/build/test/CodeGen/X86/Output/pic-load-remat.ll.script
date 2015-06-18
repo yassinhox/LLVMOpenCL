@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/pic-load-remat.ll -mtriple=i686-apple-darwin -mattr=+sse2 -relocation-model=pic | grep psllw | grep pb

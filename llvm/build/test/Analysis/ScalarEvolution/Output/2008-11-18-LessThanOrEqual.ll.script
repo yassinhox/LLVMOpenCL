@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2008-11-18-LessThanOrEqual.ll -analyze -scalar-evolution 2>&1 |  grep "Loop %bb: backedge-taken count is (7 + (-1 \* %argc))"

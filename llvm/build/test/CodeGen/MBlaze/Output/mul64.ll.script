@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/mul64.ll -march=mblaze | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=FUN /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/mul64.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/mul64.ll -march=mblaze -mattr=+mul,+mul64 |       /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=MUL /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/mul64.ll

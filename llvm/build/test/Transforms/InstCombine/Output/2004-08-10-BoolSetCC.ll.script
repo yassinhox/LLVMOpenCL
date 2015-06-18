@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2004-08-10-BoolSetCC.ll -instcombine -S |     grep "ret i1 false"

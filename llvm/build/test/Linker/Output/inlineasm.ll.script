@@ -1,0 +1,2 @@
+echo > /home/jazouani/llvm/build/test/Linker/Output/inlineasm.ll.tmp.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/inlineasm.ll.tmp.ll /home/jazouani/llvm/llvm-3.2/test/Linker/inlineasm.ll -S

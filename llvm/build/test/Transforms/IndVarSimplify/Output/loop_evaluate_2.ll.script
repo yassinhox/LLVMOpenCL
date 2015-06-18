@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/loop_evaluate_2.ll -indvars -loop-deletion -simplifycfg | /home/jazouani/llvm/build/Release+Asserts/bin/opt      -analyze -loops | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "^Loop Containing"

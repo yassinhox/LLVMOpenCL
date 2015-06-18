@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/sext-trunc.ll -march=x86 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/sext-trunc.ll.tmp &&
+grep movsbl /home/jazouani/llvm/build/test/CodeGen/X86/Output/sext-trunc.ll.tmp &&
+not grep movz /home/jazouani/llvm/build/test/CodeGen/X86/Output/sext-trunc.ll.tmp &&
+not grep and /home/jazouani/llvm/build/test/CodeGen/X86/Output/sext-trunc.ll.tmp

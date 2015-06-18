@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/testlink1.ll > /home/jazouani/llvm/build/test/Linker/Output/testlink1.ll.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/testlink2.ll > /home/jazouani/llvm/build/test/Linker/Output/testlink1.ll.tmp2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/testlink1.ll.tmp.bc /home/jazouani/llvm/build/test/Linker/Output/testlink1.ll.tmp2.bc -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Linker/testlink1.ll

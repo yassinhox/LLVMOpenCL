@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -F /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/Inputs -Wsign-conversion -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/user_defined_system_framework.c

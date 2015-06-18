@@ -1,0 +1,2 @@
+3:7 VarDecl=x:3:7 (Definition) Extent=[3:3 - 3:8] Spelling=x ([3:7 - 3:8])
+Completion string: {ResultType int}{TypedText x}

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/bt.ll -march=x86 | grep btl | /home/jazouani/llvm/build/Release+Asserts/bin/count 28 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/bt.ll -march=x86 -mcpu=pentium4 | grep btl | /home/jazouani/llvm/build/Release+Asserts/bin/not grep esp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/bt.ll -march=x86 -mcpu=penryn   | grep btl | /home/jazouani/llvm/build/Release+Asserts/bin/not grep esp

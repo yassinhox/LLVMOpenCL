@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O3 -relocation-model=pic -mcpu=cortex-a8 -mattr=+thumb2 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-01-19-RemovePredicates.ll

@@ -1,0 +1,6 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp &&
+mkdir /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp &&
+echo "[{\"directory\":\"/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp\",\"command\":\"clang -c test.cpp -I.\",\"file\":\"/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp/test.cpp\"}]" | sed -e 's/\\/\//g' > /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp/compile_commands.json &&
+cp "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/clang-check-chdir.cpp" "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp/test.cpp" &&
+touch "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp/clang-check-test.h" &&
+clang-check -p "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp" "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-chdir.cpp.tmp/test.cpp" 2>&1|FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/clang-check-chdir.cpp

@@ -1,0 +1,123 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/member-functions.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin9"
+
+%struct.C = type { i8 }
+%struct.S = type { i32 (...)** }
+%struct.T = type { i8 }
+
+@_ZTV1S = linkonce_odr unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI1S to i8*), i8* bitcast (void (%struct.S*)* @_ZN1S1vEv to i8*)]
+@_ZTVN10__cxxabiv117__class_type_infoE = external global i8*
+@_ZTS1S = linkonce_odr constant [3 x i8] c"1S\00"
+@_ZTI1S = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([3 x i8]* @_ZTS1S, i32 0, i32 0) }
+
+define void @_ZN1C1fEv(%struct.C* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.C*, align 8
+  store %struct.C* %this, %struct.C** %this.addr, align 8
+  %this1 = load %struct.C** %this.addr
+  ret void
+}
+
+define void @_Z5test1v() nounwind {
+entry:
+  %c = alloca %struct.C, align 1
+  call void @_ZN1C1fEv(%struct.C* %c)
+  call void (%struct.C*, i32, ...)* @_ZN1C1gEiz(%struct.C* %c, i32 1, i32 2, i32 3)
+  ret void
+}
+
+declare void @_ZN1C1gEiz(%struct.C*, i32, ...)
+
+define void @_ZN1S1fEv() nounwind align 2 {
+entry:
+  ret void
+}
+
+define void @_Z5test2v() nounwind {
+entry:
+  %s = alloca %struct.S, align 8
+  call void @_ZN1SC1Ev(%struct.S* %s)
+  call void @_ZN1S9f_inline1Ev(%struct.S* %s)
+  call void @_ZN1S9f_inline2Ev(%struct.S* %s)
+  call void @_ZN1S1gEv()
+  call void @_ZN1SD1Ev(%struct.S* %s)
+  ret void
+}
+
+define linkonce_odr void @_ZN1SC1Ev(%struct.S* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  call void @_ZN1SC2Ev(%struct.S* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1S9f_inline1Ev(%struct.S* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1S9f_inline2Ev(%struct.S* %this) nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1S1gEv() nounwind align 2 {
+entry:
+  ret void
+}
+
+define linkonce_odr void @_ZN1SD1Ev(%struct.S* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  call void @_ZN1SD2Ev(%struct.S* %this1)
+  ret void
+}
+
+define void @_Z5test3v() nounwind {
+entry:
+  %t1 = alloca %struct.T, align 1
+  %t2 = alloca %struct.T, align 1
+  %result = alloca %struct.T, align 1
+  %undef.agg.tmp = alloca %struct.T, align 1
+  call void @_ZN1TplERKS_(%struct.T* %t1, %struct.T* %t2)
+  ret void
+}
+
+declare void @_ZN1TplERKS_(%struct.T*, %struct.T*)
+
+define linkonce_odr void @_ZN1SD2Ev(%struct.S* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1SC2Ev(%struct.S* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  %0 = bitcast %struct.S* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTV1S, i64 0, i64 2), i8*** %0
+  ret void
+}
+
+define linkonce_odr void @_ZN1S1vEv(%struct.S* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  ret void
+}

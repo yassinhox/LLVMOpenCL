@@ -1,0 +1,1 @@
+c-index-test -index-file -arch i386 -mkernel /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-kernel-invocation.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-kernel-invocation.cpp

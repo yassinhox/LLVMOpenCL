@@ -1,0 +1,1 @@
+c-index-test -test-load-source local /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/properties-class-extensions.m | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/properties-class-extensions.m

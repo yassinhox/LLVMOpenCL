@@ -1,0 +1,1 @@
+env CINDEXTEST_SUPPRESSREFS=1 c-index-test -index-file /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-suppress-refs.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-suppress-refs.cpp

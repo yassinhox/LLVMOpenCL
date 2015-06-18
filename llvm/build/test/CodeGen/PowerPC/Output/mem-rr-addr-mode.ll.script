@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/mem-rr-addr-mode.ll -march=ppc32 -mcpu=g5 | grep li.*16 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/mem-rr-addr-mode.ll -march=ppc32 -mcpu=g5 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep addi

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/lli /home/jazouani/llvm/llvm-3.2/test/ExecutionEngine/test-call-no-external-funcs.ll > /dev/null

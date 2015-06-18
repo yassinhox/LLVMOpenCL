@@ -1,0 +1,17 @@
+false &&
+echo '#define m0 ""' > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-pch -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h.pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+echo '' > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -include-pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h.pch /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/changed-files.c 2> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.stderr &&
+grep "modified" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.stderr &&
+echo '#define m0 000' > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-pch -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h.pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+echo '' > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -include-pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h.pch /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/changed-files.c 2> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.stderr &&
+grep "modified" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.stderr &&
+echo '#define m0 000' > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+echo "#define m1 'abcd'" >> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-pch -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h.pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+echo '' > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -include-pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.h.pch /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/changed-files.c 2> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.stderr &&
+grep "modified" /home/jazouani/llvm/build/tools/clang/test/PCH/Output/changed-files.c.tmp.stderr

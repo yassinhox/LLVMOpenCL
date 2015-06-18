@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/dereference-addressof.c &&
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/dereference-addressof.c /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/dereference-addressof.c.tmp &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -fixit -x c /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/dereference-addressof.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -pedantic -x c /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/dereference-addressof.c.tmp

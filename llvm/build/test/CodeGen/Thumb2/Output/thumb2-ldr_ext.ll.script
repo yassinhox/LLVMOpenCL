@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/thumb2-ldr_ext.ll -march=thumb -mattr=+thumb2 | grep ldrb | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/thumb2-ldr_ext.ll -march=thumb -mattr=+thumb2 | grep ldrh | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/thumb2-ldr_ext.ll -march=thumb -mattr=+thumb2 | grep ldrsb | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/thumb2-ldr_ext.ll -march=thumb -mattr=+thumb2 | grep ldrsh | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

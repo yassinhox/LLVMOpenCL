@@ -1,0 +1,20 @@
+===-------------------------------------------------------------------------===
+                          ... Statistics Collected ...
+===-------------------------------------------------------------------------===
+
+ 223 asm-printer  - Number of machine instrs printed
+   1 isel         - Number of blocks selected using DAG
+2693 isel         - Number of times dag isel has to try another path
+  40 pei          - Number of bytes used for stack in all functions
+  12 regalloc     - Number of cross class joins performed
+   1 regalloc     - Number of identity moves eliminated after rewriting
+  16 regalloc     - Number of interferences evicted
+ 155 regalloc     - Number of interval joins performed
+  16 regalloc     - Number of new live ranges queued
+  72 regalloc     - Number of registers assigned
+  16 regalloc     - Number of registers unassigned
+  18 twoaddrinstr - Number of instructions aggressively commuted
+  46 twoaddrinstr - Number of instructions commuted to coalesce
+  32 twoaddrinstr - Number of instructions promoted to 3-address
+ 187 twoaddrinstr - Number of two-address instructions
+

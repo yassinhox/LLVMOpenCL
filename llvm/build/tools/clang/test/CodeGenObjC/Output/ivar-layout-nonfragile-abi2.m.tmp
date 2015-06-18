@@ -1,0 +1,187 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/ivar-layout-nonfragile-abi2.m'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%0 = type opaque
+%struct._objc_cache = type opaque
+%struct._class_t = type { %struct._class_t*, %struct._class_t*, %struct._objc_cache*, i8* (i8*, i8*)**, %struct._class_ro_t* }
+%struct._class_ro_t = type { i32, i32, i32, i8*, i8*, %struct.__method_list_t*, %struct._objc_protocol_list*, %struct._ivar_list_t*, i8*, %struct._prop_list_t* }
+%struct.__method_list_t = type { i32, i32, [0 x %struct._objc_method] }
+%struct._objc_method = type { i8*, i8*, i8* }
+%struct._objc_protocol_list = type { i64, [0 x %struct._protocol_t*] }
+%struct._protocol_t = type { i8*, i8*, %struct._objc_protocol_list*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct._prop_list_t*, i32, i32, i8** }
+%struct._prop_list_t = type { i32, i32, [0 x %struct._prop_t] }
+%struct._prop_t = type { i8*, i8* }
+%struct._ivar_list_t = type { i32, i32, [0 x %struct._ivar_t] }
+%struct._ivar_t = type { i64*, i8*, i8*, i32, i32 }
+
+@"OBJC_IVAR_$_A.ivar_a" = global i64 1, section "__DATA, __objc_ivar", align 8
+@"OBJC_IVAR_$_A.ivar_ext_a" = global i64 4, section "__DATA, __objc_ivar", align 8
+@"OBJC_IVAR_$_A.ivar_ext2_a" = global i64 2, section "__DATA, __objc_ivar", align 8
+@_objc_empty_cache = external global %struct._objc_cache
+@_objc_empty_vtable = external global i8* (i8*, i8*)*
+@"OBJC_METACLASS_$_Super" = external global %struct._class_t
+@"\01L_OBJC_CLASS_NAME_" = internal global [2 x i8] c"A\00", section "__TEXT,__objc_classname,cstring_literals", align 1
+@"\01l_OBJC_METACLASS_RO_$_A" = internal global %struct._class_ro_t { i32 1, i32 40, i32 40, i8* null, i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct.__method_list_t* null, %struct._objc_protocol_list* null, %struct._ivar_list_t* null, i8* null, %struct._prop_list_t* null }, section "__DATA, __objc_const", align 8
+@"OBJC_METACLASS_$_A" = global %struct._class_t { %struct._class_t* @"OBJC_METACLASS_$_Super", %struct._class_t* @"OBJC_METACLASS_$_Super", %struct._objc_cache* @_objc_empty_cache, i8* (i8*, i8*)** @_objc_empty_vtable, %struct._class_ro_t* @"\01l_OBJC_METACLASS_RO_$_A" }, section "__DATA, __objc_data", align 8
+@"OBJC_CLASS_$_Super" = external global %struct._class_t
+@"\01L_OBJC_METH_VAR_NAME_" = internal global [7 x i8] c"ivar_a\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_" = internal global [3 x i8] c"b5\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_NAME_1" = internal global [12 x i8] c"ivar_ext2_a\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"OBJC_IVAR_$_A.ivar_ext2_b" = global i64 2, section "__DATA, __objc_ivar", align 8
+@"\01L_OBJC_METH_VAR_NAME_2" = internal global [12 x i8] c"ivar_ext2_b\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_NAME_3" = internal global [11 x i8] c"ivar_ext_a\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"OBJC_IVAR_$_A.ivar_ext_b" = global i64 4, section "__DATA, __objc_ivar", align 8
+@"\01L_OBJC_METH_VAR_NAME_4" = internal global [11 x i8] c"ivar_ext_b\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"OBJC_IVAR_$_A.ivar_b" = global i64 6, section "__DATA, __objc_ivar", align 8
+@"\01L_OBJC_METH_VAR_NAME_5" = internal global [7 x i8] c"ivar_b\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"OBJC_IVAR_$_A.ivar_c" = global i64 6, section "__DATA, __objc_ivar", align 8
+@"\01L_OBJC_METH_VAR_NAME_6" = internal global [7 x i8] c"ivar_c\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"OBJC_IVAR_$_A.ivar_d" = global i64 7, section "__DATA, __objc_ivar", align 8
+@"\01L_OBJC_METH_VAR_NAME_7" = internal global [7 x i8] c"ivar_d\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01l_OBJC_$_INSTANCE_VARIABLES_A" = internal global { i32, i32, [8 x %struct._ivar_t] } { i32 32, i32 8, [8 x %struct._ivar_t] [%struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_a", i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_ext2_a", i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_1", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_ext2_b", i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_2", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_ext_a", i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_3", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_ext_b", i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_4", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_b", i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_5", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_c", i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_6", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_A.ivar_d", i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_7", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i32 2, i32 4 }] }, section "__DATA, __objc_const", align 8
+@"\01l_OBJC_CLASS_RO_$_A" = internal global %struct._class_ro_t { i32 0, i32 1, i32 8, i8* null, i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct.__method_list_t* null, %struct._objc_protocol_list* null, %struct._ivar_list_t* bitcast ({ i32, i32, [8 x %struct._ivar_t] }* @"\01l_OBJC_$_INSTANCE_VARIABLES_A" to %struct._ivar_list_t*), i8* null, %struct._prop_list_t* null }, section "__DATA, __objc_const", align 8
+@"OBJC_CLASS_$_A" = global %struct._class_t { %struct._class_t* @"OBJC_METACLASS_$_A", %struct._class_t* @"OBJC_CLASS_$_Super", %struct._objc_cache* @_objc_empty_cache, i8* (i8*, i8*)** @_objc_empty_vtable, %struct._class_ro_t* @"\01l_OBJC_CLASS_RO_$_A" }, section "__DATA, __objc_data", align 8
+@"\01L_OBJC_LABEL_CLASS_$" = internal global [1 x i8*] [i8* bitcast (%struct._class_t* @"OBJC_CLASS_$_A" to i8*)], section "__DATA, __objc_classlist, regular, no_dead_strip", align 8
+@llvm.used = appending global [12 x i8*] [i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_", i32 0, i32 0), i8* getelementptr inbounds ([3 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_1", i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_2", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_3", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_4", i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_5", i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_6", i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @"\01L_OBJC_METH_VAR_NAME_7", i32 0, i32 0), i8* bitcast ({ i32, i32, [8 x %struct._ivar_t] }* @"\01l_OBJC_$_INSTANCE_VARIABLES_A" to i8*), i8* bitcast ([1 x i8*]* @"\01L_OBJC_LABEL_CLASS_$" to i8*)], section "llvm.metadata"
+
+define i32 @_Z2f0P1A(%0* %a) nounwind {
+entry:
+  %a.addr = alloca %0*, align 8
+  store %0* %a, %0** %a.addr, align 8
+  %0 = load %0** %a.addr, align 8
+  %ivar = load i64* @"OBJC_IVAR_$_A.ivar_a", !invariant.load !4
+  %1 = bitcast %0* %0 to i8*
+  %add.ptr = getelementptr inbounds i8* %1, i64 %ivar
+  %2 = bitcast i8* %add.ptr to i32*
+  %3 = bitcast i32* %2 to i16*
+  %4 = load i16* %3, align 1
+  %bf.clear = and i16 %4, 31
+  %5 = zext i16 %bf.clear to i32
+  %6 = shl i32 %5, 27
+  %bf.val.sext = ashr i32 %6, 27
+  ret i32 %bf.val.sext
+}
+
+define i32 @_Z2f1P1A(%0* %a) nounwind {
+entry:
+  %a.addr = alloca %0*, align 8
+  store %0* %a, %0** %a.addr, align 8
+  %0 = load %0** %a.addr, align 8
+  %ivar = load i64* @"OBJC_IVAR_$_A.ivar_ext_a", !invariant.load !4
+  %1 = bitcast %0* %0 to i8*
+  %add.ptr = getelementptr inbounds i8* %1, i64 %ivar
+  %2 = bitcast i8* %add.ptr to i32*
+  %3 = bitcast i32* %2 to i16*
+  %4 = load i16* %3, align 1
+  %bf.clear = and i16 %4, 31
+  %5 = zext i16 %bf.clear to i32
+  %6 = shl i32 %5, 27
+  %bf.val.sext = ashr i32 %6, 27
+  %7 = load %0** %a.addr, align 8
+  %ivar1 = load i64* @"OBJC_IVAR_$_A.ivar_a", !invariant.load !4
+  %8 = bitcast %0* %7 to i8*
+  %add.ptr2 = getelementptr inbounds i8* %8, i64 %ivar1
+  %9 = bitcast i8* %add.ptr2 to i32*
+  %10 = bitcast i32* %9 to i16*
+  %11 = load i16* %10, align 1
+  %bf.clear3 = and i16 %11, 31
+  %12 = zext i16 %bf.clear3 to i32
+  %13 = shl i32 %12, 27
+  %bf.val.sext4 = ashr i32 %13, 27
+  %add = add nsw i32 %bf.val.sext, %bf.val.sext4
+  ret i32 %add
+}
+
+define i32 @_Z2f2P1A(%0* %a) nounwind {
+entry:
+  %a.addr = alloca %0*, align 8
+  store %0* %a, %0** %a.addr, align 8
+  %0 = load %0** %a.addr, align 8
+  %ivar = load i64* @"OBJC_IVAR_$_A.ivar_ext2_a", !invariant.load !4
+  %1 = bitcast %0* %0 to i8*
+  %add.ptr = getelementptr inbounds i8* %1, i64 %ivar
+  %2 = bitcast i8* %add.ptr to i32*
+  %3 = load i32* %2, align 1
+  %bf.clear = and i32 %3, 31
+  %4 = shl i32 %bf.clear, 27
+  %bf.val.sext = ashr i32 %4, 27
+  %5 = load %0** %a.addr, align 8
+  %ivar1 = load i64* @"OBJC_IVAR_$_A.ivar_ext_a", !invariant.load !4
+  %6 = bitcast %0* %5 to i8*
+  %add.ptr2 = getelementptr inbounds i8* %6, i64 %ivar1
+  %7 = bitcast i8* %add.ptr2 to i32*
+  %8 = load i32* %7, align 1
+  %bf.clear3 = and i32 %8, 31
+  %9 = shl i32 %bf.clear3, 27
+  %bf.val.sext4 = ashr i32 %9, 27
+  %add = add nsw i32 %bf.val.sext, %bf.val.sext4
+  %10 = load %0** %a.addr, align 8
+  %ivar5 = load i64* @"OBJC_IVAR_$_A.ivar_a", !invariant.load !4
+  %11 = bitcast %0* %10 to i8*
+  %add.ptr6 = getelementptr inbounds i8* %11, i64 %ivar5
+  %12 = bitcast i8* %add.ptr6 to i32*
+  %13 = load i32* %12, align 1
+  %bf.clear7 = and i32 %13, 31
+  %14 = shl i32 %bf.clear7, 27
+  %bf.val.sext8 = ashr i32 %14, 27
+  %add9 = add nsw i32 %add, %bf.val.sext8
+  ret i32 %add9
+}
+
+define i32 @_Z2f3P1A(%0* %a) nounwind {
+entry:
+  %a.addr = alloca %0*, align 8
+  store %0* %a, %0** %a.addr, align 8
+  %0 = load %0** %a.addr, align 8
+  %ivar = load i64* @"OBJC_IVAR_$_A.ivar_d", !invariant.load !4
+  %1 = bitcast %0* %0 to i8*
+  %add.ptr = getelementptr inbounds i8* %1, i64 %ivar
+  %2 = bitcast i8* %add.ptr to i32*
+  %3 = bitcast i32* %2 to i8*
+  %4 = load i8* %3, align 1
+  %5 = lshr i8 %4, 2
+  %bf.clear = and i8 %5, 31
+  %6 = zext i8 %bf.clear to i32
+  %7 = shl i32 %6, 27
+  %bf.val.sext = ashr i32 %7, 27
+  %8 = load %0** %a.addr, align 8
+  %ivar1 = load i64* @"OBJC_IVAR_$_A.ivar_ext2_a", !invariant.load !4
+  %9 = bitcast %0* %8 to i8*
+  %add.ptr2 = getelementptr inbounds i8* %9, i64 %ivar1
+  %10 = bitcast i8* %add.ptr2 to i32*
+  %11 = load i32* %10, align 1
+  %bf.clear3 = and i32 %11, 31
+  %12 = shl i32 %bf.clear3, 27
+  %bf.val.sext4 = ashr i32 %12, 27
+  %add = add nsw i32 %bf.val.sext, %bf.val.sext4
+  %13 = load %0** %a.addr, align 8
+  %ivar5 = load i64* @"OBJC_IVAR_$_A.ivar_ext_a", !invariant.load !4
+  %14 = bitcast %0* %13 to i8*
+  %add.ptr6 = getelementptr inbounds i8* %14, i64 %ivar5
+  %15 = bitcast i8* %add.ptr6 to i32*
+  %16 = load i32* %15, align 1
+  %bf.clear7 = and i32 %16, 31
+  %17 = shl i32 %bf.clear7, 27
+  %bf.val.sext8 = ashr i32 %17, 27
+  %add9 = add nsw i32 %add, %bf.val.sext8
+  %18 = load %0** %a.addr, align 8
+  %ivar10 = load i64* @"OBJC_IVAR_$_A.ivar_a", !invariant.load !4
+  %19 = bitcast %0* %18 to i8*
+  %add.ptr11 = getelementptr inbounds i8* %19, i64 %ivar10
+  %20 = bitcast i8* %add.ptr11 to i32*
+  %21 = load i32* %20, align 1
+  %bf.clear12 = and i32 %21, 31
+  %22 = shl i32 %bf.clear12, 27
+  %bf.val.sext13 = ashr i32 %22, 27
+  %add14 = add nsw i32 %add9, %bf.val.sext13
+  ret i32 %add14
+}
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 2}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__DATA, __objc_imageinfo, regular, no_dead_strip"}
+!3 = metadata !{i32 4, metadata !"Objective-C Garbage Collection", i32 0}
+!4 = metadata !{}

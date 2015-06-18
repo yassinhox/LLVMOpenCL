@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin10 -fsyntax-only -Xclang -verify -std=c89 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Headers/c89.c

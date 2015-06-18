@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=x86 -mcpu=atom </home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inlineasm-sched-bug.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inlineasm-sched-bug.ll

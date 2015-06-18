@@ -1,0 +1,2 @@
+error: PCH file was compiled for the target 'x86_64-apple-darwin9' but the current translation unit is being compiled for target 'x86_64-unknown-freebsd7.0'
+1 error generated.

@@ -1,0 +1,189 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/mandel.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@accum = common global { double, double } zeroinitializer, align 8
+
+define void @mandel() nounwind {
+entry:
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %n = alloca i32, align 4
+  %c = alloca { double, double }, align 8
+  %z = alloca { double, double }, align 8
+  store i32 0, i32* %y, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc56, %entry
+  %0 = load i32* %y, align 4
+  %cmp = icmp slt i32 %0, 50
+  br i1 %cmp, label %for.body, label %for.end58
+
+for.body:                                         ; preds = %for.cond
+  store i32 0, i32* %x, align 4
+  br label %for.cond1
+
+for.cond1:                                        ; preds = %for.inc52, %for.body
+  %1 = load i32* %x, align 4
+  %cmp2 = icmp slt i32 %1, 150
+  br i1 %cmp2, label %for.body3, label %for.end54
+
+for.body3:                                        ; preds = %for.cond1
+  %2 = load i32* %x, align 4
+  %conv = sitofp i32 %2 to double
+  %mul = fmul double %conv, 0x3F9529A485CD7B90
+  %add = fadd double -2.100000e+00, %mul
+  %3 = load i32* %y, align 4
+  %conv4 = sitofp i32 %3 to double
+  %mul5 = fmul double %conv4, 5.000000e-02
+  %add6 = fadd double -1.250000e+00, %mul5
+  %mul.rl = fmul double %add6, 0.000000e+00
+  %mul.r = fsub double %mul.rl, 0.000000e+00
+  %mul.ir = fmul double %add6, 1.000000e+00
+  %mul.i = fadd double 0.000000e+00, %mul.ir
+  %add.r = fadd double %add, %mul.r
+  %add.i = fadd double 0.000000e+00, %mul.i
+  %real = getelementptr inbounds { double, double }* %c, i32 0, i32 0
+  %imag = getelementptr inbounds { double, double }* %c, i32 0, i32 1
+  store double %add.r, double* %real
+  store double %add.i, double* %imag
+  %real7 = getelementptr inbounds { double, double }* %z, i32 0, i32 0
+  %imag8 = getelementptr inbounds { double, double }* %z, i32 0, i32 1
+  store double 0.000000e+00, double* %real7
+  store double 0.000000e+00, double* %imag8
+  store i32 0, i32* %n, align 4
+  br label %for.cond9
+
+for.cond9:                                        ; preds = %for.inc, %for.body3
+  %4 = load i32* %n, align 4
+  %cmp10 = icmp slt i32 %4, 100
+  br i1 %cmp10, label %for.body12, label %for.end
+
+for.body12:                                       ; preds = %for.cond9
+  %z.realp = getelementptr inbounds { double, double }* %z, i32 0, i32 0
+  %z.real = load double* %z.realp
+  %z.imagp = getelementptr inbounds { double, double }* %z, i32 0, i32 1
+  %z.imag = load double* %z.imagp
+  %z.realp13 = getelementptr inbounds { double, double }* %z, i32 0, i32 0
+  %z.real14 = load double* %z.realp13
+  %z.imagp15 = getelementptr inbounds { double, double }* %z, i32 0, i32 1
+  %z.imag16 = load double* %z.imagp15
+  %mul.rl17 = fmul double %z.real, %z.real14
+  %mul.rr = fmul double %z.imag, %z.imag16
+  %mul.r18 = fsub double %mul.rl17, %mul.rr
+  %mul.il = fmul double %z.imag, %z.real14
+  %mul.ir19 = fmul double %z.real, %z.imag16
+  %mul.i20 = fadd double %mul.il, %mul.ir19
+  %c.realp = getelementptr inbounds { double, double }* %c, i32 0, i32 0
+  %c.real = load double* %c.realp
+  %c.imagp = getelementptr inbounds { double, double }* %c, i32 0, i32 1
+  %c.imag = load double* %c.imagp
+  %add.r21 = fadd double %mul.r18, %c.real
+  %add.i22 = fadd double %mul.i20, %c.imag
+  %real23 = getelementptr inbounds { double, double }* %z, i32 0, i32 0
+  %imag24 = getelementptr inbounds { double, double }* %z, i32 0, i32 1
+  store double %add.r21, double* %real23
+  store double %add.i22, double* %imag24
+  %idx = getelementptr inbounds { double, double }* %z, i32 0, i32 0
+  %5 = load double* %idx
+  %idx25 = getelementptr inbounds { double, double }* %z, i32 0, i32 1
+  %6 = load double* %idx25
+  %call = call i32 (...)* @hypot(double %5, double %6)
+  %cmp26 = icmp sge i32 %call, 2
+  br i1 %cmp26, label %if.then, label %if.end
+
+if.then:                                          ; preds = %for.body12
+  br label %for.end
+
+if.end:                                           ; preds = %for.body12
+  br label %for.inc
+
+for.inc:                                          ; preds = %if.end
+  %7 = load i32* %n, align 4
+  %inc = add nsw i32 %7, 1
+  store i32 %inc, i32* %n, align 4
+  br label %for.cond9
+
+for.end:                                          ; preds = %if.then, %for.cond9
+  %8 = load i32* %n, align 4
+  %cmp28 = icmp eq i32 %8, 100
+  br i1 %cmp28, label %if.then30, label %if.else
+
+if.then30:                                        ; preds = %for.end
+  %call31 = call i32 @putchar(i8 signext 32)
+  br label %if.end51
+
+if.else:                                          ; preds = %for.end
+  %9 = load i32* %n, align 4
+  %cmp32 = icmp sgt i32 %9, 6
+  br i1 %cmp32, label %if.then34, label %if.else36
+
+if.then34:                                        ; preds = %if.else
+  %call35 = call i32 @putchar(i8 signext 46)
+  br label %if.end50
+
+if.else36:                                        ; preds = %if.else
+  %10 = load i32* %n, align 4
+  %cmp37 = icmp sgt i32 %10, 3
+  br i1 %cmp37, label %if.then39, label %if.else41
+
+if.then39:                                        ; preds = %if.else36
+  %call40 = call i32 @putchar(i8 signext 43)
+  br label %if.end49
+
+if.else41:                                        ; preds = %if.else36
+  %11 = load i32* %n, align 4
+  %cmp42 = icmp sgt i32 %11, 2
+  br i1 %cmp42, label %if.then44, label %if.else46
+
+if.then44:                                        ; preds = %if.else41
+  %call45 = call i32 @putchar(i8 signext 120)
+  br label %if.end48
+
+if.else46:                                        ; preds = %if.else41
+  %call47 = call i32 @putchar(i8 signext 42)
+  br label %if.end48
+
+if.end48:                                         ; preds = %if.else46, %if.then44
+  br label %if.end49
+
+if.end49:                                         ; preds = %if.end48, %if.then39
+  br label %if.end50
+
+if.end50:                                         ; preds = %if.end49, %if.then34
+  br label %if.end51
+
+if.end51:                                         ; preds = %if.end50, %if.then30
+  br label %for.inc52
+
+for.inc52:                                        ; preds = %if.end51
+  %12 = load i32* %x, align 4
+  %inc53 = add nsw i32 %12, 1
+  store i32 %inc53, i32* %x, align 4
+  br label %for.cond1
+
+for.end54:                                        ; preds = %for.cond1
+  %call55 = call i32 @putchar(i8 signext 10)
+  br label %for.inc56
+
+for.inc56:                                        ; preds = %for.end54
+  %13 = load i32* %y, align 4
+  %inc57 = add nsw i32 %13, 1
+  store i32 %inc57, i32* %y, align 4
+  br label %for.cond
+
+for.end58:                                        ; preds = %for.cond
+  ret void
+}
+
+declare i32 @hypot(...)
+
+declare i32 @putchar(i8 signext)
+
+define i32 @main() nounwind {
+entry:
+  %retval = alloca i32, align 4
+  store i32 0, i32* %retval
+  call void @mandel()
+  ret i32 0
+}

@@ -1,0 +1,64 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/attr-weakref2.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i386--linux-gnu"
+
+@test1_f = extern_weak global i32
+@test2_f = common global i32 0, align 4
+@test3_f = external global i32
+@test4_f = common global i32 0, align 4
+@test5_f = external global i32
+@test6_f = extern_weak global i32
+
+define i32 @test1_h() nounwind {
+entry:
+  %0 = load i32* @test1_f, align 4
+  ret i32 %0
+}
+
+define i32 @test2_h() nounwind {
+entry:
+  %0 = load i32* @test2_f, align 4
+  ret i32 %0
+}
+
+define i32 @test3_foo() nounwind {
+entry:
+  %0 = load i32* @test3_f, align 4
+  ret i32 %0
+}
+
+define i32 @test3_h() nounwind {
+entry:
+  %0 = load i32* @test3_f, align 4
+  ret i32 %0
+}
+
+define i32 @test4_h() nounwind {
+entry:
+  %0 = load i32* @test4_f, align 4
+  ret i32 %0
+}
+
+define i32 @test5_h() nounwind {
+entry:
+  %0 = load i32* @test5_f, align 4
+  ret i32 %0
+}
+
+define i32 @test5_foo() nounwind {
+entry:
+  %0 = load i32* @test5_f, align 4
+  ret i32 %0
+}
+
+define i32 @test6_h() nounwind {
+entry:
+  %0 = load i32* @test6_f, align 4
+  ret i32 %0
+}
+
+define i32 @test6_foo() nounwind {
+entry:
+  %0 = load i32* @test6_f, align 4
+  ret i32 %0
+}

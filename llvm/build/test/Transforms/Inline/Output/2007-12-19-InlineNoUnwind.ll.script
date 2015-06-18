@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/2007-12-19-InlineNoUnwind.ll -inline -S | grep nounwind &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/2007-12-19-InlineNoUnwind.ll -inline -S | grep unreachable

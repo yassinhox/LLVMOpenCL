@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel -mcpu=mips32 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/eh-dwarf-cfa.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/eh-dwarf-cfa.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips64el -mcpu=mips64 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/eh-dwarf-cfa.ll |       /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/eh-dwarf-cfa.ll -check-prefix=CHECK-MIPS64

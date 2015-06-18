@@ -1,0 +1,5 @@
+; ModuleID = '<stdin>'
+
+define i32 @result() {
+  ret i32 5
+}

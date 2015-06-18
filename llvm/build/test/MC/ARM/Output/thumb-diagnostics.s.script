@@ -1,0 +1,4 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple=thumbv6-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb-diagnostics.s 2> /home/jazouani/llvm/build/test/MC/ARM/Output/thumb-diagnostics.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CHECK-ERRORS < /home/jazouani/llvm/build/test/MC/ARM/Output/thumb-diagnostics.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb-diagnostics.s &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple=thumbv5-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb-diagnostics.s 2> /home/jazouani/llvm/build/test/MC/ARM/Output/thumb-diagnostics.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CHECK-ERRORS-V5 < /home/jazouani/llvm/build/test/MC/ARM/Output/thumb-diagnostics.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb-diagnostics.s

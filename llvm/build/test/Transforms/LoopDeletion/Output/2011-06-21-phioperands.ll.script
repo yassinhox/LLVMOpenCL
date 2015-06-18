@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopDeletion/2011-06-21-phioperands.ll -loop-deletion -disable-output

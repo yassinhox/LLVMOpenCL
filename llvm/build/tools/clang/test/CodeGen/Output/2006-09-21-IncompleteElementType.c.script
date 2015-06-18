@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2006-09-21-IncompleteElementType.c -emit-llvm -o /dev/null

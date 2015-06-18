@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ArgumentPromotion/byval-2.ll -argpromotion -S | grep -F "i32* byval" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

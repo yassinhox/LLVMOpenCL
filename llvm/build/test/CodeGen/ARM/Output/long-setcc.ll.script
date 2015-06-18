@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/long-setcc.ll -march=arm | grep cmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

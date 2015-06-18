@@ -1,0 +1,2 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-enums.c:11:1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-enums.c | FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-enums.c &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-enums.c:12:8 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-enums.c | FileCheck -check-prefix=CHECK-CC2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-enums.c

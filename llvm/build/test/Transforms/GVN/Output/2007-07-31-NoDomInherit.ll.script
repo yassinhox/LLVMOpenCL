@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/2007-07-31-NoDomInherit.ll -basicaa -gvn -S | grep "tmp47 = phi i32 "

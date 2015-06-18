@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Verifier/2010-08-07-PointerIntrinsic.ll 2> /home/jazouani/llvm/build/test/Verifier/Output/2010-08-07-PointerIntrinsic.ll.tmp &&
+grep "Broken module" /home/jazouani/llvm/build/test/Verifier/Output/2010-08-07-PointerIntrinsic.ll.tmp

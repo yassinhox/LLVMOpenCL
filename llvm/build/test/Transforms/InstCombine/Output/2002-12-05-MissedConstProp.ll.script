@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2002-12-05-MissedConstProp.ll -instcombine -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep add

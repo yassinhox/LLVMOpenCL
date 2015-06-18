@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  -march=mipsel -mcpu=mips16 -relocation-model=pic -O3 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/srl1.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/srl1.ll -check-prefix=16

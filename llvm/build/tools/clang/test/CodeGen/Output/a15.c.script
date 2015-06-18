@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target armv7-none-linux-gnueabi -mcpu=cortex-a15 -emit-llvm -S /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/a15.c  -o /dev/null

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-ar t /home/jazouani/llvm/llvm-3.2/test/Archive/xpg4.a | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Archive/toc_xpg4.ll

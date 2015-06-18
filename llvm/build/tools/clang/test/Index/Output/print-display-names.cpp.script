@@ -1,0 +1,1 @@
+c-index-test -test-load-source all-display /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/print-display-names.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/print-display-names.cpp

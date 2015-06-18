@@ -1,0 +1,5 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp &&
+mkdir /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp &&
+echo '[{"directory":".","command":"clang++ -c /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp/test.cpp","file":"/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp/test.cpp"}]' | sed -e 's/\\/\//g' > /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp/compile_commands.json &&
+cp "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/clang-check.cpp" "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp/test.cpp" &&
+clang-check -p "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp" "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check.cpp.tmp/test.cpp" 2>&1|FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/clang-check.cpp

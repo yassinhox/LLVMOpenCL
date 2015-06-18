@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/misched-new.ll -march=x86-64 -mcpu=core2 -x86-early-ifcvt -enable-misched           -misched=shuffle -misched-bottomup -verify-machineinstrs      | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/misched-new.ll

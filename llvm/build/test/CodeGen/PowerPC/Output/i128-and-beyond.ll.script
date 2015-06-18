@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/i128-and-beyond.ll -march=ppc32 | grep 4294967295 | /home/jazouani/llvm/build/Release+Asserts/bin/count 28

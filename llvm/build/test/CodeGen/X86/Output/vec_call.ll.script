@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_call.ll -mcpu=generic -march=x86 -mattr=+sse2 -mtriple=i686-apple-darwin8 |    grep "subl.*60" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_call.ll -mcpu=generic -march=x86 -mattr=+sse2 -mtriple=i686-apple-darwin8 |    grep "movaps.*32"

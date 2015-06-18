@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/BitsInitOverflow.td 2> /dev/null

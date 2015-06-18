@@ -1,0 +1,13 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm -triple i686-apple-darwin8 -fobjc-runtime=macosx-fragile-10.5 -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/protocols-lazy.m &&
+grep OBJC_PROTOCOL_P0 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 0 &&
+grep OBJC_PROTOCOL_P1 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 0 &&
+grep OBJC_PROTOCOL_P2 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3 &&
+grep OBJC_PROTOCOL_INSTANCE_METHODS_P2 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3 &&
+grep OBJC_PROTOCOL_P3 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3 &&
+grep OBJC_PROTOCOL_INSTANCE_METHODS_P3 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 0 &&
+grep OBJC_PROTOCOL_P4 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3 &&
+grep OBJC_PROTOCOL_INSTANCE_METHODS_P4 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3 &&
+grep OBJC_PROTOCOL_P5 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3 &&
+grep OBJC_PROTOCOL_INSTANCE_METHODS_P5 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3 &&
+grep OBJC_PROTOCOL_P6 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 4 &&
+grep OBJC_PROTOCOL_INSTANCE_METHODS_P6 /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/protocols-lazy.m.tmp | count 3

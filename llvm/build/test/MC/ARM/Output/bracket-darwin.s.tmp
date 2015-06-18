@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/ARM/bracket-darwin.s:5:7: error: brackets expression not supported on this target
+.byte   [4-3]
+        ^

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O1 -march=arm -mattr=+vfp2 -mtriple=arm-linux-gnueabi < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2009-09-09-fpcmp-ole.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2009-09-09-fpcmp-ole.ll

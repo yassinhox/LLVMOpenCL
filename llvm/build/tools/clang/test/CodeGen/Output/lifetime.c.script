@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -emit-llvm -o - -O0 /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c -check-prefix=O0 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -emit-llvm -o - -O1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c -check-prefix=O1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -emit-llvm -o - -O2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c -check-prefix=O2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -emit-llvm -o - -O3 /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/lifetime.c -check-prefix=O3

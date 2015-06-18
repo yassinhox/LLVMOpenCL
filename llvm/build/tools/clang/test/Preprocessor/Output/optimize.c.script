@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -Eonly /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/optimize.c -DOPT_O2 -O2 -verify &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -Eonly /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/optimize.c -DOPT_O0 -O0 -verify &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -Eonly /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/optimize.c -DOPT_OS -Os -verify

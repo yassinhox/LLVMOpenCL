@@ -1,0 +1,2 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-stringify.c:11:11 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-stringify.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-stringify.c &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-stringify.c:12:11 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-stringify.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-stringify.c

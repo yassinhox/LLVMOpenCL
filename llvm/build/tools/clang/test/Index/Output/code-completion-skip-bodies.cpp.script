@@ -1,0 +1,1 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/code-completion-skip-bodies.cpp:11:6 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/code-completion-skip-bodies.cpp 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/code-completion-skip-bodies.cpp

@@ -1,0 +1,2 @@
+c-index-test -test-load-source all -fno-delayed-template-parsing /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-templates.cpp | FileCheck -check-prefix=CHECK-LOAD /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-templates.cpp &&
+c-index-test -test-load-source-usrs all -fno-delayed-template-parsing /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-templates.cpp | FileCheck -check-prefix=CHECK-USRS /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-templates.cpp

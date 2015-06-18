@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -loop-simplify -disable-output -verify-loop-info -verify-dom-info < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopSimplify/unreachable-loop-pred.ll

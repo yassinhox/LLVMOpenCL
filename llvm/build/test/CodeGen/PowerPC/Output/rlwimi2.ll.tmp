@@ -1,0 +1,23 @@
+	.file	"<stdin>"
+	.text
+	.globl	test1
+	.align	2
+	.type	test1,@function
+test1:                                  # @test1
+# BB#0:                                 # %entry
+	andi. 6, 3, 31775
+	andi. 7, 4, 31775
+	rlwimi 6, 3, 15, 7, 11
+	rlwimi 7, 4, 15, 7, 11
+	subfic 3, 5, 32
+	mullw 4, 6, 5
+	mullw 3, 7, 3
+	add 4, 3, 4
+	srwi 3, 4, 5
+	andi. 3, 3, 31775
+	rlwimi 3, 4, 12, 22, 26
+	blr 
+.Ltmp0:
+	.size	test1, .Ltmp0-test1
+
+

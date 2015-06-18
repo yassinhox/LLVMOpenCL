@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Other/2006-02-05-PassManager.ll -domtree -gvn -domtree -constmerge -disable-output

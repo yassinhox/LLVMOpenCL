@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -simplifycfg < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/trap-debugloc.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/trap-debugloc.ll

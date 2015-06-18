@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/ELF/diff2.s:13:9: error: expected relocatable expression
+        mov zed+(bar-foo), %eax
+        ^

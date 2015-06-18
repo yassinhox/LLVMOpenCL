@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/linknamedmdnode.ll > /home/jazouani/llvm/build/test/Linker/Output/linknamedmdnode.ll.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/linknamedmdnode2.ll > /home/jazouani/llvm/build/test/Linker/Output/linknamedmdnode.ll.tmp2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/linknamedmdnode.ll.tmp.bc /home/jazouani/llvm/build/test/Linker/Output/linknamedmdnode.ll.tmp2.bc -S | grep "!llvm.stuff = !{!0, !1}"

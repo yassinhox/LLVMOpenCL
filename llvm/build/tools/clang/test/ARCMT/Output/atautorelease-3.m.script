@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple x86_64-apple-darwin10 -fsyntax-only -fobjc-arc -x objective-c /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/atautorelease-3.m.result &&
+arcmt-test --args -triple x86_64-apple-darwin10 -fsyntax-only -x objective-c /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/atautorelease-3.m > /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/atautorelease-3.m.tmp &&
+diff /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/atautorelease-3.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/atautorelease-3.m.result

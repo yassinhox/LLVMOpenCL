@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/half-constprop.ll | /home/jazouani/llvm/build/Release+Asserts/bin/opt -O3 | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Assembler/half-constprop.ll

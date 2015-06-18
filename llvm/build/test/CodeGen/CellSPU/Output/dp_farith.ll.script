@@ -1,0 +1,7 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/dp_farith.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/dp_farith.ll.tmp1.s &&
+grep dfa    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/dp_farith.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep dfs    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/dp_farith.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep dfm    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/dp_farith.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep dfma   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/dp_farith.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep dfms   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/dp_farith.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep dfnms  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/dp_farith.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2007-03-19-NegValue.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "add i65.*, -1"

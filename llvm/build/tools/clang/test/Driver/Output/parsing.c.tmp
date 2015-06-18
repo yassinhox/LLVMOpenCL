@@ -1,0 +1,3 @@
+clang: warning: unknown warning option '-Wally'; did you mean '-Wall'?
+Option 0 - Name: "-ccc-print-options", Values: {}
+Option 1 - Name: "-W", Values: {"ally"}

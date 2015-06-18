@@ -1,0 +1,3 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/expr_symbol_modifiers.s > /home/jazouani/llvm/build/test/MC/AsmParser/Output/expr_symbol_modifiers.s.tmp 2> /home/jazouani/llvm/build/test/MC/AsmParser/Output/expr_symbol_modifiers.s.tmp.err &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/MC/AsmParser/Output/expr_symbol_modifiers.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/expr_symbol_modifiers.s &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=CHECK-STDERR < /home/jazouani/llvm/build/test/MC/AsmParser/Output/expr_symbol_modifiers.s.tmp.err /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/expr_symbol_modifiers.s

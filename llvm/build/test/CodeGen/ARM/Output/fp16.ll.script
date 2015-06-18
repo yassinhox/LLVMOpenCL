@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fp16.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fp16.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mattr=+vfp3,+fp16 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fp16.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CHECK-FP16 /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fp16.ll

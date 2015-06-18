@@ -1,0 +1,118 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	rolq	%cl, %rdi
+	movq	%rdi, %rax
+	ret
+.Ltmp0:
+	.size	foo, .Ltmp0-foo
+
+	.globl	bar
+	.align	16, 0x90
+	.type	bar,@function
+bar:                                    # @bar
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	shldq	%cl, %rdi, %rsi
+	movq	%rsi, %rax
+	ret
+.Ltmp1:
+	.size	bar, .Ltmp1-bar
+
+	.globl	un
+	.align	16, 0x90
+	.type	un,@function
+un:                                     # @un
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	rorq	%cl, %rdi
+	movq	%rdi, %rax
+	ret
+.Ltmp2:
+	.size	un, .Ltmp2-un
+
+	.globl	bu
+	.align	16, 0x90
+	.type	bu,@function
+bu:                                     # @bu
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	shrdq	%cl, %rdi, %rsi
+	movq	%rsi, %rax
+	ret
+.Ltmp3:
+	.size	bu, .Ltmp3-bu
+
+	.globl	xfoo
+	.align	16, 0x90
+	.type	xfoo,@function
+xfoo:                                   # @xfoo
+# BB#0:                                 # %entry
+	rolq	$7, %rdi
+	movq	%rdi, %rax
+	ret
+.Ltmp4:
+	.size	xfoo, .Ltmp4-xfoo
+
+	.globl	xfoop
+	.align	16, 0x90
+	.type	xfoop,@function
+xfoop:                                  # @xfoop
+# BB#0:                                 # %entry
+	movq	(%rdi), %rax
+	rolq	$7, %rax
+	ret
+.Ltmp5:
+	.size	xfoop, .Ltmp5-xfoop
+
+	.globl	xbar
+	.align	16, 0x90
+	.type	xbar,@function
+xbar:                                   # @xbar
+# BB#0:                                 # %entry
+	shrdq	$57, %rsi, %rdi
+	movq	%rdi, %rax
+	ret
+.Ltmp6:
+	.size	xbar, .Ltmp6-xbar
+
+	.globl	xun
+	.align	16, 0x90
+	.type	xun,@function
+xun:                                    # @xun
+# BB#0:                                 # %entry
+	rolq	$57, %rdi
+	movq	%rdi, %rax
+	ret
+.Ltmp7:
+	.size	xun, .Ltmp7-xun
+
+	.globl	xunp
+	.align	16, 0x90
+	.type	xunp,@function
+xunp:                                   # @xunp
+# BB#0:                                 # %entry
+	movq	(%rdi), %rax
+	rolq	$57, %rax
+	ret
+.Ltmp8:
+	.size	xunp, .Ltmp8-xunp
+
+	.globl	xbu
+	.align	16, 0x90
+	.type	xbu,@function
+xbu:                                    # @xbu
+# BB#0:                                 # %entry
+	shldq	$57, %rsi, %rdi
+	movq	%rdi, %rax
+	ret
+.Ltmp9:
+	.size	xbu, .Ltmp9-xbu
+
+
+	.section	".note.GNU-stack","",@progbits

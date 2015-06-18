@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -include /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/cxx-typeid.h -fsyntax-only -Xclang -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/cxx-typeid.cpp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-pch-is-pch -x c++-header -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/cxx-typeid.cpp.tmp.gch /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/cxx-typeid.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-pch-is-pch -include /home/jazouani/llvm/build/tools/clang/test/PCH/Output/cxx-typeid.cpp.tmp -fsyntax-only -Xclang -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/cxx-typeid.cpp

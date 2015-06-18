@@ -1,0 +1,22 @@
+	.file	"<stdin>"
+	.text
+	.globl	variable_union
+	.align	16, 0x90
+	.type	variable_union,@function
+variable_union:                         # @variable_union
+# BB#0:                                 # %entry
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	.align	16, 0x90
+.LBB0_1:                                # %68
+                                        # =>This Inner Loop Header: Depth=1
+	testb	%al, %al
+	jmp	.LBB0_1
+.Ltmp0:
+	.size	variable_union, .Ltmp0-variable_union
+
+
+	.section	".note.GNU-stack","",@progbits

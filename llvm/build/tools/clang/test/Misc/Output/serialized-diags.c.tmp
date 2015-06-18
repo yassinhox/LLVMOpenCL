@@ -1,0 +1,42 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:3:12: warning: variable 'voodoo' is uninitialized when used here [-Wuninitialized] [Semantic Issue]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:3:12 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:3:18
+Number FIXITs = 0
++-/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:2:13: note: initialize the variable 'voodoo' to silence this warning [] [Semantic Issue]
++-Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:2:13 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:2:13
+Number FIXITs = 1
++-FIXIT: (/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:2:13 - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:2:13): " = 0"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:8:22: error: expected ';' after expression [] [Parse Issue]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:8:22 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:8:22
+Number FIXITs = 1
+FIXIT: (/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:8:22 - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:8:22): ";"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:10: warning: equality comparison with extraneous parentheses [-Wparentheses-equality] [Semantic Issue]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:8 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:18
+Number FIXITs = 0
++-/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:10: note: remove extraneous parentheses around the comparison to silence this warning [] [Semantic Issue]
++-Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:8
++-Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:18 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:19
+Number FIXITs = 2
++-FIXIT: (/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:7 - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:8): ""
++-FIXIT: (/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:18 - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:19): ""
++-/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:10: note: use '=' to turn this equality comparison into an assignment [] [Semantic Issue]
++-Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:10 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:12
+Number FIXITs = 1
++-FIXIT: (/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:10 - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:14:12): "="
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:22:13: error: too many arguments to function call, expected 2, have 3 [] [Semantic Issue]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:22:3 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:22:6
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:22:13 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:22:18
+Number FIXITs = 0
++-/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:20:15: note: expanded from macro 'false' [] []
++-Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:22:3 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:22:6
++-Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:20:15 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:20:16
+Number FIXITs = 0
++-/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:19:1: note: 'taz' declared here [] [Semantic Issue]
+Number FIXITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.h:5:7: warning: incompatible integer to pointer conversion initializing 'char *' with an expression of type 'int' [-Wint-conversion] [Value Conversion Issue]
+Range: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.h:5:16 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.h:5:17
+Number FIXITs = 0
++-/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:26:10: note: in file included from /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:26: [] []
+Number FIXITs = 0
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c:30:12: warning: unused variable 'x' [-Wunused-variable] [Unused Entity Issue]
+Number FIXITs = 0
+Number of diagnostics: 6

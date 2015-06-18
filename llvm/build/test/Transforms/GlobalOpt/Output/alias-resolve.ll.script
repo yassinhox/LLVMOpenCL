@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/alias-resolve.ll -globalopt -S > /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/alias-resolve.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/alias-resolve.ll.tmp | grep foo1 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+cat /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/alias-resolve.ll.tmp | grep foo2 | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+cat /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/alias-resolve.ll.tmp | grep bar1 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+cat /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/alias-resolve.ll.tmp | grep bar2 | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

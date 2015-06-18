@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2006-09-28-CrashOnInvalid.ll >/dev/null 2> /home/jazouani/llvm/build/test/Assembler/Output/2006-09-28-CrashOnInvalid.ll.tmp &&
+grep "floating point constant invalid for type" /home/jazouani/llvm/build/test/Assembler/Output/2006-09-28-CrashOnInvalid.ll.tmp

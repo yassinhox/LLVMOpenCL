@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=x86_64-macosx /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/objc-fwd-decl.ll -o /home/jazouani/llvm/build/test/DebugInfo/X86/Output/objc-fwd-decl.ll.tmp -filetype=obj &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dwarfdump /home/jazouani/llvm/build/test/DebugInfo/X86/Output/objc-fwd-decl.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/objc-fwd-decl.ll

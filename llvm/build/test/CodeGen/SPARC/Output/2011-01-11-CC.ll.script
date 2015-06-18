@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=sparc </home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/2011-01-11-CC.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/2011-01-11-CC.ll -check-prefix=V8 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=sparc -mattr=v9 </home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/2011-01-11-CC.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/2011-01-11-CC.ll -check-prefix=V9

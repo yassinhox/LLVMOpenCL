@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/opt --foo 2>&1 | grep "Unknown command line argument"

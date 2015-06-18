@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm -g -triple x86_64-apple-darwin /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/debug-info-artificial-arg.cpp -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/debug-info-artificial-arg.cpp

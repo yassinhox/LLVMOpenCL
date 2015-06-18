@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2002-07-25-ReturnPtrFunction.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as

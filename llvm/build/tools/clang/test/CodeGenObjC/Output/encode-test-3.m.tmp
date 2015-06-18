@@ -1,0 +1,31 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/encode-test-3.m'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:128:128-n8:16:32-S128"
+target triple = "i686-apple-darwin9"
+
+@.str = private unnamed_addr constant [3 x i8] c"^i\00", align 1
+@.str1 = private unnamed_addr constant [5 x i8] c"[0i]\00", align 1
+@.str2 = private unnamed_addr constant [2 x i8] c"i\00", align 1
+@B = global i8* getelementptr inbounds ([2 x i8]* @.str2, i32 0, i32 0), align 4
+@c = global [2 x i8]* @.str2, align 4
+@d = global [2 x i8] c"i\00", align 1
+@e = global [1 x i8] c"i", align 1
+@f = global [2 x i8] c"i\00", align 1
+@g = global [3 x i8] c"i\00\00", align 1
+@a = common global [1 x i32] zeroinitializer, align 4
+
+define i32 @main() nounwind {
+entry:
+  %n = alloca i32, align 4
+  %inc = alloca i8*, align 4
+  %vla = alloca i8*, align 4
+  store i8* getelementptr inbounds ([3 x i8]* @.str, i32 0, i32 0), i8** %inc, align 4
+  store i8* getelementptr inbounds ([5 x i8]* @.str1, i32 0, i32 0), i8** %vla, align 4
+  ret i32 0
+}
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 2}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__DATA, __objc_imageinfo, regular, no_dead_strip"}
+!3 = metadata !{i32 4, metadata !"Objective-C Garbage Collection", i32 0}

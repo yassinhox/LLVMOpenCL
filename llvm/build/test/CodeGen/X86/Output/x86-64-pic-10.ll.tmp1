@@ -1,0 +1,23 @@
+	.file	"<stdin>"
+	.text
+	.globl	h
+	.align	16, 0x90
+	.type	h,@function
+h:                                      # @h
+	.cfi_startproc
+# BB#0:                                 # %entry
+	pushq	%rax
+.Ltmp1:
+	.cfi_def_cfa_offset 16
+	callq	g@PLT
+	popq	%rax
+	ret
+.Ltmp2:
+	.size	h, .Ltmp2-h
+	.cfi_endproc
+
+	.weak	f
+
+	.weak	g
+g = f
+	.section	".note.GNU-stack","",@progbits

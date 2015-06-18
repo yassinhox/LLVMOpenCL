@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple arm-apple-darwin10 /home/jazouani/llvm/llvm-3.2/test/MC/ARM/full_line_comment.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ARM/full_line_comment.s

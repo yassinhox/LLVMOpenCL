@@ -1,0 +1,4 @@
+rm -f /home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -Wall -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c --serialize-diagnostics /home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags.c.tmp.diag > /dev/null 2>&1 || true &&
+c-index-test -read-diagnostics /home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags.c.tmp.diag > /home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags.c.tmp 2>&1 &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags.c

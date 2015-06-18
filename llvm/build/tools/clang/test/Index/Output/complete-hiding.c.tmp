@@ -1,0 +1,7 @@
+StructDecl:{TypedText StructA} (50)
+StructDecl:{TypedText StructB} (34)
+StructDecl:{TypedText StructC} (50)
+Completion contexts:
+Struct tag
+Class name
+Nested name specifier

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/mvn.ll -march=arm | grep mvn | /home/jazouani/llvm/build/Release+Asserts/bin/count 8

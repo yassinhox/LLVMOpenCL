@@ -1,0 +1,396 @@
+// CHECK: <invalid loc>:2:9: macro definition=__llvm__
+// CHECK: <invalid loc>:3:9: macro definition=__clang__
+// CHECK: <invalid loc>:4:9: macro definition=__clang_major__
+// CHECK: <invalid loc>:5:9: macro definition=__clang_minor__
+// CHECK: <invalid loc>:6:9: macro definition=__clang_patchlevel__
+// CHECK: <invalid loc>:7:9: macro definition=__clang_version__
+// CHECK: <invalid loc>:8:9: macro definition=__GNUC_MINOR__
+// CHECK: <invalid loc>:9:9: macro definition=__GNUC_PATCHLEVEL__
+// CHECK: <invalid loc>:10:9: macro definition=__GNUC__
+// CHECK: <invalid loc>:11:9: macro definition=__GXX_ABI_VERSION
+// CHECK: <invalid loc>:12:9: macro definition=__ATOMIC_RELAXED
+// CHECK: <invalid loc>:13:9: macro definition=__ATOMIC_CONSUME
+// CHECK: <invalid loc>:14:9: macro definition=__ATOMIC_ACQUIRE
+// CHECK: <invalid loc>:15:9: macro definition=__ATOMIC_RELEASE
+// CHECK: <invalid loc>:16:9: macro definition=__ATOMIC_ACQ_REL
+// CHECK: <invalid loc>:17:9: macro definition=__ATOMIC_SEQ_CST
+// CHECK: <invalid loc>:18:9: macro definition=__PRAGMA_REDEFINE_EXTNAME
+// CHECK: <invalid loc>:19:9: macro definition=__VERSION__
+// CHECK: <invalid loc>:20:9: macro definition=__CONSTANT_CFSTRINGS__
+// CHECK: <invalid loc>:21:9: macro definition=__EXCEPTIONS
+// CHECK: <invalid loc>:22:9: macro definition=__GXX_RTTI
+// CHECK: <invalid loc>:23:9: macro definition=__DEPRECATED
+// CHECK: <invalid loc>:24:9: macro definition=__GNUG__
+// CHECK: <invalid loc>:25:9: macro definition=__GXX_WEAK__
+// CHECK: <invalid loc>:26:9: macro definition=__private_extern__
+// CHECK: <invalid loc>:27:9: macro definition=__ORDER_LITTLE_ENDIAN__
+// CHECK: <invalid loc>:28:9: macro definition=__ORDER_BIG_ENDIAN__
+// CHECK: <invalid loc>:29:9: macro definition=__ORDER_PDP_ENDIAN__
+// CHECK: <invalid loc>:30:9: macro definition=__BYTE_ORDER__
+// CHECK: <invalid loc>:31:9: macro definition=_LP64
+// CHECK: <invalid loc>:32:9: macro definition=__LP64__
+// CHECK: <invalid loc>:33:9: macro definition=__CHAR_BIT__
+// CHECK: <invalid loc>:34:9: macro definition=__SCHAR_MAX__
+// CHECK: <invalid loc>:35:9: macro definition=__SHRT_MAX__
+// CHECK: <invalid loc>:36:9: macro definition=__INT_MAX__
+// CHECK: <invalid loc>:37:9: macro definition=__LONG_MAX__
+// CHECK: <invalid loc>:38:9: macro definition=__LONG_LONG_MAX__
+// CHECK: <invalid loc>:39:9: macro definition=__WCHAR_MAX__
+// CHECK: <invalid loc>:40:9: macro definition=__INTMAX_MAX__
+// CHECK: <invalid loc>:41:9: macro definition=__SIZEOF_DOUBLE__
+// CHECK: <invalid loc>:42:9: macro definition=__SIZEOF_FLOAT__
+// CHECK: <invalid loc>:43:9: macro definition=__SIZEOF_INT__
+// CHECK: <invalid loc>:44:9: macro definition=__SIZEOF_LONG__
+// CHECK: <invalid loc>:45:9: macro definition=__SIZEOF_LONG_DOUBLE__
+// CHECK: <invalid loc>:46:9: macro definition=__SIZEOF_LONG_LONG__
+// CHECK: <invalid loc>:47:9: macro definition=__SIZEOF_POINTER__
+// CHECK: <invalid loc>:48:9: macro definition=__SIZEOF_SHORT__
+// CHECK: <invalid loc>:49:9: macro definition=__SIZEOF_PTRDIFF_T__
+// CHECK: <invalid loc>:50:9: macro definition=__SIZEOF_SIZE_T__
+// CHECK: <invalid loc>:51:9: macro definition=__SIZEOF_WCHAR_T__
+// CHECK: <invalid loc>:52:9: macro definition=__SIZEOF_WINT_T__
+// CHECK: <invalid loc>:53:9: macro definition=__INTMAX_TYPE__
+// CHECK: <invalid loc>:54:9: macro definition=__UINTMAX_TYPE__
+// CHECK: <invalid loc>:55:9: macro definition=__INTMAX_WIDTH__
+// CHECK: <invalid loc>:56:9: macro definition=__PTRDIFF_TYPE__
+// CHECK: <invalid loc>:57:9: macro definition=__PTRDIFF_WIDTH__
+// CHECK: <invalid loc>:58:9: macro definition=__INTPTR_TYPE__
+// CHECK: <invalid loc>:59:9: macro definition=__INTPTR_WIDTH__
+// CHECK: <invalid loc>:60:9: macro definition=__SIZE_TYPE__
+// CHECK: <invalid loc>:61:9: macro definition=__SIZE_WIDTH__
+// CHECK: <invalid loc>:62:9: macro definition=__WCHAR_TYPE__
+// CHECK: <invalid loc>:63:9: macro definition=__WCHAR_WIDTH__
+// CHECK: <invalid loc>:64:9: macro definition=__WINT_TYPE__
+// CHECK: <invalid loc>:65:9: macro definition=__WINT_WIDTH__
+// CHECK: <invalid loc>:66:9: macro definition=__SIG_ATOMIC_WIDTH__
+// CHECK: <invalid loc>:67:9: macro definition=__CHAR16_TYPE__
+// CHECK: <invalid loc>:68:9: macro definition=__CHAR32_TYPE__
+// CHECK: <invalid loc>:69:9: macro definition=__FLT_DENORM_MIN__
+// CHECK: <invalid loc>:70:9: macro definition=__FLT_HAS_DENORM__
+// CHECK: <invalid loc>:71:9: macro definition=__FLT_DIG__
+// CHECK: <invalid loc>:72:9: macro definition=__FLT_EPSILON__
+// CHECK: <invalid loc>:73:9: macro definition=__FLT_HAS_INFINITY__
+// CHECK: <invalid loc>:74:9: macro definition=__FLT_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:75:9: macro definition=__FLT_MANT_DIG__
+// CHECK: <invalid loc>:76:9: macro definition=__FLT_MAX_10_EXP__
+// CHECK: <invalid loc>:77:9: macro definition=__FLT_MAX_EXP__
+// CHECK: <invalid loc>:78:9: macro definition=__FLT_MAX__
+// CHECK: <invalid loc>:79:9: macro definition=__FLT_MIN_10_EXP__
+// CHECK: <invalid loc>:80:9: macro definition=__FLT_MIN_EXP__
+// CHECK: <invalid loc>:81:9: macro definition=__FLT_MIN__
+// CHECK: <invalid loc>:82:9: macro definition=__DBL_DENORM_MIN__
+// CHECK: <invalid loc>:83:9: macro definition=__DBL_HAS_DENORM__
+// CHECK: <invalid loc>:84:9: macro definition=__DBL_DIG__
+// CHECK: <invalid loc>:85:9: macro definition=__DBL_EPSILON__
+// CHECK: <invalid loc>:86:9: macro definition=__DBL_HAS_INFINITY__
+// CHECK: <invalid loc>:87:9: macro definition=__DBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:88:9: macro definition=__DBL_MANT_DIG__
+// CHECK: <invalid loc>:89:9: macro definition=__DBL_MAX_10_EXP__
+// CHECK: <invalid loc>:90:9: macro definition=__DBL_MAX_EXP__
+// CHECK: <invalid loc>:91:9: macro definition=__DBL_MAX__
+// CHECK: <invalid loc>:92:9: macro definition=__DBL_MIN_10_EXP__
+// CHECK: <invalid loc>:93:9: macro definition=__DBL_MIN_EXP__
+// CHECK: <invalid loc>:94:9: macro definition=__DBL_MIN__
+// CHECK: <invalid loc>:95:9: macro definition=__LDBL_DENORM_MIN__
+// CHECK: <invalid loc>:96:9: macro definition=__LDBL_HAS_DENORM__
+// CHECK: <invalid loc>:97:9: macro definition=__LDBL_DIG__
+// CHECK: <invalid loc>:98:9: macro definition=__LDBL_EPSILON__
+// CHECK: <invalid loc>:99:9: macro definition=__LDBL_HAS_INFINITY__
+// CHECK: <invalid loc>:100:9: macro definition=__LDBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:101:9: macro definition=__LDBL_MANT_DIG__
+// CHECK: <invalid loc>:102:9: macro definition=__LDBL_MAX_10_EXP__
+// CHECK: <invalid loc>:103:9: macro definition=__LDBL_MAX_EXP__
+// CHECK: <invalid loc>:104:9: macro definition=__LDBL_MAX__
+// CHECK: <invalid loc>:105:9: macro definition=__LDBL_MIN_10_EXP__
+// CHECK: <invalid loc>:106:9: macro definition=__LDBL_MIN_EXP__
+// CHECK: <invalid loc>:107:9: macro definition=__LDBL_MIN__
+// CHECK: <invalid loc>:108:9: macro definition=__POINTER_WIDTH__
+// CHECK: <invalid loc>:109:9: macro definition=__WINT_UNSIGNED__
+// CHECK: <invalid loc>:110:9: macro definition=__INT8_TYPE__
+// CHECK: <invalid loc>:111:9: macro definition=__INT16_TYPE__
+// CHECK: <invalid loc>:112:9: macro definition=__INT32_TYPE__
+// CHECK: <invalid loc>:113:9: macro definition=__INT64_TYPE__
+// CHECK: <invalid loc>:114:9: macro definition=__INT64_C_SUFFIX__
+// CHECK: <invalid loc>:115:9: macro definition=__USER_LABEL_PREFIX__
+// CHECK: <invalid loc>:116:9: macro definition=__FINITE_MATH_ONLY__
+// CHECK: <invalid loc>:117:9: macro definition=__GNUC_GNU_INLINE__
+// CHECK: <invalid loc>:118:9: macro definition=__GCC_ATOMIC_TEST_AND_SET_TRUEVAL
+// CHECK: <invalid loc>:119:9: macro definition=__GCC_ATOMIC_BOOL_LOCK_FREE
+// CHECK: <invalid loc>:120:9: macro definition=__GCC_ATOMIC_CHAR_LOCK_FREE
+// CHECK: <invalid loc>:121:9: macro definition=__GCC_ATOMIC_CHAR16_T_LOCK_FREE
+// CHECK: <invalid loc>:122:9: macro definition=__GCC_ATOMIC_CHAR32_T_LOCK_FREE
+// CHECK: <invalid loc>:123:9: macro definition=__GCC_ATOMIC_WCHAR_T_LOCK_FREE
+// CHECK: <invalid loc>:124:9: macro definition=__GCC_ATOMIC_SHORT_LOCK_FREE
+// CHECK: <invalid loc>:125:9: macro definition=__GCC_ATOMIC_INT_LOCK_FREE
+// CHECK: <invalid loc>:126:9: macro definition=__GCC_ATOMIC_LONG_LOCK_FREE
+// CHECK: <invalid loc>:127:9: macro definition=__GCC_ATOMIC_LLONG_LOCK_FREE
+// CHECK: <invalid loc>:128:9: macro definition=__GCC_ATOMIC_POINTER_LOCK_FREE
+// CHECK: <invalid loc>:129:9: macro definition=__NO_INLINE__
+// CHECK: <invalid loc>:130:9: macro definition=__FLT_EVAL_METHOD__
+// CHECK: <invalid loc>:131:9: macro definition=__FLT_RADIX__
+// CHECK: <invalid loc>:132:9: macro definition=__DECIMAL_DIG__
+// CHECK: <invalid loc>:133:9: macro definition=__amd64__
+// CHECK: <invalid loc>:134:9: macro definition=__amd64
+// CHECK: <invalid loc>:135:9: macro definition=__x86_64
+// CHECK: <invalid loc>:136:9: macro definition=__x86_64__
+// CHECK: <invalid loc>:137:9: macro definition=__k8
+// CHECK: <invalid loc>:138:9: macro definition=__k8__
+// CHECK: <invalid loc>:139:9: macro definition=__tune_k8__
+// CHECK: <invalid loc>:140:9: macro definition=__LITTLE_ENDIAN__
+// CHECK: <invalid loc>:141:9: macro definition=__REGISTER_PREFIX__
+// CHECK: <invalid loc>:142:9: macro definition=__NO_MATH_INLINES
+// CHECK: <invalid loc>:143:9: macro definition=__SSE2__
+// CHECK: <invalid loc>:144:9: macro definition=__SSE2_MATH__
+// CHECK: <invalid loc>:145:9: macro definition=__SSE__
+// CHECK: <invalid loc>:146:9: macro definition=__SSE_MATH__
+// CHECK: <invalid loc>:147:9: macro definition=__MMX__
+// CHECK: <invalid loc>:148:9: macro definition=unix
+// CHECK: <invalid loc>:149:9: macro definition=__unix
+// CHECK: <invalid loc>:150:9: macro definition=__unix__
+// CHECK: <invalid loc>:151:9: macro definition=linux
+// CHECK: <invalid loc>:152:9: macro definition=__linux
+// CHECK: <invalid loc>:153:9: macro definition=__linux__
+// CHECK: <invalid loc>:154:9: macro definition=__gnu_linux__
+// CHECK: <invalid loc>:155:9: macro definition=__ELF__
+// CHECK: <invalid loc>:156:9: macro definition=_GNU_SOURCE
+// CHECK: <invalid loc>:157:9: macro definition=__STDC__
+// CHECK: <invalid loc>:158:9: macro definition=__STDC_HOSTED__
+// CHECK: <invalid loc>:159:9: macro definition=__cplusplus
+// CHECK: <invalid loc>:0:0: TypedefDecl=__int128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=__uint128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=__builtin_va_list:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypeRef=__va_list_tag:0:0
+// CHECK: overriding-ftemplate-comments.cpp:14:6: FunctionTemplate=comment_to_html_conversion_17:14:6 RawComment=[/// \tparam\n/// \param AAA Blah blah] RawCommentRange=[11:1 - 12:25] FullCommentAsHTML=[<dl><dt class="param-name-index-0">AAA</dt><dd class="param-descr-index-0"> Blah blah</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="14" column="6"><Name>comment_to_html_conversion_17</Name><USR>c:@FT@&gt;1#Tcomment_to_html_conversion_17#t0.0#</USR><Declaration>template &lt;typename T&gt; void comment_to_html_conversion_17(T AAA)</Declaration><Parameters><Parameter><Name>AAA</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[] ParamPosition=Invalid
+// CHECK:         (CXComment_Paragraph IsWhitespace
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah]))))] Extent=[13:1 - 14:42]
+// CHECK: overriding-ftemplate-comments.cpp:13:19: TemplateTypeParameter=T:13:19 (Definition) Extent=[13:10 - 13:20]
+// CHECK: overriding-ftemplate-comments.cpp:14:38: ParmDecl=AAA:14:38 (Definition) Extent=[14:36 - 14:41]
+// CHECK: overriding-ftemplate-comments.cpp:14:36: TypeRef=T:13:19 Extent=[14:36 - 14:37]
+// CHECK: overriding-ftemplate-comments.cpp:17:6: FunctionTemplate=comment_to_html_conversion_17:17:6 RawComment=[/// \tparam\n/// \param AAA Blah blah] RawCommentRange=[11:1 - 12:25] FullCommentAsHTML=[<dl><dt class="param-name-index-0">PPP</dt><dd class="param-descr-index-0"> Blah blah</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="17" column="6"><Name>comment_to_html_conversion_17</Name><USR>c:@FT@&gt;1#Tcomment_to_html_conversion_17#t0.0#</USR><Declaration>template &lt;typename T&gt; void comment_to_html_conversion_17(T PPP)</Declaration><Parameters><Parameter><Name>PPP</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[] ParamPosition=Invalid
+// CHECK:         (CXComment_Paragraph IsWhitespace
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[AAA] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah]))))] Extent=[16:1 - 17:42]
+// CHECK: overriding-ftemplate-comments.cpp:16:19: TemplateTypeParameter=T:16:19 (Definition) Extent=[16:10 - 16:20]
+// CHECK: overriding-ftemplate-comments.cpp:17:38: ParmDecl=PPP:17:38 (Definition) Extent=[17:36 - 17:41]
+// CHECK: overriding-ftemplate-comments.cpp:17:36: TypeRef=T:16:19 Extent=[17:36 - 17:37]
+// CHECK: overriding-ftemplate-comments.cpp:22:6: FunctionTemplate=comment_to_html_conversion_19:22:6 RawComment=[/// \tparam BBB Bbb\n/// \tparam AAA Aaa] RawCommentRange=[19:1 - 20:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">AAA</dt><dd class="tparam-descr-index-0"> Aaa</dd><dt class="tparam-name-index-1">BBB</dt><dd class="tparam-descr-index-1"> Bbb </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="22" column="6"><Name>comment_to_html_conversion_19</Name><USR>c:@FT@&gt;2#T#Tcomment_to_html_conversion_19#t0.0#t0.1#</USR><Declaration>template &lt;typename AAA, typename BBB&gt; void comment_to_html_conversion_19(AAA aaa, BBB bbb)</Declaration><TemplateParameters><Parameter><Name>AAA</Name><Index>0</Index><Discussion><Para> Aaa</Para></Discussion></Parameter><Parameter><Name>BBB</Name><Index>1</Index><Discussion><Para> Bbb </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa]))))] Extent=[21:1 - 22:53]
+// CHECK: overriding-ftemplate-comments.cpp:21:19: TemplateTypeParameter=AAA:21:19 (Definition) Extent=[21:10 - 21:22]
+// CHECK: overriding-ftemplate-comments.cpp:21:33: TemplateTypeParameter=BBB:21:33 (Definition) Extent=[21:24 - 21:36]
+// CHECK: overriding-ftemplate-comments.cpp:22:40: ParmDecl=aaa:22:40 (Definition) Extent=[22:36 - 22:43]
+// CHECK: overriding-ftemplate-comments.cpp:22:36: TypeRef=AAA:21:19 Extent=[22:36 - 22:39]
+// CHECK: overriding-ftemplate-comments.cpp:22:49: ParmDecl=bbb:22:49 (Definition) Extent=[22:45 - 22:52]
+// CHECK: overriding-ftemplate-comments.cpp:22:45: TypeRef=BBB:21:33 Extent=[22:45 - 22:48]
+// CHECK: overriding-ftemplate-comments.cpp:25:6: FunctionTemplate=comment_to_html_conversion_19:25:6 RawComment=[/// \tparam BBB Bbb\n/// \tparam AAA Aaa] RawCommentRange=[19:1 - 20:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">PPP</dt><dd class="tparam-descr-index-0"> Aaa</dd><dt class="tparam-name-index-1">QQQ</dt><dd class="tparam-descr-index-1"> Bbb </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="25" column="6"><Name>comment_to_html_conversion_19</Name><USR>c:@FT@&gt;2#T#Tcomment_to_html_conversion_19#t0.0#t0.1#</USR><Declaration>template &lt;typename PPP, typename QQQ&gt; void comment_to_html_conversion_19(PPP aaa, QQQ bbb)</Declaration><TemplateParameters><Parameter><Name>PPP</Name><Index>0</Index><Discussion><Para> Aaa</Para></Discussion></Parameter><Parameter><Name>QQQ</Name><Index>1</Index><Discussion><Para> Bbb </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa]))))] Extent=[24:1 - 25:53]
+// CHECK: overriding-ftemplate-comments.cpp:24:19: TemplateTypeParameter=PPP:24:19 (Definition) Extent=[24:10 - 24:22]
+// CHECK: overriding-ftemplate-comments.cpp:24:33: TemplateTypeParameter=QQQ:24:33 (Definition) Extent=[24:24 - 24:36]
+// CHECK: overriding-ftemplate-comments.cpp:25:40: ParmDecl=aaa:25:40 (Definition) Extent=[25:36 - 25:43]
+// CHECK: overriding-ftemplate-comments.cpp:25:36: TypeRef=PPP:24:19 Extent=[25:36 - 25:39]
+// CHECK: overriding-ftemplate-comments.cpp:25:49: ParmDecl=bbb:25:49 (Definition) Extent=[25:45 - 25:52]
+// CHECK: overriding-ftemplate-comments.cpp:25:45: TypeRef=QQQ:24:33 Extent=[25:45 - 25:48]
+// CHECK: overriding-ftemplate-comments.cpp:32:6: FunctionTemplate=comment_to_html_conversion_20:32:6 RawComment=[/// \tparam BBB Bbb\n/// \tparam UUU Zzz\n/// \tparam CCC Ccc\n/// \tparam AAA Aaa] RawCommentRange=[27:1 - 30:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">AAA</dt><dd class="tparam-descr-index-0"> Aaa</dd><dt class="tparam-name-index-1">BBB</dt><dd class="tparam-descr-index-1"> Bbb </dd><dt class="tparam-name-index-2">CCC</dt><dd class="tparam-descr-index-2"> Ccc </dd><dt class="tparam-name-index-invalid">UUU</dt><dd class="tparam-descr-index-invalid"> Zzz </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="32" column="6"><Name>comment_to_html_conversion_20</Name><USR>c:@FT@&gt;3#T#T#NIcomment_to_html_conversion_20#t0.0#t0.1#</USR><Declaration>template &lt;typename AAA, typename BBB, int CCC&gt; void comment_to_html_conversion_20(AAA aaa, BBB bbb)</Declaration><TemplateParameters><Parameter><Name>AAA</Name><Index>0</Index><Discussion><Para> Aaa</Para></Discussion></Parameter><Parameter><Name>BBB</Name><Index>1</Index><Discussion><Para> Bbb </Para></Discussion></Parameter><Parameter><Name>CCC</Name><Index>2</Index><Discussion><Para> Ccc </Para></Discussion></Parameter><Parameter><Name>UUU</Name><Discussion><Para> Zzz </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[UUU] ParamPosition=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Zzz] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[CCC] ParamPosition={2}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa]))))] Extent=[31:1 - 32:53]
+// CHECK: overriding-ftemplate-comments.cpp:31:19: TemplateTypeParameter=AAA:31:19 (Definition) Extent=[31:10 - 31:22]
+// CHECK: overriding-ftemplate-comments.cpp:31:33: TemplateTypeParameter=BBB:31:33 (Definition) Extent=[31:24 - 31:36]
+// CHECK: overriding-ftemplate-comments.cpp:31:42: NonTypeTemplateParameter=CCC:31:42 (Definition) Extent=[31:38 - 31:45]
+// CHECK: overriding-ftemplate-comments.cpp:32:40: ParmDecl=aaa:32:40 (Definition) Extent=[32:36 - 32:43]
+// CHECK: overriding-ftemplate-comments.cpp:32:36: TypeRef=AAA:31:19 Extent=[32:36 - 32:39]
+// CHECK: overriding-ftemplate-comments.cpp:32:49: ParmDecl=bbb:32:49 (Definition) Extent=[32:45 - 32:52]
+// CHECK: overriding-ftemplate-comments.cpp:32:45: TypeRef=BBB:31:33 Extent=[32:45 - 32:48]
+// CHECK: overriding-ftemplate-comments.cpp:35:6: FunctionTemplate=comment_to_html_conversion_20:35:6 RawComment=[/// \tparam BBB Bbb\n/// \tparam UUU Zzz\n/// \tparam CCC Ccc\n/// \tparam AAA Aaa] RawCommentRange=[27:1 - 30:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">PPP</dt><dd class="tparam-descr-index-0"> Aaa</dd><dt class="tparam-name-index-1">QQQ</dt><dd class="tparam-descr-index-1"> Bbb </dd><dt class="tparam-name-index-2">RRR</dt><dd class="tparam-descr-index-2"> Ccc </dd><dt class="tparam-name-index-invalid">UUU</dt><dd class="tparam-descr-index-invalid"> Zzz </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="35" column="6"><Name>comment_to_html_conversion_20</Name><USR>c:@FT@&gt;3#T#T#NIcomment_to_html_conversion_20#t0.0#t0.1#</USR><Declaration>template &lt;typename PPP, typename QQQ, int RRR&gt; void comment_to_html_conversion_20(PPP aaa, QQQ bbb)</Declaration><TemplateParameters><Parameter><Name>PPP</Name><Index>0</Index><Discussion><Para> Aaa</Para></Discussion></Parameter><Parameter><Name>QQQ</Name><Index>1</Index><Discussion><Para> Bbb </Para></Discussion></Parameter><Parameter><Name>RRR</Name><Index>2</Index><Discussion><Para> Ccc </Para></Discussion></Parameter><Parameter><Name>UUU</Name><Discussion><Para> Zzz </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[UUU] ParamPosition=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Zzz] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[CCC] ParamPosition={2}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa]))))] Extent=[34:1 - 35:53]
+// CHECK: overriding-ftemplate-comments.cpp:34:19: TemplateTypeParameter=PPP:34:19 (Definition) Extent=[34:10 - 34:22]
+// CHECK: overriding-ftemplate-comments.cpp:34:33: TemplateTypeParameter=QQQ:34:33 (Definition) Extent=[34:24 - 34:36]
+// CHECK: overriding-ftemplate-comments.cpp:34:42: NonTypeTemplateParameter=RRR:34:42 (Definition) Extent=[34:38 - 34:45]
+// CHECK: overriding-ftemplate-comments.cpp:35:40: ParmDecl=aaa:35:40 (Definition) Extent=[35:36 - 35:43]
+// CHECK: overriding-ftemplate-comments.cpp:35:36: TypeRef=PPP:34:19 Extent=[35:36 - 35:39]
+// CHECK: overriding-ftemplate-comments.cpp:35:49: ParmDecl=bbb:35:49 (Definition) Extent=[35:45 - 35:52]
+// CHECK: overriding-ftemplate-comments.cpp:35:45: TypeRef=QQQ:34:33 Extent=[35:45 - 35:48]
+// CHECK: overriding-ftemplate-comments.cpp:42:6: FunctionTemplate=comment_to_html_conversion_21:42:6 RawComment=[/// \tparam AAA Aaa\n/// \tparam BBB Bbb\n/// \tparam CCC Ccc\n/// \tparam DDD Ddd] RawCommentRange=[37:1 - 40:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">AAA</dt><dd class="tparam-descr-index-0"> Aaa </dd><dt class="tparam-name-index-other">BBB</dt><dd class="tparam-descr-index-other"> Bbb </dd><dt class="tparam-name-index-other">CCC</dt><dd class="tparam-descr-index-other"> Ccc </dd><dt class="tparam-name-index-other">DDD</dt><dd class="tparam-descr-index-other"> Ddd</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="42" column="6"><Name>comment_to_html_conversion_21</Name><USR>c:@FT@&gt;1#t&gt;2#t&gt;1#T#Tcomment_to_html_conversion_21#</USR><Declaration>template &lt;template &lt;template &lt;typename CCC&gt; class DDD, class BBB&gt; class AAA&gt; void comment_to_html_conversion_21()</Declaration><TemplateParameters><Parameter><Name>AAA</Name><Index>0</Index><Discussion><Para> Aaa </Para></Discussion></Parameter><Parameter><Name>BBB</Name><Discussion><Para> Bbb </Para></Discussion></Parameter><Parameter><Name>CCC</Name><Discussion><Para> Ccc </Para></Discussion></Parameter><Parameter><Name>DDD</Name><Discussion><Para> Ddd</Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={0, 1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[CCC] ParamPosition={0, 0, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[DDD] ParamPosition={0, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ddd]))))] Extent=[41:1 - 42:37]
+// CHECK: overriding-ftemplate-comments.cpp:41:70: TemplateTemplateParameter=AAA:41:70 (Definition) Extent=[41:10 - 41:73]
+// CHECK: overriding-ftemplate-comments.cpp:41:48: TemplateTemplateParameter=DDD:41:48 (Definition) Extent=[41:19 - 41:51]
+// CHECK: overriding-ftemplate-comments.cpp:41:37: TemplateTypeParameter=CCC:41:37 (Definition) Extent=[41:28 - 41:40]
+// CHECK: overriding-ftemplate-comments.cpp:41:59: TemplateTypeParameter=BBB:41:59 (Definition) Extent=[41:53 - 41:62]
+// CHECK: overriding-ftemplate-comments.cpp:45:6: FunctionTemplate=comment_to_html_conversion_21:45:6 RawComment=[/// \tparam AAA Aaa\n/// \tparam BBB Bbb\n/// \tparam CCC Ccc\n/// \tparam DDD Ddd] RawCommentRange=[37:1 - 40:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">PPP</dt><dd class="tparam-descr-index-0"> Aaa </dd><dt class="tparam-name-index-other">QQQ</dt><dd class="tparam-descr-index-other"> Bbb </dd><dt class="tparam-name-index-other">RRR</dt><dd class="tparam-descr-index-other"> Ccc </dd><dt class="tparam-name-index-other">SSS</dt><dd class="tparam-descr-index-other"> Ddd</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="45" column="6"><Name>comment_to_html_conversion_21</Name><USR>c:@FT@&gt;1#t&gt;2#t&gt;1#T#Tcomment_to_html_conversion_21#</USR><Declaration>template &lt;template &lt;template &lt;typename RRR&gt; class SSS, class QQQ&gt; class PPP&gt; void comment_to_html_conversion_21()</Declaration><TemplateParameters><Parameter><Name>PPP</Name><Index>0</Index><Discussion><Para> Aaa </Para></Discussion></Parameter><Parameter><Name>QQQ</Name><Discussion><Para> Bbb </Para></Discussion></Parameter><Parameter><Name>RRR</Name><Discussion><Para> Ccc </Para></Discussion></Parameter><Parameter><Name>SSS</Name><Discussion><Para> Ddd</Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={0, 1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[CCC] ParamPosition={0, 0, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[DDD] ParamPosition={0, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ddd]))))] Extent=[44:1 - 45:37]
+// CHECK: overriding-ftemplate-comments.cpp:44:70: TemplateTemplateParameter=PPP:44:70 (Definition) Extent=[44:10 - 44:73]
+// CHECK: overriding-ftemplate-comments.cpp:44:48: TemplateTemplateParameter=SSS:44:48 (Definition) Extent=[44:19 - 44:51]
+// CHECK: overriding-ftemplate-comments.cpp:44:37: TemplateTypeParameter=RRR:44:37 (Definition) Extent=[44:28 - 44:40]
+// CHECK: overriding-ftemplate-comments.cpp:44:59: TemplateTypeParameter=QQQ:44:59 (Definition) Extent=[44:53 - 44:62]
+// CHECK: overriding-ftemplate-comments.cpp:54:6: FunctionTemplate=comment_to_html_conversion_22:54:6 RawComment=[/// \tparam C1 Ccc 1\n/// \tparam AAA Zzz\n/// \tparam C2 Ccc 2\n/// \tparam C3 Ccc 3\n/// \tparam C4 Ccc 4\n/// \tparam BBB Bbb] RawCommentRange=[47:1 - 52:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">C1</dt><dd class="tparam-descr-index-0"> Ccc 1 </dd><dt class="tparam-name-index-1">AAA</dt><dd class="tparam-descr-index-1"> Zzz </dd><dt class="tparam-name-index-other">C2</dt><dd class="tparam-descr-index-other"> Ccc 2 </dd><dt class="tparam-name-index-other">C3</dt><dd class="tparam-descr-index-other"> Ccc 3 </dd><dt class="tparam-name-index-other">C4</dt><dd class="tparam-descr-index-other"> Ccc 4 </dd><dt class="tparam-name-index-other">BBB</dt><dd class="tparam-descr-index-other"> Bbb</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="54" column="6"><Name>comment_to_html_conversion_22</Name><USR>c:@FT@&gt;2#T#t&gt;2#T#t&gt;2#T#Tcomment_to_html_conversion_22#</USR><Declaration>template &lt;class C1, template &lt;class C2, template &lt;class C3, class C4&gt; class BBB&gt; class AAA&gt; void comment_to_html_conversion_22()</Declaration><TemplateParameters><Parameter><Name>C1</Name><Index>0</Index><Discussion><Para> Ccc 1 </Para></Discussion></Parameter><Parameter><Name>AAA</Name><Index>1</Index><Discussion><Para> Zzz </Para></Discussion></Parameter><Parameter><Name>C2</Name><Discussion><Para> Ccc 2 </Para></Discussion></Parameter><Parameter><Name>C3</Name><Discussion><Para> Ccc 3 </Para></Discussion></Parameter><Parameter><Name>C4</Name><Discussion><Para> Ccc 4 </Para></Discussion></Parameter><Parameter><Name>BBB</Name><Discussion><Para> Bbb</Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[C1] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 1] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Zzz] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[C2] ParamPosition={1, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 2] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[C3] ParamPosition={1, 1, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 3] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[C4] ParamPosition={1, 1, 1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 4] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1, 1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb]))))] Extent=[53:1 - 54:37]
+// CHECK: overriding-ftemplate-comments.cpp:53:16: TemplateTypeParameter=C1:53:16 (Definition) Extent=[53:10 - 53:18]
+// CHECK: overriding-ftemplate-comments.cpp:53:85: TemplateTemplateParameter=AAA:53:85 (Definition) Extent=[53:20 - 53:88]
+// CHECK: overriding-ftemplate-comments.cpp:53:35: TemplateTypeParameter=C2:53:35 (Definition) Extent=[53:29 - 53:37]
+// CHECK: overriding-ftemplate-comments.cpp:53:74: TemplateTemplateParameter=BBB:53:74 (Definition) Extent=[53:39 - 53:77]
+// CHECK: overriding-ftemplate-comments.cpp:53:54: TemplateTypeParameter=C3:53:54 (Definition) Extent=[53:48 - 53:56]
+// CHECK: overriding-ftemplate-comments.cpp:53:64: TemplateTypeParameter=C4:53:64 (Definition) Extent=[53:58 - 53:66]
+// CHECK: overriding-ftemplate-comments.cpp:58:6: FunctionTemplate=comment_to_html_conversion_22:58:6 RawComment=[/// \tparam C1 Ccc 1\n/// \tparam AAA Zzz\n/// \tparam C2 Ccc 2\n/// \tparam C3 Ccc 3\n/// \tparam C4 Ccc 4\n/// \tparam BBB Bbb] RawCommentRange=[47:1 - 52:20] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">CCC1</dt><dd class="tparam-descr-index-0"> Ccc 1 </dd><dt class="tparam-name-index-1">PPP</dt><dd class="tparam-descr-index-1"> Zzz </dd><dt class="tparam-name-index-other">CCC2</dt><dd class="tparam-descr-index-other"> Ccc 2 </dd><dt class="tparam-name-index-other">CCC3</dt><dd class="tparam-descr-index-other"> Ccc 3 </dd><dt class="tparam-name-index-other">CCC4</dt><dd class="tparam-descr-index-other"> Ccc 4 </dd><dt class="tparam-name-index-other">QQQ</dt><dd class="tparam-descr-index-other"> Bbb</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/overriding-ftemplate-comments.cpp" line="58" column="6"><Name>comment_to_html_conversion_22</Name><USR>c:@FT@&gt;2#T#t&gt;2#T#t&gt;2#T#Tcomment_to_html_conversion_22#</USR><Declaration>template &lt;class CCC1, template &lt;class CCC2, template &lt;class CCC3, class CCC4&gt; class QQQ&gt; class PPP&gt; void comment_to_html_conversion_22()</Declaration><TemplateParameters><Parameter><Name>CCC1</Name><Index>0</Index><Discussion><Para> Ccc 1 </Para></Discussion></Parameter><Parameter><Name>PPP</Name><Index>1</Index><Discussion><Para> Zzz </Para></Discussion></Parameter><Parameter><Name>CCC2</Name><Discussion><Para> Ccc 2 </Para></Discussion></Parameter><Parameter><Name>CCC3</Name><Discussion><Para> Ccc 3 </Para></Discussion></Parameter><Parameter><Name>CCC4</Name><Discussion><Para> Ccc 4 </Para></Discussion></Parameter><Parameter><Name>QQQ</Name><Discussion><Para> Bbb</Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[C1] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 1] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[AAA] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Zzz] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[C2] ParamPosition={1, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 2] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[C3] ParamPosition={1, 1, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 3] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[C4] ParamPosition={1, 1, 1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc 4] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[BBB] ParamPosition={1, 1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb]))))] Extent=[57:1 - 58:37]
+// CHECK: overriding-ftemplate-comments.cpp:57:16: TemplateTypeParameter=CCC1:57:16 (Definition) Extent=[57:10 - 57:20]
+// CHECK: overriding-ftemplate-comments.cpp:57:93: TemplateTemplateParameter=PPP:57:93 (Definition) Extent=[57:22 - 57:96]
+// CHECK: overriding-ftemplate-comments.cpp:57:37: TemplateTypeParameter=CCC2:57:37 (Definition) Extent=[57:31 - 57:41]
+// CHECK: overriding-ftemplate-comments.cpp:57:82: TemplateTemplateParameter=QQQ:57:82 (Definition) Extent=[57:43 - 57:85]
+// CHECK: overriding-ftemplate-comments.cpp:57:58: TemplateTypeParameter=CCC3:57:58 (Definition) Extent=[57:52 - 57:62]
+// CHECK: overriding-ftemplate-comments.cpp:57:70: TemplateTypeParameter=CCC4:57:70 (Definition) Extent=[57:64 - 57:74]

@@ -1,0 +1,68 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/staticinit.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i386-pc-linux-gnu"
+
+%struct.AStruct = type { i32, i8*, double }
+%struct.s = type { i8* }
+
+@f.i = internal global i32 42, align 4
+@f.is = internal global [4 x i32] [i32 1, i32 2, i32 3, i32 4], align 4
+@f.str = internal global i8* getelementptr inbounds ([10 x i8]* @.str, i32 0, i32 0), align 4
+@.str = private unnamed_addr constant [10 x i8] c"forty-two\00", align 1
+@f.strs = internal global [4 x i8*] [i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8]* @.str4, i32 0, i32 0)], align 4
+@.str1 = private unnamed_addr constant [4 x i8] c"one\00", align 1
+@.str2 = private unnamed_addr constant [4 x i8] c"two\00", align 1
+@.str3 = private unnamed_addr constant [6 x i8] c"three\00", align 1
+@.str4 = private unnamed_addr constant [5 x i8] c"four\00", align 1
+@f.myStruct = internal global %struct.AStruct { i32 1, i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), double 3.000000e+00 }, align 4
+@g.a = internal global [10 x i8] zeroinitializer, align 1
+@g.b = internal global i8* getelementptr inbounds ([10 x i8]* @g.a, i32 0, i32 0), align 4
+@foo.var = internal global %struct.s zeroinitializer, align 4
+@f1.l0 = internal global i32 ptrtoint (i32 ()* @f1 to i32), align 4
+@f2._msg = internal global [40 x i8] zeroinitializer, align 1
+
+define void @f() nounwind {
+entry:
+  ret void
+}
+
+define void @g() nounwind {
+entry:
+  ret void
+}
+
+define void @foo() nounwind {
+entry:
+  ret void
+}
+
+define i32 @f1() nounwind {
+entry:
+  %retval = alloca i32, align 4
+  %0 = load i32* %retval
+  ret i32 %0
+}
+
+define i8* @f2(i8 signext %key) nounwind {
+entry:
+  %retval = alloca i8*, align 4
+  %key.addr = alloca i8, align 1
+  store i8 %key, i8* %key.addr, align 1
+  %0 = load i8* %key.addr, align 1
+  %conv = sext i8 %0 to i32
+  switch i32 %conv, label %sw.epilog [
+    i32 12, label %sw.bb
+  ]
+
+sw.bb:                                            ; preds = %entry
+  store i8* getelementptr inbounds ([40 x i8]* @f2._msg, i32 0, i32 0), i8** %retval
+  br label %return
+
+sw.epilog:                                        ; preds = %entry
+  store i8* null, i8** %retval
+  br label %return
+
+return:                                           ; preds = %sw.epilog, %sw.bb
+  %1 = load i8** %retval
+  ret i8* %1
+}

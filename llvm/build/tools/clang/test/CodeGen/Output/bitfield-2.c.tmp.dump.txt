@@ -1,0 +1,515 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:27:18: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -5390609
+struct s0 g0 = { 0xdeadbeef };
+                 ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: struct s0
+Record: struct s0 {
+    int f0 : (IntegerLiteral 0x1f9e970 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:24:12> 'int' 24)
+;
+}
+Layout: <ASTRecordLayout
+  Size:24
+  DataSize:24
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping IRgen Record Layout
+Record: struct s0 {
+    int f0 : (IntegerLiteral 0x1f9e970 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:24:12> 'int' 24)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s0 = type <{ [3 x i8] }>
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:24 IsSigned:1
+                    NumComponents:2 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:16
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:16>
+        <AccessInfo FieldIndex:0 FieldByteOffset:2 FieldBitStart:0 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:16 TargetBitWidth:8>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:44:20: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -5390609
+  struct s0 g0 = { 0xdeadbeef };
+                   ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:82:18: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -273
+struct s1 g1 = { 0xdeadbeef, 0xdeadbeef };
+                 ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:82:30: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -273
+struct s1 g1 = { 0xdeadbeef, 0xdeadbeef };
+                             ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: struct s1
+Record: struct s1 {
+    int f0 : (IntegerLiteral 0x1fe2b68 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:77:15> 'int' 10)
+;
+    int f1 : (IntegerLiteral 0x1fe2be8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:78:15> 'int' 10)
+;
+}
+Layout: <ASTRecordLayout
+  Size:24
+  DataSize:24
+  Alignment:8
+  FieldOffsets: [0, 10]>
+
+*** Dumping IRgen Record Layout
+Record: struct s1 {
+    int f0 : (IntegerLiteral 0x1fe2b68 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:77:15> 'int' 10)
+;
+    int f1 : (IntegerLiteral 0x1fe2be8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:78:15> 'int' 10)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s1 = type <{ [2 x i8], i8 }>
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:10 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:16
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:10>
+    ]>
+    <CGBitFieldInfo Size:10 IsSigned:1
+                    NumComponents:2 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:10 AccessWidth:16
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:6>
+        <AccessInfo FieldIndex:0 FieldByteOffset:2 FieldBitStart:0 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:6 TargetBitWidth:4>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:89:18: warning: implicit truncation from 'int' to bitfield changes value from 1234 to 210
+  return (a0->f1 = 1234);
+                 ^ ~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:99:20: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -273
+  struct s1 g1 = { 0xdeadbeef, 0xdeadbeef };
+                   ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:99:32: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -273
+  struct s1 g1 = { 0xdeadbeef, 0xdeadbeef };
+                               ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:128:17: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 7
+union u2 g2 = { 0xdeadbeef };
+                ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: union u2
+Record: union u2 {
+    unsigned long long f0 : (IntegerLiteral 0x1fea000 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:125:27> 'int' 3)
+;
+}
+Layout: <ASTRecordLayout
+  Size:8
+  DataSize:8
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping IRgen Record Layout
+Record: union u2 {
+    unsigned long long f0 : (IntegerLiteral 0x1fea000 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:125:27> 'int' 3)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%union.u2 = type <{ i8 }>
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:3 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:3>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:134:18: warning: implicit truncation from 'int' to bitfield changes value from 1234 to 2
+  return (a0->f0 = 1234);
+                 ^ ~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:144:19: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 7
+  union u2 g2 = { 0xdeadbeef };
+                  ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: struct s3
+Record: struct s3 {
+    long long f0 : (IntegerLiteral 0x1ff55f0 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:157:18> 'int' 32)
+;
+    long long f1 : (IntegerLiteral 0x1ff5668 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:158:18> 'int' 32)
+;
+}
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:64
+  FieldOffsets: [0, 32]>
+
+*** Dumping IRgen Record Layout
+Record: struct s3 {
+    long long f0 : (IntegerLiteral 0x1ff55f0 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:157:18> 'int' 32)
+;
+    long long f1 : (IntegerLiteral 0x1ff5668 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:158:18> 'int' 32)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s3 = type { [4 x i8], [4 x i8] }
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:32 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:64
+                    AccessAlignment:8 TargetBitOffset:0 TargetBitWidth:32>
+    ]>
+    <CGBitFieldInfo Size:32 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:32 AccessWidth:64
+                    AccessAlignment:8 TargetBitOffset:0 TargetBitWidth:32>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:198:18: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 48879
+struct s4 g4 = { 0xdeadbeef, 0xdeadbeef };
+                 ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:198:30: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 246267631
+struct s4 g4 = { 0xdeadbeef, 0xdeadbeef };
+                             ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: struct s4
+Record: struct s4 {
+    unsigned int f0 : (IntegerLiteral 0x1fda220 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:194:17> 'int' 16)
+;
+    unsigned int f1 : (IntegerLiteral 0x1fda298 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:195:17> 'int' 28)
+ __attribute__((packed));
+}
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:32
+  FieldOffsets: [0, 16]>
+
+*** Dumping IRgen Record Layout
+Record: struct s4 {
+    unsigned int f0 : (IntegerLiteral 0x1fda220 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:194:17> 'int' 16)
+;
+    unsigned int f1 : (IntegerLiteral 0x1fda298 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:195:17> 'int' 28)
+ __attribute__((packed));
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s4 = type <{ [2 x i8], [4 x i8], [2 x i8] }>
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:16 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:32
+                    AccessAlignment:4 TargetBitOffset:0 TargetBitWidth:16>
+    ]>
+    <CGBitFieldInfo Size:28 IsSigned:0
+                    NumComponents:2 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:16 AccessWidth:32
+                    AccessAlignment:4 TargetBitOffset:0 TargetBitWidth:16>
+        <AccessInfo FieldIndex:0 FieldByteOffset:4 FieldBitStart:0 AccessWidth:32
+                    AccessAlignment:4 TargetBitOffset:16 TargetBitWidth:12>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:214:20: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 48879
+  struct s4 g4 = { 0xdeadbeef, 0xdeadbeef };
+                   ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:214:32: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 246267631
+  struct s4 g4 = { 0xdeadbeef, 0xdeadbeef };
+                               ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:230:18: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 3
+struct s5 g5 = { 0xdeadbeef, 0xdeadbeef };
+                 ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: struct s5
+Record: struct s5 {
+    unsigned int f0 : (IntegerLiteral 0x200b880 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:225:17> 'int' 2)
+;
+    _Bool f1 : (IntegerLiteral 0x200b8f8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:226:14> 'int' 1)
+;
+    _Bool f2 : (IntegerLiteral 0x200b978 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:227:14> 'int' 1)
+;
+}
+Layout: <ASTRecordLayout
+  Size:32
+  DataSize:32
+  Alignment:32
+  FieldOffsets: [0, 2, 3]>
+
+*** Dumping IRgen Record Layout
+Record: struct s5 {
+    unsigned int f0 : (IntegerLiteral 0x200b880 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:225:17> 'int' 2)
+;
+    _Bool f1 : (IntegerLiteral 0x200b8f8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:226:14> 'int' 1)
+;
+    _Bool f2 : (IntegerLiteral 0x200b978 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:227:14> 'int' 1)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s5 = type { i8, [3 x i8] }
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:2 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:32
+                    AccessAlignment:4 TargetBitOffset:0 TargetBitWidth:2>
+    ]>
+    <CGBitFieldInfo Size:1 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:2 AccessWidth:8
+                    AccessAlignment:4 TargetBitOffset:0 TargetBitWidth:1>
+    ]>
+    <CGBitFieldInfo Size:1 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:3 AccessWidth:8
+                    AccessAlignment:4 TargetBitOffset:0 TargetBitWidth:1>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:236:18: warning: implicit truncation from 'int' to bitfield changes value from 15 to 3
+  return (a0->f0 = 0xF) ^ (a0->f1 = 0xF) ^ (a0->f2 = 0xF);
+                 ^ ~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:246:20: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to 3
+  struct s5 g5 = { 0xdeadbeef, 0xdeadbeef, 0xdeadbeef };
+                   ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: struct s6
+Record: struct s6 {
+    _Bool f0 : (IntegerLiteral 0x2016a80 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:257:14> 'int' 2)
+;
+}
+Layout: <ASTRecordLayout
+  Size:8
+  DataSize:8
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping IRgen Record Layout
+Record: struct s6 {
+    _Bool f0 : (IntegerLiteral 0x2016a80 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:257:14> 'int' 2)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s6 = type { i8 }
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:2 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:2>
+    ]>
+]>
+
+*** Dumping AST Record Layout
+Type: struct s7
+Record: struct s7 {
+    int a;
+    int b;
+    int c;
+    int f0 : (IntegerLiteral 0x1ffdb38 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:306:12> 'int' 5)
+;
+    int f1 : (IntegerLiteral 0x1ffdbb8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:307:12> 'int' 29)
+;
+}
+Layout: <ASTRecordLayout
+  Size:256
+  DataSize:256
+  Alignment:128
+  FieldOffsets: [0, 32, 64, 96, 128]>
+
+*** Dumping IRgen Record Layout
+Record: struct s7 {
+    int a;
+    int b;
+    int c;
+    int f0 : (IntegerLiteral 0x1ffdb38 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:306:12> 'int' 5)
+;
+    int f1 : (IntegerLiteral 0x1ffdbb8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:307:12> 'int' 29)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s7 = type { i32, i32, i32, i8, [3 x i8], [4 x i8], [12 x i8] }
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:5 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:12 FieldBitStart:0 AccessWidth:32
+                    AccessAlignment:4 TargetBitOffset:0 TargetBitWidth:5>
+    ]>
+    <CGBitFieldInfo Size:29 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:16 FieldBitStart:0 AccessWidth:32
+                    AccessAlignment:16 TargetBitOffset:0 TargetBitWidth:29>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:325:18: warning: implicit truncation from 'int' to bitfield changes value from 15 to -1
+struct s8 g8 = { 0xF };
+                 ^~~
+
+*** Dumping AST Record Layout
+Type: struct s8
+Record: struct s8 {
+    char f0 : (IntegerLiteral 0x2023d50 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:319:13> 'int' 4)
+;
+    char f1;
+    int f2 : (IntegerLiteral 0x2023e28 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:321:13> 'int' 4)
+;
+    char f3 : (IntegerLiteral 0x2023ea8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:322:13> 'int' 4)
+;
+}
+Layout: <ASTRecordLayout
+  Size:24
+  DataSize:24
+  Alignment:8
+  FieldOffsets: [0, 8, 16, 20]>
+
+*** Dumping IRgen Record Layout
+Record: struct s8 {
+    char f0 : (IntegerLiteral 0x2023d50 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:319:13> 'int' 4)
+;
+    char f1;
+    int f2 : (IntegerLiteral 0x2023e28 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:321:13> 'int' 4)
+;
+    char f3 : (IntegerLiteral 0x2023ea8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:322:13> 'int' 4)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s8 = type <{ i8, i8, i8 }>
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:4 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:4>
+    ]>
+    <CGBitFieldInfo Size:4 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:2 FieldBitStart:0 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:4>
+    ]>
+    <CGBitFieldInfo Size:4 IsSigned:1
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:2 FieldBitStart:4 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:4>
+    ]>
+]>
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:331:18: warning: implicit truncation from 'int' to bitfield changes value from 253 to -3
+  return (a0->f0 = 0xFD) ^ (a0->f2 = 0xFD) ^ (a0->f3 = 0xFD);
+                 ^ ~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:331:36: warning: implicit truncation from 'int' to bitfield changes value from 253 to -3
+  return (a0->f0 = 0xFD) ^ (a0->f2 = 0xFD) ^ (a0->f3 = 0xFD);
+                                   ^ ~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:331:54: warning: implicit truncation from 'int' to bitfield changes value from 253 to -3
+  return (a0->f0 = 0xFD) ^ (a0->f2 = 0xFD) ^ (a0->f3 = 0xFD);
+                                                     ^ ~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:341:20: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -1
+  struct s8 g8 = { 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef };
+                   ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:341:44: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -1
+  struct s8 g8 = { 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef };
+                                           ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:341:56: warning: implicit truncation from 'unsigned int' to bitfield changes value from 3735928559 to -1
+  struct s8 g8 = { 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef };
+                                                       ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:341:20: warning: implicit conversion from 'unsigned int' to 'char' changes value from 3735928559 to -17
+  struct s8 g8 = { 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef };
+                 ~ ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:341:32: warning: implicit conversion from 'unsigned int' to 'char' changes value from 3735928559 to -17
+  struct s8 g8 = { 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef };
+                 ~             ^~~~~~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:341:56: warning: implicit conversion from 'unsigned int' to 'char' changes value from 3735928559 to -17
+  struct s8 g8 = { 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef };
+                 ~                                     ^~~~~~~~~~
+
+*** Dumping AST Record Layout
+Type: struct s9
+Record: struct s9 {
+    unsigned int f0 : (IntegerLiteral 0x20319a0 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:356:17> 'int' 7)
+;
+    unsigned int f1 : (IntegerLiteral 0x2031a18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:357:17> 'int' 7)
+;
+    unsigned int f2 : (IntegerLiteral 0x2031a98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:358:17> 'int' 7)
+;
+    unsigned int f3 : (IntegerLiteral 0x2031b18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:359:17> 'int' 7)
+;
+    unsigned int f4 : (IntegerLiteral 0x2031b98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:360:17> 'int' 7)
+;
+    unsigned int f5 : (IntegerLiteral 0x2031c18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:361:17> 'int' 7)
+;
+    unsigned int f6 : (IntegerLiteral 0x2031c98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:362:17> 'int' 7)
+;
+    unsigned int f7 : (IntegerLiteral 0x2031d18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:363:17> 'int' 7)
+;
+}
+Layout: <ASTRecordLayout
+  Size:56
+  DataSize:56
+  Alignment:8
+  FieldOffsets: [0, 7, 14, 21, 28, 35, 42, 49]>
+
+*** Dumping IRgen Record Layout
+Record: struct s9 {
+    unsigned int f0 : (IntegerLiteral 0x20319a0 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:356:17> 'int' 7)
+;
+    unsigned int f1 : (IntegerLiteral 0x2031a18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:357:17> 'int' 7)
+;
+    unsigned int f2 : (IntegerLiteral 0x2031a98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:358:17> 'int' 7)
+;
+    unsigned int f3 : (IntegerLiteral 0x2031b18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:359:17> 'int' 7)
+;
+    unsigned int f4 : (IntegerLiteral 0x2031b98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:360:17> 'int' 7)
+;
+    unsigned int f5 : (IntegerLiteral 0x2031c18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:361:17> 'int' 7)
+;
+    unsigned int f6 : (IntegerLiteral 0x2031c98 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:362:17> 'int' 7)
+;
+    unsigned int f7 : (IntegerLiteral 0x2031d18 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bitfield-2.c:363:17> 'int' 7)
+;
+}
+Layout: <CGRecordLayout
+  LLVMType:%struct.s9 = type <{ i8, i8, i8, i8, i8, i8, i8 }>
+  IsZeroInitializable:1
+  BitFields:[
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:0 AccessWidth:32
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:7>
+    ]>
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:7 AccessWidth:32
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:7>
+    ]>
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:14 AccessWidth:32
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:7>
+    ]>
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:21 AccessWidth:32
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:7>
+    ]>
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:2 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:0 FieldBitStart:28 AccessWidth:32
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:4>
+        <AccessInfo FieldIndex:0 FieldByteOffset:4 FieldBitStart:0 AccessWidth:16
+                    AccessAlignment:1 TargetBitOffset:4 TargetBitWidth:3>
+    ]>
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:4 FieldBitStart:3 AccessWidth:16
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:7>
+    ]>
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:2 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:4 FieldBitStart:10 AccessWidth:16
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:6>
+        <AccessInfo FieldIndex:0 FieldByteOffset:6 FieldBitStart:0 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:6 TargetBitWidth:1>
+    ]>
+    <CGBitFieldInfo Size:7 IsSigned:0
+                    NumComponents:1 Components: [
+        <AccessInfo FieldIndex:0 FieldByteOffset:6 FieldBitStart:1 AccessWidth:8
+                    AccessAlignment:1 TargetBitOffset:0 TargetBitWidth:7>
+    ]>
+]>
+27 warnings generated.

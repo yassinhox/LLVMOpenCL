@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2003-04-15-ConstantInitAssertion.ll >/dev/null 2> /home/jazouani/llvm/build/test/Assembler/Output/2003-04-15-ConstantInitAssertion.ll.tmp &&
+grep "struct initializer doesn't match struct element type" /home/jazouani/llvm/build/test/Assembler/Output/2003-04-15-ConstantInitAssertion.ll.tmp

@@ -1,0 +1,1 @@
+c-index-test -print-usr-file /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/print-usrs.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/print-usrs.c

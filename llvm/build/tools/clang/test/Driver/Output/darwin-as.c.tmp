@@ -1,0 +1,4 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: arm-apple-darwin10
+Thread model: posix
+ "/usr/bin/as" "-arch" "armv6" "-o" "darwin-as.o" "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-as.c"

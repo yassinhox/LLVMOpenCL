@@ -1,0 +1,17 @@
+#line 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/microsoft-ext.c"
+#line 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/microsoft-ext.c"
+#line 1 "<built-in>"
+#line 1 "<built-in>"
+#line 146 "<built-in>"
+#line 1 "<command line>"
+#line 1 "<built-in>"
+#line 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/microsoft-ext.c"
+
+
+
+
+
+
+a + {a, b}
+#line 22 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/microsoft-ext.c"
+class InvokeArgumentActionP2 {};

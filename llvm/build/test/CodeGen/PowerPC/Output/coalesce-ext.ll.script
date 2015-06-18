@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=ppc64 -mtriple=powerpc64-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/coalesce-ext.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/coalesce-ext.ll

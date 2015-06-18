@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Lexer/counter.c > /home/jazouani/llvm/build/tools/clang/test/Lexer/Output/counter.c.tmp &&
+grep "A: 0" /home/jazouani/llvm/build/tools/clang/test/Lexer/Output/counter.c.tmp &&
+grep "B: foo1" /home/jazouani/llvm/build/tools/clang/test/Lexer/Output/counter.c.tmp &&
+grep "C: foo2" /home/jazouani/llvm/build/tools/clang/test/Lexer/Output/counter.c.tmp &&
+grep "D: 3" /home/jazouani/llvm/build/tools/clang/test/Lexer/Output/counter.c.tmp

@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/Inputs/basiclink.a.ll -o /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.foo.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/Inputs/basiclink.b.ll -o /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.bar.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.foo.bc /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.bar.bc -o /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.bar.bc /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.foo.bc -o /home/jazouani/llvm/build/test/Linker/Output/basiclink.ll.tmp.bc

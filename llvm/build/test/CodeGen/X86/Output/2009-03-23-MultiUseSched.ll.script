@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-03-23-MultiUseSched.ll -mtriple=x86_64-linux -relocation-model=static -o /dev/null -stats -info-output-file - > /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-03-23-MultiUseSched.ll.tmp &&
+not grep spill /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-03-23-MultiUseSched.ll.tmp &&
+not grep "%rsp" /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-03-23-MultiUseSched.ll.tmp &&
+not grep "%rbp" /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-03-23-MultiUseSched.ll.tmp

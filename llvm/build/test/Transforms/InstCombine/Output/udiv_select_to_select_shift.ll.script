@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/udiv_select_to_select_shift.ll -instcombine -S -o /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/udiv_select_to_select_shift.ll.tmp &&
+not grep select /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/udiv_select_to_select_shift.ll.tmp &&
+grep lshr /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/udiv_select_to_select_shift.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+not grep udiv /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/udiv_select_to_select_shift.ll.tmp

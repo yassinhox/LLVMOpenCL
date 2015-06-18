@@ -1,0 +1,3 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: powerpc-apple-darwin9
+Thread model: posix

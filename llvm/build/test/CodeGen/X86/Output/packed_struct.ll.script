@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/packed_struct.ll -march=x86 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/packed_struct.ll.tmp &&
+grep foos+5 /home/jazouani/llvm/build/test/CodeGen/X86/Output/packed_struct.ll.tmp &&
+grep foos+1 /home/jazouani/llvm/build/test/CodeGen/X86/Output/packed_struct.ll.tmp &&
+grep foos+9 /home/jazouani/llvm/build/test/CodeGen/X86/Output/packed_struct.ll.tmp &&
+grep bara+19 /home/jazouani/llvm/build/test/CodeGen/X86/Output/packed_struct.ll.tmp &&
+grep bara+4 /home/jazouani/llvm/build/test/CodeGen/X86/Output/packed_struct.ll.tmp

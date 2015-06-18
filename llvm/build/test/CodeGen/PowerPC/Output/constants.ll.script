@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/constants.ll -march=ppc32 |    grep lis | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/constants.ll -march=ppc32 |    grep ori | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/constants.ll -march=ppc32 |    grep "li " | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

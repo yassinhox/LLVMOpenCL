@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -filetype=obj -mtriple x86_64-pc-linux-gnu /home/jazouani/llvm/llvm-3.2/test/MC/ELF/entsize.ll -o - | elf-dump | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=64 /home/jazouani/llvm/llvm-3.2/test/MC/ELF/entsize.ll

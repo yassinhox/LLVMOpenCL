@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/2007-04-06-strchr-miscompile.ll -simplify-libcalls -instcombine -S > /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2007-04-06-strchr-miscompile.ll.tmp &&
+grep "@str,.*i64 3" /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2007-04-06-strchr-miscompile.ll.tmp &&
+grep "@str1,.*i64 7" /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2007-04-06-strchr-miscompile.ll.tmp &&
+grep "ret i8.*null" /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2007-04-06-strchr-miscompile.ll.tmp

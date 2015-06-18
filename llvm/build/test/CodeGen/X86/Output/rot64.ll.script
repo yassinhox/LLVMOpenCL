@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rot64.ll -march=x86-64 -mcpu=corei7 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/rot64.ll.tmp &&
+grep rol /home/jazouani/llvm/build/test/CodeGen/X86/Output/rot64.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep ror /home/jazouani/llvm/build/test/CodeGen/X86/Output/rot64.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep shld /home/jazouani/llvm/build/test/CodeGen/X86/Output/rot64.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep shrd /home/jazouani/llvm/build/test/CodeGen/X86/Output/rot64.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rot64.ll -march=x86-64 -mcpu=core-avx2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rot64.ll --check-prefix=BMI2

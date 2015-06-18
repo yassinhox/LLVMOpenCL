@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/ELF/bracket.s 2> /home/jazouani/llvm/build/test/MC/ELF/Output/bracket.s.tmp1 > /home/jazouani/llvm/build/test/MC/ELF/Output/bracket.s.tmp2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/MC/ELF/Output/bracket.s.tmp1 /home/jazouani/llvm/llvm-3.2/test/MC/ELF/bracket.s

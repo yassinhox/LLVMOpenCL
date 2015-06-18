@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/debug-info-line.c -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/debug-info-line.c

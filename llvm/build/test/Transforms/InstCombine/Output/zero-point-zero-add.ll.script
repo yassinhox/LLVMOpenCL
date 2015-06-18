@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/zero-point-zero-add.ll -instcombine -S | grep 0.0 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

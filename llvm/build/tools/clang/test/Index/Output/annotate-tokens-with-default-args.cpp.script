@@ -1,0 +1,1 @@
+c-index-test -test-annotate-tokens=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-tokens-with-default-args.cpp:3:1:4:1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-tokens-with-default-args.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-tokens-with-default-args.cpp

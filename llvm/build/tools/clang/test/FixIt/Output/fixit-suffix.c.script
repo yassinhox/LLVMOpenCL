@@ -1,0 +1,3 @@
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-suffix.c /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-suffix.c.tmp.extrasuffix &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fixit=fixed -x c /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-suffix.c.tmp.extrasuffix &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -Werror -pedantic -x c /home/jazouani/llvm/build/tools/clang/test/FixIt/Output/fixit-suffix.c.tmp.fixed.extrasuffix

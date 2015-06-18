@@ -1,0 +1,879 @@
+
+ [B1 (ENTRY)]
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B1 (ENTRY)]
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A() (CXXConstructExpr, class A)
+   2: [B1.1] (BindTemporary)
+   3: [B1.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B1.3]
+   5: [B1.4] (CXXConstructExpr, class A)
+   6: ~A() (Temporary object destructor)
+   7: return [B1.5];
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: false
+   2: return [B1.1];
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: 0
+   2: return [B1.1];
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B1 (ENTRY)]
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B1 (ENTRY)]
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: true
+   2: return [B1.1];
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: 1
+   2: return [B1.1];
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A() (CXXConstructExpr, class A)
+   2: [B1.1] (BindTemporary)
+   3: [B1.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B1.3]
+   5: [B1.4] (CXXConstructExpr, class A)
+   6: ~A() (Temporary object destructor)
+   7: return [B1.5];
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A() (CXXConstructExpr, class A)
+   2: [B1.1] (BindTemporary)
+   3: [B1.2].operator int
+   4: [B1.3]()
+   5: [B1.4] (ImplicitCastExpr, UserDefinedConversion, int)
+   6: int([B1.5]) (CXXFunctionalCastExpr, NoOp, int)
+   7: B() (CXXConstructExpr, class B)
+   8: [B1.7] (BindTemporary)
+   9: [B1.8].operator int
+  10: [B1.9]()
+  11: [B1.10] (ImplicitCastExpr, UserDefinedConversion, int)
+  12: int([B1.11]) (CXXFunctionalCastExpr, NoOp, int)
+  13: [B1.6] + [B1.12]
+  14: int a = int(A().operator int()) + int(B().operator int());
+  15: ~B() (Temporary object destructor)
+  16: ~A() (Temporary object destructor)
+  17: A() (CXXConstructExpr, class A)
+  18: [B1.17] (BindTemporary)
+  19: [B1.18].operator int
+  20: [B1.19]()
+  21: [B1.20] (ImplicitCastExpr, UserDefinedConversion, int)
+  22: int([B1.21]) (CXXFunctionalCastExpr, NoOp, int)
+  23: B() (CXXConstructExpr, class B)
+  24: [B1.23] (BindTemporary)
+  25: [B1.24].operator int
+  26: [B1.25]()
+  27: [B1.26] (ImplicitCastExpr, UserDefinedConversion, int)
+  28: int([B1.27]) (CXXFunctionalCastExpr, NoOp, int)
+  29: [B1.22] + [B1.28]
+  30: foo
+  31: [B1.30] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(int))
+  32: [B1.31]([B1.29])
+  33: ~B() (Temporary object destructor)
+  34: ~A() (Temporary object destructor)
+  35: int b;
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B10 (ENTRY)]
+   Succs (1): B9
+
+ [B1]
+   1: ~A() (Temporary object destructor)
+   2: int b;
+   Preds (2): B2 B3
+   Succs (1): B0
+
+ [B2]
+   1: ~B() (Temporary object destructor)
+   Preds (1): B3
+   Succs (1): B1
+
+ [B3]
+   1: [B5.6] && [B4.5]
+   2: foo
+   3: [B3.2] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(_Bool))
+   4: [B3.3]([B3.1])
+   T: [B5.6] && ...
+   Preds (2): B4 B5
+   Succs (2): B2 B1
+
+ [B4]
+   1: B() (CXXConstructExpr, class B)
+   2: [B4.1] (BindTemporary)
+   3: [B4.2].operator _Bool
+   4: [B4.3]()
+   5: [B4.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   Preds (1): B5
+   Succs (1): B3
+
+ [B5]
+   1: ~A() (Temporary object destructor)
+   2: A() (CXXConstructExpr, class A)
+   3: [B5.2] (BindTemporary)
+   4: [B5.3].operator _Bool
+   5: [B5.4]()
+   6: [B5.5] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B5.6] && ...
+   Preds (2): B6 B7
+   Succs (2): B4 B3
+
+ [B6]
+   1: ~B() (Temporary object destructor)
+   Preds (1): B7
+   Succs (1): B5
+
+ [B7]
+   1: [B9.5] && [B8.5]
+   2: bool a = A().operator _Bool() && B().operator _Bool();
+   T: [B9.5] && ...
+   Preds (2): B8 B9
+   Succs (2): B6 B5
+
+ [B8]
+   1: B() (CXXConstructExpr, class B)
+   2: [B8.1] (BindTemporary)
+   3: [B8.2].operator _Bool
+   4: [B8.3]()
+   5: [B8.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   Preds (1): B9
+   Succs (1): B7
+
+ [B9]
+   1: A() (CXXConstructExpr, class A)
+   2: [B9.1] (BindTemporary)
+   3: [B9.2].operator _Bool
+   4: [B9.3]()
+   5: [B9.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B9.5] && ...
+   Preds (1): B10
+   Succs (2): B8 B7
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B10 (ENTRY)]
+   Succs (1): B9
+
+ [B1]
+   1: ~A() (Temporary object destructor)
+   2: int b;
+   Preds (2): B2 B3
+   Succs (1): B0
+
+ [B2]
+   1: ~B() (Temporary object destructor)
+   Preds (1): B3
+   Succs (1): B1
+
+ [B3]
+   1: [B5.6] || [B4.5]
+   2: foo
+   3: [B3.2] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(_Bool))
+   4: [B3.3]([B3.1])
+   T: [B5.6] || ...
+   Preds (2): B4 B5
+   Succs (2): B1 B2
+
+ [B4]
+   1: B() (CXXConstructExpr, class B)
+   2: [B4.1] (BindTemporary)
+   3: [B4.2].operator _Bool
+   4: [B4.3]()
+   5: [B4.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   Preds (1): B5
+   Succs (1): B3
+
+ [B5]
+   1: ~A() (Temporary object destructor)
+   2: A() (CXXConstructExpr, class A)
+   3: [B5.2] (BindTemporary)
+   4: [B5.3].operator _Bool
+   5: [B5.4]()
+   6: [B5.5] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B5.6] || ...
+   Preds (2): B6 B7
+   Succs (2): B3 B4
+
+ [B6]
+   1: ~B() (Temporary object destructor)
+   Preds (1): B7
+   Succs (1): B5
+
+ [B7]
+   1: [B9.5] || [B8.5]
+   2: bool a = A().operator _Bool() || B().operator _Bool();
+   T: [B9.5] || ...
+   Preds (2): B8 B9
+   Succs (2): B5 B6
+
+ [B8]
+   1: B() (CXXConstructExpr, class B)
+   2: [B8.1] (BindTemporary)
+   3: [B8.2].operator _Bool
+   4: [B8.3]()
+   5: [B8.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   Preds (1): B9
+   Succs (1): B7
+
+ [B9]
+   1: A() (CXXConstructExpr, class A)
+   2: [B9.1] (BindTemporary)
+   3: [B9.2].operator _Bool
+   4: [B9.3]()
+   5: [B9.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B9.5] || ...
+   Preds (1): B10
+   Succs (2): B7 B8
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B11 (ENTRY)]
+   Succs (1): B10
+
+ [B1]
+   1: int b;
+   2: [B7.5].~A() (Implicit destructor)
+   Preds (2): B2 B3
+   Succs (1): B0
+
+ [B2]
+   1: 0
+   2: foo
+   3: [B2.2] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(int))
+   4: [B2.3]([B2.1])
+   Preds (1): B4
+   Succs (1): B1
+
+ [B3]
+   1: 0
+   2: foo
+   3: [B3.2] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(int))
+   4: [B3.3]([B3.1])
+   Preds (1): B4
+   Succs (1): B1
+
+ [B4]
+   1: ~B() (Temporary object destructor)
+   2: B() (CXXConstructExpr, class B)
+   3: [B4.2] (BindTemporary)
+   4: [B4.3].operator _Bool
+   5: [B4.4]()
+   6: [B4.5] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   7: ~B() (Temporary object destructor)
+   T: if [B4.6]
+   Preds (2): B5 B6
+   Succs (2): B3 B2
+
+ [B5]
+   1: ~A() (Temporary object destructor)
+   2: ~A() (Temporary object destructor)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B6]
+   1: ~A() (Temporary object destructor)
+   2: ~A() (Temporary object destructor)
+   3: ~A() (Temporary object destructor)
+   4: ~B() (Temporary object destructor)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B7]
+   1: [B10.5] ? [B8.6] : [B9.15]
+   2: [B7.1] (ImplicitCastExpr, NoOp, const class A)
+   3: [B7.2]
+   4: [B7.3] (CXXConstructExpr, class A)
+   5: A a = B().operator _Bool() ? A() : A(B().operator A());
+   T: [B10.5] ? ... : ...
+   Preds (2): B8 B9
+   Succs (2): B5 B6
+
+ [B8]
+   1: A() (CXXConstructExpr, class A)
+   2: [B8.1] (BindTemporary)
+   3: [B8.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B8.3]
+   5: [B8.4] (CXXConstructExpr, class A)
+   6: [B8.5] (BindTemporary)
+   Preds (1): B10
+   Succs (1): B7
+
+ [B9]
+   1: B() (CXXConstructExpr, class B)
+   2: [B9.1] (BindTemporary)
+   3: [B9.2].operator A
+   4: [B9.3]()
+   5: [B9.4] (ImplicitCastExpr, UserDefinedConversion, class A)
+   6: [B9.5] (BindTemporary)
+   7: [B9.6] (ImplicitCastExpr, NoOp, const class A)
+   8: [B9.7]
+   9: [B9.8] (CXXConstructExpr, class A)
+  10: [B9.9] (BindTemporary)
+  11: A([B9.10]) (CXXFunctionalCastExpr, ConstructorConversion, class A)
+  12: [B9.11] (ImplicitCastExpr, NoOp, const class A)
+  13: [B9.12]
+  14: [B9.13] (CXXConstructExpr, class A)
+  15: [B9.14] (BindTemporary)
+   Preds (1): B10
+   Succs (1): B7
+
+ [B10]
+   1: B() (CXXConstructExpr, class B)
+   2: [B10.1] (BindTemporary)
+   3: [B10.2].operator _Bool
+   4: [B10.3]()
+   5: [B10.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B10.5] ? ... : ...
+   Preds (1): B11
+   Succs (2): B8 B9
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B14 (ENTRY)]
+   Succs (1): B13
+
+ [B1]
+   1: ~B() (Temporary object destructor)
+   2: int b;
+   3: [B10.4].~A() (Implicit destructor)
+   Preds (2): B2 B3
+   Succs (1): B0
+
+ [B2]
+   1: ~A() (Temporary object destructor)
+   2: ~A() (Temporary object destructor)
+   Preds (1): B4
+   Succs (1): B1
+
+ [B3]
+   1: ~A() (Temporary object destructor)
+   2: ~A() (Temporary object destructor)
+   3: ~A() (Temporary object destructor)
+   4: ~B() (Temporary object destructor)
+   Preds (1): B4
+   Succs (1): B1
+
+ [B4]
+   1: [B7.6] ? [B5.6] : [B6.15]
+   2: [B4.1] (ImplicitCastExpr, NoOp, const class A)
+   3: [B4.2]
+   4: foo
+   5: [B4.4] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(const class A &))
+   6: [B4.5]([B4.3])
+   T: [B7.6] ? ... : ...
+   Preds (2): B5 B6
+   Succs (2): B2 B3
+
+ [B5]
+   1: A() (CXXConstructExpr, class A)
+   2: [B5.1] (BindTemporary)
+   3: [B5.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B5.3]
+   5: [B5.4] (CXXConstructExpr, class A)
+   6: [B5.5] (BindTemporary)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B6]
+   1: B() (CXXConstructExpr, class B)
+   2: [B6.1] (BindTemporary)
+   3: [B6.2].operator A
+   4: [B6.3]()
+   5: [B6.4] (ImplicitCastExpr, UserDefinedConversion, class A)
+   6: [B6.5] (BindTemporary)
+   7: [B6.6] (ImplicitCastExpr, NoOp, const class A)
+   8: [B6.7]
+   9: [B6.8] (CXXConstructExpr, class A)
+  10: [B6.9] (BindTemporary)
+  11: A([B6.10]) (CXXFunctionalCastExpr, ConstructorConversion, class A)
+  12: [B6.11] (ImplicitCastExpr, NoOp, const class A)
+  13: [B6.12]
+  14: [B6.13] (CXXConstructExpr, class A)
+  15: [B6.14] (BindTemporary)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B7]
+   1: ~B() (Temporary object destructor)
+   2: B() (CXXConstructExpr, class B)
+   3: [B7.2] (BindTemporary)
+   4: [B7.3].operator _Bool
+   5: [B7.4]()
+   6: [B7.5] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B7.6] ? ... : ...
+   Preds (2): B8 B9
+   Succs (2): B5 B6
+
+ [B8]
+   1: ~A() (Temporary object destructor)
+   Preds (1): B10
+   Succs (1): B7
+
+ [B9]
+   1: ~A() (Temporary object destructor)
+   2: ~A() (Temporary object destructor)
+   3: ~B() (Temporary object destructor)
+   Preds (1): B10
+   Succs (1): B7
+
+ [B10]
+   1: [B13.5] ? [B11.6] : [B12.15]
+   2: [B10.1] (ImplicitCastExpr, NoOp, const class A)
+   3: [B10.2]
+   4: const A &a = B().operator _Bool() ? A() : A(B().operator A());
+   T: [B13.5] ? ... : ...
+   Preds (2): B11 B12
+   Succs (2): B8 B9
+
+ [B11]
+   1: A() (CXXConstructExpr, class A)
+   2: [B11.1] (BindTemporary)
+   3: [B11.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B11.3]
+   5: [B11.4] (CXXConstructExpr, class A)
+   6: [B11.5] (BindTemporary)
+   Preds (1): B13
+   Succs (1): B10
+
+ [B12]
+   1: B() (CXXConstructExpr, class B)
+   2: [B12.1] (BindTemporary)
+   3: [B12.2].operator A
+   4: [B12.3]()
+   5: [B12.4] (ImplicitCastExpr, UserDefinedConversion, class A)
+   6: [B12.5] (BindTemporary)
+   7: [B12.6] (ImplicitCastExpr, NoOp, const class A)
+   8: [B12.7]
+   9: [B12.8] (CXXConstructExpr, class A)
+  10: [B12.9] (BindTemporary)
+  11: A([B12.10]) (CXXFunctionalCastExpr, ConstructorConversion, class A)
+  12: [B12.11] (ImplicitCastExpr, NoOp, const class A)
+  13: [B12.12]
+  14: [B12.13] (CXXConstructExpr, class A)
+  15: [B12.14] (BindTemporary)
+   Preds (1): B13
+   Succs (1): B10
+
+ [B13]
+   1: B() (CXXConstructExpr, class B)
+   2: [B13.1] (BindTemporary)
+   3: [B13.2].operator _Bool
+   4: [B13.3]()
+   5: [B13.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B13.5] ? ... : ...
+   Preds (1): B14
+   Succs (2): B11 B12
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B8 (ENTRY)]
+   Succs (1): B7
+
+ [B1]
+   1: ~A() (Temporary object destructor)
+   2: int b;
+   3: [B4.5].~A() (Implicit destructor)
+   Preds (2): B2 B3
+   Succs (1): B0
+
+ [B2]
+   1: ~A() (Temporary object destructor)
+   Preds (1): B4
+   Succs (1): B1
+
+ [B3]
+   1: ~A() (Temporary object destructor)
+   2: ~A() (Temporary object destructor)
+   Preds (1): B4
+   Succs (1): B1
+
+ [B4]
+   1: [B7.2] ?: [B6.6]
+   2: [B4.1] (ImplicitCastExpr, NoOp, const class A)
+   3: [B4.2]
+   4: [B4.3] (CXXConstructExpr, class A)
+   5: A a = A() ?: A();
+   T: [B7.5] ? ... : ...
+   Preds (2): B5 B6
+   Succs (2): B2 B3
+
+ [B5]
+   1: [B7.2] (ImplicitCastExpr, NoOp, const class A)
+   2: [B5.1]
+   3: [B5.2] (CXXConstructExpr, class A)
+   4: [B5.3] (BindTemporary)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B6]
+   1: A() (CXXConstructExpr, class A)
+   2: [B6.1] (BindTemporary)
+   3: [B6.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B6.3]
+   5: [B6.4] (CXXConstructExpr, class A)
+   6: [B6.5] (BindTemporary)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B7]
+   1: A() (CXXConstructExpr, class A)
+   2: [B7.1] (BindTemporary)
+   3: [B7.2].operator _Bool
+   4: [B7.3]()
+   5: [B7.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B7.5] ? ... : ...
+   Preds (1): B8
+   Succs (2): B5 B6
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B13 (ENTRY)]
+   Succs (1): B12
+
+ [B1]
+   1: ~A() (Temporary object destructor)
+   2: int b;
+   3: [B9.4].~A() (Implicit destructor)
+   Preds (2): B2 B3
+   Succs (1): B0
+
+ [B2]
+   1: ~A() (Temporary object destructor)
+   Preds (1): B4
+   Succs (1): B1
+
+ [B3]
+   1: ~A() (Temporary object destructor)
+   2: ~A() (Temporary object destructor)
+   Preds (1): B4
+   Succs (1): B1
+
+ [B4]
+   1: [B7.3] ?: [B6.6]
+   2: [B4.1] (ImplicitCastExpr, NoOp, const class A)
+   3: [B4.2]
+   4: foo
+   5: [B4.4] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(const class A &))
+   6: [B4.5]([B4.3])
+   T: [B7.6] ? ... : ...
+   Preds (2): B5 B6
+   Succs (2): B2 B3
+
+ [B5]
+   1: [B7.3] (ImplicitCastExpr, NoOp, const class A)
+   2: [B5.1]
+   3: [B5.2] (CXXConstructExpr, class A)
+   4: [B5.3] (BindTemporary)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B6]
+   1: A() (CXXConstructExpr, class A)
+   2: [B6.1] (BindTemporary)
+   3: [B6.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B6.3]
+   5: [B6.4] (CXXConstructExpr, class A)
+   6: [B6.5] (BindTemporary)
+   Preds (1): B7
+   Succs (1): B4
+
+ [B7]
+   1: ~A() (Temporary object destructor)
+   2: A() (CXXConstructExpr, class A)
+   3: [B7.2] (BindTemporary)
+   4: [B7.3].operator _Bool
+   5: [B7.4]()
+   6: [B7.5] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B7.6] ? ... : ...
+   Preds (2): B9 B8
+   Succs (2): B5 B6
+
+ [B8]
+   1: ~A() (Temporary object destructor)
+   Preds (1): B9
+   Succs (1): B7
+
+ [B9]
+   1: [B12.2] ?: [B11.6]
+   2: [B9.1] (ImplicitCastExpr, NoOp, const class A)
+   3: [B9.2]
+   4: const A &a = A() ?: A();
+   T: [B12.5] ? ... : ...
+   Preds (2): B10 B11
+   Succs (2): B7 B8
+
+ [B10]
+   1: [B12.2] (ImplicitCastExpr, NoOp, const class A)
+   2: [B10.1]
+   3: [B10.2] (CXXConstructExpr, class A)
+   4: [B10.3] (BindTemporary)
+   Preds (1): B12
+   Succs (1): B9
+
+ [B11]
+   1: A() (CXXConstructExpr, class A)
+   2: [B11.1] (BindTemporary)
+   3: [B11.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B11.3]
+   5: [B11.4] (CXXConstructExpr, class A)
+   6: [B11.5] (BindTemporary)
+   Preds (1): B12
+   Succs (1): B9
+
+ [B12]
+   1: A() (CXXConstructExpr, class A)
+   2: [B12.1] (BindTemporary)
+   3: [B12.2].operator _Bool
+   4: [B12.3]()
+   5: [B12.4] (ImplicitCastExpr, UserDefinedConversion, _Bool)
+   T: [B12.5] ? ... : ...
+   Preds (1): B13
+   Succs (2): B10 B11
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A() (CXXConstructExpr, class A)
+   2: [B1.1] (BindTemporary)
+   3: [B1.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B1.3]
+   5: [B1.4] (CXXConstructExpr, class A)
+   6: A a = A();
+   7: ~A() (Temporary object destructor)
+   8: int b;
+   9: [B1.6].~A() (Implicit destructor)
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A() (CXXConstructExpr, class A)
+   2: [B1.1] (BindTemporary)
+   3: [B1.2] (ImplicitCastExpr, NoOp, const class A)
+   4: [B1.3]
+   5: const A &a = A();
+   6: A() (CXXConstructExpr, class A)
+   7: [B1.6] (BindTemporary)
+   8: [B1.7] (ImplicitCastExpr, NoOp, const class A)
+   9: [B1.8]
+  10: foo
+  11: [B1.10] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(const class A &))
+  12: [B1.11]([B1.9])
+  13: ~A() (Temporary object destructor)
+  14: int b;
+  15: [B1.5].~A() (Implicit destructor)
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A::make
+   2: [B1.1] (ImplicitCastExpr, FunctionToPointerDecay, class A (*)(void))
+   3: [B1.2]()
+   4: [B1.3] (BindTemporary)
+   5: [B1.4] (ImplicitCastExpr, NoOp, const class A)
+   6: [B1.5]
+   7: [B1.6] (CXXConstructExpr, class A)
+   8: A a = A::make();
+   9: ~A() (Temporary object destructor)
+  10: int b;
+  11: [B1.8].~A() (Implicit destructor)
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A::make
+   2: [B1.1] (ImplicitCastExpr, FunctionToPointerDecay, class A (*)(void))
+   3: [B1.2]()
+   4: [B1.3] (BindTemporary)
+   5: [B1.4] (ImplicitCastExpr, NoOp, const class A)
+   6: [B1.5]
+   7: const A &a = A::make();
+   8: A::make
+   9: [B1.8] (ImplicitCastExpr, FunctionToPointerDecay, class A (*)(void))
+  10: [B1.9]()
+  11: [B1.10] (BindTemporary)
+  12: [B1.11] (ImplicitCastExpr, NoOp, const class A)
+  13: [B1.12]
+  14: foo
+  15: [B1.14] (ImplicitCastExpr, FunctionToPointerDecay, void (*)(const class A &))
+  16: [B1.15]([B1.13])
+  17: ~A() (Temporary object destructor)
+  18: int b;
+  19: [B1.7].~A() (Implicit destructor)
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: int a;
+   2: A() (CXXConstructExpr, class A)
+   3: [B1.2] (BindTemporary)
+   4: [B1.3].operator int
+   5: [B1.4]()
+   6: [B1.5] (ImplicitCastExpr, UserDefinedConversion, int)
+   7: a
+   8: [B1.7] = [B1.6]
+   9: ~A() (Temporary object destructor)
+  10: int b;
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: A() (CXXConstructExpr, class A)
+   2: [B1.1] (BindTemporary)
+   3: [B1.2].operator int
+   4: [B1.3]()
+   5: [B1.4] (ImplicitCastExpr, UserDefinedConversion, int)
+   6: int([B1.5]) (CXXFunctionalCastExpr, NoOp, int)
+   7: B() (CXXConstructExpr, class B)
+   8: [B1.7] (BindTemporary)
+   9: [B1.8].operator int
+  10: [B1.9]()
+  11: [B1.10] (ImplicitCastExpr, UserDefinedConversion, int)
+  12: int([B1.11]) (CXXFunctionalCastExpr, NoOp, int)
+  13: [B1.6] + [B1.12]
+  14: a([B1.13]) (Member initializer)
+  15: ~B() (Temporary object destructor)
+  16: ~A() (Temporary object destructor)
+  17: /*implicit*/int()
+  18: b([B1.17]) (Member initializer)
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+

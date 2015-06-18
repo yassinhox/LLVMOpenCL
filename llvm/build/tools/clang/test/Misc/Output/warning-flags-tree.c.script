@@ -1,0 +1,6 @@
+diagtool tree | FileCheck -strict-whitespace /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/warning-flags-tree.c &&
+diagtool tree -Weverything | FileCheck -strict-whitespace /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/warning-flags-tree.c &&
+diagtool tree everything | FileCheck -strict-whitespace /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/warning-flags-tree.c &&
+not diagtool tree -Wthis-is-not-a-valid-flag &&
+diagtool tree -Wgnu | FileCheck -strict-whitespace -check-prefix CHECK-GNU /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/warning-flags-tree.c &&
+diagtool tree --flags-only -Wgnu | FileCheck -check-prefix CHECK-FLAGS-ONLY /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/warning-flags-tree.c

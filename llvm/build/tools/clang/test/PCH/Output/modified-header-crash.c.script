@@ -1,0 +1,4 @@
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/modified-header-crash.h /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-crash.c.tmp.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -DCAKE -x c-header /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-crash.c.tmp.h -emit-pch -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-crash.c.tmp &&
+echo >> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-crash.c.tmp.h &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/modified-header-crash.c -include-pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-crash.c.tmp -fsyntax-only

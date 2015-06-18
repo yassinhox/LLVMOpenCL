@@ -1,0 +1,40 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/ns-constant-strings.m'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%0 = type opaque
+%struct._class_t = type { %struct._class_t*, %struct._class_t*, %struct._objc_cache*, i8* (i8*, i8*)**, %struct._class_ro_t* }
+%struct._objc_cache = type opaque
+%struct._class_ro_t = type { i32, i32, i32, i8*, i8*, %struct.__method_list_t*, %struct._objc_protocol_list*, %struct._ivar_list_t*, i8*, %struct._prop_list_t* }
+%struct.__method_list_t = type { i32, i32, [0 x %struct._objc_method] }
+%struct._objc_method = type { i8*, i8*, i8* }
+%struct._objc_protocol_list = type { i64, [0 x %struct._protocol_t*] }
+%struct._protocol_t = type { i8*, i8*, %struct._objc_protocol_list*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct._prop_list_t*, i32, i32, i8** }
+%struct._prop_list_t = type { i32, i32, [0 x %struct._prop_t] }
+%struct._prop_t = type { i8*, i8* }
+%struct._ivar_list_t = type { i32, i32, [0 x %struct._ivar_t] }
+%struct._ivar_t = type { i64*, i8*, i8*, i32, i32 }
+%struct.__builtin_NSString = type { i32*, i8*, i32 }
+
+@"OBJC_CLASS_$_NSConstantString" = external global %struct._class_t
+@.str = private unnamed_addr constant [6 x i8] c"MyApp\00", align 1
+@_unnamed_nsstring_ = private constant %struct.__builtin_NSString { i32* bitcast (%struct._class_t* @"OBJC_CLASS_$_NSConstantString" to i32*), i8* getelementptr inbounds ([6 x i8]* @.str, i32 0, i32 0), i32 5 }, section "__DATA, __objc_stringobj, regular, no_dead_strip"
+@appKey = global %0* bitcast (%struct.__builtin_NSString* @_unnamed_nsstring_ to %0*), align 8
+@.str1 = private unnamed_addr constant [7 x i8] c"MyApp1\00", align 1
+@_unnamed_nsstring_2 = private constant %struct.__builtin_NSString { i32* bitcast (%struct._class_t* @"OBJC_CLASS_$_NSConstantString" to i32*), i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i32 6 }, section "__DATA, __objc_stringobj, regular, no_dead_strip"
+
+define i32 @main() nounwind {
+entry:
+  %appKey = alloca %0*, align 8
+  %appKey1 = alloca %0*, align 8
+  store %0* bitcast (%struct.__builtin_NSString* @_unnamed_nsstring_ to %0*), %0** %appKey, align 8
+  store %0* bitcast (%struct.__builtin_NSString* @_unnamed_nsstring_2 to %0*), %0** %appKey1, align 8
+  ret i32 0
+}
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 2}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__DATA, __objc_imageinfo, regular, no_dead_strip"}
+!3 = metadata !{i32 4, metadata !"Objective-C Garbage Collection", i32 0}

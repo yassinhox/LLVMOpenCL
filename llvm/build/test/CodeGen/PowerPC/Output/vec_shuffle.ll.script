@@ -1,0 +1,7 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/vec_shuffle.ll -instcombine |    /home/jazouani/llvm/build/Release+Asserts/bin/llc -march=ppc32 -mcpu=g5 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep vperm &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/vec_shuffle.ll -march=ppc32 -mcpu=g5 > /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_shuffle.ll.tmp &&
+grep vsldoi  /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_shuffle.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep vmrgh   /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_shuffle.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 7 &&
+grep vmrgl   /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_shuffle.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep vpkuhum /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_shuffle.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep vpkuwum /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_shuffle.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

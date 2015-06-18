@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/private.ll -mtriple=x86_64-pc-linux | grep .Lfoo: &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/private.ll -mtriple=x86_64-pc-linux | grep call.*\.Lfoo &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/private.ll -mtriple=x86_64-pc-linux | grep .Lbaz: &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/private.ll -mtriple=x86_64-pc-linux | grep movl.*\.Lbaz

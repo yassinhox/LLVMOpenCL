@@ -1,0 +1,82 @@
+	.file	"<stdin>"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI0_0:
+	.byte	1                       # 0x1
+	.byte	0                       # 0x0
+	.byte	3                       # 0x3
+	.byte	2                       # 0x2
+	.byte	5                       # 0x5
+	.byte	4                       # 0x4
+	.byte	7                       # 0x7
+	.byte	6                       # 0x6
+	.byte	9                       # 0x9
+	.byte	8                       # 0x8
+	.byte	11                      # 0xb
+	.byte	10                      # 0xa
+	.byte	12                      # 0xc
+	.byte	13                      # 0xd
+	.byte	15                      # 0xf
+	.byte	14                      # 0xe
+	.text
+	.globl	shuf1
+	.align	16, 0x90
+	.type	shuf1,@function
+shuf1:                                  # @shuf1
+# BB#0:                                 # %entry
+	pshufb	.LCPI0_0, %xmm0
+	ret
+.Ltmp0:
+	.size	shuf1, .Ltmp0-shuf1
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI1_0:
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	1                       # 0x1
+	.byte	0                       # 0x0
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+.LCPI1_1:
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	3                       # 0x3
+	.byte	2                       # 0x2
+	.byte	128                     # 0x80
+	.byte	128                     # 0x80
+	.byte	7                       # 0x7
+	.byte	6                       # 0x6
+	.byte	9                       # 0x9
+	.byte	8                       # 0x8
+	.byte	11                      # 0xb
+	.byte	10                      # 0xa
+	.byte	12                      # 0xc
+	.byte	13                      # 0xd
+	.byte	15                      # 0xf
+	.byte	14                      # 0xe
+	.text
+	.globl	shuf2
+	.align	16, 0x90
+	.type	shuf2,@function
+shuf2:                                  # @shuf2
+# BB#0:                                 # %entry
+	pshufb	.LCPI1_0, %xmm1
+	pshufb	.LCPI1_1, %xmm0
+	por	%xmm1, %xmm0
+	ret
+.Ltmp1:
+	.size	shuf2, .Ltmp1-shuf2
+
+
+	.section	".note.GNU-stack","",@progbits

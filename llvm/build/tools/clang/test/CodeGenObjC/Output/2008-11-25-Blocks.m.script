@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fblocks -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/2008-11-25-Blocks.m -o /dev/null

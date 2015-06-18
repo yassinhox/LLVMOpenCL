@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2009-01-19-fmod-constant-float.ll -simplifycfg -instcombine -S | grep 0x3FB99999A0000000 | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2009-01-19-fmod-constant-float.ll -simplifycfg -instcombine -S | grep 0xBFB99999A0000000 | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

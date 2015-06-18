@@ -1,0 +1,2 @@
+cd /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver &&  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/debug.c -c 2>&1 | FileCheck -check-prefix=CHECK-PWD /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/debug.c &&
+env PWD=/foo  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/debug.c -c 2>&1 | FileCheck -check-prefix=CHECK-FOO /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/debug.c

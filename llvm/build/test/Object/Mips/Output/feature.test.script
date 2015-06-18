@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-objdump -disassemble -triple mips64el -mattr +mips64r2 /home/jazouani/llvm/llvm-3.2/test/Object/Mips/../Inputs/dext-test.elf-mips64r2  | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/Mips/feature.test

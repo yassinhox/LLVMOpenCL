@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-unknown-unknown --show-encoding /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_64-fma4-encoding.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_64-fma4-encoding.s

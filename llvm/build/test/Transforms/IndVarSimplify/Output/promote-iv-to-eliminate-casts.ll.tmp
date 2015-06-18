@@ -1,0 +1,96 @@
+; ModuleID = '<stdin>'
+
+define i64 @test(i64* nocapture %first, i32 %count) nounwind readonly {
+entry:
+  %t0 = icmp sgt i32 %count, 0
+  br i1 %t0, label %bb.nph, label %bb2
+
+bb.nph:                                           ; preds = %entry
+  br label %bb
+
+bb:                                               ; preds = %bb1, %bb.nph
+  %indvars.iv = phi i64 [ %indvars.iv.next, %bb1 ], [ 0, %bb.nph ]
+  %result.02 = phi i64 [ %t5, %bb1 ], [ 0, %bb.nph ]
+  %t2 = getelementptr i64* %first, i64 %indvars.iv
+  %t3 = load i64* %t2, align 8
+  %t4 = lshr i64 %t3, 4
+  %t5 = add i64 %t4, %result.02
+  %indvars.iv.next = add i64 %indvars.iv, 1
+  br label %bb1
+
+bb1:                                              ; preds = %bb
+  %lftr.wideiv = trunc i64 %indvars.iv.next to i32
+  %exitcond = icmp ne i32 %lftr.wideiv, %count
+  br i1 %exitcond, label %bb, label %bb1.bb2_crit_edge
+
+bb1.bb2_crit_edge:                                ; preds = %bb1
+  %.lcssa = phi i64 [ %t5, %bb1 ]
+  br label %bb2
+
+bb2:                                              ; preds = %bb1.bb2_crit_edge, %entry
+  %result.0.lcssa = phi i64 [ %.lcssa, %bb1.bb2_crit_edge ], [ 0, %entry ]
+  ret i64 %result.0.lcssa
+}
+
+define void @foo(i16 signext %N, i32* nocapture %P) nounwind {
+entry:
+  %t0 = icmp sgt i16 %N, 0
+  br i1 %t0, label %bb.nph, label %return
+
+bb.nph:                                           ; preds = %entry
+  br label %bb
+
+bb:                                               ; preds = %bb1, %bb.nph
+  %indvars.iv = phi i64 [ %indvars.iv.next, %bb1 ], [ 0, %bb.nph ]
+  %t2 = getelementptr i32* %P, i64 %indvars.iv
+  store i32 123, i32* %t2, align 4
+  %indvars.iv.next = add i64 %indvars.iv, 1
+  br label %bb1
+
+bb1:                                              ; preds = %bb
+  %lftr.wideiv = trunc i64 %indvars.iv.next to i16
+  %exitcond = icmp ne i16 %lftr.wideiv, %N
+  br i1 %exitcond, label %bb, label %bb1.return_crit_edge
+
+bb1.return_crit_edge:                             ; preds = %bb1
+  br label %return
+
+return:                                           ; preds = %bb1.return_crit_edge, %entry
+  ret void
+}
+
+define void @kinds__srangezero([21 x i32]* nocapture %a) nounwind {
+bb.thread:
+  br label %bb
+
+bb:                                               ; preds = %bb, %bb.thread
+  %indvars.iv = phi i32 [ %indvars.iv.next, %bb ], [ -10, %bb.thread ]
+  %tmp4 = add i32 %indvars.iv, 10
+  %tmp5 = getelementptr [21 x i32]* %a, i32 0, i32 %tmp4
+  store i32 0, i32* %tmp5
+  %indvars.iv.next = add i32 %indvars.iv, 1
+  %lftr.wideiv = trunc i32 %indvars.iv.next to i8
+  %exitcond = icmp eq i8 %lftr.wideiv, 11
+  br i1 %exitcond, label %return, label %bb
+
+return:                                           ; preds = %bb
+  ret void
+}
+
+define void @kinds__urangezero([21 x i32]* nocapture %a) nounwind {
+bb.thread:
+  br label %bb
+
+bb:                                               ; preds = %bb, %bb.thread
+  %indvars.iv = phi i32 [ %indvars.iv.next, %bb ], [ 10, %bb.thread ]
+  %tmp4 = add i32 %indvars.iv, -10
+  %tmp5 = getelementptr [21 x i32]* %a, i32 0, i32 %tmp4
+  store i32 0, i32* %tmp5
+  %indvars.iv.next = add i32 %indvars.iv, 1
+  %lftr.wideiv = trunc i32 %indvars.iv.next to i8
+  %exitcond = icmp eq i8 %lftr.wideiv, 31
+  br i1 %exitcond, label %return, label %bb
+
+return:                                           ; preds = %bb
+  ret void
+}

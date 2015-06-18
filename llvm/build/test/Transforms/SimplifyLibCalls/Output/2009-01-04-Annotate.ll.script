@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/2009-01-04-Annotate.ll -simplify-libcalls -S > /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2009-01-04-Annotate.ll.tmp &&
+grep noalias /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2009-01-04-Annotate.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep nocapture /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2009-01-04-Annotate.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep nounwind /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2009-01-04-Annotate.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep readonly /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/2009-01-04-Annotate.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

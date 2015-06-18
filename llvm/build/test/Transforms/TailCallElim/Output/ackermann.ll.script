@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/TailCallElim/ackermann.ll -tailcallelim -stats -disable-output 2>&1 | grep "2 tailcallelim"

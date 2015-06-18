@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/peep-test-0.ll -march=x86-64 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/peep-test-0.ll.tmp &&
+not grep cmp /home/jazouani/llvm/build/test/CodeGen/X86/Output/peep-test-0.ll.tmp &&
+not grep test /home/jazouani/llvm/build/test/CodeGen/X86/Output/peep-test-0.ll.tmp

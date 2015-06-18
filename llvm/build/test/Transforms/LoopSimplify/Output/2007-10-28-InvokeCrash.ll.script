@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopSimplify/2007-10-28-InvokeCrash.ll | /home/jazouani/llvm/build/Release+Asserts/bin/opt -loop-simplify -disable-output

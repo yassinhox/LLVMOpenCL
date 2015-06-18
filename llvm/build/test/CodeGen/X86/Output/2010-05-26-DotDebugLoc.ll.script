@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O2 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-26-DotDebugLoc.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-26-DotDebugLoc.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O2 -regalloc=basic < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-26-DotDebugLoc.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-26-DotDebugLoc.ll

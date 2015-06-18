@@ -1,0 +1,265 @@
+	.file	"<stdin>"
+	.text
+	.globl	VSLDOI_xy
+	.align	2
+	.type	VSLDOI_xy,@function
+VSLDOI_xy:                              # @VSLDOI_xy
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vsldoi 2, 3, 2, 5
+	stvx 2, 0, 3
+	blr 
+.Ltmp0:
+	.size	VSLDOI_xy, .Ltmp0-VSLDOI_xy
+	.cfi_endproc
+
+	.globl	VSLDOI_xx
+	.align	2
+	.type	VSLDOI_xx,@function
+VSLDOI_xx:                              # @VSLDOI_xx
+	.cfi_startproc
+# BB#0:
+	lvx 2, 0, 3
+	vsldoi 2, 2, 2, 5
+	stvx 2, 0, 3
+	blr 
+.Ltmp1:
+	.size	VSLDOI_xx, .Ltmp1-VSLDOI_xx
+	.cfi_endproc
+
+	.globl	VPERM_promote
+	.align	2
+	.type	VPERM_promote,@function
+VPERM_promote:                          # @VPERM_promote
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vspltisb 4, 14
+	vperm 2, 3, 2, 4
+	stvx 2, 0, 3
+	blr 
+.Ltmp2:
+	.size	VPERM_promote, .Ltmp2-VPERM_promote
+	.cfi_endproc
+
+	.globl	tb_l
+	.align	2
+	.type	tb_l,@function
+tb_l:                                   # @tb_l
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vmrglb 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp3:
+	.size	tb_l, .Ltmp3-tb_l
+	.cfi_endproc
+
+	.globl	th_l
+	.align	2
+	.type	th_l,@function
+th_l:                                   # @th_l
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vmrglh 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp4:
+	.size	th_l, .Ltmp4-th_l
+	.cfi_endproc
+
+	.globl	tw_l
+	.align	2
+	.type	tw_l,@function
+tw_l:                                   # @tw_l
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vmrglw 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp5:
+	.size	tw_l, .Ltmp5-tw_l
+	.cfi_endproc
+
+	.globl	tb_h
+	.align	2
+	.type	tb_h,@function
+tb_h:                                   # @tb_h
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vmrghb 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp6:
+	.size	tb_h, .Ltmp6-tb_h
+	.cfi_endproc
+
+	.globl	th_h
+	.align	2
+	.type	th_h,@function
+th_h:                                   # @th_h
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vmrghh 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp7:
+	.size	th_h, .Ltmp7-th_h
+	.cfi_endproc
+
+	.globl	tw_h
+	.align	2
+	.type	tw_h,@function
+tw_h:                                   # @tw_h
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	lvx 3, 0, 4
+	vmrghw 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp8:
+	.size	tw_h, .Ltmp8-tw_h
+	.cfi_endproc
+
+	.globl	tw_h_flop
+	.align	2
+	.type	tw_h_flop,@function
+tw_h_flop:                              # @tw_h_flop
+	.cfi_startproc
+# BB#0:
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vmrghw 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp9:
+	.size	tw_h_flop, .Ltmp9-tw_h_flop
+	.cfi_endproc
+
+	.globl	VMRG_UNARY_tb_l
+	.align	2
+	.type	VMRG_UNARY_tb_l,@function
+VMRG_UNARY_tb_l:                        # @VMRG_UNARY_tb_l
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vmrglb 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp10:
+	.size	VMRG_UNARY_tb_l, .Ltmp10-VMRG_UNARY_tb_l
+	.cfi_endproc
+
+	.globl	VMRG_UNARY_th_l
+	.align	2
+	.type	VMRG_UNARY_th_l,@function
+VMRG_UNARY_th_l:                        # @VMRG_UNARY_th_l
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vmrglh 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp11:
+	.size	VMRG_UNARY_th_l, .Ltmp11-VMRG_UNARY_th_l
+	.cfi_endproc
+
+	.globl	VMRG_UNARY_tw_l
+	.align	2
+	.type	VMRG_UNARY_tw_l,@function
+VMRG_UNARY_tw_l:                        # @VMRG_UNARY_tw_l
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vmrglw 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp12:
+	.size	VMRG_UNARY_tw_l, .Ltmp12-VMRG_UNARY_tw_l
+	.cfi_endproc
+
+	.globl	VMRG_UNARY_tb_h
+	.align	2
+	.type	VMRG_UNARY_tb_h,@function
+VMRG_UNARY_tb_h:                        # @VMRG_UNARY_tb_h
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vmrghb 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp13:
+	.size	VMRG_UNARY_tb_h, .Ltmp13-VMRG_UNARY_tb_h
+	.cfi_endproc
+
+	.globl	VMRG_UNARY_th_h
+	.align	2
+	.type	VMRG_UNARY_th_h,@function
+VMRG_UNARY_th_h:                        # @VMRG_UNARY_th_h
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vmrghh 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp14:
+	.size	VMRG_UNARY_th_h, .Ltmp14-VMRG_UNARY_th_h
+	.cfi_endproc
+
+	.globl	VMRG_UNARY_tw_h
+	.align	2
+	.type	VMRG_UNARY_tw_h,@function
+VMRG_UNARY_tw_h:                        # @VMRG_UNARY_tw_h
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vmrghw 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp15:
+	.size	VMRG_UNARY_tw_h, .Ltmp15-VMRG_UNARY_tw_h
+	.cfi_endproc
+
+	.globl	VPCKUHUM_unary
+	.align	2
+	.type	VPCKUHUM_unary,@function
+VPCKUHUM_unary:                         # @VPCKUHUM_unary
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vpkuhum 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp16:
+	.size	VPCKUHUM_unary, .Ltmp16-VPCKUHUM_unary
+	.cfi_endproc
+
+	.globl	VPCKUWUM_unary
+	.align	2
+	.type	VPCKUWUM_unary,@function
+VPCKUWUM_unary:                         # @VPCKUWUM_unary
+	.cfi_startproc
+# BB#0:                                 # %entry
+	lvx 2, 0, 3
+	vpkuwum 2, 2, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp17:
+	.size	VPCKUWUM_unary, .Ltmp17-VPCKUWUM_unary
+	.cfi_endproc
+
+

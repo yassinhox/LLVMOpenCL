@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb/mul.ll -march=thumb | grep mul | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb/mul.ll -march=thumb | grep lsl | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

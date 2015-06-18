@@ -1,0 +1,4 @@
+mkdir -p /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/html-diags-multifile.c.tmp.dir &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -analyze -analyzer-output=html -analyzer-checker=core -o /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/html-diags-multifile.c.tmp.dir &&
+ls /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/html-diags-multifile.c.tmp.dir | grep report | count 0 &&
+rm -fR /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/html-diags-multifile.c.tmp.dir

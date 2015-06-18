@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin10 -### -fsyntax-only -fgnu-runtime /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/gnu-runtime.m 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/gnu-runtime.m &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin10 -### -x objective-c++ -fsyntax-only -fgnu-runtime /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/gnu-runtime.m 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/gnu-runtime.m

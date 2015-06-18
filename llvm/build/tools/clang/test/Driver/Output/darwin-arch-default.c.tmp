@@ -1,0 +1,9 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: powerpc-apple-darwin8
+Thread model: posix
+0: input, "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-arch-default.c", c
+1: preprocessor, {0}, cpp-output
+2: compiler, {1}, assembler
+3: assembler, {2}, object
+4: linker, {3}, image
+5: bind-arch, "ppc", {4}, image

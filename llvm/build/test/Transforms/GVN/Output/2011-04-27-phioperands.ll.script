@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/2011-04-27-phioperands.ll -gvn -disable-output

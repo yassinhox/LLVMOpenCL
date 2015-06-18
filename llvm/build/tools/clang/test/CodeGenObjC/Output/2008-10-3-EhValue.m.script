@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fexceptions -fobjc-exceptions -S -emit-llvm  /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/2008-10-3-EhValue.m -o /dev/null

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/intrinsics_logical.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_logical.ll.tmp1.s &&
+grep and       /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_logical.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 20 &&
+grep andc      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_logical.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5

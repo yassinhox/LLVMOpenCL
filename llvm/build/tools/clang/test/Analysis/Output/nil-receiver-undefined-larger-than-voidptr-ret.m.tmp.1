@@ -1,0 +1,19 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/nil-receiver-undefined-larger-than-voidptr-ret.m:84:1: warning: control reaches end of non-void function
+}
+^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/nil-receiver-undefined-larger-than-voidptr-ret.m:37:20: warning: The receiver of message 'longDoubleM' is nil and returns a value of type 'long double' that will be garbage
+  long double ld = [obj longDoubleM];
+                   ^~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/nil-receiver-undefined-larger-than-voidptr-ret.m:44:18: warning: The receiver of message 'longlongM' is nil and returns a value of type 'long long' that will be garbage
+  long long ll = [obj longlongM];
+                 ^~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/nil-receiver-undefined-larger-than-voidptr-ret.m:50:14: warning: The receiver of message 'doubleM' is nil and returns a value of type 'double' that will be garbage
+  double d = [obj doubleM];
+             ^~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/nil-receiver-undefined-larger-than-voidptr-ret.m:63:28: warning: The receiver of message 'unsignedLongLongM' is nil and returns a value of type 'unsigned long long' that will be garbage
+  unsigned long long ull = [obj unsignedLongLongM];
+                           ^~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/nil-receiver-undefined-larger-than-voidptr-ret.m:75:17: warning: The receiver of message 'longlongM' is nil and returns a value of type 'long long' that will be garbage
+  long long j = [obj longlongM];
+                ^~~~
+6 warnings generated.

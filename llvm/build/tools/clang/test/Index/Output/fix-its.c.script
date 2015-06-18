@@ -1,0 +1,2 @@
+c-index-test -test-load-source all -fspell-checking /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c 2> /home/jazouani/llvm/build/tools/clang/test/Index/Output/fix-its.c.tmp &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/fix-its.c < /home/jazouani/llvm/build/tools/clang/test/Index/Output/fix-its.c.tmp

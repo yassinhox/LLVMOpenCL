@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=x86-64 -O2 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2011-08-23-PerformSubCombine128.ll

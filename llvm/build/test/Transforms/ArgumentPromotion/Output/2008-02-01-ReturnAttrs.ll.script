@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ArgumentPromotion/2008-02-01-ReturnAttrs.ll -argpromotion -S | grep nounwind | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

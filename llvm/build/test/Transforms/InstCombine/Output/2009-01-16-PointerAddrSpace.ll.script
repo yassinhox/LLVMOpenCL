@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2009-01-16-PointerAddrSpace.ll -instcombine -S | grep "store.*addrspace(1)"

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/inject-templated-friend.cpp -S -emit-llvm -o - | grep -e "define linkonce_odr.*_ZlsR11std_ostreamRK8StreamerI3FooE" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/inject-templated-friend.cpp -DREDEFINE -verify

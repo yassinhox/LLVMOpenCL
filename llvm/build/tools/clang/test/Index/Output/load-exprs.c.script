@@ -1,0 +1,1 @@
+c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/load-exprs.c -fblocks | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/load-exprs.c

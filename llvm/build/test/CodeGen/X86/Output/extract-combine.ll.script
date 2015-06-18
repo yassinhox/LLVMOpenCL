@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/extract-combine.ll -march=x86-64 -mcpu=core2 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/extract-combine.ll.tmp &&
+not grep unpcklps /home/jazouani/llvm/build/test/CodeGen/X86/Output/extract-combine.ll.tmp

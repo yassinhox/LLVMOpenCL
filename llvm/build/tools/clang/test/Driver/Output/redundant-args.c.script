@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10    -Werror -x c -x c -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/redundant-args.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -objc-arc-aa -basicaa -gvn < /home/jazouani/llvm/llvm-3.2/test/Transforms/ObjCARC/retain-block-side-effects.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/ObjCARC/retain-block-side-effects.ll

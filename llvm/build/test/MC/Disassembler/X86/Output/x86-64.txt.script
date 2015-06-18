@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/X86/x86-64.txt -triple=x86_64 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/X86/x86-64.txt

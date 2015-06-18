@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -strip-dead-debug-info < /home/jazouani/llvm/llvm-3.2/test/Transforms/StripSymbols/2010-07-01-DeadDbgInfo.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis -o /home/jazouani/llvm/build/test/Transforms/StripSymbols/Output/2010-07-01-DeadDbgInfo.ll.tmp.ll &&
+grep -v bar /home/jazouani/llvm/build/test/Transforms/StripSymbols/Output/2010-07-01-DeadDbgInfo.ll.tmp.ll &&
+grep -v abcd /home/jazouani/llvm/build/test/Transforms/StripSymbols/Output/2010-07-01-DeadDbgInfo.ll.tmp.ll

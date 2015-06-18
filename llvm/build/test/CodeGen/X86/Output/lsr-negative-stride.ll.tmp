@@ -1,0 +1,39 @@
+	.file	"<stdin>"
+	.text
+	.globl	t
+	.align	16, 0x90
+	.type	t,@function
+t:                                      # @t
+# BB#0:                                 # %entry
+	movl	8(%esp), %ecx
+	movl	4(%esp), %edx
+	cmpl	%ecx, %edx
+	jne	.LBB0_2
+# BB#1:
+	movl	%edx, %eax
+	ret
+	.align	16, 0x90
+.LBB0_2:                                # %bb
+                                        # =>This Inner Loop Header: Depth=1
+	movl	%edx, %eax
+	subl	%ecx, %eax
+	jle	.LBB0_4
+# BB#3:                                 # %cond_true
+                                        #   in Loop: Header=BB0_2 Depth=1
+	cmpl	%eax, %ecx
+	movl	%eax, %edx
+	jne	.LBB0_2
+	jmp	.LBB0_5
+.LBB0_4:                                # %cond_false
+                                        #   in Loop: Header=BB0_2 Depth=1
+	subl	%edx, %ecx
+	cmpl	%edx, %ecx
+	movl	%edx, %eax
+	jne	.LBB0_2
+.LBB0_5:                                # %bb17
+	ret
+.Ltmp0:
+	.size	t, .Ltmp0-t
+
+
+	.section	".note.GNU-stack","",@progbits

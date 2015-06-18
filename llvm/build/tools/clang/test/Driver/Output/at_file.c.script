@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/at_file.c @/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/at_file.c.args -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/at_file.c.tmp.log &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Driver/Output/at_file.c.tmp.log /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/at_file.c

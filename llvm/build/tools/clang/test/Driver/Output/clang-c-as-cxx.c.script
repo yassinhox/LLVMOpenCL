@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -ccc-cxx  -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/clang-c-as-cxx.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/clang-c-as-cxx.c

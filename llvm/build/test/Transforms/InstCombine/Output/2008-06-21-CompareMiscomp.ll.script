@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-06-21-CompareMiscomp.ll -instcombine -S | grep "icmp eq i32 %In, 15"

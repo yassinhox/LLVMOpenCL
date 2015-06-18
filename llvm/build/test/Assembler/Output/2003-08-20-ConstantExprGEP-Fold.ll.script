@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Assembler/2003-08-20-ConstantExprGEP-Fold.ll -instcombine -simplifycfg -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep br

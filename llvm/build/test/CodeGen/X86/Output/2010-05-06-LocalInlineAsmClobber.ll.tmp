@@ -1,0 +1,29 @@
+	.file	"/home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-06-LocalInlineAsmClobber.ll"
+	.text
+	.globl	sys_clone
+	.align	16, 0x90
+	.type	sys_clone,@function
+sys_clone:                              # @sys_clone
+# BB#0:
+	pushq	%rbx
+	movl	$4294967274, %eax       # imm = 0xFFFFFFEA
+                                        # implicit-def: RCX
+                                        # implicit-def: RSI
+                                        # implicit-def: EDI
+                                        # implicit-def: RDX
+                                        # implicit-def: R8
+	movq	%rdx, -24(%rsp)         # 8-byte Spill
+	movq	%r8, %rdx
+	movq	%rcx, -32(%rsp)         # 8-byte Spill
+	movq	-32(%rsp), %r9          # 8-byte Reload
+	movq	-24(%rsp), %rbx         # 8-byte Reload
+	#APP
+	#NO_APP
+                                        # implicit-def: EAX
+	popq	%rbx
+	ret
+.Ltmp0:
+	.size	sys_clone, .Ltmp0-sys_clone
+
+
+	.section	".note.GNU-stack","",@progbits

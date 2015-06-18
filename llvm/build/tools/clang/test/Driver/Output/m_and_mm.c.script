@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -###    -M -MM /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/m_and_mm.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/m_and_mm.c.tmp &&
+grep '"-sys-header-deps"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/m_and_mm.c.tmp | count 0

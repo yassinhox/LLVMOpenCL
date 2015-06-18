@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Assembler/2008-02-18-IntPointerCrash.ll 2>&1 | grep "integer constant must have integer type"

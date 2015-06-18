@@ -1,0 +1,336 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.file	1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/<unknown>"
+	.file	2 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/debug-info-pubtypes.cpp"
+	.section	__DWARF,__debug_info,regular,debug
+Lsection_info:
+	.section	__DWARF,__debug_abbrev,regular,debug
+Lsection_abbrev:
+	.section	__DWARF,__debug_aranges,regular,debug
+	.section	__DWARF,__debug_macinfo,regular,debug
+	.section	__DWARF,__debug_line,regular,debug
+Lsection_line:
+	.section	__DWARF,__debug_loc,regular,debug
+	.section	__DWARF,__debug_pubtypes,regular,debug
+	.section	__DWARF,__debug_str,regular,debug
+Lsection_str:
+	.section	__DWARF,__debug_ranges,regular,debug
+Ldebug_range:
+	.section	__DWARF,__debug_loc,regular,debug
+Lsection_debug_loc:
+	.section	__TEXT,__text,regular,pure_instructions
+Ltext_begin:
+	.section	__DATA,__data
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	__ZN1G3fooEv
+	.align	4, 0x90
+__ZN1G3fooEv:
+	.cfi_startproc
+Lfunc_begin0:
+	.loc	2 16 0
+	movq	%rdi, -8(%rsp)
+	.loc	2 17 0 prologue_end
+Ltmp0:
+	ret
+Ltmp1:
+Lfunc_end0:
+	.cfi_endproc
+
+	.cfi_sections .debug_frame
+Ltext_end:
+	.section	__DATA,__data
+Ldata_end:
+	.section	__TEXT,__text,regular,pure_instructions
+Lsection_end1:
+	.section	__DWARF,__debug_info,regular,debug
+Linfo_begin1:
+	.long	123
+	.short	2
+Lset0 = Labbrev_begin-Lsection_abbrev
+	.long	Lset0
+	.byte	8
+	.byte	1
+Lset1 = Lstring0-Lsection_str
+	.long	Lset1
+	.short	4
+Lset2 = Lstring1-Lsection_str
+	.long	Lset2
+	.quad	0
+	.long	0
+Lset3 = Lstring2-Lsection_str
+	.long	Lset3
+	.byte	2
+Lset4 = Lstring3-Lsection_str
+	.long	Lset4
+	.byte	1
+	.byte	2
+	.byte	11
+	.byte	3
+	.byte	1
+Lset5 = Lstring4-Lsection_str
+	.long	Lset5
+Lset6 = Lstring5-Lsection_str
+	.long	Lset6
+	.byte	2
+	.byte	13
+	.byte	1
+	.byte	1
+	.byte	4
+	.long	68
+	.byte	1
+	.byte	0
+	.byte	0
+	.byte	5
+	.long	38
+	.byte	6
+Lset7 = Lstring4-Lsection_str
+	.long	Lset7
+	.long	46
+	.quad	Lfunc_begin0
+	.quad	Lfunc_end0
+	.byte	1
+	.byte	87
+	.long	105
+	.byte	1
+	.byte	7
+Lset8 = Lstring6-Lsection_str
+	.long	Lset8
+	.byte	2
+	.byte	16
+	.long	121
+	.byte	1
+	.byte	2
+	.byte	145
+	.byte	120
+	.byte	0
+	.byte	5
+	.long	38
+	.byte	0
+Linfo_end1:
+	.section	__DWARF,__debug_abbrev,regular,debug
+Labbrev_begin:
+	.byte	1
+	.byte	17
+	.byte	1
+	.byte	37
+	.byte	14
+	.byte	19
+	.byte	5
+	.byte	3
+	.byte	14
+	.byte	17
+	.byte	1
+	.byte	16
+	.byte	6
+	.byte	27
+	.byte	14
+	.byte	0
+	.byte	0
+	.byte	2
+	.byte	2
+	.byte	1
+	.byte	3
+	.byte	14
+	.byte	11
+	.byte	11
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	3
+	.byte	46
+	.byte	1
+	.byte	50
+	.byte	11
+	.ascii	 "\207@"
+	.byte	14
+	.byte	3
+	.byte	14
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	60
+	.byte	12
+	.byte	63
+	.byte	12
+	.byte	0
+	.byte	0
+	.byte	4
+	.byte	5
+	.byte	0
+	.byte	73
+	.byte	19
+	.byte	52
+	.byte	12
+	.byte	0
+	.byte	0
+	.byte	5
+	.byte	15
+	.byte	0
+	.byte	73
+	.byte	19
+	.byte	0
+	.byte	0
+	.byte	6
+	.byte	46
+	.byte	1
+	.ascii	 "\207@"
+	.byte	14
+	.byte	71
+	.byte	19
+	.byte	17
+	.byte	1
+	.byte	18
+	.byte	1
+	.byte	64
+	.byte	10
+	.byte	100
+	.byte	19
+	.ascii	 "\347\177"
+	.byte	12
+	.byte	0
+	.byte	0
+	.byte	7
+	.byte	5
+	.byte	0
+	.byte	3
+	.byte	14
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	73
+	.byte	19
+	.byte	52
+	.byte	12
+	.byte	2
+	.byte	10
+	.byte	0
+	.byte	0
+	.byte	0
+Labbrev_end:
+	.section	__DWARF,__apple_names,regular,debug
+Lnames_begin:
+	.long	1212240712
+	.short	1
+	.short	0
+	.long	2
+	.long	2
+	.long	12
+	.long	0
+	.long	1
+	.short	1
+	.short	6
+	.long	0
+	.long	1
+	.long	1658761878
+	.long	193491849
+	.long	LNames0-Lnames_begin
+	.long	LNames1-Lnames_begin
+LNames0:
+Lset9 = Lstring4-Lsection_str
+	.long	Lset9
+	.long	1
+	.long	73
+	.long	0
+LNames1:
+Lset10 = Lstring5-Lsection_str
+	.long	Lset10
+	.long	1
+	.long	73
+	.long	0
+	.section	__DWARF,__apple_objc,regular,debug
+Lobjc_begin:
+	.long	1212240712
+	.short	1
+	.short	0
+	.long	1
+	.long	0
+	.long	12
+	.long	0
+	.long	1
+	.short	1
+	.short	6
+	.long	-1
+	.section	__DWARF,__apple_namespac,regular,debug
+Lnamespac_begin:
+	.long	1212240712
+	.short	1
+	.short	0
+	.long	1
+	.long	0
+	.long	12
+	.long	0
+	.long	1
+	.short	1
+	.short	6
+	.long	-1
+	.section	__DWARF,__apple_types,regular,debug
+Ltypes_begin:
+	.long	1212240712
+	.short	1
+	.short	0
+	.long	1
+	.long	1
+	.long	20
+	.long	0
+	.long	3
+	.short	1
+	.short	6
+	.short	3
+	.short	5
+	.short	5
+	.short	11
+	.long	0
+	.long	177644
+	.long	Ltypes0-Ltypes_begin
+Ltypes0:
+Lset11 = Lstring3-Lsection_str
+	.long	Lset11
+	.long	1
+	.long	38
+	.short	2
+	.byte	2
+	.long	0
+	.section	__DWARF,__debug_pubtypes,regular,debug
+Lset12 = Lpubtypes_end1-Lpubtypes_begin1
+	.long	Lset12
+Lpubtypes_begin1:
+	.short	2
+Lset13 = Linfo_begin1-Lsection_info
+	.long	Lset13
+Lset14 = Linfo_end1-Linfo_begin1
+	.long	Lset14
+	.long	38
+	.asciz	 "G"
+	.long	0
+Lpubtypes_end1:
+	.section	__DWARF,__debug_aranges,regular,debug
+	.section	__DWARF,__debug_ranges,regular,debug
+	.section	__DWARF,__debug_macinfo,regular,debug
+	.section	__DWARF,__debug_inlined,regular,debug
+Lset15 = Ldebug_inlined_end1-Ldebug_inlined_begin1
+	.long	Lset15
+Ldebug_inlined_begin1:
+	.short	2
+	.byte	8
+Ldebug_inlined_end1:
+	.section	__DWARF,__debug_str,regular,debug
+Lstring0:
+	.asciz	 "clang version 3.2 (tags/RELEASE_32/final)"
+Lstring1:
+	.asciz	 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/<unknown>"
+Lstring2:
+	.asciz	 "/home/jazouani/llvm/build/tools/clang/test/CodeGenCXX"
+Lstring3:
+	.asciz	 "G"
+Lstring4:
+	.asciz	 "_ZN1G3fooEv"
+Lstring5:
+	.asciz	 "foo"
+Lstring6:
+	.asciz	 "this"
+
+.subsections_via_symbols

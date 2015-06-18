@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/FunctionAttrs/2009-01-02-LocalStores.ll -functionattrs -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "nocapture *%q" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/FunctionAttrs/2009-01-02-LocalStores.ll -functionattrs -S | grep "nocapture *%p"

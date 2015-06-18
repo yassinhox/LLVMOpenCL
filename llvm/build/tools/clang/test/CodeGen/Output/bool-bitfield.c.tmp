@@ -1,0 +1,77 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/bool-bitfield.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.SysParams = type { i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i8, i8, i32, i64 }
+%struct.anon = type { i8, i8, i8, i8, i8, i8 }
+
+@params = external global %struct.SysParams
+
+define void @kcmd_setParams() nounwind {
+entry:
+  %msg = alloca %struct.anon, align 1
+  %0 = bitcast %struct.anon* %msg to i8*
+  call void @foo(i8* %0)
+  %1 = bitcast %struct.anon* %msg to i8*
+  %bf.field.offs = getelementptr i8* %1, i32 5
+  %2 = load i8* %bf.field.offs, align 1
+  %bf.clear = and i8 %2, 1
+  %tobool = icmp ne i8 %bf.clear, 0
+  %3 = zext i1 %tobool to i8
+  %bf.value = and i8 %3, 1
+  %bf.reload.val = trunc i8 %bf.value to i1
+  %4 = and i8 %bf.value, 1
+  %5 = shl i8 %4, 1
+  %6 = load i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  %7 = and i8 %6, -3
+  %8 = or i8 %7, %5
+  store i8 %8, i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  %9 = bitcast %struct.anon* %msg to i8*
+  %bf.field.offs1 = getelementptr i8* %9, i32 5
+  %10 = load i8* %bf.field.offs1, align 1
+  %11 = lshr i8 %10, 1
+  %bf.clear2 = and i8 %11, 1
+  %tobool3 = icmp ne i8 %bf.clear2, 0
+  %12 = zext i1 %tobool3 to i8
+  %bf.value4 = and i8 %12, 1
+  %bf.reload.val5 = trunc i8 %bf.value4 to i1
+  %13 = and i8 %bf.value4, 1
+  %14 = shl i8 %13, 2
+  %15 = load i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  %16 = and i8 %15, -5
+  %17 = or i8 %16, %14
+  store i8 %17, i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  %18 = bitcast %struct.anon* %msg to i8*
+  %bf.field.offs6 = getelementptr i8* %18, i32 5
+  %19 = load i8* %bf.field.offs6, align 1
+  %20 = lshr i8 %19, 2
+  %bf.clear7 = and i8 %20, 1
+  %tobool8 = icmp ne i8 %bf.clear7, 0
+  %21 = zext i1 %tobool8 to i8
+  %bf.value9 = and i8 %21, 1
+  %bf.reload.val10 = trunc i8 %bf.value9 to i1
+  %22 = and i8 %bf.value9, 1
+  %23 = shl i8 %22, 3
+  %24 = load i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  %25 = and i8 %24, -9
+  %26 = or i8 %25, %23
+  store i8 %26, i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  %27 = bitcast %struct.anon* %msg to i8*
+  %bf.field.offs11 = getelementptr i8* %27, i32 5
+  %28 = load i8* %bf.field.offs11, align 1
+  %29 = lshr i8 %28, 3
+  %bf.clear12 = and i8 %29, 1
+  %tobool13 = icmp ne i8 %bf.clear12, 0
+  %30 = zext i1 %tobool13 to i8
+  %bf.value14 = and i8 %30, 1
+  %bf.reload.val15 = trunc i8 %bf.value14 to i1
+  %31 = and i8 %bf.value14, 1
+  %32 = shl i8 %31, 4
+  %33 = load i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  %34 = and i8 %33, -17
+  %35 = or i8 %34, %32
+  store i8 %35, i8* getelementptr (i8* bitcast (%struct.SysParams* @params to i8*), i32 48), align 8
+  ret void
+}
+
+declare void @foo(i8*)

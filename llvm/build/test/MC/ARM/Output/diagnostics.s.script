@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple=armv7-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/MC/ARM/diagnostics.s 2> /home/jazouani/llvm/build/test/MC/ARM/Output/diagnostics.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CHECK-ERRORS < /home/jazouani/llvm/build/test/MC/ARM/Output/diagnostics.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/ARM/diagnostics.s

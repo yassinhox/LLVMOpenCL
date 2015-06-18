@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10 -fbounds-checking -### -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/bounds-checking.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/bounds-checking.c.tmp &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/bounds-checking.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/bounds-checking.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10 -fbounds-checking=3 -### -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/bounds-checking.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/bounds-checking.c.tmp &&
+FileCheck -check-prefix=CHECK2 < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/bounds-checking.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/bounds-checking.c

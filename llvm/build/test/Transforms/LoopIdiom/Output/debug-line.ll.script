@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -loop-idiom < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopIdiom/debug-line.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopIdiom/debug-line.ll

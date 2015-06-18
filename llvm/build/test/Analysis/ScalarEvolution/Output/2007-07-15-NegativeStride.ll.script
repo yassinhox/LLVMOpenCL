@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2007-07-15-NegativeStride.ll -analyze -scalar-evolution    -scalar-evolution-max-iterations=0 | grep "Loop %bb: backedge-taken count is 100"

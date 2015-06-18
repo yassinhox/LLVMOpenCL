@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IPConstantProp/return-argument.ll -ipconstprop -S > /home/jazouani/llvm/build/test/Transforms/IPConstantProp/Output/return-argument.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/IPConstantProp/Output/return-argument.ll.tmp | grep "store i32 %Z, i32\* %Q" &&
+cat /home/jazouani/llvm/build/test/Transforms/IPConstantProp/Output/return-argument.ll.tmp | grep "add i32 1, 3"

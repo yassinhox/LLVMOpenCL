@@ -1,0 +1,1 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-templates.cpp:14:2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-templates.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-templates.cpp

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IPConstantProp/2008-06-09-WeakProp.ll -ipconstprop -S | grep "ret i32 %r"

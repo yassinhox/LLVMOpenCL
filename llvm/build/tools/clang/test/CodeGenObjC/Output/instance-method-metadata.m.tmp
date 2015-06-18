@@ -1,0 +1,354 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.align	4, 0x90
+"-[Foo prop]":
+	movq	%rdi, -16(%rsp)
+	movq	%rsi, -24(%rsp)
+	movq	-16(%rsp), %rsi
+	movq	_OBJC_IVAR_$_Foo.prop(%rip), %rdi
+	movq	(%rsi,%rdi), %rsi
+	movq	%rsi, -8(%rsp)
+	movq	-8(%rsp), %rax
+	ret
+
+	.align	4, 0x90
+"-[Foo setProp:]":
+	movq	%rdi, -8(%rsp)
+	movq	%rsi, -16(%rsp)
+	movq	%rdx, -24(%rsp)
+	movq	-8(%rsp), %rsi
+	movq	_OBJC_IVAR_$_Foo.prop(%rip), %rdi
+	movq	%rdx, (%rsi,%rdi)
+	ret
+
+	.align	4, 0x90
+"-[Bar prop]":
+	movq	%rdi, -16(%rsp)
+	movq	%rsi, -24(%rsp)
+	movq	-16(%rsp), %rsi
+	movq	_OBJC_IVAR_$_Bar.prop(%rip), %rdi
+	movq	(%rsi,%rdi), %rsi
+	movq	%rsi, -8(%rsp)
+	movq	-8(%rsp), %rax
+	ret
+
+	.align	4, 0x90
+"-[Bar setProp:]":
+	movq	%rdi, -8(%rsp)
+	movq	%rsi, -16(%rsp)
+	movq	%rdx, -24(%rsp)
+	movq	-8(%rsp), %rsi
+	movq	_OBJC_IVAR_$_Bar.prop(%rip), %rdi
+	movq	%rdx, (%rsi,%rdi)
+	ret
+
+	.private_extern	_OBJC_IVAR_$_Foo.prop
+	.section	__DATA,__objc_ivar
+	.globl	_OBJC_IVAR_$_Foo.prop
+	.align	3
+_OBJC_IVAR_$_Foo.prop:
+	.quad	8
+
+	.section	__TEXT,__objc_classname,cstring_literals
+L_OBJC_CLASS_NAME_:
+	.asciz	 "Foo"
+
+	.section	__TEXT,__objc_methname,cstring_literals
+L_OBJC_METH_VAR_NAME_:
+	.asciz	 "prop"
+
+	.section	__TEXT,__objc_methtype,cstring_literals
+L_OBJC_METH_VAR_TYPE_:
+	.asciz	 "@16@0:8"
+
+	.section	__TEXT,__objc_methname,cstring_literals
+L_OBJC_METH_VAR_NAME_1:
+	.asciz	 "setProp:"
+
+	.section	__TEXT,__objc_methtype,cstring_literals
+L_OBJC_METH_VAR_TYPE_2:
+	.asciz	 "v24@0:8@16"
+
+	.section	__TEXT,__objc_classname,cstring_literals
+L_OBJC_CLASS_NAME_3:
+	.asciz	 "Proto"
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_Proto:
+	.long	24
+	.long	2
+	.quad	L_OBJC_METH_VAR_NAME_
+	.quad	L_OBJC_METH_VAR_TYPE_
+	.quad	0
+	.quad	L_OBJC_METH_VAR_NAME_1
+	.quad	L_OBJC_METH_VAR_TYPE_2
+	.quad	0
+
+	.section	__TEXT,__cstring,cstring_literals
+L_OBJC_PROP_NAME_ATTR_:
+	.asciz	 "prop"
+
+L_OBJC_PROP_NAME_ATTR_4:
+	.asciz	 "T@"
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_$_PROP_LIST_Proto:
+	.long	16
+	.long	1
+	.quad	L_OBJC_PROP_NAME_ATTR_
+	.quad	L_OBJC_PROP_NAME_ATTR_4
+
+	.align	3
+l_OBJC_$_PROTOCOL_METHOD_TYPES_Proto:
+	.quad	L_OBJC_METH_VAR_TYPE_
+	.quad	L_OBJC_METH_VAR_TYPE_2
+
+	.private_extern	l_OBJC_PROTOCOL_$_Proto
+	.section	__DATA,__datacoal_nt,coalesced
+	.globl	l_OBJC_PROTOCOL_$_Proto
+	.weak_definition	l_OBJC_PROTOCOL_$_Proto
+	.align	3
+l_OBJC_PROTOCOL_$_Proto:
+	.quad	0
+	.quad	L_OBJC_CLASS_NAME_3
+	.quad	0
+	.quad	l_OBJC_$_PROTOCOL_INSTANCE_METHODS_Proto
+	.quad	0
+	.quad	0
+	.quad	0
+	.quad	l_OBJC_$_PROP_LIST_Proto
+	.long	80
+	.long	0
+	.quad	l_OBJC_$_PROTOCOL_METHOD_TYPES_Proto
+
+	.private_extern	l_OBJC_LABEL_PROTOCOL_$_Proto
+	.section	__DATA,__objc_protolist,coalesced,no_dead_strip
+	.globl	l_OBJC_LABEL_PROTOCOL_$_Proto
+	.weak_definition	l_OBJC_LABEL_PROTOCOL_$_Proto
+	.align	3
+l_OBJC_LABEL_PROTOCOL_$_Proto:
+	.quad	l_OBJC_PROTOCOL_$_Proto
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_CLASS_PROTOCOLS_$_Foo:
+	.quad	1
+	.quad	l_OBJC_PROTOCOL_$_Proto
+	.quad	0
+
+	.align	3
+l_OBJC_METACLASS_RO_$_Foo:
+	.long	1
+	.long	40
+	.long	40
+	.space	4
+	.quad	0
+	.quad	L_OBJC_CLASS_NAME_
+	.quad	0
+	.quad	l_OBJC_CLASS_PROTOCOLS_$_Foo
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.section	__DATA,__objc_data
+	.globl	_OBJC_METACLASS_$_Foo
+	.align	3
+_OBJC_METACLASS_$_Foo:
+	.quad	_OBJC_METACLASS_$_NSObject
+	.quad	_OBJC_METACLASS_$_NSObject
+	.quad	__objc_empty_cache
+	.quad	__objc_empty_vtable
+	.quad	l_OBJC_METACLASS_RO_$_Foo
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_$_INSTANCE_METHODS_Foo:
+	.long	24
+	.long	2
+	.quad	L_OBJC_METH_VAR_NAME_
+	.quad	L_OBJC_METH_VAR_TYPE_
+	.quad	"-[Foo prop]"
+	.quad	L_OBJC_METH_VAR_NAME_1
+	.quad	L_OBJC_METH_VAR_TYPE_2
+	.quad	"-[Foo setProp:]"
+
+	.section	__DATA,__objc_ivar
+	.globl	_OBJC_IVAR_$_Foo.x
+	.align	3
+_OBJC_IVAR_$_Foo.x:
+	.quad	0
+
+	.section	__TEXT,__objc_methname,cstring_literals
+L_OBJC_METH_VAR_NAME_5:
+	.asciz	 "x"
+
+	.section	__TEXT,__objc_methtype,cstring_literals
+L_OBJC_METH_VAR_TYPE_6:
+	.asciz	 "i"
+
+L_OBJC_METH_VAR_TYPE_7:
+	.asciz	 "@"
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_$_INSTANCE_VARIABLES_Foo:
+	.long	32
+	.long	2
+	.quad	_OBJC_IVAR_$_Foo.x
+	.quad	L_OBJC_METH_VAR_NAME_5
+	.quad	L_OBJC_METH_VAR_TYPE_6
+	.long	2
+	.long	4
+	.quad	_OBJC_IVAR_$_Foo.prop
+	.quad	L_OBJC_METH_VAR_NAME_
+	.quad	L_OBJC_METH_VAR_TYPE_7
+	.long	3
+	.long	8
+
+	.section	__TEXT,__cstring,cstring_literals
+L_OBJC_PROP_NAME_ATTR_8:
+	.asciz	 "T@,Vprop"
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_$_PROP_LIST_Foo:
+	.long	16
+	.long	1
+	.quad	L_OBJC_PROP_NAME_ATTR_
+	.quad	L_OBJC_PROP_NAME_ATTR_8
+
+	.align	3
+l_OBJC_CLASS_RO_$_Foo:
+	.long	0
+	.long	0
+	.long	16
+	.space	4
+	.quad	0
+	.quad	L_OBJC_CLASS_NAME_
+	.quad	l_OBJC_$_INSTANCE_METHODS_Foo
+	.quad	l_OBJC_CLASS_PROTOCOLS_$_Foo
+	.quad	l_OBJC_$_INSTANCE_VARIABLES_Foo
+	.quad	0
+	.quad	l_OBJC_$_PROP_LIST_Foo
+
+	.section	__DATA,__objc_data
+	.globl	_OBJC_CLASS_$_Foo
+	.align	3
+_OBJC_CLASS_$_Foo:
+	.quad	_OBJC_METACLASS_$_Foo
+	.quad	_OBJC_CLASS_$_NSObject
+	.quad	__objc_empty_cache
+	.quad	__objc_empty_vtable
+	.quad	l_OBJC_CLASS_RO_$_Foo
+
+	.private_extern	_OBJC_IVAR_$_Bar.prop
+	.section	__DATA,__objc_ivar
+	.globl	_OBJC_IVAR_$_Bar.prop
+	.align	3
+_OBJC_IVAR_$_Bar.prop:
+	.quad	0
+
+	.section	__TEXT,__objc_classname,cstring_literals
+L_OBJC_CLASS_NAME_9:
+	.asciz	 "Bar"
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_CLASS_PROTOCOLS_$_Bar:
+	.quad	1
+	.quad	l_OBJC_PROTOCOL_$_Proto
+	.quad	0
+
+	.align	3
+l_OBJC_METACLASS_RO_$_Bar:
+	.long	1
+	.long	40
+	.long	40
+	.space	4
+	.quad	0
+	.quad	L_OBJC_CLASS_NAME_9
+	.quad	0
+	.quad	l_OBJC_CLASS_PROTOCOLS_$_Bar
+	.quad	0
+	.quad	0
+	.quad	0
+
+	.section	__DATA,__objc_data
+	.globl	_OBJC_METACLASS_$_Bar
+	.align	3
+_OBJC_METACLASS_$_Bar:
+	.quad	_OBJC_METACLASS_$_NSObject
+	.quad	_OBJC_METACLASS_$_NSObject
+	.quad	__objc_empty_cache
+	.quad	__objc_empty_vtable
+	.quad	l_OBJC_METACLASS_RO_$_Bar
+
+	.section	__DATA,__objc_const
+	.align	3
+l_OBJC_$_INSTANCE_METHODS_Bar:
+	.long	24
+	.long	2
+	.quad	L_OBJC_METH_VAR_NAME_
+	.quad	L_OBJC_METH_VAR_TYPE_
+	.quad	"-[Bar prop]"
+	.quad	L_OBJC_METH_VAR_NAME_1
+	.quad	L_OBJC_METH_VAR_TYPE_2
+	.quad	"-[Bar setProp:]"
+
+	.align	3
+l_OBJC_$_INSTANCE_VARIABLES_Bar:
+	.long	32
+	.long	1
+	.quad	_OBJC_IVAR_$_Bar.prop
+	.quad	L_OBJC_METH_VAR_NAME_
+	.quad	L_OBJC_METH_VAR_TYPE_7
+	.long	3
+	.long	8
+
+	.align	3
+l_OBJC_$_PROP_LIST_Bar:
+	.long	16
+	.long	1
+	.quad	L_OBJC_PROP_NAME_ATTR_
+	.quad	L_OBJC_PROP_NAME_ATTR_8
+
+	.align	3
+l_OBJC_CLASS_RO_$_Bar:
+	.long	0
+	.long	0
+	.long	8
+	.space	4
+	.quad	0
+	.quad	L_OBJC_CLASS_NAME_9
+	.quad	l_OBJC_$_INSTANCE_METHODS_Bar
+	.quad	l_OBJC_CLASS_PROTOCOLS_$_Bar
+	.quad	l_OBJC_$_INSTANCE_VARIABLES_Bar
+	.quad	0
+	.quad	l_OBJC_$_PROP_LIST_Bar
+
+	.section	__DATA,__objc_data
+	.globl	_OBJC_CLASS_$_Bar
+	.align	3
+_OBJC_CLASS_$_Bar:
+	.quad	_OBJC_METACLASS_$_Bar
+	.quad	_OBJC_CLASS_$_NSObject
+	.quad	__objc_empty_cache
+	.quad	__objc_empty_vtable
+	.quad	l_OBJC_CLASS_RO_$_Bar
+
+	.section	__DATA,__objc_classlist,regular,no_dead_strip
+	.align	3
+L_OBJC_LABEL_CLASS_$:
+	.quad	_OBJC_CLASS_$_Foo
+	.quad	_OBJC_CLASS_$_Bar
+
+	.no_dead_strip	l_OBJC_PROTOCOL_$_Proto
+	.no_dead_strip	l_OBJC_LABEL_PROTOCOL_$_Proto
+	.section	__DATA,__objc_imageinfo,regular,no_dead_strip
+L_OBJC_IMAGE_INFO:
+	.long	0
+	.long	0
+
+
+.subsections_via_symbols

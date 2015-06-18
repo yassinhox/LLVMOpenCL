@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-apple-darwin9 /home/jazouani/llvm/llvm-3.2/test/MC/MachO/section-attributes.s -filetype=obj -o /home/jazouani/llvm/build/test/MC/MachO/Output/section-attributes.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/macho-dump /home/jazouani/llvm/build/test/MC/MachO/Output/section-attributes.s.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/MachO/section-attributes.s

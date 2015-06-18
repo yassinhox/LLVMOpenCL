@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as: <stdin>:5:12: error: constexpr requires integer operands
+global i32 ashr (float 1.0, float 2.0)
+           ^

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2006-01-11-darwin-fp-argument.ll | /home/jazouani/llvm/build/Release+Asserts/bin/not grep ", f1"

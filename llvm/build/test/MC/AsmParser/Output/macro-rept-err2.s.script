@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macro-rept-err2.s 2> /home/jazouani/llvm/build/test/MC/AsmParser/Output/macro-rept-err2.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/MC/AsmParser/Output/macro-rept-err2.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macro-rept-err2.s

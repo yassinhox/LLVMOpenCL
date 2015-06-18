@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -indvars < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/2012-10-19-congruent-constant.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/2012-10-19-congruent-constant.ll

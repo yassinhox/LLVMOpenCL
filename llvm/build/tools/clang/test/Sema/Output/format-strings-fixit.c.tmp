@@ -1,0 +1,242 @@
+// RUN: cp %s %t
+// RUN: %clang_cc1 -pedantic -Wall -fixit %t
+// RUN: %clang_cc1 -fsyntax-only -pedantic -Wall -Werror %t
+// RUN: %clang_cc1 -E -o - %t | FileCheck %s
+
+/* This is a test of the various code modification hints that are
+   provided as part of warning or extension diagnostics. All of the
+   warnings will be fixed by -fixit, and the resulting file should
+   compile cleanly with -Werror -pedantic. */
+
+int printf(char const *, ...);
+
+typedef __SIZE_TYPE__ size_t;
+typedef __INTMAX_TYPE__ intmax_t;
+typedef __UINTMAX_TYPE__ uintmax_t;
+typedef __PTRDIFF_TYPE__ ptrdiff_t;
+
+void test() {
+  // Basic types
+  printf("%d", (int) 123);
+  printf("abc%s", "testing testing 123");
+  printf("%lu", (long) -12);
+  printf("%d", 123);
+  printf("%s\n", "x");
+  printf("%f\n", 1.23);
+
+  // Larger types
+  printf("%+.2lld", (unsigned long long) 123456);
+  printf("%1Lf", (long double) 1.23);
+
+  // Flag handling
+  printf("%0u", (unsigned) 31337); // 0 flag should stay
+  printf("%p", (void *) 0);
+  printf("%+f", 1.23); // + flag should stay
+  printf("%-f", 1.23); // - flag should stay
+
+  // Positional arguments
+#pragma clang diagnostic push // Don't warn about using positional arguments.
+#pragma clang diagnostic ignored "-Wformat-non-iso"
+  printf("%1$d:%2$.*3$d:%4$.*3$d\n", 1, 2, 3, 4);
+#pragma clang diagnostic pop
+
+  // Precision
+  printf("%10.5ld", 1l); // (bug 7394)
+  printf("%c", 'a');
+
+  // Ignored flags
+  printf("%-f", 1.23);
+
+  // Bad length modifiers
+  printf("%s", "foo");
+#pragma clang diagnostic push // Don't warn about using positional arguments.
+#pragma clang diagnostic ignored "-Wformat-non-iso"
+  printf("%1$p", (void *)0);
+#pragma clang diagnostic pop
+
+  // Preserve the original formatting for unsigned integers.
+  unsigned long val = 42;
+  printf("%lX", val);
+
+  // size_t, etc.
+  printf("%zu", (size_t) 42);
+  printf("%jd", (intmax_t) 42);
+  printf("%ju", (uintmax_t) 42);
+  printf("%td", (ptrdiff_t) 42);
+
+  // Look beyond the first typedef.
+  typedef size_t my_size_type;
+  typedef intmax_t my_intmax_type;
+  typedef uintmax_t my_uintmax_type;
+  typedef ptrdiff_t my_ptrdiff_type;
+  typedef int my_int_type;
+  printf("%zu", (my_size_type) 42);
+  printf("%jd", (my_intmax_type) 42);
+  printf("%ju", (my_uintmax_type) 42);
+  printf("%td", (my_ptrdiff_type) 42);
+  printf("%d", (my_int_type) 42);
+
+  // string
+  printf("%s", "foo");
+
+  // Preserve the original choice of conversion specifier.
+  printf("%lo", (long) 42);
+  printf("%lu", (long) 42);
+  printf("%lx", (long) 42);
+  printf("%lX", (long) 42);
+  printf("%li", (unsigned long) 42);
+  printf("%ld", (unsigned long) 42);
+  printf("%LF", (long double) 42);
+  printf("%Le", (long double) 42);
+  printf("%LE", (long double) 42);
+  printf("%Lg", (long double) 42);
+  printf("%LG", (long double) 42);
+  printf("%La", (long double) 42);
+  printf("%LA", (long double) 42);
+}
+
+int scanf(char const *, ...);
+
+void test2() {
+  char str[100];
+  short shortVar;
+  unsigned short uShortVar;
+  int intVar;
+  unsigned uIntVar;
+  float floatVar;
+  double doubleVar;
+  long double longDoubleVar;
+  long longVar;
+  unsigned long uLongVar;
+  long long longLongVar;
+  unsigned long long uLongLongVar;
+  size_t sizeVar;
+  intmax_t intmaxVar;
+  uintmax_t uIntmaxVar;
+  ptrdiff_t ptrdiffVar;
+
+  scanf("%s", str);
+  scanf("%hd", &shortVar);
+  scanf("%hu", &uShortVar);
+  scanf("%d", &intVar);
+  scanf("%u", &uIntVar);
+  scanf("%f", &floatVar);
+  scanf("%lf", &doubleVar);
+  scanf("%Lf", &longDoubleVar);
+  scanf("%ld", &longVar);
+  scanf("%lu", &uLongVar);
+  scanf("%lld", &longLongVar);
+  scanf("%llu", &uLongLongVar);
+
+  // Some named ints.
+  scanf("%zu", &sizeVar);
+  scanf("%jd", &intmaxVar);
+  scanf("%ju", &uIntmaxVar);
+  scanf("%td", &ptrdiffVar);
+
+  // Look beyond the first typedef for named integer types.
+  typedef size_t my_size_type;
+  typedef intmax_t my_intmax_type;
+  typedef uintmax_t my_uintmax_type;
+  typedef ptrdiff_t my_ptrdiff_type;
+  typedef int my_int_type;
+  scanf("%zu", (my_size_type*)&sizeVar);
+  scanf("%jd", (my_intmax_type*)&intmaxVar);
+  scanf("%ju", (my_uintmax_type*)&uIntmaxVar);
+  scanf("%td", (my_ptrdiff_type*)&ptrdiffVar);
+  scanf("%d", (my_int_type*)&intVar);
+
+  // Preserve the original formatting.
+  scanf("%lo", &longVar);
+  scanf("%lu", &longVar);
+  scanf("%lx", &longVar);
+  scanf("%lX", &longVar);
+  scanf("%li", &uLongVar);
+  scanf("%ld", &uLongVar);
+  scanf("%LF", &longDoubleVar);
+  scanf("%Le", &longDoubleVar);
+  scanf("%LE", &longDoubleVar);
+  scanf("%Lg", &longDoubleVar);
+  scanf("%LG", &longDoubleVar);
+  scanf("%La", &longDoubleVar);
+  scanf("%LA", &longDoubleVar);
+}
+
+// Validate the fixes.
+// CHECK: printf("%d", (int) 123);
+// CHECK: printf("abc%s", "testing testing 123");
+// CHECK: printf("%lu", (long) -12);
+// CHECK: printf("%d", 123);
+// CHECK: printf("%s\n", "x");
+// CHECK: printf("%f\n", 1.23);
+// CHECK: printf("%+.2lld", (unsigned long long) 123456);
+// CHECK: printf("%1Lf", (long double) 1.23);
+// CHECK: printf("%0u", (unsigned) 31337);
+// CHECK: printf("%p", (void *) 0);
+// CHECK: printf("%+f", 1.23);
+// CHECK: printf("%-f", 1.23);
+// CHECK: printf("%1$d:%2$.*3$d:%4$.*3$d\n", 1, 2, 3, 4);
+// CHECK: printf("%10.5ld", 1l);
+// CHECK: printf("%c", 'a');
+// CHECK: printf("%-f", 1.23);
+// CHECK: printf("%s", "foo");
+// CHECK: printf("%1$p", (void *)0);
+// CHECK: printf("%lX", val);
+// CHECK: printf("%zu", (size_t) 42);
+// CHECK: printf("%jd", (intmax_t) 42);
+// CHECK: printf("%ju", (uintmax_t) 42);
+// CHECK: printf("%td", (ptrdiff_t) 42);
+// CHECK: printf("%zu", (my_size_type) 42);
+// CHECK: printf("%jd", (my_intmax_type) 42);
+// CHECK: printf("%ju", (my_uintmax_type) 42);
+// CHECK: printf("%td", (my_ptrdiff_type) 42);
+// CHECK: printf("%d", (my_int_type) 42);
+// CHECK: printf("%s", "foo");
+// CHECK: printf("%lo", (long) 42);
+// CHECK: printf("%lu", (long) 42);
+// CHECK: printf("%lx", (long) 42);
+// CHECK: printf("%lX", (long) 42);
+// CHECK: printf("%li", (unsigned long) 42);
+// CHECK: printf("%ld", (unsigned long) 42);
+// CHECK: printf("%LF", (long double) 42);
+// CHECK: printf("%Le", (long double) 42);
+// CHECK: printf("%LE", (long double) 42);
+// CHECK: printf("%Lg", (long double) 42);
+// CHECK: printf("%LG", (long double) 42);
+// CHECK: printf("%La", (long double) 42);
+// CHECK: printf("%LA", (long double) 42);
+
+// CHECK: scanf("%s", str);
+// CHECK: scanf("%hd", &shortVar);
+// CHECK: scanf("%hu", &uShortVar);
+// CHECK: scanf("%d", &intVar);
+// CHECK: scanf("%u", &uIntVar);
+// CHECK: scanf("%f", &floatVar);
+// CHECK: scanf("%lf", &doubleVar);
+// CHECK: scanf("%Lf", &longDoubleVar);
+// CHECK: scanf("%ld", &longVar);
+// CHECK: scanf("%lu", &uLongVar);
+// CHECK: scanf("%lld", &longLongVar);
+// CHECK: scanf("%llu", &uLongLongVar);
+// CHECK: scanf("%zu", &sizeVar);
+// CHECK: scanf("%jd", &intmaxVar);
+// CHECK: scanf("%ju", &uIntmaxVar);
+// CHECK: scanf("%td", &ptrdiffVar);
+// CHECK: scanf("%zu", (my_size_type*)&sizeVar);
+// CHECK: scanf("%jd", (my_intmax_type*)&intmaxVar);
+// CHECK: scanf("%ju", (my_uintmax_type*)&uIntmaxVar);
+// CHECK: scanf("%td", (my_ptrdiff_type*)&ptrdiffVar);
+// CHECK: scanf("%d", (my_int_type*)&intVar);
+// CHECK: scanf("%lo", &longVar);
+// CHECK: scanf("%lu", &longVar);
+// CHECK: scanf("%lx", &longVar);
+// CHECK: scanf("%lX", &longVar);
+// CHECK: scanf("%li", &uLongVar);
+// CHECK: scanf("%ld", &uLongVar);
+// CHECK: scanf("%LF", &longDoubleVar);
+// CHECK: scanf("%Le", &longDoubleVar);
+// CHECK: scanf("%LE", &longDoubleVar);
+// CHECK: scanf("%Lg", &longDoubleVar);
+// CHECK: scanf("%LG", &longDoubleVar);
+// CHECK: scanf("%La", &longDoubleVar);
+// CHECK: scanf("%LA", &longDoubleVar);

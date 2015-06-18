@@ -1,0 +1,1 @@
+c-index-test -test-load-source all -std=c++11 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/in-class-init.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/in-class-init.cpp

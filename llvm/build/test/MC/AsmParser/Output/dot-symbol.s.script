@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/dot-symbol.s 2> /home/jazouani/llvm/build/test/MC/AsmParser/Output/dot-symbol.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -input-file /home/jazouani/llvm/build/test/MC/AsmParser/Output/dot-symbol.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/dot-symbol.s

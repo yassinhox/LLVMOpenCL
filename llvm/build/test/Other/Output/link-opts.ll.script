@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -std-link-opts < /home/jazouani/llvm/llvm-3.2/test/Other/link-opts.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/link-opts.ll

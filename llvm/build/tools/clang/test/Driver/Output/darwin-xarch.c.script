@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10 -###    -arch i386 -Xarch_i386 -mmacosx-version-min=10.4    -arch x86_64 -Xarch_x86_64 -mmacosx-version-min=10.5    -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-xarch.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-xarch.c.tmp &&
+FileCheck --check-prefix=CHECK-COMPILE < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-xarch.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-xarch.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10 -###    -arch i386 -Xarch_i386 -Wl,-some-linker-arg -filelist X 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-xarch.c.tmp &&
+FileCheck --check-prefix=CHECK-LINK < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-xarch.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-xarch.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10 -###    -arch armv7 -Xarch_armv7 -Wl,-some-linker-arg -filelist X 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-xarch.c.tmp &&
+FileCheck --check-prefix=CHECK-ARMV7-LINK < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-xarch.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-xarch.c

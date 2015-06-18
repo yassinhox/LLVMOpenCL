@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-print-options   --save-temps --undefine-macro=FOO --undefine-macro FOO  --param=FOO --output=FOO 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/option-aliases.c.tmp &&
+FileCheck --check-prefix=CHECK-OPTIONS < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/option-aliases.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/option-aliases.c

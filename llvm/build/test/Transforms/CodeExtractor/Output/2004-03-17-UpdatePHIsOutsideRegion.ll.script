@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/CodeExtractor/2004-03-17-UpdatePHIsOutsideRegion.ll -loop-extract -disable-output

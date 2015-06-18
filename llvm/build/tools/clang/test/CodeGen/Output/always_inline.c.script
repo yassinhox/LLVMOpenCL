@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/always_inline.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/always_inline.c &&
+not grep '@f0' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/always_inline.c.tmp &&
+not grep 'call ' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/always_inline.c.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -mllvm -disable-llvm-optzns -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/always_inline.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/always_inline.c &&
+grep '@f0' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/always_inline.c.tmp | count 2

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -strip-dead-debug-info -disable-output /home/jazouani/llvm/llvm-3.2/test/Transforms/StripSymbols/2010-08-25-crash.ll

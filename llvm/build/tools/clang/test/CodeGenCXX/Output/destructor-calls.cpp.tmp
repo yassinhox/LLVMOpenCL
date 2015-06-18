@@ -1,0 +1,265 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/destructor-calls.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.N = type { %struct.M, %struct.P, i32, %struct.M, %struct.P }
+%struct.M = type { %struct.B, i32 }
+%struct.B = type { i32 }
+%struct.P = type { i32 }
+%struct.O = type { %struct.B }
+
+@.str = private unnamed_addr constant [17 x i8] c"~N(%d) val = %d\0A\00", align 1
+@_ZL3val = internal global i32 0, align 4
+@.str1 = private unnamed_addr constant [8 x i8] c"~M(%d)\0A\00", align 1
+@.str2 = private unnamed_addr constant [8 x i8] c"~B(%d)\0A\00", align 1
+@.str3 = private unnamed_addr constant [8 x i8] c"~P(%d)\0A\00", align 1
+@.str4 = private unnamed_addr constant [5 x i8] c"B()\0A\00", align 1
+@.str5 = private unnamed_addr constant [5 x i8] c"N()\0A\00", align 1
+@.str6 = private unnamed_addr constant [5 x i8] c"P()\0A\00", align 1
+@.str7 = private unnamed_addr constant [5 x i8] c"M()\0A\00", align 1
+
+define i32 @main() nounwind {
+entry:
+  %n1 = alloca %struct.N, align 4
+  %n2 = alloca %struct.N, align 4
+  %o = alloca %struct.O, align 4
+  call void @_ZN1NC1Ev(%struct.N* %n1)
+  call void @_ZN1NC1Ev(%struct.N* %n2)
+  call void @_ZN1OC1Ev(%struct.O* %o)
+  call void @_ZN1OD1Ev(%struct.O* %o)
+  call void @_ZN1ND1Ev(%struct.N* %n2)
+  call void @_ZN1ND1Ev(%struct.N* %n1)
+  ret i32 0
+}
+
+define linkonce_odr void @_ZN1NC1Ev(%struct.N* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.N*, align 8
+  store %struct.N* %this, %struct.N** %this.addr, align 8
+  %this1 = load %struct.N** %this.addr
+  call void @_ZN1NC2Ev(%struct.N* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1OC1Ev(%struct.O* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.O*, align 8
+  store %struct.O* %this, %struct.O** %this.addr, align 8
+  %this1 = load %struct.O** %this.addr
+  call void @_ZN1OC2Ev(%struct.O* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1OD1Ev(%struct.O* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.O*, align 8
+  store %struct.O* %this, %struct.O** %this.addr, align 8
+  %this1 = load %struct.O** %this.addr
+  call void @_ZN1OD2Ev(%struct.O* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1ND1Ev(%struct.N* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.N*, align 8
+  store %struct.N* %this, %struct.N** %this.addr, align 8
+  %this1 = load %struct.N** %this.addr
+  call void @_ZN1ND2Ev(%struct.N* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1ND2Ev(%struct.N* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.N*, align 8
+  store %struct.N* %this, %struct.N** %this.addr, align 8
+  %this1 = load %struct.N** %this.addr
+  %iN = getelementptr inbounds %struct.N* %this1, i32 0, i32 2
+  %0 = load i32* %iN, align 4
+  %1 = load i32* @_ZL3val, align 4
+  %dec = add nsw i32 %1, -1
+  store i32 %dec, i32* @_ZL3val, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0), i32 %0, i32 %dec)
+  %p = getelementptr inbounds %struct.N* %this1, i32 0, i32 4
+  call void @_ZN1PD1Ev(%struct.P* %p)
+  %m = getelementptr inbounds %struct.N* %this1, i32 0, i32 3
+  call void @_ZN1MD1Ev(%struct.M* %m)
+  %2 = bitcast %struct.N* %this1 to i8*
+  %3 = getelementptr inbounds i8* %2, i64 8
+  %4 = bitcast i8* %3 to %struct.P*
+  call void @_ZN1PD2Ev(%struct.P* %4)
+  %5 = bitcast %struct.N* %this1 to %struct.M*
+  call void @_ZN1MD2Ev(%struct.M* %5)
+  ret void
+}
+
+declare i32 @printf(...)
+
+define linkonce_odr void @_ZN1PD1Ev(%struct.P* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  %this1 = load %struct.P** %this.addr
+  call void @_ZN1PD2Ev(%struct.P* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1MD1Ev(%struct.M* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  %this1 = load %struct.M** %this.addr
+  call void @_ZN1MD2Ev(%struct.M* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1PD2Ev(%struct.P* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  %this1 = load %struct.P** %this.addr
+  %iP = getelementptr inbounds %struct.P* %this1, i32 0, i32 0
+  %0 = load i32* %iP, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([8 x i8]* @.str3, i32 0, i32 0), i32 %0)
+  %1 = load i32* @_ZL3val, align 4
+  %dec = add nsw i32 %1, -1
+  store i32 %dec, i32* @_ZL3val, align 4
+  ret void
+}
+
+define linkonce_odr void @_ZN1MD2Ev(%struct.M* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  %this1 = load %struct.M** %this.addr
+  %iM = getelementptr inbounds %struct.M* %this1, i32 0, i32 1
+  %0 = load i32* %iM, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([8 x i8]* @.str1, i32 0, i32 0), i32 %0)
+  %1 = load i32* @_ZL3val, align 4
+  %dec = add nsw i32 %1, -1
+  store i32 %dec, i32* @_ZL3val, align 4
+  %2 = bitcast %struct.M* %this1 to %struct.B*
+  call void @_ZN1BD2Ev(%struct.B* %2)
+  ret void
+}
+
+define linkonce_odr void @_ZN1BD2Ev(%struct.B* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.B*, align 8
+  store %struct.B* %this, %struct.B** %this.addr, align 8
+  %this1 = load %struct.B** %this.addr
+  %iB = getelementptr inbounds %struct.B* %this1, i32 0, i32 0
+  %0 = load i32* %iB, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([8 x i8]* @.str2, i32 0, i32 0), i32 %0)
+  %1 = load i32* @_ZL3val, align 4
+  %dec = add nsw i32 %1, -1
+  store i32 %dec, i32* @_ZL3val, align 4
+  ret void
+}
+
+define linkonce_odr void @_ZN1OD2Ev(%struct.O* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.O*, align 8
+  %cleanup.dest.slot = alloca i32
+  store %struct.O* %this, %struct.O** %this.addr, align 8
+  %this1 = load %struct.O** %this.addr
+  store i32 1, i32* %cleanup.dest.slot
+  %0 = bitcast %struct.O* %this1 to %struct.B*
+  call void @_ZN1BD2Ev(%struct.B* %0)
+  ret void
+}
+
+define linkonce_odr void @_ZN1OC2Ev(%struct.O* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.O*, align 8
+  store %struct.O* %this, %struct.O** %this.addr, align 8
+  %this1 = load %struct.O** %this.addr
+  %0 = bitcast %struct.O* %this1 to %struct.B*
+  call void @_ZN1BC2Ev(%struct.B* %0)
+  ret void
+}
+
+define linkonce_odr void @_ZN1BC2Ev(%struct.B* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.B*, align 8
+  store %struct.B* %this, %struct.B** %this.addr, align 8
+  %this1 = load %struct.B** %this.addr
+  %iB = getelementptr inbounds %struct.B* %this1, i32 0, i32 0
+  %0 = load i32* @_ZL3val, align 4
+  %inc = add nsw i32 %0, 1
+  store i32 %inc, i32* @_ZL3val, align 4
+  store i32 %inc, i32* %iB, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str4, i32 0, i32 0))
+  ret void
+}
+
+define linkonce_odr void @_ZN1NC2Ev(%struct.N* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.N*, align 8
+  store %struct.N* %this, %struct.N** %this.addr, align 8
+  %this1 = load %struct.N** %this.addr
+  %0 = bitcast %struct.N* %this1 to %struct.M*
+  call void @_ZN1MC2Ev(%struct.M* %0)
+  %1 = bitcast %struct.N* %this1 to i8*
+  %2 = getelementptr inbounds i8* %1, i64 8
+  %3 = bitcast i8* %2 to %struct.P*
+  call void @_ZN1PC2Ev(%struct.P* %3)
+  %m = getelementptr inbounds %struct.N* %this1, i32 0, i32 3
+  call void @_ZN1MC1Ev(%struct.M* %m)
+  %p = getelementptr inbounds %struct.N* %this1, i32 0, i32 4
+  call void @_ZN1PC1Ev(%struct.P* %p)
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0))
+  %4 = load i32* @_ZL3val, align 4
+  %inc = add nsw i32 %4, 1
+  store i32 %inc, i32* @_ZL3val, align 4
+  %iN = getelementptr inbounds %struct.N* %this1, i32 0, i32 2
+  store i32 %inc, i32* %iN, align 4
+  ret void
+}
+
+define linkonce_odr void @_ZN1MC2Ev(%struct.M* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  %this1 = load %struct.M** %this.addr
+  %0 = bitcast %struct.M* %this1 to %struct.B*
+  call void @_ZN1BC2Ev(%struct.B* %0)
+  %iM = getelementptr inbounds %struct.M* %this1, i32 0, i32 1
+  %1 = load i32* @_ZL3val, align 4
+  %inc = add nsw i32 %1, 1
+  store i32 %inc, i32* @_ZL3val, align 4
+  store i32 %inc, i32* %iM, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str7, i32 0, i32 0))
+  ret void
+}
+
+define linkonce_odr void @_ZN1PC2Ev(%struct.P* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  %this1 = load %struct.P** %this.addr
+  %iP = getelementptr inbounds %struct.P* %this1, i32 0, i32 0
+  %0 = load i32* @_ZL3val, align 4
+  %inc = add nsw i32 %0, 1
+  store i32 %inc, i32* @_ZL3val, align 4
+  store i32 %inc, i32* %iP, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str6, i32 0, i32 0))
+  ret void
+}
+
+define linkonce_odr void @_ZN1MC1Ev(%struct.M* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  %this1 = load %struct.M** %this.addr
+  call void @_ZN1MC2Ev(%struct.M* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1PC1Ev(%struct.P* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  %this1 = load %struct.P** %this.addr
+  call void @_ZN1PC2Ev(%struct.P* %this1)
+  ret void
+}

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/MergeFunc/fold-weak.ll -mergefunc -S > /home/jazouani/llvm/build/test/Transforms/MergeFunc/Output/fold-weak.ll.tmp &&
+grep "define weak" /home/jazouani/llvm/build/test/Transforms/MergeFunc/Output/fold-weak.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "call" /home/jazouani/llvm/build/test/Transforms/MergeFunc/Output/fold-weak.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

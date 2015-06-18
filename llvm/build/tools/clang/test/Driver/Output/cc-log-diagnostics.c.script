@@ -1,0 +1,3 @@
+rm -f /home/jazouani/llvm/build/tools/clang/test/Driver/Output/cc-log-diagnostics.c.tmp.log &&
+env RC_DEBUG_OPTIONS=1      CC_LOG_DIAGNOSTICS=1 CC_LOG_DIAGNOSTICS_FILE=/home/jazouani/llvm/build/tools/clang/test/Driver/Output/cc-log-diagnostics.c.tmp.log   /home/jazouani/llvm/build/Release+Asserts/bin/clang  -Wfoobar -no-canonical-prefixes -target x86_64-apple-darwin10 -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cc-log-diagnostics.c &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cc-log-diagnostics.c < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/cc-log-diagnostics.c.tmp.log

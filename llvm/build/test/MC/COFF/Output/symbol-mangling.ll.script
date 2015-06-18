@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -filetype=asm -mtriple i686-pc-win32 /home/jazouani/llvm/llvm-3.2/test/MC/COFF/symbol-mangling.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/COFF/symbol-mangling.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopDeletion/2008-05-06-Phi.ll -inline -instcombine -jump-threading -licm -loop-unswitch -instcombine -indvars -loop-deletion -gvn -simplifycfg -verify -disable-output

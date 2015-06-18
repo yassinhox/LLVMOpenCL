@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/unpredictable-ADDREXT3-arm.txt -triple=armv7-linux-gnueabi 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/unpredictable-ADDREXT3-arm.txt

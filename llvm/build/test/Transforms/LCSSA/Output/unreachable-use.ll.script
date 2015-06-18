@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LCSSA/unreachable-use.ll -lcssa -S -verify-loop-info | grep "[%]tmp33 = load i1\*\* [%]tmp"

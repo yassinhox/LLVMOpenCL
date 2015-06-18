@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -working-directory=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/working-directory-and-abs.c -fsyntax-only

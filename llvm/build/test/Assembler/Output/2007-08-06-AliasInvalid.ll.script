@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2007-08-06-AliasInvalid.ll > /dev/null 2> /home/jazouani/llvm/build/test/Assembler/Output/2007-08-06-AliasInvalid.ll.tmp &&
+grep "expected top-level entity" /home/jazouani/llvm/build/test/Assembler/Output/2007-08-06-AliasInvalid.ll.tmp

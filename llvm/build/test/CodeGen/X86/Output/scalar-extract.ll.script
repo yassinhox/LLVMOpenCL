@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/scalar-extract.ll -march=x86 -mattr=+mmx -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/scalar-extract.ll.tmp &&
+not grep movq  /home/jazouani/llvm/build/test/CodeGen/X86/Output/scalar-extract.ll.tmp

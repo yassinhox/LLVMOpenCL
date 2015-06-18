@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/buildvec_canonicalize.ll -march=ppc32 -mcpu=g5 --enable-unsafe-fp-math |    grep vxor | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/buildvec_canonicalize.ll -march=ppc32 -mcpu=g5 --enable-unsafe-fp-math |    grep vsplti | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt  < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/double-float-shrink.ll -simplify-libcalls -enable-double-float-shrink -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/double-float-shrink.ll

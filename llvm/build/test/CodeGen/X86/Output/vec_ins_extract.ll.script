@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_ins_extract.ll -scalarrepl -instcombine |    /home/jazouani/llvm/build/Release+Asserts/bin/llc -march=x86 -mcpu=yonah | /home/jazouani/llvm/build/Release+Asserts/bin/not grep sub.*esp

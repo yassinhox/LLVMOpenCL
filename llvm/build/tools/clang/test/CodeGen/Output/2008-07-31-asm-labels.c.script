@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-07-31-asm-labels.c &&
+grep "@pipe()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp | count 0 &&
+grep '_thisIsNotAPipe' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp | count 3 &&
+grep 'g0' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp | count 0 &&
+grep '_renamed' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp | count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -DUSE_DEF -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-07-31-asm-labels.c &&
+grep "@pipe()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp | count 0 &&
+grep '_thisIsNotAPipe' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-31-asm-labels.c.tmp | count 3

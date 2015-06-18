@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/big-endian-actual-args.ll -march=ppc32 -mtriple=powerpc-unknown-linux-gnu |    grep "addc 4, 4, 6" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/big-endian-actual-args.ll -march=ppc32 -mtriple=powerpc-unknown-linux-gnu |    grep "adde 3, 3, 5"

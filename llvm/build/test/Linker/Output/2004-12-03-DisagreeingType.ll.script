@@ -1,0 +1,3 @@
+echo "@G = weak global {{{{double}}}} zeroinitializer " |    /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /home/jazouani/llvm/build/test/Linker/Output/2004-12-03-DisagreeingType.ll.tmp.out2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2004-12-03-DisagreeingType.ll > /home/jazouani/llvm/build/test/Linker/Output/2004-12-03-DisagreeingType.ll.tmp.out1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2004-12-03-DisagreeingType.ll.tmp.out1.bc /home/jazouani/llvm/build/test/Linker/Output/2004-12-03-DisagreeingType.ll.tmp.out2.bc -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "}"

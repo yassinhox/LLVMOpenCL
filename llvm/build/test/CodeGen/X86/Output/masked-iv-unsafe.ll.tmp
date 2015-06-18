@@ -1,0 +1,618 @@
+	.file	"<stdin>"
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI0_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI0_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI0_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	count_up
+	.align	16, 0x90
+	.type	count_up,@function
+count_up:                               # @count_up
+# BB#0:                                 # %entry
+	movl	$10, %eax
+	movsd	.LCPI0_0(%rip), %xmm0
+	movsd	.LCPI0_1(%rip), %xmm1
+	movsd	.LCPI0_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB0_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movzbl	%al, %ecx
+	movsd	(%rdi,%rcx,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rcx,8)
+	movq	%rax, %rdx
+	andq	$16777215, %rdx         # imm = 0xFFFFFF
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	movq	%rax, %rcx
+	incq	%rcx
+	movsd	%xmm3, (%rdi,%rdx,8)
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movq	%rcx, %rax
+	jne	.LBB0_1
+# BB#2:                                 # %return
+	ret
+.Ltmp0:
+	.size	count_up, .Ltmp0-count_up
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI1_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI1_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI1_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	count_down
+	.align	16, 0x90
+	.type	count_down,@function
+count_down:                             # @count_down
+# BB#0:                                 # %entry
+	movl	$10, %eax
+	movsd	.LCPI1_0(%rip), %xmm0
+	movsd	.LCPI1_1(%rip), %xmm1
+	movsd	.LCPI1_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB1_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movzbl	%al, %ecx
+	movsd	(%rdi,%rcx,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rcx,8)
+	movq	%rax, %rdx
+	andq	$16777215, %rdx         # imm = 0xFFFFFF
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	leaq	-1(%rax), %rcx
+	movsd	%xmm3, (%rdi,%rdx,8)
+	cmpq	$20, %rcx
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movq	%rcx, %rax
+	jne	.LBB1_1
+# BB#2:                                 # %return
+	ret
+.Ltmp1:
+	.size	count_down, .Ltmp1-count_down
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI2_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI2_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI2_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	count_up_signed
+	.align	16, 0x90
+	.type	count_up_signed,@function
+count_up_signed:                        # @count_up_signed
+# BB#0:                                 # %entry
+	movl	$10, %edx
+	movl	$167772160, %eax        # imm = 0xA000000
+	movl	$2560, %ecx             # imm = 0xA00
+	movsd	.LCPI2_0(%rip), %xmm0
+	movsd	.LCPI2_1(%rip), %xmm1
+	movsd	.LCPI2_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB2_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movq	%rcx, %rsi
+	sarq	$8, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rax, %rsi
+	sarq	$24, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	addq	$256, %rcx              # imm = 0x100
+	addq	$16777216, %rax         # imm = 0x1000000
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rdx, %rsi
+	incq	%rsi
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rdx,8)
+	movq	%rsi, %rdx
+	jne	.LBB2_1
+# BB#2:                                 # %return
+	ret
+.Ltmp2:
+	.size	count_up_signed, .Ltmp2-count_up_signed
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI3_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI3_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI3_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	count_down_signed
+	.align	16, 0x90
+	.type	count_down_signed,@function
+count_down_signed:                      # @count_down_signed
+# BB#0:                                 # %entry
+	xorl	%edx, %edx
+	movl	$167772160, %eax        # imm = 0xA000000
+	movl	$2560, %ecx             # imm = 0xA00
+	movsd	.LCPI3_0(%rip), %xmm0
+	movsd	.LCPI3_1(%rip), %xmm1
+	movsd	.LCPI3_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB3_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movq	%rcx, %rsi
+	sarq	$8, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rax, %rsi
+	sarq	$24, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	addq	$-256, %rcx
+	addq	$-16777216, %rax        # imm = 0xFFFFFFFFFF000000
+	leaq	-1(%rdx), %rsi
+	cmpq	$10, %rsi
+	movsd	80(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, 80(%rdi,%rdx,8)
+	movq	%rsi, %rdx
+	jne	.LBB3_1
+# BB#2:                                 # %return
+	ret
+.Ltmp3:
+	.size	count_down_signed, .Ltmp3-count_down_signed
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI4_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI4_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI4_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	another_count_up
+	.align	16, 0x90
+	.type	another_count_up,@function
+another_count_up:                       # @another_count_up
+# BB#0:                                 # %entry
+	xorl	%eax, %eax
+	movsd	.LCPI4_0(%rip), %xmm0
+	movsd	.LCPI4_1(%rip), %xmm1
+	movsd	.LCPI4_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB4_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movzbl	%al, %ecx
+	movsd	(%rdi,%rcx,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rcx,8)
+	movq	%rax, %rdx
+	andq	$16777215, %rdx         # imm = 0xFFFFFF
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	leaq	1(%rax), %rcx
+	movsd	%xmm3, (%rdi,%rdx,8)
+	cmpq	%rcx, %rsi
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movq	%rcx, %rax
+	jne	.LBB4_1
+# BB#2:                                 # %return
+	ret
+.Ltmp4:
+	.size	another_count_up, .Ltmp4-another_count_up
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI5_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI5_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI5_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	another_count_down
+	.align	16, 0x90
+	.type	another_count_down,@function
+another_count_down:                     # @another_count_down
+# BB#0:                                 # %entry
+	movsd	.LCPI5_0(%rip), %xmm0
+	movsd	.LCPI5_1(%rip), %xmm1
+	movsd	.LCPI5_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB5_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movzbl	%sil, %eax
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movq	%rsi, %rcx
+	andq	$16777215, %rcx         # imm = 0xFFFFFF
+	movsd	(%rdi,%rcx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	leaq	-1(%rsi), %rax
+	movsd	%xmm3, (%rdi,%rcx,8)
+	cmpq	$10, %rax
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rax, %rsi
+	jne	.LBB5_1
+# BB#2:                                 # %return
+	ret
+.Ltmp5:
+	.size	another_count_down, .Ltmp5-another_count_down
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI6_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI6_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI6_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	another_count_up_signed
+	.align	16, 0x90
+	.type	another_count_up_signed,@function
+another_count_up_signed:                # @another_count_up_signed
+# BB#0:                                 # %entry
+	xorl	%r8d, %r8d
+	movsd	.LCPI6_0(%rip), %xmm0
+	movsd	.LCPI6_1(%rip), %xmm1
+	movsd	.LCPI6_2(%rip), %xmm2
+	xorl	%ecx, %ecx
+	movq	%rdi, %rdx
+	.align	16, 0x90
+.LBB6_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movq	%r8, %rax
+	sarq	$8, %rax
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movq	%rcx, %rax
+	sarq	$24, %rax
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	addq	$256, %r8               # imm = 0x100
+	addq	$16777216, %rcx         # imm = 0x1000000
+	decq	%rsi
+	movsd	(%rdx), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdx)
+	leaq	8(%rdx), %rdx
+	jne	.LBB6_1
+# BB#2:                                 # %return
+	ret
+.Ltmp6:
+	.size	another_count_up_signed, .Ltmp6-another_count_up_signed
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI7_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI7_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI7_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	another_count_down_signed
+	.align	16, 0x90
+	.type	another_count_down_signed,@function
+another_count_down_signed:              # @another_count_down_signed
+# BB#0:                                 # %entry
+	movq	%rsi, %rax
+	shlq	$8, %rax
+	movq	%rsi, %rcx
+	shlq	$24, %rcx
+	movsd	.LCPI7_0(%rip), %xmm0
+	movsd	.LCPI7_1(%rip), %xmm1
+	movsd	.LCPI7_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB7_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movq	%rax, %rdx
+	sarq	$8, %rdx
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rdx,8)
+	movq	%rcx, %rdx
+	sarq	$24, %rdx
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	movsd	%xmm3, (%rdi,%rdx,8)
+	addq	$-256, %rax
+	addq	$-16777216, %rcx        # imm = 0xFFFFFFFFFF000000
+	leaq	-1(%rsi), %rdx
+	cmpq	$10, %rdx
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rdx, %rsi
+	jne	.LBB7_1
+# BB#2:                                 # %return
+	ret
+.Ltmp7:
+	.size	another_count_down_signed, .Ltmp7-another_count_down_signed
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI8_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI8_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI8_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	yet_another_count_down
+	.align	16, 0x90
+	.type	yet_another_count_down,@function
+yet_another_count_down:                 # @yet_another_count_down
+# BB#0:                                 # %entry
+	xorl	%eax, %eax
+	movsd	.LCPI8_0(%rip), %xmm0
+	movsd	.LCPI8_1(%rip), %xmm1
+	movsd	.LCPI8_2(%rip), %xmm2
+	movq	%rax, %rcx
+	movq	%rax, %rdx
+	.align	16, 0x90
+.LBB8_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movsd	(%rdi,%rcx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	movsd	%xmm3, (%rdi,%rcx,8)
+	addq	$255, %rax
+	addq	$16777215, %rcx         # imm = 0xFFFFFF
+	leaq	-1(%rdx), %rsi
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	cmpq	$-1, %rsi
+	movsd	%xmm3, (%rdi,%rdx,8)
+	movq	%rsi, %rdx
+	jne	.LBB8_1
+# BB#2:                                 # %return
+	ret
+.Ltmp8:
+	.size	yet_another_count_down, .Ltmp8-yet_another_count_down
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI9_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI9_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI9_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	yet_another_count_up
+	.align	16, 0x90
+	.type	yet_another_count_up,@function
+yet_another_count_up:                   # @yet_another_count_up
+# BB#0:                                 # %entry
+	xorl	%eax, %eax
+	movsd	.LCPI9_0(%rip), %xmm0
+	movsd	.LCPI9_1(%rip), %xmm1
+	movsd	.LCPI9_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB9_1:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movzbl	%al, %ecx
+	movsd	(%rdi,%rcx,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rcx,8)
+	movq	%rax, %rdx
+	andq	$16777215, %rdx         # imm = 0xFFFFFF
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	leaq	3(%rax), %rcx
+	movsd	%xmm3, (%rdi,%rdx,8)
+	cmpq	$10, %rcx
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movq	%rcx, %rax
+	jne	.LBB9_1
+# BB#2:                                 # %return
+	ret
+.Ltmp9:
+	.size	yet_another_count_up, .Ltmp9-yet_another_count_up
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI10_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI10_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI10_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	still_another_count_down
+	.align	16, 0x90
+	.type	still_another_count_down,@function
+still_another_count_down:               # @still_another_count_down
+# BB#0:                                 # %entry
+	movl	$10, %eax
+	movsd	.LCPI10_0(%rip), %xmm0
+	movsd	.LCPI10_1(%rip), %xmm1
+	movsd	.LCPI10_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB10_1:                               # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movzbl	%al, %ecx
+	movsd	(%rdi,%rcx,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rcx,8)
+	movq	%rax, %rdx
+	andq	$16777215, %rdx         # imm = 0xFFFFFF
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	movq	%rax, %rcx
+	addq	$-3, %rcx
+	movsd	%xmm3, (%rdi,%rdx,8)
+	movsd	(%rdi,%rax,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rax,8)
+	movq	%rcx, %rax
+	jne	.LBB10_1
+# BB#2:                                 # %return
+	ret
+.Ltmp10:
+	.size	still_another_count_down, .Ltmp10-still_another_count_down
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI11_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI11_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI11_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	yet_another_count_up_signed
+	.align	16, 0x90
+	.type	yet_another_count_up_signed,@function
+yet_another_count_up_signed:            # @yet_another_count_up_signed
+# BB#0:                                 # %entry
+	xorl	%eax, %eax
+	movsd	.LCPI11_0(%rip), %xmm0
+	movsd	.LCPI11_1(%rip), %xmm1
+	movsd	.LCPI11_2(%rip), %xmm2
+	xorl	%ecx, %ecx
+	movq	%rax, %rdx
+	.align	16, 0x90
+.LBB11_1:                               # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movq	%rax, %rsi
+	sarq	$8, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rcx, %rsi
+	sarq	$24, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	addq	$768, %rax              # imm = 0x300
+	addq	$50331648, %rcx         # imm = 0x3000000
+	leaq	3(%rdx), %rsi
+	cmpq	$10, %rsi
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rdx,8)
+	movq	%rsi, %rdx
+	jne	.LBB11_1
+# BB#2:                                 # %return
+	ret
+.Ltmp11:
+	.size	yet_another_count_up_signed, .Ltmp11-yet_another_count_up_signed
+
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI12_0:
+	.quad	4591870180066957722     # double 1.000000e-01
+                                        #  (0x3fb999999999999a)
+.LCPI12_1:
+	.quad	4612361558371493478     # double 2.300000e+00
+                                        #  (0x4002666666666666)
+.LCPI12_2:
+	.quad	4616752568008179712     # double 4.500000e+00
+                                        #  (0x4012000000000000)
+	.text
+	.globl	yet_another_count_down_signed
+	.align	16, 0x90
+	.type	yet_another_count_down_signed,@function
+yet_another_count_down_signed:          # @yet_another_count_down_signed
+# BB#0:                                 # %entry
+	movl	$10, %edx
+	movl	$167772160, %eax        # imm = 0xA000000
+	movl	$2560, %ecx             # imm = 0xA00
+	movsd	.LCPI12_0(%rip), %xmm0
+	movsd	.LCPI12_1(%rip), %xmm1
+	movsd	.LCPI12_2(%rip), %xmm2
+	.align	16, 0x90
+.LBB12_1:                               # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	movq	%rcx, %rsi
+	sarq	$8, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm0, %xmm3
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rax, %rsi
+	sarq	$24, %rsi
+	movsd	(%rdi,%rsi,8), %xmm3
+	mulsd	%xmm1, %xmm3
+	addq	$-768, %rcx             # imm = 0xFFFFFFFFFFFFFD00
+	addq	$-50331648, %rax        # imm = 0xFFFFFFFFFD000000
+	movsd	%xmm3, (%rdi,%rsi,8)
+	movq	%rdx, %rsi
+	addq	$-3, %rsi
+	movsd	(%rdi,%rdx,8), %xmm3
+	mulsd	%xmm2, %xmm3
+	movsd	%xmm3, (%rdi,%rdx,8)
+	movq	%rsi, %rdx
+	jne	.LBB12_1
+# BB#2:                                 # %return
+	ret
+.Ltmp12:
+	.size	yet_another_count_down_signed, .Ltmp12-yet_another_count_down_signed
+
+
+	.section	".note.GNU-stack","",@progbits

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-VLD1DUPq8_UPD-arm.txt -triple=armv7-unknown-unknwon -mcpu=cortex-a8 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-VLD1DUPq8_UPD-arm.txt

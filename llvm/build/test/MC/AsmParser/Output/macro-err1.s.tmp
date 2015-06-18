@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macro-err1.s:8:10: error: Too many arguments
+foo 42,  42
+         ^

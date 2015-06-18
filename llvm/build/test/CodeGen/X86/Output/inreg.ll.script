@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inreg.ll -mtriple=i686-pc-linux -mcpu=corei7 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=DAG /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inreg.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inreg.ll -mtriple=i686-pc-linux -mcpu=corei7 -O0 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=FAST /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inreg.ll

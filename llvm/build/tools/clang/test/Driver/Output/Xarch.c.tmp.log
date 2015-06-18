@@ -1,0 +1,3 @@
+clang: error: invalid Xarch argument: '-Xarch_i386 -o', options requiring arguments are unsupported
+clang: error: invalid Xarch argument: '-Xarch_i386 -S', cannot change driver behavior inside Xarch argument
+clang: error: invalid Xarch argument: '-Xarch_i386 -o', options requiring arguments are unsupported

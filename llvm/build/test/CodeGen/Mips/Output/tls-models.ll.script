@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/tls-models.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=CHECK-PIC /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/tls-models.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel -relocation-model=static < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/tls-models.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=CHECK-NONPIC /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/tls-models.ll

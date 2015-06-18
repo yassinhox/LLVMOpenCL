@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/FunctionAttrs/2008-12-29-Constant.ll -basicaa -functionattrs -S | grep readnone

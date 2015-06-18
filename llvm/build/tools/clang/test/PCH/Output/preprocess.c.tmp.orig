@@ -1,0 +1,23 @@
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/preprocess.c"
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/preprocess.c" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 150 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/preprocess.h" 1
+
+
+
+
+typedef int a_typedef;
+# 2 "<command line>" 2
+# 1 "<built-in>" 2
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/preprocess.c" 2
+
+
+
+
+
+
+
+a_typedef a_value;

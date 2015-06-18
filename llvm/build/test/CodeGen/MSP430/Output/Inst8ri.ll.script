@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=msp430 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MSP430/Inst8ri.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/MSP430/Inst8ri.ll

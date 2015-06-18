@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2007-05-07-InvokeSRet.ll -mtriple=i686-pc-linux-gnu -disable-fp-elim | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "addl .12, %esp"

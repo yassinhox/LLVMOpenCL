@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/dead_vaargs.ll -deadargelim -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep 47 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/dead_vaargs.ll -deadargelim -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep 1.0

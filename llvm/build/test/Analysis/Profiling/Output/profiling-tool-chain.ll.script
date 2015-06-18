@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Analysis/Profiling/profiling-tool-chain.ll -o /home/jazouani/llvm/build/test/Analysis/Profiling/Output/profiling-tool-chain.ll.tmp1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt /home/jazouani/llvm/build/test/Analysis/Profiling/Output/profiling-tool-chain.ll.tmp1 -insert-optimal-edge-profiling -o /home/jazouani/llvm/build/test/Analysis/Profiling/Output/profiling-tool-chain.ll.tmp2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt /home/jazouani/llvm/build/test/Analysis/Profiling/Output/profiling-tool-chain.ll.tmp1 -profile-estimator -profile-verifier -o /home/jazouani/llvm/build/test/Analysis/Profiling/Output/profiling-tool-chain.ll.tmp3

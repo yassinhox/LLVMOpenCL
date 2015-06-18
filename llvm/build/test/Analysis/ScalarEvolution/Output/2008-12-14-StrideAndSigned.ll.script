@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2008-12-14-StrideAndSigned.ll -analyze -scalar-evolution 2>&1 |  grep "(((-1 * %i0) + (100005 smax %i0)) /u 5)"

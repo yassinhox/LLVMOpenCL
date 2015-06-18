@@ -1,0 +1,45 @@
+[enteredMainFile]: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-decls.m
+[startedTranslationUnit]
+[indexDeclaration]: kind: objc-class | name: I | USR: c:objc(cs)I | lang: ObjC | cursor: ObjCInterfaceDecl=I:1:12 | loc: 1:12 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 0 | isDef: 1 | isContainer: 1 | isImplicit: 0
+     <ObjCContainerInfo>: kind: interface
+[indexDeclaration]: kind: objc-instance-method | name: prop | USR: c:objc(cs)I(im)prop | lang: ObjC | cursor: ObjCInstanceMethodDecl=prop:3:7 | loc: 3:2 | semantic-container: [I:1:12] | lexical-container: [I:1:12] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 0
+[indexDeclaration]: kind: objc-property | name: prop | USR: c:objc(cs)I(py)prop | lang: ObjC | cursor: ObjCPropertyDecl=prop:2:25 | loc: 2:25 | semantic-container: [I:1:12] | lexical-container: [I:1:12] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 0
+     <getter>: kind: objc-instance-method | name: prop | USR: c:objc(cs)I(im)prop | lang: ObjC
+[indexDeclaration]: kind: objc-category | name:  | USR: c:objc(ext)I@index-decls.m@61 | lang: ObjC | cursor: ObjCCategoryDecl=:6:12 | loc: 6:12 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 0 | isDef: 1 | isContainer: 1 | isImplicit: 0
+     <ObjCContainerInfo>: kind: interface
+     <ObjCCategoryInfo>: class: kind: objc-class | name: I | USR: c:objc(cs)I | lang: ObjC | cursor: ObjCClassRef=I:1:12 | loc: 6:12
+[indexDeclaration]: kind: objc-instance-method | name: setProp: | USR: c:objc(cs)I(im)setProp: | lang: ObjC | cursor: ObjCInstanceMethodDecl=setProp::7:33 | loc: 7:33 | semantic-container: [I:1:12] | lexical-container: [:6:12] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 1
+[indexDeclaration]: kind: objc-property | name: prop | USR: c:objc(cs)I(py)prop | lang: ObjC | cursor: ObjCPropertyDecl=prop:7:33 | loc: 7:33 | semantic-container: [:6:12] | lexical-container: [:6:12] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 0
+     <getter>: kind: objc-instance-method | name: prop | USR: c:objc(cs)I(im)prop | lang: ObjC
+     <setter>: kind: objc-instance-method | name: setProp: | USR: c:objc(cs)I(im)setProp: | lang: ObjC
+[indexDeclaration]: kind: objc-class | name: I | USR: c:objc(cs)I | lang: ObjC | cursor: ObjCImplementationDecl=I:10:17 (Definition) | loc: 10:17 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 1 | isDef: 1 | isContainer: 1 | isImplicit: 0
+     <ObjCContainerInfo>: kind: implementation
+[indexDeclaration]: kind: objc-ivar | name: _prop | USR: c:objc(cs)I@_prop | lang: ObjC | cursor: ObjCIvarDecl=_prop:11:20 (Definition) | loc: 11:20 | semantic-container: [I:10:17] | lexical-container: [I:10:17] | isRedecl: 0 | isDef: 1 | isContainer: 0 | isImplicit: 0
+[indexEntityReference]: kind: objc-property | name: prop | USR: c:objc(cs)I(py)prop | lang: ObjC | cursor: ObjCSynthesizeDecl=prop:2:25 (Definition) | loc: 11:13 | <parent>:: <<NULL>> | container: [I:10:17] | refkind: direct
+[indexDeclaration]: kind: objc-instance-method | name: prop | USR: c:objc(cs)I(im)prop | lang: ObjC | cursor: ObjCInstanceMethodDecl=prop:3:7 | loc: 11:13 | semantic-container: [I:1:12] | lexical-container: [I:10:17] | isRedecl: 1 | isDef: 1 | isContainer: 0 | isImplicit: 0
+[indexDeclaration]: kind: objc-instance-method | name: setProp: | USR: c:objc(cs)I(im)setProp: | lang: ObjC | cursor: ObjCInstanceMethodDecl=setProp::7:33 | loc: 11:13 | semantic-container: [I:1:12] | lexical-container: [I:10:17] | isRedecl: 1 | isDef: 1 | isContainer: 0 | isImplicit: 1
+[indexDeclaration]: kind: objc-class | name: I1 | USR: c:objc(cs)I1 | lang: ObjC | cursor: ObjCInterfaceDecl=I1:15:12 | loc: 15:12 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 0 | isDef: 1 | isContainer: 1 | isImplicit: 0
+     <ObjCContainerInfo>: kind: interface
+[indexDeclaration]: kind: objc-class | name: I2 | USR: c:objc(cs)I2 | lang: ObjC | cursor: ObjCInterfaceDecl=I2:16:39 | loc: 16:39 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 0 | isDef: 1 | isContainer: 1 | isImplicit: 0
+     <ObjCContainerInfo>: kind: interface
+[indexDeclaration]: kind: objc-class | name: I3 | USR: c:objc(cs)I3 | lang: ObjC | cursor: ObjCInterfaceDecl=I3:19:12 | loc: 19:12 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 0 | isDef: 1 | isContainer: 1 | isImplicit: 0
+     <ObjCContainerInfo>: kind: interface
+[indexDeclaration]: kind: objc-instance-method | name: auto_prop | USR: c:objc(cs)I3(im)auto_prop | lang: ObjC | cursor: ObjCInstanceMethodDecl=auto_prop:20:33 | loc: 20:33 | semantic-container: [I3:19:12] | lexical-container: [I3:19:12] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 1
+[indexDeclaration]: kind: objc-instance-method | name: setAuto_prop: | USR: c:objc(cs)I3(im)setAuto_prop: | lang: ObjC | cursor: ObjCInstanceMethodDecl=setAuto_prop::20:33 | loc: 20:33 | semantic-container: [I3:19:12] | lexical-container: [I3:19:12] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 1
+[indexDeclaration]: kind: objc-property | name: auto_prop | USR: c:objc(cs)I3(py)auto_prop | lang: ObjC | cursor: ObjCPropertyDecl=auto_prop:20:33 | loc: 20:33 | semantic-container: [I3:19:12] | lexical-container: [I3:19:12] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 0
+     <getter>: kind: objc-instance-method | name: auto_prop | USR: c:objc(cs)I3(im)auto_prop | lang: ObjC
+     <setter>: kind: objc-instance-method | name: setAuto_prop: | USR: c:objc(cs)I3(im)setAuto_prop: | lang: ObjC
+[indexDeclaration]: kind: objc-class | name: I3 | USR: c:objc(cs)I3 | lang: ObjC | cursor: ObjCImplementationDecl=I3:23:17 (Definition) | loc: 23:17 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 1 | isDef: 1 | isContainer: 1 | isImplicit: 0
+     <ObjCContainerInfo>: kind: implementation
+[indexDeclaration]: kind: objc-ivar | name: _auto_prop | USR: c:objc(cs)I3@_auto_prop | lang: ObjC | cursor: ObjCIvarDecl=_auto_prop:20:33 (Definition) | loc: 20:33 | semantic-container: [I3:23:17] | lexical-container: [I3:23:17] | isRedecl: 0 | isDef: 1 | isContainer: 0 | isImplicit: 0
+[indexDeclaration]: kind: objc-instance-method | name: meth | USR: c:objc(cs)I3(im)meth | lang: ObjC | cursor: ObjCInstanceMethodDecl=meth:24:8 (Definition) | loc: 24:1 | semantic-container: [I3:23:17] | lexical-container: [I3:23:17] | isRedecl: 0 | isDef: 1 | isContainer: 1 | isImplicit: 0
+[indexEntityReference]: kind: objc-ivar | name: _auto_prop | USR: c:objc(cs)I3@_auto_prop | lang: ObjC | cursor: MemberRefExpr=_auto_prop:20:33 | loc: 25:3 | <parent>:: kind: objc-instance-method | name: meth | USR: c:objc(cs)I3(im)meth | lang: ObjC | container: [meth:24:1] | refkind: direct
+[indexDeclaration]: kind: function | name: test1 | USR: c:@F@test1 | lang: C | cursor: FunctionDecl=test1:29:5 (Definition) | loc: 29:5 | semantic-container: [TU] | lexical-container: [TU] | isRedecl: 0 | isDef: 1 | isContainer: 1 | isImplicit: 0
+[indexDeclaration]: kind: variable | name: extvar | USR: c:@F@test1@extvar | lang: C | cursor: VarDecl=extvar:30:14 | loc: 30:14 | semantic-container: [test1:29:5] | lexical-container: [test1:29:5] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 0
+[indexEntityReference]: kind: variable | name: extvar | USR: c:@F@test1@extvar | lang: C | cursor: DeclRefExpr=extvar:30:14 | loc: 31:3 | <parent>:: kind: function | name: test1 | USR: c:@F@test1 | lang: C | container: [test1:29:5] | refkind: direct
+[indexDeclaration]: kind: function | name: extfn | USR: c:@F@test1@F@extfn | lang: C | cursor: FunctionDecl=extfn:32:14 | loc: 32:14 | semantic-container: [test1:29:5] | lexical-container: [test1:29:5] | isRedecl: 0 | isDef: 0 | isContainer: 0 | isImplicit: 0
+[indexEntityReference]: kind: function | name: extfn | USR: c:@F@test1@F@extfn | lang: C | cursor: DeclRefExpr=extfn:32:14 | loc: 33:10 | <parent>:: kind: function | name: test1 | USR: c:@F@test1 | lang: C | container: [test1:29:5] | refkind: direct
+[diagnostic]: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-decls.m:1:12: warning: class 'I' defined without specifying a base class [-Wobjc-root-class]
+[diagnostic]: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-decls.m:16:16: warning: unknown attribute 'something' ignored [-Wattributes]
+[diagnostic]: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-decls.m:16:39: error: Objective-C declarations may only appear in global scope
+[diagnostic]: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-decls.m:19:12: warning: class 'I3' defined without specifying a base class [-Wobjc-root-class]

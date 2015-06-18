@@ -1,0 +1,4 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-module.m.tmp.cache &&
+c-index-test -index-file /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-module.m -fmodule-cache-path /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-module.m.tmp.cache -fmodules -F /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/../Modules/Inputs       -Xclang -fdisable-module-hash | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-module.m &&
+c-index-test -index-tu /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-module.m.tmp.cache/DependsOnModule.pcm | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-module.m -check-prefix=CHECK-DMOD &&
+c-index-test -index-tu /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-module.m.tmp.cache/Module.pcm | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-module.m -check-prefix=CHECK-TMOD

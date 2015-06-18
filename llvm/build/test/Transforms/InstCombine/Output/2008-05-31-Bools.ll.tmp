@@ -1,0 +1,19 @@
+; ModuleID = '<stdin>'
+
+define i1 @foo1(i1 %a, i1 %b) {
+  %A = xor i1 %a, %b
+  ret i1 %A
+}
+
+define i1 @foo2(i1 %a, i1 %b) {
+  %A = and i1 %a, %b
+  ret i1 %A
+}
+
+define i1 @foo3(i1 %a, i1 %b) {
+  ret i1 %a
+}
+
+define i1 @foo4(i1 %a, i1 %b) {
+  ret i1 %a
+}

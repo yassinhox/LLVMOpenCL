@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-03-23-i80-fp80.ll -instcombine -S | grep 302245289961712575840256 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-03-23-i80-fp80.ll -instcombine -S | grep K40018000000000000000

@@ -1,0 +1,7 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fblocks -triple x86_64-apple-darwin10 -emit-llvm-bc -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/blocks-seq.c | opt -strip | llvm-dis > /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/blocks-seq.c.tmp &&
+grep '%6 = call i32 (...)\* @rhs()' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/blocks-seq.c.tmp | count 1 &&
+grep '%7 = getelementptr inbounds %0\* %1, i32 0, i32 1' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/blocks-seq.c.tmp | count 1 &&
+grep '%8 = load %0\*\* %7' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/blocks-seq.c.tmp | count 1 &&
+grep '%10 = call i32 (...)\* @rhs()' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/blocks-seq.c.tmp | count 1 &&
+grep '%11 = getelementptr inbounds %0\* %1, i32 0, i32 1' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/blocks-seq.c.tmp | count 1 &&
+grep '%12 = load %0\*\* %11' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/blocks-seq.c.tmp | count 1

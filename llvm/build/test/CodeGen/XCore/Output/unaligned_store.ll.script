@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/XCore/unaligned_store.ll -march=xcore > /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_store.ll.tmp1.s &&
+grep "bl __misaligned_store" /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_store.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep st16 /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_store.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep shr /home/jazouani/llvm/build/test/CodeGen/XCore/Output/unaligned_store.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

@@ -1,0 +1,2 @@
+c-index-test -write-pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-pch.cpp.tmp.pch -fshort-wchar /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-pch.cpp &&
+c-index-test -index-tu /home/jazouani/llvm/build/tools/clang/test/Index/Output/index-pch.cpp.tmp.pch | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-pch.cpp

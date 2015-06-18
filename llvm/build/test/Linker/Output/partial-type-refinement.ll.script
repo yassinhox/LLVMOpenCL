@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/partial-type-refinement.ll /home/jazouani/llvm/llvm-3.2/test/Linker/partial-type-refinement-link.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Linker/partial-type-refinement.ll

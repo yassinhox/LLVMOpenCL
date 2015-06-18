@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/neg_fp.ll -march=x86 -mattr=+sse41 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/neg_fp.ll.tmp &&
+grep xorps /home/jazouani/llvm/build/test/CodeGen/X86/Output/neg_fp.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

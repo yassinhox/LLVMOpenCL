@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mcpu=e500mc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/fsl-e500mc.ll 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/fsl-e500mc.ll

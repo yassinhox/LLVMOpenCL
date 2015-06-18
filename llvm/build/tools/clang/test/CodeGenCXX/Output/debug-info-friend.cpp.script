@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fverbose-asm -S -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/debug-info-friend.cpp -o - | grep DW_TAG_friend

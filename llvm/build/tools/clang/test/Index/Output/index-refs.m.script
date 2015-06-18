@@ -1,0 +1,1 @@
+c-index-test -index-file /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-refs.m | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-refs.m

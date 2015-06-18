@@ -1,0 +1,3 @@
+echo "@X = external constant i32" | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /home/jazouani/llvm/build/test/Linker/Output/2005-02-12-ConstantGlobals-2.ll.tmp.2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2005-02-12-ConstantGlobals-2.ll > /home/jazouani/llvm/build/test/Linker/Output/2005-02-12-ConstantGlobals-2.ll.tmp.1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2005-02-12-ConstantGlobals-2.ll.tmp.1.bc /home/jazouani/llvm/build/test/Linker/Output/2005-02-12-ConstantGlobals-2.ll.tmp.2.bc -S | grep "global i32 7"

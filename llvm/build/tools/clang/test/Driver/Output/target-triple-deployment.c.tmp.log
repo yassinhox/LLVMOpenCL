@@ -1,0 +1,28 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: x86_64-apple-macosx
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "x86_64" "-macosx_version_min" "10.4.0" "-o" "a.out" "-lcrt1.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/target-triple-deployment.c.tmp.o" "-lSystem" "-lgcc_s.10.4"
+clang version 3.2 (tags/RELEASE_32/final)
+Target: x86_64-apple-darwin9
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "x86_64" "-macosx_version_min" "10.5.0" "-o" "a.out" "-lcrt1.10.5.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/target-triple-deployment.c.tmp.o" "-lSystem" "-lgcc_s.10.5"
+clang version 3.2 (tags/RELEASE_32/final)
+Target: x86_64-apple-macosx10.7
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "x86_64" "-macosx_version_min" "10.7.0" "-o" "a.out" "-lcrt1.10.6.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/target-triple-deployment.c.tmp.o" "-lSystem"
+clang version 3.2 (tags/RELEASE_32/final)
+Target: armv7-apple-ios
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "armv7" "-iphoneos_version_min" "3.0.0" "-o" "a.out" "-lcrt1.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/target-triple-deployment.c.tmp.o" "-lSystem" "-lgcc_s.1"
+clang version 3.2 (tags/RELEASE_32/final)
+Target: armv7-apple-ios0.0
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "armv7" "-iphoneos_version_min" "3.0.0" "-o" "a.out" "-lcrt1.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/target-triple-deployment.c.tmp.o" "-lSystem" "-lgcc_s.1"
+clang version 3.2 (tags/RELEASE_32/final)
+Target: armv7-apple-ios1.2.3
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "armv7" "-iphoneos_version_min" "1.2.3" "-o" "a.out" "-lcrt1.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/target-triple-deployment.c.tmp.o" "-lSystem" "-lgcc_s.1"
+clang version 3.2 (tags/RELEASE_32/final)
+Target: armv7-apple-ios5.0
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "armv7" "-iphoneos_version_min" "5.0.0" "-o" "a.out" "-lcrt1.3.1.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/target-triple-deployment.c.tmp.o" "-lSystem"

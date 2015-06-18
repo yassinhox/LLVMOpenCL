@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Generic/APIntLoadStore.ll > /home/jazouani/llvm/build/test/CodeGen/Generic/Output/APIntLoadStore.ll.tmp

@@ -1,0 +1,17 @@
+	.file	"<stdin>"
+	.text
+	.globl	get_a
+	.align	16, 0x90
+	.type	get_a,@function
+get_a:                                  # @get_a
+# BB#0:                                 # %entry
+	movl	a(%rip), %eax
+	ret
+.Ltmp0:
+	.size	get_a, .Ltmp0-get_a
+
+	.type	a,@object               # @a
+	.local	a
+	.comm	a,4,4
+
+	.section	".note.GNU-stack","",@progbits

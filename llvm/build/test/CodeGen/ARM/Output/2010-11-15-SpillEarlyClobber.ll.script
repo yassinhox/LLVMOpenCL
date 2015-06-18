@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2010-11-15-SpillEarlyClobber.ll -verify-machineinstrs -spiller=trivial &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2010-11-15-SpillEarlyClobber.ll -verify-machineinstrs -spiller=inline

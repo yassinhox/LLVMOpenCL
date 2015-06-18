@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-09-25-InlineAsmScalarToVectorConv.ll -march=arm -mcpu=cortex-a8 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-09-25-InlineAsmScalarToVectorConv.ll

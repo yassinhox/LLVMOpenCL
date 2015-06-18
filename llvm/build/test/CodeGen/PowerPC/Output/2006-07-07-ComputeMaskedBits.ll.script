@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2006-07-07-ComputeMaskedBits.ll -mtriple=powerpc64-apple-darwin | grep extsw | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

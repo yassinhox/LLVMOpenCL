@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -c -save-temps -integrated-as -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/debug-options-as.c 2>&1    | FileCheck -check-prefix=SAVE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/debug-options-as.c &&
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/debug-options-as.c.tmp.s &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -c -integrated-as -g /home/jazouani/llvm/build/tools/clang/test/Driver/Output/debug-options-as.c.tmp.s 2>&1    | FileCheck -check-prefix=S /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/debug-options-as.c

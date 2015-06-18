@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fverbose-asm -g -S -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/debug-info-fwddecl.m -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/debug-info-fwddecl.m

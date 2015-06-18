@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Other/2008-02-14-PassManager.ll -loop-unroll -loop-rotate -simplifycfg -disable-output

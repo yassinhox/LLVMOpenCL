@@ -1,0 +1,2 @@
+error: command line contains '-undef' but precompiled header was not built with it
+1 error generated.

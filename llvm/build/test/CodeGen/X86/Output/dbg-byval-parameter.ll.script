@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  -march=x86 -asm-verbose < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/dbg-byval-parameter.ll | grep DW_TAG_formal_parameter

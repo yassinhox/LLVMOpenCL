@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/vec_splat.ll -march=ppc32 -mcpu=g3 |     grep stfs | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/vec_splat.ll -march=ppc32 -mcpu=g5 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_splat.ll.tmp &&
+grep vspltw /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_splat.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep vsplti /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_splat.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep vsplth /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_splat.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

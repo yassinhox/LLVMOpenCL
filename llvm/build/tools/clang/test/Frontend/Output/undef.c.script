@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -undef -x assembler-with-cpp -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/undef.c

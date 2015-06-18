@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/directive_ascii.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/directive_ascii.s

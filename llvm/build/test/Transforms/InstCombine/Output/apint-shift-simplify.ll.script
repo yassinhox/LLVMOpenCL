@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/apint-shift-simplify.ll -instcombine -S |     egrep "shl|lshr|ashr" | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

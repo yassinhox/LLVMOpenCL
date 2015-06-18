@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/delete.cpp &&
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/delete.cpp /home/jazouani/llvm/build/tools/clang/test/SemaCXX/Output/delete.cpp.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fixit -x c++ /home/jazouani/llvm/build/tools/clang/test/SemaCXX/Output/delete.cpp.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -E -o - /home/jazouani/llvm/build/tools/clang/test/SemaCXX/Output/delete.cpp.tmp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/delete.cpp

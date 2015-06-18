@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2009-03-20-AShrOverShift.ll -instcombine -S | grep "ashr i32 %val, 31"

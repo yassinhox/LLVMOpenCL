@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2011-08-09-PhiUpdate.ll -instcombine -inline -jump-threading -loop-unroll -unroll-count=4 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2011-08-09-PhiUpdate.ll

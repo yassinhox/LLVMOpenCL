@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/vec_vrsave.ll -march=ppc32 -mcpu=g5 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_vrsave.ll.tmp &&
+grep vrlw /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_vrsave.ll.tmp &&
+not grep spr /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_vrsave.ll.tmp &&
+not grep vrsave /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_vrsave.ll.tmp

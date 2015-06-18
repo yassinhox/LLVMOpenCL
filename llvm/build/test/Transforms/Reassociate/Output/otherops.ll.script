@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Reassociate/otherops.ll -reassociate -constprop -instcombine -die -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep 12

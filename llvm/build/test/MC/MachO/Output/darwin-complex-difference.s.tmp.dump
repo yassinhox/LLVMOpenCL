@@ -1,0 +1,112 @@
+('cputype', 16777223)
+('cpusubtype', 3)
+('filetype', 1)
+('num_load_commands', 3)
+('load_commands_size', 256)
+('flag', 0)
+('reserved', 0)
+('load_commands', [
+  # Load Command 0
+ (('command', 25)
+  ('size', 152)
+  ('segment_name', '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+  ('vm_addr', 0)
+  ('vm_size', 24)
+  ('file_offset', 288)
+  ('file_size', 24)
+  ('maxprot', 7)
+  ('initprot', 7)
+  ('num_sections', 1)
+  ('flags', 0)
+  ('sections', [
+    # Section 0
+   (('section_name', '__text\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('segment_name', '__TEXT\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('address', 0)
+    ('size', 24)
+    ('offset', 288)
+    ('alignment', 0)
+    ('reloc_offset', 312)
+    ('num_reloc', 4)
+    ('flags', 0x80000000)
+    ('reserved1', 0)
+    ('reserved2', 0)
+    ('reserved3', 0)
+   ),
+  ('_relocations', [
+    # Relocation 0
+    (('word-0', 0xc),
+     ('word-1', 0x5c000002)),
+    # Relocation 1
+    (('word-0', 0xc),
+     ('word-1', 0xc000001)),
+    # Relocation 2
+    (('word-0', 0x8),
+     ('word-1', 0x5c000002)),
+    # Relocation 3
+    (('word-0', 0x8),
+     ('word-1', 0xc000001)),
+  ])
+  ('_section_data', '01000000 02000000 04000000 04000000 00000000 00000000')
+  ])
+ ),
+  # Load Command 1
+ (('command', 2)
+  ('size', 24)
+  ('symoff', 344)
+  ('nsyms', 3)
+  ('stroff', 392)
+  ('strsize', 12)
+  ('_string_data', '\x00_a\x00_c\x00_d\x00\x00\x00')
+  ('_symbols', [
+    # Symbol 0
+   (('n_strx', 1)
+    ('n_type', 0xe)
+    ('n_sect', 1)
+    ('n_desc', 0)
+    ('n_value', 0)
+    ('_string', '_a')
+   ),
+    # Symbol 1
+   (('n_strx', 4)
+    ('n_type', 0xe)
+    ('n_sect', 1)
+    ('n_desc', 0)
+    ('n_value', 16)
+    ('_string', '_c')
+   ),
+    # Symbol 2
+   (('n_strx', 7)
+    ('n_type', 0xe)
+    ('n_sect', 1)
+    ('n_desc', 0)
+    ('n_value', 20)
+    ('_string', '_d')
+   ),
+  ])
+ ),
+  # Load Command 2
+ (('command', 11)
+  ('size', 80)
+  ('ilocalsym', 0)
+  ('nlocalsym', 3)
+  ('iextdefsym', 3)
+  ('nextdefsym', 0)
+  ('iundefsym', 3)
+  ('nundefsym', 0)
+  ('tocoff', 0)
+  ('ntoc', 0)
+  ('modtaboff', 0)
+  ('nmodtab', 0)
+  ('extrefsymoff', 0)
+  ('nextrefsyms', 0)
+  ('indirectsymoff', 0)
+  ('nindirectsyms', 0)
+  ('extreloff', 0)
+  ('nextrel', 0)
+  ('locreloff', 0)
+  ('nlocrel', 0)
+  ('_indirect_symbols', [
+  ])
+ ),
+])

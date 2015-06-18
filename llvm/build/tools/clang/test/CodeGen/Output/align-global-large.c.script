@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/align-global-large.c -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/align-global-large.c

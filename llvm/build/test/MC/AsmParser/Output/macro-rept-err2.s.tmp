@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/macro-rept-err2.s:4:1: error: no matching '.endr' in definition
+.rept 3
+^

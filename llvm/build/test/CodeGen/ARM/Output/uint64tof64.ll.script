@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/uint64tof64.ll -mtriple=arm-apple-darwin -mattr=+vfp2

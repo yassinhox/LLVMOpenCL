@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fastcc3struct.ll -march=x86 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/fastcc3struct.ll.tmp &&
+grep "movl	.48, %ecx" /home/jazouani/llvm/build/test/CodeGen/X86/Output/fastcc3struct.ll.tmp &&
+grep "movl	.24, %edx" /home/jazouani/llvm/build/test/CodeGen/X86/Output/fastcc3struct.ll.tmp &&
+grep "movl	.12, %eax" /home/jazouani/llvm/build/test/CodeGen/X86/Output/fastcc3struct.ll.tmp

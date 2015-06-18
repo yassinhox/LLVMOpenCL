@@ -1,0 +1,36 @@
+<stdin>:6:12: error: incorrect condition in IT block; got 'le', but expected 'eq'
+        addle r0, r1, r2
+           ^
+<stdin>:7:12: error: incorrect condition in IT block; got 'al', but expected 'ne'
+        nop
+           ^
+<stdin>:8:9: error: instructions in IT block must be predicable
+        it le
+        ^
+<stdin>:9:11: error: too many conditions on IT instruction
+        iteeee gt
+          ^
+<stdin>:10:11: error: illegal IT block condition mask 'tfe'
+        ittfe le
+          ^
+<stdin>:11:9: error: predicated instructions must be in IT block
+        nopeq
+        ^
+<stdin>:33:19: error: invalid operand for instruction
+        mrc  p14, #8, r1, c1, c2, #4
+                  ^
+<stdin>:34:35: error: invalid operand for instruction
+        mrc  p14, #1, r1, c1, c2, #8
+                                  ^
+<stdin>:35:20: error: invalid operand for instruction
+        mrc2  p14, #8, r1, c1, c2, #4
+                   ^
+<stdin>:36:36: error: invalid operand for instruction
+        mrc2  p14, #0, r1, c1, c2, #9
+                                   ^
+<stdin>:37:19: error: immediate operand must be in the range [0,15]
+        mrrc  p7, #16, r5, r4, c1
+                  ^
+<stdin>:38:20: error: immediate operand must be in the range [0,15]
+        mrrc2  p7, #17, r5, r4, c1
+                   ^

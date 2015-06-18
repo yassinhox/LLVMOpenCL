@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/fma.ll -march=ppc32 -fp-contract=fast |    egrep "fn?madd|fn?msub" | /home/jazouani/llvm/build/Release+Asserts/bin/count 8

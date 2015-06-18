@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/and-xor.ll -scalar-evolution -analyze    | grep "\-->  (zext" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

@@ -1,0 +1,1 @@
+c-index-test -index-file -target x86_64-apple-macosx10.7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-subscripting-literals.m | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-subscripting-literals.m

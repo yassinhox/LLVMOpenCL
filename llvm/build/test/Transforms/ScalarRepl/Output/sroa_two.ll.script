@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/sroa_two.ll -scalarrepl | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10    -Werror -cpp-precomp -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cpp-precomp.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10    -Werror -no-cpp-precomp -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cpp-precomp.c

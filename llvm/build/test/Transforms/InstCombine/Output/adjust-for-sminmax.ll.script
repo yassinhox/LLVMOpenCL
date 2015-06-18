@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/adjust-for-sminmax.ll -instcombine -S | grep "icmp s[lg]t i32 %n, 0" | /home/jazouani/llvm/build/Release+Asserts/bin/count 16

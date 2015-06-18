@@ -1,0 +1,5 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Index/Output/annotate-comments-availability-attrs.cpp.tmp &&
+mkdir /home/jazouani/llvm/build/tools/clang/test/Index/Output/annotate-comments-availability-attrs.cpp.tmp &&
+c-index-test -test-load-source all -comments-xml-schema=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/../../bindings/xml/comment-xml-schema.rng /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp > /home/jazouani/llvm/build/tools/clang/test/Index/Output/annotate-comments-availability-attrs.cpp.tmp/out &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp < /home/jazouani/llvm/build/tools/clang/test/Index/Output/annotate-comments-availability-attrs.cpp.tmp/out &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp -check-prefix=WRONG < /home/jazouani/llvm/build/tools/clang/test/Index/Output/annotate-comments-availability-attrs.cpp.tmp/out

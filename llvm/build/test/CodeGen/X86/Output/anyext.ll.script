@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/anyext.ll -march=x86-64 | grep movzbl | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

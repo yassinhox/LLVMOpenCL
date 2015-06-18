@@ -1,0 +1,3 @@
+c-index-test -write-pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/TestClassDecl.m.tmp.ast -fobjc-nonfragile-abi -fblocks -x objective-c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/TestClassDecl.m &&
+c-index-test -test-file-scan /home/jazouani/llvm/build/tools/clang/test/Index/Output/TestClassDecl.m.tmp.ast /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/TestClassDecl.m | FileCheck -check-prefix=scan /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/TestClassDecl.m &&
+c-index-test -test-load-tu /home/jazouani/llvm/build/tools/clang/test/Index/Output/TestClassDecl.m.tmp.ast local | FileCheck -check-prefix=load /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/TestClassDecl.m

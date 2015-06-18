@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -S -emit-llvm -std=gnu89 -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/extern-inline.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/extern-inline.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -S -emit-llvm -fgnu89-inline -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/extern-inline.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/extern-inline.c

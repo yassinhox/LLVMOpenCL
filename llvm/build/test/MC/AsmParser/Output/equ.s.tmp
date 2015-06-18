@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/equ.s:7:11: error: redefinition of 'a'
+.equiv  a, 3
+           ^

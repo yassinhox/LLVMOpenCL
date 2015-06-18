@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/fdiv.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s &&
+grep frest    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep -w fi    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep -w fm    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep fma      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep fnms     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep cgti     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep selb     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/fdiv.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

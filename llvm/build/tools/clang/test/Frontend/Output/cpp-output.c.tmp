@@ -1,0 +1,21 @@
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/cpp-output.c"
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/cpp-output.c" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 153 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/cpp-output.c" 2
+// RUN: %clang -E -o %t -C %s
+// RUN: grep '^int x; // comment' %t
+// RUN: grep '^x x' %t
+// RUN: %clang -E -o %t -CC %s
+// RUN: grep '^int x; // comment' %t
+// RUN: grep '^x /\* comment \*/ x /\* comment \*/' %t
+
+int x; // comment
+
+
+
+
+x /* comment */ x /* comment */

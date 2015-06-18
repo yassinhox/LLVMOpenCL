@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -ast-print /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/template-id-printing.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/template-id-printing.cpp

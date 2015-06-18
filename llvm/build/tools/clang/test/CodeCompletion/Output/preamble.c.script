@@ -1,0 +1,1 @@
+env CINDEXTEST_EDITING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeCompletion/preamble.c:4:5 -Xclang -code-completion-patterns  /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeCompletion/preamble.c | FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeCompletion/preamble.c

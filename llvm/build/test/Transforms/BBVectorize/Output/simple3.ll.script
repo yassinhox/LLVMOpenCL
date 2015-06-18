@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/BBVectorize/simple3.ll -bb-vectorize -bb-vectorize-req-chain-depth=3 -bb-vectorize-vector-bits=192 -instcombine -gvn -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/BBVectorize/simple3.ll

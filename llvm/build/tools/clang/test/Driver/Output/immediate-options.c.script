@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --help | grep isystem &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --help | not grep ast-dump &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --help | not grep ccc-cxx &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --help-hidden | grep ccc-cxx &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -dumpversion &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -print-search-dirs

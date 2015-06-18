@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/bugpoint -load /home/jazouani/llvm/build/Release+Asserts/lib/BugpointPasses.so /home/jazouani/llvm/llvm-3.2/test/BugPoint/crash-narrowfunctiontest.ll -output-prefix /home/jazouani/llvm/build/test/BugPoint/Output/crash-narrowfunctiontest.ll.tmp -bugpoint-crashcalls -silence-passes > /dev/null

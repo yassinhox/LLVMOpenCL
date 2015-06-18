@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -no-aa -gvn -S /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/crash-no-aa.ll

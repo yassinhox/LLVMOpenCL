@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/and-or.ll -instcombine -S | grep "and i32 %a, 1" | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/and-or.ll -instcombine -S | grep "or i32 %0, %b" | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

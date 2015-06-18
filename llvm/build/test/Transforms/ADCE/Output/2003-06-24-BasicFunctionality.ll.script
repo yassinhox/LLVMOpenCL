@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ADCE/2003-06-24-BasicFunctionality.ll -adce -simplifycfg -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep then:

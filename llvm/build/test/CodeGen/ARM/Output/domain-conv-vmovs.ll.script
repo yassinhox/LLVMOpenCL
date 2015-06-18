@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -verify-machineinstrs -mtriple=armv7-none-linux-gnueabi -mcpu=cortex-a9 -mattr=+neon,+neonfp -float-abi=hard < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/domain-conv-vmovs.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/domain-conv-vmovs.ll

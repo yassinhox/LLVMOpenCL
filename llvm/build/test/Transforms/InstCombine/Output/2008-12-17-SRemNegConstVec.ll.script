@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-12-17-SRemNegConstVec.ll -instcombine -S | grep "i8 2, i8 2"

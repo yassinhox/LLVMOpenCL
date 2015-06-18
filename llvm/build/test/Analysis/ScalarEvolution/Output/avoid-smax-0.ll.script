@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/avoid-smax-0.ll -scalar-evolution -analyze | grep "Loop %bb3: backedge-taken count is (-1 + %n)"

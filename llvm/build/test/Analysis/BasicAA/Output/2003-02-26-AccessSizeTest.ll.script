@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/2003-02-26-AccessSizeTest.ll -basicaa -gvn -instcombine -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/2003-02-26-AccessSizeTest.ll

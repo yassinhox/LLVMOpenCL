@@ -1,0 +1,6 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/dot-symbol.s:8:5: error: assignment to pseudo-symbol '.' is unsupported (use '.space' or '.org').)
+. = . + 8
+    ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/dot-symbol.s:11:1: error: invalid use of pseudo-symbol '.' as a label
+.:
+^

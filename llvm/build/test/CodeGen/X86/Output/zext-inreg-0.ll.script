@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/zext-inreg-0.ll -march=x86 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep and &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/zext-inreg-0.ll -march=x86-64 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/zext-inreg-0.ll.tmp &&
+not grep and /home/jazouani/llvm/build/test/CodeGen/X86/Output/zext-inreg-0.ll.tmp &&
+not grep movzbq /home/jazouani/llvm/build/test/CodeGen/X86/Output/zext-inreg-0.ll.tmp &&
+not grep movzwq /home/jazouani/llvm/build/test/CodeGen/X86/Output/zext-inreg-0.ll.tmp &&
+not grep movzlq /home/jazouani/llvm/build/test/CodeGen/X86/Output/zext-inreg-0.ll.tmp

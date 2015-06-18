@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/c-strings.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/c-strings.c &&
+grep "hello" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/c-strings.c.tmp | count 3 &&
+grep 'c"hello\\00"' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/c-strings.c.tmp | count 2 &&
+grep 'c"hello\\00\\00\\00"' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/c-strings.c.tmp | count 1 &&
+grep 'c"ola"' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/c-strings.c.tmp | count 1

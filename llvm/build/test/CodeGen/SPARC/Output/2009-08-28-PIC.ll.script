@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=sparc --relocation-model=pic < /home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/2009-08-28-PIC.ll | grep _GLOBAL_OFFSET_TABLE_

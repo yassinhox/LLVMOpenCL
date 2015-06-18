@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -loop-rotate /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopRotate/crash.ll -disable-output -verify-dom-info -verify-loop-info

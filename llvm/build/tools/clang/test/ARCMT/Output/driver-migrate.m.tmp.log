@@ -1,0 +1,4 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: i386-apple-darwin9
+Thread model: posix
+ "/usr/bin/touch" "a.out"

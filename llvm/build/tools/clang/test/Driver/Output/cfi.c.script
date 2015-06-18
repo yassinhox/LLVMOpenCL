@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin10     -no-integrated-as -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cfi.c 2>&1 |   FileCheck --check-prefix=CHECK-DARWIN /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cfi.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-pc-linux-gnu  -static -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cfi.c 2>&1 |  FileCheck --check-prefix=CHECK-LINUX /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cfi.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -regalloc=fast -optimize-regalloc=0 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Generic/edge-bundles-blockIDs.ll

@@ -1,0 +1,90 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/inline.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i386-unknown-unknown"
+
+@P = global void ()* @_Z13gnu_ei_inlinev, align 4
+
+define i32 @_Z3barv() nounwind readnone {
+entry:
+  ret i32 123
+}
+
+define linkonce_odr i32 @_Z3foov() nounwind readnone inlinehint {
+entry:
+  ret i32 123
+}
+
+define void @_Z10gnu_inlinev() nounwind readnone inlinehint {
+entry:
+  ret void
+}
+
+define available_externally void @_Z13gnu_ei_inlinev() nounwind readnone inlinehint {
+entry:
+  ret void
+}
+
+define void @_Z10test_test1v() nounwind readnone {
+entry:
+  ret void
+}
+
+define linkonce_odr i32 @_Z5test1v() nounwind readnone inlinehint {
+entry:
+  ret i32 4
+}
+
+define void @_Z10test_test2v() nounwind readnone {
+entry:
+  ret void
+}
+
+define linkonce_odr i32 @_Z5test2v() nounwind readnone inlinehint {
+entry:
+  ret i32 5
+}
+
+define void @_Z5test3v() nounwind readnone inlinehint {
+entry:
+  ret void
+}
+
+define void @_Z10test_test4v() nounwind readnone {
+entry:
+  ret void
+}
+
+define available_externally i32 @_Z5test4v() nounwind readnone inlinehint {
+entry:
+  ret i32 0
+}
+
+define void @_Z10test_test5v() nounwind readnone {
+entry:
+  ret void
+}
+
+define available_externally i32 @_Z5test5v() nounwind readnone inlinehint {
+entry:
+  ret i32 0
+}
+
+define void @_Z5test7v() nounwind readnone {
+entry:
+  ret void
+}
+
+define void @_Z5test8v() nounwind readnone {
+entry:
+  ret void
+}
+
+define linkonce_odr i32 @_Z7strlcpyPcPKcj(i8* nocapture %dest, i8* nocapture %src, i32 %size) nounwind readnone inlinehint {
+entry:
+  ret i32 3
+}
+
+define linkonce_odr i32 @_Z2eiv() nounwind readnone inlinehint {
+entry:
+  ret i32 123
+}

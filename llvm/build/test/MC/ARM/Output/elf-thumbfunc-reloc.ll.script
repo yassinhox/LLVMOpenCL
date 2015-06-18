@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-thumbfunc-reloc.ll -mtriple=thumbv7-linux-gnueabi -relocation-model=pic  -filetype=obj -o - | elf-dump --dump-section-data |  /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-thumbfunc-reloc.ll

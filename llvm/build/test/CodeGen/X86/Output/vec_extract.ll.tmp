@@ -1,0 +1,64 @@
+	.file	"<stdin>"
+	.text
+	.globl	test1
+	.align	16, 0x90
+	.type	test1,@function
+test1:                                  # @test1
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	addps	%xmm0, %xmm0
+	movl	8(%esp), %eax
+	movss	%xmm0, (%eax)
+	ret
+.Ltmp0:
+	.size	test1, .Ltmp0-test1
+
+	.globl	test2
+	.align	16, 0x90
+	.type	test2,@function
+test2:                                  # @test2
+# BB#0:
+	pushl	%eax
+	movl	8(%esp), %eax
+	movaps	(%eax), %xmm0
+	addps	%xmm0, %xmm0
+	movhlps	%xmm0, %xmm0            # xmm0 = xmm0[1,1]
+	movss	%xmm0, (%esp)
+	flds	(%esp)
+	popl	%eax
+	ret
+.Ltmp1:
+	.size	test2, .Ltmp1-test2
+
+	.globl	test3
+	.align	16, 0x90
+	.type	test3,@function
+test3:                                  # @test3
+# BB#0:
+	movl	8(%esp), %eax
+	movss	12(%eax), %xmm0
+	movl	4(%esp), %eax
+	movss	%xmm0, (%eax)
+	ret
+.Ltmp2:
+	.size	test3, .Ltmp2-test3
+
+	.globl	test4
+	.align	16, 0x90
+	.type	test4,@function
+test4:                                  # @test4
+# BB#0:
+	subl	$12, %esp
+	calll	foo
+	unpckhpd	%xmm0, %xmm0    # xmm0 = xmm0[1,1]
+	addsd	16(%esp), %xmm0
+	movsd	%xmm0, (%esp)
+	fldl	(%esp)
+	addl	$12, %esp
+	ret
+.Ltmp3:
+	.size	test4, .Ltmp3-test4
+
+
+	.section	".note.GNU-stack","",@progbits

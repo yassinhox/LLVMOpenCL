@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 -march=cellspu -asm-verbose < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/2010-04-07-DbgValueOtherTargets.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/2010-04-07-DbgValueOtherTargets.ll

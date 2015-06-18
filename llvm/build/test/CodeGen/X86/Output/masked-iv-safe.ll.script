@@ -1,0 +1,9 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/masked-iv-safe.ll -mcpu=generic -march=x86-64 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp &&
+not grep and /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp &&
+not grep movz /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp &&
+not grep sar /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp &&
+not grep shl /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp &&
+grep add /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep inc /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep dec /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep lea /home/jazouani/llvm/build/test/CodeGen/X86/Output/masked-iv-safe.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

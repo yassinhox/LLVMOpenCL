@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=x86_64-mingw32 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-06-03-Win64DisableRedZone.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-06-03-Win64DisableRedZone.ll

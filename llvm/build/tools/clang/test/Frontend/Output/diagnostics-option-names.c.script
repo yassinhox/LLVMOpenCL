@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fdiagnostics-show-option -Werror -Weverything /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/diagnostics-option-names.c 2> /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/diagnostics-option-names.c.tmp &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/diagnostics-option-names.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/diagnostics-option-names.c

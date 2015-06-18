@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-07-10-CastSextBool.ll -instcombine -S | grep "%C = xor i1 %A, true" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-07-10-CastSextBool.ll -instcombine -S | grep "ret i1 false"

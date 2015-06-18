@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2009-01-08-AlignAlloca.ll -instcombine -S > /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/2009-01-08-AlignAlloca.ll.tmp &&
+grep ", align 4" /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/2009-01-08-AlignAlloca.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep ", align 8" /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/2009-01-08-AlignAlloca.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

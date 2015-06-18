@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -target i686-pc-win32 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Headers/ms-null-ms-header-vs-stddef.cpp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -target i386-mingw32 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Headers/ms-null-ms-header-vs-stddef.cpp

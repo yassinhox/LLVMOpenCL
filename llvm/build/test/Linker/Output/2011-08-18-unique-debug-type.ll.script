@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/2011-08-18-unique-debug-type.ll /home/jazouani/llvm/llvm-3.2/test/Linker/2011-08-18-unique-debug-type2.ll -S -o - | grep "int" | grep -v "^; ModuleID" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

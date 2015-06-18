@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Integer/2007-01-19-TruncSext.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Integer/Output/2007-01-19-TruncSext.ll.tmp1.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/build/test/Integer/Output/2007-01-19-TruncSext.ll.tmp1.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis > /home/jazouani/llvm/build/test/Integer/Output/2007-01-19-TruncSext.ll.tmp2.ll &&
+diff /home/jazouani/llvm/build/test/Integer/Output/2007-01-19-TruncSext.ll.tmp1.ll /home/jazouani/llvm/build/test/Integer/Output/2007-01-19-TruncSext.ll.tmp2.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Integer/2007-01-19-TruncSext.ll | /home/jazouani/llvm/build/Release+Asserts/bin/lli --force-interpreter=true | grep -- -255

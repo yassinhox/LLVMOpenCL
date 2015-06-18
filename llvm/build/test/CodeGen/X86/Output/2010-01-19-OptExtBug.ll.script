@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-01-19-OptExtBug.ll -mtriple=x86_64-apple-darwin11 -relocation-model=pic -disable-fp-elim -stats 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep ext-opt

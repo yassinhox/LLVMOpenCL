@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Feature/load_module.ll -load=/home/jazouani/llvm/build/Release+Asserts/lib/LLVMHello.so -hello    -disable-output 2>&1 | grep Hello

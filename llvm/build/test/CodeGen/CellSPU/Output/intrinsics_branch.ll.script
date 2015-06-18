@@ -1,0 +1,9 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/intrinsics_branch.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s &&
+grep ceq     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 30 &&
+grep ceqb    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 10 &&
+grep ceqhi   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep ceqi    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep cgt     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 30 &&
+grep cgtb    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 10 &&
+grep cgthi   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep cgti    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_branch.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5

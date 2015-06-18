@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -target unknown-unknown-unknown -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/target.c    -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/target.c.tmp.o -### 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/target.c

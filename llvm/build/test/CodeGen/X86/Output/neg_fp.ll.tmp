@@ -1,0 +1,31 @@
+	.file	"<stdin>"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI0_0:
+	.long	2147483648              # float -0.000000e+00
+	.long	2147483648              # float -0.000000e+00
+	.long	2147483648              # float -0.000000e+00
+	.long	2147483648              # float -0.000000e+00
+	.text
+	.globl	negfp
+	.align	16, 0x90
+	.type	negfp,@function
+negfp:                                  # @negfp
+	.cfi_startproc
+# BB#0:                                 # %entry
+	pushl	%eax
+.Ltmp1:
+	.cfi_def_cfa_offset 8
+	vmovss	8(%esp), %xmm0
+	vsubss	12(%esp), %xmm0, %xmm0
+	vxorps	.LCPI0_0, %xmm0, %xmm0
+	vmovss	%xmm0, (%esp)
+	flds	(%esp)
+	popl	%eax
+	ret
+.Ltmp2:
+	.size	negfp, .Ltmp2-negfp
+	.cfi_endproc
+
+
+	.section	".note.GNU-stack","",@progbits

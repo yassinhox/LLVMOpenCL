@@ -1,0 +1,60 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/objc2-weak-assign.m'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin9"
+
+%struct._objc_module = type { i64, i64, i8*, %struct._objc_symtab* }
+%struct._objc_symtab = type { i64, i8*, i16, i16, [0 x i8*] }
+
+@x = global i8** null, align 8
+@y = global i8** null, align 8
+@z = global i8*** null, align 8
+@a1 = global [20 x i8**] zeroinitializer, align 16
+@a2 = global [30 x i8**] zeroinitializer, align 16
+@a3 = global [40 x i8***] zeroinitializer, align 16
+@"\01L_OBJC_CLASS_NAME_" = internal global [1 x i8] zeroinitializer, section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_MODULES" = internal global %struct._objc_module { i64 7, i64 32, i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct._objc_symtab* null }, section "__OBJC,__module_info,regular,no_dead_strip", align 4
+@llvm.used = appending global [2 x i8*] [i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), i8* bitcast (%struct._objc_module* @"\01L_OBJC_MODULES" to i8*)], section "llvm.metadata"
+
+define void @_Z3fooPP11objc_object(i8** %param) nounwind {
+entry:
+  %param.addr = alloca i8**, align 8
+  store i8** %param, i8*** %param.addr, align 8
+  %0 = load i8*** %param.addr, align 8
+  store i8* null, i8** %0, align 8
+  ret void
+}
+
+define i32 @main() nounwind {
+entry:
+  %weakread = call i8* @objc_read_weak(i8** bitcast (i8*** @x to i8**))
+  %0 = bitcast i8* %weakread to i8**
+  %weakassign = call i8* @objc_assign_weak(i8* null, i8** %0)
+  %weakread1 = call i8* @objc_read_weak(i8** bitcast (i8*** @y to i8**))
+  %1 = bitcast i8* %weakread1 to i8**
+  %weakassign2 = call i8* @objc_assign_weak(i8* null, i8** %1)
+  %weakread3 = call i8* @objc_read_weak(i8** bitcast (i8**** @z to i8**))
+  %2 = bitcast i8* %weakread3 to i8***
+  %3 = bitcast i8*** %2 to i8**
+  %weakread4 = call i8* @objc_read_weak(i8** %3)
+  %4 = bitcast i8* %weakread4 to i8**
+  %weakassign5 = call i8* @objc_assign_weak(i8* null, i8** %4)
+  %weakassign6 = call i8* @objc_assign_weak(i8* null, i8** bitcast (i8*** getelementptr inbounds ([20 x i8**]* @a1, i32 0, i64 3) to i8**))
+  %weakassign7 = call i8* @objc_assign_weak(i8* null, i8** bitcast (i8*** getelementptr inbounds ([30 x i8**]* @a2, i32 0, i64 3) to i8**))
+  %weakread8 = call i8* @objc_read_weak(i8** bitcast (i8**** getelementptr inbounds ([40 x i8***]* @a3, i32 0, i64 3) to i8**))
+  %5 = bitcast i8* %weakread8 to i8***
+  %arrayidx = getelementptr inbounds i8*** %5, i64 4
+  %6 = bitcast i8*** %arrayidx to i8**
+  %weakassign9 = call i8* @objc_assign_weak(i8* null, i8** %6)
+  ret i32 0
+}
+
+declare i8* @objc_read_weak(i8**)
+
+declare i8* @objc_assign_weak(i8*, i8**)
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 1}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__OBJC, __image_info,regular"}
+!3 = metadata !{i32 1, metadata !"Objective-C Garbage Collection", i32 2}

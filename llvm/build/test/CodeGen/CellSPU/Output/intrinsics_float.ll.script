@@ -1,0 +1,11 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/intrinsics_float.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s &&
+grep fa      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fs      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fm      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 15 &&
+grep fceq    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fcmeq   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fcgt    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fcmgt   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fma     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fnms    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep fms     /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/intrinsics_float.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5

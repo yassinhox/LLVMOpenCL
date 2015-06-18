@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-nm -D /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/shared-object-test.elf-i386          | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/nm-shared-object.test -check-prefix ELF-32 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-nm -D /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/shared-object-test.elf-x86-64          | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/nm-shared-object.test -check-prefix ELF-64

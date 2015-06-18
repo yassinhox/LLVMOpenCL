@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/thumb2-ldr_pre.ll -march=thumb -mattr=+thumb2 |    grep "ldr.*\!" | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/thumb2-ldr_pre.ll -march=thumb -mattr=+thumb2 |    grep "ldrsb.*\!" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

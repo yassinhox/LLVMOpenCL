@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -std=c++11 -fsyntax-only -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/constexpr-depth.cpp -DMAX=128 -fconstexpr-depth 128 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -std=c++11 -fsyntax-only -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/constexpr-depth.cpp -DMAX=2 -fconstexpr-depth 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -std=c++11 -fsyntax-only -Xclang -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaCXX/constexpr-depth.cpp -DMAX=10 -fconstexpr-depth=10

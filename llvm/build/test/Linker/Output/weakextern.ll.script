@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/weakextern.ll > /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/testlink1.ll > /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp.bc /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp.bc /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp2.bc -o /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis < /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp1.bc | grep "kallsyms_names = extern_weak" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis < /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp1.bc | grep "MyVar = external global i32" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis < /home/jazouani/llvm/build/test/Linker/Output/weakextern.ll.tmp1.bc | grep "Inte = global i32"

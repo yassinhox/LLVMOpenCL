@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2009-09-03-mdnode.ll > /home/jazouani/llvm/build/test/Linker/Output/2009-09-03-mdnode.ll.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2009-09-03-mdnode2.ll > /home/jazouani/llvm/build/test/Linker/Output/2009-09-03-mdnode.ll.tmp2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2009-09-03-mdnode.ll.tmp.bc /home/jazouani/llvm/build/test/Linker/Output/2009-09-03-mdnode.ll.tmp2.bc

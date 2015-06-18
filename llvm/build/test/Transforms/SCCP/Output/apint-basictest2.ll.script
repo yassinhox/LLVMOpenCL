@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-basictest2.ll -sccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep phi &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-basictest2.ll -sccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep add

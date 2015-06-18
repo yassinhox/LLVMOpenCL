@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/iprintf.ll -simplify-libcalls -S -o /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/iprintf.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/Transforms/SimplifyLibCalls/Output/iprintf.ll.tmp /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/iprintf.ll

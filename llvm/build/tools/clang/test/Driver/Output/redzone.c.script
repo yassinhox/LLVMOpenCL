@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -mno-red-zone /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/redzone.c -S -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/redzone.c.tmp.log &&
+grep 'noredzone' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/redzone.c.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -mred-zone /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/redzone.c -S -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/redzone.c.tmp.log &&
+grep -v 'noredzone' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/redzone.c.tmp.log

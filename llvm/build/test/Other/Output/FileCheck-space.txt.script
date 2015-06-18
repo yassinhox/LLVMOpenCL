@@ -1,0 +1,2 @@
+printf "a\nb" | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/FileCheck-space.txt -check-prefix=TEST1 &&
+echo oo | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/FileCheck-space.txt -check-prefix=TEST2

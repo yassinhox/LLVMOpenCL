@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -mergefunc -stats -disable-output < /home/jazouani/llvm/llvm-3.2/test/Transforms/MergeFunc/vector.ll 2>&1 | grep "functions merged"

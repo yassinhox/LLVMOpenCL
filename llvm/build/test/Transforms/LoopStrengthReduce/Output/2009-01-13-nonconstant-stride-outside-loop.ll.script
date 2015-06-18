@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/2009-01-13-nonconstant-stride-outside-loop.ll -loop-reduce -S | grep phi | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/2009-01-13-nonconstant-stride-outside-loop.ll -loop-reduce -S | grep mul | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

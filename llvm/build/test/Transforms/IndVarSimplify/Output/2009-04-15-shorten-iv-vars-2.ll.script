@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/2009-04-15-shorten-iv-vars-2.ll -indvars -instcombine -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "[sz]ext"

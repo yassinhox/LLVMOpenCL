@@ -1,0 +1,2 @@
+c-index-test -test-annotate-tokens=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-cxx-member-calls.cpp:1:1:186:1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-cxx-member-calls.cpp 2>&1 | FileCheck -check-prefix=CHECK-tokens /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-cxx-member-calls.cpp &&
+c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-cxx-member-calls.cpp -std=c++98 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-cxx-member-calls.cpp

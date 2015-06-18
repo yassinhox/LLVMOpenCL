@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -mem2reg -S -o - < /home/jazouani/llvm/llvm-3.2/test/Transforms/Mem2Reg/ignore-lifetime.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/Mem2Reg/ignore-lifetime.ll

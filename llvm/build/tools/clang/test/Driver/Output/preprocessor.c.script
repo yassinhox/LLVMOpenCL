@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -E -x c-header /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/preprocessor.c > /home/jazouani/llvm/build/tools/clang/test/Driver/Output/preprocessor.c.tmp &&
+grep 'B B' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/preprocessor.c.tmp

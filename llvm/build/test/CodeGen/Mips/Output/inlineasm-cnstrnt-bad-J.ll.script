@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/inlineasm-cnstrnt-bad-J.ll  2> /home/jazouani/llvm/build/test/CodeGen/Mips/Output/inlineasm-cnstrnt-bad-J.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CHECK-ERRORS < /home/jazouani/llvm/build/test/CodeGen/Mips/Output/inlineasm-cnstrnt-bad-J.ll.tmp /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/inlineasm-cnstrnt-bad-J.ll

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2007-09-29-GC.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "@f.*gc.*shadowstack" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2007-09-29-GC.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "@g.*gc.*java"

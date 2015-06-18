@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2002-05-03-NotOperator.ll -constprop -S |    not grep "i32 0"

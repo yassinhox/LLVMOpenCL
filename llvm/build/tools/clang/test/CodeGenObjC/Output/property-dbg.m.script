@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -S -g -masm-verbose -x objective-c < /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/property-dbg.m | grep DW_AT_name

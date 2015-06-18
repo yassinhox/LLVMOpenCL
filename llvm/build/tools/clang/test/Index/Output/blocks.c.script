@@ -1,0 +1,1 @@
+c-index-test -test-load-source local -fblocks /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/blocks.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/blocks.c

@@ -1,0 +1,4 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: arm-apple-darwin10
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "armv7" "-iphoneos_version_min" "3.0.0" "-o" "a.out" "-lcrt1.o" "-some-linker-arg" "-filelist" "X" "-lSystem" "-lgcc_s.1"

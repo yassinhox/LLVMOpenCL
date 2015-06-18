@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LCSSA/indirectbr.ll -lcssa -verify-loop-info -verify-dom-info -disable-output

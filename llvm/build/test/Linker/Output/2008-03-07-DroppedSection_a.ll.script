@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2008-03-07-DroppedSection_a.ll > /home/jazouani/llvm/build/test/Linker/Output/2008-03-07-DroppedSection_a.ll.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2008-03-07-DroppedSection_b.ll > /home/jazouani/llvm/build/test/Linker/Output/2008-03-07-DroppedSection_a.ll.tmp2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2008-03-07-DroppedSection_a.ll.tmp.bc /home/jazouani/llvm/build/test/Linker/Output/2008-03-07-DroppedSection_a.ll.tmp2.bc -o /home/jazouani/llvm/build/test/Linker/Output/2008-03-07-DroppedSection_a.ll.tmp3.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis < /home/jazouani/llvm/build/test/Linker/Output/2008-03-07-DroppedSection_a.ll.tmp3.bc | grep ".data.init_task"

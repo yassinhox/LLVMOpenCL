@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple i386-apple-darwin9 -O1 -target-cpu pentium4 -target-feature +sse4.1 -g -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/vector.c -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/vector.c

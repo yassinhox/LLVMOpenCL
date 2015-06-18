@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple x86_64-apple-darwin10.0.0 -disable-cfi /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/pr9951.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/pr9951.ll

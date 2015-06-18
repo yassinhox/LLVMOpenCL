@@ -1,0 +1,9 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple x86_64-apple-darwin10 -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/bitfield-ivar-offsets.m &&
+grep -F '@"OBJC_IVAR_$_I0._b0" = global i64 0, section "__DATA, __objc_ivar", align 8' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp &&
+grep -F '@"OBJC_IVAR_$_I0._b1" = global i64 0, section "__DATA, __objc_ivar", align 8' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp &&
+grep -F '@"OBJC_IVAR_$_I0._b2" = global i64 1, section "__DATA, __objc_ivar", align 8' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp &&
+grep -F '@"OBJC_IVAR_$_I0._x" = global i64 2, section "__DATA, __objc_ivar", align 8' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp &&
+grep -F '@"OBJC_IVAR_$_I0._b3" = global i64 4, section "__DATA, __objc_ivar", align 8' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp &&
+grep -F '@"OBJC_IVAR_$_I0._y" = global i64 6, section "__DATA, __objc_ivar", align 8' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp &&
+grep -F '@"OBJC_IVAR_$_I0._b4" = global i64 7, section "__DATA, __objc_ivar", align 8' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp &&
+grep -F '@"OBJC_IVAR_$_I0." = global' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-ivar-offsets.m.tmp | count 0

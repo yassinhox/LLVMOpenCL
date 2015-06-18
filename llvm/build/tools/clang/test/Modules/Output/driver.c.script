@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/driver.c -### 2>&1 | FileCheck -check-prefix NO_MODULE_CACHE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/driver.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fmodule-cache-path blarg /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/driver.c -### 2>&1 | FileCheck -check-prefix WITH_MODULE_CACHE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/driver.c

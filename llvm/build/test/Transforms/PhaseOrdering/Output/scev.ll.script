@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -O3 -S -analyze -scalar-evolution /home/jazouani/llvm/llvm-3.2/test/Transforms/PhaseOrdering/scev.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/PhaseOrdering/scev.ll

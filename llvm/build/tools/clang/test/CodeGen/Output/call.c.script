@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/call.c -O0 -emit-llvm -S -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/call.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/2007-07-25-DominatedLoop.ll -gvn | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis

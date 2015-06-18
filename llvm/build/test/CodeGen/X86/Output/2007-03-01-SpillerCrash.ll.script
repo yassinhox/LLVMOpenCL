@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2007-03-01-SpillerCrash.ll -mtriple=x86_64-apple-darwin8 -mattr=+sse2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2007-03-01-SpillerCrash.ll -mtriple=x86_64-apple-darwin8 -mattr=+sse2 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep movhlps

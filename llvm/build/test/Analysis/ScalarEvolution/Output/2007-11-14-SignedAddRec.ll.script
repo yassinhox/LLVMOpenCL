@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2007-11-14-SignedAddRec.ll -indvars -S | grep printd | grep 1206807378

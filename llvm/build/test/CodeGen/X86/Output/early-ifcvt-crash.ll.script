@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/early-ifcvt-crash.ll -x86-early-ifcvt -verify-machineinstrs &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/early-ifcvt-crash.ll -x86-early-ifcvt -stress-early-ifcvt -verify-machineinstrs

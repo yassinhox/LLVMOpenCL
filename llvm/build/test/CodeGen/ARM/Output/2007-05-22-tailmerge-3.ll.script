@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2007-05-22-tailmerge-3.ll -march=arm | grep bl.*baz | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2007-05-22-tailmerge-3.ll -march=arm | grep bl.*quux | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2007-05-22-tailmerge-3.ll -march=arm -enable-tail-merge=0 | grep bl.*baz | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2007-05-22-tailmerge-3.ll -march=arm -enable-tail-merge=0 | grep bl.*quux | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

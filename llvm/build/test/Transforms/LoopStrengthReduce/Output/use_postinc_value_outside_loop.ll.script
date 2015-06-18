@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/use_postinc_value_outside_loop.ll -loop-reduce -S |    grep "add i32 %indvar630.ui, 1"

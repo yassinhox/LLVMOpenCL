@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inline-asm-mrv.ll -march=x86-64 | grep movslq &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inline-asm-mrv.ll -march=x86-64 | grep addps &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inline-asm-mrv.ll -march=x86-64 | grep paddd &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/inline-asm-mrv.ll -march=x86-64 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep movq

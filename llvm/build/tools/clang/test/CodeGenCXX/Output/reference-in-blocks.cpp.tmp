@@ -1,0 +1,203 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/reference-in-blocks.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.__block_descriptor = type { i64, i64 }
+%class.A = type { i32, double }
+%struct.__block_byref_tlc = type { i8*, %struct.__block_byref_tlc*, i32, i32, %class.A* }
+%struct.__block_literal_generic = type { i8*, i32, i32, i8*, %struct.__block_descriptor* }
+%struct.__block_byref_tlc.0 = type { i8*, %struct.__block_byref_tlc.0*, i32, i32, %class.A* }
+%class.range = type { i32 }
+
+@_NSConcreteStackBlock = external global i8*
+@.str = private unnamed_addr constant [6 x i8] c"v8@?0\00", align 1
+@__block_descriptor_tmp = internal constant { i64, i64, i8*, i8*, i8*, i8* } { i64 0, i64 40, i8* bitcast (void (i8*, i8*)* @__copy_helper_block_ to i8*), i8* bitcast (void (i8*)* @__destroy_helper_block_ to i8*), i8* getelementptr inbounds ([6 x i8]* @.str, i32 0, i32 0), i8* null }
+@.str1 = private unnamed_addr constant [17 x i8] c"Hello Blocks %d\0A\00", align 1
+@_NSConcreteGlobalBlock = external global i8*
+@.str2 = private unnamed_addr constant [22 x i8] c"v12@?0{range<int>=i}8\00", align 1
+@__block_descriptor_tmp3 = internal constant { i64, i64, i8*, i8* } { i64 0, i64 32, i8* getelementptr inbounds ([22 x i8]* @.str2, i32 0, i32 0), i8* null }
+@__block_literal_global = internal constant { i8**, i32, i32, i8*, %struct.__block_descriptor* } { i8** @_NSConcreteGlobalBlock, i32 1342177280, i32 0, i8* bitcast (void (i8*, i32)* @__main_block_invoke to i8*), %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp3 to %struct.__block_descriptor*) }, align 8
+@.str4 = private unnamed_addr constant [23 x i8] c"v16@?0^{range<int>=i}8\00", align 1
+@__block_descriptor_tmp5 = internal constant { i64, i64, i8*, i8* } { i64 0, i64 32, i8* getelementptr inbounds ([23 x i8]* @.str4, i32 0, i32 0), i8* null }
+@__block_literal_global6 = internal constant { i8**, i32, i32, i8*, %struct.__block_descriptor* } { i8** @_NSConcreteGlobalBlock, i32 1342177280, i32 0, i8* bitcast (void (i8*, %class.range*)* @__main_block_invoke_2 to i8*), %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp5 to %struct.__block_descriptor*) }, align 8
+@.str7 = private unnamed_addr constant [13 x i8] c" field = %d\0A\00", align 1
+@.str8 = private unnamed_addr constant [13 x i8] c" field = %f\0A\00", align 1
+
+define void @_ZN1A1FEv(%class.A* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %class.A*, align 8
+  %tlc = alloca %struct.__block_byref_tlc, align 8
+  %block = alloca <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>, align 8
+  store %class.A* %this, %class.A** %this.addr, align 8
+  %this1 = load %class.A** %this.addr
+  %byref.isa = getelementptr inbounds %struct.__block_byref_tlc* %tlc, i32 0, i32 0
+  store i8* null, i8** %byref.isa
+  %byref.forwarding = getelementptr inbounds %struct.__block_byref_tlc* %tlc, i32 0, i32 1
+  store %struct.__block_byref_tlc* %tlc, %struct.__block_byref_tlc** %byref.forwarding
+  %byref.flags = getelementptr inbounds %struct.__block_byref_tlc* %tlc, i32 0, i32 2
+  store i32 0, i32* %byref.flags
+  %byref.size = getelementptr inbounds %struct.__block_byref_tlc* %tlc, i32 0, i32 3
+  store i32 32, i32* %byref.size
+  %tlc2 = getelementptr inbounds %struct.__block_byref_tlc* %tlc, i32 0, i32 4
+  store %class.A* %this1, %class.A** %tlc2, align 8
+  %block.isa = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 0
+  store i8* bitcast (i8** @_NSConcreteStackBlock to i8*), i8** %block.isa
+  %block.flags = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 1
+  store i32 1107296256, i32* %block.flags
+  %block.reserved = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 2
+  store i32 0, i32* %block.reserved
+  %block.invoke = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 3
+  store i8* bitcast (void (i8*)* @___ZN1A1FEv_block_invoke to i8*), i8** %block.invoke
+  %block.descriptor = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 4
+  store %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8*, i8*, i8* }* @__block_descriptor_tmp to %struct.__block_descriptor*), %struct.__block_descriptor** %block.descriptor
+  %block.captured = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 5
+  %0 = bitcast %struct.__block_byref_tlc* %tlc to i8*
+  store i8* %0, i8** %block.captured
+  %1 = bitcast <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block to void ()*
+  %block.literal = bitcast void ()* %1 to %struct.__block_literal_generic*
+  %2 = getelementptr inbounds %struct.__block_literal_generic* %block.literal, i32 0, i32 3
+  %3 = bitcast %struct.__block_literal_generic* %block.literal to i8*
+  %4 = load i8** %2
+  %5 = bitcast i8* %4 to void (i8*)*
+  call void %5(i8* %3)
+  %6 = bitcast %struct.__block_byref_tlc* %tlc to i8*
+  call void @_Block_object_dispose(i8* %6, i32 8)
+  ret void
+}
+
+define internal void @___ZN1A1FEv_block_invoke(i8* %.block_descriptor) nounwind {
+entry:
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>*
+  %block.capture.addr = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 5
+  %0 = load i8** %block.capture.addr
+  %byref.addr = bitcast i8* %0 to %struct.__block_byref_tlc.0*
+  %byref.forwarding = getelementptr inbounds %struct.__block_byref_tlc.0* %byref.addr, i32 0, i32 1
+  %byref.addr.forwarded = load %struct.__block_byref_tlc.0** %byref.forwarding
+  %tlc = getelementptr inbounds %struct.__block_byref_tlc.0* %byref.addr.forwarded, i32 0, i32 4
+  %ref.tmp = load %class.A** %tlc
+  call void @_ZN1A1SEv(%class.A* %ref.tmp)
+  ret void
+}
+
+define linkonce_odr void @_ZN1A1SEv(%class.A* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %class.A*, align 8
+  store %class.A* %this, %class.A** %this.addr, align 8
+  %this1 = load %class.A** %this.addr
+  %field = getelementptr inbounds %class.A* %this1, i32 0, i32 0
+  %0 = load i32* %field, align 4
+  %call = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([13 x i8]* @.str7, i32 0, i32 0), i32 %0)
+  %d1 = getelementptr inbounds %class.A* %this1, i32 0, i32 1
+  %1 = load double* %d1, align 8
+  %call2 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([13 x i8]* @.str8, i32 0, i32 0), double %1)
+  ret void
+}
+
+define internal void @__copy_helper_block_(i8*, i8*) {
+entry:
+  %.addr = alloca i8*, align 8
+  %.addr1 = alloca i8*, align 8
+  store i8* %0, i8** %.addr, align 8
+  store i8* %1, i8** %.addr1, align 8
+  %2 = load i8** %.addr1
+  %block.source = bitcast i8* %2 to <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>*
+  %3 = load i8** %.addr
+  %block.dest = bitcast i8* %3 to <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>*
+  %4 = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block.source, i32 0, i32 5
+  %5 = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block.dest, i32 0, i32 5
+  %blockcopy.src = load i8** %4
+  %6 = bitcast i8** %5 to i8*
+  call void @_Block_object_assign(i8* %6, i8* %blockcopy.src, i32 8)
+  ret void
+}
+
+declare void @_Block_object_assign(i8*, i8*, i32)
+
+define internal void @__destroy_helper_block_(i8*) {
+entry:
+  %.addr = alloca i8*, align 8
+  store i8* %0, i8** %.addr, align 8
+  %1 = load i8** %.addr
+  %block = bitcast i8* %1 to <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>*
+  %2 = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, i8* }>* %block, i32 0, i32 5
+  %3 = load i8** %2
+  call void @_Block_object_dispose(i8* %3, i32 8)
+  ret void
+}
+
+declare void @_Block_object_dispose(i8*, i32)
+
+define i32 @main() nounwind {
+entry:
+  %retval = alloca i32, align 4
+  %bl = alloca void (i32)*, align 8
+  %bl2 = alloca void (%class.range*)*, align 8
+  %a = alloca %class.A*, align 8
+  store i32 0, i32* %retval
+  store void (i32)* bitcast ({ i8**, i32, i32, i8*, %struct.__block_descriptor* }* @__block_literal_global to void (i32)*), void (i32)** %bl, align 8
+  store void (%class.range*)* bitcast ({ i8**, i32, i32, i8*, %struct.__block_descriptor* }* @__block_literal_global6 to void (%class.range*)*), void (%class.range*)** %bl2, align 8
+  %call = call noalias i8* @_Znwm(i64 16)
+  %0 = bitcast i8* %call to %class.A*
+  call void @_ZN1AC1Ev(%class.A* %0)
+  store %class.A* %0, %class.A** %a, align 8
+  %1 = load %class.A** %a, align 8
+  call void @_ZN1A1FEv(%class.A* %1)
+  ret i32 0
+}
+
+define internal void @__main_block_invoke(i8* %.block_descriptor, i32 %i.coerce) nounwind {
+entry:
+  %i = alloca %class.range, align 4
+  %coerce.dive = getelementptr %class.range* %i, i32 0, i32 0
+  store i32 %i.coerce, i32* %coerce.dive
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor* }>*
+  %call = call i32 @_ZN5rangeIiE3getEv(%class.range* %i)
+  %call1 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([17 x i8]* @.str1, i32 0, i32 0), i32 %call)
+  ret void
+}
+
+declare i32 @printf(i8*, ...)
+
+define linkonce_odr i32 @_ZN5rangeIiE3getEv(%class.range* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %class.range*, align 8
+  store %class.range* %this, %class.range** %this.addr, align 8
+  %this1 = load %class.range** %this.addr
+  %_i = getelementptr inbounds %class.range* %this1, i32 0, i32 0
+  %0 = load i32* %_i, align 4
+  ret i32 %0
+}
+
+define internal void @__main_block_invoke_2(i8* %.block_descriptor, %class.range* %i) nounwind {
+entry:
+  %i.addr = alloca %class.range*, align 8
+  store %class.range* %i, %class.range** %i.addr, align 8
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor* }>*
+  %0 = load %class.range** %i.addr, align 8
+  %call = call i32 @_ZN5rangeIiE3getEv(%class.range* %0)
+  %call1 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([17 x i8]* @.str1, i32 0, i32 0), i32 %call)
+  ret void
+}
+
+declare noalias i8* @_Znwm(i64)
+
+define linkonce_odr void @_ZN1AC1Ev(%class.A* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.A*, align 8
+  store %class.A* %this, %class.A** %this.addr, align 8
+  %this1 = load %class.A** %this.addr
+  call void @_ZN1AC2Ev(%class.A* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1AC2Ev(%class.A* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %class.A*, align 8
+  store %class.A* %this, %class.A** %this.addr, align 8
+  %this1 = load %class.A** %this.addr
+  %field = getelementptr inbounds %class.A* %this1, i32 0, i32 0
+  store i32 10, i32* %field, align 4
+  %d1 = getelementptr inbounds %class.A* %this1, i32 0, i32 1
+  store double 3.140000e+00, double* %d1, align 8
+  ret void
+}

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -jump-threading < /home/jazouani/llvm/llvm-3.2/test/Transforms/JumpThreading/2011-04-14-InfLoop.ll

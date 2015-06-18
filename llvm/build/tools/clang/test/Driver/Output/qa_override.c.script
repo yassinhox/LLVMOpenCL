@@ -1,0 +1,1 @@
+env QA_OVERRIDE_GCC3_OPTIONS="#+-Os +-Oz +-O +-O3 +-Oignore +a +b +c xb Xa Omagic ^-ccc-print-options  "  /home/jazouani/llvm/build/Release+Asserts/bin/clang  x -O2 b -O3 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/qa_override.c

@@ -1,0 +1,20 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/vec_const.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/vec_const.ll -march=cellspu -mattr=large_mem > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp2.s &&
+grep -w il  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep ilhu   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 8 &&
+grep -w ilh /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep iohl   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 7 &&
+grep lqa    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep 24672  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep 16429  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 63572  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep  4660  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 22136  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 43981  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 61202  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 16393  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep  8699  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 21572  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 11544  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 1311768467750121234 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep lqd    /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/vec_const.ll.tmp2.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6

@@ -1,0 +1,2 @@
+# "x86_64-apple-darwin10" - "darwin::Link", inputs: ["/home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-verify-debug.c.tmp.o"], output: "foo"
+clang: warning: argument unused during compilation: '-verify'

@@ -1,0 +1,5 @@
+rm -f /home/jazouani/llvm/build/tools/clang/test/Index/Output/create-tu-fail.c.tmp.c &&
+touch /home/jazouani/llvm/build/tools/clang/test/Index/Output/create-tu-fail.c.tmp.c &&
+c-index-test -write-pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/create-tu-fail.c.tmp.pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/create-tu-fail.c.tmp.c &&
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/create-tu-fail.c /home/jazouani/llvm/build/tools/clang/test/Index/Output/create-tu-fail.c.tmp.c &&
+c-index-test -test-load-tu /home/jazouani/llvm/build/tools/clang/test/Index/Output/create-tu-fail.c.tmp.pch local 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/create-tu-fail.c

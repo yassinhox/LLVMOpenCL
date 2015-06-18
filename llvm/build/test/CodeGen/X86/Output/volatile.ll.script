@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/volatile.ll -march=x86 -mattr=sse2 | grep movsd | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/volatile.ll -march=x86 -mattr=sse2 -O0 | grep -v esp | grep movsd | /home/jazouani/llvm/build/Release+Asserts/bin/count 5

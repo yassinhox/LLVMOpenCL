@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -regalloc=fast -optimize-regalloc=0 -verify-machineinstrs < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-12-FastAllocKills.ll

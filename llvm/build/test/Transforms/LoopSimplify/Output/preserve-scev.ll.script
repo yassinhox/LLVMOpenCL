@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopSimplify/preserve-scev.ll -indvars | /home/jazouani/llvm/build/Release+Asserts/bin/opt -analyze -iv-users | grep "%cmp = icmp slt i32" | grep "= {%\.ph,+,1}<%for.cond>"

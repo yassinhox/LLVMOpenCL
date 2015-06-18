@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-extract -func foo -S < /home/jazouani/llvm/llvm-3.2/test/Other/extract-weak-odr.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/extract-weak-odr.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-extract -delete -func foo -S < /home/jazouani/llvm/llvm-3.2/test/Other/extract-weak-odr.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=DELETE /home/jazouani/llvm/llvm-3.2/test/Other/extract-weak-odr.ll

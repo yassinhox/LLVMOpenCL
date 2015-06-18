@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/setcc-strength-reduce.ll -instcombine -S |     grep -v "icmp eq" | grep -v "icmp ne" | /home/jazouani/llvm/build/Release+Asserts/bin/not grep icmp

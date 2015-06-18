@@ -1,0 +1,1 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/arc-complete.m:4:4 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/arc-complete.m -fobjc-arc -fobjc-nonfragile-abi | FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/arc-complete.m

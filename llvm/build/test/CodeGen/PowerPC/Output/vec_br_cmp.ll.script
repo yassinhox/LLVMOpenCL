@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/vec_br_cmp.ll -march=ppc32 -mcpu=g5 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_br_cmp.ll.tmp &&
+grep vcmpeqfp. /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_br_cmp.ll.tmp &&
+not grep mfcr /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/vec_br_cmp.ll.tmp

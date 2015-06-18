@@ -1,0 +1,34 @@
+	.file	"<stdin>"
+	.text
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+	.cfi_startproc
+# BB#0:                                 # %entry
+	pushq	%rax
+.Ltmp1:
+	.cfi_def_cfa_offset 16
+	data16
+	leaq	i@TLSGD(%rip), %rdi
+	data16
+	data16
+	rex64
+	callq	__tls_get_addr@PLT
+	movl	(%rax), %eax
+	popq	%rdx
+	ret
+.Ltmp2:
+	.size	f, .Ltmp2-f
+	.cfi_endproc
+
+	.type	i,@object               # @i
+	.section	.tdata,"awT",@progbits
+	.globl	i
+	.align	4
+i:
+	.long	15                      # 0xf
+	.size	i, 4
+
+
+	.section	".note.GNU-stack","",@progbits

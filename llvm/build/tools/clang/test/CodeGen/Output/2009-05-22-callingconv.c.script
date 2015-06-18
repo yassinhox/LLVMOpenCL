@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2009-05-22-callingconv.c -emit-llvm -o - -triple i386-unknown-unknown | grep call | grep x86_stdcallcc

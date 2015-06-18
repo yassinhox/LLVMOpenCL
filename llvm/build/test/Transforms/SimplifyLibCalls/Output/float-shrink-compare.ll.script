@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -simplify-libcalls -instcombine /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/float-shrink-compare.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyLibCalls/float-shrink-compare.ll

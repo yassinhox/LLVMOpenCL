@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2010-06-21-LdStMultipleBug.ll -mtriple=armv7-apple-darwin -O3 -mcpu=arm1136jf-s

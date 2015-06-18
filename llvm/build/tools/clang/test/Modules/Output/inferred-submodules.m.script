@@ -1,0 +1,2 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Modules/Output/inferred-submodules.m.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x objective-c -Wauto-import -fmodule-cache-path /home/jazouani/llvm/build/tools/clang/test/Modules/Output/inferred-submodules.m.tmp -fmodules -F /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/Inputs /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/inferred-submodules.m -verify

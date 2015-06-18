@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc /home/jazouani/llvm/llvm-3.2/test/MC/Mips/mips-alu-instructions.s -triple=mipsel-unknown-linux -show-encoding -mcpu=mips32r2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Mips/mips-alu-instructions.s

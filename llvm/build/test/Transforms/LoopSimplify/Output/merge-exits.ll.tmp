@@ -1,0 +1,41 @@
+; ModuleID = '<stdin>'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n32:64"
+
+define float @t(float* %pTmp1, float* %peakWeight, i32 %bandEdgeIndex) nounwind {
+entry:
+  %t0 = load float* %peakWeight, align 4
+  %t11 = add i32 %bandEdgeIndex, -1
+  %t121 = icmp sgt i32 %t11, 0
+  br i1 %t121, label %bb.lr.ph, label %bb3
+
+bb.lr.ph:                                         ; preds = %entry
+  br label %bb
+
+bb:                                               ; preds = %bb.lr.ph, %bb
+  %indvars.iv = phi i64 [ 0, %bb.lr.ph ], [ %indvars.iv.next, %bb ]
+  %distERBhi.04 = phi float [ 0.000000e+00, %bb.lr.ph ], [ %t4, %bb ]
+  %peakCount.02 = phi float [ %t0, %bb.lr.ph ], [ %t9, %bb ]
+  %t2 = getelementptr float* %pTmp1, i64 %indvars.iv
+  %t3 = load float* %t2, align 4
+  %t4 = fadd float %t3, %distERBhi.04
+  %indvars.iv.next = add i64 %indvars.iv, 1
+  %t7 = getelementptr float* %peakWeight, i64 %indvars.iv.next
+  %t8 = load float* %t7, align 4
+  %t9 = fadd float %t8, %peakCount.02
+  %t10 = fcmp olt float %t4, 2.500000e+00
+  %0 = trunc i64 %indvars.iv.next to i32
+  %t12 = icmp sgt i32 %t11, %0
+  %or.cond = and i1 %t10, %t12
+  br i1 %or.cond, label %bb, label %bb1.bb3_crit_edge
+
+bb1.bb3_crit_edge:                                ; preds = %bb
+  %t9.lcssa = phi float [ %t9, %bb ]
+  %t4.lcssa = phi float [ %t4, %bb ]
+  br label %bb3
+
+bb3:                                              ; preds = %bb1.bb3_crit_edge, %entry
+  %distERBhi.0.lcssa = phi float [ %t4.lcssa, %bb1.bb3_crit_edge ], [ 0.000000e+00, %entry ]
+  %peakCount.0.lcssa = phi float [ %t9.lcssa, %bb1.bb3_crit_edge ], [ %t0, %entry ]
+  %t13 = fdiv float %peakCount.0.lcssa, %distERBhi.0.lcssa
+  ret float %t13
+}

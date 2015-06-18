@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2007-05-09-tailmerge-2.ll -march=arm -enable-tail-merge | grep bl.*baz | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2007-05-09-tailmerge-2.ll -march=arm -enable-tail-merge | grep bl.*quux | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

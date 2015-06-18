@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/2002-05-21-InvalidSimplify.ll -sccp -simplifycfg -S |    grep ret

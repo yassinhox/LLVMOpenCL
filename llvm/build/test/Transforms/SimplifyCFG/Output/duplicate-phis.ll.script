@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/duplicate-phis.ll -instcombine -simplifycfg -S | grep " = phi " | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

@@ -1,0 +1,75 @@
+	.file	"<stdin>"
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI0_0:
+	.quad	4596373779694328218     # double 2.000000e-01
+                                        #  (0x3fc999999999999a)
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	movsd	88(%rdi), %xmm12
+	movsd	96(%rdi), %xmm11
+	movsd	104(%rdi), %xmm10
+	movsd	112(%rdi), %xmm3
+	movsd	120(%rdi), %xmm2
+	movsd	(%rdi), %xmm15
+	movsd	8(%rdi), %xmm14
+	xorps	%xmm1, %xmm1
+	movsd	.LCPI0_0(%rip), %xmm0
+	divsd	%xmm0, %xmm14
+	divsd	%xmm1, %xmm15
+	movsd	128(%rdi), %xmm13
+	divsd	%xmm1, %xmm13
+	divsd	%xmm0, %xmm2
+	movsd	%xmm2, -8(%rsp)         # 8-byte Spill
+	divsd	%xmm0, %xmm3
+	movsd	%xmm3, -16(%rsp)        # 8-byte Spill
+	divsd	%xmm0, %xmm10
+	divsd	%xmm0, %xmm11
+	divsd	%xmm0, %xmm12
+	movsd	80(%rdi), %xmm1
+	divsd	%xmm0, %xmm1
+	movsd	72(%rdi), %xmm2
+	divsd	%xmm0, %xmm2
+	movsd	64(%rdi), %xmm3
+	divsd	%xmm0, %xmm3
+	movsd	56(%rdi), %xmm4
+	divsd	%xmm0, %xmm4
+	movsd	48(%rdi), %xmm5
+	divsd	%xmm0, %xmm5
+	movsd	40(%rdi), %xmm6
+	divsd	%xmm0, %xmm6
+	movsd	32(%rdi), %xmm7
+	divsd	%xmm0, %xmm7
+	movsd	24(%rdi), %xmm8
+	divsd	%xmm0, %xmm8
+	movsd	16(%rdi), %xmm9
+	divsd	%xmm0, %xmm9
+	movsd	%xmm15, (%rsi)
+	movsd	%xmm14, 8(%rsi)
+	movsd	%xmm9, 16(%rsi)
+	movsd	%xmm8, 24(%rsi)
+	movsd	%xmm7, 32(%rsi)
+	movsd	%xmm6, 40(%rsi)
+	movsd	%xmm5, 48(%rsi)
+	movsd	%xmm4, 56(%rsi)
+	movsd	%xmm3, 64(%rsi)
+	movsd	%xmm2, 72(%rsi)
+	movsd	%xmm1, 80(%rsi)
+	movsd	%xmm12, 88(%rsi)
+	movsd	%xmm11, 96(%rsi)
+	movsd	%xmm10, 104(%rsi)
+	movsd	-16(%rsp), %xmm0        # 8-byte Reload
+	movsd	%xmm0, 112(%rsi)
+	movsd	-8(%rsp), %xmm0         # 8-byte Reload
+	movsd	%xmm0, 120(%rsi)
+	movsd	%xmm13, 128(%rsi)
+	ret
+.Ltmp0:
+	.size	foo, .Ltmp0-foo
+
+
+	.section	".note.GNU-stack","",@progbits

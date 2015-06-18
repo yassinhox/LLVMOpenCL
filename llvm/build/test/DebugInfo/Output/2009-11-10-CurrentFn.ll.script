@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/DebugInfo/2009-11-10-CurrentFn.ll -o /dev/null

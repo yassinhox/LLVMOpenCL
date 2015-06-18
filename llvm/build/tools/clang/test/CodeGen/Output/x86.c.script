@@ -1,0 +1,9 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/x86.c -triple=i686-pc-linux-gnu -emit-llvm -o - > /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "ax" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "bx" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "cx" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "dx" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "di" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "si" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "st" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1 &&
+grep "st(1)" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/x86.c.tmp1

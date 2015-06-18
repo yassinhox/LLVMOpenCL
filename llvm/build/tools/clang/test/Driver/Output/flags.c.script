@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -### -S -msoft-float /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/flags.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log &&
+grep '"-no-implicit-float"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -### -S -msoft-float -mno-soft-float /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/flags.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log &&
+grep '"-no-implicit-float"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log | count 0 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -### -S -mno-soft-float /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/flags.c -msoft-float 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log &&
+grep '"-no-implicit-float"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target armv7-apple-darwin10 -### -S -mno-implicit-float /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/flags.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log &&
+grep '"-no-implicit-float"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/flags.c.tmp.log | count 1

@@ -1,0 +1,21 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/x86_32-arguments-realign.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:128:128-n8:16:32-S128"
+target triple = "i386-apple-darwin9"
+
+%struct.s0 = type { x86_fp80 }
+
+@f0_g0 = external global x86_fp80
+
+define void @f0(%struct.s0* byval align 4) nounwind {
+entry:
+  %a0 = alloca %struct.s0, align 16
+  %1 = bitcast %struct.s0* %a0 to i8*
+  %2 = bitcast %struct.s0* %0 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %1, i8* %2, i32 16, i32 4, i1 false)
+  %a = getelementptr inbounds %struct.s0* %a0, i32 0, i32 0
+  %3 = load x86_fp80* %a, align 16
+  store x86_fp80 %3, x86_fp80* @f0_g0, align 16
+  ret void
+}
+
+declare void @llvm.memcpy.p0i8.p0i8.i32(i8* nocapture, i8* nocapture, i32, i32, i1) nounwind

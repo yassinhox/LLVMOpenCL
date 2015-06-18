@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/masked-iv.ll -indvars -S > /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/masked-iv.ll.tmp &&
+not grep trunc /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/masked-iv.ll.tmp &&
+grep and /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/masked-iv.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

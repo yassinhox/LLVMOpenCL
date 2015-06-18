@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/stack-overalign.ll -instcombine -S | grep "align 32" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

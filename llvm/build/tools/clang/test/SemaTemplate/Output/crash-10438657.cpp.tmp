@@ -1,0 +1,42 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:5:24: error: use of undeclared identifier 'locale'
+class collate : public locale::facet {
+                       ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:5:32: error: expected class name
+class collate : public locale::facet {
+                               ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:11:14: error: expected class name
+    : public wxObjectRefData {};
+             ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:15:77: error: expected '}'
+        return m_refData && static_cast<wxGDIRefData *>(m_refData)->IsOk(); 
+                                                                            ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:12:79: note: to match this '{'
+  class __attribute__ ((visibility("default"))) wxGDIObject : public wxObject { \
+                                                                              ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:15:76: error: expected ';' after class
+        return m_refData && static_cast<wxGDIRefData *>(m_refData)->IsOk(); 
+                                                                           ^
+                                                                           ;
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:15:77: error: expected '}'
+        return m_refData && static_cast<wxGDIRefData *>(m_refData)->IsOk(); 
+                                                                            ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:5:38: note: to match this '{'
+class collate : public locale::facet {
+                                     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:15:16: error: use of undeclared identifier 'm_refData'
+        return m_refData && static_cast<wxGDIRefData *>(m_refData)->IsOk(); 
+               ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:15:57: error: use of undeclared identifier 'm_refData'
+        return m_refData && static_cast<wxGDIRefData *>(m_refData)->IsOk(); 
+                                                        ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:15:77: error: expected '}'
+        return m_refData && static_cast<wxGDIRefData *>(m_refData)->IsOk(); 
+                                                                            ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:14:33: note: to match this '{'
+      virtual bool IsOk() const {
+                                ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/crash-10438657.cpp:15:77: error: expected ';' after class
+        return m_refData && static_cast<wxGDIRefData *>(m_refData)->IsOk(); 
+                                                                            ^
+                                                                            ;
+10 errors generated.

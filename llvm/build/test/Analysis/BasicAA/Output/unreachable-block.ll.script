@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -basicaa -aa-eval -disable-output < /home/jazouani/llvm/llvm-3.2/test/Analysis/BasicAA/unreachable-block.ll >& /dev/null

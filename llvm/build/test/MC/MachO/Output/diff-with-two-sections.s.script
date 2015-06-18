@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-apple-darwin9 /home/jazouani/llvm/llvm-3.2/test/MC/MachO/diff-with-two-sections.s -filetype=obj -o - | /home/jazouani/llvm/build/Release+Asserts/bin/macho-dump --dump-section-data | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/MachO/diff-with-two-sections.s

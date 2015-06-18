@@ -1,0 +1,20 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/Frames-small.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp1 &&
+not grep "stw r31, -4(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp1 &&
+grep "stwu r1, -16448(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp1 &&
+grep "addi r1, r1, 16448" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/Frames-small.ll -march=ppc32 |  not grep "lwz r31, -4(r1)" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/Frames-small.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -disable-fp-elim    -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp2 &&
+grep "stw r31, -4(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp2 &&
+grep "stwu r1, -16448(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp2 &&
+grep "addi r1, r1, 16448" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp2 &&
+grep "lwz r31, -4(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/Frames-small.ll -march=ppc64 -mtriple=powerpc-apple-darwin8 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp3 &&
+not grep "std r31, -8(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp3 &&
+grep "stdu r1, -16496(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp3 &&
+grep "addi r1, r1, 16496" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp3 &&
+not grep "ld r31, -8(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/Frames-small.ll -march=ppc64 -mtriple=powerpc-apple-darwin8 -disable-fp-elim    -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp4 &&
+grep "std r31, -8(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp4 &&
+grep "stdu r1, -16512(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp4 &&
+grep "addi r1, r1, 16512" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp4 &&
+grep "ld r31, -8(r1)" /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/Frames-small.ll.tmp4

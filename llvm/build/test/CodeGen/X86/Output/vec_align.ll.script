@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_align.ll -mcpu=yonah -relocation-model=static | grep movaps | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

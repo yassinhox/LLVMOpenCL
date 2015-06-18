@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel -mcpu=mips32r2 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/fp-indexed-ls.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/fp-indexed-ls.ll

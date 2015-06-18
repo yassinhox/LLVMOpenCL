@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/2006-06-13-SingleEntryPHI.ll -loop-unswitch -disable-output

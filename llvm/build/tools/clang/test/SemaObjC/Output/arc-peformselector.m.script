@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple x86_64-apple-darwin11 -fsyntax-only -fobjc-arc -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaObjC/arc-peformselector.m

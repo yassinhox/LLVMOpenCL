@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/ga-offset.ll -march=x86 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp &&
+not grep lea /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp &&
+not grep add /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp &&
+grep mov /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/ga-offset.ll -mtriple=x86_64-linux -relocation-model=static > /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp &&
+not grep lea /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp &&
+not grep add /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp &&
+grep mov /home/jazouani/llvm/build/test/CodeGen/X86/Output/ga-offset.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

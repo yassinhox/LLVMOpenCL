@@ -1,0 +1,120 @@
+	.file	"<stdin>"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI0_0:
+	.long	117                     # 0x75
+	.long	117                     # 0x75
+	.long	117                     # 0x75
+	.long	117                     # 0x75
+	.text
+	.globl	a
+	.align	16, 0x90
+	.type	a,@function
+a:                                      # @a
+# BB#0:
+	pmulld	.LCPI0_0, %xmm0
+	ret
+.Ltmp0:
+	.size	a, .Ltmp0-a
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI1_0:
+	.long	117                     # 0x75
+	.long	0                       # 0x0
+	.long	117                     # 0x75
+	.long	0                       # 0x0
+	.text
+	.globl	b
+	.align	16, 0x90
+	.type	b,@function
+b:                                      # @b
+# BB#0:
+	movdqa	.LCPI1_0, %xmm2
+	movdqa	%xmm0, %xmm3
+	pmuludq	%xmm2, %xmm3
+	movdqa	%xmm2, %xmm1
+	psrlq	$32, %xmm1
+	pmuludq	%xmm0, %xmm1
+	psllq	$32, %xmm1
+	paddq	%xmm3, %xmm1
+	psrlq	$32, %xmm0
+	pmuludq	%xmm2, %xmm0
+	psllq	$32, %xmm0
+	paddq	%xmm1, %xmm0
+	ret
+.Ltmp1:
+	.size	b, .Ltmp1-b
+
+	.globl	c
+	.align	16, 0x90
+	.type	c,@function
+c:                                      # @c
+# BB#0:
+	pmulld	%xmm1, %xmm0
+	ret
+.Ltmp2:
+	.size	c, .Ltmp2-c
+
+	.globl	d
+	.align	16, 0x90
+	.type	d,@function
+d:                                      # @d
+# BB#0:
+	movdqa	%xmm0, %xmm2
+	pmuludq	%xmm1, %xmm2
+	movdqa	%xmm1, %xmm3
+	psrlq	$32, %xmm3
+	pmuludq	%xmm0, %xmm3
+	psllq	$32, %xmm3
+	paddq	%xmm3, %xmm2
+	psrlq	$32, %xmm0
+	pmuludq	%xmm1, %xmm0
+	psllq	$32, %xmm0
+	paddq	%xmm2, %xmm0
+	ret
+.Ltmp3:
+	.size	d, .Ltmp3-d
+
+	.globl	e
+	.align	16, 0x90
+	.type	e,@function
+e:                                      # @e
+# BB#0:
+	subl	$28, %esp
+	pmulld	%xmm1, %xmm0
+	movdqa	%xmm0, (%esp)           # 16-byte Spill
+	calll	foo
+	movaps	(%esp), %xmm0           # 16-byte Reload
+	addl	$28, %esp
+	ret
+.Ltmp4:
+	.size	e, .Ltmp4-e
+
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:
+	subl	$28, %esp
+	movdqa	%xmm0, %xmm3
+	pmuludq	%xmm1, %xmm3
+	movdqa	%xmm1, %xmm2
+	psrlq	$32, %xmm2
+	pmuludq	%xmm0, %xmm2
+	psllq	$32, %xmm2
+	paddq	%xmm2, %xmm3
+	psrlq	$32, %xmm0
+	pmuludq	%xmm1, %xmm0
+	psllq	$32, %xmm0
+	paddq	%xmm3, %xmm0
+	movdqa	%xmm0, (%esp)           # 16-byte Spill
+	calll	foo
+	movaps	(%esp), %xmm0           # 16-byte Reload
+	addl	$28, %esp
+	ret
+.Ltmp5:
+	.size	f, .Ltmp5-f
+
+
+	.section	".note.GNU-stack","",@progbits

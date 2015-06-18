@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/eqv-andc-orc-nor.ll -march=ppc32 |    grep eqv | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/eqv-andc-orc-nor.ll -march=ppc32 -mcpu=g5 |    grep andc | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/eqv-andc-orc-nor.ll -march=ppc32 |    grep orc | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/eqv-andc-orc-nor.ll -march=ppc32 -mcpu=g5 |    grep nor | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/eqv-andc-orc-nor.ll -march=ppc32 |    grep nand | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

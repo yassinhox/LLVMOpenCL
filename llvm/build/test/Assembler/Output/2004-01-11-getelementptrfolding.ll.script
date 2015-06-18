@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2004-01-11-getelementptrfolding.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis |    not grep "getelementptr.*getelementptr"

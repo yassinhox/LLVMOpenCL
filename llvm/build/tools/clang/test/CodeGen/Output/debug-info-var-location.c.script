@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -g -fverbose-asm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/debug-info-var-location.c -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/debug-info-var-location.c

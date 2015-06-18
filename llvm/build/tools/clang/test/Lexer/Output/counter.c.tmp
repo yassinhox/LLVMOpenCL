@@ -1,0 +1,24 @@
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Lexer/counter.c"
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Lexer/counter.c" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 153 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Lexer/counter.c" 2
+
+
+
+
+
+
+
+
+A: 0
+
+
+B: foo1;
+
+C: foo2;
+
+D: 3

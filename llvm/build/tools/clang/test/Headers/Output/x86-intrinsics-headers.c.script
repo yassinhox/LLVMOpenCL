@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -ffreestanding /home/jazouani/llvm/llvm-3.2/tools/clang/test/Headers/x86-intrinsics-headers.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -ffreestanding -fno-lax-vector-conversions /home/jazouani/llvm/llvm-3.2/tools/clang/test/Headers/x86-intrinsics-headers.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -ccc-cxx  -fsyntax-only -ffreestanding -x c++ /home/jazouani/llvm/llvm-3.2/tools/clang/test/Headers/x86-intrinsics-headers.c

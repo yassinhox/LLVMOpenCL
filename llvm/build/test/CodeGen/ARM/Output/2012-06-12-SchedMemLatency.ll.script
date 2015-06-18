@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-06-12-SchedMemLatency.ll -o /dev/null "-mtriple=thumbv7-apple-ios" -debug-only=post-RA-sched 2> /home/jazouani/llvm/build/test/CodeGen/ARM/Output/2012-06-12-SchedMemLatency.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-06-12-SchedMemLatency.ll < /home/jazouani/llvm/build/test/CodeGen/ARM/Output/2012-06-12-SchedMemLatency.ll.tmp

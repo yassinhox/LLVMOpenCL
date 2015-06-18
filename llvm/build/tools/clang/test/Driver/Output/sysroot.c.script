@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unk-unk --sysroot=/FOO -### -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/sysroot.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp1 &&
+FileCheck --check-prefix=CHECK-SYSROOTEQ < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/sysroot.c &&
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp2.o &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin10    -isysroot /FOO -### /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp2.o 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp2 &&
+FileCheck --check-prefix=CHECK-APPLE-ISYSROOT < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/sysroot.c &&
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp3.o &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin10    -isysroot /FOO --sysroot=/BAR -### /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp3.o 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp3 &&
+FileCheck --check-prefix=CHECK-APPLE-SYSROOT < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp3 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/sysroot.c

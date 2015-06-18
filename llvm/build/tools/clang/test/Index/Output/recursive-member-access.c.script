@@ -1,0 +1,2 @@
+c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-member-access.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-member-access.c &&
+c-index-test -test-annotate-tokens=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-member-access.c:1:1:124:1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-member-access.c | FileCheck -check-prefix=CHECK-tokens /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/recursive-member-access.c

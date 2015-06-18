@@ -1,0 +1,1 @@
+c-index-test -test-load-source-reparse 3 local /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/invalid-code-rdar10451854.m

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2006-11-30-vector-cast.ll -constprop -S |    grep "i32 -1" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2006-11-30-vector-cast.ll -constprop -S |    not grep zeroinitializer

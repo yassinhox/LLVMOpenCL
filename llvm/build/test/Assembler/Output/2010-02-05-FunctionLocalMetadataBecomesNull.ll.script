@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -std-compile-opts < /home/jazouani/llvm/llvm-3.2/test/Assembler/2010-02-05-FunctionLocalMetadataBecomesNull.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | /home/jazouani/llvm/build/Release+Asserts/bin/not grep badref

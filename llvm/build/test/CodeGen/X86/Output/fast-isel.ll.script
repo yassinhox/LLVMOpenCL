@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fast-isel.ll -fast-isel -fast-isel-abort -verify-machineinstrs -march=x86 -mattr=sse2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/fast-isel.ll -fast-isel -fast-isel-abort -verify-machineinstrs -mtriple=x86_64-apple-darwin10

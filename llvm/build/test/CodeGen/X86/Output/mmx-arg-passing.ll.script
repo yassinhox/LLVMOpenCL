@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/mmx-arg-passing.ll -mtriple=i386-apple-darwin -mattr=+mmx | grep mm0 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/mmx-arg-passing.ll -mtriple=i386-apple-darwin -mattr=+mmx | grep esp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/mmx-arg-passing.ll -mtriple=x86_64-apple-darwin -mattr=+mmx,+sse2 | grep xmm0 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/mmx-arg-passing.ll -mtriple=x86_64-apple-darwin -mattr=+mmx,+sse2 | grep rdi &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/mmx-arg-passing.ll -mtriple=x86_64-apple-darwin -mattr=+mmx,+sse2 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep movups

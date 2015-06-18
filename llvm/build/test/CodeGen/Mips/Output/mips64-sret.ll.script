@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips64el -mcpu=mips64r2 -mattr=n64 -O3 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/mips64-sret.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/mips64-sret.ll

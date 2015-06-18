@@ -1,0 +1,1065 @@
+// CHECK: <invalid loc>:2:9: macro definition=__llvm__
+// CHECK: <invalid loc>:3:9: macro definition=__clang__
+// CHECK: <invalid loc>:4:9: macro definition=__clang_major__
+// CHECK: <invalid loc>:5:9: macro definition=__clang_minor__
+// CHECK: <invalid loc>:6:9: macro definition=__clang_patchlevel__
+// CHECK: <invalid loc>:7:9: macro definition=__clang_version__
+// CHECK: <invalid loc>:8:9: macro definition=__GNUC_MINOR__
+// CHECK: <invalid loc>:9:9: macro definition=__GNUC_PATCHLEVEL__
+// CHECK: <invalid loc>:10:9: macro definition=__GNUC__
+// CHECK: <invalid loc>:11:9: macro definition=__GXX_ABI_VERSION
+// CHECK: <invalid loc>:12:9: macro definition=__ATOMIC_RELAXED
+// CHECK: <invalid loc>:13:9: macro definition=__ATOMIC_CONSUME
+// CHECK: <invalid loc>:14:9: macro definition=__ATOMIC_ACQUIRE
+// CHECK: <invalid loc>:15:9: macro definition=__ATOMIC_RELEASE
+// CHECK: <invalid loc>:16:9: macro definition=__ATOMIC_ACQ_REL
+// CHECK: <invalid loc>:17:9: macro definition=__ATOMIC_SEQ_CST
+// CHECK: <invalid loc>:18:9: macro definition=__PRAGMA_REDEFINE_EXTNAME
+// CHECK: <invalid loc>:19:9: macro definition=__VERSION__
+// CHECK: <invalid loc>:20:9: macro definition=__STRICT_ANSI__
+// CHECK: <invalid loc>:21:9: macro definition=__GXX_EXPERIMENTAL_CXX0X__
+// CHECK: <invalid loc>:22:9: macro definition=__CONSTANT_CFSTRINGS__
+// CHECK: <invalid loc>:23:9: macro definition=__EXCEPTIONS
+// CHECK: <invalid loc>:24:9: macro definition=__GXX_RTTI
+// CHECK: <invalid loc>:25:9: macro definition=__DEPRECATED
+// CHECK: <invalid loc>:26:9: macro definition=__GNUG__
+// CHECK: <invalid loc>:27:9: macro definition=__GXX_WEAK__
+// CHECK: <invalid loc>:28:9: macro definition=__private_extern__
+// CHECK: <invalid loc>:29:9: macro definition=__ORDER_LITTLE_ENDIAN__
+// CHECK: <invalid loc>:30:9: macro definition=__ORDER_BIG_ENDIAN__
+// CHECK: <invalid loc>:31:9: macro definition=__ORDER_PDP_ENDIAN__
+// CHECK: <invalid loc>:32:9: macro definition=__BYTE_ORDER__
+// CHECK: <invalid loc>:33:9: macro definition=_LP64
+// CHECK: <invalid loc>:34:9: macro definition=__LP64__
+// CHECK: <invalid loc>:35:9: macro definition=__CHAR_BIT__
+// CHECK: <invalid loc>:36:9: macro definition=__SCHAR_MAX__
+// CHECK: <invalid loc>:37:9: macro definition=__SHRT_MAX__
+// CHECK: <invalid loc>:38:9: macro definition=__INT_MAX__
+// CHECK: <invalid loc>:39:9: macro definition=__LONG_MAX__
+// CHECK: <invalid loc>:40:9: macro definition=__LONG_LONG_MAX__
+// CHECK: <invalid loc>:41:9: macro definition=__WCHAR_MAX__
+// CHECK: <invalid loc>:42:9: macro definition=__INTMAX_MAX__
+// CHECK: <invalid loc>:43:9: macro definition=__SIZEOF_DOUBLE__
+// CHECK: <invalid loc>:44:9: macro definition=__SIZEOF_FLOAT__
+// CHECK: <invalid loc>:45:9: macro definition=__SIZEOF_INT__
+// CHECK: <invalid loc>:46:9: macro definition=__SIZEOF_LONG__
+// CHECK: <invalid loc>:47:9: macro definition=__SIZEOF_LONG_DOUBLE__
+// CHECK: <invalid loc>:48:9: macro definition=__SIZEOF_LONG_LONG__
+// CHECK: <invalid loc>:49:9: macro definition=__SIZEOF_POINTER__
+// CHECK: <invalid loc>:50:9: macro definition=__SIZEOF_SHORT__
+// CHECK: <invalid loc>:51:9: macro definition=__SIZEOF_PTRDIFF_T__
+// CHECK: <invalid loc>:52:9: macro definition=__SIZEOF_SIZE_T__
+// CHECK: <invalid loc>:53:9: macro definition=__SIZEOF_WCHAR_T__
+// CHECK: <invalid loc>:54:9: macro definition=__SIZEOF_WINT_T__
+// CHECK: <invalid loc>:55:9: macro definition=__INTMAX_TYPE__
+// CHECK: <invalid loc>:56:9: macro definition=__UINTMAX_TYPE__
+// CHECK: <invalid loc>:57:9: macro definition=__INTMAX_WIDTH__
+// CHECK: <invalid loc>:58:9: macro definition=__PTRDIFF_TYPE__
+// CHECK: <invalid loc>:59:9: macro definition=__PTRDIFF_WIDTH__
+// CHECK: <invalid loc>:60:9: macro definition=__INTPTR_TYPE__
+// CHECK: <invalid loc>:61:9: macro definition=__INTPTR_WIDTH__
+// CHECK: <invalid loc>:62:9: macro definition=__SIZE_TYPE__
+// CHECK: <invalid loc>:63:9: macro definition=__SIZE_WIDTH__
+// CHECK: <invalid loc>:64:9: macro definition=__WCHAR_TYPE__
+// CHECK: <invalid loc>:65:9: macro definition=__WCHAR_WIDTH__
+// CHECK: <invalid loc>:66:9: macro definition=__WINT_TYPE__
+// CHECK: <invalid loc>:67:9: macro definition=__WINT_WIDTH__
+// CHECK: <invalid loc>:68:9: macro definition=__SIG_ATOMIC_WIDTH__
+// CHECK: <invalid loc>:69:9: macro definition=__CHAR16_TYPE__
+// CHECK: <invalid loc>:70:9: macro definition=__CHAR32_TYPE__
+// CHECK: <invalid loc>:71:9: macro definition=__FLT_DENORM_MIN__
+// CHECK: <invalid loc>:72:9: macro definition=__FLT_HAS_DENORM__
+// CHECK: <invalid loc>:73:9: macro definition=__FLT_DIG__
+// CHECK: <invalid loc>:74:9: macro definition=__FLT_EPSILON__
+// CHECK: <invalid loc>:75:9: macro definition=__FLT_HAS_INFINITY__
+// CHECK: <invalid loc>:76:9: macro definition=__FLT_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:77:9: macro definition=__FLT_MANT_DIG__
+// CHECK: <invalid loc>:78:9: macro definition=__FLT_MAX_10_EXP__
+// CHECK: <invalid loc>:79:9: macro definition=__FLT_MAX_EXP__
+// CHECK: <invalid loc>:80:9: macro definition=__FLT_MAX__
+// CHECK: <invalid loc>:81:9: macro definition=__FLT_MIN_10_EXP__
+// CHECK: <invalid loc>:82:9: macro definition=__FLT_MIN_EXP__
+// CHECK: <invalid loc>:83:9: macro definition=__FLT_MIN__
+// CHECK: <invalid loc>:84:9: macro definition=__DBL_DENORM_MIN__
+// CHECK: <invalid loc>:85:9: macro definition=__DBL_HAS_DENORM__
+// CHECK: <invalid loc>:86:9: macro definition=__DBL_DIG__
+// CHECK: <invalid loc>:87:9: macro definition=__DBL_EPSILON__
+// CHECK: <invalid loc>:88:9: macro definition=__DBL_HAS_INFINITY__
+// CHECK: <invalid loc>:89:9: macro definition=__DBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:90:9: macro definition=__DBL_MANT_DIG__
+// CHECK: <invalid loc>:91:9: macro definition=__DBL_MAX_10_EXP__
+// CHECK: <invalid loc>:92:9: macro definition=__DBL_MAX_EXP__
+// CHECK: <invalid loc>:93:9: macro definition=__DBL_MAX__
+// CHECK: <invalid loc>:94:9: macro definition=__DBL_MIN_10_EXP__
+// CHECK: <invalid loc>:95:9: macro definition=__DBL_MIN_EXP__
+// CHECK: <invalid loc>:96:9: macro definition=__DBL_MIN__
+// CHECK: <invalid loc>:97:9: macro definition=__LDBL_DENORM_MIN__
+// CHECK: <invalid loc>:98:9: macro definition=__LDBL_HAS_DENORM__
+// CHECK: <invalid loc>:99:9: macro definition=__LDBL_DIG__
+// CHECK: <invalid loc>:100:9: macro definition=__LDBL_EPSILON__
+// CHECK: <invalid loc>:101:9: macro definition=__LDBL_HAS_INFINITY__
+// CHECK: <invalid loc>:102:9: macro definition=__LDBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:103:9: macro definition=__LDBL_MANT_DIG__
+// CHECK: <invalid loc>:104:9: macro definition=__LDBL_MAX_10_EXP__
+// CHECK: <invalid loc>:105:9: macro definition=__LDBL_MAX_EXP__
+// CHECK: <invalid loc>:106:9: macro definition=__LDBL_MAX__
+// CHECK: <invalid loc>:107:9: macro definition=__LDBL_MIN_10_EXP__
+// CHECK: <invalid loc>:108:9: macro definition=__LDBL_MIN_EXP__
+// CHECK: <invalid loc>:109:9: macro definition=__LDBL_MIN__
+// CHECK: <invalid loc>:110:9: macro definition=__POINTER_WIDTH__
+// CHECK: <invalid loc>:111:9: macro definition=__WINT_UNSIGNED__
+// CHECK: <invalid loc>:112:9: macro definition=__INT8_TYPE__
+// CHECK: <invalid loc>:113:9: macro definition=__INT16_TYPE__
+// CHECK: <invalid loc>:114:9: macro definition=__INT32_TYPE__
+// CHECK: <invalid loc>:115:9: macro definition=__INT64_TYPE__
+// CHECK: <invalid loc>:116:9: macro definition=__INT64_C_SUFFIX__
+// CHECK: <invalid loc>:117:9: macro definition=__USER_LABEL_PREFIX__
+// CHECK: <invalid loc>:118:9: macro definition=__FINITE_MATH_ONLY__
+// CHECK: <invalid loc>:119:9: macro definition=__GNUC_GNU_INLINE__
+// CHECK: <invalid loc>:120:9: macro definition=__GCC_ATOMIC_TEST_AND_SET_TRUEVAL
+// CHECK: <invalid loc>:121:9: macro definition=__GCC_ATOMIC_BOOL_LOCK_FREE
+// CHECK: <invalid loc>:122:9: macro definition=__GCC_ATOMIC_CHAR_LOCK_FREE
+// CHECK: <invalid loc>:123:9: macro definition=__GCC_ATOMIC_CHAR16_T_LOCK_FREE
+// CHECK: <invalid loc>:124:9: macro definition=__GCC_ATOMIC_CHAR32_T_LOCK_FREE
+// CHECK: <invalid loc>:125:9: macro definition=__GCC_ATOMIC_WCHAR_T_LOCK_FREE
+// CHECK: <invalid loc>:126:9: macro definition=__GCC_ATOMIC_SHORT_LOCK_FREE
+// CHECK: <invalid loc>:127:9: macro definition=__GCC_ATOMIC_INT_LOCK_FREE
+// CHECK: <invalid loc>:128:9: macro definition=__GCC_ATOMIC_LONG_LOCK_FREE
+// CHECK: <invalid loc>:129:9: macro definition=__GCC_ATOMIC_LLONG_LOCK_FREE
+// CHECK: <invalid loc>:130:9: macro definition=__GCC_ATOMIC_POINTER_LOCK_FREE
+// CHECK: <invalid loc>:131:9: macro definition=__NO_INLINE__
+// CHECK: <invalid loc>:132:9: macro definition=__FLT_EVAL_METHOD__
+// CHECK: <invalid loc>:133:9: macro definition=__FLT_RADIX__
+// CHECK: <invalid loc>:134:9: macro definition=__DECIMAL_DIG__
+// CHECK: <invalid loc>:135:9: macro definition=__amd64__
+// CHECK: <invalid loc>:136:9: macro definition=__amd64
+// CHECK: <invalid loc>:137:9: macro definition=__x86_64
+// CHECK: <invalid loc>:138:9: macro definition=__x86_64__
+// CHECK: <invalid loc>:139:9: macro definition=__k8
+// CHECK: <invalid loc>:140:9: macro definition=__k8__
+// CHECK: <invalid loc>:141:9: macro definition=__tune_k8__
+// CHECK: <invalid loc>:142:9: macro definition=__LITTLE_ENDIAN__
+// CHECK: <invalid loc>:143:9: macro definition=__REGISTER_PREFIX__
+// CHECK: <invalid loc>:144:9: macro definition=__NO_MATH_INLINES
+// CHECK: <invalid loc>:145:9: macro definition=__SSE2__
+// CHECK: <invalid loc>:146:9: macro definition=__SSE2_MATH__
+// CHECK: <invalid loc>:147:9: macro definition=__SSE__
+// CHECK: <invalid loc>:148:9: macro definition=__SSE_MATH__
+// CHECK: <invalid loc>:149:9: macro definition=__MMX__
+// CHECK: <invalid loc>:150:9: macro definition=__unix
+// CHECK: <invalid loc>:151:9: macro definition=__unix__
+// CHECK: <invalid loc>:152:9: macro definition=__linux
+// CHECK: <invalid loc>:153:9: macro definition=__linux__
+// CHECK: <invalid loc>:154:9: macro definition=__gnu_linux__
+// CHECK: <invalid loc>:155:9: macro definition=__ELF__
+// CHECK: <invalid loc>:156:9: macro definition=_GNU_SOURCE
+// CHECK: <invalid loc>:157:9: macro definition=__STDC__
+// CHECK: <invalid loc>:158:9: macro definition=__STDC_HOSTED__
+// CHECK: <invalid loc>:159:9: macro definition=__cplusplus
+// CHECK: annotate-comments.cpp:4:9: macro definition=HEADER Extent=[4:9 - 4:15]
+// CHECK: annotate-comments.cpp:208:9: macro definition=FOO Extent=[208:9 - 208:12]
+// CHECK: <invalid loc>:0:0: TypedefDecl=__int128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=__uint128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=__builtin_va_list:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypeRef=__va_list_tag:0:0
+// CHECK: annotate-comments.cpp:7:6: FunctionDecl=notdoxy1:7:6 Extent=[7:1 - 7:20]
+// CHECK: annotate-comments.cpp:10:6: FunctionDecl=notdoxy2:10:6 Extent=[10:1 - 10:20]
+// CHECK: annotate-comments.cpp:13:6: FunctionDecl=notdoxy3:13:6 Extent=[13:1 - 13:20]
+// CHECK: annotate-comments.cpp:16:6: FunctionDecl=isdoxy4:16:6 RawComment=[/** Doxygen comment.  isdoxy4 IS_DOXYGEN_SINGLE */] RawCommentRange=[15:1 - 15:51] BriefComment=[Doxygen comment. isdoxy4 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy4 IS_DOXYGEN_SINGLE </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="16" column="6"><Name>isdoxy4</Name><USR>c:@F@isdoxy4#</USR><Declaration>void isdoxy4()</Declaration><Abstract><Para> Doxygen comment.  isdoxy4 IS_DOXYGEN_SINGLE </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy4 IS_DOXYGEN_SINGLE ])))] Extent=[16:1 - 16:19]
+// CHECK: annotate-comments.cpp:20:6: FunctionDecl=isdoxy5:20:6 RawComment=[/**\n * Doxygen comment.  isdoxy5 IS_DOXYGEN_SINGLE */] RawCommentRange=[18:1 - 19:50] BriefComment=[Doxygen comment. isdoxy5 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy5 IS_DOXYGEN_SINGLE </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="20" column="6"><Name>isdoxy5</Name><USR>c:@F@isdoxy5#</USR><Declaration>void isdoxy5()</Declaration><Abstract><Para> Doxygen comment.  isdoxy5 IS_DOXYGEN_SINGLE </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy5 IS_DOXYGEN_SINGLE ])))] Extent=[20:1 - 20:19]
+// CHECK: annotate-comments.cpp:25:6: FunctionDecl=isdoxy6:25:6 RawComment=[/**\n * Doxygen comment.\n * isdoxy6 IS_DOXYGEN_SINGLE */] RawCommentRange=[22:1 - 24:32] BriefComment=[Doxygen comment. isdoxy6 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment. isdoxy6 IS_DOXYGEN_SINGLE </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="25" column="6"><Name>isdoxy6</Name><USR>c:@F@isdoxy6#</USR><Declaration>void isdoxy6()</Declaration><Abstract><Para> Doxygen comment. isdoxy6 IS_DOXYGEN_SINGLE </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ isdoxy6 IS_DOXYGEN_SINGLE ])))] Extent=[25:1 - 25:19]
+// CHECK: annotate-comments.cpp:31:6: FunctionDecl=isdoxy7:31:6 RawComment=[/**\n * Doxygen comment.\n * isdoxy7 IS_DOXYGEN_SINGLE\n */] RawCommentRange=[27:1 - 30:4] BriefComment=[Doxygen comment. isdoxy7 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment. isdoxy7 IS_DOXYGEN_SINGLE </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="31" column="6"><Name>isdoxy7</Name><USR>c:@F@isdoxy7#</USR><Declaration>void isdoxy7()</Declaration><Abstract><Para> Doxygen comment. isdoxy7 IS_DOXYGEN_SINGLE </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ isdoxy7 IS_DOXYGEN_SINGLE] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)))] Extent=[31:1 - 31:19]
+// CHECK: annotate-comments.cpp:34:6: FunctionDecl=isdoxy8:34:6 RawComment=[/*! Doxygen comment.  isdoxy8 IS_DOXYGEN_SINGLE */] RawCommentRange=[33:1 - 33:51] BriefComment=[Doxygen comment. isdoxy8 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy8 IS_DOXYGEN_SINGLE </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="34" column="6"><Name>isdoxy8</Name><USR>c:@F@isdoxy8#</USR><Declaration>void isdoxy8()</Declaration><Abstract><Para> Doxygen comment.  isdoxy8 IS_DOXYGEN_SINGLE </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy8 IS_DOXYGEN_SINGLE ])))] Extent=[34:1 - 34:19]
+// CHECK: annotate-comments.cpp:37:6: FunctionDecl=isdoxy9:37:6 RawComment=[/// Doxygen comment.  isdoxy9 IS_DOXYGEN_SINGLE] RawCommentRange=[36:1 - 36:48] BriefComment=[Doxygen comment. isdoxy9 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy9 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="37" column="6"><Name>isdoxy9</Name><USR>c:@F@isdoxy9#</USR><Declaration>void isdoxy9()</Declaration><Abstract><Para> Doxygen comment.  isdoxy9 IS_DOXYGEN_SINGLE</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy9 IS_DOXYGEN_SINGLE])))] Extent=[37:1 - 37:19]
+// CHECK: annotate-comments.cpp:41:6: FunctionDecl=isdoxy10:41:6 RawComment=[/// Doxygen comment.  isdoxy10 IS_DOXYGEN_SINGLE] RawCommentRange=[40:1 - 40:49] BriefComment=[Doxygen comment. isdoxy10 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy10 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="41" column="6"><Name>isdoxy10</Name><USR>c:@F@isdoxy10#</USR><Declaration>void isdoxy10()</Declaration><Abstract><Para> Doxygen comment.  isdoxy10 IS_DOXYGEN_SINGLE</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy10 IS_DOXYGEN_SINGLE])))] Extent=[41:1 - 41:20]
+// CHECK: annotate-comments.cpp:45:6: FunctionDecl=isdoxy11:45:6 RawComment=[/// Doxygen comment.  isdoxy11 IS_DOXYGEN_SINGLE] RawCommentRange=[43:1 - 43:49] BriefComment=[Doxygen comment. isdoxy11 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy11 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="45" column="6"><Name>isdoxy11</Name><USR>c:@F@isdoxy11#</USR><Declaration>void isdoxy11()</Declaration><Abstract><Para> Doxygen comment.  isdoxy11 IS_DOXYGEN_SINGLE</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy11 IS_DOXYGEN_SINGLE])))] Extent=[45:1 - 45:20]
+// CHECK: annotate-comments.cpp:49:6: FunctionDecl=isdoxy12:49:6 RawComment=[/** Doxygen comment.  isdoxy12  IS_DOXYGEN_SINGLE */] RawCommentRange=[47:1 - 47:53] BriefComment=[Doxygen comment. isdoxy12 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy12  IS_DOXYGEN_SINGLE </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="49" column="6"><Name>isdoxy12</Name><USR>c:@F@isdoxy12#</USR><Declaration>void isdoxy12()</Declaration><Abstract><Para> Doxygen comment.  isdoxy12  IS_DOXYGEN_SINGLE </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy12  IS_DOXYGEN_SINGLE ])))] Extent=[49:1 - 49:20]
+// CHECK: annotate-comments.cpp:53:6: FunctionDecl=isdoxy13:53:6 RawComment=[/// Doxygen comment.  isdoxy13 IS_DOXYGEN_START\n/// Doxygen comment.  IS_DOXYGEN_END] RawCommentRange=[51:1 - 52:37] BriefComment=[Doxygen comment. isdoxy13 IS_DOXYGEN_START Doxygen comment. IS_DOXYGEN_END] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy13 IS_DOXYGEN_START Doxygen comment.  IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="53" column="6"><Name>isdoxy13</Name><USR>c:@F@isdoxy13#</USR><Declaration>void isdoxy13()</Declaration><Abstract><Para> Doxygen comment.  isdoxy13 IS_DOXYGEN_START Doxygen comment.  IS_DOXYGEN_END</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy13 IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  IS_DOXYGEN_END])))] Extent=[53:1 - 53:20]
+// CHECK: annotate-comments.cpp:58:6: FunctionDecl=isdoxy14:58:6 RawComment=[/// Doxygen comment.  isdoxy14 IS_DOXYGEN_START\n/// Blah-blah-blah.\n/// Doxygen comment.  IS_DOXYGEN_END] RawCommentRange=[55:1 - 57:37] BriefComment=[Doxygen comment. isdoxy14 IS_DOXYGEN_START Blah-blah-blah. Doxygen comment. IS_DOXYGEN_END] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy14 IS_DOXYGEN_START Blah-blah-blah. Doxygen comment.  IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="58" column="6"><Name>isdoxy14</Name><USR>c:@F@isdoxy14#</USR><Declaration>void isdoxy14()</Declaration><Abstract><Para> Doxygen comment.  isdoxy14 IS_DOXYGEN_START Blah-blah-blah. Doxygen comment.  IS_DOXYGEN_END</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy14 IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Blah-blah-blah.] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  IS_DOXYGEN_END])))] Extent=[58:1 - 58:20]
+// CHECK: annotate-comments.cpp:63:6: FunctionDecl=isdoxy15:63:6 RawComment=[/// Doxygen comment.  isdoxy15 IS_DOXYGEN_START\n/** Blah-blah-blah */\n/// Doxygen comment.  IS_DOXYGEN_END] RawCommentRange=[60:1 - 62:37] BriefComment=[Doxygen comment. isdoxy15 IS_DOXYGEN_START Blah-blah-blah] FullCommentAsHTML=[<p class="para-brief"> Doxygen comment.  isdoxy15 IS_DOXYGEN_START Blah-blah-blah </p><p> Doxygen comment.  IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="63" column="6"><Name>isdoxy15</Name><USR>c:@F@isdoxy15#</USR><Declaration>void isdoxy15()</Declaration><Abstract><Para> Doxygen comment.  isdoxy15 IS_DOXYGEN_START Blah-blah-blah </Para></Abstract><Discussion><Para> Doxygen comment.  IS_DOXYGEN_END</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  isdoxy15 IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Blah-blah-blah ]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  IS_DOXYGEN_END])))] Extent=[63:1 - 63:20]
+// CHECK: annotate-comments.cpp:67:6: FunctionDecl=isdoxy16:67:6 RawComment=[/** Blah-blah-blah. isdoxy16 IS_DOXYGEN_START *//** Blah */\n/// Doxygen comment.  IS_DOXYGEN_END] RawCommentRange=[65:1 - 66:37] BriefComment=[Blah-blah-blah. isdoxy16 IS_DOXYGEN_START] FullCommentAsHTML=[<p class="para-brief"> Blah-blah-blah. isdoxy16 IS_DOXYGEN_START </p><p> Blah </p><p> Doxygen comment.  IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="67" column="6"><Name>isdoxy16</Name><USR>c:@F@isdoxy16#</USR><Declaration>void isdoxy16()</Declaration><Abstract><Para> Blah-blah-blah. isdoxy16 IS_DOXYGEN_START </Para></Abstract><Discussion><Para> Blah </Para><Para> Doxygen comment.  IS_DOXYGEN_END</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Blah-blah-blah. isdoxy16 IS_DOXYGEN_START ]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Blah ]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Doxygen comment.  IS_DOXYGEN_END])))] Extent=[67:1 - 67:20]
+// CHECK: annotate-comments.cpp:72:6: FunctionDecl=isdoxy17:72:6 RawComment=[/// isdoxy17 IS_DOXYGEN_START IS_DOXYGEN_END] RawCommentRange=[71:1 - 71:45] BriefComment=[isdoxy17 IS_DOXYGEN_START IS_DOXYGEN_END] FullCommentAsHTML=[<p class="para-brief"> isdoxy17 IS_DOXYGEN_START IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="72" column="6"><Name>isdoxy17</Name><USR>c:@F@isdoxy17#</USR><Declaration>void isdoxy17()</Declaration><Abstract><Para> isdoxy17 IS_DOXYGEN_START IS_DOXYGEN_END</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy17 IS_DOXYGEN_START IS_DOXYGEN_END])))] Extent=[72:1 - 72:20]
+// CHECK: annotate-comments.cpp:80:5: FunctionDecl=isdoxy18:80:5 RawComment=[/// isdoxy18 IS_DOXYGEN_START IS_DOXYGEN_END] RawCommentRange=[78:1 - 78:45] BriefComment=[isdoxy18 IS_DOXYGEN_START IS_DOXYGEN_END] FullCommentAsHTML=[<p class="para-brief"> isdoxy18 IS_DOXYGEN_START IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="80" column="5"><Name>isdoxy18</Name><USR>c:@F@isdoxy18#</USR><Declaration>unsigned int isdoxy18()</Declaration><Abstract><Para> isdoxy18 IS_DOXYGEN_START IS_DOXYGEN_END</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy18 IS_DOXYGEN_START IS_DOXYGEN_END])))] Extent=[74:1 - 80:19]
+// CHECK: annotate-comments.cpp:90:6: FunctionDecl=isdoxy19:90:6 RawComment=[//! It all starts here. isdoxy19 IS_DOXYGEN_START\n/*! It's a little odd to continue line this,\n *\n * but we need more multi-line comments. */\n/// This comment comes before my other comments\n/** This is a block comment that is associated with the function f. It\n *  runs for three lines.  IS_DOXYGEN_END\n */] RawCommentRange=[82:1 - 89:4] BriefComment=[It all starts here. isdoxy19 IS_DOXYGEN_START It's a little odd to continue line this,] FullCommentAsHTML=[<p class="para-brief"> It all starts here. isdoxy19 IS_DOXYGEN_START It&#39;s a little odd to continue line this,</p><p> but we need more multi-line comments. </p><p> This comment comes before my other comments This is a block comment that is associated with the function f. It  runs for three lines.  IS_DOXYGEN_END </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="90" column="6"><Name>isdoxy19</Name><USR>c:@F@isdoxy19#I#I#</USR><Declaration>void isdoxy19(int, int)</Declaration><Abstract><Para> It all starts here. isdoxy19 IS_DOXYGEN_START It&apos;s a little odd to continue line this,</Para></Abstract><Discussion><Para> but we need more multi-line comments. </Para><Para> This comment comes before my other comments This is a block comment that is associated with the function f. It  runs for three lines.  IS_DOXYGEN_END </Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ It all starts here. isdoxy19 IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ It's a little odd to continue line this,]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ but we need more multi-line comments. ]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ This comment comes before my other comments] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ This is a block comment that is associated with the function f. It] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[  runs for three lines.  IS_DOXYGEN_END] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)))] Extent=[90:1 - 90:24]
+// CHECK: annotate-comments.cpp:90:18: ParmDecl=:90:18 (Definition) Extent=[90:15 - 90:19]
+// CHECK: annotate-comments.cpp:90:23: ParmDecl=:90:23 (Definition) Extent=[90:20 - 90:24]
+// CHECK: annotate-comments.cpp:96:6: FunctionDecl=isdoxy20:96:6 RawComment=[/// This is a BCPL comment.  isdoxy20 IS_DOXYGEN_START\n/// It has only two lines.\n/** But there are other blocks that are part of the comment, too.  IS_DOXYGEN_END */] RawCommentRange=[93:1 - 95:85] BriefComment=[This is a BCPL comment. isdoxy20 IS_DOXYGEN_START It has only two lines. But there are other blocks that are part of the comment, too. IS_DOXYGEN_END] FullCommentAsHTML=[<p class="para-brief"> This is a BCPL comment.  isdoxy20 IS_DOXYGEN_START It has only two lines. But there are other blocks that are part of the comment, too.  IS_DOXYGEN_END </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="96" column="6"><Name>isdoxy20</Name><USR>c:@F@isdoxy20#I#</USR><Declaration>void isdoxy20(int)</Declaration><Abstract><Para> This is a BCPL comment.  isdoxy20 IS_DOXYGEN_START It has only two lines. But there are other blocks that are part of the comment, too.  IS_DOXYGEN_END </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ This is a BCPL comment.  isdoxy20 IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ It has only two lines.] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ But there are other blocks that are part of the comment, too.  IS_DOXYGEN_END ])))] Extent=[96:1 - 96:19]
+// CHECK: annotate-comments.cpp:96:18: ParmDecl=:96:18 (Definition) Extent=[96:15 - 96:19]
+// CHECK: annotate-comments.cpp:98:6: FunctionDecl=notdoxy21:98:6 Extent=[98:1 - 98:20]
+// CHECK: annotate-comments.cpp:98:19: ParmDecl=:98:19 (Definition) Extent=[98:16 - 98:20]
+// CHECK: annotate-comments.cpp:100:6: FunctionDecl=notdoxy22:100:6 Extent=[100:1 - 100:20]
+// CHECK: annotate-comments.cpp:100:19: ParmDecl=:100:19 (Definition) Extent=[100:16 - 100:20]
+// CHECK: annotate-comments.cpp:102:6: FunctionDecl=notdoxy23:102:6 Extent=[102:1 - 102:20]
+// CHECK: annotate-comments.cpp:102:19: ParmDecl=:102:19 (Definition) Extent=[102:16 - 102:20]
+// CHECK: annotate-comments.cpp:104:6: FunctionDecl=notdoxy24:104:6 Extent=[104:1 - 104:20]
+// CHECK: annotate-comments.cpp:104:19: ParmDecl=:104:19 (Definition) Extent=[104:16 - 104:20]
+// CHECK: annotate-comments.cpp:107:8: StructDecl=isdoxy25:107:8 (Definition) RawComment=[/// IS_DOXYGEN_SINGLE] RawCommentRange=[106:1 - 106:22] BriefComment=[IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Class file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="107" column="8"><Name>isdoxy25</Name><USR>c:@S@isdoxy25</USR><Declaration>struct isdoxy25 {\n}</Declaration><Abstract><Para> IS_DOXYGEN_SINGLE</Para></Abstract></Class>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_SINGLE])))] Extent=[107:1 - 108:2]
+// CHECK: annotate-comments.cpp:110:8: StructDecl=test26:110:8 (Definition) Extent=[110:1 - 113:2]
+// CHECK: annotate-comments.cpp:112:7: FieldDecl=isdoxy26:112:7 (Definition) RawComment=[/// IS_DOXYGEN_SINGLE] RawCommentRange=[111:3 - 111:24] BriefComment=[IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="112" column="7"><Name>isdoxy26</Name><USR>c:@S@test26@FI@isdoxy26</USR><Declaration>int isdoxy26</Declaration><Abstract><Para> IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_SINGLE])))] Extent=[112:3 - 112:15]
+// CHECK: annotate-comments.cpp:115:8: StructDecl=test27:115:8 (Definition) Extent=[115:1 - 117:2]
+// CHECK: annotate-comments.cpp:116:7: FieldDecl=isdoxy27:116:7 (Definition) RawComment=[///< IS_DOXYGEN_SINGLE] RawCommentRange=[116:17 - 116:39] BriefComment=[IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="116" column="7"><Name>isdoxy27</Name><USR>c:@S@test27@FI@isdoxy27</USR><Declaration>int isdoxy27</Declaration><Abstract><Para> IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_SINGLE])))] Extent=[116:3 - 116:15]
+// CHECK: annotate-comments.cpp:119:8: StructDecl=notdoxy28:119:8 (Definition) Extent=[119:1 - 120:2]
+// CHECK: annotate-comments.cpp:123:6: EnumDecl=isdoxy29:123:6 (Definition) RawComment=[/// IS_DOXYGEN_SINGLE] RawCommentRange=[122:1 - 122:22] BriefComment=[IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Enum file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="123" column="6"><Name>isdoxy29</Name><USR>c:@E@isdoxy29</USR><Declaration>enum isdoxy29 {\n}</Declaration><Abstract><Para> IS_DOXYGEN_SINGLE</Para></Abstract></Enum>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_SINGLE])))] Extent=[123:1 - 124:2]
+// CHECK: annotate-comments.cpp:126:6: EnumDecl=notdoxy30:126:6 (Definition) Extent=[126:1 - 127:2]
+// CHECK: annotate-comments.cpp:130:11: Namespace=isdoxy31:130:11 (Definition) RawComment=[/// IS_DOXYGEN_SINGLE] RawCommentRange=[129:1 - 129:22] BriefComment=[IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Namespace file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="130" column="11"><Name>isdoxy31</Name><USR>c:@N@isdoxy31</USR><Declaration>namespace isdoxy31 {\n}</Declaration><Abstract><Para> IS_DOXYGEN_SINGLE</Para></Abstract></Namespace>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_SINGLE])))] Extent=[130:1 - 131:2]
+// CHECK: annotate-comments.cpp:133:11: Namespace=notdoxy32:133:11 (Definition) Extent=[133:1 - 134:2]
+// CHECK: annotate-comments.cpp:136:7: ClassDecl=test33:136:7 (Definition) Extent=[136:1 - 149:2]
+// CHECK: annotate-comments.cpp:138:7: FieldDecl=isdoxy33:138:7 (Definition) RawComment=[///< isdoxy33 IS_DOXYGEN_SINGLE] RawCommentRange=[138:17 - 138:48] BriefComment=[isdoxy33 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy33 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="138" column="7"><Name>isdoxy33</Name><USR>c:@C@test33@FI@isdoxy33</USR><Declaration>int isdoxy33</Declaration><Abstract><Para> isdoxy33 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy33 IS_DOXYGEN_SINGLE])))] Extent=[138:3 - 138:15]
+// CHECK: annotate-comments.cpp:139:7: FieldDecl=isdoxy34:139:7 (Definition) RawComment=[///< isdoxy34 IS_DOXYGEN_SINGLE] RawCommentRange=[139:17 - 139:48] BriefComment=[isdoxy34 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy34 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="139" column="7"><Name>isdoxy34</Name><USR>c:@C@test33@FI@isdoxy34</USR><Declaration>int isdoxy34</Declaration><Abstract><Para> isdoxy34 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy34 IS_DOXYGEN_SINGLE])))] Extent=[139:3 - 139:15]
+// CHECK: annotate-comments.cpp:142:7: FieldDecl=isdoxy35:142:7 (Definition) RawComment=[///< isdoxy35 IS_DOXYGEN_SINGLE] RawCommentRange=[142:17 - 142:48] BriefComment=[isdoxy35 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy35 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="142" column="7"><Name>isdoxy35</Name><USR>c:@C@test33@FI@isdoxy35</USR><Declaration>int isdoxy35</Declaration><Abstract><Para> isdoxy35 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy35 IS_DOXYGEN_SINGLE])))] Extent=[142:3 - 142:15]
+// CHECK: annotate-comments.cpp:143:7: FieldDecl=isdoxy36:143:7 (Definition) RawComment=[///< isdoxy36 IS_DOXYGEN_SINGLE] RawCommentRange=[143:17 - 143:48] BriefComment=[isdoxy36 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy36 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="143" column="7"><Name>isdoxy36</Name><USR>c:@C@test33@FI@isdoxy36</USR><Declaration>int isdoxy36</Declaration><Abstract><Para> isdoxy36 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy36 IS_DOXYGEN_SINGLE])))] Extent=[142:3 - 143:15]
+// CHECK: annotate-comments.cpp:146:7: FieldDecl=isdoxy37:146:7 (Definition) RawComment=[///< isdoxy37 IS_DOXYGEN_SINGLE] RawCommentRange=[146:17 - 146:48] BriefComment=[isdoxy37 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy37 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="146" column="7"><Name>isdoxy37</Name><USR>c:@C@test33@FI@isdoxy37</USR><Declaration>int isdoxy37</Declaration><Abstract><Para> isdoxy37 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy37 IS_DOXYGEN_SINGLE])))] Extent=[146:3 - 146:15]
+// CHECK: annotate-comments.cpp:147:7: FieldDecl=isdoxy38:147:7 (Definition) RawComment=[///< isdoxy38 IS_DOXYGEN_SINGLE] RawCommentRange=[147:17 - 147:48] BriefComment=[isdoxy38 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy38 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="147" column="7"><Name>isdoxy38</Name><USR>c:@C@test33@FI@isdoxy38</USR><Declaration>int isdoxy38</Declaration><Abstract><Para> isdoxy38 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy38 IS_DOXYGEN_SINGLE])))] Extent=[146:3 - 147:15]
+// CHECK: annotate-comments.cpp:148:7: FieldDecl=isdoxy39:148:7 (Definition) RawComment=[///< isdoxy39 IS_DOXYGEN_SINGLE] RawCommentRange=[148:17 - 148:48] BriefComment=[isdoxy39 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy39 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="148" column="7"><Name>isdoxy39</Name><USR>c:@C@test33@FI@isdoxy39</USR><Declaration>int isdoxy39</Declaration><Abstract><Para> isdoxy39 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy39 IS_DOXYGEN_SINGLE])))] Extent=[146:3 - 148:15]
+// CHECK: annotate-comments.cpp:155:6: FunctionDecl=isdoxy40:155:6 RawComment=[/// isdoxy40 IS_DOXYGEN_SINGLE] RawCommentRange=[153:1 - 153:31] BriefComment=[isdoxy40 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy40 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="155" column="6"><Name>isdoxy40</Name><USR>c:@F@isdoxy40#I#</USR><Declaration>void isdoxy40(int)</Declaration><Abstract><Para> isdoxy40 IS_DOXYGEN_SINGLE</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy40 IS_DOXYGEN_SINGLE])))] Extent=[155:1 - 155:19]
+// CHECK: annotate-comments.cpp:155:18: ParmDecl=:155:18 (Definition) Extent=[155:15 - 155:19]
+// CHECK: annotate-comments.cpp:160:5: FunctionDecl=isdoxy41:160:5 RawComment=[/// isdoxy41 IS_DOXYGEN_SINGLE] RawCommentRange=[158:1 - 158:31] BriefComment=[isdoxy41 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy41 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="160" column="5"><Name>isdoxy41</Name><USR>c:@F@isdoxy41#I#</USR><Declaration>unsigned int isdoxy41(int)</Declaration><Abstract><Para> isdoxy41 IS_DOXYGEN_SINGLE</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy41 IS_DOXYGEN_SINGLE])))] Extent=[157:1 - 160:18]
+// CHECK: annotate-comments.cpp:160:17: ParmDecl=:160:17 (Definition) Extent=[160:14 - 160:18]
+// CHECK: annotate-comments.cpp:162:7: ClassDecl=test42:162:7 (Definition) Extent=[162:1 - 164:2]
+// CHECK: annotate-comments.cpp:163:7: FieldDecl=isdoxy42:163:7 (Definition) RawComment=[///< isdoxy42 IS_DOXYGEN_SINGLE] RawCommentRange=[163:35 - 163:66] BriefComment=[isdoxy42 IS_DOXYGEN_SINGLE] FullCommentAsHTML=[<p class="para-brief"> isdoxy42 IS_DOXYGEN_SINGLE</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="163" column="7"><Name>isdoxy42</Name><USR>c:@C@test42@FI@isdoxy42</USR><Declaration>int isdoxy42</Declaration><Abstract><Para> isdoxy42 IS_DOXYGEN_SINGLE</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ isdoxy42 IS_DOXYGEN_SINGLE])))] Extent=[163:3 - 163:15]
+// CHECK: annotate-comments.cpp:176:6: FunctionDecl=isdoxy43:176:6 RawComment=[/// IS_DOXYGEN_START\n/// It is fine to have a command at the end of comment.\n///\brief\n///\n/// Some malformed command.\n/** \*/\n/**\n * \brief Aaa aaaaaaa aaaa.\n * IS_DOXYGEN_END\n */] RawCommentRange=[166:1 - 175:4] FullCommentAsHTML=[<p class="para-brief"></p><p> IS_DOXYGEN_START It is fine to have a command at the end of comment.</p><p> Some malformed command. \</p><p class="para-brief"> Aaa aaaaaaa aaaa. IS_DOXYGEN_END </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="176" column="6"><Name>isdoxy43</Name><USR>c:@F@isdoxy43#</USR><Declaration>void isdoxy43()</Declaration><Abstract></Abstract><Discussion><Para> IS_DOXYGEN_START It is fine to have a command at the end of comment.</Para><Para> Some malformed command. \</Para><Para> Aaa aaaaaaa aaaa. IS_DOXYGEN_END </Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ It is fine to have a command at the end of comment.] HasTrailingNewline))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph IsWhitespace))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Some malformed command.] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[\]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa aaaaaaa aaaa.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ IS_DOXYGEN_END] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace))))] Extent=[176:1 - 176:20]
+// CHECK: annotate-comments.cpp:185:6: FunctionDecl=isdoxy44:185:6 RawComment=[/// IS_DOXYGEN_START Aaa bbb\n/// ccc.\n///\n/// Ddd eee.\n/// Fff.\n///\n/// Ggg. IS_DOXYGEN_END] RawCommentRange=[178:1 - 184:24] BriefComment=[IS_DOXYGEN_START Aaa bbb ccc.] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_START Aaa bbb ccc.</p><p> Ddd eee. Fff.</p><p> Ggg. IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="185" column="6"><Name>isdoxy44</Name><USR>c:@F@isdoxy44#</USR><Declaration>void isdoxy44()</Declaration><Abstract><Para> IS_DOXYGEN_START Aaa bbb ccc.</Para></Abstract><Discussion><Para> Ddd eee. Fff.</Para><Para> Ggg. IS_DOXYGEN_END</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_START Aaa bbb] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ccc.]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Ddd eee.] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Fff.]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Ggg. IS_DOXYGEN_END])))] Extent=[185:1 - 185:20]
+// CHECK: annotate-comments.cpp:195:6: FunctionDecl=isdoxy45:195:6 RawComment=[/// IS_DOXYGEN_START Aaa bbb\n/// ccc.\n///\n/// \brief\n/// Ddd eee.\n/// Fff.\n///\n/// Ggg. IS_DOXYGEN_END] RawCommentRange=[187:1 - 194:24] BriefComment=[Ddd eee. Fff.] FullCommentAsHTML=[<p class="para-brief"> Ddd eee. Fff.</p><p> IS_DOXYGEN_START Aaa bbb ccc.</p><p> Ggg. IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="195" column="6"><Name>isdoxy45</Name><USR>c:@F@isdoxy45#</USR><Declaration>void isdoxy45()</Declaration><Abstract><Para> Ddd eee. Fff.</Para></Abstract><Discussion><Para> IS_DOXYGEN_START Aaa bbb ccc.</Para><Para> Ggg. IS_DOXYGEN_END</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_START Aaa bbb] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ccc.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ddd eee.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ Fff.])))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Ggg. IS_DOXYGEN_END])))] Extent=[195:1 - 195:20]
+// CHECK: annotate-comments.cpp:205:6: FunctionDecl=isdoxy46:205:6 RawComment=[/// IS_DOXYGEN_START Aaa bbb\n/// ccc.\n///\n/// \short\n/// Ddd eee.\n/// Fff.\n///\n/// Ggg. IS_DOXYGEN_END] RawCommentRange=[197:1 - 204:24] BriefComment=[Ddd eee. Fff.] FullCommentAsHTML=[<p class="para-brief"> Ddd eee. Fff.</p><p> IS_DOXYGEN_START Aaa bbb ccc.</p><p> Ggg. IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="205" column="6"><Name>isdoxy46</Name><USR>c:@F@isdoxy46#</USR><Declaration>void isdoxy46()</Declaration><Abstract><Para> Ddd eee. Fff.</Para></Abstract><Discussion><Para> IS_DOXYGEN_START Aaa bbb ccc.</Para><Para> Ggg. IS_DOXYGEN_END</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_START Aaa bbb] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ccc.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[short]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ddd eee.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ Fff.])))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Ggg. IS_DOXYGEN_END])))] Extent=[205:1 - 205:20]
+// CHECK: annotate-comments.cpp:209:6: FunctionDecl=notdoxy47:209:6 Extent=[209:1 - 209:21]
+// CHECK: annotate-comments.cpp:214:6: FunctionDecl=isdoxy48:214:6 RawComment=[/// IS_DOXYGEN_START Aaa bbb\n/// \param ccc\n/// \returns ddd IS_DOXYGEN_END] RawCommentRange=[211:1 - 213:32] BriefComment=[IS_DOXYGEN_START Aaa bbb] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_START Aaa bbb </p><p class="para-returns"><span class="word-returns">Returns</span>  ddd IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="214" column="6"><Name>isdoxy48</Name><USR>c:@F@isdoxy48#I#</USR><Declaration>void isdoxy48(int)</Declaration><Abstract><Para> IS_DOXYGEN_START Aaa bbb </Para></Abstract><ResultDiscussion><Para> ddd IS_DOXYGEN_END</Para></ResultDiscussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ IS_DOXYGEN_START Aaa bbb] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[ccc] ParamIndex=Invalid
+// CHECK:         (CXComment_Paragraph IsWhitespace
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ ddd IS_DOXYGEN_END]))))] Extent=[214:1 - 214:19]
+// CHECK: annotate-comments.cpp:214:18: ParmDecl=:214:18 (Definition) Extent=[214:15 - 214:19]
+// CHECK: annotate-comments.cpp:218:6: FunctionDecl=isdoxy49:218:6 RawComment=[/// \brief IS_DOXYGEN_START Aaa\n/// \returns bbb IS_DOXYGEN_END] RawCommentRange=[216:1 - 217:32] BriefComment=[IS_DOXYGEN_START Aaa] FullCommentAsHTML=[<p class="para-brief"> IS_DOXYGEN_START Aaa </p><p class="para-returns"><span class="word-returns">Returns</span>  bbb IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="218" column="6"><Name>isdoxy49</Name><USR>c:@F@isdoxy49#</USR><Declaration>void isdoxy49()</Declaration><Abstract><Para> IS_DOXYGEN_START Aaa </Para></Abstract><ResultDiscussion><Para> bbb IS_DOXYGEN_END</Para></ResultDiscussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ IS_DOXYGEN_START Aaa] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ bbb IS_DOXYGEN_END]))))] Extent=[218:1 - 218:20]
+// CHECK: annotate-comments.cpp:222:6: FunctionDecl=isdoxy50:222:6 RawComment=[/// \param ccc IS_DOXYGEN_START\n/// \returns ddd IS_DOXYGEN_END] RawCommentRange=[220:1 - 221:32] BriefComment=[Returns ddd IS_DOXYGEN_END] FullCommentAsHTML=[<dl><dt class="param-name-index-invalid">ccc</dt><dd class="param-descr-index-invalid"> IS_DOXYGEN_START </dd></dl><p class="para-returns"><span class="word-returns">Returns</span>  ddd IS_DOXYGEN_END</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="222" column="6"><Name>isdoxy50</Name><USR>c:@F@isdoxy50#I#</USR><Declaration>void isdoxy50(int)</Declaration><Parameters><Parameter><Name>ccc</Name><Direction isExplicit="0">in</Direction><Discussion><Para> IS_DOXYGEN_START </Para></Discussion></Parameter></Parameters><ResultDiscussion><Para> ddd IS_DOXYGEN_END</Para></ResultDiscussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[ccc] ParamIndex=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ ddd IS_DOXYGEN_END]))))] Extent=[222:1 - 222:19]
+// CHECK: annotate-comments.cpp:222:18: ParmDecl=:222:18 (Definition) Extent=[222:15 - 222:19]
+// CHECK: annotate-comments.cpp:231:6: FunctionDecl=isdoxy51:231:6 RawComment=[/**\n * Aaa. IS_DOXYGEN_START\n * \n * Bbb. IS_DOXYGEN_END\n */] RawCommentRange=[226:1 - 230:4] BriefComment=[Aaa. IS_DOXYGEN_START] FullCommentAsHTML=[<p class="para-brief"> Aaa. IS_DOXYGEN_START  Bbb. IS_DOXYGEN_END </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="231" column="6"><Name>isdoxy51</Name><USR>c:@F@isdoxy51#I#</USR><Declaration>void isdoxy51(int)</Declaration><Abstract><Para> Aaa. IS_DOXYGEN_START  Bbb. IS_DOXYGEN_END </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa. IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Bbb. IS_DOXYGEN_END] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)))] Extent=[231:1 - 231:19]
+// CHECK: annotate-comments.cpp:231:18: ParmDecl=:231:18 (Definition) Extent=[231:15 - 231:19]
+// CHECK: annotate-comments.cpp:241:6: FunctionDecl=isdoxy52:241:6 RawComment=[/**\n * Aaa. IS_DOXYGEN_START\n * Bbb.\n *  \n * Ccc. IS_DOXYGEN_END\n */] RawCommentRange=[235:1 - 240:4] BriefComment=[Aaa. IS_DOXYGEN_START Bbb.] FullCommentAsHTML=[<p class="para-brief"> Aaa. IS_DOXYGEN_START Bbb.   Ccc. IS_DOXYGEN_END </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="241" column="6"><Name>isdoxy52</Name><USR>c:@F@isdoxy52#I#</USR><Declaration>void isdoxy52(int)</Declaration><Abstract><Para> Aaa. IS_DOXYGEN_START Bbb.   Ccc. IS_DOXYGEN_END </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa. IS_DOXYGEN_START] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Bbb.] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[  ] IsWhitespace HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ Ccc. IS_DOXYGEN_END] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)))] Extent=[241:1 - 241:19]
+// CHECK: annotate-comments.cpp:241:18: ParmDecl=:241:18 (Definition) Extent=[241:15 - 241:19]
+// CHECK: annotate-comments.cpp:248:6: FunctionDecl=isdoxy53:248:6 RawComment=[/**\n * \fn isdoxy53\n *\n * Aaa. IS_DOXYGEN_START IS_DOXYGEN_END\n */] RawCommentRange=[243:1 - 247:4] BriefComment=[Aaa. IS_DOXYGEN_START IS_DOXYGEN_END] FullCommentAsHTML=[<p class="para-brief"> Aaa. IS_DOXYGEN_START IS_DOXYGEN_END </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="248" column="6"><Name>isdoxy53</Name><USR>c:@F@isdoxy53#I#</USR><Declaration>void isdoxy53(int)</Declaration><Abstract><Para> Aaa. IS_DOXYGEN_START IS_DOXYGEN_END </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_VerbatimLine Text=[ isdoxy53])
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa. IS_DOXYGEN_START IS_DOXYGEN_END] HasTrailingNewline)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)))] Extent=[248:1 - 248:19]
+// CHECK: annotate-comments.cpp:248:18: ParmDecl=:248:18 (Definition) Extent=[248:15 - 248:19]
+// CHECK: annotate-comments.cpp:251:6: FunctionDecl=comment_to_html_conversion_1:251:6 RawComment=[/// Aaa.] RawCommentRange=[250:1 - 250:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="251" column="6"><Name>comment_to_html_conversion_1</Name><USR>c:@F@comment_to_html_conversion_1#</USR><Declaration>void comment_to_html_conversion_1()</Declaration><Abstract><Para> Aaa.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[251:1 - 251:36]
+// CHECK: annotate-comments.cpp:254:6: FunctionDecl=comment_to_html_conversion_2:254:6 RawComment=[/// \brief Aaa.] RawCommentRange=[253:1 - 253:16] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="254" column="6"><Name>comment_to_html_conversion_2</Name><USR>c:@F@comment_to_html_conversion_2#</USR><Declaration>void comment_to_html_conversion_2()</Declaration><Abstract><Para> Aaa.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.]))))] Extent=[254:1 - 254:36]
+// CHECK: annotate-comments.cpp:257:6: FunctionDecl=comment_to_html_conversion_3:257:6 RawComment=[/// \short Aaa.] RawCommentRange=[256:1 - 256:16] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="257" column="6"><Name>comment_to_html_conversion_3</Name><USR>c:@F@comment_to_html_conversion_3#</USR><Declaration>void comment_to_html_conversion_3()</Declaration><Abstract><Para> Aaa.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[short]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.]))))] Extent=[257:1 - 257:36]
+// CHECK: annotate-comments.cpp:262:6: FunctionDecl=comment_to_html_conversion_4:262:6 RawComment=[/// Aaa.\n///\n/// \brief Bbb.] RawCommentRange=[259:1 - 261:16] BriefComment=[Bbb.] FullCommentAsHTML=[<p class="para-brief"> Bbb.</p><p> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="262" column="6"><Name>comment_to_html_conversion_4</Name><USR>c:@F@comment_to_html_conversion_4#</USR><Declaration>void comment_to_html_conversion_4()</Declaration><Abstract><Para> Bbb.</Para></Abstract><Discussion><Para> Aaa.</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.]))))] Extent=[262:1 - 262:36]
+// CHECK: annotate-comments.cpp:269:6: FunctionDecl=comment_to_html_conversion_5:269:6 RawComment=[/// Aaa.\n///\n/// \brief Bbb.\n///\n/// Ccc.] RawCommentRange=[264:1 - 268:9] BriefComment=[Bbb.] FullCommentAsHTML=[<p class="para-brief"> Bbb.</p><p> Aaa.</p><p> Ccc.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="269" column="6"><Name>comment_to_html_conversion_5</Name><USR>c:@F@comment_to_html_conversion_5#</USR><Declaration>void comment_to_html_conversion_5()</Declaration><Abstract><Para> Bbb.</Para></Abstract><Discussion><Para> Aaa.</Para><Para> Ccc.</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.])))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Ccc.])))] Extent=[269:1 - 269:36]
+// CHECK: annotate-comments.cpp:273:6: FunctionDecl=comment_to_html_conversion_6:273:6 RawComment=[/// \brief Aaa.\n/// \brief Bbb.] RawCommentRange=[271:1 - 272:16] BriefComment=[Bbb.] FullCommentAsHTML=[<p class="para-brief"> Aaa. </p><p class="para-brief"> Bbb.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="273" column="6"><Name>comment_to_html_conversion_6</Name><USR>c:@F@comment_to_html_conversion_6#</USR><Declaration>void comment_to_html_conversion_6()</Declaration><Abstract><Para> Aaa. </Para></Abstract><Discussion><Para> Bbb.</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.]))))] Extent=[273:1 - 273:36]
+// CHECK: annotate-comments.cpp:278:6: FunctionDecl=comment_to_html_conversion_7:278:6 RawComment=[/// Aaa.\n///\n/// \return Bbb.] RawCommentRange=[275:1 - 277:17] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p><p class="para-returns"><span class="word-returns">Returns</span>  Bbb.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="278" column="6"><Name>comment_to_html_conversion_7</Name><USR>c:@F@comment_to_html_conversion_7#</USR><Declaration>void comment_to_html_conversion_7()</Declaration><Abstract><Para> Aaa.</Para></Abstract><ResultDiscussion><Para> Bbb.</Para></ResultDiscussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[return]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.]))))] Extent=[278:1 - 278:36]
+// CHECK: annotate-comments.cpp:283:6: FunctionDecl=comment_to_html_conversion_8:283:6 RawComment=[/// Aaa.\n///\n/// \returns Bbb.] RawCommentRange=[280:1 - 282:18] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p><p class="para-returns"><span class="word-returns">Returns</span>  Bbb.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="283" column="6"><Name>comment_to_html_conversion_8</Name><USR>c:@F@comment_to_html_conversion_8#</USR><Declaration>void comment_to_html_conversion_8()</Declaration><Abstract><Para> Aaa.</Para></Abstract><ResultDiscussion><Para> Bbb.</Para></ResultDiscussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.]))))] Extent=[283:1 - 283:36]
+// CHECK: annotate-comments.cpp:288:6: FunctionDecl=comment_to_html_conversion_9:288:6 RawComment=[/// Aaa.\n///\n/// \result Bbb.] RawCommentRange=[285:1 - 287:17] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p><p class="para-returns"><span class="word-returns">Returns</span>  Bbb.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="288" column="6"><Name>comment_to_html_conversion_9</Name><USR>c:@F@comment_to_html_conversion_9#</USR><Declaration>void comment_to_html_conversion_9()</Declaration><Abstract><Para> Aaa.</Para></Abstract><ResultDiscussion><Para> Bbb.</Para></ResultDiscussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[result]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.]))))] Extent=[288:1 - 288:36]
+// CHECK: annotate-comments.cpp:292:6: FunctionDecl=comment_to_html_conversion_10:292:6 RawComment=[/// \returns Aaa.\n/// \returns Bbb.] RawCommentRange=[290:1 - 291:18] BriefComment=[Returns Aaa. Returns Bbb.] FullCommentAsHTML=[<p class="para-returns"><span class="word-returns">Returns</span>  Bbb.</p><p class="para-returns"><span class="word-returns">Returns</span>  Aaa. </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="292" column="6"><Name>comment_to_html_conversion_10</Name><USR>c:@F@comment_to_html_conversion_10#</USR><Declaration>void comment_to_html_conversion_10()</Declaration><ResultDiscussion><Para> Aaa. </Para></ResultDiscussion><Discussion><Para> Bbb.</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.]))))] Extent=[292:1 - 292:37]
+// CHECK: annotate-comments.cpp:299:6: FunctionDecl=comment_to_html_conversion_11:299:6 RawComment=[/// Aaa.\n///\n/// Bbb.\n///\n/// \returns Ccc.] RawCommentRange=[294:1 - 298:18] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p><p> Bbb.</p><p class="para-returns"><span class="word-returns">Returns</span>  Ccc.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="299" column="6"><Name>comment_to_html_conversion_11</Name><USR>c:@F@comment_to_html_conversion_11#</USR><Declaration>void comment_to_html_conversion_11()</Declaration><Abstract><Para> Aaa.</Para></Abstract><ResultDiscussion><Para> Ccc.</Para></ResultDiscussion><Discussion><Para> Bbb.</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.]))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Bbb.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc.]))))] Extent=[299:1 - 299:37]
+// CHECK: annotate-comments.cpp:302:6: FunctionDecl=comment_to_html_conversion_12:302:6 RawComment=[/// \param] RawCommentRange=[301:1 - 301:11] FullCommentAsHTML=[] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="302" column="6"><Name>comment_to_html_conversion_12</Name><USR>c:@F@comment_to_html_conversion_12#I#</USR><Declaration>void comment_to_html_conversion_12(int x1)</Declaration></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[] ParamIndex=Invalid
+// CHECK:         (CXComment_Paragraph IsWhitespace)))] Extent=[302:1 - 302:43]
+// CHECK: annotate-comments.cpp:302:40: ParmDecl=x1:302:40 (Definition) Extent=[302:36 - 302:42]
+// CHECK: annotate-comments.cpp:305:6: FunctionDecl=comment_to_html_conversion_13:305:6 RawComment=[/// \param x1 Aaa.] RawCommentRange=[304:1 - 304:19] FullCommentAsHTML=[<dl><dt class="param-name-index-0">x1</dt><dd class="param-descr-index-0"> Aaa.</dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="305" column="6"><Name>comment_to_html_conversion_13</Name><USR>c:@F@comment_to_html_conversion_13#I#</USR><Declaration>void comment_to_html_conversion_13(int x1)</Declaration><Parameters><Parameter><Name>x1</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Aaa.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[x1] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.]))))] Extent=[305:1 - 305:43]
+// CHECK: annotate-comments.cpp:305:40: ParmDecl=x1:305:40 (Definition) Extent=[305:36 - 305:42]
+// CHECK: annotate-comments.cpp:308:6: FunctionDecl=comment_to_html_conversion_14:308:6 RawComment=[/// \param zzz Aaa.] RawCommentRange=[307:1 - 307:20] FullCommentAsHTML=[<dl><dt class="param-name-index-invalid">zzz</dt><dd class="param-descr-index-invalid"> Aaa.</dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="308" column="6"><Name>comment_to_html_conversion_14</Name><USR>c:@F@comment_to_html_conversion_14#I#</USR><Declaration>void comment_to_html_conversion_14(int x1)</Declaration><Parameters><Parameter><Name>zzz</Name><Direction isExplicit="0">in</Direction><Discussion><Para> Aaa.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[zzz] ParamIndex=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.]))))] Extent=[308:1 - 308:43]
+// CHECK: annotate-comments.cpp:308:40: ParmDecl=x1:308:40 (Definition) Extent=[308:36 - 308:42]
+// CHECK: annotate-comments.cpp:312:6: FunctionDecl=comment_to_html_conversion_15:312:6 RawComment=[/// \param x2 Bbb.\n/// \param x1 Aaa.] RawCommentRange=[310:1 - 311:19] FullCommentAsHTML=[<dl><dt class="param-name-index-0">x1</dt><dd class="param-descr-index-0"> Aaa.</dd><dt class="param-name-index-1">x2</dt><dd class="param-descr-index-1"> Bbb. </dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="312" column="6"><Name>comment_to_html_conversion_15</Name><USR>c:@F@comment_to_html_conversion_15#I#I#</USR><Declaration>void comment_to_html_conversion_15(int x1, int x2)</Declaration><Parameters><Parameter><Name>x1</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Aaa.</Para></Discussion></Parameter><Parameter><Name>x2</Name><Index>1</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Bbb. </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[x2] ParamIndex=1
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[x1] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.]))))] Extent=[312:1 - 312:51]
+// CHECK: annotate-comments.cpp:312:40: ParmDecl=x1:312:40 (Definition) Extent=[312:36 - 312:42]
+// CHECK: annotate-comments.cpp:312:48: ParmDecl=x2:312:48 (Definition) Extent=[312:44 - 312:50]
+// CHECK: annotate-comments.cpp:317:6: FunctionDecl=comment_to_html_conversion_16:317:6 RawComment=[/// \param x2 Bbb.\n/// \param zzz Aaa.\n/// \param x1 Aaa.] RawCommentRange=[314:1 - 316:19] FullCommentAsHTML=[<dl><dt class="param-name-index-0">x1</dt><dd class="param-descr-index-0"> Aaa.</dd><dt class="param-name-index-1">x2</dt><dd class="param-descr-index-1"> Bbb. </dd><dt class="param-name-index-invalid">zzz</dt><dd class="param-descr-index-invalid"> Aaa. </dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="317" column="6"><Name>comment_to_html_conversion_16</Name><USR>c:@F@comment_to_html_conversion_16#I#I#</USR><Declaration>void comment_to_html_conversion_16(int x1, int x2)</Declaration><Parameters><Parameter><Name>x1</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Aaa.</Para></Discussion></Parameter><Parameter><Name>x2</Name><Index>1</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Bbb. </Para></Discussion></Parameter><Parameter><Name>zzz</Name><Direction isExplicit="0">in</Direction><Discussion><Para> Aaa. </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[x2] ParamIndex=1
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[zzz] ParamIndex=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[x1] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.]))))] Extent=[317:1 - 317:51]
+// CHECK: annotate-comments.cpp:317:40: ParmDecl=x1:317:40 (Definition) Extent=[317:36 - 317:42]
+// CHECK: annotate-comments.cpp:317:48: ParmDecl=x2:317:48 (Definition) Extent=[317:44 - 317:50]
+// CHECK: annotate-comments.cpp:322:6: FunctionTemplate=comment_to_html_conversion_17:322:6 RawComment=[/// \tparam\n/// \param aaa Blah blah] RawCommentRange=[319:1 - 320:25] FullCommentAsHTML=[<dl><dt class="param-name-index-0">aaa</dt><dd class="param-descr-index-0"> Blah blah</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="322" column="6"><Name>comment_to_html_conversion_17</Name><USR>c:@FT@&gt;1#Tcomment_to_html_conversion_17#t0.0#</USR><Declaration>template &lt;typename T&gt; void comment_to_html_conversion_17(T aaa)</Declaration><Parameters><Parameter><Name>aaa</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[] ParamPosition=Invalid
+// CHECK:         (CXComment_Paragraph IsWhitespace
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[aaa] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah]))))] Extent=[321:1 - 322:42]
+// CHECK: annotate-comments.cpp:321:19: TemplateTypeParameter=T:321:19 (Definition) Extent=[321:10 - 321:20]
+// CHECK: annotate-comments.cpp:322:38: ParmDecl=aaa:322:38 (Definition) Extent=[322:36 - 322:41]
+// CHECK: annotate-comments.cpp:322:36: TypeRef=T:321:19 Extent=[322:36 - 322:37]
+// CHECK: annotate-comments.cpp:327:6: FunctionTemplate=comment_to_html_conversion_18:327:6 RawComment=[/// \tparam T\n/// \param aaa Blah blah] RawCommentRange=[324:1 - 325:25] FullCommentAsHTML=[<dl><dt class="param-name-index-0">aaa</dt><dd class="param-descr-index-0"> Blah blah</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="327" column="6"><Name>comment_to_html_conversion_18</Name><USR>c:@FT@&gt;1#Tcomment_to_html_conversion_18#t0.0#</USR><Declaration>template &lt;typename T&gt; void comment_to_html_conversion_18(T aaa)</Declaration><Parameters><Parameter><Name>aaa</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[T] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph IsWhitespace
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[aaa] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah]))))] Extent=[326:1 - 327:42]
+// CHECK: annotate-comments.cpp:326:19: TemplateTypeParameter=T:326:19 (Definition) Extent=[326:10 - 326:20]
+// CHECK: annotate-comments.cpp:327:38: ParmDecl=aaa:327:38 (Definition) Extent=[327:36 - 327:41]
+// CHECK: annotate-comments.cpp:327:36: TypeRef=T:326:19 Extent=[327:36 - 327:37]
+// CHECK: annotate-comments.cpp:332:6: FunctionTemplate=comment_to_html_conversion_19:332:6 RawComment=[/// \tparam T2 Bbb\n/// \tparam T1 Aaa] RawCommentRange=[329:1 - 330:19] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">T1</dt><dd class="tparam-descr-index-0"> Aaa</dd><dt class="tparam-name-index-1">T2</dt><dd class="tparam-descr-index-1"> Bbb </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="332" column="6"><Name>comment_to_html_conversion_19</Name><USR>c:@FT@&gt;2#T#Tcomment_to_html_conversion_19#t0.0#t0.1#</USR><Declaration>template &lt;typename T1, typename T2&gt; void comment_to_html_conversion_19(T1 aaa, T2 bbb)</Declaration><TemplateParameters><Parameter><Name>T1</Name><Index>0</Index><Discussion><Para> Aaa</Para></Discussion></Parameter><Parameter><Name>T2</Name><Index>1</Index><Discussion><Para> Bbb </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[T2] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[T1] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa]))))] Extent=[331:1 - 332:51]
+// CHECK: annotate-comments.cpp:331:19: TemplateTypeParameter=T1:331:19 (Definition) Extent=[331:10 - 331:21]
+// CHECK: annotate-comments.cpp:331:32: TemplateTypeParameter=T2:331:32 (Definition) Extent=[331:23 - 331:34]
+// CHECK: annotate-comments.cpp:332:39: ParmDecl=aaa:332:39 (Definition) Extent=[332:36 - 332:42]
+// CHECK: annotate-comments.cpp:332:36: TypeRef=T1:331:19 Extent=[332:36 - 332:38]
+// CHECK: annotate-comments.cpp:332:47: ParmDecl=bbb:332:47 (Definition) Extent=[332:44 - 332:50]
+// CHECK: annotate-comments.cpp:332:44: TypeRef=T2:331:32 Extent=[332:44 - 332:46]
+// CHECK: annotate-comments.cpp:339:6: FunctionTemplate=comment_to_html_conversion_20:339:6 RawComment=[/// \tparam T2 Bbb\n/// \tparam U Zzz\n/// \tparam V Ccc\n/// \tparam T1 Aaa] RawCommentRange=[334:1 - 337:19] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">T1</dt><dd class="tparam-descr-index-0"> Aaa</dd><dt class="tparam-name-index-1">T2</dt><dd class="tparam-descr-index-1"> Bbb </dd><dt class="tparam-name-index-2">V</dt><dd class="tparam-descr-index-2"> Ccc </dd><dt class="tparam-name-index-invalid">U</dt><dd class="tparam-descr-index-invalid"> Zzz </dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="339" column="6"><Name>comment_to_html_conversion_20</Name><USR>c:@FT@&gt;3#T#T#NIcomment_to_html_conversion_20#t0.0#t0.1#</USR><Declaration>template &lt;typename T1, typename T2, int V&gt; void comment_to_html_conversion_20(T1 aaa, T2 bbb)</Declaration><TemplateParameters><Parameter><Name>T1</Name><Index>0</Index><Discussion><Para> Aaa</Para></Discussion></Parameter><Parameter><Name>T2</Name><Index>1</Index><Discussion><Para> Bbb </Para></Discussion></Parameter><Parameter><Name>V</Name><Index>2</Index><Discussion><Para> Ccc </Para></Discussion></Parameter><Parameter><Name>U</Name><Discussion><Para> Zzz </Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[T2] ParamPosition={1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[U] ParamPosition=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Zzz] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[V] ParamPosition={2}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[T1] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa]))))] Extent=[338:1 - 339:51]
+// CHECK: annotate-comments.cpp:338:19: TemplateTypeParameter=T1:338:19 (Definition) Extent=[338:10 - 338:21]
+// CHECK: annotate-comments.cpp:338:32: TemplateTypeParameter=T2:338:32 (Definition) Extent=[338:23 - 338:34]
+// CHECK: annotate-comments.cpp:338:40: NonTypeTemplateParameter=V:338:40 (Definition) Extent=[338:36 - 338:41]
+// CHECK: annotate-comments.cpp:339:39: ParmDecl=aaa:339:39 (Definition) Extent=[339:36 - 339:42]
+// CHECK: annotate-comments.cpp:339:36: TypeRef=T1:338:19 Extent=[339:36 - 339:38]
+// CHECK: annotate-comments.cpp:339:47: ParmDecl=bbb:339:47 (Definition) Extent=[339:44 - 339:50]
+// CHECK: annotate-comments.cpp:339:44: TypeRef=T2:338:32 Extent=[339:44 - 339:46]
+// CHECK: annotate-comments.cpp:346:6: FunctionTemplate=comment_to_html_conversion_21:346:6 RawComment=[/// \tparam TTT Ddd\n/// \tparam C Ccc\n/// \tparam T Aaa\n/// \tparam TT Bbb] RawCommentRange=[341:1 - 344:19] FullCommentAsHTML=[<dl><dt class="tparam-name-index-0">TTT</dt><dd class="tparam-descr-index-0"> Ddd </dd><dt class="tparam-name-index-other">C</dt><dd class="tparam-descr-index-other"> Ccc </dd><dt class="tparam-name-index-other">T</dt><dd class="tparam-descr-index-other"> Aaa </dd><dt class="tparam-name-index-other">TT</dt><dd class="tparam-descr-index-other"> Bbb</dd></dl>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="346" column="6"><Name>comment_to_html_conversion_21</Name><USR>c:@FT@&gt;1#t&gt;2#t&gt;1#T#Tcomment_to_html_conversion_21#</USR><Declaration>template &lt;template &lt;template &lt;typename T&gt; class TT, class C&gt; class TTT&gt; void comment_to_html_conversion_21()</Declaration><TemplateParameters><Parameter><Name>TTT</Name><Index>0</Index><Discussion><Para> Ddd </Para></Discussion></Parameter><Parameter><Name>C</Name><Discussion><Para> Ccc </Para></Discussion></Parameter><Parameter><Name>T</Name><Discussion><Para> Aaa </Para></Discussion></Parameter><Parameter><Name>TT</Name><Discussion><Para> Bbb</Para></Discussion></Parameter></TemplateParameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_TParamCommand ParamName=[TTT] ParamPosition={0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ddd] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[C] ParamPosition={0, 1}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[T] ParamPosition={0, 0, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_TParamCommand ParamName=[TT] ParamPosition={0, 0}
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Bbb]))))] Extent=[345:1 - 346:37]
+// CHECK: annotate-comments.cpp:345:65: TemplateTemplateParameter=TTT:345:65 (Definition) Extent=[345:10 - 345:68]
+// CHECK: annotate-comments.cpp:345:46: TemplateTemplateParameter=TT:345:46 (Definition) Extent=[345:19 - 345:48]
+// CHECK: annotate-comments.cpp:345:37: TemplateTypeParameter=T:345:37 (Definition) Extent=[345:28 - 345:38]
+// CHECK: annotate-comments.cpp:345:56: TemplateTypeParameter=C:345:56 (Definition) Extent=[345:50 - 345:57]
+// CHECK: annotate-comments.cpp:355:6: FunctionDecl=comment_to_html_conversion_22:355:6 RawComment=[/// \brief Aaa.\n///\n/// Bbb.\n///\n/// \param x2 Ddd.\n/// \param x1 Ccc.\n/// \returns Eee.] RawCommentRange=[348:1 - 354:18] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p><p> Bbb.</p><dl><dt class="param-name-index-0">x1</dt><dd class="param-descr-index-0"> Ccc. </dd><dt class="param-name-index-1">x2</dt><dd class="param-descr-index-1"> Ddd. </dd></dl><p class="para-returns"><span class="word-returns">Returns</span>  Eee.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="355" column="6"><Name>comment_to_html_conversion_22</Name><USR>c:@F@comment_to_html_conversion_22#I#I#</USR><Declaration>void comment_to_html_conversion_22(int x1, int x2)</Declaration><Abstract><Para> Aaa.</Para></Abstract><Parameters><Parameter><Name>x1</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Ccc. </Para></Discussion></Parameter><Parameter><Name>x2</Name><Index>1</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Ddd. </Para></Discussion></Parameter></Parameters><ResultDiscussion><Para> Eee.</Para></ResultDiscussion><Discussion><Para> Bbb.</Para></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_BlockCommand CommandName=[brief]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Aaa.])))
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Bbb.]))
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[x2] ParamIndex=1
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ddd.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[x1] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Ccc.] HasTrailingNewline)
+// CHECK:           (CXComment_Text Text=[ ] IsWhitespace)))
+// CHECK:       (CXComment_BlockCommand CommandName=[returns]
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Eee.]))))] Extent=[355:1 - 355:51]
+// CHECK: annotate-comments.cpp:355:40: ParmDecl=x1:355:40 (Definition) Extent=[355:36 - 355:42]
+// CHECK: annotate-comments.cpp:355:48: ParmDecl=x2:355:48 (Definition) Extent=[355:44 - 355:50]
+// CHECK: annotate-comments.cpp:358:6: FunctionDecl=comment_to_html_conversion_23:358:6 RawComment=[/// <br><a href="http://example.com/">Aaa</a>] RawCommentRange=[357:1 - 357:46] BriefComment=[Aaa] FullCommentAsHTML=[<p class="para-brief"> <br><a href="http://example.com/">Aaa</a></p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="358" column="6"><Name>comment_to_html_conversion_23</Name><USR>c:@F@comment_to_html_conversion_23#</USR><Declaration>void comment_to_html_conversion_23()</Declaration><Abstract><Para> <rawHTML><![CDATA[<br>]]></rawHTML><rawHTML><![CDATA[<a href="http://example.com/">]]></rawHTML>Aaa<rawHTML>&lt;/a&gt;</rawHTML></Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_HTMLStartTag Name=[br])
+// CHECK:         (CXComment_HTMLStartTag Name=[a] Attrs: href=http://example.com/)
+// CHECK:         (CXComment_Text Text=[Aaa])
+// CHECK:         (CXComment_HTMLEndTag Name=[a])))] Extent=[358:1 - 358:37]
+// CHECK: annotate-comments.cpp:364:6: FunctionDecl=comment_to_html_conversion_24:364:6 RawComment=[/// \verbatim\n/// <a href="http://example.com/">Aaa</a>\n/// <a href='http://example.com/'>Aaa</a>\n/// \endverbatim] RawCommentRange=[360:1 - 363:17] FullCommentAsHTML=[<pre> &lt;a href=&quot;http:&#47;&#47;example.com&#47;&quot;&gt;Aaa&lt;&#47;a&gt;\n &lt;a href=&#39;http:&#47;&#47;example.com&#47;&#39;&gt;Aaa&lt;&#47;a&gt;</pre>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="364" column="6"><Name>comment_to_html_conversion_24</Name><USR>c:@F@comment_to_html_conversion_24#</USR><Declaration>void comment_to_html_conversion_24()</Declaration><Discussion><Verbatim xml:space="preserve" kind="verbatim"> &lt;a href=&quot;http://example.com/&quot;&gt;Aaa&lt;/a&gt;\n &lt;a href=&apos;http://example.com/&apos;&gt;Aaa&lt;/a&gt;</Verbatim></Discussion></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_VerbatimBlockCommand CommandName=[verbatim]
+// CHECK:         (CXComment_VerbatimBlockLine Text=[ <a href="http://example.com/">Aaa</a>])
+// CHECK:         (CXComment_VerbatimBlockLine Text=[ <a href='http://example.com/'>Aaa</a>])))] Extent=[364:1 - 364:37]
+// CHECK: annotate-comments.cpp:371:6: FunctionDecl=comment_to_html_conversion_25:371:6 RawComment=[/// \function foo\n/// \class foo\n/// \method foo\n/// \interface foo\n/// Blah blah.] RawCommentRange=[366:1 - 370:15] BriefComment=[Blah blah.] FullCommentAsHTML=[<p class="para-brief"> Blah blah.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="371" column="6"><Name>comment_to_html_conversion_25</Name><USR>c:@F@comment_to_html_conversion_25#</USR><Declaration>void comment_to_html_conversion_25()</Declaration><Abstract><Para> Blah blah.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_VerbatimLine Text=[ foo])
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_VerbatimLine Text=[ foo])
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_VerbatimLine Text=[ foo])
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_VerbatimLine Text=[ foo])
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Blah blah.])))] Extent=[371:1 - 371:37]
+// CHECK: annotate-comments.cpp:374:6: FunctionDecl=comment_to_html_conversion_26:374:6 RawComment=[/// \unknown] RawCommentRange=[373:1 - 373:13] FullCommentAsHTML=[<p class="para-brief"> </p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="374" column="6"><Name>comment_to_html_conversion_26</Name><USR>c:@F@comment_to_html_conversion_26#</USR><Declaration>void comment_to_html_conversion_26()</Declaration><Abstract><Para> </Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[unknown] RenderNormal)))] Extent=[374:1 - 374:37]
+// CHECK: annotate-comments.cpp:377:6: FunctionDecl=comment_to_html_conversion_27:377:6 RawComment=[/// \b Aaa] RawCommentRange=[376:1 - 376:11] BriefComment=[Aaa] FullCommentAsHTML=[<p class="para-brief"> <b>Aaa</b></p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="377" column="6"><Name>comment_to_html_conversion_27</Name><USR>c:@F@comment_to_html_conversion_27#</USR><Declaration>void comment_to_html_conversion_27()</Declaration><Abstract><Para> <bold>Aaa</bold></Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[b] RenderBold Arg[0]=Aaa)))] Extent=[377:1 - 377:37]
+// CHECK: annotate-comments.cpp:380:6: FunctionDecl=comment_to_html_conversion_28:380:6 RawComment=[/// \c Aaa \p Bbb] RawCommentRange=[379:1 - 379:18] BriefComment=[Aaa Bbb] FullCommentAsHTML=[<p class="para-brief"> <tt>Aaa</tt> <tt>Bbb</tt></p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="380" column="6"><Name>comment_to_html_conversion_28</Name><USR>c:@F@comment_to_html_conversion_28#</USR><Declaration>void comment_to_html_conversion_28()</Declaration><Abstract><Para> <monospaced>Aaa</monospaced> <monospaced>Bbb</monospaced></Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[c] RenderMonospaced Arg[0]=Aaa)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[p] RenderMonospaced Arg[0]=Bbb)))] Extent=[380:1 - 380:37]
+// CHECK: annotate-comments.cpp:383:6: FunctionDecl=comment_to_html_conversion_29:383:6 RawComment=[/// \a Aaa \e Bbb \em Ccc] RawCommentRange=[382:1 - 382:26] BriefComment=[Aaa Bbb Ccc] FullCommentAsHTML=[<p class="para-brief"> <em>Aaa</em> <em>Bbb</em> <em>Ccc</em></p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="383" column="6"><Name>comment_to_html_conversion_29</Name><USR>c:@F@comment_to_html_conversion_29#</USR><Declaration>void comment_to_html_conversion_29()</Declaration><Abstract><Para> <emphasized>Aaa</emphasized> <emphasized>Bbb</emphasized> <emphasized>Ccc</emphasized></Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[a] RenderEmphasized Arg[0]=Aaa)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[e] RenderEmphasized Arg[0]=Bbb)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[em] RenderEmphasized Arg[0]=Ccc)))] Extent=[383:1 - 383:37]
+// CHECK: annotate-comments.cpp:386:6: FunctionDecl=comment_to_html_conversion_30:386:6 RawComment=[/// \a 1<2 \e 3<4 \em 5<6 \param 7<8 aaa \tparam 9<10 bbb] RawCommentRange=[385:1 - 385:58] BriefComment=[1<2 3<4 5<6] FullCommentAsHTML=[<p class="para-brief"> <em>1&lt;2</em> <em>3&lt;4</em> <em>5&lt;6</em> </p><dl><dt class="tparam-name-index-invalid">9&lt;10</dt><dd class="tparam-descr-index-invalid"> bbb</dd></dl><dl><dt class="param-name-index-invalid">7&lt;8</dt><dd class="param-descr-index-invalid"> aaa </dd></dl>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="386" column="6"><Name>comment_to_html_conversion_30</Name><USR>c:@F@comment_to_html_conversion_30#</USR><Declaration>void comment_to_html_conversion_30()</Declaration><Abstract><Para> <emphasized>1&lt;2</emphasized> <emphasized>3&lt;4</emphasized> <emphasized>5&lt;6</emphasized> </Para></Abstract><TemplateParameters><Parameter><Name>9&lt;10</Name><Discussion><Para> bbb</Para></Discussion></Parameter></TemplateParameters><Parameters><Parameter><Name>7&lt;8</Name><Direction isExplicit="0">in</Direction><Discussion><Para> aaa </Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[a] RenderEmphasized Arg[0]=1<2)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[e] RenderEmphasized Arg[0]=3<4)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_InlineCommand CommandName=[em] RenderEmphasized Arg[0]=5<6)
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[7<8] ParamIndex=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ aaa ])))
+// CHECK:       (CXComment_TParamCommand ParamName=[9<10] ParamPosition=Invalid
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ bbb]))))] Extent=[386:1 - 386:37]
+// CHECK: annotate-comments.cpp:389:6: FunctionDecl=comment_to_html_conversion_31:389:6 RawComment=[/// \\ \@ \& \$ \# \< \> \% \" \. \::] RawCommentRange=[388:1 - 388:38] BriefComment=[\ @ & $ # < > % " . ::] FullCommentAsHTML=[<p class="para-brief"> \ @ &amp; $ # &lt; &gt; % &quot; . ::</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="389" column="6"><Name>comment_to_html_conversion_31</Name><USR>c:@F@comment_to_html_conversion_31#</USR><Declaration>void comment_to_html_conversion_31()</Declaration><Abstract><Para> \ @ &amp; $ # &lt; &gt; % &quot; . ::</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[\])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[@])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[&])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[$])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[#])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[<])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[>])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[%])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=["])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[.])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[::])))] Extent=[389:1 - 389:37]
+// CHECK: annotate-comments.cpp:392:6: FunctionDecl=comment_to_html_conversion_32:392:6 RawComment=[/// &amp; &lt; &gt; &quot;] RawCommentRange=[391:1 - 391:27] BriefComment=[& < > "] FullCommentAsHTML=[<p class="para-brief"> &amp; &lt; &gt; &quot;</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="392" column="6"><Name>comment_to_html_conversion_32</Name><USR>c:@F@comment_to_html_conversion_32#</USR><Declaration>void comment_to_html_conversion_32()</Declaration><Abstract><Para> &amp; &lt; &gt; &quot;</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[&])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[<])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=[>])
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_Text Text=["])))] Extent=[392:1 - 392:37]
+// CHECK: annotate-comments.cpp:395:6: FunctionDecl=comment_to_html_conversion_33:395:6 RawComment=[/// <em>0&lt;i</em>] RawCommentRange=[394:1 - 394:20] BriefComment=[0<i] FullCommentAsHTML=[<p class="para-brief"> <em>0&lt;i</em></p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="395" column="6"><Name>comment_to_html_conversion_33</Name><USR>c:@F@comment_to_html_conversion_33#</USR><Declaration>void comment_to_html_conversion_33()</Declaration><Abstract><Para> <rawHTML><![CDATA[<em>]]></rawHTML>0&lt;i<rawHTML>&lt;/em&gt;</rawHTML></Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace)
+// CHECK:         (CXComment_HTMLStartTag Name=[em])
+// CHECK:         (CXComment_Text Text=[0])
+// CHECK:         (CXComment_Text Text=[<])
+// CHECK:         (CXComment_Text Text=[i])
+// CHECK:         (CXComment_HTMLEndTag Name=[em])))] Extent=[395:1 - 395:37]
+// CHECK: annotate-comments.cpp:398:7: ClassDecl=comment_to_xml_conversion_01:398:7 (Definition) RawComment=[/// Aaa.] RawCommentRange=[397:1 - 397:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Class file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="398" column="7"><Name>comment_to_xml_conversion_01</Name><USR>c:@C@comment_to_xml_conversion_01</USR><Declaration>class comment_to_xml_conversion_01 {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Class>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[398:1 - 435:2]
+// CHECK: annotate-comments.cpp:400:3: CXXConstructor=comment_to_xml_conversion_01:400:3 RawComment=[/// \param aaa Blah blah.] RawCommentRange=[399:3 - 399:28] FullCommentAsHTML=[<dl><dt class="param-name-index-0">aaa</dt><dd class="param-descr-index-0"> Blah blah.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="400" column="3"><Name>comment_to_xml_conversion_01</Name><USR>c:@C@comment_to_xml_conversion_01@F@comment_to_xml_conversion_01#I#</USR><Declaration></Declaration><Parameters><Parameter><Name>aaa</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[aaa] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah.]))))] Extent=[400:3 - 400:40]
+// CHECK: annotate-comments.cpp:400:36: ParmDecl=aaa:400:36 (Definition) Extent=[400:32 - 400:39]
+// CHECK: annotate-comments.cpp:403:3: CXXDestructor=~comment_to_xml_conversion_01:403:3 RawComment=[/// Aaa.] RawCommentRange=[402:3 - 402:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="403" column="3"><Name>~comment_to_xml_conversion_01</Name><USR>c:@C@comment_to_xml_conversion_01@F@~comment_to_xml_conversion_01#</USR><Declaration>void ~comment_to_xml_conversion_01()</Declaration><Abstract><Para> Aaa.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[403:3 - 403:34]
+// CHECK: annotate-comments.cpp:406:7: CXXMethod=comment_to_xml_conversion_02:406:7 RawComment=[/// \param aaa Blah blah.] RawCommentRange=[405:3 - 405:28] FullCommentAsHTML=[<dl><dt class="param-name-index-0">aaa</dt><dd class="param-descr-index-0"> Blah blah.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="406" column="7"><Name>comment_to_xml_conversion_02</Name><USR>c:@C@comment_to_xml_conversion_01@F@comment_to_xml_conversion_02#I#</USR><Declaration>int comment_to_xml_conversion_02(int aaa)</Declaration><Parameters><Parameter><Name>aaa</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[aaa] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah.]))))] Extent=[406:3 - 406:44]
+// CHECK: annotate-comments.cpp:406:40: ParmDecl=aaa:406:40 (Definition) Extent=[406:36 - 406:43]
+// CHECK: annotate-comments.cpp:409:14: CXXMethod=comment_to_xml_conversion_03:409:14 (static) RawComment=[/// \param aaa Blah blah.] RawCommentRange=[408:3 - 408:28] FullCommentAsHTML=[<dl><dt class="param-name-index-0">aaa</dt><dd class="param-descr-index-0"> Blah blah.</dd></dl>] FullCommentAsXML=[<Function isClassMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="409" column="14"><Name>comment_to_xml_conversion_03</Name><USR>c:@C@comment_to_xml_conversion_01@F@comment_to_xml_conversion_03#I#S</USR><Declaration>static int comment_to_xml_conversion_03(int aaa)</Declaration><Parameters><Parameter><Name>aaa</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[aaa] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah.]))))] Extent=[409:3 - 409:51]
+// CHECK: annotate-comments.cpp:409:47: ParmDecl=aaa:409:47 (Definition) Extent=[409:43 - 409:50]
+// CHECK: annotate-comments.cpp:412:7: FieldDecl=comment_to_xml_conversion_04:412:7 (Definition) RawComment=[/// Aaa.] RawCommentRange=[411:3 - 411:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="412" column="7"><Name>comment_to_xml_conversion_04</Name><USR>c:@C@comment_to_xml_conversion_01@FI@comment_to_xml_conversion_04</USR><Declaration>int comment_to_xml_conversion_04</Declaration><Abstract><Para> Aaa.</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[412:3 - 412:35]
+// CHECK: annotate-comments.cpp:415:14: VarDecl=comment_to_xml_conversion_05:415:14 RawComment=[/// Aaa.] RawCommentRange=[414:3 - 414:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="415" column="14"><Name>comment_to_xml_conversion_05</Name><USR>c:@C@comment_to_xml_conversion_01@comment_to_xml_conversion_05</USR><Declaration>static int comment_to_xml_conversion_05</Declaration><Abstract><Para> Aaa.</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[415:3 - 415:42]
+// CHECK: annotate-comments.cpp:418:8: CXXMethod=operator():418:8 RawComment=[/// \param aaa Blah blah.] RawCommentRange=[417:3 - 417:28] FullCommentAsHTML=[<dl><dt class="param-name-index-0">aaa</dt><dd class="param-descr-index-0"> Blah blah.</dd></dl>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="418" column="8"><Name>operator()</Name><USR>c:@C@comment_to_xml_conversion_01@F@operator()#I#</USR><Declaration>void operator()(int aaa)</Declaration><Parameters><Parameter><Name>aaa</Name><Index>0</Index><Direction isExplicit="0">in</Direction><Discussion><Para> Blah blah.</Para></Discussion></Parameter></Parameters></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph IsWhitespace
+// CHECK:         (CXComment_Text Text=[ ] IsWhitespace))
+// CHECK:       (CXComment_ParamCommand in implicitly ParamName=[aaa] ParamIndex=0
+// CHECK:         (CXComment_Paragraph
+// CHECK:           (CXComment_Text Text=[ Blah blah.]))))] Extent=[418:3 - 418:27]
+// CHECK: annotate-comments.cpp:418:23: ParmDecl=aaa:418:23 (Definition) Extent=[418:19 - 418:26]
+// CHECK: annotate-comments.cpp:421:3: CXXConversion=operator _Bool:421:3 RawComment=[/// Aaa.] RawCommentRange=[420:3 - 420:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function isInstanceMethod="1" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="421" column="3"><Name>operator _Bool</Name><USR>c:@C@comment_to_xml_conversion_01@F@operator _Bool#</USR><Declaration>bool operator _Bool()</Declaration><Abstract><Para> Aaa.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[421:3 - 421:18]
+// CHECK: annotate-comments.cpp:424:15: TypedefDecl=comment_to_xml_conversion_06:424:15 (Definition) RawComment=[/// Aaa.] RawCommentRange=[423:3 - 423:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Typedef file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="424" column="15"><Name>comment_to_xml_conversion_06</Name><USR>c:annotate-comments.cpp@8505@C@comment_to_xml_conversion_01@T@comment_to_xml_conversion_06</USR><Declaration>typedef int comment_to_xml_conversion_06</Declaration><Abstract><Para> Aaa.</Para></Abstract></Typedef>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[424:3 - 424:43]
+// CHECK: annotate-comments.cpp:427:9: TypeAliasDecl=comment_to_xml_conversion_07:427:9 (Definition) RawComment=[/// Aaa.] RawCommentRange=[426:3 - 426:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Typedef file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="427" column="9"><Name>comment_to_xml_conversion_07</Name><USR>c:@C@comment_to_xml_conversion_01@comment_to_xml_conversion_07</USR><Declaration>using comment_to_xml_conversion_07 = int</Declaration><Abstract><Para> Aaa.</Para></Abstract></Typedef>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[427:3 - 427:43]
+// CHECK: annotate-comments.cpp:430:9: ClassTemplate=comment_to_xml_conversion_08:430:9 (Definition) Extent=[429:3 - 430:41]
+// CHECK: annotate-comments.cpp:429:21: TemplateTypeParameter=T:429:21 (Definition) Extent=[429:12 - 429:22]
+// CHECK: annotate-comments.cpp:429:33: TemplateTypeParameter=U:429:33 (Definition) Extent=[429:24 - 429:34]
+// CHECK: annotate-comments.cpp:434:3: UnexposedDecl=comment_to_xml_conversion_09:434:3 (Definition) RawComment=[/// Aaa.] RawCommentRange=[432:3 - 432:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Typedef file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="434" column="3"><Name>comment_to_xml_conversion_09</Name><USR>c:@C@comment_to_xml_conversion_01@comment_to_xml_conversion_09</USR><Declaration>template &lt;typename T&gt; using comment_to_xml_conversion_09 = comment_to_xml_conversion_08&lt;T, int&gt;</Declaration><Abstract><Para> Aaa.</Para></Abstract></Typedef>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[433:3 - 434:76]
+// CHECK: annotate-comments.cpp:439:6: FunctionTemplate=comment_to_xml_conversion_10:439:6 RawComment=[/// Aaa.] RawCommentRange=[437:1 - 437:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="439" column="6"><Name>comment_to_xml_conversion_10</Name><USR>c:@FT@&gt;2#T#Tcomment_to_xml_conversion_10#t0.0#t0.1#</USR><Declaration>template &lt;typename T = int, typename U = int&gt; void comment_to_xml_conversion_10(int aaa, int bbb)template &lt;typename T, typename U&gt; void comment_to_xml_conversion_10(T aaa, U bbb)</Declaration><Abstract><Para> Aaa.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[438:1 - 439:48]
+// CHECK: annotate-comments.cpp:438:19: TemplateTypeParameter=T:438:19 (Definition) Extent=[438:10 - 438:20]
+// CHECK: annotate-comments.cpp:438:31: TemplateTypeParameter=U:438:31 (Definition) Extent=[438:22 - 438:32]
+// CHECK: annotate-comments.cpp:439:37: ParmDecl=aaa:439:37 (Definition) Extent=[439:35 - 439:40]
+// CHECK: annotate-comments.cpp:439:35: TypeRef=T:438:19 Extent=[439:35 - 439:36]
+// CHECK: annotate-comments.cpp:439:44: ParmDecl=bbb:439:44 (Definition) Extent=[439:42 - 439:47]
+// CHECK: annotate-comments.cpp:439:42: TypeRef=U:438:31 Extent=[439:42 - 439:43]
+// CHECK: annotate-comments.cpp:443:6: FunctionDecl=comment_to_xml_conversion_10:443:6 [Specialization of comment_to_xml_conversion_10:439:6] RawComment=[/// Aaa.] RawCommentRange=[441:1 - 441:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function templateKind="specialization" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="443" column="6"><Name>comment_to_xml_conversion_10</Name><USR>c:@F@comment_to_xml_conversion_10&lt;#I#I&gt;#I#I#</USR><Declaration>void comment_to_xml_conversion_10(int aaa, int bbb)</Declaration><Abstract><Para> Aaa.</Para></Abstract></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[442:1 - 443:52]
+// CHECK: annotate-comments.cpp:443:39: ParmDecl=aaa:443:39 (Definition) Extent=[443:35 - 443:42]
+// CHECK: annotate-comments.cpp:443:48: ParmDecl=bbb:443:48 (Definition) Extent=[443:44 - 443:51]
+// CHECK: annotate-comments.cpp:447:7: ClassTemplate=comment_to_xml_conversion_11:447:7 (Definition) RawComment=[/// Aaa.] RawCommentRange=[445:1 - 445:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Class templateKind="template" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="447" column="7"><Name>comment_to_xml_conversion_11</Name><USR>c:@CT&gt;2#T#T@comment_to_xml_conversion_11</USR><Declaration>template &lt;typename T = int, typename U = int&gt; class comment_to_xml_conversion_11 {\n}\ntemplate &lt;typename T, typename U&gt; class comment_to_xml_conversion_11 {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Class>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[446:1 - 447:39]
+// CHECK: annotate-comments.cpp:446:19: TemplateTypeParameter=T:446:19 (Definition) Extent=[446:10 - 446:20]
+// CHECK: annotate-comments.cpp:446:31: TemplateTypeParameter=U:446:31 (Definition) Extent=[446:22 - 446:32]
+// CHECK: annotate-comments.cpp:451:7: ClassTemplatePartialSpecialization=comment_to_xml_conversion_11:451:7 (Definition) [Specialization of comment_to_xml_conversion_11:447:7] RawComment=[/// Aaa.] RawCommentRange=[449:1 - 449:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Class templateKind="partialSpecialization" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="451" column="7"><Name>comment_to_xml_conversion_11</Name><USR>c:@CP&gt;1#T@comment_to_xml_conversion_11&gt;#t0.0#I</USR><Declaration>class comment_to_xml_conversion_11 {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Class>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[450:1 - 451:47]
+// CHECK: annotate-comments.cpp:450:19: TemplateTypeParameter=T:450:19 (Definition) Extent=[450:10 - 450:20]
+// CHECK: annotate-comments.cpp:451:36: TypeRef=T:450:19 Extent=[451:36 - 451:37]
+// CHECK: annotate-comments.cpp:455:7: ClassDecl=comment_to_xml_conversion_11:455:7 (Definition) [Specialization of comment_to_xml_conversion_11:447:7] RawComment=[/// Aaa.] RawCommentRange=[453:1 - 453:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Class templateKind="specialization" file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="455" column="7"><Name>comment_to_xml_conversion_11</Name><USR>c:@C@comment_to_xml_conversion_11&gt;#I#I</USR><Declaration>class comment_to_xml_conversion_11 {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Class>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[454:1 - 455:49]
+// CHECK: annotate-comments.cpp:458:5: VarDecl=comment_to_xml_conversion_12:458:5 (Definition) RawComment=[/// Aaa.] RawCommentRange=[457:1 - 457:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="458" column="5"><Name>comment_to_xml_conversion_12</Name><USR>c:@comment_to_xml_conversion_12</USR><Declaration>int comment_to_xml_conversion_12</Declaration><Abstract><Para> Aaa.</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[458:1 - 458:33]
+// CHECK: annotate-comments.cpp:461:11: Namespace=comment_to_xml_conversion_13:461:11 (Definition) RawComment=[/// Aaa.] RawCommentRange=[460:1 - 460:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Namespace file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="461" column="11"><Name>comment_to_xml_conversion_13</Name><USR>c:@N@comment_to_xml_conversion_13</USR><Declaration>namespace comment_to_xml_conversion_13 {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Namespace>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[461:1 - 465:2]
+// CHECK: annotate-comments.cpp:463:13: Namespace=comment_to_xml_conversion_14:463:13 (Definition) RawComment=[/// Aaa.] RawCommentRange=[462:3 - 462:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Namespace file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="463" column="13"><Name>comment_to_xml_conversion_14</Name><USR>c:@N@comment_to_xml_conversion_13@N@comment_to_xml_conversion_14</USR><Declaration>namespace comment_to_xml_conversion_14 {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Namespace>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[463:3 - 464:4]
+// CHECK: annotate-comments.cpp:468:6: EnumDecl=comment_to_xml_conversion_15:468:6 (Definition) RawComment=[/// Aaa.] RawCommentRange=[467:1 - 467:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Enum file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="468" column="6"><Name>comment_to_xml_conversion_15</Name><USR>c:@E@comment_to_xml_conversion_15</USR><Declaration>enum comment_to_xml_conversion_15 {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Enum>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[468:1 - 471:2]
+// CHECK: annotate-comments.cpp:470:3: EnumConstantDecl=comment_to_xml_conversion_16:470:3 (Definition) RawComment=[/// Aaa.] RawCommentRange=[469:3 - 469:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="470" column="3"><Name>comment_to_xml_conversion_16</Name><USR>c:@E@comment_to_xml_conversion_15@comment_to_xml_conversion_16</USR><Declaration>comment_to_xml_conversion_16</Declaration><Abstract><Para> Aaa.</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[470:3 - 470:31]
+// CHECK: annotate-comments.cpp:474:12: EnumDecl=comment_to_xml_conversion_17:474:12 (Definition) RawComment=[/// Aaa.] RawCommentRange=[473:1 - 473:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Enum file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="474" column="12"><Name>comment_to_xml_conversion_17</Name><USR>c:@E@comment_to_xml_conversion_17</USR><Declaration>enum class comment_to_xml_conversion_17 : int {\n}</Declaration><Abstract><Para> Aaa.</Para></Abstract></Enum>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[474:1 - 477:2]
+// CHECK: annotate-comments.cpp:476:3: EnumConstantDecl=comment_to_xml_conversion_18:476:3 (Definition) RawComment=[/// Aaa.] RawCommentRange=[475:3 - 475:11] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Variable file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments.cpp" line="476" column="3"><Name>comment_to_xml_conversion_18</Name><USR>c:@E@comment_to_xml_conversion_17@comment_to_xml_conversion_18</USR><Declaration>comment_to_xml_conversion_18</Declaration><Abstract><Para> Aaa.</Para></Abstract></Variable>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[476:3 - 476:31]

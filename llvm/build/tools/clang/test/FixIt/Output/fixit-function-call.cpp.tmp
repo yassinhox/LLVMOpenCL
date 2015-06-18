@@ -1,0 +1,122 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:23:3: error: no matching function for call to 'f1'
+  f1(a + 1);
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:14:6: note: candidate function not viable: no known conversion from 'intTy2 *' (aka 'int *') to 'intTy &' (aka 'int &') for 1st argument; dereference the argument with *
+void f1(intTy &a);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{23:6-23:6}:"*("
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{23:11-23:11}:")"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:13:6: note: candidate function not viable: no known conversion from 'intTy2 *' (aka 'int *') to 'double *' for 1st argument
+void f1(double *a);
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:29:3: error: no matching function for call to 'f1'
+  f1((int *)0);
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:13:6: note: candidate function not viable: no known conversion from 'int *' to 'double *' for 1st argument
+void f1(double *a);
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:14:6: note: candidate function not viable: no known conversion from 'int *' to 'intTy &' (aka 'int &') for 1st argument
+void f1(intTy &a);
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:35:2: error: no matching function for call to 'f0'
+ f0(a);
+ ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:12:6: note: candidate function not viable: no known conversion from 'int' to 'int *' for 1st argument; take the address of the argument with &
+void f0(int *a);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{35:5-35:5}:"&"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:51:3: error: no matching function for call to 'm'
+  m(a, b);
+  ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:42:6: note: candidate function not viable: no known conversion from 'int' to 'int *' for 2nd argument; take the address of the argument with &
+void m(intTy &a, int *b); // match 1
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{51:8-51:8}:"&"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:39:6: note: candidate function not viable: no known conversion from 'intTy2' (aka 'int') to 'int *' for 1st argument; take the address of the argument with &
+void m(int *a, const int *b); // match 2
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{51:5-51:5}:"&"
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{51:8-51:8}:"&"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:40:6: note: candidate function not viable: no known conversion from 'intTy2' (aka 'int') to 'double *' for 1st argument
+void m(double *a, int *b); // no match
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:41:6: note: candidate function not viable: no known conversion from 'intTy2' (aka 'int') to 'int *' for 1st argument; take the address of the argument with &
+void m(int *a, double *b); // no match
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:56:3: error: no matching function for call to 'm'
+  m(a + 1, b);
+  ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:39:6: note: candidate function not viable: no known conversion from 'int' to 'int *' for 1st argument
+void m(int *a, const int *b); // match 2
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:40:6: note: candidate function not viable: no known conversion from 'int' to 'double *' for 1st argument
+void m(double *a, int *b); // no match
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:41:6: note: candidate function not viable: no known conversion from 'int' to 'int *' for 1st argument
+void m(int *a, double *b); // no match
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:42:6: note: candidate function not viable: expects an l-value for 1st argument
+void m(intTy &a, int *b); // match 1
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:83:3: error: no matching function for call to 'br'
+  br(ptrb); // good
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:70:6: note: candidate function not viable: no known conversion from 'B *' to 'A &' for 1st argument; dereference the argument with *
+bool br(A &a);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{83:6-83:6}:"*"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:87:3: error: no matching function for call to 'bp'
+  bp(b); // good
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:71:6: note: candidate function not viable: no known conversion from 'B' to 'A *' for 1st argument; take the address of the argument with &
+bool bp(A *a);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{87:6-87:6}:"&"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:91:3: error: no matching function for call to 'dv'
+  dv(ptra); // bad: base to derived
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:72:6: note: candidate function not viable: no known conversion from 'A *' to 'B' for 1st argument
+bool dv(B b);
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:95:3: error: no matching function for call to 'dv'
+  dv(&b);
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:72:6: note: candidate function not viable: no known conversion from 'B *' to 'B' for 1st argument; remove &
+bool dv(B b);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{95:6-95:7}:""
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:99:3: error: no matching function for call to 'bp'
+  bp(*ptra);
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:71:6: note: candidate function not viable: no known conversion from 'A' to 'A *' for 1st argument; remove *
+bool bp(A *a);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{99:6-99:7}:""
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:103:5: error: no viable overloaded '='
+  b = &refb;
+  ~ ^ ~~~~~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:64:8: note: candidate function (the implicit copy assignment operator) not viable: no known conversion from 'B *' to 'const B' for 1st argument; remove &
+struct B : public A {
+       ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{103:7-103:8}:""
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:109:3: error: no matching function for call to 'bp'
+  bp(c);
+  ^~
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:71:6: note: candidate function not viable: no known conversion from 'C' to 'A *' for 1st argument; take the address of the argument with &
+bool bp(A *a);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{109:6-109:6}:"&"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:115:3: error: no matching function for call to 'u'
+  u(c);
+  ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:75:6: note: candidate function not viable: no known conversion from 'C' to 'const C *' for 1st argument; take the address of the argument with &
+void u(const C *x);
+     ^
+fix-it:"/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp":{115:5-115:5}:"&"
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:74:6: note: candidate function not viable: no known conversion from 'C' to 'int' for 1st argument
+void u(int x);
+     ^
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/FixIt/fixit-function-call.cpp:76:6: note: candidate function not viable: no known conversion from 'C' to 'double' for 1st argument
+void u(double x);
+     ^
+13 errors generated.

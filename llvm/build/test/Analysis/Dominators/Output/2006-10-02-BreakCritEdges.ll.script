@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/Dominators/2006-10-02-BreakCritEdges.ll -domtree -break-crit-edges -analyze -domtree | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Analysis/Dominators/2006-10-02-BreakCritEdges.ll

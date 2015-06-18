@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -Oz /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/inline-optsize.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/inline-optsize.ll -check-prefix=OZ &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -O2 /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/inline-optsize.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/inline-optsize.ll -check-prefix=O2

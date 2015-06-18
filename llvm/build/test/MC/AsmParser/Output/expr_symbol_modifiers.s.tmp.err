@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/expr_symbol_modifiers.s:8:14: error: invalid modifier 'GOTPCREL' (no symbols present)
+.long 10 + 4@GOTPCREL
+             ^

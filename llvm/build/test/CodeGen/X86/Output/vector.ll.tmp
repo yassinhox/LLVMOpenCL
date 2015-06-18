@@ -1,0 +1,849 @@
+	.file	"<stdin>"
+	.text
+	.globl	test_f1
+	.align	16, 0x90
+	.type	test_f1,@function
+test_f1:                                # @test_f1
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	flds	(%eax)
+	movl	8(%esp), %eax
+	fadds	(%eax)
+	movl	12(%esp), %eax
+	fstps	(%eax)
+	ret
+.Ltmp0:
+	.size	test_f1, .Ltmp0-test_f1
+	.cfi_endproc
+
+	.globl	test_f2
+	.align	16, 0x90
+	.type	test_f2,@function
+test_f2:                                # @test_f2
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	flds	(%eax)
+	movl	8(%esp), %ecx
+	fadds	(%ecx)
+	flds	4(%eax)
+	fadds	4(%ecx)
+	movl	12(%esp), %eax
+	fstps	4(%eax)
+	fstps	(%eax)
+	ret
+.Ltmp1:
+	.size	test_f2, .Ltmp1-test_f2
+	.cfi_endproc
+
+	.globl	test_f4
+	.align	16, 0x90
+	.type	test_f4,@function
+test_f4:                                # @test_f4
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	flds	(%eax)
+	movl	8(%esp), %ecx
+	fadds	(%ecx)
+	flds	4(%eax)
+	fadds	4(%ecx)
+	flds	8(%eax)
+	fadds	8(%ecx)
+	flds	12(%eax)
+	fadds	12(%ecx)
+	movl	12(%esp), %eax
+	fstps	12(%eax)
+	fstps	8(%eax)
+	fstps	4(%eax)
+	fstps	(%eax)
+	ret
+.Ltmp2:
+	.size	test_f4, .Ltmp2-test_f4
+	.cfi_endproc
+
+	.globl	test_f8
+	.align	16, 0x90
+	.type	test_f8,@function
+test_f8:                                # @test_f8
+	.cfi_startproc
+# BB#0:
+	pushl	%eax
+.Ltmp4:
+	.cfi_def_cfa_offset 8
+	movl	8(%esp), %eax
+	flds	(%eax)
+	movl	12(%esp), %ecx
+	fadds	(%ecx)
+	fstps	(%esp)                  # 4-byte Folded Spill
+	flds	4(%eax)
+	fadds	4(%ecx)
+	flds	8(%eax)
+	fadds	8(%ecx)
+	flds	12(%eax)
+	fadds	12(%ecx)
+	flds	16(%eax)
+	fadds	16(%ecx)
+	flds	20(%eax)
+	fadds	20(%ecx)
+	flds	24(%eax)
+	fadds	24(%ecx)
+	flds	28(%eax)
+	fadds	28(%ecx)
+	movl	16(%esp), %eax
+	fstps	28(%eax)
+	fstps	24(%eax)
+	fstps	20(%eax)
+	fstps	16(%eax)
+	fstps	12(%eax)
+	fstps	8(%eax)
+	fstps	4(%eax)
+	flds	(%esp)                  # 4-byte Folded Reload
+	fstps	(%eax)
+	popl	%eax
+	ret
+.Ltmp5:
+	.size	test_f8, .Ltmp5-test_f8
+	.cfi_endproc
+
+	.globl	test_fmul
+	.align	16, 0x90
+	.type	test_fmul,@function
+test_fmul:                              # @test_fmul
+	.cfi_startproc
+# BB#0:
+	pushl	%eax
+.Ltmp7:
+	.cfi_def_cfa_offset 8
+	movl	8(%esp), %eax
+	flds	(%eax)
+	movl	12(%esp), %ecx
+	fmuls	(%ecx)
+	fstps	(%esp)                  # 4-byte Folded Spill
+	flds	4(%eax)
+	fmuls	4(%ecx)
+	flds	8(%eax)
+	fmuls	8(%ecx)
+	flds	12(%eax)
+	fmuls	12(%ecx)
+	flds	16(%eax)
+	fmuls	16(%ecx)
+	flds	20(%eax)
+	fmuls	20(%ecx)
+	flds	24(%eax)
+	fmuls	24(%ecx)
+	flds	28(%eax)
+	fmuls	28(%ecx)
+	movl	16(%esp), %eax
+	fstps	28(%eax)
+	fstps	24(%eax)
+	fstps	20(%eax)
+	fstps	16(%eax)
+	fstps	12(%eax)
+	fstps	8(%eax)
+	fstps	4(%eax)
+	flds	(%esp)                  # 4-byte Folded Reload
+	fstps	(%eax)
+	popl	%eax
+	ret
+.Ltmp8:
+	.size	test_fmul, .Ltmp8-test_fmul
+	.cfi_endproc
+
+	.globl	test_div
+	.align	16, 0x90
+	.type	test_div,@function
+test_div:                               # @test_div
+	.cfi_startproc
+# BB#0:
+	pushl	%eax
+.Ltmp10:
+	.cfi_def_cfa_offset 8
+	movl	8(%esp), %eax
+	flds	(%eax)
+	movl	12(%esp), %ecx
+	fdivs	(%ecx)
+	fstps	(%esp)                  # 4-byte Folded Spill
+	flds	4(%eax)
+	fdivs	4(%ecx)
+	flds	8(%eax)
+	fdivs	8(%ecx)
+	flds	12(%eax)
+	fdivs	12(%ecx)
+	flds	16(%eax)
+	fdivs	16(%ecx)
+	flds	20(%eax)
+	fdivs	20(%ecx)
+	flds	24(%eax)
+	fdivs	24(%ecx)
+	flds	28(%eax)
+	fdivs	28(%ecx)
+	movl	16(%esp), %eax
+	fstps	28(%eax)
+	fstps	24(%eax)
+	fstps	20(%eax)
+	fstps	16(%eax)
+	fstps	12(%eax)
+	fstps	8(%eax)
+	fstps	4(%eax)
+	flds	(%esp)                  # 4-byte Folded Reload
+	fstps	(%eax)
+	popl	%eax
+	ret
+.Ltmp11:
+	.size	test_div, .Ltmp11-test_div
+	.cfi_endproc
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	4
+.LCPI6_0:
+	.long	1083179008              # float 4.500000e+00
+                                        #  (0x40900000)
+.LCPI6_1:
+	.long	1073741824              # float 2.000000e+00
+                                        #  (0x40000000)
+.LCPI6_2:
+	.long	1036831949              # float 1.000000e-01
+                                        #  (0x3dcccccd)
+	.text
+	.globl	test_cst
+	.align	16, 0x90
+	.type	test_cst,@function
+test_cst:                               # @test_cst
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	fld1
+	fadds	4(%eax)
+	flds	(%eax)
+	flds	8(%eax)
+	flds	12(%eax)
+	movl	8(%esp), %eax
+	fxch	%st(3)
+	fstps	4(%eax)
+	fxch	%st(2)
+	fadds	.LCPI6_0
+	fstps	12(%eax)
+	fxch
+	fadds	.LCPI6_1
+	fstps	8(%eax)
+	fadds	.LCPI6_2
+	fstps	(%eax)
+	ret
+.Ltmp12:
+	.size	test_cst, .Ltmp12-test_cst
+	.cfi_endproc
+
+	.globl	test_zero
+	.align	16, 0x90
+	.type	test_zero,@function
+test_zero:                              # @test_zero
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	fldz
+	fld	%st(0)
+	fadds	(%eax)
+	fld	%st(1)
+	fadds	4(%eax)
+	fld	%st(2)
+	fadds	8(%eax)
+	fxch	%st(3)
+	fadds	12(%eax)
+	movl	8(%esp), %eax
+	fstps	12(%eax)
+	fxch	%st(2)
+	fstps	8(%eax)
+	fxch
+	fstps	4(%eax)
+	fstps	(%eax)
+	ret
+.Ltmp13:
+	.size	test_zero, .Ltmp13-test_zero
+	.cfi_endproc
+
+	.globl	test_undef
+	.align	16, 0x90
+	.type	test_undef,@function
+test_undef:                             # @test_undef
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	fldz
+	fld	%st(0)
+	fadds	(%eax)
+	fld	%st(1)
+	fadds	4(%eax)
+	fld	%st(2)
+	fadds	8(%eax)
+	fxch	%st(3)
+	fadds	12(%eax)
+	movl	8(%esp), %eax
+	fstps	12(%eax)
+	fxch	%st(2)
+	fstps	8(%eax)
+	fxch
+	fstps	4(%eax)
+	fstps	(%eax)
+	ret
+.Ltmp14:
+	.size	test_undef, .Ltmp14-test_undef
+	.cfi_endproc
+
+	.globl	test_constant_insert
+	.align	16, 0x90
+	.type	test_constant_insert,@function
+test_constant_insert:                   # @test_constant_insert
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movl	$0, 12(%eax)
+	movl	$0, 8(%eax)
+	movl	$0, 4(%eax)
+	movl	$1092616192, (%eax)     # imm = 0x41200000
+	ret
+.Ltmp15:
+	.size	test_constant_insert, .Ltmp15-test_constant_insert
+	.cfi_endproc
+
+	.globl	test_variable_buildvector
+	.align	16, 0x90
+	.type	test_variable_buildvector,@function
+test_variable_buildvector:              # @test_variable_buildvector
+	.cfi_startproc
+# BB#0:
+	flds	4(%esp)
+	movl	8(%esp), %eax
+	fstps	(%eax)
+	movl	$0, 12(%eax)
+	movl	$0, 8(%eax)
+	movl	$0, 4(%eax)
+	ret
+.Ltmp16:
+	.size	test_variable_buildvector, .Ltmp16-test_variable_buildvector
+	.cfi_endproc
+
+	.globl	test_scalar_to_vector
+	.align	16, 0x90
+	.type	test_scalar_to_vector,@function
+test_scalar_to_vector:                  # @test_scalar_to_vector
+	.cfi_startproc
+# BB#0:
+	flds	4(%esp)
+	movl	8(%esp), %eax
+	fstps	(%eax)
+	ret
+.Ltmp17:
+	.size	test_scalar_to_vector, .Ltmp17-test_scalar_to_vector
+	.cfi_endproc
+
+	.globl	test_extract_elt
+	.align	16, 0x90
+	.type	test_extract_elt,@function
+test_extract_elt:                       # @test_extract_elt
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	flds	12(%eax)
+	ret
+.Ltmp18:
+	.size	test_extract_elt, .Ltmp18-test_extract_elt
+	.cfi_endproc
+
+	.globl	test_extract_elt2
+	.align	16, 0x90
+	.type	test_extract_elt2,@function
+test_extract_elt2:                      # @test_extract_elt2
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	fldl	24(%eax)
+	ret
+.Ltmp19:
+	.size	test_extract_elt2, .Ltmp19-test_extract_elt2
+	.cfi_endproc
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	4
+.LCPI14_0:
+	.long	1082130432              # float 4.000000e+00
+                                        #  (0x40800000)
+.LCPI14_1:
+	.long	1077936128              # float 3.000000e+00
+                                        #  (0x40400000)
+.LCPI14_2:
+	.long	1073741824              # float 2.000000e+00
+                                        #  (0x40000000)
+	.text
+	.globl	test_cast_1
+	.align	16, 0x90
+	.type	test_cast_1,@function
+test_cast_1:                            # @test_cast_1
+	.cfi_startproc
+# BB#0:
+	subl	$16, %esp
+.Ltmp21:
+	.cfi_def_cfa_offset 20
+	movl	20(%esp), %eax
+	fld1
+	fadds	(%eax)
+	fstps	(%esp)
+	flds	4(%eax)
+	flds	8(%eax)
+	flds	12(%eax)
+	movl	(%esp), %ecx
+	incl	%ecx
+	movl	24(%esp), %eax
+	movl	%ecx, (%eax)
+	fadds	.LCPI14_0
+	fstps	4(%esp)
+	movl	4(%esp), %ecx
+	addl	$4, %ecx
+	movl	%ecx, 12(%eax)
+	fadds	.LCPI14_1
+	fstps	12(%esp)
+	movl	12(%esp), %ecx
+	addl	$3, %ecx
+	movl	%ecx, 8(%eax)
+	fadds	.LCPI14_2
+	fstps	8(%esp)
+	movl	8(%esp), %ecx
+	addl	$2, %ecx
+	movl	%ecx, 4(%eax)
+	addl	$16, %esp
+	ret
+.Ltmp22:
+	.size	test_cast_1, .Ltmp22-test_cast_1
+	.cfi_endproc
+
+	.globl	test_cast_2
+	.align	16, 0x90
+	.type	test_cast_2,@function
+test_cast_2:                            # @test_cast_2
+	.cfi_startproc
+# BB#0:
+	pushl	%eax
+.Ltmp24:
+	.cfi_def_cfa_offset 8
+	movl	8(%esp), %eax
+	flds	(%eax)
+	fstps	(%esp)                  # 4-byte Folded Spill
+	flds	4(%eax)
+	flds	8(%eax)
+	flds	12(%eax)
+	flds	16(%eax)
+	flds	20(%eax)
+	flds	24(%eax)
+	flds	28(%eax)
+	movl	12(%esp), %eax
+	fstps	28(%eax)
+	fstps	24(%eax)
+	fstps	20(%eax)
+	fstps	16(%eax)
+	fstps	12(%eax)
+	fstps	8(%eax)
+	fstps	4(%eax)
+	flds	(%esp)                  # 4-byte Folded Reload
+	fstps	(%eax)
+	popl	%eax
+	ret
+.Ltmp25:
+	.size	test_cast_2, .Ltmp25-test_cast_2
+	.cfi_endproc
+
+	.globl	splat
+	.align	16, 0x90
+	.type	splat,@function
+splat:                                  # @splat
+	.cfi_startproc
+# BB#0:
+	movl	8(%esp), %eax
+	flds	12(%esp)
+	fld	%st(0)
+	fadds	(%eax)
+	fld	%st(1)
+	fadds	4(%eax)
+	fld	%st(2)
+	fadds	8(%eax)
+	fxch	%st(3)
+	fadds	12(%eax)
+	movl	4(%esp), %eax
+	fstps	12(%eax)
+	fxch	%st(2)
+	fstps	8(%eax)
+	fxch
+	fstps	4(%eax)
+	fstps	(%eax)
+	ret
+.Ltmp26:
+	.size	splat, .Ltmp26-splat
+	.cfi_endproc
+
+	.globl	splat_i4
+	.align	16, 0x90
+	.type	splat_i4,@function
+splat_i4:                               # @splat_i4
+	.cfi_startproc
+# BB#0:
+	pushl	%edi
+.Ltmp30:
+	.cfi_def_cfa_offset 8
+	pushl	%esi
+.Ltmp31:
+	.cfi_def_cfa_offset 12
+.Ltmp32:
+	.cfi_offset %esi, -12
+.Ltmp33:
+	.cfi_offset %edi, -8
+	movl	16(%esp), %edx
+	movl	20(%esp), %ecx
+	movl	(%edx), %eax
+	addl	%ecx, %eax
+	movl	4(%edx), %esi
+	addl	%ecx, %esi
+	movl	8(%edx), %edi
+	addl	%ecx, %edi
+	addl	12(%edx), %ecx
+	movl	12(%esp), %edx
+	movl	%ecx, 12(%edx)
+	movl	%edi, 8(%edx)
+	movl	%esi, 4(%edx)
+	movl	%eax, (%edx)
+	popl	%esi
+	popl	%edi
+	ret
+.Ltmp34:
+	.size	splat_i4, .Ltmp34-splat_i4
+	.cfi_endproc
+
+
+	.section	".note.GNU-stack","",@progbits
+	.file	"<stdin>"
+	.text
+	.globl	test_f1
+	.align	16, 0x90
+	.type	test_f1,@function
+test_f1:                                # @test_f1
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movss	(%eax), %xmm0
+	movl	8(%esp), %eax
+	addss	(%eax), %xmm0
+	movl	12(%esp), %eax
+	movss	%xmm0, (%eax)
+	ret
+.Ltmp0:
+	.size	test_f1, .Ltmp0-test_f1
+	.cfi_endproc
+
+	.globl	test_f2
+	.align	16, 0x90
+	.type	test_f2,@function
+test_f2:                                # @test_f2
+	.cfi_startproc
+# BB#0:
+	movl	8(%esp), %eax
+	movq	(%eax), %xmm1
+	movl	4(%esp), %eax
+	movq	(%eax), %xmm0
+	addps	%xmm1, %xmm0
+	movl	12(%esp), %eax
+	movss	%xmm0, (%eax)
+	pshufd	$1, %xmm0, %xmm0        # xmm0 = xmm0[1,0,0,0]
+	movss	%xmm0, 4(%eax)
+	ret
+.Ltmp1:
+	.size	test_f2, .Ltmp1-test_f2
+	.cfi_endproc
+
+	.globl	test_f4
+	.align	16, 0x90
+	.type	test_f4,@function
+test_f4:                                # @test_f4
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movl	8(%esp), %eax
+	addps	(%eax), %xmm0
+	movl	12(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp2:
+	.size	test_f4, .Ltmp2-test_f4
+	.cfi_endproc
+
+	.globl	test_f8
+	.align	16, 0x90
+	.type	test_f8,@function
+test_f8:                                # @test_f8
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	addps	(%eax), %xmm0
+	addps	16(%eax), %xmm1
+	movl	12(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp3:
+	.size	test_f8, .Ltmp3-test_f8
+	.cfi_endproc
+
+	.globl	test_fmul
+	.align	16, 0x90
+	.type	test_fmul,@function
+test_fmul:                              # @test_fmul
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	mulps	(%eax), %xmm0
+	mulps	16(%eax), %xmm1
+	movl	12(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp4:
+	.size	test_fmul, .Ltmp4-test_fmul
+	.cfi_endproc
+
+	.globl	test_div
+	.align	16, 0x90
+	.type	test_div,@function
+test_div:                               # @test_div
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	divps	(%eax), %xmm0
+	divps	16(%eax), %xmm1
+	movl	12(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp5:
+	.size	test_div, .Ltmp5-test_div
+	.cfi_endproc
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI6_0:
+	.long	1036831949              # float 1.000000e-01
+	.long	1065353216              # float 1.000000e+00
+	.long	1073741824              # float 2.000000e+00
+	.long	1083179008              # float 4.500000e+00
+	.text
+	.globl	test_cst
+	.align	16, 0x90
+	.type	test_cst,@function
+test_cst:                               # @test_cst
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	addps	.LCPI6_0, %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp6:
+	.size	test_cst, .Ltmp6-test_cst
+	.cfi_endproc
+
+	.globl	test_zero
+	.align	16, 0x90
+	.type	test_zero,@function
+test_zero:                              # @test_zero
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	xorps	%xmm0, %xmm0
+	addps	(%eax), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp7:
+	.size	test_zero, .Ltmp7-test_zero
+	.cfi_endproc
+
+	.globl	test_undef
+	.align	16, 0x90
+	.type	test_undef,@function
+test_undef:                             # @test_undef
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	addps	(%eax), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp8:
+	.size	test_undef, .Ltmp8-test_undef
+	.cfi_endproc
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	4
+.LCPI9_0:
+	.long	1092616192              # float 1.000000e+01
+                                        #  (0x41200000)
+	.text
+	.globl	test_constant_insert
+	.align	16, 0x90
+	.type	test_constant_insert,@function
+test_constant_insert:                   # @test_constant_insert
+	.cfi_startproc
+# BB#0:
+	movss	.LCPI9_0, %xmm0
+	movl	4(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp9:
+	.size	test_constant_insert, .Ltmp9-test_constant_insert
+	.cfi_endproc
+
+	.globl	test_variable_buildvector
+	.align	16, 0x90
+	.type	test_variable_buildvector,@function
+test_variable_buildvector:              # @test_variable_buildvector
+	.cfi_startproc
+# BB#0:
+	movss	4(%esp), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp10:
+	.size	test_variable_buildvector, .Ltmp10-test_variable_buildvector
+	.cfi_endproc
+
+	.globl	test_scalar_to_vector
+	.align	16, 0x90
+	.type	test_scalar_to_vector,@function
+test_scalar_to_vector:                  # @test_scalar_to_vector
+	.cfi_startproc
+# BB#0:
+	movss	4(%esp), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp11:
+	.size	test_scalar_to_vector, .Ltmp11-test_scalar_to_vector
+	.cfi_endproc
+
+	.globl	test_extract_elt
+	.align	16, 0x90
+	.type	test_extract_elt,@function
+test_extract_elt:                       # @test_extract_elt
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	flds	12(%eax)
+	ret
+.Ltmp12:
+	.size	test_extract_elt, .Ltmp12-test_extract_elt
+	.cfi_endproc
+
+	.globl	test_extract_elt2
+	.align	16, 0x90
+	.type	test_extract_elt2,@function
+test_extract_elt2:                      # @test_extract_elt2
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	fldl	24(%eax)
+	ret
+.Ltmp13:
+	.size	test_extract_elt2, .Ltmp13-test_extract_elt2
+	.cfi_endproc
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI14_0:
+	.long	1065353216              # float 1.000000e+00
+	.long	1073741824              # float 2.000000e+00
+	.long	1077936128              # float 3.000000e+00
+	.long	1082130432              # float 4.000000e+00
+.LCPI14_1:
+	.long	1                       # 0x1
+	.long	2                       # 0x2
+	.long	3                       # 0x3
+	.long	4                       # 0x4
+	.text
+	.globl	test_cast_1
+	.align	16, 0x90
+	.type	test_cast_1,@function
+test_cast_1:                            # @test_cast_1
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	addps	.LCPI14_0, %xmm0
+	paddd	.LCPI14_1, %xmm0
+	movl	8(%esp), %eax
+	movdqa	%xmm0, (%eax)
+	ret
+.Ltmp14:
+	.size	test_cast_1, .Ltmp14-test_cast_1
+	.cfi_endproc
+
+	.globl	test_cast_2
+	.align	16, 0x90
+	.type	test_cast_2,@function
+test_cast_2:                            # @test_cast_2
+	.cfi_startproc
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp15:
+	.size	test_cast_2, .Ltmp15-test_cast_2
+	.cfi_endproc
+
+	.globl	splat
+	.align	16, 0x90
+	.type	splat,@function
+splat:                                  # @splat
+	.cfi_startproc
+# BB#0:
+	movss	12(%esp), %xmm0
+	pshufd	$0, %xmm0, %xmm0        # xmm0 = xmm0[0,0,0,0]
+	movl	8(%esp), %eax
+	addps	(%eax), %xmm0
+	movl	4(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+.Ltmp16:
+	.size	splat, .Ltmp16-splat
+	.cfi_endproc
+
+	.globl	splat_i4
+	.align	16, 0x90
+	.type	splat_i4,@function
+splat_i4:                               # @splat_i4
+	.cfi_startproc
+# BB#0:
+	movd	12(%esp), %xmm0
+	pshufd	$0, %xmm0, %xmm0        # xmm0 = xmm0[0,0,0,0]
+	movl	8(%esp), %eax
+	paddd	(%eax), %xmm0
+	movl	4(%esp), %eax
+	movdqa	%xmm0, (%eax)
+	ret
+.Ltmp17:
+	.size	splat_i4, .Ltmp17-splat_i4
+	.cfi_endproc
+
+
+	.section	".note.GNU-stack","",@progbits

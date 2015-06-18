@@ -1,0 +1,65 @@
+	.file	"<stdin>"
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI0_0:
+	.quad	4607632778762754458     # double 1.100000e+00
+                                        #  (0x3ff199999999999a)
+.LCPI0_1:
+	.quad	4619679907765970534     # double 7.100000e+00
+                                        #  (0x401c666666666666)
+.LCPI0_2:
+	.quad	4619792497756654797     # double 7.200000e+00
+                                        #  (0x401ccccccccccccd)
+.LCPI0_3:
+	.quad	4619905087747339059     # double 7.300000e+00
+                                        #  (0x401d333333333333)
+.LCPI0_4:
+	.quad	4608083138725491507     # double 1.200000e+00
+                                        #  (0x3ff3333333333333)
+.LCPI0_5:
+	.quad	4608533498688228557     # double 1.300000e+00
+                                        #  (0x3ff4cccccccccccd)
+.LCPI0_6:
+	.quad	4608983858650965606     # double 1.400000e+00
+                                        #  (0x3ff6666666666666)
+.LCPI0_7:
+	.quad	4620017677738023322     # double 7.400000e+00
+                                        #  (0x401d99999999999a)
+.LCPI0_8:
+	.quad	4620130267728707584     # double 7.500000e+00
+                                        #  (0x401e000000000000)
+.LCPI0_9:
+	.quad	4609434218613702656     # double 1.500000e+00
+                                        #  (0x3ff8000000000000)
+	.text
+	.globl	goo
+	.align	16, 0x90
+	.type	goo,@function
+goo:                                    # @goo
+# BB#0:                                 # %entry
+	movsd	(%rdi), %xmm1
+	movsd	(%rsi), %xmm0
+	addsd	.LCPI0_1(%rip), %xmm1
+	addsd	.LCPI0_0(%rip), %xmm0
+	mulsd	.LCPI0_2(%rip), %xmm1
+	mulsd	.LCPI0_4(%rip), %xmm0
+	addsd	.LCPI0_3(%rip), %xmm1
+	addsd	.LCPI0_5(%rip), %xmm0
+	mulsd	.LCPI0_6(%rip), %xmm0
+	mulsd	.LCPI0_7(%rip), %xmm1
+	addsd	.LCPI0_8(%rip), %xmm1
+	addsd	.LCPI0_9(%rip), %xmm0
+	cvttsd2si	%xmm1, %eax
+	cvttsd2si	%xmm0, %ecx
+	cmpl	%eax, %ecx
+	jge	.LBB0_2
+# BB#1:                                 # %bb
+	movabsq	$4621425052621576602, %rax # imm = 0x402299999999999A
+	movq	%rax, (%rdx)
+.LBB0_2:                                # %return
+	ret
+.Ltmp0:
+	.size	goo, .Ltmp0-goo
+
+
+	.section	".note.GNU-stack","",@progbits

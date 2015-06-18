@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/shift.ll -march=mblaze | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=FUN /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/shift.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/shift.ll -march=mblaze -mattr=+barrel | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=SHT /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/shift.ll

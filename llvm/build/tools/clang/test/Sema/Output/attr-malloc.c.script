@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -Xclang -verify -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/attr-malloc.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/Sema/Output/attr-malloc.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/attr-malloc.c &&
+grep 'define noalias .* @xalloc(' /home/jazouani/llvm/build/tools/clang/test/Sema/Output/attr-malloc.c.tmp &&
+grep 'define noalias .* @xalloc2(' /home/jazouani/llvm/build/tools/clang/test/Sema/Output/attr-malloc.c.tmp

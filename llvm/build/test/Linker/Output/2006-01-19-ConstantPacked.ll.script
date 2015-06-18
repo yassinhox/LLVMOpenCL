@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/2006-01-19-ConstantPacked.ll -o /home/jazouani/llvm/build/test/Linker/Output/2006-01-19-ConstantPacked.ll.tmp1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link -o /home/jazouani/llvm/build/test/Linker/Output/2006-01-19-ConstantPacked.ll.tmp2.bc /home/jazouani/llvm/build/test/Linker/Output/2006-01-19-ConstantPacked.ll.tmp1.bc

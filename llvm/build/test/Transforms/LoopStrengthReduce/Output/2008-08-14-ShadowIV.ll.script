@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/2008-08-14-ShadowIV.ll -loop-reduce -S | grep "phi double" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

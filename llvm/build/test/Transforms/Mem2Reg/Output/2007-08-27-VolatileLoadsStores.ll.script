@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Mem2Reg/2007-08-27-VolatileLoadsStores.ll -std-compile-opts -S | grep volatile | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

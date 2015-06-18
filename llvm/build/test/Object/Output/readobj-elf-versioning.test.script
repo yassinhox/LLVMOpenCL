@@ -1,0 +1,4 @@
+llvm-readobj /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/elf-versioning-test.i386          | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/readobj-elf-versioning.test -check-prefix ELF &&
+llvm-readobj /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/elf-versioning-test.i386          | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/readobj-elf-versioning.test -check-prefix ELF32 &&
+llvm-readobj /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/elf-versioning-test.x86_64          | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/readobj-elf-versioning.test -check-prefix ELF &&
+llvm-readobj /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/elf-versioning-test.x86_64          | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/readobj-elf-versioning.test -check-prefix ELF64

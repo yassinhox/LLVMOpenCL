@@ -1,0 +1,9 @@
+; ModuleID = '<stdin>'
+
+declare noalias i8* @fopen(i8* nocapture, i8* nocapture) nounwind
+
+declare i8 @strlen(i8* nocapture) nounwind readonly
+
+declare noalias i32* @realloc(i32* nocapture, i32) nounwind
+
+declare i32 @strcpy(...)

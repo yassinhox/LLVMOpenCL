@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2009-08-23-linkerprivate.ll -march=ppc32 -mtriple=powerpc-apple-darwin | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2009-08-23-linkerprivate.ll

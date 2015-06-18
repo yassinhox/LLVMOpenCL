@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Verifier/2006-10-15-AddrLabel.ll > /dev/null 2> /home/jazouani/llvm/build/test/Verifier/Output/2006-10-15-AddrLabel.ll.tmp &&
+grep "basic block pointers are invalid" /home/jazouani/llvm/build/test/Verifier/Output/2006-10-15-AddrLabel.ll.tmp

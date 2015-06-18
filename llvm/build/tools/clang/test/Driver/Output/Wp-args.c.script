@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --target i386-pc-linux-gnu -###    -Wp,-MD,FOO.d -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Wp-args.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Wp-args.c.tmp &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Wp-args.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Wp-args.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --target i386-pc-linux-gnu -###    -Wp,-MMD -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Wp-args.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Wp-args.c.tmp &&
+FileCheck -check-prefix MMD < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/Wp-args.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Wp-args.c

@@ -1,0 +1,7 @@
+; ModuleID = '<stdin>'
+
+define i32 @test(i32 %X, i32 %Y) {
+  %tmp = add i32 %Y, %X
+  %tmp1 = shl i32 %tmp, 1
+  ret i32 %tmp1
+}

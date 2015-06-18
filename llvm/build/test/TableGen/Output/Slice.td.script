@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/Slice.td | grep "\[(set" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/Slice.td | grep "\[\]" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

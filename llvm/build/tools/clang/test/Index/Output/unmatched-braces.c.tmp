@@ -1,0 +1,2 @@
+2:7 VarDecl=x:2:7 (Definition) Extent=[2:3 - 2:8] Spelling=x ([2:7 - 2:8])
+Completion string: {ResultType int}{TypedText x}

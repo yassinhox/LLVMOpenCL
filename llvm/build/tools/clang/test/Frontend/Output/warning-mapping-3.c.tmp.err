@@ -1,0 +1,4 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/warning-mapping-3.c:10:13: fatal error: unused function 'f0'
+static void f0(void) {} // expected-fatal {{unused function}}
+            ^
+1 error generated.

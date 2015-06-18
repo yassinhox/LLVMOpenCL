@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/X86/switch_to_lookup_table.ll -simplifycfg -S -mtriple=x86_64-unknown-linux-gnu | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/X86/switch_to_lookup_table.ll

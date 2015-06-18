@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-06-15-not-a-tail-call.ll -march=x86 -tailcallopt | /home/jazouani/llvm/build/Release+Asserts/bin/not grep TAILCALL

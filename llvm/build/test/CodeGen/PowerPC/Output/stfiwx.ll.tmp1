@@ -1,0 +1,26 @@
+	.machine ppc
+	.section	__TEXT,__textcoal_nt,coalesced,pure_instructions
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_test
+	.align	4
+_test:                                  ; @test
+; BB#0:
+	fctiwz f0, f1
+	stfiwx f0, 0, r4
+	blr 
+
+	.globl	_test2
+	.align	4
+_test2:                                 ; @test2
+; BB#0:
+	slwi r3, r5, 2
+	fctiwz f0, f1
+	li r5, 4
+	stfiwx f0, r4, r3
+	stfiwx f0, r4, r5
+	stfiwx f0, 0, r4
+	blr 
+
+.subsections_via_symbols
+

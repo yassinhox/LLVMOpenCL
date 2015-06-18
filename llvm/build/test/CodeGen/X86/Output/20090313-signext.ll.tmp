@@ -1,0 +1,22 @@
+	.file	"<stdin>"
+	.text
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:                                 # %entry
+	pushq	%rax
+	callq	h@PLT
+	movswl	%ax, %edi
+	callq	g@PLT
+	movq	x@GOTPCREL(%rip), %rax
+	movswl	(%rax), %eax
+	popq	%rdx
+	ret
+.Ltmp0:
+	.size	f, .Ltmp0-f
+
+	.type	x,@object               # @x
+	.comm	x,2,2
+
+	.section	".note.GNU-stack","",@progbits

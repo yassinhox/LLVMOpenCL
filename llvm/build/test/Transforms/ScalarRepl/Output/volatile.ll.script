@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/volatile.ll -scalarrepl -S | grep "load volatile" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/volatile.ll -scalarrepl -S | grep "store volatile"

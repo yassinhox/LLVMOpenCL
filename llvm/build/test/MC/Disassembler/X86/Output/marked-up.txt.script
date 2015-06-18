@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --mdis /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/X86/marked-up.txt -triple=x86_64-apple-darwin9 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/X86/marked-up.txt

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/clang_cpp.c -include /home/jazouani/llvm/build/tools/clang/test/Driver/Output/clang_cpp.c.tmp.h -save-temps -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/clang_cpp.c.tmp.log &&
+grep '"-include' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/clang_cpp.c.tmp.log | count 1

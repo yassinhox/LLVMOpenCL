@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -c -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/vtable-debug-info.cpp -o /dev/null

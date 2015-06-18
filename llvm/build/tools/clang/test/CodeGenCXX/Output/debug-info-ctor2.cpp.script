@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fverbose-asm -g -S /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/debug-info-ctor2.cpp -o - | grep AT_explicit

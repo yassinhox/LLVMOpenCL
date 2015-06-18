@@ -1,0 +1,1 @@
+c-index-test -test-print-linkage-source /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/linkage.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/linkage.c

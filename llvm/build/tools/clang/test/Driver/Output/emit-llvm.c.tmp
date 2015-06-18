@@ -1,0 +1,4 @@
+0: input, "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/emit-llvm.c", c
+1: preprocessor, {0}, cpp-output
+2: compiler, {1}, assembler
+3: assembler, {2}, object

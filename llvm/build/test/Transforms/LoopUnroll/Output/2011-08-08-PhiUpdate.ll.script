@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2011-08-08-PhiUpdate.ll -loop-unroll -S -unroll-count=4 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2011-08-08-PhiUpdate.ll

@@ -1,0 +1,74 @@
+	.file	"/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/clang-g-opts.c"
+	.file	1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/clang-g-opts.c"
+	.section	.debug_info,"",@progbits
+.Lsection_info:
+	.section	.debug_abbrev,"",@progbits
+.Lsection_abbrev:
+	.section	.debug_aranges,"",@progbits
+	.section	.debug_macinfo,"",@progbits
+	.section	.debug_line,"",@progbits
+.Lsection_line:
+	.section	.debug_loc,"",@progbits
+	.section	.debug_pubtypes,"",@progbits
+	.section	.debug_str,"MS",@progbits,1
+.Lsection_str:
+	.section	.debug_ranges,"",@progbits
+.Ldebug_range:
+	.section	.debug_loc,"",@progbits
+.Lsection_debug_loc:
+	.text
+.Ltext_begin:
+	.data
+	.text
+.Ltext_end:
+	.data
+.Ldata_end:
+	.text
+.Lsection_end1:
+	.section	.debug_info,"",@progbits
+.Linfo_begin1:
+	.long	34                      # Length of Compilation Unit Info
+	.short	2                       # DWARF version number
+	.long	.Labbrev_begin          # Offset Into Abbrev. Section
+	.byte	8                       # Address Size (in bytes)
+	.byte	1                       # Abbrev [1] 0xb:0x1b DW_TAG_compile_unit
+	.long	.Lstring0               # DW_AT_producer
+	.short	12                      # DW_AT_language
+	.long	.Lstring1               # DW_AT_name
+	.quad	0                       # DW_AT_low_pc
+	.long	.Lsection_line          # DW_AT_stmt_list
+	.long	.Lstring2               # DW_AT_comp_dir
+.Linfo_end1:
+	.section	.debug_abbrev,"",@progbits
+.Labbrev_begin:
+	.byte	1                       # Abbreviation Code
+	.byte	17                      # DW_TAG_compile_unit
+	.byte	0                       # DW_CHILDREN_no
+	.byte	37                      # DW_AT_producer
+	.byte	14                      # DW_FORM_strp
+	.byte	19                      # DW_AT_language
+	.byte	5                       # DW_FORM_data2
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	17                      # DW_AT_low_pc
+	.byte	1                       # DW_FORM_addr
+	.byte	16                      # DW_AT_stmt_list
+	.byte	6                       # DW_FORM_data4
+	.byte	27                      # DW_AT_comp_dir
+	.byte	14                      # DW_FORM_strp
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	0                       # EOM(3)
+.Labbrev_end:
+	.section	.debug_aranges,"",@progbits
+	.section	.debug_ranges,"",@progbits
+	.section	.debug_macinfo,"",@progbits
+	.section	.debug_str,"MS",@progbits,1
+.Lstring0:
+	.asciz	 "clang version 3.2 (tags/RELEASE_32/final)"
+.Lstring1:
+	.asciz	 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/clang-g-opts.c"
+.Lstring2:
+	.asciz	 "/home/jazouani/llvm/build/tools/clang/test/Driver"
+
+	.section	".note.GNU-stack","",@progbits

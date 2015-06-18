@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/stackrealign.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/stackrealign.c -check-prefix=NORMAL &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -mstackrealign /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/stackrealign.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/stackrealign.c -check-prefix=MREALIGN &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -mno-stackrealign /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/stackrealign.c 2>&1 |  FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/stackrealign.c -check-prefix=MNOREALIGN

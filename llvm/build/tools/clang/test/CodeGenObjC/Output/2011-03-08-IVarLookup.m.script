@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -emit-llvm -m64 -fobjc-abi-version=2 /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/2011-03-08-IVarLookup.m -o /dev/null

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips64el -filetype=obj -mcpu=mips64r2 /home/jazouani/llvm/llvm-3.2/test/MC/Mips/lea_64.ll -o -   | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-objdump -disassemble -triple mips64el -   | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Mips/lea_64.ll

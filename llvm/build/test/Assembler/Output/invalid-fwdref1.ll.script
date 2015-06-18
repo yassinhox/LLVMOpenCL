@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Assembler/invalid-fwdref1.ll -disable-output 2>&1 | grep "invalid forward reference to function as global value!"

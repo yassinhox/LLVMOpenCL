@@ -1,0 +1,2 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-macro-args.c:11:12 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-macro-args.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-macro-args.c &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-macro-args.c:12:12 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-macro-args.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-macro-args.c

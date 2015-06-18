@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopSimplify/merge-exits.ll -loop-simplify -loop-rotate -instcombine -indvars -S -verify-loop-info -verify-dom-info > /home/jazouani/llvm/build/test/Transforms/LoopSimplify/Output/merge-exits.ll.tmp &&
+not grep sext /home/jazouani/llvm/build/test/Transforms/LoopSimplify/Output/merge-exits.ll.tmp &&
+grep "phi i64" /home/jazouani/llvm/build/test/Transforms/LoopSimplify/Output/merge-exits.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

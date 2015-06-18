@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/full-lsr.ll -march=x86 -mcpu=generic | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/full-lsr.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/full-lsr.ll -march=x86 -mcpu=atom | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=ATOM /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/full-lsr.ll

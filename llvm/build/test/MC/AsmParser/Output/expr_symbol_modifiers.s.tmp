@@ -1,0 +1,14 @@
+	.section	__TEXT,__text,regular,pure_instructions
+
+
+
+
+
+	.long	1
+
+
+	.long	a@GOTPCREL+4
+
+	.long	a@GOTPCREL+b@GOTPCREL
+
+	.long	(10+b@GOTPCREL)+4

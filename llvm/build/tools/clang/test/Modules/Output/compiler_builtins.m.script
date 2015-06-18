@@ -1,0 +1,3 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Modules/Output/compiler_builtins.m.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -fmodules -fmodule-cache-path /home/jazouani/llvm/build/tools/clang/test/Modules/Output/compiler_builtins.m.tmp -D__need_wint_t /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/compiler_builtins.m -Xclang -verify &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fsyntax-only -std=c99 -fmodules -fmodule-cache-path /home/jazouani/llvm/build/tools/clang/test/Modules/Output/compiler_builtins.m.tmp -D__need_wint_t /home/jazouani/llvm/llvm-3.2/tools/clang/test/Modules/compiler_builtins.m -Xclang -verify

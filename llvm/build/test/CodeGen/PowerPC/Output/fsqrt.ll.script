@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/fsqrt.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -mattr=+fsqrt |    grep "fsqrt f1, f1" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/fsqrt.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -mcpu=g5 |    grep "fsqrt f1, f1" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/fsqrt.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -mattr=-fsqrt |    not grep "fsqrt f1, f1" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/fsqrt.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -mcpu=g4 |    not grep "fsqrt f1, f1"

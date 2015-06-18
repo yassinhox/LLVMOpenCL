@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2006-04-05-splat-ish.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 -mcpu=g5 |    grep "vspltish v.*, 10"

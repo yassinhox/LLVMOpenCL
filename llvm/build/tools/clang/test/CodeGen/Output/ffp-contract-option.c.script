@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -O3 -ffp-contract=fast -triple=powerpc-apple-darwin10 -S -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/ffp-contract-option.c | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/ffp-contract-option.c

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/visibility1.ll /home/jazouani/llvm/llvm-3.2/test/Linker/visibility2.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Linker/visibility1.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/visibility2.ll /home/jazouani/llvm/llvm-3.2/test/Linker/visibility1.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Linker/visibility1.ll

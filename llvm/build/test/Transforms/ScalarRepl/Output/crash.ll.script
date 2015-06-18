@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -scalarrepl /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/crash.ll -disable-output &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -scalarrepl-ssa /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/crash.ll -disable-output

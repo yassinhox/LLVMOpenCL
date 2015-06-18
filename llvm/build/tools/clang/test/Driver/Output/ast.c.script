@@ -1,0 +1,7 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -ccc-print-phases -emit-ast /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/ast.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp &&
+echo 'END' >> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp &&
+FileCheck -check-prefix EMIT-AST-PHASES -input-file /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/ast.c &&
+touch /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp.ast &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -ccc-print-phases -c /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp.ast 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp &&
+echo 'END' >> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp &&
+FileCheck -check-prefix COMPILE-AST-PHASES -input-file /home/jazouani/llvm/build/tools/clang/test/Driver/Output/ast.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/ast.c

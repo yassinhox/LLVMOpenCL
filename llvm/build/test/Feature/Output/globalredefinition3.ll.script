@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Feature/globalredefinition3.ll -o /dev/null 2>&1 | grep "redefinition of global '@B'"

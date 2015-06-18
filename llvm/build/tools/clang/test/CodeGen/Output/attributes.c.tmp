@@ -1,0 +1,111 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/attributes.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i386--linux-gnu"
+
+%struct.s0 = type { i32 }
+
+@t5 = weak global i32 2, align 4
+@t13 = global %struct.s0 zeroinitializer, section "SECT", align 4
+@t14.x = internal global i32 0, section "SECT", align 4
+@t18 = global i32 1, align 4
+@t16 = extern_weak global i32
+@fptr = common global void (i32)* null, align 4
+@t6 = common protected global i32 0, align 4
+@t12 = global i32 0, section "SECT", align 4
+
+@t9 = alias weak bitcast (void ()* @__t8 to void (...)*)
+
+define void @t14() nounwind {
+entry:
+  ret void
+}
+
+define void @__t8() nounwind {
+entry:
+  ret void
+}
+
+define i32 @t17() nounwind {
+entry:
+  %call = call i32 @t15()
+  %0 = load i32* @t16, align 4
+  %add = add nsw i32 %call, %0
+  ret i32 %add
+}
+
+declare extern_weak i32 @t15()
+
+define void @t1() noreturn nounwind {
+entry:
+  br label %while.body
+
+while.body:                                       ; preds = %entry, %while.body
+  br label %while.body
+
+return:                                           ; No predecessors!
+  ret void
+}
+
+define void @t2() nounwind {
+entry:
+  ret void
+}
+
+define weak void @t3() nounwind {
+entry:
+  ret void
+}
+
+define hidden void @t4() nounwind {
+entry:
+  ret void
+}
+
+define void @t7() noreturn nounwind {
+entry:
+  br label %while.body
+
+while.body:                                       ; preds = %entry, %while.body
+  br label %while.body
+
+return:                                           ; No predecessors!
+  ret void
+}
+
+define void @t10() nounwind section "SECT" {
+entry:
+  ret void
+}
+
+define void @t11() nounwind section "SECT" {
+entry:
+  ret void
+}
+
+define i32 @t19() nounwind {
+entry:
+  ret i32 10
+}
+
+define void @t20() nounwind {
+entry:
+  call void @abort() noreturn nounwind
+  unreachable
+
+return:                                           ; No predecessors!
+  ret void
+}
+
+declare void @abort() noreturn nounwind
+
+define void @t21() nounwind {
+entry:
+  %0 = load void (i32)** @fptr, align 4
+  call x86_fastcallcc void %0(i32 inreg 10)
+  ret void
+}
+
+define void @t22() nounwind section ".bar" {
+entry:
+  ret void
+}

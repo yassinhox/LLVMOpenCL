@@ -1,0 +1,1 @@
+c-index-test -test-load-source all -fno-delayed-template-parsing /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/load-stmts.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/load-stmts.cpp

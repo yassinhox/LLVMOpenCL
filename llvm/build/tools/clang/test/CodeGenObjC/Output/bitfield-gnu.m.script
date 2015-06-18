@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -S -emit-llvm -fobjc-runtime=gcc -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/bitfield-gnu.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/bitfield-gnu.m

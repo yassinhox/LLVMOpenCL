@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2009-02-21-LoadCST.ll -instcombine -S | grep "ret i32 3679669"

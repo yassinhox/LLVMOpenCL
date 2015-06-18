@@ -1,0 +1,75 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/x86_32-arguments-linux.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i386-pc-linux-gnu"
+
+%struct.s56_0 = type { i8 }
+%struct.s56_1 = type { <2 x i32> }
+%struct.s56_2 = type { <1 x double> }
+%struct.s56_3 = type { <4 x i32> }
+%struct.s56_4 = type { <2 x double> }
+%struct.s56_5 = type { <8 x i32> }
+%struct.s56_6 = type { <4 x double> }
+
+define void @f56(i8 signext %a0, %struct.s56_0* byval align 4 %a1, x86_mmx %a2.coerce, %struct.s56_1* byval align 4, <1 x double> %a4, %struct.s56_2* byval align 4, <4 x i32> %a6, %struct.s56_3* byval align 4, <2 x double> %a8, %struct.s56_4* byval align 4, <8 x i32> %a10, %struct.s56_5* byval align 4, <4 x double> %a12, %struct.s56_6* byval align 4) nounwind {
+entry:
+  %a0.addr = alloca i8, align 1
+  %a2 = alloca <2 x i32>, align 8
+  %a2.addr = alloca <2 x i32>, align 8
+  %a3 = alloca %struct.s56_1, align 8
+  %a4.addr = alloca <1 x double>, align 8
+  %a5 = alloca %struct.s56_2, align 8
+  %a6.addr = alloca <4 x i32>, align 16
+  %a7 = alloca %struct.s56_3, align 16
+  %a8.addr = alloca <2 x double>, align 16
+  %a9 = alloca %struct.s56_4, align 16
+  %a10.addr = alloca <8 x i32>, align 32
+  %a11 = alloca %struct.s56_5, align 32
+  %a12.addr = alloca <4 x double>, align 32
+  %a13 = alloca %struct.s56_6, align 32
+  %coerce = alloca <2 x i32>, align 8
+  store i8 %a0, i8* %a0.addr, align 1
+  %6 = bitcast <2 x i32>* %a2 to x86_mmx*
+  store x86_mmx %a2.coerce, x86_mmx* %6, align 1
+  %a21 = load <2 x i32>* %a2, align 8
+  store <2 x i32> %a21, <2 x i32>* %a2.addr, align 8
+  %7 = bitcast %struct.s56_1* %a3 to i8*
+  %8 = bitcast %struct.s56_1* %0 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %7, i8* %8, i32 8, i32 4, i1 false)
+  store <1 x double> %a4, <1 x double>* %a4.addr, align 8
+  %9 = bitcast %struct.s56_2* %a5 to i8*
+  %10 = bitcast %struct.s56_2* %1 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %9, i8* %10, i32 8, i32 4, i1 false)
+  store <4 x i32> %a6, <4 x i32>* %a6.addr, align 16
+  %11 = bitcast %struct.s56_3* %a7 to i8*
+  %12 = bitcast %struct.s56_3* %2 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %11, i8* %12, i32 16, i32 4, i1 false)
+  store <2 x double> %a8, <2 x double>* %a8.addr, align 16
+  %13 = bitcast %struct.s56_4* %a9 to i8*
+  %14 = bitcast %struct.s56_4* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %13, i8* %14, i32 16, i32 4, i1 false)
+  store <8 x i32> %a10, <8 x i32>* %a10.addr, align 32
+  %15 = bitcast %struct.s56_5* %a11 to i8*
+  %16 = bitcast %struct.s56_5* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %15, i8* %16, i32 32, i32 4, i1 false)
+  store <4 x double> %a12, <4 x double>* %a12.addr, align 32
+  %17 = bitcast %struct.s56_6* %a13 to i8*
+  %18 = bitcast %struct.s56_6* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %17, i8* %18, i32 32, i32 4, i1 false)
+  %19 = load i8* %a0.addr, align 1
+  %conv = sext i8 %19 to i32
+  %20 = load <2 x i32>* %a2.addr, align 8
+  %21 = load <1 x double>* %a4.addr, align 8
+  %22 = load <4 x i32>* %a6.addr, align 16
+  %23 = load <2 x double>* %a8.addr, align 16
+  %24 = load <8 x i32>* %a10.addr, align 32
+  %25 = load <4 x double>* %a12.addr, align 32
+  store <2 x i32> %20, <2 x i32>* %coerce, align 8
+  %26 = bitcast <2 x i32>* %coerce to x86_mmx*
+  %27 = load x86_mmx* %26, align 1
+  call void (i32, ...)* @f56_0(i32 1, i32 %conv, %struct.s56_0* byval align 4 %a1, x86_mmx %27, %struct.s56_1* byval align 4 %a3, <1 x double> %21, %struct.s56_2* byval align 4 %a5, <4 x i32> %22, %struct.s56_3* byval align 4 %a7, <2 x double> %23, %struct.s56_4* byval align 4 %a9, <8 x i32> %24, %struct.s56_5* byval align 4 %a11, <4 x double> %25, %struct.s56_6* byval align 4 %a13)
+  ret void
+}
+
+declare void @llvm.memcpy.p0i8.p0i8.i32(i8* nocapture, i8* nocapture, i32, i32, i1) nounwind
+
+declare void @f56_0(i32, ...)

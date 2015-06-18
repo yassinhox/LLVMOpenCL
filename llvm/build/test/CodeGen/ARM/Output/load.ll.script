@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/load.ll -march=arm > /home/jazouani/llvm/build/test/CodeGen/ARM/Output/load.ll.tmp &&
+grep ldrsb /home/jazouani/llvm/build/test/CodeGen/ARM/Output/load.ll.tmp &&
+grep ldrb /home/jazouani/llvm/build/test/CodeGen/ARM/Output/load.ll.tmp &&
+grep ldrsh /home/jazouani/llvm/build/test/CodeGen/ARM/Output/load.ll.tmp &&
+grep ldrh /home/jazouani/llvm/build/test/CodeGen/ARM/Output/load.ll.tmp

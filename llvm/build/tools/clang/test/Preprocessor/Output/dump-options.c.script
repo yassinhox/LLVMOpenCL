@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/dump-options.c -E -dD | grep __INTMAX_MAX__ &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/dump-options.c -E -dM | grep __INTMAX_MAX__

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/link-messages.ll -o /home/jazouani/llvm/build/test/Linker/Output/link-messages.ll.tmp.one.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/link-messages.ll -o /home/jazouani/llvm/build/test/Linker/Output/link-messages.ll.tmp.two.bc &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/link-messages.ll.tmp.one.bc /home/jazouani/llvm/build/test/Linker/Output/link-messages.ll.tmp.two.bc -o /home/jazouani/llvm/build/test/Linker/Output/link-messages.ll.tmp.bc 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Linker/link-messages.ll

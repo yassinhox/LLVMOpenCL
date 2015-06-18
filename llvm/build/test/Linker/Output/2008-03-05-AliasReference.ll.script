@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/2008-03-05-AliasReference.ll -o /home/jazouani/llvm/build/test/Linker/Output/2008-03-05-AliasReference.ll.tmp1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Linker/2008-03-05-AliasReference2.ll -o /home/jazouani/llvm/build/test/Linker/Output/2008-03-05-AliasReference.ll.tmp2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2008-03-05-AliasReference.ll.tmp2.bc /home/jazouani/llvm/build/test/Linker/Output/2008-03-05-AliasReference.ll.tmp1.bc -o /home/jazouani/llvm/build/test/Linker/Output/2008-03-05-AliasReference.ll.tmp3.bc

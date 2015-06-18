@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LCSSA/2007-07-12-LICM-3.ll -loop-rotate -licm -loop-unswitch -disable-output

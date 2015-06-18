@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/ListOfList.td | grep "foo" | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

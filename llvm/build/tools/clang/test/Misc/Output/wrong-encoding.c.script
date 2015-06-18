@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -Wno-unused-value /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/wrong-encoding.c 2>&1 | FileCheck -strict-whitespace /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/wrong-encoding.c

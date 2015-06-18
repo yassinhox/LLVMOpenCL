@@ -1,0 +1,30 @@
+; ModuleID = '-'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i686-pc-linux-gnu"
+
+@b = common global i8 0, align 1
+@a = common global i8 0, align 1
+
+define void @c() nounwind {
+entry:
+  %0 = load i8* @b, align 1
+  %conv = zext i8 %0 to i32
+  %1 = load i8* @a, align 1
+  %conv1 = zext i8 %1 to i32
+  %shl = shl i32 %conv1, %conv
+  %conv2 = trunc i32 %shl to i8
+  store i8 %conv2, i8* @a, align 1
+  ret void
+}
+
+define void @d() nounwind {
+entry:
+  %0 = load i8* @b, align 1
+  %conv = zext i8 %0 to i32
+  %1 = load i8* @a, align 1
+  %conv1 = zext i8 %1 to i32
+  %div = sdiv i32 %conv1, %conv
+  %conv2 = trunc i32 %div to i8
+  store i8 %conv2, i8* @a, align 1
+  ret void
+}

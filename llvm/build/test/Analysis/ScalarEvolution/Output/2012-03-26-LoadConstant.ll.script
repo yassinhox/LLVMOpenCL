@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2012-03-26-LoadConstant.ll -basicaa -globalopt -instcombine -loop-rotate -licm -instcombine -indvars -loop-deletion -constmerge -S

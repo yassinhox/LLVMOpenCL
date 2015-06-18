@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/div.ll -march=mblaze | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=FUN /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/div.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/div.ll -march=mblaze -mattr=+div | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=DIV /home/jazouani/llvm/llvm-3.2/test/CodeGen/MBlaze/div.ll

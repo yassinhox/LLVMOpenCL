@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/MemCpyOpt/sret.ll -basicaa -memcpyopt -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "call.*memcpy"

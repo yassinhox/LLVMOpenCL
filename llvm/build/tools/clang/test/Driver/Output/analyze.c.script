@@ -1,0 +1,2 @@
+env MACOSX_DEPLOYMENT_TARGET=10.5  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9  -### --analyze -o /dev/null /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/analyze.c -msse 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/analyze.c.tmp.log &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Driver/Output/analyze.c.tmp.log /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/analyze.c

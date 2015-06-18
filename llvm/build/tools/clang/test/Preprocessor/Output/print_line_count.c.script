@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -E -C -P /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/print_line_count.c | wc -l | grep 4

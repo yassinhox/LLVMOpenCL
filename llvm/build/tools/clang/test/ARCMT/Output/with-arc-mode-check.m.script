@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -arcmt-check -fsyntax-only -fobjc-arc -x objective-c /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/with-arc-mode-check.m

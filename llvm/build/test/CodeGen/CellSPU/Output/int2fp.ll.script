@@ -1,0 +1,8 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/int2fp.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s &&
+grep csflt /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep cuflt /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep xshw  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep xsbh  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep and   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep andi  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep ila   /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/int2fp.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

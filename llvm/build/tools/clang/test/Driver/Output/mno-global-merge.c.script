@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target armv7-apple-darwin10    -mno-global-merge -### -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/mno-global-merge.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/mno-global-merge.c.tmp &&
+FileCheck --check-prefix=CHECK-NGM < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/mno-global-merge.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/mno-global-merge.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target armv7-apple-darwin10    -mglobal-merge -### -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/mno-global-merge.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/mno-global-merge.c.tmp &&
+FileCheck --check-prefix=CHECK-GM < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/mno-global-merge.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/mno-global-merge.c

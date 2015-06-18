@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/varargs.ll -mtriple=powerpc-apple-darwin | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=P32 /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/varargs.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/varargs.ll -mtriple=powerpc64-apple-darwin | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=P64 /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/varargs.ll

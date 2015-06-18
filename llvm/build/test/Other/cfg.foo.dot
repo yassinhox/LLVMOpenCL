@@ -1,0 +1,7 @@
+digraph "CFG for 'foo' function" {
+	label="CFG for 'foo' function";
+
+	Node0x126b3a0 [shape=record,label="{entry}"];
+	Node0x126b3a0 -> Node0x1275dc0;
+	Node0x1275dc0 [shape=record,label="{return}"];
+}

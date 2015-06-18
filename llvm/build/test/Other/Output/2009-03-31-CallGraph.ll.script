@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Other/2009-03-31-CallGraph.ll -inline -prune-eh -disable-output

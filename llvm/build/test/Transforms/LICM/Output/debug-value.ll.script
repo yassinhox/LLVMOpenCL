@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -licm -basicaa < /home/jazouani/llvm/llvm-3.2/test/Transforms/LICM/debug-value.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LICM/debug-value.ll

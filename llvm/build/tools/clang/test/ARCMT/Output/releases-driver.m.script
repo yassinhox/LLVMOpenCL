@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fblocks -fsyntax-only -fobjc-arc -x objective-c /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/releases-driver.m.result &&
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/releases-driver.m /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/releases-driver.m.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -arcmt-modify -triple x86_64-apple-macosx10.6 -x objective-c /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/releases-driver.m.tmp &&
+diff /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/releases-driver.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/releases-driver.m.result &&
+rm /home/jazouani/llvm/build/tools/clang/test/ARCMT/Output/releases-driver.m.tmp

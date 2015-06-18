@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=x86_64-apple-macosx10.7 /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/pointer-type-size.ll -o /home/jazouani/llvm/build/test/DebugInfo/X86/Output/pointer-type-size.ll.tmp -filetype=obj &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dwarfdump /home/jazouani/llvm/build/test/DebugInfo/X86/Output/pointer-type-size.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/pointer-type-size.ll

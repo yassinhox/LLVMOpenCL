@@ -1,0 +1,99 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/attr-weakref.c'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S128"
+target triple = "i386--linux-gnu"
+
+@test7_zed = internal constant i8* bitcast (void ()* @test7_f to i8*), align 4
+
+define void @test1_h() nounwind {
+entry:
+  call void @test1_f()
+  ret void
+}
+
+declare extern_weak void @test1_f()
+
+define void @test2_f() nounwind {
+entry:
+  ret void
+}
+
+define void @test2_h() nounwind {
+entry:
+  call void @test2_f()
+  ret void
+}
+
+define void @test3_foo() nounwind {
+entry:
+  call void @test3_f()
+  ret void
+}
+
+declare void @test3_f()
+
+define void @test3_h() nounwind {
+entry:
+  call void @test3_f()
+  ret void
+}
+
+define void @test4_h() nounwind {
+entry:
+  call void @test4_f()
+  ret void
+}
+
+define void @test4_f() nounwind {
+entry:
+  ret void
+}
+
+define void @test5_h() nounwind {
+entry:
+  call void @test5_f()
+  ret void
+}
+
+declare void @test5_f()
+
+define void @test5_foo() nounwind {
+entry:
+  call void @test5_f()
+  ret void
+}
+
+define void @test6_h() nounwind {
+entry:
+  call void @test6_f()
+  ret void
+}
+
+declare extern_weak void @test6_f()
+
+define void @test6_foo() nounwind {
+entry:
+  call void @test6_f()
+  ret void
+}
+
+define void @test8_h() nounwind {
+entry:
+  br i1 icmp ne (void ()* @test8_f, void ()* null), label %if.then, label %if.end
+
+if.then:                                          ; preds = %entry
+  call void @test8_f()
+  br label %if.end
+
+if.end:                                           ; preds = %if.then, %entry
+  ret void
+}
+
+declare extern_weak void @test8_f()
+
+define i8* @test7_h() nounwind {
+entry:
+  %0 = load i8** @test7_zed, align 4
+  ret i8* %0
+}
+
+declare extern_weak void @test7_f()

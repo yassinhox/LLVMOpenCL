@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/largeimmprinting.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/largeimmprinting.ll -check-prefix=32 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips64el -mcpu=mips64 -mattr=n64 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/largeimmprinting.ll |  /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/largeimmprinting.ll -check-prefix=64

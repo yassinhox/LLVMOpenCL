@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/truncstore-dag-combine.ll -march=arm -mattr=+v4t | /home/jazouani/llvm/build/Release+Asserts/bin/not grep orr &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/truncstore-dag-combine.ll -march=arm -mattr=+v4t | /home/jazouani/llvm/build/Release+Asserts/bin/not grep mov

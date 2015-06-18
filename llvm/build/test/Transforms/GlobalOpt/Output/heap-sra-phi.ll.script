@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/heap-sra-phi.ll -globalopt -S | grep "tmp.f1 = phi i32. " &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/heap-sra-phi.ll -globalopt -S | grep "tmp.f0 = phi i32. "

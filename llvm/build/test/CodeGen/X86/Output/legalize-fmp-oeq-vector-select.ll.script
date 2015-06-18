@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=x86-64 -enable-legalize-types-checking < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/legalize-fmp-oeq-vector-select.ll

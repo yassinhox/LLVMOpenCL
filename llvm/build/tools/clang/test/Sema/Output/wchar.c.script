@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/wchar.c -fsyntax-only -Xclang -verify &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/wchar.c -fsyntax-only -fshort-wchar -Xclang -verify -DSHORT_WCHAR

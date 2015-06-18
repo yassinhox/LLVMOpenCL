@@ -1,0 +1,99 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_foo
+	.align	4, 0x90
+_foo:                                   ## @foo
+## BB#0:
+	bswapq	%rdi
+	movq	%rdi, %rax
+	ret
+
+	.globl	_bar
+	.align	4, 0x90
+_bar:                                   ## @bar
+## BB#0:
+	bswapq	%rdi
+	movq	%rdi, %rax
+	ret
+
+	.globl	_pen
+	.align	4, 0x90
+_pen:                                   ## @pen
+## BB#0:
+	bswapl	%edi
+	movl	%edi, %eax
+	ret
+
+	.globl	_s16
+	.align	4, 0x90
+_s16:                                   ## @s16
+## BB#0:
+	rolw	$8, %di
+	movzwl	%di, %eax
+	ret
+
+	.globl	_t16
+	.align	4, 0x90
+_t16:                                   ## @t16
+## BB#0:
+	rolw	$8, %di
+	movzwl	%di, %eax
+	ret
+
+	.globl	_u16
+	.align	4, 0x90
+_u16:                                   ## @u16
+## BB#0:
+	rolw	$8, %di
+	movzwl	%di, %eax
+	ret
+
+	.globl	_v16
+	.align	4, 0x90
+_v16:                                   ## @v16
+## BB#0:
+	rolw	$8, %di
+	movzwl	%di, %eax
+	ret
+
+	.globl	_s32
+	.align	4, 0x90
+_s32:                                   ## @s32
+## BB#0:
+	bswapl	%edi
+	movl	%edi, %eax
+	ret
+
+	.globl	_t32
+	.align	4, 0x90
+_t32:                                   ## @t32
+## BB#0:
+	bswapl	%edi
+	movl	%edi, %eax
+	ret
+
+	.globl	_u32
+	.align	4, 0x90
+_u32:                                   ## @u32
+## BB#0:
+	bswapl	%edi
+	movl	%edi, %eax
+	ret
+
+	.globl	_s64
+	.align	4, 0x90
+_s64:                                   ## @s64
+## BB#0:
+	bswapq	%rdi
+	movq	%rdi, %rax
+	ret
+
+	.globl	_t64
+	.align	4, 0x90
+_t64:                                   ## @t64
+## BB#0:
+	bswapq	%rdi
+	movq	%rdi, %rax
+	ret
+
+
+.subsections_via_symbols

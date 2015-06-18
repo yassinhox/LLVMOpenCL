@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-VST2b32_UPD-arm.txt -triple=armv7-unknown-unknwon -mcpu=cortex-a8 2>&1 | grep "invalid instruction encoding"

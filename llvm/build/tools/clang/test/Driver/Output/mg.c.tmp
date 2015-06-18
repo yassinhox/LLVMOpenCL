@@ -1,0 +1,2 @@
+mg.o: /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/mg.c \
+  nonexistent-preinclude.h nonexistent-ppinclude.h

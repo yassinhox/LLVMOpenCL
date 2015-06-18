@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/JavaCompare.ll -instcombine -S | grep "icmp sle i32 %A, %B"

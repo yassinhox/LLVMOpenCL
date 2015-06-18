@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Internalize/2009-01-05-InternalizeAliases.ll -internalize -internalize-public-api-list main -S | grep internal | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

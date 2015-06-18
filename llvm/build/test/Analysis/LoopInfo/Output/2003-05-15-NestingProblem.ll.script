@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/LoopInfo/2003-05-15-NestingProblem.ll -analyze -loops |    grep "^            Loop at depth 4 containing: %loopentry.7<header><latch><exiting>"

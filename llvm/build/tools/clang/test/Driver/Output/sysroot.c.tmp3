@@ -1,0 +1,4 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: i386-apple-darwin10
+Thread model: posix
+ "/usr/bin/ld" "-dynamic" "-arch" "i386" "-macosx_version_min" "10.6.0" "-syslibroot" "/BAR" "-o" "a.out" "-lcrt1.10.6.o" "/home/jazouani/llvm/build/tools/clang/test/Driver/Output/sysroot.c.tmp3.o" "-lSystem"

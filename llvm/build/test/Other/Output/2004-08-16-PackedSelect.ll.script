@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Other/2004-08-16-PackedSelect.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis

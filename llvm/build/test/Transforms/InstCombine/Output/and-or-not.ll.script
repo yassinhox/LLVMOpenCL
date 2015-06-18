@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/and-or-not.ll -instcombine -S | grep xor | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/and-or-not.ll -instcombine -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep and &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/and-or-not.ll -instcombine -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep " or"

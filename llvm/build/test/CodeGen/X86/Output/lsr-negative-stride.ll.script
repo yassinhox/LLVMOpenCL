@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/lsr-negative-stride.ll -march=x86 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/lsr-negative-stride.ll.tmp &&
+not grep neg /home/jazouani/llvm/build/test/CodeGen/X86/Output/lsr-negative-stride.ll.tmp &&
+not grep sub.*esp /home/jazouani/llvm/build/test/CodeGen/X86/Output/lsr-negative-stride.ll.tmp &&
+not grep esi /home/jazouani/llvm/build/test/CodeGen/X86/Output/lsr-negative-stride.ll.tmp &&
+not grep push /home/jazouani/llvm/build/test/CodeGen/X86/Output/lsr-negative-stride.ll.tmp

@@ -1,0 +1,4 @@
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/diagnostics-option-names.c:7:12: error: comparison of integers of different signs: 'int' and 'unsigned int' [-Werror,-Wsign-compare]
+  return x < y; // expected-error {{ : 'int' and 'unsigned int'  }}
+         ~ ^ ~
+1 error generated.

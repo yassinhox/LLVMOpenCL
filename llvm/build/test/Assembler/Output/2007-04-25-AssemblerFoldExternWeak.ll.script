@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2007-04-25-AssemblerFoldExternWeak.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "icmp.*test_weak.*null"

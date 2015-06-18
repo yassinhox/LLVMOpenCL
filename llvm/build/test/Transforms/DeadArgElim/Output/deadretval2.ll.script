@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/deadretval2.ll -deadargelim -die -S > /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/deadretval2.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/deadretval2.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/not grep DEAD &&
+cat /home/jazouani/llvm/build/test/Transforms/DeadArgElim/Output/deadretval2.ll.tmp | grep LIVE | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/Dominators/2007-07-11-SplitBlock.ll -loop-rotate -loop-unswitch -disable-output

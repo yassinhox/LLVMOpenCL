@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis < /home/jazouani/llvm/llvm-3.2/test/Bitcode/null-type.ll.bc > /dev/null 2> /home/jazouani/llvm/build/test/Bitcode/Output/null-type.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Bitcode/null-type.ll < /home/jazouani/llvm/build/test/Bitcode/Output/null-type.ll.tmp

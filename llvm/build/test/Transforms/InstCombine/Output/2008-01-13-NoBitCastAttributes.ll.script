@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-01-13-NoBitCastAttributes.ll -instcombine -S | grep bitcast | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

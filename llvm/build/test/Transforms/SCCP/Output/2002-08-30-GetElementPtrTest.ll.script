@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/2002-08-30-GetElementPtrTest.ll -sccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep %X

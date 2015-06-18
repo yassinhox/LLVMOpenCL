@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -tbaa -basicaa -gvn -S < /home/jazouani/llvm/llvm-3.2/test/Analysis/TypeBasedAliasAnalysis/gvn-nonlocal-type-mismatch.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Analysis/TypeBasedAliasAnalysis/gvn-nonlocal-type-mismatch.ll

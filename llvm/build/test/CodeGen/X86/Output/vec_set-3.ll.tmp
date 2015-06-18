@@ -1,0 +1,25 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+# BB#0:
+	pshufd	$81, 4(%esp), %xmm0     # xmm0 = mem[1,0,1,1]
+	ret
+.Ltmp0:
+	.size	test, .Ltmp0-test
+
+	.globl	test2
+	.align	16, 0x90
+	.type	test2,@function
+test2:                                  # @test2
+# BB#0:
+	movd	4(%esp), %xmm0
+	pshufd	$69, %xmm0, %xmm0       # xmm0 = xmm0[1,1,0,1]
+	ret
+.Ltmp1:
+	.size	test2, .Ltmp1-test2
+
+
+	.section	".note.GNU-stack","",@progbits

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=x86 -asm-verbose=false < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/switch-or.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/switch-or.ll

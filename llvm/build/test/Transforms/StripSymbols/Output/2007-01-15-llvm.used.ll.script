@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/StripSymbols/2007-01-15-llvm.used.ll -strip -S | grep foo | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/StripSymbols/2007-01-15-llvm.used.ll -strip -S | grep bar | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

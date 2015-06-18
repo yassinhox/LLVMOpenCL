@@ -1,0 +1,338 @@
+	.file	"/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/2010-03-09-AnonAggregate.cpp"
+	.file	1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/<unknown>"
+	.file	2 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/2010-03-09-AnonAggregate.cpp"
+	.section	.debug_info,"",@progbits
+.Lsection_info:
+	.section	.debug_abbrev,"",@progbits
+.Lsection_abbrev:
+	.section	.debug_aranges,"",@progbits
+	.section	.debug_macinfo,"",@progbits
+	.section	.debug_line,"",@progbits
+.Lsection_line:
+	.section	.debug_loc,"",@progbits
+	.section	.debug_pubtypes,"",@progbits
+	.section	.debug_str,"MS",@progbits,1
+.Lsection_str:
+	.section	.debug_ranges,"",@progbits
+.Ldebug_range:
+	.section	.debug_loc,"",@progbits
+.Lsection_debug_loc:
+	.text
+.Ltext_begin:
+	.data
+	.type	m,@object
+	.bss
+	.globl	m
+	.align	4
+m:
+	.zero	8
+	.size	m, 8
+
+	.text
+.Ltext_end:
+	.data
+.Ldata_end:
+	.text
+.Lsection_end1:
+	.section	.debug_info,"",@progbits
+.Linfo_begin1:
+	.long	196
+	.short	2
+	.long	.Labbrev_begin
+	.byte	8
+	.byte	1
+	.long	.Lstring0
+	.short	4
+	.long	.Lstring1
+	.quad	0
+	.long	.Lsection_line
+	.long	.Lstring2
+	.byte	2
+	.long	.Lstring8
+	.byte	5
+	.byte	4
+	.byte	3
+	.long	63
+	.byte	3
+	.long	55
+	.byte	4
+	.long	.Lstring10
+	.byte	8
+	.byte	2
+	.byte	6
+	.byte	5
+	.byte	8
+	.byte	2
+	.byte	8
+	.byte	6
+	.byte	8
+	.byte	2
+	.byte	8
+	.byte	5
+	.byte	4
+	.byte	2
+	.byte	8
+	.byte	7
+	.long	.Lstring7
+	.long	38
+	.byte	2
+	.byte	8
+	.byte	2
+	.byte	35
+	.byte	0
+	.byte	1
+	.byte	0
+	.byte	7
+	.long	.Lstring6
+	.long	71
+	.byte	2
+	.byte	8
+	.byte	2
+	.byte	35
+	.byte	0
+	.byte	1
+	.byte	7
+	.long	.Lstring9
+	.long	38
+	.byte	2
+	.byte	8
+	.byte	2
+	.byte	35
+	.byte	4
+	.byte	1
+	.byte	0
+	.byte	7
+	.long	.Lstring5
+	.long	67
+	.byte	2
+	.byte	8
+	.byte	2
+	.byte	35
+	.byte	0
+	.byte	1
+	.byte	8
+	.byte	2
+	.byte	8
+
+
+
+	.byte	1
+	.byte	9
+	.long	45
+
+	.byte	0
+	.byte	0
+	.byte	7
+	.long	.Lstring4
+	.long	63
+	.byte	2
+	.byte	8
+	.byte	2
+	.byte	35
+	.byte	0
+	.byte	3
+	.byte	10
+	.long	.Lstring10
+	.byte	2
+	.byte	6
+
+
+
+	.byte	1
+	.byte	9
+	.long	50
+
+	.byte	0
+	.byte	0
+	.byte	11
+	.long	.Lstring3
+	.long	55
+
+	.byte	2
+	.byte	12
+	.byte	9
+	.byte	3
+	.quad	m
+	.byte	0
+.Linfo_end1:
+	.section	.debug_abbrev,"",@progbits
+.Labbrev_begin:
+	.byte	1
+	.byte	17
+	.byte	1
+	.byte	37
+	.byte	14
+	.byte	19
+	.byte	5
+	.byte	3
+	.byte	14
+	.byte	17
+	.byte	1
+	.byte	16
+	.byte	6
+	.byte	27
+	.byte	14
+	.byte	0
+	.byte	0
+	.byte	2
+	.byte	36
+	.byte	0
+	.byte	3
+	.byte	14
+	.byte	62
+	.byte	11
+	.byte	11
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	3
+	.byte	15
+	.byte	0
+	.byte	73
+	.byte	19
+	.byte	0
+	.byte	0
+	.byte	4
+	.byte	2
+	.byte	1
+	.byte	3
+	.byte	14
+	.byte	11
+	.byte	11
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	5
+	.byte	23
+	.byte	1
+	.byte	11
+	.byte	11
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	6
+	.byte	19
+	.byte	1
+	.byte	11
+	.byte	11
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	7
+	.byte	13
+	.byte	0
+	.byte	3
+	.byte	14
+	.byte	73
+	.byte	19
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	56
+	.byte	10
+	.byte	50
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	8
+	.byte	46
+	.byte	1
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	60
+	.byte	25
+	.byte	52
+	.byte	25
+	.byte	63
+	.byte	25
+	.byte	50
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	9
+	.byte	5
+	.byte	0
+	.byte	73
+	.byte	19
+	.byte	52
+	.byte	25
+	.byte	0
+	.byte	0
+	.byte	10
+	.byte	46
+	.byte	1
+	.byte	3
+	.byte	14
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	60
+	.byte	25
+	.byte	52
+	.byte	25
+	.byte	63
+	.byte	25
+	.byte	50
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	11
+	.byte	52
+	.byte	0
+	.byte	3
+	.byte	14
+	.byte	73
+	.byte	19
+	.byte	63
+	.byte	25
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	2
+	.byte	10
+	.byte	0
+	.byte	0
+	.byte	0
+.Labbrev_end:
+	.section	.debug_aranges,"",@progbits
+	.section	.debug_ranges,"",@progbits
+	.section	.debug_macinfo,"",@progbits
+	.section	.debug_str,"MS",@progbits,1
+.Lstring0:
+	.asciz	 "clang version 3.2 (tags/RELEASE_32/final)"
+.Lstring1:
+	.asciz	 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/<unknown>"
+.Lstring2:
+	.asciz	 "/home/jazouani/llvm/build/tools/clang/test/CodeGenCXX"
+.Lstring3:
+	.asciz	 "m"
+.Lstring4:
+	.asciz	 "Contents"
+.Lstring5:
+	.asciz	 "OffsetedInfo"
+.Lstring6:
+	.asciz	 "Val"
+.Lstring7:
+	.asciz	 "BA"
+.Lstring8:
+	.asciz	 "int"
+.Lstring9:
+	.asciz	 "Offset"
+.Lstring10:
+	.asciz	 "MO"
+
+	.section	".note.GNU-stack","",@progbits

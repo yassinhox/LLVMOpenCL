@@ -1,0 +1,1 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-invalid-method.m:13:7 -fobjc-nonfragile-abi /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-invalid-method.m | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-in-invalid-method.m

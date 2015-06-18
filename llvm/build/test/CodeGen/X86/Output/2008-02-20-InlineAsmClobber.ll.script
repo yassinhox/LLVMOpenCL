@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-02-20-InlineAsmClobber.ll | grep "a:" | /home/jazouani/llvm/build/Release+Asserts/bin/not grep ax &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-02-20-InlineAsmClobber.ll | grep "b:" | /home/jazouani/llvm/build/Release+Asserts/bin/not grep ax

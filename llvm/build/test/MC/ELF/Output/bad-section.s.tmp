@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/ELF/bad-section.s:9:15: error: unexpected token in directive
+.section "foo"-bar
+              ^

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple mips-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/Mips/pr11877.s

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  -mtriple=x86_64-apple-darwin < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-28-Crash.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-28-Crash.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  -mtriple=x86_64-apple-darwin -regalloc=basic < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-28-Crash.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-28-Crash.ll

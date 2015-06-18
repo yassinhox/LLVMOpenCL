@@ -1,0 +1,25 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/complex-indirect.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+define void @b({ i8, i8 }* %y) nounwind {
+entry:
+  %y.addr = alloca { i8, i8 }*, align 8
+  %coerce = alloca { i8, i8 }, align 1
+  store { i8, i8 }* %y, { i8, i8 }** %y.addr, align 8
+  %0 = load { i8, i8 }** %y.addr, align 8
+  %.realp = getelementptr inbounds { i8, i8 }* %0, i32 0, i32 0
+  %.real = load i8* %.realp
+  %.imagp = getelementptr inbounds { i8, i8 }* %0, i32 0, i32 1
+  %.imag = load i8* %.imagp
+  %real = getelementptr inbounds { i8, i8 }* %coerce, i32 0, i32 0
+  %imag = getelementptr inbounds { i8, i8 }* %coerce, i32 0, i32 1
+  store i8 %.real, i8* %real
+  store i8 %.imag, i8* %imag
+  %1 = bitcast { i8, i8 }* %coerce to i16*
+  %2 = load i16* %1, align 1
+  call void @a(i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i16 %2)
+  ret void
+}
+
+declare void @a(i32, i32, i32, i32, i32, i32, i16)

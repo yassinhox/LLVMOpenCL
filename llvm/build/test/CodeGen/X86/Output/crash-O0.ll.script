@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 -relocation-model=pic -disable-fp-elim < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/crash-O0.ll

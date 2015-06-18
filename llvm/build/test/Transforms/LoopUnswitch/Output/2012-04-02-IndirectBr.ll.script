@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/2012-04-02-IndirectBr.ll -S -loop-unswitch -verify-loop-info -verify-dom-info | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/2012-04-02-IndirectBr.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/TailCallElim/dont_reorder_load.ll -tailcallelim -S | grep call | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

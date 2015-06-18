@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple thumbv7-unknown-unknown -mcpu=cortex-a9 -disassemble < /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/neont2.txt | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/neont2.txt

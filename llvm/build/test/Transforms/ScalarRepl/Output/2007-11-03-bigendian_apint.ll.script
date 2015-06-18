@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/2007-11-03-bigendian_apint.ll -scalarrepl -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep shr

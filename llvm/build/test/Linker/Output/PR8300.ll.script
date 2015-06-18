@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/Inputs/PR8300.a.ll /home/jazouani/llvm/llvm-3.2/test/Linker/Inputs/PR8300.b.ll -o /home/jazouani/llvm/build/test/Linker/Output/PR8300.ll.tmp.bc

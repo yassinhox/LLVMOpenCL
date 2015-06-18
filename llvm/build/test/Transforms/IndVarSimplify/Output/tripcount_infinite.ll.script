@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/tripcount_infinite.ll -indvars -adce -simplifycfg -S | grep icmp | wc -l > /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/tripcount_infinite.ll.tmp2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/tripcount_infinite.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep icmp | wc -l > /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/tripcount_infinite.ll.tmp1 &&
+diff /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/tripcount_infinite.ll.tmp1 /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/tripcount_infinite.ll.tmp2

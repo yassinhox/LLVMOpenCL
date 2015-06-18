@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-10-27-StackRealignment.ll -mtriple=i386-pc-linux-gnu -mcpu=yonah | grep movaps | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-10-27-StackRealignment.ll -mtriple=i686-apple-darwin9 -mcpu=yonah | grep movaps | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

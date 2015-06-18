@@ -1,0 +1,2 @@
+env CC_PRINT_OPTIONS=1      CC_PRINT_OPTIONS_FILE=/home/jazouani/llvm/build/tools/clang/test/Driver/Output/cc-print-options.c.tmp.log   /home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -S -o /home/jazouani/llvm/build/tools/clang/test/Driver/Output/cc-print-options.c.tmp.s /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cc-print-options.c &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cc-print-options.c < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/cc-print-options.c.tmp.log

@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/break-anti-dependencies.ll -march=x86-64 -mcpu=atom -post-RA-scheduler -pre-RA-sched=list-burr -break-anti-dependencies=none > /home/jazouani/llvm/build/test/CodeGen/X86/Output/break-anti-dependencies.ll.tmp &&
+grep "%xmm0" /home/jazouani/llvm/build/test/CodeGen/X86/Output/break-anti-dependencies.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 14 &&
+not grep "%xmm1" /home/jazouani/llvm/build/test/CodeGen/X86/Output/break-anti-dependencies.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/break-anti-dependencies.ll -march=x86-64 -mcpu=atom -post-RA-scheduler -break-anti-dependencies=critical > /home/jazouani/llvm/build/test/CodeGen/X86/Output/break-anti-dependencies.ll.tmp &&
+grep "%xmm0" /home/jazouani/llvm/build/test/CodeGen/X86/Output/break-anti-dependencies.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 7 &&
+grep "%xmm1" /home/jazouani/llvm/build/test/CodeGen/X86/Output/break-anti-dependencies.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 7

@@ -1,0 +1,172 @@
+
+STATISTICS:
+
+*** Semantic Analysis Stats:
+0 SFINAE diagnostics trapped.
+
+Number of memory regions: 0
+Bytes used: 0
+Bytes allocated: 0
+Bytes wasted: 0 (includes alignment, etc)
+
+*** Analysis Based Warnings Stats:
+1 functions analyzed (0 w/o CFGs).
+  3 CFG blocks built.
+  3 average CFG blocks per function.
+  3 max CFG blocks per function.
+0 functions analyzed for uninitialiazed variables
+  0 variables analyzed.
+  0 average variables per function.
+  0 max variables per function.
+  0 block visits.
+  0 average block visits per function.
+  0 max block visits per function.
+
+*** AST Context Stats:
+  42 types total.
+    33 Builtin types
+    3 Complex types
+    1 Pointer types
+    2 ConstantArray types
+    1 FunctionProto types
+    1 Typedef types
+    1 Record types
+Total bytes = 1176
+0/0 implicit default constructors created
+0/0 implicit copy constructors created
+0/0 implicit move constructors created
+0/0 implicit copy assignment operators created
+0/0 implicit move assignment operators created
+0/0 implicit destructors created
+
+*** AST File Statistics:
+  1/2 source location entries read (50.000000%)
+  1/1 declarations read (100.000000%)
+  15/1732 identifiers read (0.866051%)
+  1/157 macros read (0.636943%)
+  1/157 macros read (0.636943%)
+
+*** PCH/ModuleFile Remappings:
+Global bit offset map:
+  0 -> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pch-dir.c.tmp.h.gch/cpp.gch
+Global source location entry map:
+  2 -> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pch-dir.c.tmp.h.gch/cpp.gch
+Global declaration map:
+  10 -> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pch-dir.c.tmp.h.gch/cpp.gch
+Global identifier map:
+  1 -> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pch-dir.c.tmp.h.gch/cpp.gch
+Global macro map:
+  1 -> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pch-dir.c.tmp.h.gch/cpp.gch
+
+*** PCH/Modules Loaded:
+Module: /home/jazouani/llvm/build/tools/clang/test/PCH/Output/pch-dir.c.tmp.h.gch/cpp.gch
+  Base source location offset: 2147478712
+  Source location offset local -> global map:
+    0 -> 0
+    2 -> 2147478710
+  Base identifier ID: 0
+  Number of identifiers: 1732
+  Identifier ID local -> global map:
+    0 -> 0
+  Base macro ID: 0
+  Number of macros: 157
+  Macro ID local -> global map:
+    0 -> 0
+  Base submodule ID: 0
+  Number of submodules: 0
+  Base selector ID: 0
+  Number of selectors: 0
+  Base preprocessed entity ID: 0
+  Number of preprocessed entities: 0
+  Base type index: 0
+  Number of types: 0
+  Base decl ID: 0
+  Number of decls: 1
+  Decl ID local -> global map:
+    0 -> 0
+
+
+Number of memory regions: 1
+Bytes used: 3440
+Bytes allocated: 4096
+Bytes wasted: 656 (includes alignment, etc)
+
+*** Decl Stats:
+  12 decls total.
+    1 CXXRecord decls, 136 each (136 bytes)
+    4 Typedef decls, 72 each (288 bytes)
+    4 Field decls, 72 each (288 bytes)
+    1 Function decls, 160 each (160 bytes)
+    2 Var decls, 88 each (176 bytes)
+Total bytes = 1048
+
+*** Stmt/Expr Stats:
+  4 stmts/exprs total.
+    1 CompoundStmt, 24 each (24 bytes)
+    1 ImplicitCastExpr, 24 each (24 bytes)
+    1 DeclRefExpr, 40 each (40 bytes)
+    1 ReturnStmt, 32 each (32 bytes)
+Total bytes = 120
+
+STATISTICS FOR '/home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/pch-dir.c':
+
+*** Preprocessor Stats:
+2 directives found:
+  0 #define.
+  0 #undef.
+  #include/#include_next/#import:
+    2 source files entered.
+    0 max include stack depth
+  1 #if/#ifndef/#ifdef.
+  1 #else/#elif.
+  0 #endif.
+  0 #pragma.
+1 #if/#ifndef#ifdef regions skipped
+0/0/0 obj/fn/builtin macros expanded, 0 on the fast path.
+0 token paste (##) operations performed, 0 on the fast path.
+
+Preprocessor Memory: 10632B total
+  BumpPtr: 8192
+  Macro Expanded Tokens: 384
+  Predefines Buffer: 0
+  Macros: 1024
+  #pragma push_macro Info: 0
+  Poison Reasons: 1024
+  Comment Handlers: 8
+
+*** Identifier Table Stats:
+# Identifiers:   233
+# Empty Buckets: 7959
+Hash density (#identifiers per bucket): 0.028442
+Ave identifier length: 10.304721
+Max identifier length: 29
+
+Number of memory regions: 4
+Bytes used: 11954
+Bytes allocated: 16384
+Bytes wasted: 4430 (includes alignment, etc)
+
+*** HeaderSearch Stats:
+3 files tracked.
+  0 #import/#pragma once files.
+  1 included exactly once.
+  1 max times a file is included.
+  0 #include/#include_next/#import.
+    0 #includes skipped due to the multi-include optimization.
+0 framework lookups.
+0 subframework lookups.
+
+*** Source Manager Stats:
+1 files mapped, 2 mem buffers mapped.
+3 local SLocEntry's allocated (96 bytes of capacity), 1069B of Sloc address space used.
+2 loaded SLocEntries allocated, 4936B of Sloc address space used.
+1065 bytes of files mapped, 0 files with line #'s computed, 0 files with macro args computed.
+FileID scans: 1 linear, 0 binary.
+
+
+*** File Manager Stats:
+3 real files found, 9 real dirs found.
+0 virtual files found, 0 virtual dirs found.
+15 dir lookups, 11 dir cache misses.
+7 file lookups, 5 file cache misses.
+

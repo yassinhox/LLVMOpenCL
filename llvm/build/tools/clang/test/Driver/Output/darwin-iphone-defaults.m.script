@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -miphoneos-version-min=3.0 -arch armv7 -flto -S -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-iphone-defaults.m | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-iphone-defaults.m

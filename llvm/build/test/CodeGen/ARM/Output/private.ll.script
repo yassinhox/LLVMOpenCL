@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/private.ll -mtriple=arm-linux-gnueabi > /home/jazouani/llvm/build/test/CodeGen/ARM/Output/private.ll.tmp &&
+grep .Lfoo: /home/jazouani/llvm/build/test/CodeGen/ARM/Output/private.ll.tmp &&
+egrep bl.*\.Lfoo /home/jazouani/llvm/build/test/CodeGen/ARM/Output/private.ll.tmp &&
+grep .Lbaz: /home/jazouani/llvm/build/test/CodeGen/ARM/Output/private.ll.tmp &&
+grep long.*\.Lbaz /home/jazouani/llvm/build/test/CodeGen/ARM/Output/private.ll.tmp

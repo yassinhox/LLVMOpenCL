@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/2008-02-11-ReversedCondition.ll -scalar-evolution -analyze | grep "Loop %header: backedge-taken count is (0 smax %n)"

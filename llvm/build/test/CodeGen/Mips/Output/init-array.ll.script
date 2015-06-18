@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple mipsel-unknown-linux -use-init-array < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/init-array.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck  /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/init-array.ll

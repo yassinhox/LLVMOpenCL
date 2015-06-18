@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -mmmx -target i386-unknown-unknown -emit-llvm -S /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/mmx-shift-with-immediate.c -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/mmx-shift-with-immediate.c

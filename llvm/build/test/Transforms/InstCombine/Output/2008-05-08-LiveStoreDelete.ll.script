@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2008-05-08-LiveStoreDelete.ll -instcombine -S | grep "store i8" | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

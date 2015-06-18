@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-04-12-picrel.ll -mtriple=x86_64-unknown-linux-gnu -march=x86-64 -relocation-model=static -code-model=small > /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-04-12-picrel.ll.tmp &&
+grep leaq /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-04-12-picrel.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

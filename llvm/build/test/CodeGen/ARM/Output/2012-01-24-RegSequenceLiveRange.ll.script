@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2012-01-24-RegSequenceLiveRange.ll -mcpu=cortex-a8 -verify-machineinstrs -verify-coalescing

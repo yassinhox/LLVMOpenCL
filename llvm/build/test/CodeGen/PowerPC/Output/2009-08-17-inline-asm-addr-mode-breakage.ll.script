@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2009-08-17-inline-asm-addr-mode-breakage.ll -march=ppc32 -mtriple=powerpc-apple-darwin10 -mcpu=g5 -disable-ppc-ilp-pref | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2009-08-17-inline-asm-addr-mode-breakage.ll

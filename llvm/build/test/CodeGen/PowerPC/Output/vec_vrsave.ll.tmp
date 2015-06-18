@@ -1,0 +1,28 @@
+	.file	"<stdin>"
+	.text
+	.globl	test_rol
+	.align	2
+	.type	test_rol,@function
+test_rol:                               # @test_rol
+	.cfi_startproc
+# BB#0:
+	vspltisw 2, -12
+	vrlw 2, 2, 2
+	blr 
+.Ltmp0:
+	.size	test_rol, .Ltmp0-test_rol
+	.cfi_endproc
+
+	.globl	test_arg
+	.align	2
+	.type	test_arg,@function
+test_arg:                               # @test_arg
+	.cfi_startproc
+# BB#0:
+	vadduwm 2, 2, 3
+	blr 
+.Ltmp1:
+	.size	test_arg, .Ltmp1-test_arg
+	.cfi_endproc
+
+

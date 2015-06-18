@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/X86/x86-64.s:204:22: warning: scale factor without index register is ignored
+movaps %xmm3, (%esi, 2)
+                     ^

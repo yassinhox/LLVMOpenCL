@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -### -S /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/x86_features.c -msse -msse4 -mno-sse -mno-mmx -msse 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/x86_features.c.tmp &&
+grep '"pentium4" "-target-feature" "+sse4" "-target-feature" "-mmx" "-target-feature" "+sse"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/x86_features.c.tmp

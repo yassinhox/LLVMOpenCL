@@ -1,0 +1,10 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/private.ll -mtriple=powerpc-unknown-linux-gnu > /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep .Lfoo: /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep bl.*\.Lfoo /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep .Lbaz: /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep lis.*\.Lbaz /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/private.ll -mtriple=powerpc-apple-darwin > /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep L_foo: /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep bl.*\L_foo /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep L_baz: /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp &&
+grep lis.*\L_baz /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/private.ll.tmp

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IPConstantProp/return-constants.ll -ipconstprop -S > /home/jazouani/llvm/build/test/Transforms/IPConstantProp/Output/return-constants.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/IPConstantProp/Output/return-constants.ll.tmp | grep "%M = add i32 21, 21" &&
+cat /home/jazouani/llvm/build/test/Transforms/IPConstantProp/Output/return-constants.ll.tmp | grep "%N = add i32 %B, %D"

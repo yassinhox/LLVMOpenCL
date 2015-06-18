@@ -1,0 +1,2 @@
+error: unable to open output file '/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/doesnotexist/somename': 'Error opening output file '/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/doesnotexist/somename''
+1 error generated.

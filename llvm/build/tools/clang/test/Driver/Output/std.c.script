@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -std=c99 -trigraphs -std=gnu99 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/std.c -E -o - | FileCheck -check-prefix=OVERRIDE /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/std.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ansi /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/std.c -E -o - | FileCheck -check-prefix=ANSI /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/std.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -std=gnu99 -trigraphs /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/std.c -E -o - | FileCheck -check-prefix=EXPLICIT /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/std.c

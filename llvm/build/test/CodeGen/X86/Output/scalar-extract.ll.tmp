@@ -1,0 +1,19 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+	.cfi_startproc
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	movl	(%eax), %eax
+	movl	8(%esp), %ecx
+	movl	%eax, (%ecx)
+	ret
+.Ltmp0:
+	.size	foo, .Ltmp0-foo
+	.cfi_endproc
+
+
+	.section	".note.GNU-stack","",@progbits

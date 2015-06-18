@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/negative-stride-fptosi-user.ll -march=x86-64 | grep cvtsi2sd

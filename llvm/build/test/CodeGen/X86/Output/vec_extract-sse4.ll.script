@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_extract-sse4.ll -mcpu=corei7 -march=x86 -mattr=+sse41 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_extract-sse4.ll.tmp &&
+not grep extractps   /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_extract-sse4.ll.tmp &&
+not grep pextrd      /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_extract-sse4.ll.tmp &&
+not grep pshufd  /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_extract-sse4.ll.tmp &&
+not grep movss   /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_extract-sse4.ll.tmp

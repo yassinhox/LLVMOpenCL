@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/and_add.ll -march=ppc32 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/and_add.ll.tmp &&
+grep slwi /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/and_add.ll.tmp &&
+not grep addi /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/and_add.ll.tmp &&
+not grep rlwinm /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/and_add.ll.tmp

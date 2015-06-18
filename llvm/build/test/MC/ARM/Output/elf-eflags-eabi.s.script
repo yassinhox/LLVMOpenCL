@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-eflags-eabi.s -triple=armv7-linux-gnueabi -filetype=obj -o - |     elf-dump --dump-section-data  | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=OBJ /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-eflags-eabi.s

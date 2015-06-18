@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -ccc-cxx  -emit-llvm -c -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/SemaTemplate/example-dynarray.cpp

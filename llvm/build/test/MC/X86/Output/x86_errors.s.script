@@ -1,0 +1,4 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_errors.s 2> /home/jazouani/llvm/build/test/MC/X86/Output/x86_errors.s.tmp.err &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=64 < /home/jazouani/llvm/build/test/MC/X86/Output/x86_errors.s.tmp.err /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_errors.s &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_errors.s 2> /home/jazouani/llvm/build/test/MC/X86/Output/x86_errors.s.tmp.err &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=32 < /home/jazouani/llvm/build/test/MC/X86/Output/x86_errors.s.tmp.err /home/jazouani/llvm/llvm-3.2/test/MC/X86/x86_errors.s

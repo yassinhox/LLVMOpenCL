@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang   -fsyntax-only -fno-objc-default-synthesize-properties -fobjc-default-synthesize-properties /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/no-objc-default-synthesize-properties.m 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/no-objc-default-synthesize-properties.m

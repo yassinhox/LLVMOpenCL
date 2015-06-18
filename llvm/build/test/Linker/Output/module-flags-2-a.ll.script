@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/module-flags-2-a.ll /home/jazouani/llvm/llvm-3.2/test/Linker/module-flags-2-b.ll -S -o - | sort | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Linker/module-flags-2-a.ll

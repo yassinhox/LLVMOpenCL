@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -lower-expect -strip-dead-prototypes -S -o - < /home/jazouani/llvm/llvm-3.2/test/Transforms/LowerExpectIntrinsic/basic.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LowerExpectIntrinsic/basic.ll

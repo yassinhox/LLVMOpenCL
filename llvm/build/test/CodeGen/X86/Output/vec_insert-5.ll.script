@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_insert-5.ll -march=x86 -mattr=+sse2 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_insert-5.ll.tmp &&
+grep shll /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_insert-5.ll.tmp | grep 12 &&
+grep pslldq /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_insert-5.ll.tmp | grep 12 &&
+grep psrldq /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_insert-5.ll.tmp | grep 8 &&
+grep psrldq /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_insert-5.ll.tmp | grep 12

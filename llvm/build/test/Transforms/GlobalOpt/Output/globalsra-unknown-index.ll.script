@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/globalsra-unknown-index.ll -globalopt -S > /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/globalsra-unknown-index.ll.tmp &&
+grep "@Y = internal unnamed_addr global \[3 x [%]struct.X\] zeroinitializer" /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/globalsra-unknown-index.ll.tmp &&
+grep load /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/globalsra-unknown-index.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+grep "add i32 [%]a, [%]b" /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/globalsra-unknown-index.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 3

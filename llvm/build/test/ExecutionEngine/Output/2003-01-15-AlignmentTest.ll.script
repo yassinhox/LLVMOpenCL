@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/lli /home/jazouani/llvm/llvm-3.2/test/ExecutionEngine/2003-01-15-AlignmentTest.ll > /dev/null

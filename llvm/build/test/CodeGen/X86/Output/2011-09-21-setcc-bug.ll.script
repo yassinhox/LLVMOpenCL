@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2011-09-21-setcc-bug.ll -march=x86-64 -mcpu=corei7 -mattr=+sse41

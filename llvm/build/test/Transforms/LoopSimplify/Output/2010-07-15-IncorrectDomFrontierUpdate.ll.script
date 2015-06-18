@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopSimplify/2010-07-15-IncorrectDomFrontierUpdate.ll -domfrontier -loop-simplify -domfrontier -verify-dom-info -analyze

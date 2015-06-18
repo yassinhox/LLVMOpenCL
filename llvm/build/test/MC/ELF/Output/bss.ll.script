@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -filetype=obj /home/jazouani/llvm/llvm-3.2/test/MC/ELF/bss.ll -o /home/jazouani/llvm/build/test/MC/ELF/Output/bss.ll.tmp

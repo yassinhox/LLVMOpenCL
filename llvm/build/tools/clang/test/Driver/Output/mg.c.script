@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -M -MG -include nonexistent-preinclude.h /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/mg.c > /home/jazouani/llvm/build/tools/clang/test/Driver/Output/mg.c.tmp &&
+fgrep nonexistent-preinclude.h /home/jazouani/llvm/build/tools/clang/test/Driver/Output/mg.c.tmp &&
+fgrep nonexistent-ppinclude.h /home/jazouani/llvm/build/tools/clang/test/Driver/Output/mg.c.tmp

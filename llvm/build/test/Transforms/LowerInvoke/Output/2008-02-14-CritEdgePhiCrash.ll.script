@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LowerInvoke/2008-02-14-CritEdgePhiCrash.ll -lowerinvoke -enable-correct-eh-support -disable-output

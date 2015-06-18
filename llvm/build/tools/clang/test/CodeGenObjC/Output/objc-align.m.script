@@ -1,0 +1,9 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple i386-apple-darwin9 -fobjc-runtime=macosx-fragile-10.5 -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/objc-align.m &&
+grep '@"\\01L_OBJC_CATEGORY_A_Cat" = internal global .*, section "__OBJC,__category,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp &&
+grep '@"\\01L_OBJC_CLASS_A" = internal global .*, section "__OBJC,__class,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp &&
+grep '@"\\01L_OBJC_CLASS_C" = internal global .*, section "__OBJC,__class,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp &&
+grep '@"\\01L_OBJC_CLASS_PROTOCOLS_C" = internal global .*, section "__OBJC,__cat_cls_meth,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp &&
+grep '@"\\01L_OBJC_METACLASS_A" = internal global .*, section "__OBJC,__meta_class,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp &&
+grep '@"\\01L_OBJC_METACLASS_C" = internal global .*, section "__OBJC,__meta_class,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp &&
+grep '@"\\01L_OBJC_MODULES" = internal global .*, section "__OBJC,__module_info,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp &&
+grep '@"\\01L_OBJC_PROTOCOL_P" = internal global .*, section "__OBJC,__protocol,regular,no_dead_strip", align 4' /home/jazouani/llvm/build/tools/clang/test/CodeGenObjC/Output/objc-align.m.tmp

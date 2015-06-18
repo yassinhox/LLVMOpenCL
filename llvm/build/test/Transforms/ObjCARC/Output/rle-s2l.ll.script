@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -basicaa -objc-arc < /home/jazouani/llvm/llvm-3.2/test/Transforms/ObjCARC/rle-s2l.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/ObjCARC/rle-s2l.ll

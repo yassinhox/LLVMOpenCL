@@ -1,0 +1,10 @@
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/traditional-cpp.c"
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/traditional-cpp.c" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 149 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/traditional-cpp.c" 2
+# 12 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/traditional-cpp.c"
+foo // bar

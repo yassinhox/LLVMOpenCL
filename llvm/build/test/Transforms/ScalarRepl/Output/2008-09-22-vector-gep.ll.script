@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/2008-09-22-vector-gep.ll -scalarrepl -S > /home/jazouani/llvm/build/test/Transforms/ScalarRepl/Output/2008-09-22-vector-gep.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/ScalarRepl/Output/2008-09-22-vector-gep.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/not grep alloca

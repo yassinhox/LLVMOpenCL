@@ -1,0 +1,268 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+	.cfi_startproc
+# BB#0:                                 # %b
+	pushq	%rbp
+.Ltmp2:
+	.cfi_def_cfa_offset 16
+.Ltmp3:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp4:
+	.cfi_def_cfa_register %rbp
+	movslq	(%rsi), %rax
+	movslq	(%r9), %rsi
+	movl	(%rcx), %r9d
+	movslq	(%rdx), %rdx
+	movslq	(%rdi), %rdi
+	movq	%rsp, %r8
+	movq	%r8, %rsp
+	subl	%edi, %eax
+	js	.LBB0_1
+# BB#11:                                # %b63
+	movslq	%eax, %rcx
+	xorl	%edi, %edi
+	testq	%rcx, %rcx
+	js	.LBB0_12
+	.align	16, 0x90
+.LBB0_36:                               # %a25b
+                                        # =>This Inner Loop Header: Depth=1
+	testq	%rdi, %rdi
+	jns	.LBB0_36
+.LBB0_12:                               # %b85
+	testq	%rdi, %rdi
+	jns	.LBB0_1
+	.align	16, 0x90
+.LBB0_13:                               # %a25b140
+                                        # =>This Inner Loop Header: Depth=1
+	testq	%rdi, %rdi
+	jns	.LBB0_13
+.LBB0_1:                                # %a29b
+	cmpl	%edx, %r9d
+	js	.LBB0_10
+# BB#2:                                 # %b158
+	xorl	%edx, %edx
+	xorps	%xmm0, %xmm0
+	.align	16, 0x90
+.LBB0_3:                                # %a29b173
+                                        # =>This Loop Header: Depth=1
+                                        #     Child Loop BB0_37 Depth 2
+                                        #     Child Loop BB0_16 Depth 2
+                                        #     Child Loop BB0_17 Depth 2
+                                        #       Child Loop BB0_18 Depth 3
+                                        #     Child Loop BB0_20 Depth 2
+                                        #       Child Loop BB0_21 Depth 3
+                                        #     Child Loop BB0_24 Depth 2
+                                        #       Child Loop BB0_38 Depth 3
+                                        #       Child Loop BB0_27 Depth 3
+                                        #     Child Loop BB0_29 Depth 2
+                                        #       Child Loop BB0_39 Depth 3
+                                        #       Child Loop BB0_32 Depth 3
+                                        #     Child Loop BB0_33 Depth 2
+                                        #     Child Loop BB0_35 Depth 2
+	testl	%eax, %eax
+	js	.LBB0_4
+# BB#14:                                # %b179
+                                        #   in Loop: Header=BB0_3 Depth=1
+	movslq	%eax, %rdi
+	xorl	%ecx, %ecx
+	testq	%rdi, %rdi
+	js	.LBB0_15
+	.align	16, 0x90
+.LBB0_37:                               # %a30b
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	testq	%rcx, %rcx
+	jns	.LBB0_37
+.LBB0_15:                               # %b188
+                                        #   in Loop: Header=BB0_3 Depth=1
+	testq	%rcx, %rcx
+	jns	.LBB0_4
+	.align	16, 0x90
+.LBB0_16:                               # %a30b294
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	testq	%rdx, %rdx
+	jns	.LBB0_16
+.LBB0_4:                                # %a33b
+                                        #   in Loop: Header=BB0_3 Depth=1
+	movl	%esi, %r10d
+	orl	%eax, %r10d
+	movl	%esi, %ecx
+	orl	%eax, %ecx
+	js	.LBB0_5
+	.align	16, 0x90
+.LBB0_17:                               # %b341
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB0_18 Depth 3
+	testq	%rsi, %rsi
+	js	.LBB0_19
+	.align	16, 0x90
+.LBB0_18:                               # %a35b
+                                        #   Parent Loop BB0_3 Depth=1
+                                        #     Parent Loop BB0_17 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	testq	%rdx, %rdx
+	jns	.LBB0_18
+.LBB0_19:                               # %b463
+                                        #   in Loop: Header=BB0_17 Depth=2
+	movslq	%eax, %rdi
+	testq	%rdx, %rdx
+	js	.LBB0_17
+	.align	16, 0x90
+.LBB0_20:                               # %b535
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB0_21 Depth 3
+	testq	%rdi, %rdi
+	js	.LBB0_22
+	.align	16, 0x90
+.LBB0_21:                               # %a45b
+                                        #   Parent Loop BB0_3 Depth=1
+                                        #     Parent Loop BB0_20 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	testq	%rdx, %rdx
+	jns	.LBB0_21
+.LBB0_22:                               # %b712
+                                        #   in Loop: Header=BB0_20 Depth=2
+	testq	%rdx, %rdx
+	js	.LBB0_20
+.LBB0_5:                                # %a50b
+                                        #   in Loop: Header=BB0_3 Depth=1
+	movl	%eax, %r9d
+	orl	%esi, %r9d
+	movl	%eax, %ecx
+	orl	%esi, %ecx
+	js	.LBB0_6
+# BB#23:                                # %b820
+                                        #   in Loop: Header=BB0_3 Depth=1
+	movslq	%eax, %rdi
+	.align	16, 0x90
+.LBB0_24:                               # %b858
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB0_38 Depth 3
+                                        #       Child Loop BB0_27 Depth 3
+	xorl	%ecx, %ecx
+	testq	%rdi, %rdi
+	js	.LBB0_25
+	.align	16, 0x90
+.LBB0_38:                               # %a53b
+                                        #   Parent Loop BB0_3 Depth=1
+                                        #     Parent Loop BB0_24 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	testq	%rcx, %rcx
+	jns	.LBB0_38
+.LBB0_25:                               # %b879
+                                        #   in Loop: Header=BB0_24 Depth=2
+	testq	%rcx, %rcx
+	jns	.LBB0_26
+	.align	16, 0x90
+.LBB0_27:                               # %a53b1019
+                                        #   Parent Loop BB0_3 Depth=1
+                                        #     Parent Loop BB0_24 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	cmpq	%rdi, %rdx
+	jge	.LBB0_27
+.LBB0_26:                               # %b1016
+                                        #   in Loop: Header=BB0_24 Depth=2
+	cmpq	%rsi, %rdx
+	jl	.LBB0_24
+.LBB0_6:                                # %a57b
+                                        #   in Loop: Header=BB0_3 Depth=1
+	shrl	$31, %r10d
+	testb	%r10b, %r10b
+	jne	.LBB0_7
+# BB#28:                                # %b1086
+                                        #   in Loop: Header=BB0_3 Depth=1
+	movslq	%eax, %rcx
+	.align	16, 0x90
+.LBB0_29:                               # %b1117
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB0_39 Depth 3
+                                        #       Child Loop BB0_32 Depth 3
+	xorl	%edi, %edi
+	testq	%rsi, %rsi
+	js	.LBB0_30
+	.align	16, 0x90
+.LBB0_39:                               # %a63b
+                                        #   Parent Loop BB0_3 Depth=1
+                                        #     Parent Loop BB0_29 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	cmpq	%rsi, %rdi
+	jge	.LBB0_39
+.LBB0_30:                               # %b1139
+                                        #   in Loop: Header=BB0_29 Depth=2
+	cmpq	%rsi, %rdi
+	jge	.LBB0_31
+	.align	16, 0x90
+.LBB0_32:                               # %a63b1266
+                                        #   Parent Loop BB0_3 Depth=1
+                                        #     Parent Loop BB0_29 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	cmpq	%rsi, %rdx
+	jge	.LBB0_32
+.LBB0_31:                               # %b1263
+                                        #   in Loop: Header=BB0_29 Depth=2
+	cmpq	%rcx, %rdx
+	jl	.LBB0_29
+.LBB0_7:                                # %a66b
+                                        #   in Loop: Header=BB0_3 Depth=1
+	shrl	$31, %r9d
+	testb	%r9b, %r9b
+	jne	.LBB0_8
+	.align	16, 0x90
+.LBB0_33:                               # %a74b
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	testq	%rdx, %rdx
+	js	.LBB0_33
+# BB#34:                                # %b1582
+                                        #   in Loop: Header=BB0_33 Depth=2
+	testq	%rdx, %rdx
+	js	.LBB0_33
+.LBB0_8:                                # %a93b
+                                        #   in Loop: Header=BB0_3 Depth=1
+	testl	%eax, %eax
+	js	.LBB0_9
+	.align	16, 0x90
+.LBB0_35:                               # %a97b
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	movss	(%r8,%rdx,4), %xmm1
+	addss	%xmm0, %xmm1
+	movss	i6000(%rip), %xmm2
+	addss	%xmm0, %xmm2
+	addss	%xmm0, %xmm2
+	addss	%xmm1, %xmm2
+	movss	%xmm2, i6000(%rip)
+	testq	%rdx, %rdx
+	js	.LBB0_35
+.LBB0_9:                                # %b1606
+                                        #   in Loop: Header=BB0_3 Depth=1
+	testq	%rdx, %rdx
+	js	.LBB0_3
+.LBB0_10:                               # %a109b
+	movq	%rbp, %rsp
+	popq	%rbp
+	ret
+.Ltmp5:
+	.size	foo, .Ltmp5-foo
+	.cfi_endproc
+
+	.type	i6000,@object           # @i6000
+	.bss
+	.globl	i6000
+	.align	16
+i6000:
+	.zero	1024
+	.size	i6000, 1024
+
+
+	.section	".note.GNU-stack","",@progbits

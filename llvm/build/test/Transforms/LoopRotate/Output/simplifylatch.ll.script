@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopRotate/simplifylatch.ll -loop-rotate -verify-dom-info -verify-loop-info | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopRotate/simplifylatch.ll

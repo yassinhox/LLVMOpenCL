@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -gvn -enable-load-pre /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/lpre-call-wrap.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/lpre-call-wrap.ll

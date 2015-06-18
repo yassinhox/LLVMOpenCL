@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/annotations-global.c -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/annotations-global.c.tmp1 &&
+FileCheck --check-prefix=FOO /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/annotations-global.c < /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/annotations-global.c.tmp1 &&
+FileCheck --check-prefix=A /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/annotations-global.c < /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/annotations-global.c.tmp1 &&
+FileCheck --check-prefix=BAR /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/annotations-global.c < /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/annotations-global.c.tmp1 &&
+FileCheck --check-prefix=FOOS /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/annotations-global.c < /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/annotations-global.c.tmp1

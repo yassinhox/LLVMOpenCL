@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Assembler/2007-01-05-Cmp-ConstExpr.ll -o /dev/null

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=hexagon -mcpu=hexagonv4 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Hexagon/combine.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Hexagon/combine.ll

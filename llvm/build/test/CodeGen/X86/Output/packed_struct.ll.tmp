@@ -1,0 +1,35 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	movl	foos+5, %eax
+	addl	foos+1, %eax
+	addl	foos+9, %eax
+	ret
+.Ltmp0:
+	.size	foo, .Ltmp0-foo
+
+	.globl	bar
+	.align	16, 0x90
+	.type	bar,@function
+bar:                                    # @bar
+# BB#0:                                 # %entry
+	movb	bara+19, %al
+	addb	bara+4, %al
+	ret
+.Ltmp1:
+	.size	bar, .Ltmp1-bar
+
+	.type	bara,@object            # @bara
+	.section	.bss.bara,"aGw",@nobits,bara,comdat
+	.weak	bara
+	.align	16
+bara:
+	.zero	20
+	.size	bara, 20
+
+
+	.section	".note.GNU-stack","",@progbits

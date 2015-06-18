@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -arch x86_64 -x objective-c-header /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/cocoa.m -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/cocoa.m.tmp.h.pch &&
+touch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/cocoa.m.tmp.empty.m &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -arch x86_64 -fsyntax-only /home/jazouani/llvm/build/tools/clang/test/PCH/Output/cocoa.m.tmp.empty.m -include /home/jazouani/llvm/build/tools/clang/test/PCH/Output/cocoa.m.tmp.h -Xclang -ast-dump 2>&1 > /dev/null

@@ -1,0 +1,1 @@
+c-index-test -index-file /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-many-call-ops.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/index-many-call-ops.cpp

@@ -1,0 +1,27 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cc-log-diagnostics.c</string>
+  <key>dwarf-debug-flags</key>
+  <string>/home/jazouani/llvm/build/Release+Asserts/bin/clang -Wfoobar -no-canonical-prefixes -target x86_64-apple-darwin10 -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cc-log-diagnostics.c -mlinker-version=2.23.2 -mtune=core2 -m64 -mmacosx-version-min=10.6.0</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>message</key>
+      <string>unknown warning option &apos;-Wfoobar&apos;; did you mean &apos;-Wformat&apos;?</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/cc-log-diagnostics.c</string>
+      <key>line</key>
+      <integer>7</integer>
+      <key>column</key>
+      <integer>11</integer>
+      <key>message</key>
+      <string>control reaches end of non-void function</string>
+    </dict>
+  </array>
+</dict>

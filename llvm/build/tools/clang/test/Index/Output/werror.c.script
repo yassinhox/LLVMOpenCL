@@ -1,0 +1,2 @@
+c-index-test -write-pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/werror.c.tmp.pch -Werror /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/werror.c &&
+c-index-test -write-pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/werror.c.tmp.pch -DFATAL -Werror /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/werror.c

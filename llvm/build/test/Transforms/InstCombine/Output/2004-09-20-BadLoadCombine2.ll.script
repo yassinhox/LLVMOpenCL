@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2004-09-20-BadLoadCombine2.ll -instcombine -mem2reg -simplifycfg |    /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep -v store | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "i32 1"

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple x86_64-apple-darwin10 /home/jazouani/llvm/llvm-3.2/test/MC/MachO/absolute.s -filetype=obj -o - | /home/jazouani/llvm/build/Release+Asserts/bin/macho-dump | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/MachO/absolute.s

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -relocation-model=pic < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2010-01-06-TailDuplicateLabels.ll | grep ":$" | sort | uniq -d | /home/jazouani/llvm/build/Release+Asserts/bin/count 0

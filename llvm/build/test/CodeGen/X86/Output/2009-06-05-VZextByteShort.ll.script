@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2009-06-05-VZextByteShort.ll -march=x86 -mattr=+mmx,+sse2 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-06-05-VZextByteShort.ll.tmp1 &&
+grep movzwl /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-06-05-VZextByteShort.ll.tmp1 | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep movzbl /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-06-05-VZextByteShort.ll.tmp1 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep movd /home/jazouani/llvm/build/test/CodeGen/X86/Output/2009-06-05-VZextByteShort.ll.tmp1 | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

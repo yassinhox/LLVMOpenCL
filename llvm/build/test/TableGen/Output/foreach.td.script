@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/foreach.td | grep 'Jr' | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/foreach.td | grep 'Sr' | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-tblgen /home/jazouani/llvm/llvm-3.2/test/TableGen/foreach.td | grep '"NAME"' | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

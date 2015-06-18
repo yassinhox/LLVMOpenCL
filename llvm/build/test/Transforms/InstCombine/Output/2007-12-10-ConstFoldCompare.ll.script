@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2007-12-10-ConstFoldCompare.ll -instcombine -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep "ret i1 0"

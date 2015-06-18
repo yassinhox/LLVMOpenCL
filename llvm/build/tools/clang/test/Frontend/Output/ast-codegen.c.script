@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -emit-ast -o /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-codegen.c.tmp.ast /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/ast-codegen.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-unknown-unknown -emit-llvm -S -o - /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-codegen.c.tmp.ast | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/ast-codegen.c

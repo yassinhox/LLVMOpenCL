@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple i386-pc-linux-gnu -filetype=obj -o /home/jazouani/llvm/build/test/MC/AsmParser/Output/section.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/section.s &&
+elf-dump --dump-section-data < /home/jazouani/llvm/build/test/MC/AsmParser/Output/section.s.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/section.s

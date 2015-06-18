@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Analysis/ScalarEvolution/xor-and.ll -scalar-evolution -analyze    | grep "\-->  (zext i4 (-8 + (trunc i64 (8 \* %x) to i4)) to i64)"

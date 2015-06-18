@@ -1,0 +1,42 @@
+	.file	"<stdin>"
+	.text
+	.globl	sub_ll
+	.align	2
+	.type	sub_ll,@function
+sub_ll:                                 # @sub_ll
+	.cfi_startproc
+# BB#0:                                 # %entry
+	subfc 4, 6, 4
+	subfe 3, 5, 3
+	blr 
+.Ltmp0:
+	.size	sub_ll, .Ltmp0-sub_ll
+	.cfi_endproc
+
+	.globl	sub_l_5
+	.align	2
+	.type	sub_l_5,@function
+sub_l_5:                                # @sub_l_5
+	.cfi_startproc
+# BB#0:                                 # %entry
+	subfic 4, 4, 5
+	subfze 3, 3
+	blr 
+.Ltmp1:
+	.size	sub_l_5, .Ltmp1-sub_l_5
+	.cfi_endproc
+
+	.globl	sub_l_m5
+	.align	2
+	.type	sub_l_m5,@function
+sub_l_m5:                               # @sub_l_m5
+	.cfi_startproc
+# BB#0:                                 # %entry
+	subfic 4, 4, -5
+	subfme 3, 3
+	blr 
+.Ltmp2:
+	.size	sub_l_m5, .Ltmp2-sub_l_m5
+	.cfi_endproc
+
+

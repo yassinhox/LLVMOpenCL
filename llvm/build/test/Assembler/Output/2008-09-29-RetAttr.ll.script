@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2008-09-29-RetAttr.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "define inreg i32" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Assembler/2008-09-29-RetAttr.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "call inreg i32"

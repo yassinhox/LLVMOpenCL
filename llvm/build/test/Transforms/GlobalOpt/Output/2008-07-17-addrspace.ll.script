@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/2008-07-17-addrspace.ll -globalopt -S > /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/2008-07-17-addrspace.ll.tmp &&
+cat /home/jazouani/llvm/build/test/Transforms/GlobalOpt/Output/2008-07-17-addrspace.ll.tmp | grep addrspace.*global

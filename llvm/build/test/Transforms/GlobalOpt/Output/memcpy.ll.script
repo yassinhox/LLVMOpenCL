@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/memcpy.ll -globalopt -S |    grep "G1 = internal unnamed_addr constant"

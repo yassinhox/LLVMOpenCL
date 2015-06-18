@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fmdrr-fmrrd.ll -march=arm -mattr=vfp2 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep fmdrr &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/fmdrr-fmrrd.ll -march=arm -mattr=vfp2 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep fmrrd

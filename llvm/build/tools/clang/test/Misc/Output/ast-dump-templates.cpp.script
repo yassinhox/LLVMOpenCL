@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -ast-dump /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp > /home/jazouani/llvm/build/tools/clang/test/Misc/Output/ast-dump-templates.cpp.tmp &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Misc/Output/ast-dump-templates.cpp.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp -check-prefix=CHECK1 &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Misc/Output/ast-dump-templates.cpp.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/ast-dump-templates.cpp -check-prefix=CHECK2

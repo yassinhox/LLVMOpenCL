@@ -1,0 +1,1 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as /home/jazouani/llvm/llvm-3.2/test/Assembler/2004-03-30-UnclosedFunctionCrash.ll 2>&1 | grep "found end of file when expecting more instructions"

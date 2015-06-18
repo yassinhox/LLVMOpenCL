@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10 -S -o /home/jazouani/llvm/build/tools/clang/test/CodeGenCXX/Output/apple-kext-guard-variable.cpp.tmp.s -mkernel -Xclang -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/apple-kext-guard-variable.cpp

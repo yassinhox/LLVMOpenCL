@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -asm-verbose -O0 -o /home/jazouani/llvm/build/test/DebugInfo/Output/2010-04-19-FramePtr.ll.tmp < /home/jazouani/llvm/llvm-3.2/test/DebugInfo/2010-04-19-FramePtr.ll &&
+grep DW_AT_APPLE_omit_frame_ptr /home/jazouani/llvm/build/test/DebugInfo/Output/2010-04-19-FramePtr.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -disable-fp-elim -asm-verbose -O0 -o /home/jazouani/llvm/build/test/DebugInfo/Output/2010-04-19-FramePtr.ll.tmp < /home/jazouani/llvm/llvm-3.2/test/DebugInfo/2010-04-19-FramePtr.ll &&
+grep -v DW_AT_APPLE_omit_frame_ptr /home/jazouani/llvm/build/test/DebugInfo/Output/2010-04-19-FramePtr.ll.tmp

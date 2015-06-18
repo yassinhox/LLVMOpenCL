@@ -1,0 +1,16 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+# BB#0:
+	vmovss	4(%esp), %xmm0
+	vmovq	8(%esp), %xmm1
+	vshufps	$65, %xmm1, %xmm0, %xmm0 # xmm0 = xmm0[1,0],xmm1[0,1]
+	ret
+.Ltmp0:
+	.size	test, .Ltmp0-test
+
+
+	.section	".note.GNU-stack","",@progbits

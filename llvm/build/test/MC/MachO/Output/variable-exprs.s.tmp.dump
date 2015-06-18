@@ -1,0 +1,200 @@
+('cputype', 16777223)
+('cpusubtype', 3)
+('filetype', 1)
+('num_load_commands', 3)
+('load_commands_size', 336)
+('flag', 0)
+('reserved', 0)
+('load_commands', [
+  # Load Command 0
+ (('command', 25)
+  ('size', 232)
+  ('segment_name', '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+  ('vm_addr', 0)
+  ('vm_size', 57)
+  ('file_offset', 368)
+  ('file_size', 57)
+  ('maxprot', 7)
+  ('initprot', 7)
+  ('num_sections', 2)
+  ('flags', 0)
+  ('sections', [
+    # Section 0
+   (('section_name', '__text\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('segment_name', '__TEXT\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('address', 0)
+    ('size', 1)
+    ('offset', 368)
+    ('alignment', 0)
+    ('reloc_offset', 0)
+    ('num_reloc', 0)
+    ('flags', 0x80000400)
+    ('reserved1', 0)
+    ('reserved2', 0)
+    ('reserved3', 0)
+   ),
+  ('_relocations', [
+  ])
+  ('_section_data', 'c3')
+    # Section 1
+   (('section_name', '__data\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('segment_name', '__DATA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+    ('address', 1)
+    ('size', 56)
+    ('offset', 369)
+    ('alignment', 0)
+    ('reloc_offset', 428)
+    ('num_reloc', 9)
+    ('flags', 0x0)
+    ('reserved1', 0)
+    ('reserved2', 0)
+    ('reserved3', 0)
+   ),
+  ('_relocations', [
+    # Relocation 0
+    (('word-0', 0x2c),
+     ('word-1', 0xc000004)),
+    # Relocation 1
+    (('word-0', 0x28),
+     ('word-1', 0xc000005)),
+    # Relocation 2
+    (('word-0', 0x24),
+     ('word-1', 0xc000009)),
+    # Relocation 3
+    (('word-0', 0x20),
+     ('word-1', 0xc000008)),
+    # Relocation 4
+    (('word-0', 0x1c),
+     ('word-1', 0xc000007)),
+    # Relocation 5
+    (('word-0', 0x18),
+     ('word-1', 0xc000000)),
+    # Relocation 6
+    (('word-0', 0x14),
+     ('word-1', 0xc000003)),
+    # Relocation 7
+    (('word-0', 0x10),
+     ('word-1', 0xc000001)),
+    # Relocation 8
+    (('word-0', 0x8),
+     ('word-1', 0xc000001)),
+  ])
+  ('_section_data', '00000000 00000000 00000000 00000000 00000000 00000000 04000000 00000000 00000000 00000000 00000000 00000000 cfffffff ffffffff')
+  ])
+ ),
+  # Load Command 1
+ (('command', 2)
+  ('size', 24)
+  ('symoff', 500)
+  ('nsyms', 10)
+  ('stroff', 660)
+  ('strsize', 24)
+  ('_string_data', '\x00d2\x00d\x00d3\x00a\x00b\x00c\x00e\x00g\x00f\x00t0\x00')
+  ('_symbols', [
+    # Symbol 0
+   (('n_strx', 9)
+    ('n_type', 0xe)
+    ('n_sect', 2)
+    ('n_desc', 0)
+    ('n_value', 5)
+    ('_string', 'a')
+   ),
+    # Symbol 1
+   (('n_strx', 11)
+    ('n_type', 0xe)
+    ('n_sect', 2)
+    ('n_desc', 0)
+    ('n_value', 5)
+    ('_string', 'b')
+   ),
+    # Symbol 2
+   (('n_strx', 13)
+    ('n_type', 0xe)
+    ('n_sect', 2)
+    ('n_desc', 0)
+    ('n_value', 9)
+    ('_string', 'c')
+   ),
+    # Symbol 3
+   (('n_strx', 15)
+    ('n_type', 0xe)
+    ('n_sect', 2)
+    ('n_desc', 0)
+    ('n_value', 9)
+    ('_string', 'e')
+   ),
+    # Symbol 4
+   (('n_strx', 17)
+    ('n_type', 0xe)
+    ('n_sect', 2)
+    ('n_desc', 0)
+    ('n_value', 13)
+    ('_string', 'g')
+   ),
+    # Symbol 5
+   (('n_strx', 19)
+    ('n_type', 0xe)
+    ('n_sect', 2)
+    ('n_desc', 0)
+    ('n_value', 13)
+    ('_string', 'f')
+   ),
+    # Symbol 6
+   (('n_strx', 21)
+    ('n_type', 0xe)
+    ('n_sect', 1)
+    ('n_desc', 0)
+    ('n_value', 0)
+    ('_string', 't0')
+   ),
+    # Symbol 7
+   (('n_strx', 4)
+    ('n_type', 0x1)
+    ('n_sect', 0)
+    ('n_desc', 0)
+    ('n_value', 0)
+    ('_string', 'd')
+   ),
+    # Symbol 8
+   (('n_strx', 1)
+    ('n_type', 0x1)
+    ('n_sect', 0)
+    ('n_desc', 0)
+    ('n_value', 0)
+    ('_string', 'd2')
+   ),
+    # Symbol 9
+   (('n_strx', 6)
+    ('n_type', 0x1)
+    ('n_sect', 0)
+    ('n_desc', 0)
+    ('n_value', 0)
+    ('_string', 'd3')
+   ),
+  ])
+ ),
+  # Load Command 2
+ (('command', 11)
+  ('size', 80)
+  ('ilocalsym', 0)
+  ('nlocalsym', 7)
+  ('iextdefsym', 7)
+  ('nextdefsym', 0)
+  ('iundefsym', 7)
+  ('nundefsym', 3)
+  ('tocoff', 0)
+  ('ntoc', 0)
+  ('modtaboff', 0)
+  ('nmodtab', 0)
+  ('extrefsymoff', 0)
+  ('nextrefsyms', 0)
+  ('indirectsymoff', 0)
+  ('nindirectsyms', 0)
+  ('extreloff', 0)
+  ('nextrel', 0)
+  ('locreloff', 0)
+  ('nlocrel', 0)
+  ('_indirect_symbols', [
+  ])
+ ),
+])

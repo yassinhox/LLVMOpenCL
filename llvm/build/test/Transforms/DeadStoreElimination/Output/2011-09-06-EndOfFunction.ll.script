@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -dse -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadStoreElimination/2011-09-06-EndOfFunction.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadStoreElimination/2011-09-06-EndOfFunction.ll

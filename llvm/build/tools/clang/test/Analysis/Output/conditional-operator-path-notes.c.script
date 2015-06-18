@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --analyze /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/conditional-operator-path-notes.c -Xanalyzer -analyzer-output=text -Xclang -verify &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --analyze /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/conditional-operator-path-notes.c -o /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/conditional-operator-path-notes.c.tmp &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Analysis/Output/conditional-operator-path-notes.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/conditional-operator-path-notes.c

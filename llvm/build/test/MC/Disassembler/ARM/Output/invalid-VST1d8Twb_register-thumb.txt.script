@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-VST1d8Twb_register-thumb.txt -triple=thumb-apple-darwin9 2>&1 | grep "invalid instruction encoding"

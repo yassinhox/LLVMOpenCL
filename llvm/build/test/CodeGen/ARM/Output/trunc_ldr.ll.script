@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/trunc_ldr.ll -march=arm | grep ldrb.*7 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/trunc_ldr.ll -march=arm | grep ldrsb.*7 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

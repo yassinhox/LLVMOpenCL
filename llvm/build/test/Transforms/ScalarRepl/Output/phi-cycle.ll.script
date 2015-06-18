@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -scalarrepl-ssa < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/phi-cycle.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/phi-cycle.ll

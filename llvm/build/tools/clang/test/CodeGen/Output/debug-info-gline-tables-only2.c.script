@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/debug-info-gline-tables-only2.c -gline-tables-only -S -emit-llvm -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/debug-info-gline-tables-only2.c

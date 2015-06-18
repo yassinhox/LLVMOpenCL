@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LCSSA/2006-10-31-UnreachableBlock-2.ll -lcssa -disable-output -verify-dom-info -verify-loop-info

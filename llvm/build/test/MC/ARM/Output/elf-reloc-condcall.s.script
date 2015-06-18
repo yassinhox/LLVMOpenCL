@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple=armv7-linux-gnueabi -filetype=obj /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-reloc-condcall.s -o - |    elf-dump | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix=OBJ /home/jazouani/llvm/llvm-3.2/test/MC/ARM/elf-reloc-condcall.s

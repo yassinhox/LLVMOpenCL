@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/subc.ll -march=ppc32 -o /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/subc.ll.tmp &&
+grep subfc /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/subc.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep subfe /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/subc.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep subfze /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/subc.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep subfme /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/subc.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep subfic /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/subc.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

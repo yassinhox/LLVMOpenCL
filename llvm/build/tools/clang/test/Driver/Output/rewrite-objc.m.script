@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -target x86_64-apple-macosx10.7.0 -rewrite-objc /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/rewrite-objc.m -o - -### 2>&1 |    FileCheck -check-prefix=TEST0 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/rewrite-objc.m

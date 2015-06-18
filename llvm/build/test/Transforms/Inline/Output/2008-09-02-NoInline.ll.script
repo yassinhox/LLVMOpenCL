@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/2008-09-02-NoInline.ll -inline -S | grep call | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

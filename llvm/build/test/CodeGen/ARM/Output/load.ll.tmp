@@ -1,0 +1,53 @@
+	.syntax unified
+	.eabi_attribute 6, 10
+	.eabi_attribute 7, 65
+	.eabi_attribute 8, 1
+	.eabi_attribute 9, 2
+	.eabi_attribute 20, 1
+	.eabi_attribute 21, 1
+	.eabi_attribute 23, 3
+	.eabi_attribute 24, 1
+	.eabi_attribute 25, 1
+	.file	"<stdin>"
+	.text
+	.globl	f1
+	.align	2
+	.type	f1,%function
+f1:                                     @ @f1
+@ BB#0:                                 @ %entry
+	ldrsb	r0, [r0]
+	mov	pc, lr
+.Ltmp0:
+	.size	f1, .Ltmp0-f1
+
+	.globl	f2
+	.align	2
+	.type	f2,%function
+f2:                                     @ @f2
+@ BB#0:                                 @ %entry
+	ldrb	r0, [r0]
+	mov	pc, lr
+.Ltmp1:
+	.size	f2, .Ltmp1-f2
+
+	.globl	f3
+	.align	2
+	.type	f3,%function
+f3:                                     @ @f3
+@ BB#0:                                 @ %entry
+	ldrsh	r0, [r0]
+	mov	pc, lr
+.Ltmp2:
+	.size	f3, .Ltmp2-f3
+
+	.globl	f4
+	.align	2
+	.type	f4,%function
+f4:                                     @ @f4
+@ BB#0:                                 @ %entry
+	ldrh	r0, [r0]
+	mov	pc, lr
+.Ltmp3:
+	.size	f4, .Ltmp3-f4
+
+

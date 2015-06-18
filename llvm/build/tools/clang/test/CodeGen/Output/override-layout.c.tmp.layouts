@@ -1,0 +1,215 @@
+
+*** Dumping AST Record Layout
+Type: struct X0
+Record: struct X0 {
+    int x[6] __attribute__((packed));
+}
+Layout: <ASTRecordLayout
+  Size:192
+  DataSize:192
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping AST Record Layout
+Type: struct X1
+Record: struct X1 {
+    char x[13];
+    struct X0 y;
+}
+Layout: <ASTRecordLayout
+  Size:296
+  DataSize:296
+  Alignment:8
+  FieldOffsets: [0, 104]>
+
+*** Dumping AST Record Layout
+Type: struct X2
+Record: struct X2 {
+    short x;
+    int y;
+}
+Layout: <ASTRecordLayout
+  Size:48
+  DataSize:48
+  Alignment:8
+  FieldOffsets: [0, 16]>
+
+*** Dumping AST Record Layout
+Type: struct X3
+Record: struct X3 {
+    short x __attribute__((packed));
+    int y;
+}
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:32
+  FieldOffsets: [0, 32]>
+
+*** Dumping AST Record Layout
+Type: struct X4
+Record: struct X4 {
+    int x;
+    int y;
+}
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:16
+  FieldOffsets: [0, 32]>
+
+*** Dumping AST Record Layout
+Type: struct X5
+Record: struct X5 {
+    double a[19];
+    signed char b;
+}
+Layout: <ASTRecordLayout
+  Size:1224
+  DataSize:1224
+  Alignment:8
+  FieldOffsets: [0, 1216]>
+
+*** Dumping AST Record Layout
+Type: struct X6
+Record: struct X6 {
+    long double a;
+    char b;
+}
+Layout: <ASTRecordLayout
+  Size:136
+  DataSize:136
+  Alignment:8
+  FieldOffsets: [0, 128]>
+
+*** Dumping AST Record Layout
+Type: struct X7
+Record: struct X7 {
+    unsigned int x;
+    unsigned char y;
+}
+Layout: <ASTRecordLayout
+  Size:40
+  DataSize:40
+  Alignment:8
+  FieldOffsets: [0, 32]>
+
+*** Dumping AST Record Layout
+Type: union X8
+Record: union X8 {
+    struct X7 x;
+    unsigned int y;
+}
+Layout: <ASTRecordLayout
+  Size:40
+  DataSize:40
+  Alignment:8
+  FieldOffsets: [0, 0]>
+
+*** Dumping AST Record Layout
+Type: struct X9
+Record: struct X9 {
+    unsigned int x[2] __attribute__((packed));
+    unsigned int y;
+    unsigned int z __attribute__((packed));
+}
+Layout: <ASTRecordLayout
+  Size:128
+  DataSize:128
+  Alignment:32
+  FieldOffsets: [0, 64, 96]>
+
+*** Dumping AST Record Layout
+Type: struct X10
+Record: struct X10 {
+    unsigned int x[2] __attribute__((packed));
+    unsigned int y __attribute__((packed));
+    unsigned int z __attribute__((packed));
+}
+Layout: <ASTRecordLayout
+  Size:128
+  DataSize:128
+  Alignment:8
+  FieldOffsets: [0, 64, 96]>
+
+*** Dumping AST Record Layout
+Type: struct X11
+Record: struct X11 {
+    unsigned int x[2];
+    unsigned int y;
+    unsigned int z;
+}
+Layout: <ASTRecordLayout
+  Size:128
+  DataSize:128
+  Alignment:8
+  FieldOffsets: [0, 64, 96]>
+
+*** Dumping AST Record Layout
+Type: struct X12
+Record: struct X12 {
+    int x : (IntegerLiteral 0x1edcee0 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:89:11> 'int' 24)
+;
+}
+Layout: <ASTRecordLayout
+  Size:24
+  DataSize:24
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping AST Record Layout
+Type: struct X13
+Record: struct X13 {
+    int x : (IntegerLiteral 0x1edd040 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:94:14> 'int' 10)
+;
+    int y : (IntegerLiteral 0x1edd0b8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:95:14> 'int' 10)
+;
+}
+Layout: <ASTRecordLayout
+  Size:24
+  DataSize:24
+  Alignment:8
+  FieldOffsets: [0, 10]>
+
+*** Dumping AST Record Layout
+Type: union X14
+Record: union X14 {
+    unsigned long long x : (IntegerLiteral 0x1edd220 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:100:26> 'int' 3)
+;
+}
+Layout: <ASTRecordLayout
+  Size:8
+  DataSize:8
+  Alignment:8
+  FieldOffsets: [0]>
+
+*** Dumping AST Record Layout
+Type: struct X15
+Record: struct X15 {
+    unsigned int x : (IntegerLiteral 0x1edd340 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:105:16> 'int' 16)
+;
+    unsigned int y : (IntegerLiteral 0x1edd3b8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:106:16> 'int' 28)
+ __attribute__((packed));
+}
+Layout: <ASTRecordLayout
+  Size:64
+  DataSize:64
+  Alignment:32
+  FieldOffsets: [0, 16]>
+
+*** Dumping AST Record Layout
+Type: struct X16
+Record: struct X16 {
+    int a;
+    int b;
+    int c;
+    int x : (IntegerLiteral 0x1edd6a8 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:112:11> 'int' 5)
+;
+    int y : (IntegerLiteral 0x1edd728 </home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/override-layout.c:113:11> 'int' 29)
+;
+}
+Layout: <ASTRecordLayout
+  Size:256
+  DataSize:256
+  Alignment:128
+  FieldOffsets: [0, 32, 64, 96, 128]>

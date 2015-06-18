@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-main.c.tmp1.ll -x c - < /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/ast-main.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-ast -o /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-main.c.tmp.ast /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/ast-main.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-main.c.tmp2.ll -x ast - < /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-main.c.tmp.ast &&
+diff /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-main.c.tmp1.ll /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/ast-main.c.tmp2.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -verify-machineinstrs -mcpu=i386 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-09-30-CMOV-JumpTable-PHI.ll

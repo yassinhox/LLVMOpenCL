@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -filetype=null -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/null-streamer.ll.tmp -march=x86 /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/null-streamer.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/frameless2.ll -mtriple=thumbv7-apple-darwin -disable-fp-elim | /home/jazouani/llvm/build/Release+Asserts/bin/not grep r7

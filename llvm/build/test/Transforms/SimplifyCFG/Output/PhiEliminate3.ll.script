@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/PhiEliminate3.ll -simplifycfg -S -phi-node-folding-threshold=1 | grep N: &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/PhiEliminate3.ll -simplifycfg -S -phi-node-folding-threshold=2 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep N: &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/PhiEliminate3.ll -simplifycfg -S -phi-node-folding-threshold=2 | grep M: &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/PhiEliminate3.ll -simplifycfg -S -phi-node-folding-threshold=7 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep M:

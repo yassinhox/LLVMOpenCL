@@ -1,0 +1,1 @@
+c-index-test -test-annotate-tokens=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/ms-if-exists.cpp:3:1:11:3 -fms-extensions -fno-ms-compatibility -fno-delayed-template-parsing /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/ms-if-exists.cpp | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/ms-if-exists.cpp

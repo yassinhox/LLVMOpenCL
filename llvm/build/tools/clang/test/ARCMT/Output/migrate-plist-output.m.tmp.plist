@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>files</key>
+ <array>
+  <string>/home/jazouani/llvm/llvm-3.2/tools/clang/test/ARCMT/migrate-plist-output.m</string>
+ </array>
+ <key>diagnostics</key>
+ <array>
+  <dict>
+   <key>description</key><string>ARC forbids explicit message send of &apos;release&apos;</string>
+   <key>category</key><string>ARC Restrictions</string>
+   <key>type</key><string>error</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>10</integer>
+   <key>col</key><integer>4</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+   <key>ranges</key>
+   <array>
+    <array>
+     <dict>
+      <key>line</key><integer>10</integer>
+      <key>col</key><integer>6</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <dict>
+      <key>line</key><integer>10</integer>
+      <key>col</key><integer>12</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+    </array>
+   </array>
+  </dict>
+ </array>
+</dict>
+</plist>

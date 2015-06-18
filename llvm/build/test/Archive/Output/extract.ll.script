@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-ar p /home/jazouani/llvm/llvm-3.2/test/Archive/GNU.a very_long_bytecode_file_name.bc |    cmp -s /home/jazouani/llvm/llvm-3.2/test/Archive/very_long_bytecode_file_name.bc - &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-ar p /home/jazouani/llvm/llvm-3.2/test/Archive/MacOSX.a very_long_bytecode_file_name.bc |    cmp -s /home/jazouani/llvm/llvm-3.2/test/Archive/very_long_bytecode_file_name.bc - &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-ar p /home/jazouani/llvm/llvm-3.2/test/Archive/SVR4.a very_long_bytecode_file_name.bc |    cmp -s /home/jazouani/llvm/llvm-3.2/test/Archive/very_long_bytecode_file_name.bc - &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-ar p /home/jazouani/llvm/llvm-3.2/test/Archive/xpg4.a very_long_bytecode_file_name.bc |   cmp -s /home/jazouani/llvm/llvm-3.2/test/Archive/very_long_bytecode_file_name.bc -

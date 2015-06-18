@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -O2 -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-03-24-BitField-And-Alloca.c -o - | not grep alloca &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -m32 -O2 -emit-llvm /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-03-24-BitField-And-Alloca.c -o - | not grep {store }

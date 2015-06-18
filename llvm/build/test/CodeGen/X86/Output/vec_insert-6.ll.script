@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_insert-6.ll -march=x86 -mattr=+sse2 -mcpu=penryn | grep pslldq &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_insert-6.ll -march=x86 -mattr=+sse2 -mcpu=penryn -mtriple=i686-apple-darwin9 -o /dev/null -stats -info-output-file - | grep asm-printer | grep 6

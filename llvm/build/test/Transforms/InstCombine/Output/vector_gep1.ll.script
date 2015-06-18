@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -instcombine /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/vector_gep1.ll -disable-output &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -instsimplify /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/vector_gep1.ll -disable-output

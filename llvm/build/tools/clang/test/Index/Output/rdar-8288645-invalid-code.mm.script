@@ -1,0 +1,1 @@
+c-index-test -test-load-source all /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/rdar-8288645-invalid-code.mm 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/rdar-8288645-invalid-code.mm

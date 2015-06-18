@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/illegal-vector-args-return.ll -march=x86 -mattr=+sse2 -mcpu=nehalem | grep "mulpd	%xmm3, %xmm1" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/illegal-vector-args-return.ll -march=x86 -mattr=+sse2 -mcpu=nehalem | grep "mulpd	%xmm2, %xmm0" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/illegal-vector-args-return.ll -march=x86 -mattr=+sse2 -mcpu=nehalem | grep "addps	%xmm3, %xmm1" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/illegal-vector-args-return.ll -march=x86 -mattr=+sse2 -mcpu=nehalem | grep "addps	%xmm2, %xmm0"

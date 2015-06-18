@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-04-28-CoalescerBug.ll -mtriple=x86_64-apple-darwin | grep movl > /home/jazouani/llvm/build/test/CodeGen/X86/Output/2008-04-28-CoalescerBug.ll.tmp &&
+not grep "r[abcd]x" /home/jazouani/llvm/build/test/CodeGen/X86/Output/2008-04-28-CoalescerBug.ll.tmp &&
+not grep "r[ds]i" /home/jazouani/llvm/build/test/CodeGen/X86/Output/2008-04-28-CoalescerBug.ll.tmp &&
+not grep "r[bs]p" /home/jazouani/llvm/build/test/CodeGen/X86/Output/2008-04-28-CoalescerBug.ll.tmp

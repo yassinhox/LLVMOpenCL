@@ -1,0 +1,7 @@
+extern int j;
+int bar;
+int get() {
+    return j;
+}
+
+

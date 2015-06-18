@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_insert-9.ll -march=x86 -mattr=+sse41 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_insert-9.ll.tmp &&
+grep pinsrd /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_insert-9.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

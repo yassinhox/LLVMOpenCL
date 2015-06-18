@@ -1,0 +1,3 @@
+# "x86_64-apple-darwin10" - "clang", inputs: ["/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-dsymutil.c"], output: "/tmp/darwin-dsymutil-gbTLqS.o"
+# "x86_64-apple-darwin10" - "darwin::Link", inputs: ["/tmp/darwin-dsymutil-gbTLqS.o"], output: "bar/foo"
+# "x86_64-apple-darwin10" - "darwin::Dsymutil", inputs: ["bar/foo"], output: "bar/foo.dSYM"

@@ -1,0 +1,171 @@
+# *** IR Dump Before Merge disjoint stack slots ***:
+# Machine code for function foo: SSA
+Frame Objects:
+  fi#0: size=8, align=8, at location [SP+8]
+  fi#1: size=8, align=8, at location [SP+8]
+  fi#2: size=8, align=8, at location [SP+8]
+  fi#3: size=8, align=8, at location [SP+8]
+  fi#4: size=8, align=8, at location [SP+8]
+Function Live Ins: %RDI in %vreg0, %ESI in %vreg1, %RDX in %vreg2, %ECX in %vreg3, %R8 in %vreg4, %R9 in %vreg5
+
+0B	BB#0: derived from LLVM BB %entry
+	    Live Ins: %RDI %ESI %RDX %ECX %R8 %R9
+16B		%vreg5<def> = COPY %R9; GR64:%vreg5
+32B		%vreg4<def> = COPY %R8; GR64:%vreg4
+48B		%vreg3<def> = COPY %ECX; GR32:%vreg3
+64B		%vreg2<def> = COPY %RDX; GR64:%vreg2
+80B		%vreg1<def> = COPY %ESI; GR32:%vreg1
+96B		%vreg0<def> = COPY %RDI; GR64:%vreg0
+112B		%vreg6<def> = MOV64rm %vreg0, 1, %noreg, 0, %noreg; mem:LD8[%retval.i] GR64:%vreg6,%vreg0
+128B		%vreg7<def,tied1> = SHR64ri %vreg6<tied0>, 32, %EFLAGS<imp-def,dead>; GR64:%vreg7,%vreg6
+144B		%vreg8<def> = COPY %vreg7:sub_32bit; GR32:%vreg8 GR64:%vreg7
+160B		%vreg9<def,tied1> = ADD32rr %vreg8<tied0>, %vreg1, %EFLAGS<imp-def,dead>; GR32:%vreg9,%vreg8,%vreg1
+176B		%vreg10<def,tied1> = SHR32ri %vreg9<tied0>, 5, %EFLAGS<imp-def,dead>; GR32:%vreg10,%vreg9
+192B		LIFETIME_START <fi#0>
+208B		%vreg11<def,tied1> = NEG32r %vreg1<tied0>, %EFLAGS<imp-def,dead>; GR32:%vreg11,%vreg1
+224B		TEST32rr %vreg1, %vreg1, %EFLAGS<imp-def>; GR32:%vreg1
+240B		%vreg12<def> = SETSr %EFLAGS<imp-use>; GR8:%vreg12
+256B		%vreg13<def> = COPY %vreg6:sub_32bit; GR32:%vreg13 GR64:%vreg6
+272B		%vreg14<def,tied1> = AND32ri8 %vreg9<tied0>, 31, %EFLAGS<imp-def,dead>; GR32:%vreg14,%vreg9
+288B		%vreg15<def,tied1> = ADD32ri_DB %vreg10<tied0>, -134217728, %EFLAGS<imp-def,dead>; GR32:%vreg15,%vreg10
+304B		%vreg16<def,tied1> = SUB32rr %vreg8<tied0>, %vreg11<kill>, %EFLAGS<imp-def>; GR32:%vreg16,%vreg8,%vreg11
+320B		MOV64mr <fi#0>, 1, %noreg, 0, %noreg, %vreg6; mem:ST8[%_Tmp.i39] GR64:%vreg6
+336B		%vreg17<def> = SETB_C8r %EFLAGS<imp-def,dead>, %EFLAGS<imp-use>; GR8:%vreg17
+352B		%vreg18<def> = LEA64r <fi#3>, 1, %noreg, 0, %noreg; GR64:%vreg18
+368B		%vreg19<def> = COPY %vreg18:sub_32bit; GR32:%vreg19 GR64:%vreg18
+384B		%vreg20<def,tied1> = ADD32ri8_DB %vreg19<tied0>, 4, %EFLAGS<imp-def,dead>; GR32:%vreg20,%vreg19
+400B		%vreg21<def> = SUBREG_TO_REG 0, %vreg20<kill>, 4; GR64:%vreg21 GR32:%vreg20
+416B		%vreg22<def> = MOVZX64rr32 %vreg13<kill>; GR64:%vreg22 GR32:%vreg13
+432B		TEST8rr %vreg17<kill>, %vreg12<kill>, %EFLAGS<imp-def>; GR8:%vreg17,%vreg12
+448B		%vreg23<def> = MOV32ri 1; GR32:%vreg23
+464B		%vreg24<def,tied1> = CMOVNE32rr %vreg10<tied0>, %vreg15<kill>, %EFLAGS<imp-use>; GR32:%vreg24,%vreg10,%vreg15
+480B		%vreg25<def> = MOVSX64rr32 %vreg24<kill>; GR64_NOSP:%vreg25 GR32:%vreg24
+496B		%vreg26<def> = LEA64r %vreg22<kill>, 4, %vreg25<kill>, 0, %noreg; GR64:%vreg26,%vreg22 GR64_NOSP:%vreg25
+512B		MOV64mr <fi#0>, 1, %noreg, 0, %noreg, %vreg26<kill>; mem:ST8[%_Tmp.i39.0.cast74] GR64:%vreg26
+528B		MOV32mr <fi#0>, 1, %noreg, 4, %noreg, %vreg14<kill>; mem:ST4[%_Tmp.i39.4.cast] GR32:%vreg14
+544B		LIFETIME_END <fi#0>
+560B		LIFETIME_START <fi#3>
+576B		MOV64mr <fi#3>, 1, %noreg, 0, %noreg, %vreg2; mem:ST8[%fifteen](tbaa=!"int") GR64:%vreg2
+592B		MOV32mr %vreg21<kill>, 1, %noreg, 0, %noreg, %vreg3; mem:ST4[%sunkaddr87](tbaa=!"any pointer") GR64:%vreg21 GR32:%vreg3
+608B		%vreg27<def> = MOV64rm <fi#3>, 1, %noreg, 0, %noreg; mem:LD8[%retval.i.i] GR64:%vreg27
+624B		%vreg28<def,tied1> = SHR64ri %vreg27<tied0>, 32, %EFLAGS<imp-def,dead>; GR64_with_sub_8bit:%vreg28 GR64:%vreg27
+640B		%vreg29<def> = COPY %vreg28:sub_8bit; GR8:%vreg29 GR64_with_sub_8bit:%vreg28
+656B		%CL<def> = COPY %vreg29; GR8:%vreg29
+672B		%vreg30<def,tied1> = SHL32rCL %vreg23<tied0>, %EFLAGS<imp-def,dead>, %CL<imp-use>; GR32:%vreg30,%vreg23
+688B		LIFETIME_END <fi#3>
+704B		MOV32mr %vreg4, 1, %noreg, 0, %noreg, %vreg30<kill>; mem:ST4[%out.lo](align=8) GR64:%vreg4 GR32:%vreg30
+720B		%vreg31<def> = COPY %vreg28:sub_32bit; GR32:%vreg31 GR64_with_sub_8bit:%vreg28
+736B		MOV32mr %vreg5, 1, %noreg, 0, %noreg, %vreg31<kill>; mem:ST4[%out.hi](align=8) GR64:%vreg5 GR32:%vreg31
+752B		RET
+
+# End machine code for function foo.
+
+# *** IR Dump After Merge disjoint stack slots ***:
+# Machine code for function foo: SSA
+Frame Objects:
+  fi#0: size=8, align=8, at location [SP+8]
+  fi#1: size=8, align=8, at location [SP+8]
+  fi#2: size=8, align=8, at location [SP+8]
+  fi#3: dead
+  fi#4: size=8, align=8, at location [SP+8]
+Function Live Ins: %RDI in %vreg0, %ESI in %vreg1, %RDX in %vreg2, %ECX in %vreg3, %R8 in %vreg4, %R9 in %vreg5
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %RDI %ESI %RDX %ECX %R8 %R9
+	%vreg5<def> = COPY %R9; GR64:%vreg5
+	%vreg4<def> = COPY %R8; GR64:%vreg4
+	%vreg3<def> = COPY %ECX; GR32:%vreg3
+	%vreg2<def> = COPY %RDX; GR64:%vreg2
+	%vreg1<def> = COPY %ESI; GR32:%vreg1
+	%vreg0<def> = COPY %RDI; GR64:%vreg0
+	%vreg6<def> = MOV64rm %vreg0, 1, %noreg, 0, %noreg; mem:LD8[<unknown>] GR64:%vreg6,%vreg0
+	%vreg7<def,tied1> = SHR64ri %vreg6<tied0>, 32, %EFLAGS<imp-def,dead>; GR64:%vreg7,%vreg6
+	%vreg8<def> = COPY %vreg7:sub_32bit; GR32:%vreg8 GR64:%vreg7
+	%vreg9<def,tied1> = ADD32rr %vreg8<tied0>, %vreg1, %EFLAGS<imp-def,dead>; GR32:%vreg9,%vreg8,%vreg1
+	%vreg10<def,tied1> = SHR32ri %vreg9<tied0>, 5, %EFLAGS<imp-def,dead>; GR32:%vreg10,%vreg9
+	%vreg11<def,tied1> = NEG32r %vreg1<tied0>, %EFLAGS<imp-def,dead>; GR32:%vreg11,%vreg1
+	TEST32rr %vreg1, %vreg1, %EFLAGS<imp-def>; GR32:%vreg1
+	%vreg12<def> = SETSr %EFLAGS<imp-use>; GR8:%vreg12
+	%vreg13<def> = COPY %vreg6:sub_32bit; GR32:%vreg13 GR64:%vreg6
+	%vreg14<def,tied1> = AND32ri8 %vreg9<tied0>, 31, %EFLAGS<imp-def,dead>; GR32:%vreg14,%vreg9
+	%vreg15<def,tied1> = ADD32ri_DB %vreg10<tied0>, -134217728, %EFLAGS<imp-def,dead>; GR32:%vreg15,%vreg10
+	%vreg16<def,tied1> = SUB32rr %vreg8<tied0>, %vreg11<kill>, %EFLAGS<imp-def>; GR32:%vreg16,%vreg8,%vreg11
+	MOV64mr <fi#0>, 1, %noreg, 0, %noreg, %vreg6; mem:ST8[%_Tmp.i39] GR64:%vreg6
+	%vreg17<def> = SETB_C8r %EFLAGS<imp-def,dead>, %EFLAGS<imp-use>; GR8:%vreg17
+	%vreg18<def> = LEA64r <fi#0>, 1, %noreg, 0, %noreg; GR64:%vreg18
+	%vreg19<def> = COPY %vreg18:sub_32bit; GR32:%vreg19 GR64:%vreg18
+	%vreg20<def,tied1> = ADD32ri8_DB %vreg19<tied0>, 4, %EFLAGS<imp-def,dead>; GR32:%vreg20,%vreg19
+	%vreg21<def> = SUBREG_TO_REG 0, %vreg20<kill>, 4; GR64:%vreg21 GR32:%vreg20
+	%vreg22<def> = MOVZX64rr32 %vreg13<kill>; GR64:%vreg22 GR32:%vreg13
+	TEST8rr %vreg17<kill>, %vreg12<kill>, %EFLAGS<imp-def>; GR8:%vreg17,%vreg12
+	%vreg23<def> = MOV32ri 1; GR32:%vreg23
+	%vreg24<def,tied1> = CMOVNE32rr %vreg10<tied0>, %vreg15<kill>, %EFLAGS<imp-use>; GR32:%vreg24,%vreg10,%vreg15
+	%vreg25<def> = MOVSX64rr32 %vreg24<kill>; GR64_NOSP:%vreg25 GR32:%vreg24
+	%vreg26<def> = LEA64r %vreg22<kill>, 4, %vreg25<kill>, 0, %noreg; GR64:%vreg26,%vreg22 GR64_NOSP:%vreg25
+	MOV64mr <fi#0>, 1, %noreg, 0, %noreg, %vreg26<kill>; mem:ST8[%_Tmp.i39.0.cast74] GR64:%vreg26
+	MOV32mr <fi#0>, 1, %noreg, 4, %noreg, %vreg14<kill>; mem:ST4[%_Tmp.i39.4.cast] GR32:%vreg14
+	MOV64mr <fi#0>, 1, %noreg, 0, %noreg, %vreg2; mem:ST8[%_Tmp.i39](tbaa=!"int") GR64:%vreg2
+	MOV32mr %vreg21<kill>, 1, %noreg, 0, %noreg, %vreg3; mem:ST4[<unknown>](tbaa=!"any pointer") GR64:%vreg21 GR32:%vreg3
+	%vreg27<def> = MOV64rm <fi#0>, 1, %noreg, 0, %noreg; mem:LD8[%_Tmp.i39] GR64:%vreg27
+	%vreg28<def,tied1> = SHR64ri %vreg27<tied0>, 32, %EFLAGS<imp-def,dead>; GR64_with_sub_8bit:%vreg28 GR64:%vreg27
+	%vreg29<def> = COPY %vreg28:sub_8bit; GR8:%vreg29 GR64_with_sub_8bit:%vreg28
+	%CL<def> = COPY %vreg29; GR8:%vreg29
+	%vreg30<def,tied1> = SHL32rCL %vreg23<tied0>, %EFLAGS<imp-def,dead>, %CL<imp-use>; GR32:%vreg30,%vreg23
+	MOV32mr %vreg4, 1, %noreg, 0, %noreg, %vreg30<kill>; mem:ST4[<unknown>](align=8) GR64:%vreg4 GR32:%vreg30
+	%vreg31<def> = COPY %vreg28:sub_32bit; GR32:%vreg31 GR64_with_sub_8bit:%vreg28
+	MOV32mr %vreg5, 1, %noreg, 0, %noreg, %vreg31<kill>; mem:ST4[<unknown>](align=8) GR64:%vreg5 GR32:%vreg31
+	RET
+
+# End machine code for function foo.
+
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	pushq	%rbp
+	pushq	%r14
+	pushq	%rbx
+	movq	(%rdi), %r10
+	movq	%r10, %rdi
+	shrq	$32, %rdi
+	leal	(%rdi,%rsi), %r11d
+	movl	%r11d, %eax
+	shrl	$5, %eax
+	movl	%esi, %ebp
+	negl	%ebp
+	testl	%esi, %esi
+	sets	%sil
+	andl	$31, %r11d
+	leal	-134217728(%rax), %ebx
+	cmpl	%ebp, %edi
+	movq	%r10, -8(%rsp)
+	sbbb	%r14b, %r14b
+	leaq	-8(%rsp), %rdi
+	orl	$4, %edi
+	movl	%r10d, %ebp
+	testb	%sil, %r14b
+	movl	$1, %esi
+	cmovel	%eax, %ebx
+	movslq	%ebx, %rax
+	leaq	(%rbp,%rax,4), %rax
+	movq	%rax, -8(%rsp)
+	movl	%r11d, -4(%rsp)
+	movq	%rdx, -8(%rsp)
+	movl	%ecx, (%rdi)
+	movq	-8(%rsp), %rcx
+	shrq	$32, %rcx
+	shll	%cl, %esi
+	movl	%esi, (%r8)
+	movl	%ecx, (%r9)
+	popq	%rbx
+	popq	%r14
+	popq	%rbp
+	ret
+.Ltmp0:
+	.size	foo, .Ltmp0-foo
+
+
+	.section	".note.GNU-stack","",@progbits

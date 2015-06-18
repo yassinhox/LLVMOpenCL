@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2007-01-15-AsmDialect.ll -march=ppc32 -mtriple=powerpc-apple-darwin8 |     grep cntlzw

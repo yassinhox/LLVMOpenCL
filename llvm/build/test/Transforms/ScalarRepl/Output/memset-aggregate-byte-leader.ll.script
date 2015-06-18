@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/memset-aggregate-byte-leader.ll -scalarrepl -S |    not grep "call void @llvm.memcpy.i32" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/memset-aggregate-byte-leader.ll -scalarrepl -S | grep getelementptr

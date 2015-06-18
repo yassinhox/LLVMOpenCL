@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -mergefunc < /home/jazouani/llvm/llvm-3.2/test/Transforms/MergeFunc/vectors-and-arrays.ll -disable-output -stats | /home/jazouani/llvm/build/Release+Asserts/bin/not grep merged

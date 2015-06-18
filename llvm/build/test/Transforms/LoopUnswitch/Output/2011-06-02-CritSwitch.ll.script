@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -loop-unswitch -disable-output < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/2011-06-02-CritSwitch.ll

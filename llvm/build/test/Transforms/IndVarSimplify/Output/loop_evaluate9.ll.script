@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/loop_evaluate9.ll -indvars -S > /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/loop_evaluate9.ll.tmp &&
+grep "[%]tmp7 = icmp eq i8 -28, -28" /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/loop_evaluate9.ll.tmp &&
+grep "[%]tmp8 = icmp eq i8 63, 63" /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/loop_evaluate9.ll.tmp

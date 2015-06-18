@@ -1,0 +1,15 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-print-phases -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/lto.c -flto 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '2: compiler, {1}, lto-bc' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-print-phases -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/lto.c -O4 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '2: compiler, {1}, lto-bc' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-print-phases /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/lto.c -emit-llvm 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '0: input, ".*lto.c", c' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '1: preprocessor, {0}, cpp-output' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '2: compiler, {1}, lto-bc' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '3: linker, {2}, image' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/lto.c -emit-llvm -save-temps -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '"-o" ".*lto\.i" "-x" "c" ".*lto\.c"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '"-o" ".*lto\.o" .*".*lto\.i"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '".*a.out" .*".*lto\.o"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/lto.c -emit-llvm -S -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log &&
+grep '"-o" ".*lto\.s" "-x" "c" ".*lto\.c"' /home/jazouani/llvm/build/tools/clang/test/Driver/Output/lto.c.tmp.log

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/rotate2.ll -march=x86-64 -mcpu=corei7 | grep rol | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

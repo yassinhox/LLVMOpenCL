@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/directive_abort.s:6:15: error: .abort 'please stop assembing' detected. Assembly stopping.
+        .abort       please stop assembing
+                     ^

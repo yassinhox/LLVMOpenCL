@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel -relocation-model=pic < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/br-jmp.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/br-jmp.ll -check-prefix=CHECK-PIC &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel -relocation-model=static < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/br-jmp.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/br-jmp.ll -check-prefix=CHECK-STATIC

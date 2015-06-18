@@ -1,0 +1,180 @@
+PostRAScheduler
+Disabled scoreboard hazard recognizer
+********** List Scheduling **********
+*** Final schedule ***
+
+Critical path has total latency 7
+Available regs:  APSR CPSR D0 D1 D2 D3 D4 D5 D6 D7 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 FPEXC FPSCR FPSCR_NZCV FPSID ITSTATE MVFR0 MVFR1 PC Q0 Q1 Q2 Q3 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 R1 R2 R3 R9 R12 S0 S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S12 S13 S14 S15 SP SPSR D0_D2 D1_D3 D2_D4 D3_D5 D4_D6 D5_D7 D16_D18 D17_D19 D18_D20 D19_D21 D20_D22 D21_D23 D22_D24 D23_D25 D24_D26 D25_D27 D26_D28 D27_D29 D28_D30 D29_D31 Q0_Q1 Q1_Q2 Q2_Q3 Q8_Q9 Q9_Q10 Q10_Q11 Q11_Q12 Q12_Q13 Q13_Q14 Q14_Q15 Q0_Q1_Q2_Q3 Q8_Q9_Q10_Q11 Q9_Q10_Q11_Q12 Q10_Q11_Q12_Q13 Q11_Q12_Q13_Q14 Q12_Q13_Q14_Q15 R2_R3 R12_SP D0_D1_D2 D1_D2_D3 D2_D3_D4 D3_D4_D5 D4_D5_D6 D5_D6_D7 D16_D17_D18 D17_D18_D19 D18_D19_D20 D19_D20_D21 D20_D21_D22 D21_D22_D23 D22_D23_D24 D23_D24_D25 D24_D25_D26 D25_D26_D27 D26_D27_D28 D27_D28_D29 D28_D29_D30 D29_D30_D31 D0_D2_D4 D1_D3_D5 D2_D4_D6 D3_D5_D7 D16_D18_D20 D17_D19_D21 D18_D20_D22 D19_D21_D23 D20_D22_D24 D21_D23_D25 D22_D24_D26 D23_D25_D27 D24_D26_D28 D25_D27_D29 D26_D28_D30 D27_D29_D31 D0_D2_D4_D6 D1_D3_D5_D7 D16_D18_D20_D22 D17_D19_D21_D23 D18_D20_D22_D24 D19_D21_D23_D25 D20_D22_D24_D26 D21_D23_D25_D27 D22_D24_D26_D28 D23_D25_D27_D29 D24_D26_D28_D30 D25_D27_D29_D31 D1_D2 D3_D4 D5_D6 D17_D18 D19_D20 D21_D22 D23_D24 D25_D26 D27_D28 D29_D30 D1_D2_D3_D4 D3_D4_D5_D6 D17_D18_D19_D20 D19_D20_D21_D22 D21_D22_D23_D24 D23_D24_D25_D26 D25_D26_D27_D28 D27_D28_D29_D30
+********** List Scheduling **********
+SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 0
+  Successors:
+   out SU(1): Latency=1
+   val SU(1): Latency=1
+
+SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+   out SU(0): Latency=1
+   val SU(0): Latency=1 Reg=%R2
+  Successors:
+   val SU(2): Latency=1
+
+SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:Volatile ST4[%p1](tbaa=!"int")
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 0
+  Predecessors:
+   val SU(1): Latency=1 Reg=%R2
+  Successors:
+   antiSU(3): Latency=0
+   ch  SU(3): Latency=1
+
+SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:Volatile LD4[%p2](tbaa=!"int")
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 4
+  Depth              : 3
+  Height             : 0
+  Predecessors:
+   antiSU(2): Latency=0
+   ch  SU(2): Latency=1
+  Successors:
+   val SU(4294967295): Latency=4
+
+
+*** Examining Available
+Height 7: SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+*** Scheduling [0]: SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+
+*** Examining Available
+*** Finished cycle 0
+
+*** Examining Available
+Height 6: SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+*** Scheduling [1]: SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+
+*** Examining Available
+*** Finished cycle 1
+
+*** Examining Available
+Height 5: SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:Volatile ST4[%p1](tbaa=!"int")
+*** Scheduling [2]: SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:Volatile ST4[%p1](tbaa=!"int")
+
+*** Examining Available
+*** Finished cycle 2
+
+*** Examining Available
+Height 4: SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:Volatile LD4[%p2](tbaa=!"int")
+*** Scheduling [3]: SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:Volatile LD4[%p2](tbaa=!"int")
+*** Final schedule ***
+SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:Volatile ST4[%p1](tbaa=!"int")
+SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:Volatile LD4[%p2](tbaa=!"int")
+
+Fixup kills for BB#0
+PostRAScheduler
+Disabled scoreboard hazard recognizer
+********** List Scheduling **********
+*** Final schedule ***
+
+Critical path has total latency 7
+Available regs:  APSR CPSR D0 D1 D2 D3 D4 D5 D6 D7 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 FPEXC FPSCR FPSCR_NZCV FPSID ITSTATE MVFR0 MVFR1 PC Q0 Q1 Q2 Q3 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 R1 R2 R3 R9 R12 S0 S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S12 S13 S14 S15 SP SPSR D0_D2 D1_D3 D2_D4 D3_D5 D4_D6 D5_D7 D16_D18 D17_D19 D18_D20 D19_D21 D20_D22 D21_D23 D22_D24 D23_D25 D24_D26 D25_D27 D26_D28 D27_D29 D28_D30 D29_D31 Q0_Q1 Q1_Q2 Q2_Q3 Q8_Q9 Q9_Q10 Q10_Q11 Q11_Q12 Q12_Q13 Q13_Q14 Q14_Q15 Q0_Q1_Q2_Q3 Q8_Q9_Q10_Q11 Q9_Q10_Q11_Q12 Q10_Q11_Q12_Q13 Q11_Q12_Q13_Q14 Q12_Q13_Q14_Q15 R2_R3 R12_SP D0_D1_D2 D1_D2_D3 D2_D3_D4 D3_D4_D5 D4_D5_D6 D5_D6_D7 D16_D17_D18 D17_D18_D19 D18_D19_D20 D19_D20_D21 D20_D21_D22 D21_D22_D23 D22_D23_D24 D23_D24_D25 D24_D25_D26 D25_D26_D27 D26_D27_D28 D27_D28_D29 D28_D29_D30 D29_D30_D31 D0_D2_D4 D1_D3_D5 D2_D4_D6 D3_D5_D7 D16_D18_D20 D17_D19_D21 D18_D20_D22 D19_D21_D23 D20_D22_D24 D21_D23_D25 D22_D24_D26 D23_D25_D27 D24_D26_D28 D25_D27_D29 D26_D28_D30 D27_D29_D31 D0_D2_D4_D6 D1_D3_D5_D7 D16_D18_D20_D22 D17_D19_D21_D23 D18_D20_D22_D24 D19_D21_D23_D25 D20_D22_D24_D26 D21_D23_D25_D27 D22_D24_D26_D28 D23_D25_D27_D29 D24_D26_D28_D30 D25_D27_D29_D31 D1_D2 D3_D4 D5_D6 D17_D18 D19_D20 D21_D22 D23_D24 D25_D26 D27_D28 D29_D30 D1_D2_D3_D4 D3_D4_D5_D6 D17_D18_D19_D20 D19_D20_D21_D22 D21_D22_D23_D24 D23_D24_D25_D26 D25_D26_D27_D28 D27_D28_D29_D30
+********** List Scheduling **********
+SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 0
+  Successors:
+   out SU(1): Latency=1
+   val SU(1): Latency=1
+
+SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+   out SU(0): Latency=1
+   val SU(0): Latency=1 Reg=%R2
+  Successors:
+   val SU(2): Latency=1
+
+SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:ST4[%p1](tbaa=!"int")
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 0
+  Predecessors:
+   val SU(1): Latency=1 Reg=%R2
+  Successors:
+   antiSU(3): Latency=0
+   ch  SU(3): Latency=1
+
+SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:LD4[%p2](tbaa=!"int")
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 4
+  Depth              : 3
+  Height             : 0
+  Predecessors:
+   antiSU(2): Latency=0
+   ch  SU(2): Latency=1
+  Successors:
+   val SU(4294967295): Latency=4
+
+
+*** Examining Available
+Height 7: SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+*** Scheduling [0]: SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+
+*** Examining Available
+*** Finished cycle 0
+
+*** Examining Available
+Height 6: SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+*** Scheduling [1]: SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+
+*** Examining Available
+*** Finished cycle 1
+
+*** Examining Available
+Height 5: SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:ST4[%p1](tbaa=!"int")
+*** Scheduling [2]: SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:ST4[%p1](tbaa=!"int")
+
+*** Examining Available
+*** Finished cycle 2
+
+*** Examining Available
+Height 4: SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:LD4[%p2](tbaa=!"int")
+*** Scheduling [3]: SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:LD4[%p2](tbaa=!"int")
+*** Final schedule ***
+SU(0):   %R2<def> = t2MOVi16 4, pred:14, pred:%noreg
+SU(1):   %R2<def,tied1> = t2MOVTi16 %R2<tied0>, 1, pred:14, pred:%noreg
+SU(2):   t2STRi12 %R2<kill>, %R0<kill>, 0, pred:14, pred:%noreg; mem:ST4[%p1](tbaa=!"int")
+SU(3):   %R0<def> = t2LDRi12 %R1<kill>, 0, pred:14, pred:%noreg; mem:LD4[%p2](tbaa=!"int")
+
+Fixup kills for BB#0

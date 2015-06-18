@@ -1,0 +1,7 @@
+mkdir -p /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.dir &&
+echo '#include "header2.h"' > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.dir/header1.h &&
+echo > /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.dir/header2.h &&
+cp /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/modified-header-error.c /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.dir/t.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -x c-header /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.dir/header1.h -emit-pch -o /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.pch &&
+echo >> /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.dir/header2.h &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.dir/t.c -include-pch /home/jazouani/llvm/build/tools/clang/test/PCH/Output/modified-header-error.c.tmp.pch -fsyntax-only 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/PCH/modified-header-error.c

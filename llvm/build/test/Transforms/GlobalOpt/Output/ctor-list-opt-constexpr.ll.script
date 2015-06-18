@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -globalopt /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/ctor-list-opt-constexpr.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/ctor-list-opt-constexpr.ll

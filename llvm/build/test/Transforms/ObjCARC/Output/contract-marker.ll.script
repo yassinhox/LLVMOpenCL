@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -objc-arc-contract < /home/jazouani/llvm/llvm-3.2/test/Transforms/ObjCARC/contract-marker.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/ObjCARC/contract-marker.ll

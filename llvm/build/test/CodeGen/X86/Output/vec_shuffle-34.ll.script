@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_shuffle-34.ll -march=x86 -mcpu=core2 | grep pshufb | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

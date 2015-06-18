@@ -1,0 +1,254 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/vtable-available-externally.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%"struct.Test1::A" = type { i32 (...)** }
+%"class.std::type_info" = type { i32 (...)**, i8* }
+%"struct.Test2::A" = type { i32 (...)** }
+%"struct.Test3::B" = type { %"struct.Test3::A" }
+%"struct.Test3::A" = type { i32 (...)** }
+%"struct.Test5::B" = type { %"struct.Test5::A" }
+%"struct.Test5::A" = type { i32 (...)** }
+%"struct.Test6::D" = type { %"struct.Test6::C" }
+%"struct.Test6::C" = type { %"struct.Test6::A", %"struct.Test6::B" }
+%"struct.Test6::A" = type { i32 (...)**, i32 }
+%"struct.Test6::B" = type { i32 (...)**, i32 }
+%"struct.Test7::c28" = type { i32 (...)**, %"struct.Test7::c11" }
+%"struct.Test7::c11" = type { %"struct.Test7::c10", [8 x i8] }
+%"struct.Test7::c10" = type { i32 (...)** }
+
+@_ZTVN5Test11AE = available_externally unnamed_addr constant [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTIN5Test11AE to i8*), i8* bitcast (void (%"struct.Test1::A"*)* @_ZN5Test11A1fEv to i8*), i8* bitcast (void (%"struct.Test1::A"*)* @_ZN5Test11AD1Ev to i8*), i8* bitcast (void (%"struct.Test1::A"*)* @_ZN5Test11AD0Ev to i8*)]
+@_ZTVN10__cxxabiv117__class_type_infoE = external global i8*
+@_ZTSN5Test21AE = constant [11 x i8] c"N5Test21AE\00"
+@_ZTIN5Test21AE = unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test21AE, i32 0, i32 0) }
+@_ZTVN5Test31BE = available_externally unnamed_addr constant [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN5Test31BE to i8*), i8* bitcast (void (%"struct.Test3::B"*)* @_ZN5Test31B1fEv to i8*), i8* bitcast (void (%"struct.Test3::B"*)* @_ZN5Test31BD1Ev to i8*), i8* bitcast (void (%"struct.Test3::B"*)* @_ZN5Test31BD0Ev to i8*)]
+@_ZTVN5Test61DE = available_externally unnamed_addr constant [9 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN5Test61DE to i8*), i8* bitcast (void (%"struct.Test6::D"*)* @_ZN5Test61DD1Ev to i8*), i8* bitcast (void (%"struct.Test6::D"*)* @_ZN5Test61DD0Ev to i8*), i8* bitcast (void (%"struct.Test6::D"*)* @_ZN5Test61D1fEv to i8*), i8* inttoptr (i64 -16 to i8*), i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN5Test61DE to i8*), i8* bitcast (void (%"struct.Test6::D"*)* @_ZThn16_N5Test61DD1Ev to i8*), i8* bitcast (void (%"struct.Test6::D"*)* @_ZThn16_N5Test61DD0Ev to i8*)]
+@_ZTVN5Test21AE = unnamed_addr constant [3 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTIN5Test21AE to i8*), i8* bitcast (void (%"struct.Test2::A"*)* @_ZN5Test21A1fEv to i8*)]
+@_ZTVN5Test51BE = unnamed_addr constant [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN5Test51BE to i8*), i8* bitcast (void (%"struct.Test5::A"*)* @_ZN5Test51A1fEv to i8*), i8* bitcast (void (%"struct.Test5::B"*)* @_ZN5Test51BD1Ev to i8*), i8* bitcast (void (%"struct.Test5::B"*)* @_ZN5Test51BD0Ev to i8*)]
+@_ZTVN10__cxxabiv120__si_class_type_infoE = external global i8*
+@_ZTSN5Test51BE = constant [11 x i8] c"N5Test51BE\00"
+@_ZTSN5Test51AE = linkonce_odr constant [11 x i8] c"N5Test51AE\00"
+@_ZTIN5Test51AE = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test51AE, i32 0, i32 0) }
+@_ZTIN5Test51BE = unnamed_addr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test51BE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN5Test51AE to i8*) }
+@_ZTSN5Test61DE = available_externally constant [11 x i8] c"N5Test61DE\00"
+@_ZTVN10__cxxabiv121__vmi_class_type_infoE = external global i8*
+@_ZTSN5Test61CE = linkonce_odr constant [11 x i8] c"N5Test61CE\00"
+@_ZTSN5Test61AE = available_externally constant [11 x i8] c"N5Test61AE\00"
+@_ZTIN5Test61AE = available_externally unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test61AE, i32 0, i32 0) }
+@_ZTSN5Test61BE = available_externally constant [11 x i8] c"N5Test61BE\00"
+@_ZTIN5Test61BE = available_externally unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test61BE, i32 0, i32 0) }
+@_ZTIN5Test61CE = linkonce_odr unnamed_addr constant { i8*, i8*, i32, i32, i8*, i64, i8*, i64 } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv121__vmi_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test61CE, i32 0, i32 0), i32 0, i32 2, i8* bitcast ({ i8*, i8* }* @_ZTIN5Test61AE to i8*), i64 2, i8* bitcast ({ i8*, i8* }* @_ZTIN5Test61BE to i8*), i64 4098 }
+@_ZTIN5Test61DE = available_externally unnamed_addr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test61DE, i32 0, i32 0), i8* bitcast ({ i8*, i8*, i32, i32, i8*, i64, i8*, i64 }* @_ZTIN5Test61CE to i8*) }
+@_ZTSN5Test31BE = available_externally constant [11 x i8] c"N5Test31BE\00"
+@_ZTSN5Test31AE = available_externally constant [11 x i8] c"N5Test31AE\00"
+@_ZTIN5Test31AE = available_externally unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test31AE, i32 0, i32 0) }
+@_ZTIN5Test31BE = available_externally unnamed_addr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test31BE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN5Test31AE to i8*) }
+@_ZTSN5Test11AE = available_externally constant [11 x i8] c"N5Test11AE\00"
+@_ZTIN5Test11AE = available_externally unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([11 x i8]* @_ZTSN5Test11AE, i32 0, i32 0) }
+@_ZTVN5Test73c28E = available_externally unnamed_addr constant [10 x i8*] [i8* inttoptr (i64 8 to i8*), i8* null, i8* bitcast ({ i8*, i8*, i32, i32, i8*, i64 }* @_ZTIN5Test73c28E to i8*), i8* bitcast (void (%"struct.Test7::c28"*)* @_ZN5Test73c282f6Ev to i8*), i8* inttoptr (i64 -8 to i8*), i8* null, i8* inttoptr (i64 -8 to i8*), i8* bitcast ({ i8*, i8*, i32, i32, i8*, i64 }* @_ZTIN5Test73c28E to i8*), i8* bitcast (void (%"struct.Test7::c10"*)* @_ZN5Test73c103fooEv to i8*), i8* bitcast (void (%"struct.Test7::c28"*)* @_ZTv0_n32_N5Test73c282f6Ev to i8*)]
+@_ZTSN5Test73c28E = available_externally constant [13 x i8] c"N5Test73c28E\00"
+@_ZTSN5Test73c11E = available_externally constant [13 x i8] c"N5Test73c11E\00"
+@_ZTSN5Test73c10E = available_externally constant [13 x i8] c"N5Test73c10E\00"
+@_ZTSN5Test72c1E = linkonce_odr constant [12 x i8] c"N5Test72c1E\00"
+@_ZTIN5Test72c1E = linkonce_odr unnamed_addr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([12 x i8]* @_ZTSN5Test72c1E, i32 0, i32 0) }
+@_ZTIN5Test73c10E = available_externally unnamed_addr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([13 x i8]* @_ZTSN5Test73c10E, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN5Test72c1E to i8*) }
+@_ZTIN5Test73c11E = available_externally unnamed_addr constant { i8*, i8*, i32, i32, i8*, i64, i8*, i64 } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv121__vmi_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([13 x i8]* @_ZTSN5Test73c11E, i32 0, i32 0), i32 1, i32 2, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN5Test73c10E to i8*), i64 2, i8* bitcast ({ i8*, i8* }* @_ZTIN5Test72c1E to i8*), i64 2050 }
+@_ZTIN5Test73c28E = available_externally unnamed_addr constant { i8*, i8*, i32, i32, i8*, i64 } { i8* bitcast (i8** getelementptr inbounds (i8** @_ZTVN10__cxxabiv121__vmi_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([13 x i8]* @_ZTSN5Test73c28E, i32 0, i32 0), i32 1, i32 1, i8* bitcast ({ i8*, i8*, i32, i32, i8*, i64, i8*, i64 }* @_ZTIN5Test73c11E to i8*), i64 -6141 }
+
+define void @_ZN5Test11AC1Ev(%"struct.Test1::A"* nocapture %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test1::A"* %this, i64 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([5 x i8*]* @_ZTVN5Test11AE, i64 0, i64 2) to i32 (...)**), i32 (...)*** %0, align 8, !tbaa !0
+  ret void
+}
+
+define void @_ZN5Test11AC2Ev(%"struct.Test1::A"* nocapture %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test1::A"* %this, i64 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([5 x i8*]* @_ZTVN5Test11AE, i64 0, i64 2) to i32 (...)**), i32 (...)*** %0, align 8, !tbaa !0
+  ret void
+}
+
+define void @_ZN5Test11fEPNS_1AE(%"struct.Test1::A"* %a) nounwind {
+entry:
+  %0 = bitcast %"struct.Test1::A"* %a to void (%"struct.Test1::A"*)***
+  %vtable = load void (%"struct.Test1::A"*)*** %0, align 8, !tbaa !0
+  %1 = load void (%"struct.Test1::A"*)** %vtable, align 8
+  tail call void %1(%"struct.Test1::A"* %a) nounwind
+  ret void
+}
+
+define void @_ZN5Test11gEv() nounwind {
+entry:
+  %a = alloca %"struct.Test1::A", align 8
+  %0 = getelementptr inbounds %"struct.Test1::A"* %a, i64 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([5 x i8*]* @_ZTVN5Test11AE, i64 0, i64 2) to i32 (...)**), i32 (...)*** %0, align 8, !tbaa !0
+  call void @_ZN5Test11A1fEv(%"struct.Test1::A"* %a) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN5Test11AD1Ev(%"struct.Test1::A"* nocapture %this) unnamed_addr nounwind readnone align 2 {
+entry:
+  ret void
+}
+
+define %"class.std::type_info"* @_ZN5Test21gEv() nounwind readnone {
+entry:
+  ret %"class.std::type_info"* bitcast ({ i8*, i8* }* @_ZTIN5Test21AE to %"class.std::type_info"*)
+}
+
+define void @_ZN5Test21A1fEv(%"struct.Test2::A"* nocapture %this) unnamed_addr nounwind readnone align 2 {
+entry:
+  ret void
+}
+
+define void @_ZN5Test31BC1Ev(%"struct.Test3::B"* nocapture %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test3::B"* %this, i64 0, i32 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([5 x i8*]* @_ZTVN5Test31BE, i64 0, i64 2) to i32 (...)**), i32 (...)*** %0, align 8, !tbaa !0
+  ret void
+}
+
+define void @_ZN5Test31BC2Ev(%"struct.Test3::B"* nocapture %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test3::B"* %this, i64 0, i32 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([5 x i8*]* @_ZTVN5Test31BE, i64 0, i64 2) to i32 (...)**), i32 (...)*** %0, align 8, !tbaa !0
+  ret void
+}
+
+define void @_ZN5Test31gEPNS_1AE(%"struct.Test3::A"* %a) nounwind {
+entry:
+  %0 = bitcast %"struct.Test3::A"* %a to void (%"struct.Test3::A"*)***
+  %vtable = load void (%"struct.Test3::A"*)*** %0, align 8, !tbaa !0
+  %1 = load void (%"struct.Test3::A"*)** %vtable, align 8
+  tail call void %1(%"struct.Test3::A"* %a) nounwind
+  ret void
+}
+
+define void @_ZN5Test41fEv() nounwind {
+entry:
+  call void @llvm.trap()
+  unreachable
+}
+
+define void @_ZN5Test51BD0Ev(%"struct.Test5::B"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = bitcast %"struct.Test5::B"* %this to i8*
+  tail call void @_ZdlPv(i8* %0) nounwind
+  ret void
+}
+
+define void @_ZN5Test51BD1Ev(%"struct.Test5::B"* nocapture %this) unnamed_addr nounwind readnone align 2 {
+entry:
+  ret void
+}
+
+declare void @_ZdlPv(i8*) nounwind
+
+define void @_ZN5Test51BD2Ev(%"struct.Test5::B"* nocapture %this) unnamed_addr nounwind readnone align 2 {
+entry:
+  ret void
+}
+
+define void @_ZN5Test61DC1Ev(%"struct.Test6::D"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test6::D"* %this, i64 0, i32 0
+  tail call void @_ZN5Test61CC2Ev(%"struct.Test6::C"* %0) nounwind
+  %1 = getelementptr inbounds %"struct.Test6::D"* %this, i64 0, i32 0, i32 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([9 x i8*]* @_ZTVN5Test61DE, i64 0, i64 2) to i32 (...)**), i32 (...)*** %1, align 8, !tbaa !0
+  %2 = getelementptr inbounds %"struct.Test6::D"* %this, i64 0, i32 0, i32 1, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([9 x i8*]* @_ZTVN5Test61DE, i64 0, i64 7) to i32 (...)**), i32 (...)*** %2, align 8, !tbaa !0
+  ret void
+}
+
+define void @_ZN5Test61DC2Ev(%"struct.Test6::D"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test6::D"* %this, i64 0, i32 0
+  tail call void @_ZN5Test61CC2Ev(%"struct.Test6::C"* %0) nounwind
+  %1 = getelementptr inbounds %"struct.Test6::D"* %this, i64 0, i32 0, i32 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([9 x i8*]* @_ZTVN5Test61DE, i64 0, i64 2) to i32 (...)**), i32 (...)*** %1, align 8, !tbaa !0
+  %2 = getelementptr inbounds %"struct.Test6::D"* %this, i64 0, i32 0, i32 1, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([9 x i8*]* @_ZTVN5Test61DE, i64 0, i64 7) to i32 (...)**), i32 (...)*** %2, align 8, !tbaa !0
+  ret void
+}
+
+declare void @_ZN5Test61CC2Ev(%"struct.Test6::C"*)
+
+define void @_ZN5Test79check_c28Ev() nounwind {
+entry:
+  %obj = alloca %"struct.Test7::c28", align 8
+  %0 = getelementptr inbounds %"struct.Test7::c28"* %obj, i64 0, i32 1, i32 0, i32 0
+  %1 = getelementptr inbounds %"struct.Test7::c28"* %obj, i64 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([10 x i8*]* @_ZTVN5Test73c28E, i64 0, i64 3) to i32 (...)**), i32 (...)*** %1, align 8, !tbaa !0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ([10 x i8*]* @_ZTVN5Test73c28E, i64 0, i64 8) to i32 (...)**), i32 (...)*** %0, align 8, !tbaa !0
+  %add.ptr = getelementptr inbounds %"struct.Test7::c28"* %obj, i64 0, i32 1
+  %2 = getelementptr inbounds %"struct.Test7::c11"* %add.ptr, i64 -1, i32 1, i64 0
+  %3 = bitcast i8* %2 to %"struct.Test7::c28"*
+  call void @_ZN5Test73c282f6Ev(%"struct.Test7::c28"* %3) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN5Test51A1fEv(%"struct.Test5::A"* nocapture %this) unnamed_addr nounwind readnone align 2 {
+entry:
+  ret void
+}
+
+declare void @_ZN5Test61DD1Ev(%"struct.Test6::D"*)
+
+declare void @_ZN5Test61DD0Ev(%"struct.Test6::D"*)
+
+declare void @_ZN5Test61D1fEv(%"struct.Test6::D"*)
+
+define available_externally void @_ZThn16_N5Test61DD1Ev(%"struct.Test6::D"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test6::D"* %this, i64 -1, i32 0, i32 1
+  %1 = bitcast %"struct.Test6::B"* %0 to %"struct.Test6::D"*
+  tail call void @_ZN5Test61DD1Ev(%"struct.Test6::D"* %1) nounwind
+  ret void
+}
+
+define available_externally void @_ZThn16_N5Test61DD0Ev(%"struct.Test6::D"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = getelementptr inbounds %"struct.Test6::D"* %this, i64 -1, i32 0, i32 1
+  %1 = bitcast %"struct.Test6::B"* %0 to %"struct.Test6::D"*
+  tail call void @_ZN5Test61DD0Ev(%"struct.Test6::D"* %1) nounwind
+  ret void
+}
+
+declare void @_ZN5Test31B1fEv(%"struct.Test3::B"*)
+
+declare void @_ZN5Test31BD1Ev(%"struct.Test3::B"*)
+
+declare void @_ZN5Test31BD0Ev(%"struct.Test3::B"*)
+
+declare void @_ZN5Test11A1fEv(%"struct.Test1::A"*)
+
+define linkonce_odr void @_ZN5Test11AD0Ev(%"struct.Test1::A"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = bitcast %"struct.Test1::A"* %this to i8*
+  tail call void @_ZdlPv(i8* %0) nounwind
+  ret void
+}
+
+declare void @_ZN5Test73c282f6Ev(%"struct.Test7::c28"*)
+
+declare void @_ZN5Test73c103fooEv(%"struct.Test7::c10"*)
+
+define available_externally void @_ZTv0_n32_N5Test73c282f6Ev(%"struct.Test7::c28"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %0 = bitcast %"struct.Test7::c28"* %this to i8*
+  %1 = bitcast %"struct.Test7::c28"* %this to i8**
+  %2 = load i8** %1, align 8
+  %3 = getelementptr inbounds i8* %2, i64 -32
+  %4 = bitcast i8* %3 to i64*
+  %5 = load i64* %4, align 8
+  %6 = getelementptr inbounds i8* %0, i64 %5
+  %7 = bitcast i8* %6 to %"struct.Test7::c28"*
+  tail call void @_ZN5Test73c282f6Ev(%"struct.Test7::c28"* %7) nounwind
+  ret void
+}
+
+declare void @llvm.trap() noreturn nounwind
+
+!0 = metadata !{metadata !"vtable pointer", metadata !1}
+!1 = metadata !{metadata !"Simple C/C++ TBAA"}

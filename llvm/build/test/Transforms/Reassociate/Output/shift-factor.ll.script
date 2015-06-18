@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Reassociate/shift-factor.ll -reassociate -instcombine -S > /home/jazouani/llvm/build/test/Transforms/Reassociate/Output/shift-factor.ll.tmp &&
+grep shl /home/jazouani/llvm/build/test/Transforms/Reassociate/Output/shift-factor.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep add /home/jazouani/llvm/build/test/Transforms/Reassociate/Output/shift-factor.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

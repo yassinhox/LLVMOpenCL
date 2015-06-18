@@ -1,0 +1,19 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-02-07-bitfield-bug.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.test = type { [3 x i8], i8 }
+
+define void @f(%struct.test* %t) nounwind {
+entry:
+  %t.addr = alloca %struct.test*, align 8
+  store %struct.test* %t, %struct.test** %t.addr, align 8
+  %0 = load %struct.test** %t.addr, align 8
+  %1 = bitcast %struct.test* %0 to i8*
+  %bf.field.offs = getelementptr i8* %1, i32 3
+  %2 = load i8* %bf.field.offs, align 1
+  %3 = and i8 %2, -2
+  %4 = or i8 %3, 1
+  store i8 %4, i8* %bf.field.offs, align 1
+  ret void
+}

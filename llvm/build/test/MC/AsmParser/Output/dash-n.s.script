@@ -1,0 +1,2 @@
+not /home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -n -triple i386-unknown-unknown /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/dash-n.s 2> /home/jazouani/llvm/build/test/MC/AsmParser/Output/dash-n.s.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/FileCheck < /home/jazouani/llvm/build/test/MC/AsmParser/Output/dash-n.s.tmp /home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/dash-n.s

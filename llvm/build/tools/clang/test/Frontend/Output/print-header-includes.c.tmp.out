@@ -1,0 +1,24 @@
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/print-header-includes.c"
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/print-header-includes.c" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 150 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/Inputs/test3.h" 1
+int y;
+# 2 "<command line>" 2
+# 1 "<built-in>" 2
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/print-header-includes.c" 2
+
+
+
+
+
+
+
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/Inputs/test.h" 1
+# 1 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/Inputs/test2.h" 1
+int x;
+# 2 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/Inputs/test.h" 2
+# 9 "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/print-header-includes.c" 2
+

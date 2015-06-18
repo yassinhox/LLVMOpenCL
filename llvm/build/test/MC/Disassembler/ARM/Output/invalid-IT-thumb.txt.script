@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc --disassemble /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-IT-thumb.txt -triple=thumbv7-unknown-unknown 2>&1 | grep "potentially undefined instruction encoding"

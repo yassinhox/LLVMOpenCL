@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=ppc32 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/stack-protector.ll -o - | grep "__stack_chk_guard" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=ppc32 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/stack-protector.ll -o - | grep "__stack_chk_fail"

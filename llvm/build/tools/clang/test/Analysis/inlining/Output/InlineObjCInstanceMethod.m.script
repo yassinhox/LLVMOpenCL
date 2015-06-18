@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --analyze -Xanalyzer -analyzer-checker=osx.cocoa.IncompatibleMethodTypes,osx.coreFoundation.CFRetainRelease -Xclang -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/inlining/InlineObjCInstanceMethod.m

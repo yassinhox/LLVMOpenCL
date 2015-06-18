@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -filetype=obj -mtriple mipsel-unknown-linux /home/jazouani/llvm/llvm-3.2/test/MC/Mips/elf-relsym.ll -o - | elf-dump --dump-section-data  | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Mips/elf-relsym.ll

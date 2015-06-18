@@ -1,0 +1,21 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+# BB#0:
+	movl	4(%esp), %eax
+	cmpb	$0, 4(%eax)
+	je	.LBB0_1
+# BB#2:                                 # %F
+	movb	7(%eax), %al
+	ret
+.LBB0_1:                                # %TB
+	movb	$4, %al
+	ret
+.Ltmp0:
+	.size	test, .Ltmp0-test
+
+
+	.section	".note.GNU-stack","",@progbits

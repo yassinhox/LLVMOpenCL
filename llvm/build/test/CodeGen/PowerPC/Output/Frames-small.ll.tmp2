@@ -1,0 +1,26 @@
+	.machine ppc
+	.section	__TEXT,__textcoal_nt,coalesced,pure_instructions
+	.section	__TEXT,__symbol_stub1,symbol_stubs,pure_instructions,16
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_f1
+	.align	4
+_f1:                                    ; @f1
+	.cfi_startproc
+; BB#0:
+	stw r31, -4(r1)
+	stwu r1, -16448(r1)
+Ltmp2:
+	.cfi_def_cfa_offset 16448
+Ltmp3:
+	.cfi_offset r31, -4
+	mr r31, r1
+Ltmp4:
+	.cfi_def_cfa_register r31
+	addi r3, r31, 64
+	addi r1, r1, 16448
+	lwz r31, -4(r1)
+	blr 
+	.cfi_endproc
+
+.subsections_via_symbols
+

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-12-12-PrivateEHSymbol.ll -disable-cfi -march=x86-64 -mtriple=x86_64-apple-darwin9 | grep ^__Z1fv.eh &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-12-12-PrivateEHSymbol.ll -disable-cfi -march=x86    -mtriple=i386-apple-darwin9 | grep ^__Z1fv.eh

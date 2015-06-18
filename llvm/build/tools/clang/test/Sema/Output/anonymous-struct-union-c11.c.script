@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -verify -Wc11-extensions /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/anonymous-struct-union-c11.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -pedantic -Werror -std=c11 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Sema/anonymous-struct-union-c11.c

@@ -1,0 +1,18 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/shift_ops.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s &&
+grep "shlh	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 10 &&
+grep "shlhi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep "shl	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 10 &&
+grep "shli	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep "xshw	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep "and	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 15 &&
+grep "andi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep "rotmi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep "rotqmbyi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "rotqmbii	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "rotqmby	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "rotqmbi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "rotqbyi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "rotqbii	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep "rotqbybi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep "sfi	"  /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 6 &&
+cat /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/shift_ops.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/shift_ops.ll

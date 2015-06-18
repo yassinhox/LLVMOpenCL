@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_i64.ll -march=x86 -mattr=+sse2 -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_i64.ll.tmp &&
+grep movq /home/jazouani/llvm/build/test/CodeGen/X86/Output/vec_i64.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

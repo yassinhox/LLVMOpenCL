@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple thumbv7 -show-encoding -disassemble < /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-VST1LNd32_UPD-thumb.txt 2>&1 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/invalid-VST1LNd32_UPD-thumb.txt

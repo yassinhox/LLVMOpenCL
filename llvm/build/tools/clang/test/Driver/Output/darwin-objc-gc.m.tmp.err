@@ -1,0 +1,1 @@
+clang: warning: Objective-C garbage collection is not supported on this platform, ignoring '-fobjc-gc'

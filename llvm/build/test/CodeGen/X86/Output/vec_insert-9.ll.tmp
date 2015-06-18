@@ -1,0 +1,15 @@
+	.file	"<stdin>"
+	.text
+	.globl	var_insert2
+	.align	16, 0x90
+	.type	var_insert2,@function
+var_insert2:                            # @var_insert2
+# BB#0:                                 # %entry
+	vmovd	4(%esp), %xmm0
+	vpinsrd	$3, 8(%esp), %xmm0, %xmm0
+	ret
+.Ltmp0:
+	.size	var_insert2, .Ltmp0-var_insert2
+
+
+	.section	".note.GNU-stack","",@progbits

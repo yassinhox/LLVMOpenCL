@@ -1,0 +1,7 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.tmpdir &&
+mkdir -p /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.tmpdir &&
+env SDKROOT=/home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.tmpdir  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10    -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-sdkroot.c -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.log &&
+FileCheck --check-prefix=CHECK-BASIC < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.log /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-sdkroot.c &&
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.nonpath &&
+env SDKROOT=/home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.nonpath  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-apple-darwin10    -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-sdkroot.c -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.log &&
+FileCheck --check-prefix=CHECK-NONPATH < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/darwin-sdkroot.c.tmp.log /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-sdkroot.c

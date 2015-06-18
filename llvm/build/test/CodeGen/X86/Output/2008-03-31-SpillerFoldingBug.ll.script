@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-03-31-SpillerFoldingBug.ll -mtriple=i386-apple-darwin -relocation-model=pic -disable-fp-elim | grep add | grep 12 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep non_lazy_ptr

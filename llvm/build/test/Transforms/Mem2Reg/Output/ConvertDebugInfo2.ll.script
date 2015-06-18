@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -mem2reg < /home/jazouani/llvm/llvm-3.2/test/Transforms/Mem2Reg/ConvertDebugInfo2.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep ".dbg " | /home/jazouani/llvm/build/Release+Asserts/bin/count 7

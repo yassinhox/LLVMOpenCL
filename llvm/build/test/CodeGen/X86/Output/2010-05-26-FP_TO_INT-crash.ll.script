@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -O0 -mcpu=i386 -mattr=-sse,-mmx < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-05-26-FP_TO_INT-crash.ll

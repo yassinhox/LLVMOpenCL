@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -fast-isel -march=x86 < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-06-14-fast-isel-fs-load.ll | grep %fs:

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2009-12-01-LoopIVUsers.ll -std-compile-opts |    /home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=thumbv7-apple-darwin10 -mattr=+neon | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Thumb2/2009-12-01-LoopIVUsers.ll

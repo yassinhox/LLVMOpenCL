@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-ipsccp2.ll -ipsccp -S | grep -v "ret i101 0" |     grep -v "ret i101 undef" | /home/jazouani/llvm/build/Release+Asserts/bin/not grep ret

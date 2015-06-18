@@ -1,0 +1,17 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/stores.ll -march=cellspu > /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s &&
+grep 'stqd.*0($3)'       /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep 'stqd.*16($3)'      /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep 16256               /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep 16384               /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+grep 771                 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep 515                 /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep 1799                /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+grep 1543                /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 5 &&
+grep 1029                /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+grep 'shli.*, 4'         /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep stqx                /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 4 &&
+grep ilhu                /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 11 &&
+grep iohl                /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 8 &&
+grep shufb               /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 15 &&
+grep frds                /home/jazouani/llvm/build/test/CodeGen/CellSPU/Output/stores.ll.tmp1.s | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/stores.ll -march=cellspu | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/stores.ll

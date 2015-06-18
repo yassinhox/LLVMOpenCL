@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -arch i386 -fms-extensions -rewrite-objc /home/jazouani/llvm/llvm-3.2/tools/clang/test/Rewriter/no-integrated-preprocessing.m -o /home/jazouani/llvm/build/tools/clang/test/Rewriter/Output/no-integrated-preprocessing.m.tmp-rw.cpp &&
+FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Rewriter/no-integrated-preprocessing.m < /home/jazouani/llvm/build/tools/clang/test/Rewriter/Output/no-integrated-preprocessing.m.tmp-rw.cpp

@@ -1,0 +1,798 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/constructor-init.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%struct.M = type { i32 }
+%struct.N = type { %struct.M, %struct.P, %struct.Q, %struct.M, %struct.M, float, i32, float, float, float, [3 x %struct.M], [1 x [3 x %struct.P]], [2 x [3 x [4 x %struct.Q]]] }
+%struct.P = type { i32 }
+%struct.Q = type { i32 }
+%struct.A = type { i8 }
+%"struct.InitVTable::B" = type { i32 (...)** }
+%"struct.InitVTable::A" = type { i8 }
+%"struct.rdar9694300::X" = type { i32 }
+%"struct.PR13273::S" = type { %"struct.PR13273::U" }
+%"struct.PR13273::U" = type { i32 }
+%struct.X = type { i32*, i32* }
+%"struct.PR10720::pair" = type { [4 x i32] }
+%"struct.PR10720::pair2" = type { [4 x %"struct.PR10720::X"] }
+%"struct.PR10720::X" = type { i8 }
+
+@_ZTVN10InitVTable1BE = external unnamed_addr constant [3 x i8*]
+@.str = private unnamed_addr constant [34 x i8] c"f1 = %f d1 = %f i1 = %d ld = %f \0A\00", align 1
+@.str1 = private unnamed_addr constant [9 x i8] c"iQ = %d\0A\00", align 1
+@.str2 = private unnamed_addr constant [9 x i8] c"iP = %d\0A\00", align 1
+@.str3 = private unnamed_addr constant [9 x i8] c"iM = %d\0A\00", align 1
+@.str4 = private unnamed_addr constant [5 x i8] c"N()\0A\00", align 1
+@.str5 = private unnamed_addr constant [5 x i8] c"Q()\0A\00", align 1
+@.str6 = private unnamed_addr constant [5 x i8] c"P()\0A\00", align 1
+@.str7 = private unnamed_addr constant [7 x i8] c"Q(%d)\0A\00", align 1
+@.str8 = private unnamed_addr constant [7 x i8] c"P(%d)\0A\00", align 1
+@.str9 = private unnamed_addr constant [7 x i8] c"M(%d)\0A\00", align 1
+@.str10 = private unnamed_addr constant [5 x i8] c"M()\0A\00", align 1
+
+define i32 @main() nounwind {
+entry:
+  %m1 = alloca %struct.M, align 4
+  %n1 = alloca %struct.N, align 4
+  call void @_ZN1MC1Ev(%struct.M* %m1)
+  call void @_ZN1NC1Ev(%struct.N* %n1)
+  call void @_ZN1N2PREv(%struct.N* %n1)
+  ret i32 0
+}
+
+define linkonce_odr void @_ZN1MC1Ev(%struct.M* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  %this1 = load %struct.M** %this.addr
+  call void @_ZN1MC2Ev(%struct.M* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1NC1Ev(%struct.N* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.N*, align 8
+  store %struct.N* %this, %struct.N** %this.addr, align 8
+  %this1 = load %struct.N** %this.addr
+  call void @_ZN1NC2Ev(%struct.N* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1N2PREv(%struct.N* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.N*, align 8
+  store %struct.N* %this, %struct.N** %this.addr, align 8
+  %this1 = load %struct.N** %this.addr
+  %f1 = getelementptr inbounds %struct.N* %this1, i32 0, i32 5
+  %0 = load float* %f1, align 4
+  %conv = fpext float %0 to double
+  %d1 = getelementptr inbounds %struct.N* %this1, i32 0, i32 7
+  %1 = load float* %d1, align 4
+  %conv2 = fpext float %1 to double
+  %i1 = getelementptr inbounds %struct.N* %this1, i32 0, i32 6
+  %2 = load i32* %i1, align 4
+  %ld = getelementptr inbounds %struct.N* %this1, i32 0, i32 8
+  %3 = load float* %ld, align 4
+  %conv3 = fpext float %3 to double
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([34 x i8]* @.str, i32 0, i32 0), double %conv, double %conv2, i32 %2, double %conv3)
+  %4 = bitcast %struct.N* %this1 to %struct.M*
+  call void @_ZN1M3MPREv(%struct.M* %4)
+  %5 = bitcast %struct.N* %this1 to i8*
+  %add.ptr = getelementptr inbounds i8* %5, i64 4
+  %6 = bitcast i8* %add.ptr to %struct.P*
+  call void @_ZN1P3PPREv(%struct.P* %6)
+  %7 = bitcast %struct.N* %this1 to i8*
+  %add.ptr4 = getelementptr inbounds i8* %7, i64 8
+  %8 = bitcast i8* %add.ptr4 to %struct.Q*
+  call void @_ZN1Q3QPREv(%struct.Q* %8)
+  %9 = bitcast %struct.N* %this1 to i8*
+  %add.ptr5 = getelementptr inbounds i8* %9, i64 8
+  %10 = bitcast i8* %add.ptr5 to %struct.Q*
+  %iQ = getelementptr inbounds %struct.Q* %10, i32 0, i32 0
+  %11 = load i32* %iQ, align 4
+  %call6 = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str1, i32 0, i32 0), i32 %11)
+  %12 = bitcast %struct.N* %this1 to i8*
+  %add.ptr7 = getelementptr inbounds i8* %12, i64 4
+  %13 = bitcast i8* %add.ptr7 to %struct.P*
+  %iP = getelementptr inbounds %struct.P* %13, i32 0, i32 0
+  %14 = load i32* %iP, align 4
+  %call8 = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str2, i32 0, i32 0), i32 %14)
+  %15 = bitcast %struct.N* %this1 to %struct.M*
+  %iM = getelementptr inbounds %struct.M* %15, i32 0, i32 0
+  %16 = load i32* %iM, align 4
+  %call9 = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str3, i32 0, i32 0), i32 %16)
+  %17 = bitcast %struct.N* %this1 to i8*
+  %add.ptr10 = getelementptr inbounds i8* %17, i64 8
+  %18 = bitcast i8* %add.ptr10 to %struct.Q*
+  %iQ11 = getelementptr inbounds %struct.Q* %18, i32 0, i32 0
+  %19 = load i32* %iQ11, align 4
+  %call12 = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str1, i32 0, i32 0), i32 %19)
+  %20 = bitcast %struct.N* %this1 to i8*
+  %add.ptr13 = getelementptr inbounds i8* %20, i64 4
+  %21 = bitcast i8* %add.ptr13 to %struct.P*
+  %iP14 = getelementptr inbounds %struct.P* %21, i32 0, i32 0
+  %22 = load i32* %iP14, align 4
+  %call15 = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str2, i32 0, i32 0), i32 %22)
+  %23 = bitcast %struct.N* %this1 to %struct.M*
+  %iM16 = getelementptr inbounds %struct.M* %23, i32 0, i32 0
+  %24 = load i32* %iM16, align 4
+  %call17 = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str3, i32 0, i32 0), i32 %24)
+  ret void
+}
+
+define void @_Z1fv() nounwind {
+entry:
+  %a4 = alloca %struct.A, align 1
+  %i = alloca i32, align 4
+  call void @_ZN1AIsEC1Ei(%struct.A* %a4, i32 97)
+  store i32 17, i32* %i, align 4
+  call void @_ZN1AIsED1Ev(%struct.A* %a4) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1AIsEC1Ei(%struct.A* %this, i32) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.A*, align 8
+  %.addr = alloca i32, align 4
+  store %struct.A* %this, %struct.A** %this.addr, align 8
+  store i32 %0, i32* %.addr, align 4
+  %this1 = load %struct.A** %this.addr
+  %1 = load i32* %.addr, align 4
+  call void @_ZN1AIsEC2Ei(%struct.A* %this1, i32 %1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1AIsED1Ev(%struct.A* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.A*, align 8
+  store %struct.A* %this, %struct.A** %this.addr, align 8
+  %this1 = load %struct.A** %this.addr
+  call void @_ZN1AIsED2Ev(%struct.A* %this1) nounwind
+  ret void
+}
+
+define void @_ZN10InitVTable1BC1Ev(%"struct.InitVTable::B"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.InitVTable::B"*, align 8
+  store %"struct.InitVTable::B"* %this, %"struct.InitVTable::B"** %this.addr, align 8
+  %this1 = load %"struct.InitVTable::B"** %this.addr
+  call void @_ZN10InitVTable1BC2Ev(%"struct.InitVTable::B"* %this1)
+  ret void
+}
+
+define void @_ZN10InitVTable1BC2Ev(%"struct.InitVTable::B"* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.InitVTable::B"*, align 8
+  store %"struct.InitVTable::B"* %this, %"struct.InitVTable::B"** %this.addr, align 8
+  %this1 = load %"struct.InitVTable::B"** %this.addr
+  %0 = bitcast %"struct.InitVTable::B"* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTVN10InitVTable1BE, i64 0, i64 2), i8*** %0
+  %1 = bitcast %"struct.InitVTable::B"* %this1 to %"struct.InitVTable::A"*
+  %2 = bitcast %"struct.InitVTable::B"* %this1 to i32 (%"struct.InitVTable::B"*)***
+  %vtable = load i32 (%"struct.InitVTable::B"*)*** %2
+  %vfn = getelementptr inbounds i32 (%"struct.InitVTable::B"*)** %vtable, i64 0
+  %3 = load i32 (%"struct.InitVTable::B"*)** %vfn
+  %call = call i32 %3(%"struct.InitVTable::B"* %this1)
+  call void @_ZN10InitVTable1AC2Ei(%"struct.InitVTable::A"* %1, i32 %call)
+  %4 = bitcast %"struct.InitVTable::B"* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTVN10InitVTable1BE, i64 0, i64 2), i8*** %4
+  ret void
+}
+
+declare void @_ZN10InitVTable1AC2Ei(%"struct.InitVTable::A"*, i32)
+
+define void @_ZN10InitVTable1BC1Ei(%"struct.InitVTable::B"* %this, i32 %x) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.InitVTable::B"*, align 8
+  %x.addr = alloca i32, align 4
+  store %"struct.InitVTable::B"* %this, %"struct.InitVTable::B"** %this.addr, align 8
+  store i32 %x, i32* %x.addr, align 4
+  %this1 = load %"struct.InitVTable::B"** %this.addr
+  %0 = load i32* %x.addr, align 4
+  call void @_ZN10InitVTable1BC2Ei(%"struct.InitVTable::B"* %this1, i32 %0)
+  ret void
+}
+
+define void @_ZN10InitVTable1BC2Ei(%"struct.InitVTable::B"* %this, i32 %x) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.InitVTable::B"*, align 8
+  %x.addr = alloca i32, align 4
+  store %"struct.InitVTable::B"* %this, %"struct.InitVTable::B"** %this.addr, align 8
+  store i32 %x, i32* %x.addr, align 4
+  %this1 = load %"struct.InitVTable::B"** %this.addr
+  %0 = bitcast %"struct.InitVTable::B"* %this1 to %"struct.InitVTable::A"*
+  %1 = load i32* %x.addr, align 4
+  %add = add nsw i32 %1, 5
+  call void @_ZN10InitVTable1AC2Ei(%"struct.InitVTable::A"* %0, i32 %add)
+  %2 = bitcast %"struct.InitVTable::B"* %this1 to i8***
+  store i8** getelementptr inbounds ([3 x i8*]* @_ZTVN10InitVTable1BE, i64 0, i64 2), i8*** %2
+  ret void
+}
+
+define void @_ZN11rdar96943001fEv() nounwind {
+entry:
+  %x = alloca %"struct.rdar9694300::X", align 4
+  %i = alloca i32, align 4
+  store i32 17, i32* %i, align 4
+  ret void
+}
+
+define i32 @_ZN7PR132731fEv() nounwind {
+entry:
+  %call = call noalias i8* @_Znwm(i64 4)
+  %0 = bitcast i8* %call to %"struct.PR13273::S"*
+  %1 = bitcast %"struct.PR13273::S"* %0 to i8*
+  call void @llvm.memset.p0i8.i64(i8* %1, i8 0, i64 4, i32 4, i1 false)
+  %2 = bitcast %"struct.PR13273::S"* %0 to %"struct.PR13273::U"*
+  %t = getelementptr inbounds %"struct.PR13273::U"* %2, i32 0, i32 0
+  %3 = load i32* %t, align 4
+  ret i32 %3
+}
+
+declare noalias i8* @_Znwm(i64)
+
+declare void @llvm.memset.p0i8.i64(i8* nocapture, i8, i64, i32, i1) nounwind
+
+define void @_Z5get_X1XIiE(%struct.X* noalias sret %agg.result, %struct.X* %x) nounwind {
+entry:
+  call void @_ZN1XIiEC1ERKS0_(%struct.X* %agg.result, %struct.X* %x)
+  ret void
+}
+
+define linkonce_odr void @_ZN1XIiEC1ERKS0_(%struct.X* %this, %struct.X* %other) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.X*, align 8
+  %other.addr = alloca %struct.X*, align 8
+  store %struct.X* %this, %struct.X** %this.addr, align 8
+  store %struct.X* %other, %struct.X** %other.addr, align 8
+  %this1 = load %struct.X** %this.addr
+  %0 = load %struct.X** %other.addr
+  call void @_ZN1XIiEC2ERKS0_(%struct.X* %this1, %struct.X* %0)
+  ret void
+}
+
+define void @_ZN7PR107203fooERKNS_4pairERKNS_5pair2E(%"struct.PR10720::pair"* %x, %"struct.PR10720::pair2"* %x2) nounwind {
+entry:
+  %x.addr = alloca %"struct.PR10720::pair"*, align 8
+  %x2.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %y = alloca %"struct.PR10720::pair", align 4
+  %y2 = alloca %"struct.PR10720::pair2", align 1
+  %y2m = alloca %"struct.PR10720::pair2", align 1
+  store %"struct.PR10720::pair"* %x, %"struct.PR10720::pair"** %x.addr, align 8
+  store %"struct.PR10720::pair2"* %x2, %"struct.PR10720::pair2"** %x2.addr, align 8
+  %0 = load %"struct.PR10720::pair"** %x.addr, align 8
+  call void @_ZN7PR107204pairC1ERKS0_(%"struct.PR10720::pair"* %y, %"struct.PR10720::pair"* %0)
+  %1 = load %"struct.PR10720::pair2"** %x2.addr, align 8
+  call void @_ZN7PR107205pair2C1ERKS0_(%"struct.PR10720::pair2"* %y2, %"struct.PR10720::pair2"* %1)
+  call void @_ZN7PR107205pair2C1EOS0_(%"struct.PR10720::pair2"* %y2m, %"struct.PR10720::pair2"* %y2)
+  %2 = load %"struct.PR10720::pair2"** %x2.addr, align 8
+  %call = call %"struct.PR10720::pair2"* @_ZN7PR107205pair2aSERKS0_(%"struct.PR10720::pair2"* %y2, %"struct.PR10720::pair2"* %2)
+  %call1 = call %"struct.PR10720::pair2"* @_ZN7PR107205pair2aSEOS0_(%"struct.PR10720::pair2"* %y2m, %"struct.PR10720::pair2"* %y2)
+  call void @_ZN7PR107205pair2D1Ev(%"struct.PR10720::pair2"* %y2m) nounwind
+  call void @_ZN7PR107205pair2D1Ev(%"struct.PR10720::pair2"* %y2) nounwind
+  call void @_ZN7PR107204pairD1Ev(%"struct.PR10720::pair"* %y) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN7PR107204pairC1ERKS0_(%"struct.PR10720::pair"* %this, %"struct.PR10720::pair"*) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair"*, align 8
+  %.addr = alloca %"struct.PR10720::pair"*, align 8
+  store %"struct.PR10720::pair"* %this, %"struct.PR10720::pair"** %this.addr, align 8
+  store %"struct.PR10720::pair"* %0, %"struct.PR10720::pair"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair"** %this.addr
+  %1 = load %"struct.PR10720::pair"** %.addr
+  call void @_ZN7PR107204pairC2ERKS0_(%"struct.PR10720::pair"* %this1, %"struct.PR10720::pair"* %1)
+  ret void
+}
+
+define linkonce_odr void @_ZN7PR107205pair2C1ERKS0_(%"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"*) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %.addr = alloca %"struct.PR10720::pair2"*, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  store %"struct.PR10720::pair2"* %0, %"struct.PR10720::pair2"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  %1 = load %"struct.PR10720::pair2"** %.addr
+  call void @_ZN7PR107205pair2C2ERKS0_(%"struct.PR10720::pair2"* %this1, %"struct.PR10720::pair2"* %1)
+  ret void
+}
+
+define linkonce_odr void @_ZN7PR107205pair2C1EOS0_(%"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"*) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %.addr = alloca %"struct.PR10720::pair2"*, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  store %"struct.PR10720::pair2"* %0, %"struct.PR10720::pair2"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  %1 = load %"struct.PR10720::pair2"** %.addr
+  call void @_ZN7PR107205pair2C2EOS0_(%"struct.PR10720::pair2"* %this1, %"struct.PR10720::pair2"* %1)
+  ret void
+}
+
+define linkonce_odr %"struct.PR10720::pair2"* @_ZN7PR107205pair2aSERKS0_(%"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"*) nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %__i0 = alloca i64, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  store %"struct.PR10720::pair2"* %0, %"struct.PR10720::pair2"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  store i64 0, i64* %__i0, align 8
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %1 = load i64* %__i0, align 8
+  %cmp = icmp ne i64 %1, 4
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %2 = load i64* %__i0, align 8
+  %second = getelementptr inbounds %"struct.PR10720::pair2"* %this1, i32 0, i32 0
+  %arrayidx = getelementptr inbounds [4 x %"struct.PR10720::X"]* %second, i32 0, i64 %2
+  %3 = load i64* %__i0, align 8
+  %4 = load %"struct.PR10720::pair2"** %.addr, align 8
+  %second2 = getelementptr inbounds %"struct.PR10720::pair2"* %4, i32 0, i32 0
+  %arrayidx3 = getelementptr inbounds [4 x %"struct.PR10720::X"]* %second2, i32 0, i64 %3
+  %call = call %"struct.PR10720::X"* @_ZN7PR107201XaSERKS0_(%"struct.PR10720::X"* %arrayidx, %"struct.PR10720::X"* %arrayidx3)
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %5 = load i64* %__i0, align 8
+  %inc = add i64 %5, 1
+  store i64 %inc, i64* %__i0, align 8
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  ret %"struct.PR10720::pair2"* %this1
+}
+
+define linkonce_odr %"struct.PR10720::pair2"* @_ZN7PR107205pair2aSEOS0_(%"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"*) nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %__i0 = alloca i64, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  store %"struct.PR10720::pair2"* %0, %"struct.PR10720::pair2"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  store i64 0, i64* %__i0, align 8
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %1 = load i64* %__i0, align 8
+  %cmp = icmp ne i64 %1, 4
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %2 = load i64* %__i0, align 8
+  %second = getelementptr inbounds %"struct.PR10720::pair2"* %this1, i32 0, i32 0
+  %arrayidx = getelementptr inbounds [4 x %"struct.PR10720::X"]* %second, i32 0, i64 %2
+  %3 = load i64* %__i0, align 8
+  %4 = load %"struct.PR10720::pair2"** %.addr, align 8
+  %second2 = getelementptr inbounds %"struct.PR10720::pair2"* %4, i32 0, i32 0
+  %arrayidx3 = getelementptr inbounds [4 x %"struct.PR10720::X"]* %second2, i32 0, i64 %3
+  %call = call %"struct.PR10720::X"* @_ZN7PR107201XaSEOS0_(%"struct.PR10720::X"* %arrayidx, %"struct.PR10720::X"* %arrayidx3)
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %5 = load i64* %__i0, align 8
+  %inc = add i64 %5, 1
+  store i64 %inc, i64* %__i0, align 8
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  ret %"struct.PR10720::pair2"* %this1
+}
+
+define linkonce_odr void @_ZN7PR107205pair2D1Ev(%"struct.PR10720::pair2"* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  call void @_ZN7PR107205pair2D2Ev(%"struct.PR10720::pair2"* %this1) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN7PR107204pairD1Ev(%"struct.PR10720::pair"* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair"*, align 8
+  store %"struct.PR10720::pair"* %this, %"struct.PR10720::pair"** %this.addr, align 8
+  %this1 = load %"struct.PR10720::pair"** %this.addr
+  call void @_ZN7PR107204pairD2Ev(%"struct.PR10720::pair"* %this1) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1XIiEC2ERKS0_(%struct.X* %this, %struct.X* %other) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.X*, align 8
+  %other.addr = alloca %struct.X*, align 8
+  store %struct.X* %this, %struct.X** %this.addr, align 8
+  store %struct.X* %other, %struct.X** %other.addr, align 8
+  %this1 = load %struct.X** %this.addr
+  %start = getelementptr inbounds %struct.X* %this1, i32 0, i32 0
+  store i32* null, i32** %start, align 8
+  %end = getelementptr inbounds %struct.X* %this1, i32 0, i32 1
+  store i32* null, i32** %end, align 8
+  ret void
+}
+
+define linkonce_odr void @_ZN1AIsED2Ev(%struct.A* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.A*, align 8
+  store %struct.A* %this, %struct.A** %this.addr, align 8
+  %this1 = load %struct.A** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN1AIsEC2Ei(%struct.A* %this, i32) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.A*, align 8
+  %.addr = alloca i32, align 4
+  store %struct.A* %this, %struct.A** %this.addr, align 8
+  store i32 %0, i32* %.addr, align 4
+  %this1 = load %struct.A** %this.addr
+  ret void
+}
+
+define linkonce_odr void @_ZN7PR107204pairD2Ev(%"struct.PR10720::pair"* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair"*, align 8
+  store %"struct.PR10720::pair"* %this, %"struct.PR10720::pair"** %this.addr, align 8
+  %this1 = load %"struct.PR10720::pair"** %this.addr
+  %0 = bitcast %"struct.PR10720::pair"* %this1 to %"struct.PR10720::X"*
+  call void @_ZN7PR107201XD2Ev(%"struct.PR10720::X"* %0) nounwind
+  ret void
+}
+
+declare void @_ZN7PR107201XD2Ev(%"struct.PR10720::X"*) nounwind
+
+define linkonce_odr void @_ZN7PR107205pair2D2Ev(%"struct.PR10720::pair2"* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  %second = getelementptr inbounds %"struct.PR10720::pair2"* %this1, i32 0, i32 0
+  %array.begin = getelementptr inbounds [4 x %"struct.PR10720::X"]* %second, i32 0, i32 0
+  %0 = getelementptr inbounds %"struct.PR10720::X"* %array.begin, i64 4
+  br label %arraydestroy.body
+
+arraydestroy.body:                                ; preds = %arraydestroy.body, %entry
+  %arraydestroy.elementPast = phi %"struct.PR10720::X"* [ %0, %entry ], [ %arraydestroy.element, %arraydestroy.body ]
+  %arraydestroy.element = getelementptr inbounds %"struct.PR10720::X"* %arraydestroy.elementPast, i64 -1
+  call void @_ZN7PR107201XD1Ev(%"struct.PR10720::X"* %arraydestroy.element) nounwind
+  %arraydestroy.done = icmp eq %"struct.PR10720::X"* %arraydestroy.element, %array.begin
+  br i1 %arraydestroy.done, label %arraydestroy.done2, label %arraydestroy.body
+
+arraydestroy.done2:                               ; preds = %arraydestroy.body
+  ret void
+}
+
+declare void @_ZN7PR107201XD1Ev(%"struct.PR10720::X"*) nounwind
+
+declare %"struct.PR10720::X"* @_ZN7PR107201XaSEOS0_(%"struct.PR10720::X"*, %"struct.PR10720::X"*)
+
+declare %"struct.PR10720::X"* @_ZN7PR107201XaSERKS0_(%"struct.PR10720::X"*, %"struct.PR10720::X"*)
+
+define linkonce_odr void @_ZN7PR107205pair2C2EOS0_(%"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"*) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %object.index = alloca i64
+  %__i0 = alloca i64, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  store %"struct.PR10720::pair2"* %0, %"struct.PR10720::pair2"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  %second = getelementptr inbounds %"struct.PR10720::pair2"* %this1, i32 0, i32 0
+  %1 = bitcast [4 x %"struct.PR10720::X"]* %second to %"struct.PR10720::X"*
+  store i64 0, i64* %object.index
+  store i64 0, i64* %__i0
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %2 = load i64* %__i0
+  %isless = icmp ult i64 %2, 4
+  br i1 %isless, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %3 = load i64* %object.index
+  %destaddress = getelementptr inbounds %"struct.PR10720::X"* %1, i64 %3
+  %inc = add i64 %3, 1
+  store i64 %inc, i64* %object.index
+  %4 = load i64* %__i0, align 8
+  %5 = load %"struct.PR10720::pair2"** %.addr, align 8
+  %second2 = getelementptr inbounds %"struct.PR10720::pair2"* %5, i32 0, i32 0
+  %arrayidx = getelementptr inbounds [4 x %"struct.PR10720::X"]* %second2, i32 0, i64 %4
+  call void @_ZN7PR107201XC1EOS0_(%"struct.PR10720::X"* %destaddress, %"struct.PR10720::X"* %arrayidx)
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %6 = load i64* %__i0
+  %inc3 = add i64 %6, 1
+  store i64 %inc3, i64* %__i0
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  ret void
+}
+
+declare void @_ZN7PR107201XC1EOS0_(%"struct.PR10720::X"*, %"struct.PR10720::X"*)
+
+define linkonce_odr void @_ZN7PR107205pair2C2ERKS0_(%"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"*) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %.addr = alloca %"struct.PR10720::pair2"*, align 8
+  %object.index = alloca i64
+  %__i0 = alloca i64, align 8
+  store %"struct.PR10720::pair2"* %this, %"struct.PR10720::pair2"** %this.addr, align 8
+  store %"struct.PR10720::pair2"* %0, %"struct.PR10720::pair2"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair2"** %this.addr
+  %second = getelementptr inbounds %"struct.PR10720::pair2"* %this1, i32 0, i32 0
+  %1 = bitcast [4 x %"struct.PR10720::X"]* %second to %"struct.PR10720::X"*
+  store i64 0, i64* %object.index
+  store i64 0, i64* %__i0
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %2 = load i64* %__i0
+  %isless = icmp ult i64 %2, 4
+  br i1 %isless, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %3 = load i64* %object.index
+  %destaddress = getelementptr inbounds %"struct.PR10720::X"* %1, i64 %3
+  %inc = add i64 %3, 1
+  store i64 %inc, i64* %object.index
+  %4 = load i64* %__i0, align 8
+  %5 = load %"struct.PR10720::pair2"** %.addr, align 8
+  %second2 = getelementptr inbounds %"struct.PR10720::pair2"* %5, i32 0, i32 0
+  %arrayidx = getelementptr inbounds [4 x %"struct.PR10720::X"]* %second2, i32 0, i64 %4
+  call void @_ZN7PR107201XC1ERKS0_(%"struct.PR10720::X"* %destaddress, %"struct.PR10720::X"* %arrayidx)
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %6 = load i64* %__i0
+  %inc3 = add i64 %6, 1
+  store i64 %inc3, i64* %__i0
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  ret void
+}
+
+declare void @_ZN7PR107201XC1ERKS0_(%"struct.PR10720::X"*, %"struct.PR10720::X"*)
+
+define linkonce_odr void @_ZN7PR107204pairC2ERKS0_(%"struct.PR10720::pair"* %this, %"struct.PR10720::pair"*) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %"struct.PR10720::pair"*, align 8
+  %.addr = alloca %"struct.PR10720::pair"*, align 8
+  store %"struct.PR10720::pair"* %this, %"struct.PR10720::pair"** %this.addr, align 8
+  store %"struct.PR10720::pair"* %0, %"struct.PR10720::pair"** %.addr, align 8
+  %this1 = load %"struct.PR10720::pair"** %this.addr
+  %1 = bitcast %"struct.PR10720::pair"* %this1 to %"struct.PR10720::X"*
+  %2 = load %"struct.PR10720::pair"** %.addr, align 8
+  %3 = bitcast %"struct.PR10720::pair"* %2 to %"struct.PR10720::X"*
+  call void @_ZN7PR107201XC2ERKS0_(%"struct.PR10720::X"* %1, %"struct.PR10720::X"* %3)
+  %second = getelementptr inbounds %"struct.PR10720::pair"* %this1, i32 0, i32 0
+  %4 = load %"struct.PR10720::pair"** %.addr
+  %second2 = getelementptr inbounds %"struct.PR10720::pair"* %4, i32 0, i32 0
+  %5 = bitcast [4 x i32]* %second to i8*
+  %6 = bitcast [4 x i32]* %second2 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 4, i1 false)
+  ret void
+}
+
+declare void @_ZN7PR107201XC2ERKS0_(%"struct.PR10720::X"*, %"struct.PR10720::X"*)
+
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture, i8* nocapture, i64, i32, i1) nounwind
+
+declare i32 @printf(...)
+
+define linkonce_odr void @_ZN1M3MPREv(%struct.M* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  %this1 = load %struct.M** %this.addr
+  %iM = getelementptr inbounds %struct.M* %this1, i32 0, i32 0
+  %0 = load i32* %iM, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str3, i32 0, i32 0), i32 %0)
+  ret void
+}
+
+define linkonce_odr void @_ZN1P3PPREv(%struct.P* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  %this1 = load %struct.P** %this.addr
+  %iP = getelementptr inbounds %struct.P* %this1, i32 0, i32 0
+  %0 = load i32* %iP, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str2, i32 0, i32 0), i32 %0)
+  ret void
+}
+
+define linkonce_odr void @_ZN1Q3QPREv(%struct.Q* %this) nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.Q*, align 8
+  store %struct.Q* %this, %struct.Q** %this.addr, align 8
+  %this1 = load %struct.Q** %this.addr
+  %iQ = getelementptr inbounds %struct.Q* %this1, i32 0, i32 0
+  %0 = load i32* %iQ, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([9 x i8]* @.str1, i32 0, i32 0), i32 %0)
+  ret void
+}
+
+define linkonce_odr void @_ZN1NC2Ev(%struct.N* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.N*, align 8
+  store %struct.N* %this, %struct.N** %this.addr, align 8
+  %this1 = load %struct.N** %this.addr
+  %0 = bitcast %struct.N* %this1 to %struct.M*
+  call void @_ZN1MC2Ei(%struct.M* %0, i32 1000)
+  %1 = bitcast %struct.N* %this1 to i8*
+  %2 = getelementptr inbounds i8* %1, i64 4
+  %3 = bitcast i8* %2 to %struct.P*
+  call void @_ZN1PC2Ei(%struct.P* %3, i32 2000)
+  %4 = bitcast %struct.N* %this1 to i8*
+  %5 = getelementptr inbounds i8* %4, i64 8
+  %6 = bitcast i8* %5 to %struct.Q*
+  call void @_ZN1QC2Ei(%struct.Q* %6, i32 3000)
+  %m1 = getelementptr inbounds %struct.N* %this1, i32 0, i32 3
+  call void @_ZN1MC1Ei(%struct.M* %m1, i32 100)
+  %m2 = getelementptr inbounds %struct.N* %this1, i32 0, i32 4
+  call void @_ZN1MC1Ev(%struct.M* %m2)
+  %f1 = getelementptr inbounds %struct.N* %this1, i32 0, i32 5
+  store float 0x3FF50624E0000000, float* %f1, align 4
+  %i1 = getelementptr inbounds %struct.N* %this1, i32 0, i32 6
+  store i32 1234, i32* %i1, align 4
+  %d1 = getelementptr inbounds %struct.N* %this1, i32 0, i32 7
+  store float 0x400BA75260000000, float* %d1, align 4
+  %ld = getelementptr inbounds %struct.N* %this1, i32 0, i32 8
+  %f12 = getelementptr inbounds %struct.N* %this1, i32 0, i32 5
+  %7 = load float* %f12, align 4
+  %conv = fpext float %7 to double
+  %add = fadd double 1.234000e-01, %conv
+  %conv3 = fptrunc double %add to float
+  store float %conv3, float* %ld, align 4
+  %arr_m = getelementptr inbounds %struct.N* %this1, i32 0, i32 10
+  %array.begin = getelementptr inbounds [3 x %struct.M]* %arr_m, i32 0, i32 0
+  %arrayctor.end = getelementptr inbounds %struct.M* %array.begin, i64 3
+  br label %arrayctor.loop
+
+arrayctor.loop:                                   ; preds = %arrayctor.loop, %entry
+  %arrayctor.cur = phi %struct.M* [ %array.begin, %entry ], [ %arrayctor.next, %arrayctor.loop ]
+  call void @_ZN1MC1Ev(%struct.M* %arrayctor.cur)
+  %arrayctor.next = getelementptr inbounds %struct.M* %arrayctor.cur, i64 1
+  %arrayctor.done = icmp eq %struct.M* %arrayctor.next, %arrayctor.end
+  br i1 %arrayctor.done, label %arrayctor.cont, label %arrayctor.loop
+
+arrayctor.cont:                                   ; preds = %arrayctor.loop
+  %arr_p = getelementptr inbounds %struct.N* %this1, i32 0, i32 11
+  %array.begin4 = getelementptr inbounds [1 x [3 x %struct.P]]* %arr_p, i32 0, i32 0, i32 0
+  %arrayctor.end5 = getelementptr inbounds %struct.P* %array.begin4, i64 3
+  br label %arrayctor.loop6
+
+arrayctor.loop6:                                  ; preds = %arrayctor.loop6, %arrayctor.cont
+  %arrayctor.cur7 = phi %struct.P* [ %array.begin4, %arrayctor.cont ], [ %arrayctor.next8, %arrayctor.loop6 ]
+  call void @_ZN1PC1Ev(%struct.P* %arrayctor.cur7)
+  %arrayctor.next8 = getelementptr inbounds %struct.P* %arrayctor.cur7, i64 1
+  %arrayctor.done9 = icmp eq %struct.P* %arrayctor.next8, %arrayctor.end5
+  br i1 %arrayctor.done9, label %arrayctor.cont10, label %arrayctor.loop6
+
+arrayctor.cont10:                                 ; preds = %arrayctor.loop6
+  %arr_q = getelementptr inbounds %struct.N* %this1, i32 0, i32 12
+  %array.begin11 = getelementptr inbounds [2 x [3 x [4 x %struct.Q]]]* %arr_q, i32 0, i32 0, i32 0, i32 0
+  %arrayctor.end12 = getelementptr inbounds %struct.Q* %array.begin11, i64 24
+  br label %arrayctor.loop13
+
+arrayctor.loop13:                                 ; preds = %arrayctor.loop13, %arrayctor.cont10
+  %arrayctor.cur14 = phi %struct.Q* [ %array.begin11, %arrayctor.cont10 ], [ %arrayctor.next15, %arrayctor.loop13 ]
+  call void @_ZN1QC1Ev(%struct.Q* %arrayctor.cur14)
+  %arrayctor.next15 = getelementptr inbounds %struct.Q* %arrayctor.cur14, i64 1
+  %arrayctor.done16 = icmp eq %struct.Q* %arrayctor.next15, %arrayctor.end12
+  br i1 %arrayctor.done16, label %arrayctor.cont17, label %arrayctor.loop13
+
+arrayctor.cont17:                                 ; preds = %arrayctor.loop13
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str4, i32 0, i32 0))
+  ret void
+}
+
+define linkonce_odr void @_ZN1MC2Ei(%struct.M* %this, i32 %i) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  %i.addr = alloca i32, align 4
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  store i32 %i, i32* %i.addr, align 4
+  %this1 = load %struct.M** %this.addr
+  %0 = load i32* %i.addr, align 4
+  %iM = getelementptr inbounds %struct.M* %this1, i32 0, i32 0
+  store i32 %0, i32* %iM, align 4
+  %1 = load i32* %i.addr, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([7 x i8]* @.str9, i32 0, i32 0), i32 %1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1PC2Ei(%struct.P* %this, i32 %i) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  %i.addr = alloca i32, align 4
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  store i32 %i, i32* %i.addr, align 4
+  %this1 = load %struct.P** %this.addr
+  %0 = load i32* %i.addr, align 4
+  %iP = getelementptr inbounds %struct.P* %this1, i32 0, i32 0
+  store i32 %0, i32* %iP, align 4
+  %1 = load i32* %i.addr, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([7 x i8]* @.str8, i32 0, i32 0), i32 %1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1QC2Ei(%struct.Q* %this, i32 %i) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.Q*, align 8
+  %i.addr = alloca i32, align 4
+  store %struct.Q* %this, %struct.Q** %this.addr, align 8
+  store i32 %i, i32* %i.addr, align 4
+  %this1 = load %struct.Q** %this.addr
+  %0 = load i32* %i.addr, align 4
+  %iQ = getelementptr inbounds %struct.Q* %this1, i32 0, i32 0
+  store i32 %0, i32* %iQ, align 4
+  %1 = load i32* %i.addr, align 4
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([7 x i8]* @.str7, i32 0, i32 0), i32 %1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1MC1Ei(%struct.M* %this, i32 %i) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  %i.addr = alloca i32, align 4
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  store i32 %i, i32* %i.addr, align 4
+  %this1 = load %struct.M** %this.addr
+  %0 = load i32* %i.addr, align 4
+  call void @_ZN1MC2Ei(%struct.M* %this1, i32 %0)
+  ret void
+}
+
+define linkonce_odr void @_ZN1PC1Ev(%struct.P* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  %this1 = load %struct.P** %this.addr
+  call void @_ZN1PC2Ev(%struct.P* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1QC1Ev(%struct.Q* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.Q*, align 8
+  store %struct.Q* %this, %struct.Q** %this.addr, align 8
+  %this1 = load %struct.Q** %this.addr
+  call void @_ZN1QC2Ev(%struct.Q* %this1)
+  ret void
+}
+
+define linkonce_odr void @_ZN1QC2Ev(%struct.Q* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.Q*, align 8
+  store %struct.Q* %this, %struct.Q** %this.addr, align 8
+  %this1 = load %struct.Q** %this.addr
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0))
+  ret void
+}
+
+define linkonce_odr void @_ZN1PC2Ev(%struct.P* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.P*, align 8
+  store %struct.P* %this, %struct.P** %this.addr, align 8
+  %this1 = load %struct.P** %this.addr
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str6, i32 0, i32 0))
+  ret void
+}
+
+define linkonce_odr void @_ZN1MC2Ev(%struct.M* %this) unnamed_addr nounwind align 2 {
+entry:
+  %this.addr = alloca %struct.M*, align 8
+  store %struct.M* %this, %struct.M** %this.addr, align 8
+  %this1 = load %struct.M** %this.addr
+  %call = call i32 (...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str10, i32 0, i32 0))
+  ret void
+}

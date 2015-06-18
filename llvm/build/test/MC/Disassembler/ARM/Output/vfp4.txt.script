@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc < /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/vfp4.txt -triple thumbv7-unknown-unknown --disassemble -mattr=+neon,+vfp4 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Disassembler/ARM/vfp4.txt

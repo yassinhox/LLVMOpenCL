@@ -1,0 +1,96 @@
+; ModuleID = '<stdin>'
+
+declare i1 @foo()
+
+declare i1 @bar(i32)
+
+define void @a() {
+entry:
+  br label %BB.nomerge
+
+BB.nomerge:                                       ; preds = %Common, %entry
+  %a = phi i32 [ 1, %entry ], [ 0, %Common ]
+  br label %Succ
+
+Succ:                                             ; preds = %Common, %BB.nomerge
+  %b = phi i32 [ %a, %BB.nomerge ], [ 2, %Common ]
+  %conde = call i1 @foo()
+  br i1 %conde, label %Common, label %Exit
+
+Common:                                           ; preds = %Succ
+  %cond = call i1 @foo()
+  br i1 %cond, label %BB.nomerge, label %Succ
+
+Exit:                                             ; preds = %Succ
+  ret void
+}
+
+define void @b() {
+entry:
+  br label %BB.nomerge
+
+BB.nomerge:                                       ; preds = %Common, %entry
+  br label %Succ
+
+Succ:                                             ; preds = %Common, %BB.nomerge
+  %b = phi i32 [ 1, %BB.nomerge ], [ 2, %Common ]
+  %conde = call i1 @foo()
+  br i1 %conde, label %Common, label %Exit
+
+Common:                                           ; preds = %Succ
+  %cond = call i1 @foo()
+  br i1 %cond, label %BB.nomerge, label %Succ
+
+Exit:                                             ; preds = %Succ
+  ret void
+}
+
+define void @c() {
+entry:
+  br label %Succ
+
+Succ:                                             ; preds = %Succ, %entry
+  %b = phi i32 [ 1, %entry ], [ %.mux, %Succ ]
+  %conde = call i1 @foo()
+  %cond = call i1 @foo()
+  %brmerge = or i1 %conde, %cond
+  %.mux = select i1 %conde, i32 1, i32 2
+  br i1 %brmerge, label %Succ, label %Exit
+
+Exit:                                             ; preds = %Succ
+  ret void
+}
+
+define void @d() {
+entry:
+  br label %Succ
+
+Succ:                                             ; preds = %Common, %entry
+  %b = phi i32 [ 1, %entry ], [ 0, %Common ]
+  %conde = call i1 @foo()
+  br i1 %conde, label %Common, label %Exit
+
+Common:                                           ; preds = %Succ
+  %cond = call i1 @foo()
+  br label %Succ
+
+Exit:                                             ; preds = %Succ
+  ret void
+}
+
+define void @e() {
+entry:
+  br label %Succ
+
+Succ:                                             ; preds = %entry, %Use
+  %a = phi i32 [ 1, %entry ], [ 0, %Use ]
+  %conde = call i1 @foo()
+  br i1 %conde, label %Use, label %Exit
+
+Use:                                              ; preds = %Succ
+  %cond = call i1 @bar(i32 %a)
+  br i1 %cond, label %Succ, label %Exit
+
+Exit:                                             ; preds = %Use, %Succ
+  ret void
+}

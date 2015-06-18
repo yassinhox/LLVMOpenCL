@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -instcombine -S -disable-simplify-libcalls < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/fold-sqrt-sqrtf.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/fold-sqrt-sqrtf.ll

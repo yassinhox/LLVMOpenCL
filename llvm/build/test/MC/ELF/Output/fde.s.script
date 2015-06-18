@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -filetype=obj /home/jazouani/llvm/llvm-3.2/test/MC/ELF/fde.s -o /home/jazouani/llvm/build/test/MC/ELF/Output/fde.s.tmp.o -triple x86_64-pc-linux-gnu && /home/jazouani/llvm/build/Release+Asserts/bin/llvm-objdump -s /home/jazouani/llvm/build/test/MC/ELF/Output/fde.s.tmp.o

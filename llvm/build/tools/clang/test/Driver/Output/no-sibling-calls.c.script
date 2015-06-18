@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/no-sibling-calls.c -fno-optimize-sibling-calls 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/no-sibling-calls.c.tmp &&
+FileCheck --check-prefix=CHECK-NOSC < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/no-sibling-calls.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/no-sibling-calls.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -### -foptimize-sibling-calls /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/no-sibling-calls.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/no-sibling-calls.c.tmp &&
+FileCheck --check-prefix=CHECK-OSC < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/no-sibling-calls.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/no-sibling-calls.c

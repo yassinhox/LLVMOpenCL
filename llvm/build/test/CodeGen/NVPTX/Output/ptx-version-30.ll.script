@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/NVPTX/ptx-version-30.ll -march=nvptx -mcpu=sm_20 -mattr=ptx30 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/NVPTX/ptx-version-30.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/NVPTX/ptx-version-30.ll -march=nvptx64 -mcpu=sm_20 -mattr=ptx30 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/NVPTX/ptx-version-30.ll

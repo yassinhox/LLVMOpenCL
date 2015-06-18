@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/ppcf128-1.ll -std-compile-opts | /home/jazouani/llvm/build/Release+Asserts/bin/llc > /home/jazouani/llvm/build/test/CodeGen/PowerPC/Output/ppcf128-1.ll.tmp

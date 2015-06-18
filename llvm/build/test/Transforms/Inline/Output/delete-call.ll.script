@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/delete-call.ll -S  -inline -functionattrs -stats 2>&1 | grep "Number of call sites deleted, not inlined" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/delete-call.ll -S  -inline -stats 2>&1 | grep "Number of functions inlined"

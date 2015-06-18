@@ -1,0 +1,3 @@
+c-index-test -test-load-source all -target x86_64-apple-darwin10.0.0 -msse4.1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/retain-target-options.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/retain-target-options.c &&
+c-index-test -test-load-source-reparse 1 all -target x86_64-apple-darwin10.0.0 -msse4.1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/retain-target-options.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/retain-target-options.c &&
+c-index-test -test-load-source-reparse 5 all -target x86_64-apple-darwin10.0.0 -msse4.1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/retain-target-options.c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/retain-target-options.c

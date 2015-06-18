@@ -1,0 +1,28 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	cmpq	%rsi, %rdx
+	cmovaq	%rdx, %rsi
+	movl	$1, %eax
+	cmpq	$1, %rsi
+	cmovaq	%rsi, %rax
+	.align	16, 0x90
+.LBB0_1:                                # %bb4
+                                        # =>This Inner Loop Header: Depth=1
+	movsd	(%rdi), %xmm0
+	addsd	%xmm0, %xmm0
+	movsd	%xmm0, (%rdi)
+	addq	$8, %rdi
+	decq	%rax
+	jne	.LBB0_1
+# BB#2:                                 # %return
+	ret
+.Ltmp0:
+	.size	foo, .Ltmp0-foo
+
+
+	.section	".note.GNU-stack","",@progbits

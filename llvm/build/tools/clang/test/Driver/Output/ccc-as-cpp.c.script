@@ -1,0 +1,2 @@
+ln -sf  /home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/build/tools/clang/test/Driver/Output/clang-cpp &&
+/home/jazouani/llvm/build/tools/clang/test/Driver/Output/clang-cpp -lfoo -M /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/ccc-as-cpp.c 2>&1 | FileCheck --check-prefix=CHECK-PR13529 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/ccc-as-cpp.c

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -tailcallelim /home/jazouani/llvm/llvm-3.2/test/Transforms/TailCallElim/move_alloca_for_tail_call.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/TailCallElim/move_alloca_for_tail_call.ll

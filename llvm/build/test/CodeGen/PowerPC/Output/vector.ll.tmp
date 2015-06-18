@@ -1,0 +1,958 @@
+	.file	"<stdin>"
+	.text
+	.globl	test_f1
+	.align	2
+	.type	test_f1,@function
+test_f1:                                # @test_f1
+	.cfi_startproc
+# BB#0:
+	lfs 0, 0(4)
+	lfs 1, 0(3)
+	fadds 0, 1, 0
+	stfs 0, 0(5)
+	blr 
+.Ltmp0:
+	.size	test_f1, .Ltmp0-test_f1
+	.cfi_endproc
+
+	.globl	test_f2
+	.align	2
+	.type	test_f2,@function
+test_f2:                                # @test_f2
+	.cfi_startproc
+# BB#0:
+	lfs 3, 4(4)
+	lfs 2, 0(4)
+	lfs 0, 4(3)
+	lfs 1, 0(3)
+	addi 3, 1, -96
+	addi 4, 1, -48
+	addi 6, 1, -80
+	addi 7, 1, -64
+	stfs 3, -96(1)
+	stfs 2, -48(1)
+	stfs 0, -80(1)
+	stfs 1, -64(1)
+	lvx 3, 0, 3
+	lvx 2, 0, 4
+	lvx 5, 0, 6
+	lvx 4, 0, 7
+	addi 3, 1, -32
+	addi 4, 1, -16
+	vmrghw 3, 2, 3
+	vmrghw 5, 4, 5
+	vsldoi 2, 2, 3, 8
+	vsldoi 4, 4, 5, 8
+	vsldoi 2, 2, 2, 8
+	vsldoi 3, 4, 4, 8
+	vaddfp 2, 3, 2
+	stvx 2, 0, 3
+	stvx 2, 0, 4
+	lfs 0, 4(3)
+	lfs 1, -16(1)
+	stfs 0, 4(5)
+	stfs 1, 0(5)
+	blr 
+.Ltmp1:
+	.size	test_f2, .Ltmp1-test_f2
+	.cfi_endproc
+
+	.globl	test_f4
+	.align	2
+	.type	test_f4,@function
+test_f4:                                # @test_f4
+	.cfi_startproc
+# BB#0:
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vaddfp 2, 3, 2
+	stvx 2, 0, 5
+	blr 
+.Ltmp2:
+	.size	test_f4, .Ltmp2-test_f4
+	.cfi_endproc
+
+	.globl	test_f8
+	.align	2
+	.type	test_f8,@function
+test_f8:                                # @test_f8
+	.cfi_startproc
+# BB#0:
+	li 6, 16
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	lvx 4, 4, 6
+	lvx 5, 3, 6
+	vaddfp 2, 3, 2
+	vaddfp 3, 5, 4
+	stvx 2, 0, 5
+	stvx 3, 5, 6
+	blr 
+.Ltmp3:
+	.size	test_f8, .Ltmp3-test_f8
+	.cfi_endproc
+
+	.globl	test_fmul
+	.align	2
+	.type	test_fmul,@function
+test_fmul:                              # @test_fmul
+	.cfi_startproc
+# BB#0:
+	vxor 2, 2, 2
+	li 6, 16
+	lvx 5, 0, 4
+	lvx 0, 0, 3
+	lvx 3, 4, 6
+	lvx 4, 3, 6
+	vmaddfp 3, 4, 3, 2
+	vmaddfp 2, 0, 5, 2
+	stvx 3, 5, 6
+	stvx 2, 0, 5
+	blr 
+.Ltmp4:
+	.size	test_fmul, .Ltmp4-test_fmul
+	.cfi_endproc
+
+	.globl	test_div
+	.align	2
+	.type	test_div,@function
+test_div:                               # @test_div
+	.cfi_startproc
+# BB#0:
+	stwu 1, -336(1)
+.Ltmp6:
+	.cfi_def_cfa_offset 336
+.Ltmp7:
+	.cfi_offset r27, -20
+.Ltmp8:
+	.cfi_offset r28, -16
+.Ltmp9:
+	.cfi_offset r29, -12
+.Ltmp10:
+	.cfi_offset r30, -8
+	stw 27, 316(1)
+	stw 28, 320(1)
+	stw 29, 324(1)
+	stw 30, 328(1)
+	lvx 5, 0, 4
+	lvx 4, 0, 3
+	addi 30, 1, 80
+	addi 29, 1, 16
+	li 6, 16
+	addi 28, 1, 96
+	addi 27, 1, 32
+	addi 7, 1, 112
+	addi 8, 1, 48
+	addi 11, 1, 128
+	addi 12, 1, 64
+	addi 9, 1, 144
+	addi 10, 1, 160
+	stvx 5, 0, 30
+	stvx 4, 0, 29
+	lvx 3, 4, 6
+	stvx 5, 0, 28
+	lvx 2, 3, 6
+	stvx 4, 0, 27
+	addi 4, 1, 208
+	addi 3, 1, 224
+	stvx 5, 0, 7
+	stvx 4, 0, 8
+	stvx 5, 0, 11
+	addi 11, 1, 240
+	stvx 4, 0, 12
+	lfs 0, 12(30)
+	lfs 4, 12(29)
+	lfs 1, 8(28)
+	lfs 2, 8(27)
+	stvx 3, 0, 4
+	addi 12, 1, 176
+	addi 30, 1, 256
+	addi 29, 1, 192
+	stvx 2, 0, 9
+	lwz 28, 320(1)
+	lwz 27, 316(1)
+	lfs 3, 4(7)
+	lfs 5, 4(8)
+	stvx 3, 0, 3
+	fdivs 0, 4, 0
+	stvx 2, 0, 10
+	fdivs 1, 2, 1
+	lfs 6, 128(1)
+	lfs 7, 64(1)
+	stvx 3, 0, 11
+	stvx 2, 0, 12
+	stvx 3, 0, 30
+	fdivs 2, 5, 3
+	lwz 30, 328(1)
+	lfs 4, 12(4)
+	lfs 8, 12(9)
+	stvx 2, 0, 29
+	fdivs 3, 7, 6
+	lfs 9, 8(3)
+	lfs 10, 8(10)
+	lfs 11, 4(11)
+	lfs 12, 4(12)
+	lfs 7, 256(1)
+	lfs 13, 192(1)
+	addi 3, 1, 272
+	addi 4, 1, 288
+	lwz 29, 324(1)
+	fdivs 4, 8, 4
+	fdivs 5, 10, 9
+	fdivs 6, 12, 11
+	fdivs 7, 13, 7
+	stfs 0, 12(3)
+	stfs 1, 8(3)
+	stfs 2, 4(3)
+	stfs 3, 272(1)
+	stfs 4, 12(4)
+	stfs 5, 8(4)
+	stfs 6, 4(4)
+	stfs 7, 288(1)
+	lvx 2, 0, 3
+	lvx 3, 0, 4
+	stvx 2, 0, 5
+	stvx 3, 5, 6
+	addi 1, 1, 336
+	blr 
+.Ltmp11:
+	.size	test_div, .Ltmp11-test_div
+	.cfi_endproc
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	4
+.LCPI6_0:
+	.long	1036831949              # float 1.000000e-01
+	.long	1065353216              # float 1.000000e+00
+	.long	1073741824              # float 2.000000e+00
+	.long	1083179008              # float 4.500000e+00
+	.text
+	.globl	test_cst
+	.align	2
+	.type	test_cst,@function
+test_cst:                               # @test_cst
+	.cfi_startproc
+# BB#0:
+	li 5, .LCPI6_0@l
+	lis 6, .LCPI6_0@ha
+	lvx 2, 0, 3
+	lvx 3, 6, 5
+	vaddfp 2, 2, 3
+	stvx 2, 0, 4
+	blr 
+.Ltmp12:
+	.size	test_cst, .Ltmp12-test_cst
+	.cfi_endproc
+
+	.globl	test_zero
+	.align	2
+	.type	test_zero,@function
+test_zero:                              # @test_zero
+	.cfi_startproc
+# BB#0:
+	vxor 2, 2, 2
+	lvx 3, 0, 3
+	vaddfp 2, 3, 2
+	stvx 2, 0, 4
+	blr 
+.Ltmp13:
+	.size	test_zero, .Ltmp13-test_zero
+	.cfi_endproc
+
+	.globl	test_undef
+	.align	2
+	.type	test_undef,@function
+test_undef:                             # @test_undef
+	.cfi_startproc
+# BB#0:
+	lvx 2, 0, 3
+	vaddfp 2, 2, 2
+	stvx 2, 0, 4
+	blr 
+.Ltmp14:
+	.size	test_undef, .Ltmp14-test_undef
+	.cfi_endproc
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	4
+.LCPI9_0:
+	.long	1092616192              # float 1.000000e+01
+	.long	0                       # float 0.000000e+00
+	.long	0                       # float 0.000000e+00
+	.long	0                       # float 0.000000e+00
+	.text
+	.globl	test_constant_insert
+	.align	2
+	.type	test_constant_insert,@function
+test_constant_insert:                   # @test_constant_insert
+	.cfi_startproc
+# BB#0:
+	li 4, .LCPI9_0@l
+	lis 5, .LCPI9_0@ha
+	lvx 2, 5, 4
+	stvx 2, 0, 3
+	blr 
+.Ltmp15:
+	.size	test_constant_insert, .Ltmp15-test_constant_insert
+	.cfi_endproc
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	2
+.LCPI10_0:
+	.long	0                       # float 0.000000e+00
+                                        #  (0x0)
+	.text
+	.globl	test_variable_buildvector
+	.align	2
+	.type	test_variable_buildvector,@function
+test_variable_buildvector:              # @test_variable_buildvector
+	.cfi_startproc
+# BB#0:
+	lis 4, .LCPI10_0@ha
+	addi 5, 1, -16
+	stfs 1, -32(1)
+	lfs 0, .LCPI10_0@l(4)
+	addi 4, 1, -32
+	stfs 0, -16(1)
+	lvx 2, 0, 4
+	lvx 3, 0, 5
+	vsldoi 2, 3, 2, 4
+	vspltw 3, 3, 0
+	vsldoi 2, 2, 3, 12
+	stvx 2, 0, 3
+	blr 
+.Ltmp16:
+	.size	test_variable_buildvector, .Ltmp16-test_variable_buildvector
+	.cfi_endproc
+
+	.globl	test_scalar_to_vector
+	.align	2
+	.type	test_scalar_to_vector,@function
+test_scalar_to_vector:                  # @test_scalar_to_vector
+	.cfi_startproc
+# BB#0:
+	addi 4, 1, -16
+	stfs 1, -16(1)
+	lvx 2, 0, 4
+	stvx 2, 0, 3
+	blr 
+.Ltmp17:
+	.size	test_scalar_to_vector, .Ltmp17-test_scalar_to_vector
+	.cfi_endproc
+
+	.globl	test_extract_elt
+	.align	2
+	.type	test_extract_elt,@function
+test_extract_elt:                       # @test_extract_elt
+	.cfi_startproc
+# BB#0:
+	lvx 2, 0, 3
+	addi 3, 1, -16
+	stvx 2, 0, 3
+	nop
+	lfs 1, 12(3)
+	blr 
+.Ltmp18:
+	.size	test_extract_elt, .Ltmp18-test_extract_elt
+	.cfi_endproc
+
+	.globl	test_extract_elt2
+	.align	2
+	.type	test_extract_elt2,@function
+test_extract_elt2:                      # @test_extract_elt2
+	.cfi_startproc
+# BB#0:
+	lfd 1, 24(3)
+	blr 
+.Ltmp19:
+	.size	test_extract_elt2, .Ltmp19-test_extract_elt2
+	.cfi_endproc
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	4
+.LCPI14_0:
+	.long	1065353216              # float 1.000000e+00
+	.long	1073741824              # float 2.000000e+00
+	.long	1077936128              # float 3.000000e+00
+	.long	1082130432              # float 4.000000e+00
+.LCPI14_1:
+	.long	1                       # 0x1
+	.long	2                       # 0x2
+	.long	3                       # 0x3
+	.long	4                       # 0x4
+	.text
+	.globl	test_cast_1
+	.align	2
+	.type	test_cast_1,@function
+test_cast_1:                            # @test_cast_1
+	.cfi_startproc
+# BB#0:
+	li 5, .LCPI14_0@l
+	lis 6, .LCPI14_0@ha
+	lvx 2, 0, 3
+	li 3, .LCPI14_1@l
+	lvx 3, 6, 5
+	lis 5, .LCPI14_1@ha
+	vaddfp 2, 2, 3
+	lvx 3, 5, 3
+	vadduwm 2, 2, 3
+	stvx 2, 0, 4
+	blr 
+.Ltmp20:
+	.size	test_cast_1, .Ltmp20-test_cast_1
+	.cfi_endproc
+
+	.globl	test_cast_2
+	.align	2
+	.type	test_cast_2,@function
+test_cast_2:                            # @test_cast_2
+	.cfi_startproc
+# BB#0:
+	li 5, 16
+	lvx 2, 0, 3
+	lvx 3, 3, 5
+	stvx 2, 0, 4
+	stvx 3, 4, 5
+	blr 
+.Ltmp21:
+	.size	test_cast_2, .Ltmp21-test_cast_2
+	.cfi_endproc
+
+	.globl	splat
+	.align	2
+	.type	splat,@function
+splat:                                  # @splat
+	.cfi_startproc
+# BB#0:
+	addi 5, 1, -16
+	stfs 1, -16(1)
+	lvx 3, 0, 4
+	lvx 2, 0, 5
+	vspltw 2, 2, 0
+	vaddfp 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp22:
+	.size	splat, .Ltmp22-splat
+	.cfi_endproc
+
+	.globl	splat_i4
+	.align	2
+	.type	splat_i4,@function
+splat_i4:                               # @splat_i4
+	.cfi_startproc
+# BB#0:
+	addi 6, 1, -16
+	stw 5, -16(1)
+	lvx 3, 0, 4
+	lvx 2, 0, 6
+	vspltw 2, 2, 0
+	vadduwm 2, 3, 2
+	stvx 2, 0, 3
+	blr 
+.Ltmp23:
+	.size	splat_i4, .Ltmp23-splat_i4
+	.cfi_endproc
+
+
+	.file	"<stdin>"
+	.text
+	.globl	test_f1
+	.align	2
+	.type	test_f1,@function
+test_f1:                                # @test_f1
+	.cfi_startproc
+# BB#0:
+	lfs 0, 0(4)
+	lfs 1, 0(3)
+	fadds 0, 1, 0
+	stfs 0, 0(5)
+	blr 
+.Ltmp0:
+	.size	test_f1, .Ltmp0-test_f1
+	.cfi_endproc
+
+	.globl	test_f2
+	.align	2
+	.type	test_f2,@function
+test_f2:                                # @test_f2
+	.cfi_startproc
+# BB#0:
+	lfs 0, 4(4)
+	lfs 1, 4(3)
+	lfs 2, 0(4)
+	lfs 3, 0(3)
+	fadds 0, 1, 0
+	fadds 1, 3, 2
+	stfs 0, 4(5)
+	stfs 1, 0(5)
+	blr 
+.Ltmp1:
+	.size	test_f2, .Ltmp1-test_f2
+	.cfi_endproc
+
+	.globl	test_f4
+	.align	2
+	.type	test_f4,@function
+test_f4:                                # @test_f4
+	.cfi_startproc
+# BB#0:
+	lfs 0, 12(4)
+	lfs 1, 12(3)
+	lfs 2, 8(4)
+	lfs 3, 8(3)
+	lfs 4, 4(4)
+	lfs 5, 4(3)
+	lfs 6, 0(4)
+	lfs 7, 0(3)
+	fadds 0, 1, 0
+	fadds 1, 3, 2
+	fadds 2, 5, 4
+	fadds 3, 7, 6
+	stfs 0, 12(5)
+	stfs 1, 8(5)
+	stfs 2, 4(5)
+	stfs 3, 0(5)
+	blr 
+.Ltmp2:
+	.size	test_f4, .Ltmp2-test_f4
+	.cfi_endproc
+
+	.globl	test_f8
+	.align	2
+	.type	test_f8,@function
+test_f8:                                # @test_f8
+	.cfi_startproc
+# BB#0:
+	stfd 30, -16(1)
+	stfd 31, -8(1)
+	lfs 0, 28(4)
+	lfs 1, 28(3)
+	lfs 2, 24(4)
+	lfs 3, 24(3)
+	lfs 4, 20(4)
+	lfs 5, 20(3)
+	lfs 6, 16(4)
+	lfs 7, 16(3)
+	lfs 8, 12(4)
+	lfs 9, 12(3)
+	lfs 10, 8(4)
+	lfs 11, 8(3)
+	lfs 12, 4(4)
+	lfs 13, 4(3)
+	lfs 31, 0(4)
+	lfs 30, 0(3)
+	fadds 0, 1, 0
+	fadds 1, 3, 2
+	fadds 2, 5, 4
+	fadds 3, 7, 6
+	fadds 4, 9, 8
+	fadds 5, 11, 10
+	stfs 0, 28(5)
+	stfs 1, 24(5)
+	fadds 7, 30, 31
+	fadds 6, 13, 12
+	stfs 2, 20(5)
+	stfs 3, 16(5)
+	stfs 4, 12(5)
+	stfs 5, 8(5)
+	stfs 6, 4(5)
+	stfs 7, 0(5)
+	lfd 31, -8(1)
+	lfd 30, -16(1)
+	blr 
+.Ltmp3:
+	.size	test_f8, .Ltmp3-test_f8
+	.cfi_endproc
+
+	.globl	test_fmul
+	.align	2
+	.type	test_fmul,@function
+test_fmul:                              # @test_fmul
+	.cfi_startproc
+# BB#0:
+	stfd 30, -16(1)
+	stfd 31, -8(1)
+	lfs 0, 28(4)
+	lfs 1, 28(3)
+	lfs 2, 24(4)
+	lfs 3, 24(3)
+	lfs 4, 20(4)
+	lfs 5, 20(3)
+	lfs 6, 16(4)
+	lfs 7, 16(3)
+	lfs 8, 12(4)
+	lfs 9, 12(3)
+	lfs 10, 8(4)
+	lfs 11, 8(3)
+	lfs 12, 4(4)
+	lfs 13, 4(3)
+	lfs 31, 0(4)
+	lfs 30, 0(3)
+	fmuls 0, 1, 0
+	fmuls 1, 3, 2
+	fmuls 2, 5, 4
+	fmuls 3, 7, 6
+	fmuls 4, 9, 8
+	fmuls 5, 11, 10
+	stfs 0, 28(5)
+	stfs 1, 24(5)
+	fmuls 7, 30, 31
+	fmuls 6, 13, 12
+	stfs 2, 20(5)
+	stfs 3, 16(5)
+	stfs 4, 12(5)
+	stfs 5, 8(5)
+	stfs 6, 4(5)
+	stfs 7, 0(5)
+	lfd 31, -8(1)
+	lfd 30, -16(1)
+	blr 
+.Ltmp4:
+	.size	test_fmul, .Ltmp4-test_fmul
+	.cfi_endproc
+
+	.globl	test_div
+	.align	2
+	.type	test_div,@function
+test_div:                               # @test_div
+	.cfi_startproc
+# BB#0:
+	lfs 2, 24(4)
+	lfs 6, 24(3)
+	lfs 7, 20(4)
+	lfs 9, 20(3)
+	lfs 3, 16(4)
+	lfs 8, 16(3)
+	lfs 0, 28(4)
+	lfs 1, 28(3)
+	lfs 4, 12(4)
+	lfs 5, 12(3)
+	lfs 12, 8(3)
+	lfs 10, 0(4)
+	lfs 11, 0(3)
+	fdivs 13, 9, 7
+	fdivs 2, 6, 2
+	fdivs 3, 8, 3
+	lfs 6, 8(4)
+	lfs 8, 4(4)
+	lfs 9, 4(3)
+	fdivs 0, 1, 0
+	fdivs 4, 5, 4
+	fdivs 7, 11, 10
+	fdivs 5, 12, 6
+	fdivs 6, 9, 8
+	stfs 0, 28(5)
+	stfs 2, 24(5)
+	stfs 13, 20(5)
+	stfs 3, 16(5)
+	stfs 4, 12(5)
+	stfs 5, 8(5)
+	stfs 6, 4(5)
+	stfs 7, 0(5)
+	blr 
+.Ltmp5:
+	.size	test_div, .Ltmp5-test_div
+	.cfi_endproc
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	2
+.LCPI6_0:
+	.long	1083179008              # float 4.500000e+00
+                                        #  (0x40900000)
+.LCPI6_1:
+	.long	1073741824              # float 2.000000e+00
+                                        #  (0x40000000)
+.LCPI6_2:
+	.long	1065353216              # float 1.000000e+00
+                                        #  (0x3f800000)
+.LCPI6_3:
+	.long	1036831949              # float 1.000000e-01
+                                        #  (0x3dcccccd)
+	.text
+	.globl	test_cst
+	.align	2
+	.type	test_cst,@function
+test_cst:                               # @test_cst
+	.cfi_startproc
+# BB#0:
+	lis 8, .LCPI6_0@ha
+	lis 7, .LCPI6_1@ha
+	lis 5, .LCPI6_2@ha
+	lis 6, .LCPI6_3@ha
+	lfs 0, 12(3)
+	lfs 1, .LCPI6_0@l(8)
+	lfs 2, 8(3)
+	lfs 3, .LCPI6_1@l(7)
+	lfs 4, 4(3)
+	lfs 5, .LCPI6_2@l(5)
+	lfs 6, 0(3)
+	lfs 7, .LCPI6_3@l(6)
+	fadds 0, 0, 1
+	fadds 1, 2, 3
+	fadds 2, 4, 5
+	fadds 3, 6, 7
+	stfs 0, 12(4)
+	stfs 1, 8(4)
+	stfs 2, 4(4)
+	stfs 3, 0(4)
+	blr 
+.Ltmp6:
+	.size	test_cst, .Ltmp6-test_cst
+	.cfi_endproc
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	2
+.LCPI7_0:
+	.long	0                       # float 0.000000e+00
+                                        #  (0x0)
+	.text
+	.globl	test_zero
+	.align	2
+	.type	test_zero,@function
+test_zero:                              # @test_zero
+	.cfi_startproc
+# BB#0:
+	lis 5, .LCPI7_0@ha
+	lfs 1, 12(3)
+	lfs 2, 8(3)
+	lfs 3, 4(3)
+	lfs 0, .LCPI7_0@l(5)
+	lfs 4, 0(3)
+	fadds 1, 1, 0
+	fadds 2, 2, 0
+	fadds 3, 3, 0
+	fadds 0, 4, 0
+	stfs 1, 12(4)
+	stfs 2, 8(4)
+	stfs 3, 4(4)
+	stfs 0, 0(4)
+	blr 
+.Ltmp7:
+	.size	test_zero, .Ltmp7-test_zero
+	.cfi_endproc
+
+	.globl	test_undef
+	.align	2
+	.type	test_undef,@function
+test_undef:                             # @test_undef
+	.cfi_startproc
+# BB#0:
+	lfs 0, 12(3)
+	lfs 1, 8(3)
+	lfs 2, 4(3)
+	lfs 3, 0(3)
+	fadds 0, 0, 0
+	fadds 1, 1, 0
+	fadds 2, 2, 0
+	fadds 3, 3, 0
+	stfs 0, 12(4)
+	stfs 1, 8(4)
+	stfs 2, 4(4)
+	stfs 3, 0(4)
+	blr 
+.Ltmp8:
+	.size	test_undef, .Ltmp8-test_undef
+	.cfi_endproc
+
+	.globl	test_constant_insert
+	.align	2
+	.type	test_constant_insert,@function
+test_constant_insert:                   # @test_constant_insert
+	.cfi_startproc
+# BB#0:
+	li 4, 0
+	lis 5, 16672
+	stw 4, 12(3)
+	stw 4, 8(3)
+	stw 4, 4(3)
+	stw 5, 0(3)
+	blr 
+.Ltmp9:
+	.size	test_constant_insert, .Ltmp9-test_constant_insert
+	.cfi_endproc
+
+	.globl	test_variable_buildvector
+	.align	2
+	.type	test_variable_buildvector,@function
+test_variable_buildvector:              # @test_variable_buildvector
+	.cfi_startproc
+# BB#0:
+	li 4, 0
+	stfs 1, 0(3)
+	stw 4, 12(3)
+	stw 4, 8(3)
+	stw 4, 4(3)
+	blr 
+.Ltmp10:
+	.size	test_variable_buildvector, .Ltmp10-test_variable_buildvector
+	.cfi_endproc
+
+	.globl	test_scalar_to_vector
+	.align	2
+	.type	test_scalar_to_vector,@function
+test_scalar_to_vector:                  # @test_scalar_to_vector
+	.cfi_startproc
+# BB#0:
+	stfs 1, 0(3)
+	blr 
+.Ltmp11:
+	.size	test_scalar_to_vector, .Ltmp11-test_scalar_to_vector
+	.cfi_endproc
+
+	.globl	test_extract_elt
+	.align	2
+	.type	test_extract_elt,@function
+test_extract_elt:                       # @test_extract_elt
+	.cfi_startproc
+# BB#0:
+	lfs 1, 12(3)
+	blr 
+.Ltmp12:
+	.size	test_extract_elt, .Ltmp12-test_extract_elt
+	.cfi_endproc
+
+	.globl	test_extract_elt2
+	.align	2
+	.type	test_extract_elt2,@function
+test_extract_elt2:                      # @test_extract_elt2
+	.cfi_startproc
+# BB#0:
+	lfd 1, 24(3)
+	blr 
+.Ltmp13:
+	.size	test_extract_elt2, .Ltmp13-test_extract_elt2
+	.cfi_endproc
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	2
+.LCPI14_0:
+	.long	1082130432              # float 4.000000e+00
+                                        #  (0x40800000)
+.LCPI14_1:
+	.long	1077936128              # float 3.000000e+00
+                                        #  (0x40400000)
+.LCPI14_2:
+	.long	1073741824              # float 2.000000e+00
+                                        #  (0x40000000)
+.LCPI14_3:
+	.long	1065353216              # float 1.000000e+00
+                                        #  (0x3f800000)
+	.text
+	.globl	test_cast_1
+	.align	2
+	.type	test_cast_1,@function
+test_cast_1:                            # @test_cast_1
+	.cfi_startproc
+# BB#0:
+	lis 8, .LCPI14_0@ha
+	lis 7, .LCPI14_1@ha
+	lis 5, .LCPI14_2@ha
+	lis 6, .LCPI14_3@ha
+	lfs 0, 12(3)
+	lfs 1, .LCPI14_0@l(8)
+	lfs 2, 8(3)
+	lfs 3, .LCPI14_1@l(7)
+	lfs 4, 4(3)
+	lfs 5, .LCPI14_2@l(5)
+	lfs 6, 0(3)
+	lfs 7, .LCPI14_3@l(6)
+	fadds 0, 0, 1
+	fadds 1, 2, 3
+	fadds 2, 4, 5
+	fadds 3, 6, 7
+	stfs 0, -12(1)
+	stfs 1, -4(1)
+	stfs 2, -8(1)
+	stfs 3, -16(1)
+	lwz 3, -12(1)
+	lwz 5, -4(1)
+	lwz 6, -8(1)
+	lwz 7, -16(1)
+	addi 3, 3, 4
+	addi 5, 5, 3
+	addi 6, 6, 2
+	addi 7, 7, 1
+	stw 3, 12(4)
+	stw 5, 8(4)
+	stw 6, 4(4)
+	stw 7, 0(4)
+	blr 
+.Ltmp14:
+	.size	test_cast_1, .Ltmp14-test_cast_1
+	.cfi_endproc
+
+	.globl	test_cast_2
+	.align	2
+	.type	test_cast_2,@function
+test_cast_2:                            # @test_cast_2
+	.cfi_startproc
+# BB#0:
+	lfs 0, 0(3)
+	lfs 1, 4(3)
+	lfs 2, 8(3)
+	lfs 3, 12(3)
+	lfs 4, 16(3)
+	lfs 5, 20(3)
+	lfs 6, 24(3)
+	lfs 7, 28(3)
+	stfs 7, 28(4)
+	stfs 6, 24(4)
+	stfs 5, 20(4)
+	stfs 4, 16(4)
+	stfs 3, 12(4)
+	stfs 2, 8(4)
+	stfs 1, 4(4)
+	stfs 0, 0(4)
+	blr 
+.Ltmp15:
+	.size	test_cast_2, .Ltmp15-test_cast_2
+	.cfi_endproc
+
+	.globl	splat
+	.align	2
+	.type	splat,@function
+splat:                                  # @splat
+	.cfi_startproc
+# BB#0:
+	lfs 0, 12(4)
+	lfs 2, 8(4)
+	lfs 3, 4(4)
+	lfs 4, 0(4)
+	fadds 0, 0, 1
+	fadds 2, 2, 1
+	fadds 3, 3, 1
+	fadds 1, 4, 1
+	stfs 0, 12(3)
+	stfs 2, 8(3)
+	stfs 3, 4(3)
+	stfs 1, 0(3)
+	blr 
+.Ltmp16:
+	.size	splat, .Ltmp16-splat
+	.cfi_endproc
+
+	.globl	splat_i4
+	.align	2
+	.type	splat_i4,@function
+splat_i4:                               # @splat_i4
+	.cfi_startproc
+# BB#0:
+	lwz 6, 12(4)
+	lwz 7, 8(4)
+	lwz 8, 4(4)
+	lwz 4, 0(4)
+	add 6, 6, 5
+	add 7, 7, 5
+	add 8, 8, 5
+	add 4, 4, 5
+	stw 6, 12(3)
+	stw 7, 8(3)
+	stw 8, 4(3)
+	stw 4, 0(3)
+	blr 
+.Ltmp17:
+	.size	splat_i4, .Ltmp17-splat_i4
+	.cfi_endproc
+
+

@@ -1,0 +1,5 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/constructor-attribute.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/constructor-attribute.c &&
+grep -e "global_ctors.*@A" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/constructor-attribute.c.tmp &&
+grep -e "global_dtors.*@B" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/constructor-attribute.c.tmp &&
+grep -e "global_ctors.*@C" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/constructor-attribute.c.tmp &&
+grep -e "global_dtors.*@D" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/constructor-attribute.c.tmp

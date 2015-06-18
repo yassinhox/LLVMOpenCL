@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -filetype=obj -triple i686-pc-win32 /home/jazouani/llvm/llvm-3.2/test/MC/COFF/bss.s | coff-dump.py | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/COFF/bss.s &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -filetype=obj -triple x86_64-pc-win32 /home/jazouani/llvm/llvm-3.2/test/MC/COFF/bss.s | coff-dump.py | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/COFF/bss.s

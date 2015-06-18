@@ -1,0 +1,117 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/blocks-4.m'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:128:128-n8:16:32-S128"
+target triple = "i386-apple-darwin9"
+
+module asm "\09.lazy_reference .objc_class_name_NSBlockOperation"
+
+%struct._objc_class = type { %struct._objc_class*, %struct._objc_class*, i8*, i32, i32, i32, %struct._objc_ivar_list*, %struct._objc_method_list*, %struct._objc_cache*, %struct._objc_protocol_list*, i8*, %struct._objc_class_extension* }
+%struct._objc_ivar_list = type opaque
+%struct._objc_method_list = type opaque
+%struct._objc_cache = type opaque
+%struct._objc_protocol_list = type { %struct._objc_protocol_list*, i32, [0 x %struct._objc_protocol] }
+%struct._objc_protocol = type { %struct._objc_protocol_extension*, i8*, %struct._objc_protocol_list*, %struct._objc_method_description_list*, %struct._objc_method_description_list* }
+%struct._objc_protocol_extension = type { i32, %struct._objc_method_description_list*, %struct._objc_method_description_list*, %struct._prop_list_t*, i8** }
+%struct._objc_method_description_list = type { i32, [0 x %struct._objc_method_description] }
+%struct._objc_method_description = type { i8*, i8* }
+%struct._prop_list_t = type { i32, i32, [0 x %struct._prop_t] }
+%struct._prop_t = type { i8*, i8* }
+%struct._objc_class_extension = type { i32, i8*, %struct._prop_list_t* }
+%struct.__block_descriptor = type { i32, i32 }
+%struct._objc_module = type { i32, i32, i8*, %struct._objc_symtab* }
+%struct._objc_symtab = type { i32, i8*, i16, i16, [0 x i8*] }
+%struct._objc_exception_data = type { [18 x i32], [4 x i8*] }
+
+@"\01L_OBJC_CLASS_NAME_" = internal global [17 x i8] c"NSBlockOperation\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_CLASS_REFERENCES_" = internal global %struct._objc_class* bitcast ([17 x i8]* @"\01L_OBJC_CLASS_NAME_" to %struct._objc_class*), section "__OBJC,__cls_refs,literal_pointers,no_dead_strip", align 4
+@_NSConcreteGlobalBlock = external global i8*
+@.str = private unnamed_addr constant [6 x i8] c"v4@?0\00", align 1
+@__block_descriptor_tmp = internal constant { i32, i32, i8*, i8* } { i32 0, i32 20, i8* getelementptr inbounds ([6 x i8]* @.str, i32 0, i32 0), i8* null }
+@__block_literal_global = internal constant { i8**, i32, i32, i8*, %struct.__block_descriptor* } { i8** @_NSConcreteGlobalBlock, i32 1342177280, i32 0, i8* bitcast (void (i8*)* @__FUNC_block_invoke to i8*), %struct.__block_descriptor* bitcast ({ i32, i32, i8*, i8* }* @__block_descriptor_tmp to %struct.__block_descriptor*) }, align 4
+@"\01L_OBJC_METH_VAR_NAME_" = internal global [25 x i8] c"blockOperationWithBlock:\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_SELECTOR_REFERENCES_" = internal global i8* getelementptr inbounds ([25 x i8]* @"\01L_OBJC_METH_VAR_NAME_", i32 0, i32 0), section "__OBJC,__message_refs,literal_pointers,no_dead_strip", align 4
+@"\01L_OBJC_CLASS_NAME_1" = internal global [1 x i8] zeroinitializer, section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_MODULES" = internal global %struct._objc_module { i32 7, i32 16, i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_1", i32 0, i32 0), %struct._objc_symtab* null }, section "__OBJC,__module_info,regular,no_dead_strip", align 4
+@llvm.used = appending global [6 x i8*] [i8* getelementptr inbounds ([17 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), i8* bitcast (%struct._objc_class** @"\01L_OBJC_CLASS_REFERENCES_" to i8*), i8* getelementptr inbounds ([25 x i8]* @"\01L_OBJC_METH_VAR_NAME_", i32 0, i32 0), i8* bitcast (i8** @"\01L_OBJC_SELECTOR_REFERENCES_" to i8*), i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_1", i32 0, i32 0), i8* bitcast (%struct._objc_module* @"\01L_OBJC_MODULES" to i8*)], section "llvm.metadata"
+
+define void @FUNC() nounwind {
+entry:
+  %0 = load %struct._objc_class** @"\01L_OBJC_CLASS_REFERENCES_"
+  %1 = load i8** @"\01L_OBJC_SELECTOR_REFERENCES_"
+  %2 = bitcast %struct._objc_class* %0 to i8*
+  %call = call i8* bitcast (i8* (i8*, i8*, ...)* @objc_msgSend to i8* (i8*, i8*, void ()*)*)(i8* %2, i8* %1, void ()* bitcast ({ i8**, i32, i32, i8*, %struct.__block_descriptor* }* @__block_literal_global to void ()*))
+  ret void
+}
+
+define internal void @__FUNC_block_invoke(i8* %.block_descriptor) nounwind {
+entry:
+  %exceptiondata.ptr = alloca %struct._objc_exception_data
+  %_call_try_exit = alloca i1
+  %exception = alloca i8*, align 4
+  %cleanup.dest.slot = alloca i32
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor* }>*
+  call void @objc_exception_try_enter(%struct._objc_exception_data* %exceptiondata.ptr) nounwind
+  %setjmp_buffer = getelementptr %struct._objc_exception_data* %exceptiondata.ptr, i32 0, i32 0, i32 0
+  %setjmp_result = call i32 @_setjmp(i32* %setjmp_buffer) nounwind returns_twice
+  %did_catch_exception = icmp ne i32 %setjmp_result, 0
+  br i1 %did_catch_exception, label %try.handler, label %try
+
+try:                                              ; preds = %entry
+  store i1 true, i1* %_call_try_exit
+  store i1 true, i1* %_call_try_exit
+  store i32 0, i32* %cleanup.dest.slot
+  br label %cleanup
+
+cleanup:                                          ; preds = %try, %try.handler
+  %0 = load i1* %_call_try_exit
+  br i1 %0, label %finally.call_exit, label %finally.no_call_exit
+
+finally.call_exit:                                ; preds = %cleanup
+  call void @objc_exception_try_exit(%struct._objc_exception_data* %exceptiondata.ptr) nounwind
+  br label %finally.no_call_exit
+
+finally.no_call_exit:                             ; preds = %finally.call_exit, %cleanup
+  %cleanup.dest = load i32* %cleanup.dest.slot
+  switch i32 %cleanup.dest, label %unreachable [
+    i32 0, label %cleanup.cont
+    i32 2, label %finally.end
+  ]
+
+cleanup.cont:                                     ; preds = %finally.no_call_exit
+  br label %finally.end
+
+finally.end:                                      ; preds = %cleanup.cont, %finally.no_call_exit
+  ret void
+
+try.handler:                                      ; preds = %entry
+  call void asm sideeffect "", "=*m"(%struct._objc_exception_data* %exceptiondata.ptr) nounwind
+  %caught = call i8* @objc_exception_extract(%struct._objc_exception_data* %exceptiondata.ptr) nounwind
+  store i1 false, i1* %_call_try_exit
+  store i8* %caught, i8** %exception
+  %1 = load i8** %exception, align 4
+  call void asm sideeffect "", "*m"(%struct._objc_exception_data* %exceptiondata.ptr) nounwind
+  call void @EXIT(i8* %1)
+  store i32 2, i32* %cleanup.dest.slot
+  br label %cleanup
+
+unreachable:                                      ; preds = %finally.no_call_exit
+  unreachable
+}
+
+declare void @objc_exception_try_enter(%struct._objc_exception_data*)
+
+declare i32 @_setjmp(i32*) nonlazybind
+
+declare i8* @objc_exception_extract(%struct._objc_exception_data*)
+
+declare void @EXIT(i8*)
+
+declare void @objc_exception_try_exit(%struct._objc_exception_data*)
+
+declare i8* @objc_msgSend(i8*, i8*, ...) nonlazybind
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 1}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__OBJC, __image_info,regular"}
+!3 = metadata !{i32 4, metadata !"Objective-C Garbage Collection", i32 0}

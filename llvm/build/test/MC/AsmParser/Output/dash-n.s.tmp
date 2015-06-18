@@ -1,0 +1,3 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/dash-n.s:6:7: error: expected section directive before assembly directive
+.long 0
+      ^

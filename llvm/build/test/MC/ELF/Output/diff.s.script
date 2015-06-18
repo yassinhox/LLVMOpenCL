@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -filetype=obj -triple x86_64-pc-linux-gnu /home/jazouani/llvm/llvm-3.2/test/MC/ELF/diff.s -o - | elf-dump  | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ELF/diff.s

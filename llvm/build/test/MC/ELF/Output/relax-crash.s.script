@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -filetype=obj -triple x86_64-pc-linux-gnu /home/jazouani/llvm/llvm-3.2/test/MC/ELF/relax-crash.s -o /home/jazouani/llvm/build/test/MC/ELF/Output/relax-crash.s.tmp

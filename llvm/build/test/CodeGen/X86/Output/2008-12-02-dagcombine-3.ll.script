@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-12-02-dagcombine-3.ll -march=x86 | grep add | /home/jazouani/llvm/build/Release+Asserts/bin/count 2 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2008-12-02-dagcombine-3.ll -march=x86 | grep sub | grep -v subsections | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

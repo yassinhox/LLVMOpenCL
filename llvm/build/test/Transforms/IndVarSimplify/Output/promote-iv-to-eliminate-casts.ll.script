@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IndVarSimplify/promote-iv-to-eliminate-casts.ll -indvars -S > /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/promote-iv-to-eliminate-casts.ll.tmp &&
+not grep sext /home/jazouani/llvm/build/test/Transforms/IndVarSimplify/Output/promote-iv-to-eliminate-casts.ll.tmp

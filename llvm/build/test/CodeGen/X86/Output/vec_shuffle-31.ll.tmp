@@ -1,0 +1,34 @@
+	.file	"<stdin>"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI0_0:
+	.byte	0                       # 0x0
+	.byte	1                       # 0x1
+	.byte	2                       # 0x2
+	.byte	3                       # 0x3
+	.byte	254                     # 0xfe
+	.byte	255                     # 0xff
+	.byte	254                     # 0xfe
+	.byte	255                     # 0xff
+	.byte	6                       # 0x6
+	.byte	7                       # 0x7
+	.byte	14                      # 0xe
+	.byte	15                      # 0xf
+	.byte	254                     # 0xfe
+	.byte	255                     # 0xff
+	.byte	254                     # 0xfe
+	.byte	255                     # 0xff
+	.text
+	.globl	shuf3
+	.align	16, 0x90
+	.type	shuf3,@function
+shuf3:                                  # @shuf3
+# BB#0:                                 # %entry
+	punpcklqdq	%xmm1, %xmm0    # xmm0 = xmm0[0],xmm1[0]
+	pshufb	.LCPI0_0, %xmm0
+	ret
+.Ltmp0:
+	.size	shuf3, .Ltmp0-shuf3
+
+
+	.section	".note.GNU-stack","",@progbits

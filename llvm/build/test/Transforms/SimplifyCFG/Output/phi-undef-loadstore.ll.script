@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -simplifycfg -S < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/phi-undef-loadstore.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/phi-undef-loadstore.ll

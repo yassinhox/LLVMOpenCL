@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2003-08-28-TypeResolvesGlobal3.ll > /home/jazouani/llvm/build/test/Linker/Output/2003-08-28-TypeResolvesGlobal3.ll.tmp.out1.bc &&
+echo "%M = type i32" | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /home/jazouani/llvm/build/test/Linker/Output/2003-08-28-TypeResolvesGlobal3.ll.tmp.out2.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2003-08-28-TypeResolvesGlobal3.ll.tmp.out2.bc /home/jazouani/llvm/build/test/Linker/Output/2003-08-28-TypeResolvesGlobal3.ll.tmp.out1.bc

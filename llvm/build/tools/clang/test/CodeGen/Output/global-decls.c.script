@@ -1,0 +1,6 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple i386-pc-linux-gnu -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/global-decls.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/global-decls.c &&
+grep '@g0_ext = extern_weak global i32' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/global-decls.c.tmp &&
+grep 'declare extern_weak i32 @g1_ext()' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/global-decls.c.tmp &&
+grep '@g0_common = weak global i32' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/global-decls.c.tmp &&
+grep '@g0_def = weak global i32' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/global-decls.c.tmp &&
+grep 'define weak i32 @g1_def()' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/global-decls.c.tmp

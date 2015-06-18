@@ -1,0 +1,2 @@
+fatal error: malformed or corrupted PCH file: 'could not find file '/home/jazouani/llvm/build/tools/clang/test/PCH/Output/missing-file.cpp.tmp.h' referenced by AST file'
+1 error generated.

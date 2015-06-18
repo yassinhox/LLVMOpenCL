@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LICM/hoist-invariant-load.ll -licm -stats -S 2>&1 | grep "1 licm"

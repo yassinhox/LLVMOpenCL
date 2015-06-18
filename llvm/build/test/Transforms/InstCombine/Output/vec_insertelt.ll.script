@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/vec_insertelt.ll -instcombine -S | grep "ret <4 x i32> %A"

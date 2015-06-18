@@ -1,0 +1,266 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/debug-info-default-synth-ivar.m'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%0 = type opaque
+%1 = type opaque
+%2 = type opaque
+%struct._objc_cache = type opaque
+%struct._class_t = type { %struct._class_t*, %struct._class_t*, %struct._objc_cache*, i8* (i8*, i8*)**, %struct._class_ro_t* }
+%struct._class_ro_t = type { i32, i32, i32, i8*, i8*, %struct.__method_list_t*, %struct._objc_protocol_list*, %struct._ivar_list_t*, i8*, %struct._prop_list_t* }
+%struct.__method_list_t = type { i32, i32, [0 x %struct._objc_method] }
+%struct._objc_method = type { i8*, i8*, i8* }
+%struct._objc_protocol_list = type { i64, [0 x %struct._protocol_t*] }
+%struct._protocol_t = type { i8*, i8*, %struct._objc_protocol_list*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct._prop_list_t*, i32, i32, i8** }
+%struct._prop_list_t = type { i32, i32, [0 x %struct._prop_t] }
+%struct._prop_t = type { i8*, i8* }
+%struct._ivar_list_t = type { i32, i32, [0 x %struct._ivar_t] }
+%struct._ivar_t = type { i64*, i8*, i8*, i32, i32 }
+
+@"OBJC_IVAR_$_InstanceVariablesEverywhereButTheInterface._someString" = hidden global i64 0, section "__DATA, __objc_ivar", align 8
+@"OBJC_IVAR_$_InstanceVariablesEverywhereButTheInterface._someNumber" = hidden global i64 8, section "__DATA, __objc_ivar", align 8
+@_objc_empty_cache = external global %struct._objc_cache
+@_objc_empty_vtable = external global i8* (i8*, i8*)*
+@"OBJC_CLASS_$_InstanceVariablesEverywhereButTheInterface" = global %struct._class_t { %struct._class_t* @"OBJC_METACLASS_$_InstanceVariablesEverywhereButTheInterface", %struct._class_t* null, %struct._objc_cache* @_objc_empty_cache, i8* (i8*, i8*)** @_objc_empty_vtable, %struct._class_ro_t* @"\01l_OBJC_CLASS_RO_$_InstanceVariablesEverywhereButTheInterface" }, section "__DATA, __objc_data", align 8
+@"OBJC_METACLASS_$_InstanceVariablesEverywhereButTheInterface" = global %struct._class_t { %struct._class_t* @"OBJC_METACLASS_$_InstanceVariablesEverywhereButTheInterface", %struct._class_t* @"OBJC_CLASS_$_InstanceVariablesEverywhereButTheInterface", %struct._objc_cache* @_objc_empty_cache, i8* (i8*, i8*)** @_objc_empty_vtable, %struct._class_ro_t* @"\01l_OBJC_METACLASS_RO_$_InstanceVariablesEverywhereButTheInterface" }, section "__DATA, __objc_data", align 8
+@"\01L_OBJC_CLASS_NAME_" = internal global [43 x i8] c"InstanceVariablesEverywhereButTheInterface\00", section "__TEXT,__objc_classname,cstring_literals", align 1
+@"\01l_OBJC_METACLASS_RO_$_InstanceVariablesEverywhereButTheInterface" = internal global %struct._class_ro_t { i32 3, i32 40, i32 40, i8* null, i8* getelementptr inbounds ([43 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct.__method_list_t* null, %struct._objc_protocol_list* null, %struct._ivar_list_t* null, i8* null, %struct._prop_list_t* null }, section "__DATA, __objc_const", align 8
+@"\01L_OBJC_METH_VAR_NAME_" = internal global [11 x i8] c"someString\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_" = internal global [8 x i8] c"@16@0:8\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_NAME_1" = internal global [11 x i8] c"someNumber\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_2" = internal global [8 x i8] c"Q16@0:8\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01l_OBJC_$_INSTANCE_METHODS_InstanceVariablesEverywhereButTheInterface" = internal global { i32, i32, [2 x %struct._objc_method] } { i32 24, i32 2, [2 x %struct._objc_method] [%struct._objc_method { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_", i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i8* bitcast (%0* (%1*, i8*)* @"\01-[InstanceVariablesEverywhereButTheInterface someString]" to i8*) }, %struct._objc_method { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_1", i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @"\01L_OBJC_METH_VAR_TYPE_2", i32 0, i32 0), i8* bitcast (i64 (%1*, i8*)* @"\01-[InstanceVariablesEverywhereButTheInterface someNumber]" to i8*) }] }, section "__DATA, __objc_const", align 8
+@"\01L_OBJC_METH_VAR_NAME_3" = internal global [12 x i8] c"_someString\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_4" = internal global [12 x i8] c"@\22NSString\22\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_NAME_5" = internal global [12 x i8] c"_someNumber\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_6" = internal global [2 x i8] c"Q\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01l_OBJC_$_INSTANCE_VARIABLES_InstanceVariablesEverywhereButTheInterface" = internal global { i32, i32, [2 x %struct._ivar_t] } { i32 32, i32 2, [2 x %struct._ivar_t] [%struct._ivar_t { i64* @"OBJC_IVAR_$_InstanceVariablesEverywhereButTheInterface._someString", i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_3", i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_TYPE_4", i32 0, i32 0), i32 3, i32 8 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_InstanceVariablesEverywhereButTheInterface._someNumber", i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_5", i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_METH_VAR_TYPE_6", i32 0, i32 0), i32 3, i32 8 }] }, section "__DATA, __objc_const", align 8
+@"\01L_OBJC_PROP_NAME_ATTR_" = internal global [11 x i8] c"someString\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_PROP_NAME_ATTR_7" = internal global [28 x i8] c"T@\22NSString\22,R,V_someString\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_PROP_NAME_ATTR_8" = internal global [11 x i8] c"someNumber\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_PROP_NAME_ATTR_9" = internal global [18 x i8] c"TQ,R,V_someNumber\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01l_OBJC_$_PROP_LIST_InstanceVariablesEverywhereButTheInterface" = internal global { i32, i32, [2 x %struct._prop_t] } { i32 16, i32 2, [2 x %struct._prop_t] [%struct._prop_t { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_", i32 0, i32 0), i8* getelementptr inbounds ([28 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_7", i32 0, i32 0) }, %struct._prop_t { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_8", i32 0, i32 0), i8* getelementptr inbounds ([18 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_9", i32 0, i32 0) }] }, section "__DATA, __objc_const", align 8
+@"\01l_OBJC_CLASS_RO_$_InstanceVariablesEverywhereButTheInterface" = internal global %struct._class_ro_t { i32 2, i32 0, i32 16, i8* null, i8* getelementptr inbounds ([43 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct.__method_list_t* bitcast ({ i32, i32, [2 x %struct._objc_method] }* @"\01l_OBJC_$_INSTANCE_METHODS_InstanceVariablesEverywhereButTheInterface" to %struct.__method_list_t*), %struct._objc_protocol_list* null, %struct._ivar_list_t* bitcast ({ i32, i32, [2 x %struct._ivar_t] }* @"\01l_OBJC_$_INSTANCE_VARIABLES_InstanceVariablesEverywhereButTheInterface" to %struct._ivar_list_t*), i8* null, %struct._prop_list_t* bitcast ({ i32, i32, [2 x %struct._prop_t] }* @"\01l_OBJC_$_PROP_LIST_InstanceVariablesEverywhereButTheInterface" to %struct._prop_list_t*) }, section "__DATA, __objc_const", align 8
+@"OBJC_IVAR_$_AutomaticSynthesis._someString" = hidden global i64 8, section "__DATA, __objc_ivar", align 8
+@"OBJC_IVAR_$_AutomaticSynthesis._someNumber" = hidden global i64 16, section "__DATA, __objc_ivar", align 8
+@"OBJC_CLASS_$_AutomaticSynthesis" = global %struct._class_t { %struct._class_t* @"OBJC_METACLASS_$_AutomaticSynthesis", %struct._class_t* null, %struct._objc_cache* @_objc_empty_cache, i8* (i8*, i8*)** @_objc_empty_vtable, %struct._class_ro_t* @"\01l_OBJC_CLASS_RO_$_AutomaticSynthesis" }, section "__DATA, __objc_data", align 8
+@"OBJC_METACLASS_$_AutomaticSynthesis" = global %struct._class_t { %struct._class_t* @"OBJC_METACLASS_$_AutomaticSynthesis", %struct._class_t* @"OBJC_CLASS_$_AutomaticSynthesis", %struct._objc_cache* @_objc_empty_cache, i8* (i8*, i8*)** @_objc_empty_vtable, %struct._class_ro_t* @"\01l_OBJC_METACLASS_RO_$_AutomaticSynthesis" }, section "__DATA, __objc_data", align 8
+@"\01L_OBJC_CLASS_NAME_10" = internal global [19 x i8] c"AutomaticSynthesis\00", section "__TEXT,__objc_classname,cstring_literals", align 1
+@"\01l_OBJC_METACLASS_RO_$_AutomaticSynthesis" = internal global %struct._class_ro_t { i32 3, i32 40, i32 40, i8* null, i8* getelementptr inbounds ([19 x i8]* @"\01L_OBJC_CLASS_NAME_10", i32 0, i32 0), %struct.__method_list_t* null, %struct._objc_protocol_list* null, %struct._ivar_list_t* null, i8* null, %struct._prop_list_t* null }, section "__DATA, __objc_const", align 8
+@"\01L_OBJC_METH_VAR_NAME_11" = internal global [15 x i8] c"setSomeString:\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_12" = internal global [11 x i8] c"v24@0:8@16\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_NAME_13" = internal global [15 x i8] c"setSomeNumber:\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_14" = internal global [11 x i8] c"v24@0:8Q16\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01l_OBJC_$_INSTANCE_METHODS_AutomaticSynthesis" = internal global { i32, i32, [4 x %struct._objc_method] } { i32 24, i32 4, [4 x %struct._objc_method] [%struct._objc_method { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_", i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i8* bitcast (%0* (%2*, i8*)* @"\01-[AutomaticSynthesis someString]" to i8*) }, %struct._objc_method { i8* getelementptr inbounds ([15 x i8]* @"\01L_OBJC_METH_VAR_NAME_11", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_TYPE_12", i32 0, i32 0), i8* bitcast (void (%2*, i8*, %0*)* @"\01-[AutomaticSynthesis setSomeString:]" to i8*) }, %struct._objc_method { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_1", i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @"\01L_OBJC_METH_VAR_TYPE_2", i32 0, i32 0), i8* bitcast (i64 (%2*, i8*)* @"\01-[AutomaticSynthesis someNumber]" to i8*) }, %struct._objc_method { i8* getelementptr inbounds ([15 x i8]* @"\01L_OBJC_METH_VAR_NAME_13", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_TYPE_14", i32 0, i32 0), i8* bitcast (void (%2*, i8*, i64)* @"\01-[AutomaticSynthesis setSomeNumber:]" to i8*) }] }, section "__DATA, __objc_const", align 8
+@"OBJC_IVAR_$_AutomaticSynthesis.real_ivar" = global i64 0, section "__DATA, __objc_ivar", align 8
+@"\01L_OBJC_METH_VAR_NAME_15" = internal global [10 x i8] c"real_ivar\00", section "__TEXT,__objc_methname,cstring_literals", align 1
+@"\01L_OBJC_METH_VAR_TYPE_16" = internal global [2 x i8] c"i\00", section "__TEXT,__objc_methtype,cstring_literals", align 1
+@"\01l_OBJC_$_INSTANCE_VARIABLES_AutomaticSynthesis" = internal global { i32, i32, [3 x %struct._ivar_t] } { i32 32, i32 3, [3 x %struct._ivar_t] [%struct._ivar_t { i64* @"OBJC_IVAR_$_AutomaticSynthesis.real_ivar", i8* getelementptr inbounds ([10 x i8]* @"\01L_OBJC_METH_VAR_NAME_15", i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_METH_VAR_TYPE_16", i32 0, i32 0), i32 2, i32 4 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_AutomaticSynthesis._someString", i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_3", i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_TYPE_4", i32 0, i32 0), i32 3, i32 8 }, %struct._ivar_t { i64* @"OBJC_IVAR_$_AutomaticSynthesis._someNumber", i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_5", i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_METH_VAR_TYPE_6", i32 0, i32 0), i32 3, i32 8 }] }, section "__DATA, __objc_const", align 8
+@"\01L_OBJC_PROP_NAME_ATTR_17" = internal global [28 x i8] c"T@\22NSString\22,C,V_someString\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_PROP_NAME_ATTR_18" = internal global [16 x i8] c"TQ,V_someNumber\00", section "__TEXT,__cstring,cstring_literals", align 1
+@"\01l_OBJC_$_PROP_LIST_AutomaticSynthesis" = internal global { i32, i32, [2 x %struct._prop_t] } { i32 16, i32 2, [2 x %struct._prop_t] [%struct._prop_t { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_", i32 0, i32 0), i8* getelementptr inbounds ([28 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_17", i32 0, i32 0) }, %struct._prop_t { i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_8", i32 0, i32 0), i8* getelementptr inbounds ([16 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_18", i32 0, i32 0) }] }, section "__DATA, __objc_const", align 8
+@"\01l_OBJC_CLASS_RO_$_AutomaticSynthesis" = internal global %struct._class_ro_t { i32 2, i32 0, i32 24, i8* null, i8* getelementptr inbounds ([19 x i8]* @"\01L_OBJC_CLASS_NAME_10", i32 0, i32 0), %struct.__method_list_t* bitcast ({ i32, i32, [4 x %struct._objc_method] }* @"\01l_OBJC_$_INSTANCE_METHODS_AutomaticSynthesis" to %struct.__method_list_t*), %struct._objc_protocol_list* null, %struct._ivar_list_t* bitcast ({ i32, i32, [3 x %struct._ivar_t] }* @"\01l_OBJC_$_INSTANCE_VARIABLES_AutomaticSynthesis" to %struct._ivar_list_t*), i8* null, %struct._prop_list_t* bitcast ({ i32, i32, [2 x %struct._prop_t] }* @"\01l_OBJC_$_PROP_LIST_AutomaticSynthesis" to %struct._prop_list_t*) }, section "__DATA, __objc_const", align 8
+@"\01L_OBJC_LABEL_CLASS_$" = internal global [2 x i8*] [i8* bitcast (%struct._class_t* @"OBJC_CLASS_$_InstanceVariablesEverywhereButTheInterface" to i8*), i8* bitcast (%struct._class_t* @"OBJC_CLASS_$_AutomaticSynthesis" to i8*)], section "__DATA, __objc_classlist, regular, no_dead_strip", align 8
+@llvm.used = appending global [29 x i8*] [i8* getelementptr inbounds ([43 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_", i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @"\01L_OBJC_METH_VAR_TYPE_", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_NAME_1", i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @"\01L_OBJC_METH_VAR_TYPE_2", i32 0, i32 0), i8* bitcast ({ i32, i32, [2 x %struct._objc_method] }* @"\01l_OBJC_$_INSTANCE_METHODS_InstanceVariablesEverywhereButTheInterface" to i8*), i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_3", i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_TYPE_4", i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @"\01L_OBJC_METH_VAR_NAME_5", i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_METH_VAR_TYPE_6", i32 0, i32 0), i8* bitcast ({ i32, i32, [2 x %struct._ivar_t] }* @"\01l_OBJC_$_INSTANCE_VARIABLES_InstanceVariablesEverywhereButTheInterface" to i8*), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_", i32 0, i32 0), i8* getelementptr inbounds ([28 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_7", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_8", i32 0, i32 0), i8* getelementptr inbounds ([18 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_9", i32 0, i32 0), i8* bitcast ({ i32, i32, [2 x %struct._prop_t] }* @"\01l_OBJC_$_PROP_LIST_InstanceVariablesEverywhereButTheInterface" to i8*), i8* getelementptr inbounds ([19 x i8]* @"\01L_OBJC_CLASS_NAME_10", i32 0, i32 0), i8* getelementptr inbounds ([15 x i8]* @"\01L_OBJC_METH_VAR_NAME_11", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_TYPE_12", i32 0, i32 0), i8* getelementptr inbounds ([15 x i8]* @"\01L_OBJC_METH_VAR_NAME_13", i32 0, i32 0), i8* getelementptr inbounds ([11 x i8]* @"\01L_OBJC_METH_VAR_TYPE_14", i32 0, i32 0), i8* bitcast ({ i32, i32, [4 x %struct._objc_method] }* @"\01l_OBJC_$_INSTANCE_METHODS_AutomaticSynthesis" to i8*), i8* getelementptr inbounds ([10 x i8]* @"\01L_OBJC_METH_VAR_NAME_15", i32 0, i32 0), i8* getelementptr inbounds ([2 x i8]* @"\01L_OBJC_METH_VAR_TYPE_16", i32 0, i32 0), i8* bitcast ({ i32, i32, [3 x %struct._ivar_t] }* @"\01l_OBJC_$_INSTANCE_VARIABLES_AutomaticSynthesis" to i8*), i8* getelementptr inbounds ([28 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_17", i32 0, i32 0), i8* getelementptr inbounds ([16 x i8]* @"\01L_OBJC_PROP_NAME_ATTR_18", i32 0, i32 0), i8* bitcast ({ i32, i32, [2 x %struct._prop_t] }* @"\01l_OBJC_$_PROP_LIST_AutomaticSynthesis" to i8*), i8* bitcast ([2 x i8*]* @"\01L_OBJC_LABEL_CLASS_$" to i8*)], section "llvm.metadata"
+
+define internal %0* @"\01-[InstanceVariablesEverywhereButTheInterface someString]"(%1* %self, i8* %_cmd) nounwind {
+entry:
+  %retval = alloca %0*, align 8
+  %self.addr = alloca %1*, align 8
+  %_cmd.addr = alloca i8*, align 8
+  store %1* %self, %1** %self.addr, align 8
+  call void @llvm.dbg.declare(metadata !{%1** %self.addr}, metadata !53), !dbg !55
+  store i8* %_cmd, i8** %_cmd.addr, align 8
+  call void @llvm.dbg.declare(metadata !{i8** %_cmd.addr}, metadata !56), !dbg !55
+  %self1 = load %1** %self.addr, !dbg !55
+  %ivar = load i64* @"OBJC_IVAR_$_InstanceVariablesEverywhereButTheInterface._someString", !dbg !55, !invariant.load !58
+  %0 = bitcast %1* %self1 to i8*, !dbg !55
+  %add.ptr = getelementptr inbounds i8* %0, i64 %ivar, !dbg !55
+  %1 = bitcast i8* %add.ptr to %0**, !dbg !55
+  %2 = bitcast %0** %1 to i64*, !dbg !55
+  %load = load atomic i64* %2 unordered, align 8, !dbg !55
+  %3 = bitcast %0** %retval to i64*, !dbg !55
+  store i64 %load, i64* %3, !dbg !55
+  %4 = load %0** %retval, !dbg !55
+  ret %0* %4, !dbg !55
+}
+
+declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
+
+define internal i64 @"\01-[InstanceVariablesEverywhereButTheInterface someNumber]"(%1* %self, i8* %_cmd) nounwind {
+entry:
+  %self.addr = alloca %1*, align 8
+  %_cmd.addr = alloca i8*, align 8
+  store %1* %self, %1** %self.addr, align 8
+  call void @llvm.dbg.declare(metadata !{%1** %self.addr}, metadata !59), !dbg !60
+  store i8* %_cmd, i8** %_cmd.addr, align 8
+  call void @llvm.dbg.declare(metadata !{i8** %_cmd.addr}, metadata !61), !dbg !60
+  %self1 = load %1** %self.addr, !dbg !60
+  %ivar = load i64* @"OBJC_IVAR_$_InstanceVariablesEverywhereButTheInterface._someNumber", !dbg !60, !invariant.load !58
+  %0 = bitcast %1* %self1 to i8*, !dbg !60
+  %add.ptr = getelementptr inbounds i8* %0, i64 %ivar, !dbg !60
+  %1 = bitcast i8* %add.ptr to i64*, !dbg !60
+  %load = load atomic i64* %1 unordered, align 8, !dbg !60
+  ret i64 %load, !dbg !60
+}
+
+define internal %0* @"\01-[AutomaticSynthesis someString]"(%2* %self, i8* %_cmd) nounwind {
+entry:
+  %self.addr = alloca %2*, align 8
+  %_cmd.addr = alloca i8*, align 8
+  store %2* %self, %2** %self.addr, align 8
+  call void @llvm.dbg.declare(metadata !{%2** %self.addr}, metadata !62), !dbg !64
+  store i8* %_cmd, i8** %_cmd.addr, align 8
+  call void @llvm.dbg.declare(metadata !{i8** %_cmd.addr}, metadata !65), !dbg !64
+  %cmd = load i8** %_cmd.addr, !dbg !64
+  %self1 = load %2** %self.addr, !dbg !64
+  %0 = bitcast %2* %self1 to i8*, !dbg !64
+  %ivar = load i64* @"OBJC_IVAR_$_AutomaticSynthesis._someString", !dbg !64
+  %call = call i8* @objc_getProperty(i8* %0, i8* %cmd, i64 %ivar, i1 zeroext true), !dbg !64
+  %1 = bitcast i8* %call to %0*, !dbg !64
+  ret %0* %1, !dbg !64
+}
+
+declare i8* @objc_getProperty(i8*, i8*, i64, i1)
+
+define internal void @"\01-[AutomaticSynthesis setSomeString:]"(%2* %self, i8* %_cmd, %0* %someString) nounwind {
+entry:
+  %self.addr = alloca %2*, align 8
+  %_cmd.addr = alloca i8*, align 8
+  %someString.addr = alloca %0*, align 8
+  store %2* %self, %2** %self.addr, align 8
+  call void @llvm.dbg.declare(metadata !{%2** %self.addr}, metadata !66), !dbg !67
+  store i8* %_cmd, i8** %_cmd.addr, align 8
+  call void @llvm.dbg.declare(metadata !{i8** %_cmd.addr}, metadata !68), !dbg !67
+  store %0* %someString, %0** %someString.addr, align 8
+  call void @llvm.dbg.declare(metadata !{%0** %someString.addr}, metadata !69), !dbg !67
+  %0 = load i8** %_cmd.addr, !dbg !67
+  %self1 = load %2** %self.addr, !dbg !67
+  %1 = bitcast %2* %self1 to i8*, !dbg !67
+  %ivar = load i64* @"OBJC_IVAR_$_AutomaticSynthesis._someString", !dbg !67
+  %arg = load %0** %someString.addr, !dbg !67
+  %2 = bitcast %0* %arg to i8*, !dbg !67
+  call void @objc_setProperty(i8* %1, i8* %0, i64 %ivar, i8* %2, i1 zeroext true, i1 zeroext true), !dbg !67
+  ret void, !dbg !67
+}
+
+declare void @objc_setProperty(i8*, i8*, i64, i8*, i1, i1)
+
+define internal i64 @"\01-[AutomaticSynthesis someNumber]"(%2* %self, i8* %_cmd) nounwind {
+entry:
+  %self.addr = alloca %2*, align 8
+  %_cmd.addr = alloca i8*, align 8
+  store %2* %self, %2** %self.addr, align 8
+  call void @llvm.dbg.declare(metadata !{%2** %self.addr}, metadata !70), !dbg !71
+  store i8* %_cmd, i8** %_cmd.addr, align 8
+  call void @llvm.dbg.declare(metadata !{i8** %_cmd.addr}, metadata !72), !dbg !71
+  %self1 = load %2** %self.addr, !dbg !71
+  %ivar = load i64* @"OBJC_IVAR_$_AutomaticSynthesis._someNumber", !dbg !71, !invariant.load !58
+  %0 = bitcast %2* %self1 to i8*, !dbg !71
+  %add.ptr = getelementptr inbounds i8* %0, i64 %ivar, !dbg !71
+  %1 = bitcast i8* %add.ptr to i64*, !dbg !71
+  %load = load atomic i64* %1 unordered, align 8, !dbg !71
+  ret i64 %load, !dbg !71
+}
+
+define internal void @"\01-[AutomaticSynthesis setSomeNumber:]"(%2* %self, i8* %_cmd, i64 %someNumber) nounwind {
+entry:
+  %self.addr = alloca %2*, align 8
+  %_cmd.addr = alloca i8*, align 8
+  %someNumber.addr = alloca i64, align 8
+  store %2* %self, %2** %self.addr, align 8
+  call void @llvm.dbg.declare(metadata !{%2** %self.addr}, metadata !73), !dbg !74
+  store i8* %_cmd, i8** %_cmd.addr, align 8
+  call void @llvm.dbg.declare(metadata !{i8** %_cmd.addr}, metadata !75), !dbg !74
+  store i64 %someNumber, i64* %someNumber.addr, align 8
+  call void @llvm.dbg.declare(metadata !{i64* %someNumber.addr}, metadata !76), !dbg !74
+  %self1 = load %2** %self.addr, !dbg !74
+  %ivar = load i64* @"OBJC_IVAR_$_AutomaticSynthesis._someNumber", !dbg !74, !invariant.load !58
+  %0 = bitcast %2* %self1 to i8*, !dbg !74
+  %add.ptr = getelementptr inbounds i8* %0, i64 %ivar, !dbg !74
+  %1 = bitcast i8* %add.ptr to i64*, !dbg !74
+  %2 = load i64* %someNumber.addr, !dbg !74
+  store atomic i64 %2, i64* %1 unordered, align 8, !dbg !74
+  ret void, !dbg !74
+}
+
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!49, !50, !51, !52}
+
+!0 = metadata !{i32 786449, i32 0, i32 16, metadata !"/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/<unknown>", metadata !"/home/jazouani/llvm/build/tools/clang/test/CodeGenObjC", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 2, metadata !1, metadata !3, metadata !23, metadata !1} ; [ DW_TAG_compile_unit ] [/home/jazouani/llvm/build/tools/clang/test/CodeGenObjC//home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/<unknown>] [DW_LANG_ObjC]
+!1 = metadata !{metadata !2}
+!2 = metadata !{i32 0}
+!3 = metadata !{metadata !4}
+!4 = metadata !{metadata !5, metadata !15}
+!5 = metadata !{i32 786451, metadata !6, metadata !"InstanceVariablesEverywhereButTheInterface", metadata !6, i32 7, i64 128, i64 64, i32 0, i32 512, null, metadata !7, i32 16, i32 0, i32 0} ; [ DW_TAG_structure_type ] [InstanceVariablesEverywhereButTheInterface] [line 7, size 128, align 64, offset 0] [from ]
+!6 = metadata !{i32 786473, metadata !"/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/debug-info-default-synth-ivar.m", metadata !"/home/jazouani/llvm/build/tools/clang/test/CodeGenObjC", null} ; [ DW_TAG_file_type ]
+!7 = metadata !{metadata !8, metadata !11, metadata !13, metadata !14}
+!8 = metadata !{i32 803328, metadata !"someString", metadata !6, i32 15, metadata !"", metadata !"setSomeString:", i32 257, metadata !9} ; [ DW_TAG_APPLE_property ] [someString] [line 15, properties 257]
+!9 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !10} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from NSString]
+!10 = metadata !{i32 786451, null, metadata !"NSString", metadata !6, i32 5, i64 0, i64 0, i32 0, i32 4, null, null, i32 16} ; [ DW_TAG_structure_type ] [NSString] [line 5, size 0, align 0, offset 0] [fwd] [from ]
+!11 = metadata !{i32 803328, metadata !"someNumber", metadata !6, i32 16, metadata !"", metadata !"setSomeNumber:", i32 257, metadata !12} ; [ DW_TAG_APPLE_property ] [someNumber] [line 16, properties 257]
+!12 = metadata !{i32 786468, null, metadata !"long unsigned int", null, i32 0, i64 64, i64 64, i64 0, i32 0, i32 7} ; [ DW_TAG_base_type ] [long unsigned int] [line 0, size 64, align 64, offset 0, enc DW_ATE_unsigned]
+!13 = metadata !{i32 786445, metadata !6, metadata !"_someString", metadata !6, i32 12, i64 64, i64 64, i64 0, i32 1, metadata !9, metadata !8} ; [ DW_TAG_member ] [_someString] [line 12, size 64, align 64, offset 0] [private] [from ]
+!14 = metadata !{i32 786445, metadata !6, metadata !"_someNumber", metadata !6, i32 21, i64 64, i64 64, i64 0, i32 1, metadata !12, metadata !11} ; [ DW_TAG_member ] [_someNumber] [line 21, size 64, align 64, offset 0] [private] [from long unsigned int]
+!15 = metadata !{i32 786451, metadata !6, metadata !"AutomaticSynthesis", metadata !6, i32 26, i64 192, i64 64, i32 0, i32 512, null, metadata !16, i32 16, i32 0, i32 0} ; [ DW_TAG_structure_type ] [AutomaticSynthesis] [line 26, size 192, align 64, offset 0] [from ]
+!16 = metadata !{metadata !17, metadata !18, metadata !19, metadata !21, metadata !22}
+!17 = metadata !{i32 803328, metadata !"someString", metadata !6, i32 30, metadata !"", metadata !"", i32 296, metadata !9} ; [ DW_TAG_APPLE_property ] [someString] [line 30, properties 296]
+!18 = metadata !{i32 803328, metadata !"someNumber", metadata !6, i32 31, metadata !"", metadata !"", i32 2316, metadata !12} ; [ DW_TAG_APPLE_property ] [someNumber] [line 31, properties 2316]
+!19 = metadata !{i32 786445, metadata !6, metadata !"real_ivar", metadata !6, i32 28, i64 32, i64 32, i64 0, i32 2, metadata !20, null} ; [ DW_TAG_member ] [real_ivar] [line 28, size 32, align 32, offset 0] [protected] [from int]
+!20 = metadata !{i32 786468, null, metadata !"int", null, i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
+!21 = metadata !{i32 786445, metadata !6, metadata !"_someString", metadata !6, i32 30, i64 64, i64 64, i64 0, i32 1, metadata !9, metadata !17} ; [ DW_TAG_member ] [_someString] [line 30, size 64, align 64, offset 0] [private] [from ]
+!22 = metadata !{i32 786445, metadata !6, metadata !"_someNumber", metadata !6, i32 31, i64 64, i64 64, i64 0, i32 1, metadata !12, metadata !18} ; [ DW_TAG_member ] [_someNumber] [line 31, size 64, align 64, offset 0] [private] [from long unsigned int]
+!23 = metadata !{metadata !24}
+!24 = metadata !{metadata !25, metadata !33, metadata !36, metadata !40, metadata !43, metadata !46}
+!25 = metadata !{i32 786478, i32 0, metadata !6, metadata !"-[InstanceVariablesEverywhereButTheInterface someString]", metadata !"-[InstanceVariablesEverywhereButTheInterface someString]", metadata !"", metadata !6, i32 15, metadata !26, i1 true, i1 true, i32 0, i32 0, null, i32 320, i1 false, %0* (%1*, i8*)* @"\01-[InstanceVariablesEverywhereButTheInterface someString]", null, null, metadata !1, i32 15} ; [ DW_TAG_subprogram ] [line 15] [local] [def] [-[InstanceVariablesEverywhereButTheInterface someString]]
+!26 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !27, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!27 = metadata !{metadata !9, metadata !28, metadata !29}
+!28 = metadata !{i32 786447, i32 0, metadata !"", i32 0, i32 0, i64 64, i64 64, i64 0, i32 1088, metadata !5} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from InstanceVariablesEverywhereButTheInterface]
+!29 = metadata !{i32 786454, i32 0, metadata !"SEL", metadata !6, i32 15, i64 0, i64 0, i64 0, i32 64, metadata !30} ; [ DW_TAG_typedef ] [SEL] [line 15, size 0, align 0, offset 0] [from ]
+!30 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !31} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from objc_selector]
+!31 = metadata !{i32 786451, null, metadata !"objc_selector", metadata !32, i32 0, i64 0, i64 0, i32 0, i32 4, null, null, i32 0} ; [ DW_TAG_structure_type ] [objc_selector] [line 0, size 0, align 0, offset 0] [fwd] [from ]
+!32 = metadata !{i32 786473, metadata !"/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/<unknown>", metadata !"/home/jazouani/llvm/build/tools/clang/test/CodeGenObjC", null} ; [ DW_TAG_file_type ]
+!33 = metadata !{i32 786478, i32 0, metadata !6, metadata !"-[InstanceVariablesEverywhereButTheInterface someNumber]", metadata !"-[InstanceVariablesEverywhereButTheInterface someNumber]", metadata !"", metadata !6, i32 16, metadata !34, i1 true, i1 true, i32 0, i32 0, null, i32 320, i1 false, i64 (%1*, i8*)* @"\01-[InstanceVariablesEverywhereButTheInterface someNumber]", null, null, metadata !1, i32 16} ; [ DW_TAG_subprogram ] [line 16] [local] [def] [-[InstanceVariablesEverywhereButTheInterface someNumber]]
+!34 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !35, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!35 = metadata !{metadata !12, metadata !28, metadata !29}
+!36 = metadata !{i32 786478, i32 0, metadata !6, metadata !"-[AutomaticSynthesis someString]", metadata !"-[AutomaticSynthesis someString]", metadata !"", metadata !6, i32 30, metadata !37, i1 true, i1 true, i32 0, i32 0, null, i32 320, i1 false, %0* (%2*, i8*)* @"\01-[AutomaticSynthesis someString]", null, null, metadata !1, i32 30} ; [ DW_TAG_subprogram ] [line 30] [local] [def] [-[AutomaticSynthesis someString]]
+!37 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !38, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!38 = metadata !{metadata !9, metadata !39, metadata !29}
+!39 = metadata !{i32 786447, i32 0, metadata !"", i32 0, i32 0, i64 64, i64 64, i64 0, i32 1088, metadata !15} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from AutomaticSynthesis]
+!40 = metadata !{i32 786478, i32 0, metadata !6, metadata !"-[AutomaticSynthesis setSomeString:]", metadata !"-[AutomaticSynthesis setSomeString:]", metadata !"", metadata !6, i32 30, metadata !41, i1 true, i1 true, i32 0, i32 0, null, i32 320, i1 false, void (%2*, i8*, %0*)* @"\01-[AutomaticSynthesis setSomeString:]", null, null, metadata !1, i32 30} ; [ DW_TAG_subprogram ] [line 30] [local] [def] [-[AutomaticSynthesis setSomeString:]]
+!41 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !42, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!42 = metadata !{null, metadata !39, metadata !29, metadata !9}
+!43 = metadata !{i32 786478, i32 0, metadata !6, metadata !"-[AutomaticSynthesis someNumber]", metadata !"-[AutomaticSynthesis someNumber]", metadata !"", metadata !6, i32 31, metadata !44, i1 true, i1 true, i32 0, i32 0, null, i32 320, i1 false, i64 (%2*, i8*)* @"\01-[AutomaticSynthesis someNumber]", null, null, metadata !1, i32 31} ; [ DW_TAG_subprogram ] [line 31] [local] [def] [-[AutomaticSynthesis someNumber]]
+!44 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !45, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!45 = metadata !{metadata !12, metadata !39, metadata !29}
+!46 = metadata !{i32 786478, i32 0, metadata !6, metadata !"-[AutomaticSynthesis setSomeNumber:]", metadata !"-[AutomaticSynthesis setSomeNumber:]", metadata !"", metadata !6, i32 31, metadata !47, i1 true, i1 true, i32 0, i32 0, null, i32 320, i1 false, void (%2*, i8*, i64)* @"\01-[AutomaticSynthesis setSomeNumber:]", null, null, metadata !1, i32 31} ; [ DW_TAG_subprogram ] [line 31] [local] [def] [-[AutomaticSynthesis setSomeNumber:]]
+!47 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !48, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!48 = metadata !{null, metadata !39, metadata !29, metadata !12}
+!49 = metadata !{i32 1, metadata !"Objective-C Version", i32 2}
+!50 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!51 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__DATA, __objc_imageinfo, regular, no_dead_strip"}
+!52 = metadata !{i32 4, metadata !"Objective-C Garbage Collection", i32 0}
+!53 = metadata !{i32 786689, metadata !25, metadata !"self", metadata !32, i32 16777231, metadata !54, i32 1088, i32 0} ; [ DW_TAG_arg_variable ] [self] [line 15]
+!54 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !5} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from InstanceVariablesEverywhereButTheInterface]
+!55 = metadata !{i32 15, i32 0, metadata !25, null}
+!56 = metadata !{i32 786689, metadata !25, metadata !"_cmd", metadata !32, i32 33554447, metadata !57, i32 64, i32 0} ; [ DW_TAG_arg_variable ] [_cmd] [line 15]
+!57 = metadata !{i32 786454, null, metadata !"SEL", metadata !6, i32 15, i64 0, i64 0, i64 0, i32 0, metadata !30} ; [ DW_TAG_typedef ] [SEL] [line 15, size 0, align 0, offset 0] [from ]
+!58 = metadata !{}
+!59 = metadata !{i32 786689, metadata !33, metadata !"self", metadata !32, i32 16777232, metadata !54, i32 1088, i32 0} ; [ DW_TAG_arg_variable ] [self] [line 16]
+!60 = metadata !{i32 16, i32 0, metadata !33, null}
+!61 = metadata !{i32 786689, metadata !33, metadata !"_cmd", metadata !32, i32 33554448, metadata !57, i32 64, i32 0} ; [ DW_TAG_arg_variable ] [_cmd] [line 16]
+!62 = metadata !{i32 786689, metadata !36, metadata !"self", metadata !32, i32 16777246, metadata !63, i32 1088, i32 0} ; [ DW_TAG_arg_variable ] [self] [line 30]
+!63 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !15} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from AutomaticSynthesis]
+!64 = metadata !{i32 30, i32 0, metadata !36, null}
+!65 = metadata !{i32 786689, metadata !36, metadata !"_cmd", metadata !32, i32 33554462, metadata !57, i32 64, i32 0} ; [ DW_TAG_arg_variable ] [_cmd] [line 30]
+!66 = metadata !{i32 786689, metadata !40, metadata !"self", metadata !32, i32 16777246, metadata !63, i32 1088, i32 0} ; [ DW_TAG_arg_variable ] [self] [line 30]
+!67 = metadata !{i32 30, i32 0, metadata !40, null}
+!68 = metadata !{i32 786689, metadata !40, metadata !"_cmd", metadata !32, i32 33554462, metadata !57, i32 64, i32 0} ; [ DW_TAG_arg_variable ] [_cmd] [line 30]
+!69 = metadata !{i32 786689, metadata !40, metadata !"someString", metadata !6, i32 50331678, metadata !9, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [someString] [line 30]
+!70 = metadata !{i32 786689, metadata !43, metadata !"self", metadata !32, i32 16777247, metadata !63, i32 1088, i32 0} ; [ DW_TAG_arg_variable ] [self] [line 31]
+!71 = metadata !{i32 31, i32 0, metadata !43, null}
+!72 = metadata !{i32 786689, metadata !43, metadata !"_cmd", metadata !32, i32 33554463, metadata !57, i32 64, i32 0} ; [ DW_TAG_arg_variable ] [_cmd] [line 31]
+!73 = metadata !{i32 786689, metadata !46, metadata !"self", metadata !32, i32 16777247, metadata !63, i32 1088, i32 0} ; [ DW_TAG_arg_variable ] [self] [line 31]
+!74 = metadata !{i32 31, i32 0, metadata !46, null}
+!75 = metadata !{i32 786689, metadata !46, metadata !"_cmd", metadata !32, i32 33554463, metadata !57, i32 64, i32 0} ; [ DW_TAG_arg_variable ] [_cmd] [line 31]
+!76 = metadata !{i32 786689, metadata !46, metadata !"someNumber", metadata !6, i32 50331679, metadata !12, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [someNumber] [line 31]

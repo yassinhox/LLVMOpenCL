@@ -1,0 +1,1 @@
+env LIBRARY_PATH=/home/jazouani/llvm/build/tools/clang/test/Driver/Output/test1  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -x c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/linker-opts.c -### 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/linker-opts.c

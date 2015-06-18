@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -triple i386-unknown-unknown -emit-llvm -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/PR3613-static-decl.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/PR3613-static-decl.c &&
+grep '@g0 = internal global %.truct.s0 { i32 3 }' /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/PR3613-static-decl.c.tmp | count 1

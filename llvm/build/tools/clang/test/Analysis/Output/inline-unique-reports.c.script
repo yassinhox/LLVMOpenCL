@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  --analyze /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/inline-unique-reports.c -o /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/inline-unique-reports.c.tmp > /dev/null 2>&1 &&
+FileCheck -input-file /home/jazouani/llvm/build/tools/clang/test/Analysis/Output/inline-unique-reports.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Analysis/inline-unique-reports.c

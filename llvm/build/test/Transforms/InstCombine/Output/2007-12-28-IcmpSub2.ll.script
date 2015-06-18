@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/2007-12-28-IcmpSub2.ll -mem2reg -instcombine -S | grep "ret i32 1" | /home/jazouani/llvm/build/Release+Asserts/bin/count 8

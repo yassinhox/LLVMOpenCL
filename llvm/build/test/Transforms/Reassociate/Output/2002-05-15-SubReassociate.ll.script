@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/Reassociate/2002-05-15-SubReassociate.ll -reassociate -constprop -instcombine -dce -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep add

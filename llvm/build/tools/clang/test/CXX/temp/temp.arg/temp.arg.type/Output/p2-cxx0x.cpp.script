@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -fsyntax-only -std=c++11 -verify /home/jazouani/llvm/llvm-3.2/tools/clang/test/CXX/temp/temp.arg/temp.arg.type/p2-cxx0x.cpp

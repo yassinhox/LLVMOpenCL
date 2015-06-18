@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/2008-01-27-UndefCorrelate.ll -sccp -S | grep undef | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

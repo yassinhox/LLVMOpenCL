@@ -1,0 +1,105 @@
+<stdin>:9:9: error: invalid instruction
+        add r1, r2, r3
+        ^
+<stdin>:15:9: error: instruction variant requires Thumb2
+        add r2, r3
+        ^
+<stdin>:16:9: error: instruction variant requires ARMv6 or later
+        mov r2, r3
+        ^
+<stdin>:26:22: error: invalid operand for instruction
+        asrs r2, r3, #33
+                     ^
+<stdin>:32:14: error: invalid operand for instruction
+        bkpt #256
+             ^
+<stdin>:33:14: error: invalid operand for instruction
+        bkpt #-1
+             ^
+<stdin>:34:24: error: unexpected token in argument list
+error: invalid operand for instruction
+                       ^
+<stdin>:35:14: error: invalid operand for instruction
+        bkpt #256
+             ^
+<stdin>:36:14: error: unexpected token at start of statement
+             ^
+             ^
+<stdin>:37:1: error: invalid symbol redefinition
+error: invalid operand for instruction
+^
+<stdin>:38:14: error: invalid operand for instruction
+        bkpt #-1
+             ^
+<stdin>:39:14: error: unexpected token at start of statement
+             ^
+             ^
+<stdin>:42:18: error: registers must be in range r0-r7
+        ldm r2!, {r5, r8}
+                 ^
+<stdin>:43:13: error: writeback operator '!' expected
+        ldm r2, {r5, r7}
+            ^
+<stdin>:44:15: error: writeback operator '!' not allowed when base register in register list
+        ldm r2!, {r2, r3, r4}
+              ^
+<stdin>:57:13: error: registers must be in range r0-r7 or pc
+        pop {r1, r2, r10}
+            ^
+<stdin>:58:14: error: registers must be in range r0-r7 or lr
+        push {r8, r9}
+             ^
+<stdin>:68:9: error: instruction requires: thumb2
+        stm r1, {r2, r6}
+        ^
+<stdin>:69:18: error: registers must be in range r0-r7
+        stm r1!, {r2, r9}
+                 ^
+<stdin>:78:22: error: invalid operand for instruction
+        lsls r4, r5, #-1
+                     ^
+<stdin>:79:22: error: invalid operand for instruction
+        lsls r4, r5, #32
+                     ^
+<stdin>:88:14: error: destination register must match source register
+        muls r1, r2, r3
+             ^
+<stdin>:95:9: error: instruction requires: thumb2
+        str r2, [r7, #-1]
+        ^
+<stdin>:96:9: error: instruction requires: thumb2
+        str r5, [r1, #3]
+        ^
+<stdin>:97:9: error: instruction requires: thumb2
+        str r3, [r7, #128]
+        ^
+<stdin>:109:13: error: invalid operand for instruction
+        svc #-1
+            ^
+<stdin>:110:9: error: instruction requires: arm-mode
+        svc #256
+        ^
+<stdin>:120:9: error: instruction requires: thumb2
+        add sp, #-1
+        ^
+<stdin>:121:9: error: instruction requires: thumb2
+        add sp, #3
+        ^
+<stdin>:122:9: error: instruction requires: thumb2
+        add sp, sp, #512
+        ^
+<stdin>:123:9: error: instruction requires: arm-mode
+        add r2, sp, #1024
+        ^
+<stdin>:137:21: error: source register must be the same as destination
+        add r2, sp, ip
+                    ^
+<stdin>:145:9: error: instruction requires: thumb2
+        wfe
+        ^
+<stdin>:146:9: error: instruction requires: thumb2
+        wfi
+        ^
+<stdin>:147:9: error: instruction requires: thumb2
+        yield
+        ^

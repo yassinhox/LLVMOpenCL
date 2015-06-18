@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=x86_64-unknown-linux-gnu < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/2010-07-15-Crash.ll -o /dev/null

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips64el -filetype=obj -mcpu=mips64r2 -disable-mips-delay-filler < /home/jazouani/llvm/llvm-3.2/test/MC/Mips/multi-64bit-func.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips64el -filetype=obj -mcpu=mips64r2 < /home/jazouani/llvm/llvm-3.2/test/MC/Mips/multi-64bit-func.ll

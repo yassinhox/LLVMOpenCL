@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/var_stride_used_by_compare.ll -loop-reduce -S |    not grep "mul.*%i, 3" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopStrengthReduce/var_stride_used_by_compare.ll -loop-reduce -S |    not grep "phi i32 .* 0"

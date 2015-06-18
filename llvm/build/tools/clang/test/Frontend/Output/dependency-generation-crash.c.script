@@ -1,0 +1,2 @@
+touch /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/dependency-generation-crash.c.tmp &&
+chmod 0 /home/jazouani/llvm/build/tools/clang/test/Frontend/Output/dependency-generation-crash.c.tmp

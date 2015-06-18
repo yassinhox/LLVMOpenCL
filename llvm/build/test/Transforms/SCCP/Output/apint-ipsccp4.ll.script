@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-ipsccp4.ll -ipsccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep load &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-ipsccp4.ll -ipsccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep add &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-ipsccp4.ll -ipsccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep phi

@@ -1,0 +1,3 @@
+// CHECK: cindex-from-source.m:8:8: StructDecl=s0:8:8 (Definition) Extent=[8:1 - 8:13]
+// CHECK: cindex-from-source.m:9:4: VarDecl=g0:9:4 Extent=[9:1 - 9:6]
+// CHECK: cindex-from-source.m:9:1: TypeRef=t0:1:13 Extent=[9:1 - 9:3]

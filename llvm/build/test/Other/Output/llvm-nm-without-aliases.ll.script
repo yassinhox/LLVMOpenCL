@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Other/llvm-nm-without-aliases.ll > /home/jazouani/llvm/build/test/Other/Output/llvm-nm-without-aliases.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-nm -without-aliases < /home/jazouani/llvm/build/test/Other/Output/llvm-nm-without-aliases.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Other/llvm-nm-without-aliases.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-nm < /home/jazouani/llvm/build/test/Other/Output/llvm-nm-without-aliases.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=WITH /home/jazouani/llvm/llvm-3.2/test/Other/llvm-nm-without-aliases.ll

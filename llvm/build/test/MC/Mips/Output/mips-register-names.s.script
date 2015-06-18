@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc /home/jazouani/llvm/llvm-3.2/test/MC/Mips/mips-register-names.s -triple=mips-unknown-freebsd -show-encoding | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/Mips/mips-register-names.s

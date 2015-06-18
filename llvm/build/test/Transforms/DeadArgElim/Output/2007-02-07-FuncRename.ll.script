@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/2007-02-07-FuncRename.ll -deadargelim -S | grep "@test(" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadArgElim/2007-02-07-FuncRename.ll -deadargelim -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep dead

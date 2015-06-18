@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Feature/md_on_instruction.ll | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep " !dbg " | /home/jazouani/llvm/build/Release+Asserts/bin/count 4

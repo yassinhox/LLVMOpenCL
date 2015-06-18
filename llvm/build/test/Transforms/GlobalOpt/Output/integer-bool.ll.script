@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/integer-bool.ll -globalopt -instcombine |     /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "ret i1 true"

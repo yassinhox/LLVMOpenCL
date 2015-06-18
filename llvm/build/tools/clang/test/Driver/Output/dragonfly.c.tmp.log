@@ -1,0 +1,5 @@
+clang version 3.2 (tags/RELEASE_32/final)
+Target: amd64-pc-dragonfly
+Thread model: posix
+ "/home/jazouani/llvm/build/Release+Asserts/bin/clang" "-cc1" "-triple" "amd64-pc-dragonfly" "-emit-obj" "-mrelax-all" "-disable-free" "-main-file-name" "dragonfly.c" "-mrelocation-model" "static" "-mdisable-fp-elim" "-masm-verbose" "-mconstructor-aliases" "-munwind-tables" "-target-cpu" "x86-64" "-target-linker-version" "2.23.2" "-momit-leaf-frame-pointer" "-resource-dir" "/home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2" "-fmodule-cache-path" "/var/tmp/clang-module-cache" "-fdebug-compilation-dir" "/home/jazouani/llvm/build/tools/clang/test/Driver" "-ferror-limit" "19" "-fmessage-length" "0" "-mstackrealign" "-fobjc-runtime=gcc" "-fdiagnostics-show-option" "-o" "/tmp/dragonfly-29WJrw.o" "-x" "c" "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/dragonfly.c"
+ "/usr/bin/ld" "-dynamic-linker" "/usr/libexec/ld-elf.so.2" "-o" "a.out" "crt1.o" "crti.o" "crtbegin.o" "/tmp/dragonfly-29WJrw.o" "-L/usr/lib/gcc41" "-rpath" "/usr/lib/gcc41" "-rpath-link" "/usr/lib/gcc41" "-rpath" "/usr/lib" "-rpath-link" "/usr/lib" "-lgcc" "-lc" "-lgcc" "crtend.o" "crtn.o"

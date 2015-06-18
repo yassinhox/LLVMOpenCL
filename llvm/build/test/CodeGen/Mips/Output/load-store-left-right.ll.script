@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mipsel < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/load-store-left-right.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck  -check-prefix=EL /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/load-store-left-right.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -march=mips < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/load-store-left-right.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck  -check-prefix=EB /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/load-store-left-right.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/ARM/2010-04-13-v2f64SplitArg.ll -mtriple=arm-apple-darwin -mcpu=cortex-a8

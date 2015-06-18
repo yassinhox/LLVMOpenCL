@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fpack-struct -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/fpack-struct.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/fpack-struct.c.tmp &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/fpack-struct.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/fpack-struct.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -fpack-struct=8 -### /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/fpack-struct.c 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/fpack-struct.c.tmp &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/fpack-struct.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/fpack-struct.c --check-prefix=EQ

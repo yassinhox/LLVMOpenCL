@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -asm-verbose=false -disable-branch-fold -disable-code-place -disable-tail-duplicate -march=x86-64 -mcpu=nehalem < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/multiple-loop-post-inc.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/multiple-loop-post-inc.ll

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/buildpairextractelementf64.ll -march=mipsel | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/buildpairextractelementf64.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/buildpairextractelementf64.ll -march=mips   | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/buildpairextractelementf64.ll

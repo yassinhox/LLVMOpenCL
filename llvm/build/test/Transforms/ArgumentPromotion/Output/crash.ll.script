@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -inline -argpromotion /home/jazouani/llvm/llvm-3.2/test/Transforms/ArgumentPromotion/crash.ll

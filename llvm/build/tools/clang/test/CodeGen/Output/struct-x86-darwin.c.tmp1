@@ -1,0 +1,23 @@
+; ModuleID = '-'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f32:32:32-f64:32:64-v64:64:64-v128:128:128-a0:0:64-f80:128:128-n8:16:32-S128"
+target triple = "i686-apple-darwin9"
+
+%struct.STest1 = type { i32, [4 x i16], double }
+%struct.STest2 = type { i16, i16, i32, i32 }
+%struct.STest3 = type { i8, i16, i32 }
+%struct.STestB1 = type { i8, i8 }
+%struct.STestB2 = type { i8, i8, i8 }
+%struct.STestB3 = type { i8, i8 }
+%struct.STestB4 = type { i8, i8, i8, i8 }
+%struct.STestB5 = type { i8, i8, [2 x i8], i8, i8 }
+%struct.STestB6 = type { i8, i8, [2 x i8] }
+
+@st1 = common global %struct.STest1 zeroinitializer, align 4
+@st2 = common global %struct.STest2 zeroinitializer, align 4
+@st3 = common global %struct.STest3 zeroinitializer, align 4
+@stb1 = common global %struct.STestB1 zeroinitializer, align 1
+@stb2 = common global %struct.STestB2 zeroinitializer, align 1
+@stb3 = common global %struct.STestB3 zeroinitializer, align 1
+@stb4 = common global %struct.STestB4 zeroinitializer, align 2
+@stb5 = common global %struct.STestB5 zeroinitializer, align 2
+@stb6 = common global %struct.STestB6 zeroinitializer, align 4

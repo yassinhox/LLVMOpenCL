@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/bswap.ll -march=mipsel -mcpu=mips32r2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/bswap.ll -check-prefix=MIPS32 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc  < /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/bswap.ll -march=mips64el -mcpu=mips64r2 | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/Mips/bswap.ll -check-prefix=MIPS64

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/phi-merge-gep.ll -S -instcombine > /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/phi-merge-gep.ll.tmp &&
+grep "= getelementptr" /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/phi-merge-gep.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 20 &&
+grep "= phi" /home/jazouani/llvm/build/test/Transforms/InstCombine/Output/phi-merge-gep.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/count 13

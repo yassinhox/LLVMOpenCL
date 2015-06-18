@@ -1,0 +1,15 @@
+	.file	"<stdin>"
+	.text
+	.globl	off01
+	.align	16, 0x90
+	.type	off01,@function
+off01:                                  # @off01
+# BB#0:                                 # %entry
+	leaq	dst+64(,%rdi,4), %rax
+	movq	%rax, ptr(%rip)
+	ret
+.Ltmp0:
+	.size	off01, .Ltmp0-off01
+
+
+	.section	".note.GNU-stack","",@progbits

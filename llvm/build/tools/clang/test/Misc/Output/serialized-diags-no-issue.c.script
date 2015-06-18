@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -Wall -fsyntax-only /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags-no-issue.c --serialize-diagnostics /home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags-no-issue.c.tmp &&
+c-index-test -read-diagnostics /home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags-no-issue.c.tmp 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Misc/serialized-diags-no-issue.c &&
+rm -f  /home/jazouani/llvm/build/tools/clang/test/Misc/Output/serialized-diags-no-issue.c.tmp

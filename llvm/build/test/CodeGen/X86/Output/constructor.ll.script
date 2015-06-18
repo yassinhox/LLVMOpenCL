@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple x86_64-pc-linux < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/constructor.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=CTOR /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/constructor.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple x86_64-pc-linux -use-init-array < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/constructor.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=INIT-ARRAY /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/constructor.ll

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -globalopt -disable-output /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/crash.ll

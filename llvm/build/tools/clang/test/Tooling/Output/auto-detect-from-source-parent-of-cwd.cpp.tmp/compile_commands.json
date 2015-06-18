@@ -1,0 +1,1 @@
+[{"directory":".","command":"clang++ -c /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/auto-detect-from-source-parent-of-cwd.cpp.tmp/abc/def/ijk/qwe/test.cpp","file":"/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/auto-detect-from-source-parent-of-cwd.cpp.tmp/abc/def/ijk/qwe/test.cpp"}]

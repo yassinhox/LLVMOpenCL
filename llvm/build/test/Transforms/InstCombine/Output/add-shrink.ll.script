@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/add-shrink.ll -instcombine -S | grep "add nsw i32" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/add-shrink.ll -instcombine -S | grep sext | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

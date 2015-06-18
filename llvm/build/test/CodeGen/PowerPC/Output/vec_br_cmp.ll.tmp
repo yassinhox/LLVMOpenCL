@@ -1,0 +1,22 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	2
+	.type	test,@function
+test:                                   # @test
+	.cfi_startproc
+# BB#0:
+	lvx 2, 0, 4
+	lvx 3, 0, 3
+	vcmpeqfp. 2, 3, 2
+	bne 6, .LBB0_2
+# BB#1:                                 # %cond_true
+	vxor 2, 2, 2
+	stvx 2, 0, 4
+.LBB0_2:                                # %UnifiedReturnBlock
+	blr 
+.Ltmp0:
+	.size	test, .Ltmp0-test
+	.cfi_endproc
+
+

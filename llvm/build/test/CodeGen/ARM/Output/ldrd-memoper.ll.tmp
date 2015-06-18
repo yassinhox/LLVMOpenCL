@@ -1,0 +1,2 @@
+Formed %vreg5<def>, %vreg6<def> = t2LDRDi8 %vreg4, 0, pred:14, pred:%noreg; mem:LD4[%0] LD4[%0+4] rGPR:%vreg5,%vreg6 GPR:%vreg4
+

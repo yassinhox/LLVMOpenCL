@@ -1,0 +1,4 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -Werror -E -M -MF /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/pr13851.c.tmp-M.d /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/pr13851.c &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/pr13851.c.tmp-M.d /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/pr13851.c &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -Werror -E -MM -MF /home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/pr13851.c.tmp-MM.d /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/pr13851.c &&
+FileCheck --input-file=/home/jazouani/llvm/build/tools/clang/test/Preprocessor/Output/pr13851.c.tmp-MM.d /home/jazouani/llvm/llvm-3.2/tools/clang/test/Preprocessor/pr13851.c

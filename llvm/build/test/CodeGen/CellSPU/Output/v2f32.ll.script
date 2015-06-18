@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc --march=cellspu /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/v2f32.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/CellSPU/v2f32.ll

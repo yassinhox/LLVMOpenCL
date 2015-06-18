@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/div-2.ll -march=ppc32 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep srawi &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/div-2.ll -march=ppc32 | grep blr

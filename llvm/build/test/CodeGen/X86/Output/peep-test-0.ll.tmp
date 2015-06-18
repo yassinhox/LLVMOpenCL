@@ -1,0 +1,32 @@
+	.file	"<stdin>"
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI0_0:
+	.quad	4613937818241073152     # double 3.000000e+00
+                                        #  (0x4008000000000000)
+	.text
+	.globl	loop
+	.align	16, 0x90
+	.type	loop,@function
+loop:                                   # @loop
+# BB#0:                                 # %entry
+	movq	%rdi, %rax
+	shlq	$4, %rax
+	addq	%rsi, %rax
+	movsd	.LCPI0_0(%rip), %xmm0
+	.align	16, 0x90
+.LBB0_1:                                # %bb
+                                        # =>This Inner Loop Header: Depth=1
+	movsd	(%rax), %xmm1
+	mulsd	%xmm0, %xmm1
+	movsd	%xmm1, (%rax)
+	addq	$8, %rax
+	incq	%rdi
+	jne	.LBB0_1
+# BB#2:                                 # %return
+	ret
+.Ltmp0:
+	.size	loop, .Ltmp0-loop
+
+
+	.section	".note.GNU-stack","",@progbits

@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as < /home/jazouani/llvm/llvm-3.2/test/Linker/2002-07-17-GlobalFail.ll > /home/jazouani/llvm/build/test/Linker/Output/2002-07-17-GlobalFail.ll.tmp.bc &&
+echo | /home/jazouani/llvm/build/Release+Asserts/bin/llvm-as > /home/jazouani/llvm/build/test/Linker/Output/2002-07-17-GlobalFail.ll.tmp.tmp.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/build/test/Linker/Output/2002-07-17-GlobalFail.ll.tmp.tmp.bc /home/jazouani/llvm/build/test/Linker/Output/2002-07-17-GlobalFail.ll.tmp.bc

@@ -1,0 +1,5 @@
+rm -rf /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp &&
+mkdir /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp &&
+echo "[{\"directory\":\".\",\"command\":\"clang++ -c /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp/test.cpp\",\"file\":\"/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp/test.cpp\"}]" | sed -e 's/\\/\\\\/g' > /home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp/compile_commands.json &&
+cp "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/clang-check-pwd.cpp" "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp/test.cpp" &&
+PWD="/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp" clang-check -p "/home/jazouani/llvm/build/tools/clang/test/Tooling/Output/clang-check-pwd.cpp.tmp" "test.cpp" 2>&1|FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/clang-check-pwd.cpp

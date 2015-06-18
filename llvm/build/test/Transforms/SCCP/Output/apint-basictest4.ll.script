@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-basictest4.ll -sccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep and &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-basictest4.ll -sccp -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep trunc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SCCP/apint-basictest4.ll -sccp -S | grep "ret i100 -1"

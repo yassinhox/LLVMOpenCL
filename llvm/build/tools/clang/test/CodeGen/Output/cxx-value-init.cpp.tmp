@@ -1,0 +1,23 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/cxx-value-init.cpp'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@v1 = global i32 0, align 4
+@v2 = global float 0.000000e+00, align 4
+
+define void @_Z1fv() nounwind {
+entry:
+  %v3 = alloca i32, align 4
+  %v4 = alloca { i32, i32 }, align 4
+  %v5 = alloca { float, float }, align 4
+  store i32 0, i32* %v3, align 4
+  %real = getelementptr inbounds { i32, i32 }* %v4, i32 0, i32 0
+  %imag = getelementptr inbounds { i32, i32 }* %v4, i32 0, i32 1
+  store i32 0, i32* %real
+  store i32 0, i32* %imag
+  %real1 = getelementptr inbounds { float, float }* %v5, i32 0, i32 0
+  %imag2 = getelementptr inbounds { float, float }* %v5, i32 0, i32 1
+  store float 0.000000e+00, float* %real1
+  store float 0.000000e+00, float* %imag2
+  ret void
+}

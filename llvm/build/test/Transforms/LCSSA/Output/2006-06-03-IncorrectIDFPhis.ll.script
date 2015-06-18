@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LCSSA/2006-06-03-IncorrectIDFPhis.ll -loop-simplify -lcssa -S |    grep "%SJE.0.0.lcssa = phi .struct.SetJmpMapEntry"

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -inline /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/noinline-recursive-fn.ll -S | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/Inline/noinline-recursive-fn.ll

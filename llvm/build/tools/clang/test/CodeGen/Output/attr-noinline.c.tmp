@@ -1,0 +1,22 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/attr-noinline.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+define void @t1() nounwind noinline {
+entry:
+  ret void, !dbg !9
+}
+
+!llvm.dbg.cu = !{!0}
+
+!0 = metadata !{i32 786449, i32 0, i32 12, metadata !"/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/<unknown>", metadata !"/home/jazouani/llvm/build/tools/clang/test/CodeGen", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ] [/home/jazouani/llvm/build/tools/clang/test/CodeGen//home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/<unknown>] [DW_LANG_C99]
+!1 = metadata !{metadata !2}
+!2 = metadata !{i32 0}
+!3 = metadata !{metadata !4}
+!4 = metadata !{metadata !5}
+!5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"t1", metadata !"t1", metadata !"", metadata !6, i32 6, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 0, i1 false, void ()* @t1, null, null, metadata !1, i32 7} ; [ DW_TAG_subprogram ] [line 6] [def] [scope 7] [t1]
+!6 = metadata !{i32 786473, metadata !"/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/attr-noinline.c", metadata !"/home/jazouani/llvm/build/tools/clang/test/CodeGen", null} ; [ DW_TAG_file_type ]
+!7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
+!8 = metadata !{null}
+!9 = metadata !{i32 8, i32 0, metadata !10, null}
+!10 = metadata !{i32 786443, metadata !5, i32 7, i32 0, metadata !6, i32 0} ; [ DW_TAG_lexical_block ] [/home/jazouani/llvm/build/tools/clang/test/CodeGen//home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/attr-noinline.c]

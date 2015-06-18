@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -print-libgcc-file-name 2>&1      -target i686-montavista-linux      -gcc-toolchain /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/Inputs/montavista_i686_tree/usr    | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/montavista-gcc-toolchain.c

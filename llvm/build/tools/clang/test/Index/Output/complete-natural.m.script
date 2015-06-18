@@ -1,0 +1,42 @@
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:4:32 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:5:18 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:6:7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:7:7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:8:10 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:9:9 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:10:19 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+env CINDEXTEST_EDITING=1 CINDEXTEST_COMPLETION_CACHING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:4:32 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+env CINDEXTEST_EDITING=1 CINDEXTEST_COMPLETION_CACHING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:5:18 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+env CINDEXTEST_EDITING=1 CINDEXTEST_COMPLETION_CACHING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:6:7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+env CINDEXTEST_EDITING=1 CINDEXTEST_COMPLETION_CACHING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:7:7 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+env CINDEXTEST_EDITING=1 CINDEXTEST_COMPLETION_CACHING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:8:10 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+env CINDEXTEST_EDITING=1 CINDEXTEST_COMPLETION_CACHING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:9:9 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+env CINDEXTEST_EDITING=1 CINDEXTEST_COMPLETION_CACHING=1 c-index-test -code-completion-at=/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m:10:19 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m > /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+echo "DONE" >> /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp &&
+FileCheck -check-prefix=CHECK-CC1 /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/complete-natural.m < /home/jazouani/llvm/build/tools/clang/test/Index/Output/complete-natural.m.tmp

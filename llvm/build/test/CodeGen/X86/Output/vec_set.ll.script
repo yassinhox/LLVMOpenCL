@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/vec_set.ll -march=x86 -mattr=+sse2,-sse41 | grep punpckl | /home/jazouani/llvm/build/Release+Asserts/bin/count 7

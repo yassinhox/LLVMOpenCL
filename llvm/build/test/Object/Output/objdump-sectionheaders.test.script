@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-objdump -h /home/jazouani/llvm/llvm-3.2/test/Object/Inputs/trivial-object-test.elf-x86-64               | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Object/objdump-sectionheaders.test

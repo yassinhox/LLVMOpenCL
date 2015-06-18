@@ -1,0 +1,199 @@
+// CHECK: <invalid loc>:2:9: macro definition=__llvm__
+// CHECK: <invalid loc>:3:9: macro definition=__clang__
+// CHECK: <invalid loc>:4:9: macro definition=__clang_major__
+// CHECK: <invalid loc>:5:9: macro definition=__clang_minor__
+// CHECK: <invalid loc>:6:9: macro definition=__clang_patchlevel__
+// CHECK: <invalid loc>:7:9: macro definition=__clang_version__
+// CHECK: <invalid loc>:8:9: macro definition=__GNUC_MINOR__
+// CHECK: <invalid loc>:9:9: macro definition=__GNUC_PATCHLEVEL__
+// CHECK: <invalid loc>:10:9: macro definition=__GNUC__
+// CHECK: <invalid loc>:11:9: macro definition=__GXX_ABI_VERSION
+// CHECK: <invalid loc>:12:9: macro definition=__ATOMIC_RELAXED
+// CHECK: <invalid loc>:13:9: macro definition=__ATOMIC_CONSUME
+// CHECK: <invalid loc>:14:9: macro definition=__ATOMIC_ACQUIRE
+// CHECK: <invalid loc>:15:9: macro definition=__ATOMIC_RELEASE
+// CHECK: <invalid loc>:16:9: macro definition=__ATOMIC_ACQ_REL
+// CHECK: <invalid loc>:17:9: macro definition=__ATOMIC_SEQ_CST
+// CHECK: <invalid loc>:18:9: macro definition=__PRAGMA_REDEFINE_EXTNAME
+// CHECK: <invalid loc>:19:9: macro definition=__VERSION__
+// CHECK: <invalid loc>:20:9: macro definition=__CONSTANT_CFSTRINGS__
+// CHECK: <invalid loc>:21:9: macro definition=__EXCEPTIONS
+// CHECK: <invalid loc>:22:9: macro definition=__GXX_RTTI
+// CHECK: <invalid loc>:23:9: macro definition=__DEPRECATED
+// CHECK: <invalid loc>:24:9: macro definition=__GNUG__
+// CHECK: <invalid loc>:25:9: macro definition=__GXX_WEAK__
+// CHECK: <invalid loc>:26:9: macro definition=__private_extern__
+// CHECK: <invalid loc>:27:9: macro definition=__ORDER_LITTLE_ENDIAN__
+// CHECK: <invalid loc>:28:9: macro definition=__ORDER_BIG_ENDIAN__
+// CHECK: <invalid loc>:29:9: macro definition=__ORDER_PDP_ENDIAN__
+// CHECK: <invalid loc>:30:9: macro definition=__BYTE_ORDER__
+// CHECK: <invalid loc>:31:9: macro definition=_LP64
+// CHECK: <invalid loc>:32:9: macro definition=__LP64__
+// CHECK: <invalid loc>:33:9: macro definition=__CHAR_BIT__
+// CHECK: <invalid loc>:34:9: macro definition=__SCHAR_MAX__
+// CHECK: <invalid loc>:35:9: macro definition=__SHRT_MAX__
+// CHECK: <invalid loc>:36:9: macro definition=__INT_MAX__
+// CHECK: <invalid loc>:37:9: macro definition=__LONG_MAX__
+// CHECK: <invalid loc>:38:9: macro definition=__LONG_LONG_MAX__
+// CHECK: <invalid loc>:39:9: macro definition=__WCHAR_MAX__
+// CHECK: <invalid loc>:40:9: macro definition=__INTMAX_MAX__
+// CHECK: <invalid loc>:41:9: macro definition=__SIZEOF_DOUBLE__
+// CHECK: <invalid loc>:42:9: macro definition=__SIZEOF_FLOAT__
+// CHECK: <invalid loc>:43:9: macro definition=__SIZEOF_INT__
+// CHECK: <invalid loc>:44:9: macro definition=__SIZEOF_LONG__
+// CHECK: <invalid loc>:45:9: macro definition=__SIZEOF_LONG_DOUBLE__
+// CHECK: <invalid loc>:46:9: macro definition=__SIZEOF_LONG_LONG__
+// CHECK: <invalid loc>:47:9: macro definition=__SIZEOF_POINTER__
+// CHECK: <invalid loc>:48:9: macro definition=__SIZEOF_SHORT__
+// CHECK: <invalid loc>:49:9: macro definition=__SIZEOF_PTRDIFF_T__
+// CHECK: <invalid loc>:50:9: macro definition=__SIZEOF_SIZE_T__
+// CHECK: <invalid loc>:51:9: macro definition=__SIZEOF_WCHAR_T__
+// CHECK: <invalid loc>:52:9: macro definition=__SIZEOF_WINT_T__
+// CHECK: <invalid loc>:53:9: macro definition=__INTMAX_TYPE__
+// CHECK: <invalid loc>:54:9: macro definition=__UINTMAX_TYPE__
+// CHECK: <invalid loc>:55:9: macro definition=__INTMAX_WIDTH__
+// CHECK: <invalid loc>:56:9: macro definition=__PTRDIFF_TYPE__
+// CHECK: <invalid loc>:57:9: macro definition=__PTRDIFF_WIDTH__
+// CHECK: <invalid loc>:58:9: macro definition=__INTPTR_TYPE__
+// CHECK: <invalid loc>:59:9: macro definition=__INTPTR_WIDTH__
+// CHECK: <invalid loc>:60:9: macro definition=__SIZE_TYPE__
+// CHECK: <invalid loc>:61:9: macro definition=__SIZE_WIDTH__
+// CHECK: <invalid loc>:62:9: macro definition=__WCHAR_TYPE__
+// CHECK: <invalid loc>:63:9: macro definition=__WCHAR_WIDTH__
+// CHECK: <invalid loc>:64:9: macro definition=__WINT_TYPE__
+// CHECK: <invalid loc>:65:9: macro definition=__WINT_WIDTH__
+// CHECK: <invalid loc>:66:9: macro definition=__SIG_ATOMIC_WIDTH__
+// CHECK: <invalid loc>:67:9: macro definition=__CHAR16_TYPE__
+// CHECK: <invalid loc>:68:9: macro definition=__CHAR32_TYPE__
+// CHECK: <invalid loc>:69:9: macro definition=__FLT_DENORM_MIN__
+// CHECK: <invalid loc>:70:9: macro definition=__FLT_HAS_DENORM__
+// CHECK: <invalid loc>:71:9: macro definition=__FLT_DIG__
+// CHECK: <invalid loc>:72:9: macro definition=__FLT_EPSILON__
+// CHECK: <invalid loc>:73:9: macro definition=__FLT_HAS_INFINITY__
+// CHECK: <invalid loc>:74:9: macro definition=__FLT_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:75:9: macro definition=__FLT_MANT_DIG__
+// CHECK: <invalid loc>:76:9: macro definition=__FLT_MAX_10_EXP__
+// CHECK: <invalid loc>:77:9: macro definition=__FLT_MAX_EXP__
+// CHECK: <invalid loc>:78:9: macro definition=__FLT_MAX__
+// CHECK: <invalid loc>:79:9: macro definition=__FLT_MIN_10_EXP__
+// CHECK: <invalid loc>:80:9: macro definition=__FLT_MIN_EXP__
+// CHECK: <invalid loc>:81:9: macro definition=__FLT_MIN__
+// CHECK: <invalid loc>:82:9: macro definition=__DBL_DENORM_MIN__
+// CHECK: <invalid loc>:83:9: macro definition=__DBL_HAS_DENORM__
+// CHECK: <invalid loc>:84:9: macro definition=__DBL_DIG__
+// CHECK: <invalid loc>:85:9: macro definition=__DBL_EPSILON__
+// CHECK: <invalid loc>:86:9: macro definition=__DBL_HAS_INFINITY__
+// CHECK: <invalid loc>:87:9: macro definition=__DBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:88:9: macro definition=__DBL_MANT_DIG__
+// CHECK: <invalid loc>:89:9: macro definition=__DBL_MAX_10_EXP__
+// CHECK: <invalid loc>:90:9: macro definition=__DBL_MAX_EXP__
+// CHECK: <invalid loc>:91:9: macro definition=__DBL_MAX__
+// CHECK: <invalid loc>:92:9: macro definition=__DBL_MIN_10_EXP__
+// CHECK: <invalid loc>:93:9: macro definition=__DBL_MIN_EXP__
+// CHECK: <invalid loc>:94:9: macro definition=__DBL_MIN__
+// CHECK: <invalid loc>:95:9: macro definition=__LDBL_DENORM_MIN__
+// CHECK: <invalid loc>:96:9: macro definition=__LDBL_HAS_DENORM__
+// CHECK: <invalid loc>:97:9: macro definition=__LDBL_DIG__
+// CHECK: <invalid loc>:98:9: macro definition=__LDBL_EPSILON__
+// CHECK: <invalid loc>:99:9: macro definition=__LDBL_HAS_INFINITY__
+// CHECK: <invalid loc>:100:9: macro definition=__LDBL_HAS_QUIET_NAN__
+// CHECK: <invalid loc>:101:9: macro definition=__LDBL_MANT_DIG__
+// CHECK: <invalid loc>:102:9: macro definition=__LDBL_MAX_10_EXP__
+// CHECK: <invalid loc>:103:9: macro definition=__LDBL_MAX_EXP__
+// CHECK: <invalid loc>:104:9: macro definition=__LDBL_MAX__
+// CHECK: <invalid loc>:105:9: macro definition=__LDBL_MIN_10_EXP__
+// CHECK: <invalid loc>:106:9: macro definition=__LDBL_MIN_EXP__
+// CHECK: <invalid loc>:107:9: macro definition=__LDBL_MIN__
+// CHECK: <invalid loc>:108:9: macro definition=__POINTER_WIDTH__
+// CHECK: <invalid loc>:109:9: macro definition=__WINT_UNSIGNED__
+// CHECK: <invalid loc>:110:9: macro definition=__INT8_TYPE__
+// CHECK: <invalid loc>:111:9: macro definition=__INT16_TYPE__
+// CHECK: <invalid loc>:112:9: macro definition=__INT32_TYPE__
+// CHECK: <invalid loc>:113:9: macro definition=__INT64_TYPE__
+// CHECK: <invalid loc>:114:9: macro definition=__INT64_C_SUFFIX__
+// CHECK: <invalid loc>:115:9: macro definition=__USER_LABEL_PREFIX__
+// CHECK: <invalid loc>:116:9: macro definition=__FINITE_MATH_ONLY__
+// CHECK: <invalid loc>:117:9: macro definition=__GNUC_GNU_INLINE__
+// CHECK: <invalid loc>:118:9: macro definition=__GCC_ATOMIC_TEST_AND_SET_TRUEVAL
+// CHECK: <invalid loc>:119:9: macro definition=__GCC_ATOMIC_BOOL_LOCK_FREE
+// CHECK: <invalid loc>:120:9: macro definition=__GCC_ATOMIC_CHAR_LOCK_FREE
+// CHECK: <invalid loc>:121:9: macro definition=__GCC_ATOMIC_CHAR16_T_LOCK_FREE
+// CHECK: <invalid loc>:122:9: macro definition=__GCC_ATOMIC_CHAR32_T_LOCK_FREE
+// CHECK: <invalid loc>:123:9: macro definition=__GCC_ATOMIC_WCHAR_T_LOCK_FREE
+// CHECK: <invalid loc>:124:9: macro definition=__GCC_ATOMIC_SHORT_LOCK_FREE
+// CHECK: <invalid loc>:125:9: macro definition=__GCC_ATOMIC_INT_LOCK_FREE
+// CHECK: <invalid loc>:126:9: macro definition=__GCC_ATOMIC_LONG_LOCK_FREE
+// CHECK: <invalid loc>:127:9: macro definition=__GCC_ATOMIC_LLONG_LOCK_FREE
+// CHECK: <invalid loc>:128:9: macro definition=__GCC_ATOMIC_POINTER_LOCK_FREE
+// CHECK: <invalid loc>:129:9: macro definition=__NO_INLINE__
+// CHECK: <invalid loc>:130:9: macro definition=__FLT_EVAL_METHOD__
+// CHECK: <invalid loc>:131:9: macro definition=__FLT_RADIX__
+// CHECK: <invalid loc>:132:9: macro definition=__DECIMAL_DIG__
+// CHECK: <invalid loc>:133:9: macro definition=__amd64__
+// CHECK: <invalid loc>:134:9: macro definition=__amd64
+// CHECK: <invalid loc>:135:9: macro definition=__x86_64
+// CHECK: <invalid loc>:136:9: macro definition=__x86_64__
+// CHECK: <invalid loc>:137:9: macro definition=__k8
+// CHECK: <invalid loc>:138:9: macro definition=__k8__
+// CHECK: <invalid loc>:139:9: macro definition=__tune_k8__
+// CHECK: <invalid loc>:140:9: macro definition=__LITTLE_ENDIAN__
+// CHECK: <invalid loc>:141:9: macro definition=__REGISTER_PREFIX__
+// CHECK: <invalid loc>:142:9: macro definition=__NO_MATH_INLINES
+// CHECK: <invalid loc>:143:9: macro definition=__SSE2__
+// CHECK: <invalid loc>:144:9: macro definition=__SSE2_MATH__
+// CHECK: <invalid loc>:145:9: macro definition=__SSE__
+// CHECK: <invalid loc>:146:9: macro definition=__SSE_MATH__
+// CHECK: <invalid loc>:147:9: macro definition=__MMX__
+// CHECK: <invalid loc>:148:9: macro definition=unix
+// CHECK: <invalid loc>:149:9: macro definition=__unix
+// CHECK: <invalid loc>:150:9: macro definition=__unix__
+// CHECK: <invalid loc>:151:9: macro definition=linux
+// CHECK: <invalid loc>:152:9: macro definition=__linux
+// CHECK: <invalid loc>:153:9: macro definition=__linux__
+// CHECK: <invalid loc>:154:9: macro definition=__gnu_linux__
+// CHECK: <invalid loc>:155:9: macro definition=__ELF__
+// CHECK: <invalid loc>:156:9: macro definition=_GNU_SOURCE
+// CHECK: <invalid loc>:157:9: macro definition=__STDC__
+// CHECK: <invalid loc>:158:9: macro definition=__STDC_HOSTED__
+// CHECK: <invalid loc>:159:9: macro definition=__cplusplus
+// CHECK: <invalid loc>:0:0: TypedefDecl=__int128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=__uint128_t:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypedefDecl=__builtin_va_list:0:0 (Definition)
+// CHECK: <invalid loc>:0:0: TypeRef=__va_list_tag:0:0
+// CHECK: annotate-comments-availability-attrs.cpp:13:6: FunctionDecl=attr_availability_1:13:6  (ios, unavailable, message="not for iOS")  (macosx, introduced=8.0, deprecated=9.0, obsoleted=10.0, message="use availability_test in <foo.h>") RawComment=[/// Aaa.] RawCommentRange=[12:1 - 12:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp" line="13" column="6"><Name>attr_availability_1</Name><USR>c:@F@attr_availability_1#</USR><Declaration>void attr_availability_1()</Declaration><Abstract><Para> Aaa.</Para></Abstract><Availability distribution="iOS"><DeprecationSummary>not for iOS</DeprecationSummary><Unavailable/></Availability><Availability distribution="OS X"><IntroducedInVersion>8.0</IntroducedInVersion><DeprecatedInVersion>9.0</DeprecatedInVersion><RemovedAfterVersion>10.0</RemovedAfterVersion><DeprecationSummary>use availability_test in &lt;foo.h&gt;</DeprecationSummary></Availability></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[13:1 - 14:97]
+// CHECK: <invalid loc>:0:0: UnexposedAttr= Extent=[14:43 - 14:95]
+// CHECK: <invalid loc>:0:0: UnexposedAttr= Extent=[13:43 - 13:152]
+// CHECK: annotate-comments-availability-attrs.cpp:17:6: FunctionDecl=attr_availability_2:17:6  (macosx, introduced=8.0.1, deprecated=9.0.1, obsoleted=10.0.1) RawComment=[/// Aaa.] RawCommentRange=[16:1 - 16:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp" line="17" column="6"><Name>attr_availability_2</Name><USR>c:@F@attr_availability_2#</USR><Declaration>void attr_availability_2()</Declaration><Abstract><Para> Aaa.</Para></Abstract><Availability distribution="OS X"><IntroducedInVersion>8.0.1</IntroducedInVersion><DeprecatedInVersion>9.0.1</DeprecatedInVersion><RemovedAfterVersion>10.0.1</RemovedAfterVersion></Availability></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[17:1 - 17:116]
+// CHECK: <invalid loc>:0:0: UnexposedAttr= Extent=[17:43 - 17:114]
+// CHECK: annotate-comments-availability-attrs.cpp:20:6: FunctionDecl=attr_deprecated_1:20:6 (deprecated)  (always deprecated: "") RawComment=[/// Aaa.] RawCommentRange=[19:1 - 19:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp" line="20" column="6"><Name>attr_deprecated_1</Name><USR>c:@F@attr_deprecated_1#</USR><Declaration>void attr_deprecated_1()</Declaration><Abstract><Para> Aaa.</Para></Abstract><Deprecated/></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[20:1 - 20:53]
+// CHECK: <invalid loc>:0:0: UnexposedAttr= Extent=[20:41 - 20:51]
+// CHECK: annotate-comments-availability-attrs.cpp:23:6: FunctionDecl=attr_deprecated_2:23:6 (deprecated)  (always deprecated: "message 1 <foo.h>") RawComment=[/// Aaa.] RawCommentRange=[22:1 - 22:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp" line="23" column="6"><Name>attr_deprecated_2</Name><USR>c:@F@attr_deprecated_2#</USR><Declaration>void attr_deprecated_2()</Declaration><Abstract><Para> Aaa.</Para></Abstract><Deprecated>message 1 &lt;foo.h&gt;</Deprecated></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[23:1 - 23:74]
+// CHECK: <invalid loc>:0:0: UnexposedAttr= Extent=[23:41 - 23:72]
+// CHECK: annotate-comments-availability-attrs.cpp:26:6: FunctionDecl=attr_unavailable_1:26:6 (unavailable)  (always unavailable: "") RawComment=[/// Aaa.] RawCommentRange=[25:1 - 25:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp" line="26" column="6"><Name>attr_unavailable_1</Name><USR>c:@F@attr_unavailable_1#</USR><Declaration>void attr_unavailable_1()</Declaration><Abstract><Para> Aaa.</Para></Abstract><Unavailable/></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[26:1 - 26:55]
+// CHECK: <invalid loc>:0:0: UnexposedAttr= Extent=[26:42 - 26:53]
+// CHECK: annotate-comments-availability-attrs.cpp:29:6: FunctionDecl=attr_unavailable_2:29:6 (unavailable)  (always unavailable: "message 2 <foo.h>") RawComment=[/// Aaa.] RawCommentRange=[28:1 - 28:9] BriefComment=[Aaa.] FullCommentAsHTML=[<p class="para-brief"> Aaa.</p>] FullCommentAsXML=[<Function file="/home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/annotate-comments-availability-attrs.cpp" line="29" column="6"><Name>attr_unavailable_2</Name><USR>c:@F@attr_unavailable_2#</USR><Declaration>void attr_unavailable_2()</Declaration><Abstract><Para> Aaa.</Para></Abstract><Unavailable>message 2 &lt;foo.h&gt;</Unavailable></Function>]
+// CHECK:  CommentAST=[
+// CHECK:    (CXComment_FullComment
+// CHECK:       (CXComment_Paragraph
+// CHECK:         (CXComment_Text Text=[ Aaa.])))] Extent=[29:1 - 29:76]
+// CHECK: <invalid loc>:0:0: UnexposedAttr= Extent=[29:42 - 29:74]

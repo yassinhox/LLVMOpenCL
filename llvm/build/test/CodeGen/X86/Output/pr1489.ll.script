@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/pr1489.ll -disable-fp-elim -O0 -mcpu=i486 | grep 1082126238 | /home/jazouani/llvm/build/Release+Asserts/bin/count 3 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/pr1489.ll -disable-fp-elim -O0 -mcpu=i486 | grep -- -1236950581 | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

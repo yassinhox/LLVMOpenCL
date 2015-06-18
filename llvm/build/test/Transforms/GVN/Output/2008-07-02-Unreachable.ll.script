@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GVN/2008-07-02-Unreachable.ll -basicaa -gvn -S | grep "ret i8 [%]tmp3"

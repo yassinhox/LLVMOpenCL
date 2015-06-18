@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -S -o - /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/ir-support-errors.ll 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Frontend/ir-support-errors.ll

@@ -1,0 +1,12 @@
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/exprs-invalid.s:5:10: error: invalid octal number
+.long 80+08
+         ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/exprs-invalid.s:8:10: error: invalid hexadecimal number
+.long 80+0xzz
+         ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/exprs-invalid.s:11:7: error: literal value out of range for directive
+.byte 256
+      ^
+/home/jazouani/llvm/llvm-3.2/test/MC/AsmParser/exprs-invalid.s:14:7: error: literal value out of range for directive
+.long 4e71cf69 // double floating point constant due to missing "0x"
+      ^

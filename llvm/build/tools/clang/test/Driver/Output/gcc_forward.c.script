@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target powerpc-unknown-unknown    -c /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/gcc_forward.c    -Xclang foo-bar    -mlinker-version=10 -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/gcc_forward.c.tmp &&
+FileCheck < /home/jazouani/llvm/build/tools/clang/test/Driver/Output/gcc_forward.c.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/gcc_forward.c

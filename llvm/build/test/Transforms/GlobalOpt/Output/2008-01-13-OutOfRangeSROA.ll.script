@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/2008-01-13-OutOfRangeSROA.ll -globalopt -S | grep "16 x .31 x double.. zeroinitializer"

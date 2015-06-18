@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/IPConstantProp/return-constant.ll -ipconstprop -instcombine |     /home/jazouani/llvm/build/Release+Asserts/bin/llvm-dis | grep "ret i1 true" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

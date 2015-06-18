@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnroll/2007-05-09-UnknownTripCount.ll -loop-unroll -unroll-count=3 -S | grep bb72.2

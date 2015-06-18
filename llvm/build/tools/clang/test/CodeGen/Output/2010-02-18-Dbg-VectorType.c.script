@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -emit-llvm -S -O0 -g /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2010-02-18-Dbg-VectorType.c -o - | grep DW_TAG_typedef | grep float4

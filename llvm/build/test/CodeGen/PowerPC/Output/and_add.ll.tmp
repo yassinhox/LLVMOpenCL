@@ -1,0 +1,15 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	2
+	.type	test,@function
+test:                                   # @test
+	.cfi_startproc
+# BB#0:
+	slwi 3, 3, 3
+	blr 
+.Ltmp0:
+	.size	test, .Ltmp0-test
+	.cfi_endproc
+
+

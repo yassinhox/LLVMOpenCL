@@ -1,0 +1,10 @@
+[config]
+c++-inlining = methods
+c++-stdlib-inlining = true
+c++-template-inlining = true
+cfg-temporary-dtors = false
+faux-bodies = true
+graph-trim-interval = 1000
+ipa-always-inline-size = 3
+[stats]
+num-entries = 7

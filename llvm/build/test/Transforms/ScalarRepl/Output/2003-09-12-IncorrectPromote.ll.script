@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ScalarRepl/2003-09-12-IncorrectPromote.ll -scalarrepl -S |    sed "s/;.*//g" | grep "\["

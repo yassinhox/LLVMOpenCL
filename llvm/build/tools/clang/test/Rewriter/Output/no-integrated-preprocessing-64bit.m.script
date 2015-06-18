@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -target x86_64-unkown-unknown -fms-extensions -rewrite-objc /home/jazouani/llvm/llvm-3.2/tools/clang/test/Rewriter/no-integrated-preprocessing-64bit.m -o - | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Rewriter/no-integrated-preprocessing-64bit.m

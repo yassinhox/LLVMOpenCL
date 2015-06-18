@@ -1,0 +1,4 @@
+env MACOSX_DEPLOYMENT_TARGET=10.1     /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -DTEST0 -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-version.c &&
+env IPHONEOS_DEPLOYMENT_TARGET=2.0     /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -DTEST1 -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-version.c &&
+env IPHONEOS_DEPLOYMENT_TARGET=2.3.1     /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -DTEST2 -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-version.c &&
+env MACOSX_DEPLOYMENT_TARGET=10.4.10     /home/jazouani/llvm/build/Release+Asserts/bin/clang  -target i386-apple-darwin9 -DTEST3 -E /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/darwin-version.c

@@ -1,0 +1,1 @@
+env CCC_ADD_ARGS="-ccc-echo,-ccc-print-options,,-v"  /home/jazouani/llvm/build/Release+Asserts/bin/clang  -### 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/ccc-add-args.c

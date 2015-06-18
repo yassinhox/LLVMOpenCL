@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Other/2002-01-31-CallGraph.ll -analyze -print-callgraph >& /dev/null

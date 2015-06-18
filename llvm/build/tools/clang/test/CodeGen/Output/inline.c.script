@@ -1,0 +1,50 @@
+echo "GNU89 tests:" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/inline.c -target i386-unknown-unknown -O1 -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp -std=gnu89 &&
+grep "define available_externally i32 @ei()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @foo()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @bar()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @unreferenced1()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+not grep unreferenced2 /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @gnu_inline()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally void @gnu_ei_inline()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @test1" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @test2" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @test3()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally i32 @test4" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally i32 @test5" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @test6" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @test7" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i.. @strlcpy" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+not grep test9 /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @testA" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @testB" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @testC" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+echo "C99 tests:" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/inline.c -target i386-unknown-unknown -O1 -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp -std=gnu99 &&
+grep "define i32 @ei()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally i32 @foo()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @bar()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+not grep unreferenced1 /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @unreferenced2()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @gnu_inline()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally void @gnu_ei_inline()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @test1" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @test2" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @test3" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally i32 @test4" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally i32 @test5" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @test6" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @test7" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally i.. @strlcpy" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @test9" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @testA" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @testB" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @testC" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+echo "C++ tests:" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -x c++ /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/inline.c -target i386-unknown-unknown -O1 -emit-llvm -S -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp -std=c++98 &&
+grep "define linkonce_odr i32 @_Z2eiv()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define linkonce_odr i32 @_Z3foov()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define i32 @_Z3barv()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+not grep unreferenced /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define void @_Z10gnu_inlinev()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp &&
+grep "define available_externally void @_Z13gnu_ei_inlinev()" /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/inline.c.tmp

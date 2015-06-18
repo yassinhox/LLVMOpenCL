@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/earlydup-crash.ll -mtriple=i386-apple-macosx10.6.7 -o /dev/null

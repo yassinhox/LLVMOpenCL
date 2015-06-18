@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -loop-unswitch -verify-loop-info -verify-dom-info /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopUnswitch/preserve-analyses.ll -disable-output

@@ -1,0 +1,166 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjCXX/blocks.mm'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin"
+
+%0 = type opaque
+%1 = type opaque
+%struct.__block_descriptor = type { i64, i64 }
+%struct.S = type { %struct.S* ()* }
+%struct._objc_module = type { i64, i64, i8*, %struct._objc_symtab* }
+%struct._objc_symtab = type { i64, i8*, i16, i16, [0 x i8*] }
+%class.FooClass = type { i8 }
+%class.anon = type { %class.FooClass }
+
+@_NSConcreteGlobalBlock = external global i8*
+@.str = private unnamed_addr constant [9 x i8] c"i16@?0@8\00", align 1
+@__block_descriptor_tmp = internal constant { i64, i64, i8*, i8* } { i64 0, i64 32, i8* getelementptr inbounds ([9 x i8]* @.str, i32 0, i32 0), i8* null }
+@__block_literal_global = internal constant { i8**, i32, i32, i8*, %struct.__block_descriptor* } { i8** @_NSConcreteGlobalBlock, i32 1342177280, i32 0, i8* bitcast (i32 (i8*, %1*)* @___Z1gv_block_invoke to i8*), %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp to %struct.__block_descriptor*) }, align 8
+@__block_descriptor_tmp1 = internal constant { i64, i64, i8*, i8* } { i64 0, i64 32, i8* getelementptr inbounds ([9 x i8]* @.str, i32 0, i32 0), i8* null }
+@__block_literal_global2 = internal constant { i8**, i32, i32, i8*, %struct.__block_descriptor* } { i8** @_NSConcreteGlobalBlock, i32 1342177280, i32 0, i8* bitcast (i32 (i8*, %1*)* @___Z2g1v_block_invoke to i8*), %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp1 to %struct.__block_descriptor*) }, align 8
+@s = global %struct.S zeroinitializer, align 8
+@_NSConcreteStackBlock = external global i8*
+@.str3 = private unnamed_addr constant [16 x i8] c"{FooClass=}8@?0\00", align 1
+@__block_descriptor_tmp4 = internal constant { i64, i64, i8*, i8* } { i64 0, i64 33, i8* getelementptr inbounds ([16 x i8]* @.str3, i32 0, i32 0), i8* null }
+@.str5 = private unnamed_addr constant [12 x i8] c"^{S=@?}8@?0\00", align 1
+@__block_descriptor_tmp6 = internal constant { i64, i64, i8*, i8* } { i64 0, i64 40, i8* getelementptr inbounds ([12 x i8]* @.str5, i32 0, i32 0), i8* null }
+@"\01L_OBJC_CLASS_NAME_" = internal global [1 x i8] zeroinitializer, section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_MODULES" = internal global %struct._objc_module { i64 7, i64 32, i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct._objc_symtab* null }, section "__OBJC,__module_info,regular,no_dead_strip", align 4
+@llvm.global_ctors = appending global [1 x { i32, void ()* }] [{ i32, void ()* } { i32 65535, void ()* @_GLOBAL__I_a }]
+@llvm.used = appending global [2 x i8*] [i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), i8* bitcast (%struct._objc_module* @"\01L_OBJC_MODULES" to i8*)], section "llvm.metadata"
+
+define void @_Z1gv() nounwind {
+entry:
+  call void @_Z1fU13block_pointerFiP1BE(i32 (%0*)* bitcast ({ i8**, i32, i32, i8*, %struct.__block_descriptor* }* @__block_literal_global to i32 (%0*)*))
+  ret void
+}
+
+declare void @_Z1fU13block_pointerFiP1BE(i32 (%0*)*)
+
+define internal i32 @___Z1gv_block_invoke(i8* %.block_descriptor, %1* %a) nounwind {
+entry:
+  %a.addr = alloca %1*, align 8
+  store %1* %a, %1** %a.addr, align 8
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor* }>*
+  ret i32 0
+}
+
+define void @_Z2g1v() nounwind {
+entry:
+  %bl = alloca i32 (%0*)*, align 8
+  store i32 (%0*)* bitcast ({ i8**, i32, i32, i8*, %struct.__block_descriptor* }* @__block_literal_global2 to i32 (%0*)*), i32 (%0*)** %bl, align 8
+  ret void
+}
+
+define internal i32 @___Z2g1v_block_invoke(i8* %.block_descriptor, %1* %a) nounwind {
+entry:
+  %a.addr = alloca %1*, align 8
+  store %1* %a, %1** %a.addr, align 8
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor* }>*
+  ret i32 0
+}
+
+define void @_Z3fooU13block_pointerFP11objc_objectvE(i8* ()* %objectCreationBlock) nounwind {
+entry:
+  %objectCreationBlock.addr = alloca i8* ()*, align 8
+  store i8* ()* %objectCreationBlock, i8* ()** %objectCreationBlock.addr, align 8
+  %0 = load i8* ()** %objectCreationBlock.addr, align 8
+  call void @_Z3barU13block_pointerFP11objc_objectvE(i8* ()* %0)
+  ret void
+}
+
+declare void @_Z3barU13block_pointerFP11objc_objectvE(i8* ()*)
+
+define internal void @__cxx_global_var_init() nounwind section "__TEXT,__StaticInit,regular,pure_instructions" {
+entry:
+  call void @_ZN1SC1Ev(%struct.S* @s) nounwind
+  ret void
+}
+
+define linkonce_odr void @_ZN1SC1Ev(%struct.S* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  call void @_ZN1SC2Ev(%struct.S* %this1) nounwind
+  ret void
+}
+
+define void @_Z3funv() nounwind {
+entry:
+  %foovar = alloca %class.FooClass, align 1
+  %block = alloca <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>, align 8
+  %block.isa = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block, i32 0, i32 0
+  store i8* bitcast (i8** @_NSConcreteStackBlock to i8*), i8** %block.isa
+  %block.flags = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block, i32 0, i32 1
+  store i32 -1073741824, i32* %block.flags
+  %block.reserved = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block, i32 0, i32 2
+  store i32 0, i32* %block.reserved
+  %block.invoke = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block, i32 0, i32 3
+  store i8* bitcast (void (i8*)* @___Z3funv_block_invoke to i8*), i8** %block.invoke
+  %block.descriptor = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block, i32 0, i32 4
+  store %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp4 to %struct.__block_descriptor*), %struct.__block_descriptor** %block.descriptor
+  %block.captured = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block, i32 0, i32 5
+  %0 = bitcast <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block to void ()*
+  ret void
+}
+
+define internal void @___Z3funv_block_invoke(i8* %.block_descriptor) nounwind {
+entry:
+  %retval = alloca %class.FooClass, align 1
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>*
+  %block.capture.addr = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %class.FooClass }>* %block, i32 0, i32 5
+  ret void
+}
+
+define void @_Z3gunv() nounwind {
+entry:
+  %foovar = alloca %class.FooClass, align 1
+  %agg.tmp.ensured = alloca %class.anon, align 1
+  %0 = getelementptr inbounds %class.anon* %agg.tmp.ensured, i32 0, i32 0
+  ret void
+}
+
+define linkonce_odr void @_ZN1SC2Ev(%struct.S* %this) unnamed_addr nounwind inlinehint align 2 {
+entry:
+  %this.addr = alloca %struct.S*, align 8
+  %block = alloca <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>, align 8
+  store %struct.S* %this, %struct.S** %this.addr, align 8
+  %this1 = load %struct.S** %this.addr
+  %a = getelementptr inbounds %struct.S* %this1, i32 0, i32 0
+  %block.isa = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block, i32 0, i32 0
+  store i8* bitcast (i8** @_NSConcreteStackBlock to i8*), i8** %block.isa
+  %block.flags = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block, i32 0, i32 1
+  store i32 -1073741824, i32* %block.flags
+  %block.reserved = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block, i32 0, i32 2
+  store i32 0, i32* %block.reserved
+  %block.invoke = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block, i32 0, i32 3
+  store i8* bitcast (%struct.S* (i8*)* @___ZN1SC2Ev_block_invoke to i8*), i8** %block.invoke
+  %block.descriptor = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block, i32 0, i32 4
+  store %struct.__block_descriptor* bitcast ({ i64, i64, i8*, i8* }* @__block_descriptor_tmp6 to %struct.__block_descriptor*), %struct.__block_descriptor** %block.descriptor
+  %block.captured-this.addr = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block, i32 0, i32 5
+  store %struct.S* %this1, %struct.S** %block.captured-this.addr
+  %0 = bitcast <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block to %struct.S* ()*
+  store %struct.S* ()* %0, %struct.S* ()** %a, align 8
+  ret void
+}
+
+define internal %struct.S* @___ZN1SC2Ev_block_invoke(i8* %.block_descriptor) nounwind {
+entry:
+  %block = bitcast i8* %.block_descriptor to <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>*
+  %block.captured-this = getelementptr inbounds <{ i8*, i32, i32, i8*, %struct.__block_descriptor*, %struct.S* }>* %block, i32 0, i32 5
+  %this = load %struct.S** %block.captured-this
+  ret %struct.S* %this
+}
+
+define internal void @_GLOBAL__I_a() nounwind section "__TEXT,__StaticInit,regular,pure_instructions" {
+entry:
+  call void @__cxx_global_var_init()
+  ret void
+}
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 1}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__OBJC, __image_info,regular"}
+!3 = metadata !{i32 4, metadata !"Objective-C Garbage Collection", i32 0}

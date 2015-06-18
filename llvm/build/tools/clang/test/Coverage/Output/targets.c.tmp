@@ -1,0 +1,9 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/Coverage/targets.c'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-unknown"
+
+!llvm.dbg.cu = !{!0}
+
+!0 = metadata !{i32 786449, i32 0, i32 12, metadata !"/home/jazouani/llvm/llvm-3.2/tools/clang/test/Coverage/<unknown>", metadata !"/home/jazouani/llvm/build/tools/clang/test/Coverage", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !1, metadata !1} ; [ DW_TAG_compile_unit ] [/home/jazouani/llvm/build/tools/clang/test/Coverage//home/jazouani/llvm/llvm-3.2/tools/clang/test/Coverage/<unknown>] [DW_LANG_C99]
+!1 = metadata !{metadata !2}
+!2 = metadata !{i32 0}

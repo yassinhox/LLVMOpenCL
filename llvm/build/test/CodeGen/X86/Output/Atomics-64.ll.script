@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/Atomics-64.ll -march=x86-64 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/Atomics-64.ll.tmp &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/Atomics-64.ll -march=x86 > /home/jazouani/llvm/build/test/CodeGen/X86/Output/Atomics-64.ll.tmp

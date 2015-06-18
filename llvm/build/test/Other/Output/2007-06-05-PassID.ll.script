@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Other/2007-06-05-PassID.ll -analyze -dot-cfg-only 2>/dev/null

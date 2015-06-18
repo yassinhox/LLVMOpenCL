@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/extend.ll -march=x86 -x86-asm-syntax=intel | grep movzx | /home/jazouani/llvm/build/Release+Asserts/bin/count 1 &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/extend.ll -march=x86 -x86-asm-syntax=intel | grep movsx | /home/jazouani/llvm/build/Release+Asserts/bin/count 1

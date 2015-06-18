@@ -1,0 +1,6 @@
+rm -f /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-17-no-emit-on-error.c.tmp1.bc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include -DPASS /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-07-17-no-emit-on-error.c -emit-llvm-bc -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-17-no-emit-on-error.c.tmp1.bc &&
+opt /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-17-no-emit-on-error.c.tmp1.bc -disable-output &&
+rm -f /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-17-no-emit-on-error.c.tmp1.bc &&
+not /home/jazouani/llvm/build/Release+Asserts/bin/clang -cc1 -internal-isystem /home/jazouani/llvm/build/Release+Asserts/bin/../lib/clang/3.2/include /home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGen/2008-07-17-no-emit-on-error.c -emit-llvm-bc -o /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-17-no-emit-on-error.c.tmp1.bc &&
+not opt /home/jazouani/llvm/build/tools/clang/test/CodeGen/Output/2008-07-17-no-emit-on-error.c.tmp1.bc -disable-output

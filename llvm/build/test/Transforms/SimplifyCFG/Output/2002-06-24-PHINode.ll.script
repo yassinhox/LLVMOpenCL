@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/2002-06-24-PHINode.ll -simplifycfg -S | /home/jazouani/llvm/build/Release+Asserts/bin/not grep br

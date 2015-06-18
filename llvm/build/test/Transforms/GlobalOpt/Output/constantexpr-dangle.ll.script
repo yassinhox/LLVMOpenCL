@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/GlobalOpt/constantexpr-dangle.ll -instcombine -globalopt -S |    grep "internal fastcc float @foo"

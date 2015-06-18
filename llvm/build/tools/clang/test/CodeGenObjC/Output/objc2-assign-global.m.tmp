@@ -1,0 +1,121 @@
+; ModuleID = '/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenObjC/objc2-assign-global.m'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-darwin10"
+
+%0 = type opaque
+%1 = type opaque
+%struct.__CFDictionary = type opaque
+%struct.struct_with_ids_t = type { i8*, [10 x i8*], %struct.__CFDictionary*, [10 x %struct.__CFDictionary*] }
+%struct.s0 = type { [4 x %1*] }
+%struct._objc_module = type { i64, i64, i8*, %struct._objc_symtab* }
+%struct._objc_symtab = type { i64, i8*, i16, i16, [0 x i8*] }
+
+@rhs = global i8* null, align 8
+@main.staticGlobalId = internal global i8* null, align 8
+@main.staticGlobalArray = internal global [20 x i8*] zeroinitializer, align 16
+@main.staticGlobalObject = internal global %0* null, align 8
+@main.staticGlobalObjectArray = internal global [20 x %0*] zeroinitializer, align 16
+@main.staticGdict = internal global %struct.__CFDictionary* null, align 8
+@main.staticGdictarray = internal global [10 x %struct.__CFDictionary*] zeroinitializer, align 16
+@main.staticGlobalStruct = internal global %struct.struct_with_ids_t zeroinitializer, align 8
+@main.staticGlobalStructArray = internal global [10 x %struct.struct_with_ids_t] zeroinitializer, align 16
+@GlobalId = common global i8* null, align 8
+@GlobalArray = common global [20 x i8*] zeroinitializer, align 16
+@GlobalObject = common global %0* null, align 8
+@GlobalObjectArray = common global [20 x %0*] zeroinitializer, align 16
+@Gdict = common global %struct.__CFDictionary* null, align 8
+@Gdictarray = common global [10 x %struct.__CFDictionary*] zeroinitializer, align 16
+@GlobalStruct = common global %struct.struct_with_ids_t zeroinitializer, align 8
+@ExID = external global i8*
+@FileStaticID = internal global i8* null, align 8
+@FileExternID = external global i8*
+@g0 = common global %struct.s0 zeroinitializer, align 8
+@GlobalStructArray = common global [10 x %struct.struct_with_ids_t] zeroinitializer, align 16
+@"\01L_OBJC_CLASS_NAME_" = internal global [1 x i8] zeroinitializer, section "__TEXT,__cstring,cstring_literals", align 1
+@"\01L_OBJC_MODULES" = internal global %struct._objc_module { i64 7, i64 32, i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), %struct._objc_symtab* null }, section "__OBJC,__module_info,regular,no_dead_strip", align 4
+@llvm.used = appending global [2 x i8*] [i8* getelementptr inbounds ([1 x i8]* @"\01L_OBJC_CLASS_NAME_", i32 0, i32 0), i8* bitcast (%struct._objc_module* @"\01L_OBJC_MODULES" to i8*)], section "llvm.metadata"
+
+define i32 @main() nounwind {
+entry:
+  %localID = alloca i8*, align 8
+  %0 = load i8** @rhs, align 8
+  %globalassign = call i8* @objc_assign_global(i8* %0, i8** @GlobalId)
+  %1 = load i8** @rhs, align 8
+  %globalassign1 = call i8* @objc_assign_global(i8* %1, i8** getelementptr inbounds ([20 x i8*]* @GlobalArray, i32 0, i64 0))
+  %2 = load i8** @rhs, align 8
+  %3 = bitcast i8* %2 to %0*
+  %4 = bitcast %0* %3 to i8*
+  %globalassign2 = call i8* @objc_assign_global(i8* %4, i8** bitcast (%0** @GlobalObject to i8**))
+  %5 = load i8** @rhs, align 8
+  %6 = bitcast i8* %5 to %0*
+  %7 = bitcast %0* %6 to i8*
+  %globalassign3 = call i8* @objc_assign_global(i8* %7, i8** bitcast ([20 x %0*]* @GlobalObjectArray to i8**))
+  %8 = load i8** @rhs, align 8
+  %9 = bitcast i8* %8 to %struct.__CFDictionary*
+  %10 = bitcast %struct.__CFDictionary* %9 to i8*
+  %globalassign4 = call i8* @objc_assign_global(i8* %10, i8** bitcast (%struct.__CFDictionary** @Gdict to i8**))
+  %11 = load i8** @rhs, align 8
+  %12 = bitcast i8* %11 to %struct.__CFDictionary*
+  %13 = bitcast %struct.__CFDictionary* %12 to i8*
+  %globalassign5 = call i8* @objc_assign_global(i8* %13, i8** bitcast (%struct.__CFDictionary** getelementptr inbounds ([10 x %struct.__CFDictionary*]* @Gdictarray, i32 0, i64 1) to i8**))
+  %14 = load i8** @rhs, align 8
+  %globalassign6 = call i8* @objc_assign_global(i8* %14, i8** getelementptr inbounds (%struct.struct_with_ids_t* @GlobalStruct, i32 0, i32 0))
+  %15 = load i8** @rhs, align 8
+  %globalassign7 = call i8* @objc_assign_global(i8* %15, i8** getelementptr inbounds (%struct.struct_with_ids_t* @GlobalStruct, i32 0, i32 1, i64 0))
+  %16 = load i8** @rhs, align 8
+  %17 = bitcast i8* %16 to %struct.__CFDictionary*
+  %18 = bitcast %struct.__CFDictionary* %17 to i8*
+  %globalassign8 = call i8* @objc_assign_global(i8* %18, i8** bitcast (%struct.__CFDictionary** getelementptr inbounds (%struct.struct_with_ids_t* @GlobalStruct, i32 0, i32 2) to i8**))
+  %19 = load i8** @rhs, align 8
+  %20 = bitcast i8* %19 to %struct.__CFDictionary*
+  %21 = bitcast %struct.__CFDictionary* %20 to i8*
+  %globalassign9 = call i8* @objc_assign_global(i8* %21, i8** bitcast (%struct.__CFDictionary** getelementptr inbounds (%struct.struct_with_ids_t* @GlobalStruct, i32 0, i32 3, i64 0) to i8**))
+  %22 = load i8** @rhs, align 8
+  %globalassign10 = call i8* @objc_assign_global(i8* %22, i8** @main.staticGlobalId)
+  %23 = load i8** @rhs, align 8
+  %globalassign11 = call i8* @objc_assign_global(i8* %23, i8** getelementptr inbounds ([20 x i8*]* @main.staticGlobalArray, i32 0, i64 0))
+  %24 = load i8** @rhs, align 8
+  %25 = bitcast i8* %24 to %0*
+  %26 = bitcast %0* %25 to i8*
+  %globalassign12 = call i8* @objc_assign_global(i8* %26, i8** bitcast (%0** @main.staticGlobalObject to i8**))
+  %27 = load i8** @rhs, align 8
+  %28 = bitcast i8* %27 to %0*
+  %29 = bitcast %0* %28 to i8*
+  %globalassign13 = call i8* @objc_assign_global(i8* %29, i8** bitcast ([20 x %0*]* @main.staticGlobalObjectArray to i8**))
+  %30 = load i8** @rhs, align 8
+  %31 = bitcast i8* %30 to %struct.__CFDictionary*
+  %32 = bitcast %struct.__CFDictionary* %31 to i8*
+  %globalassign14 = call i8* @objc_assign_global(i8* %32, i8** bitcast (%struct.__CFDictionary** @main.staticGdict to i8**))
+  %33 = load i8** @rhs, align 8
+  %34 = bitcast i8* %33 to %struct.__CFDictionary*
+  %35 = bitcast %struct.__CFDictionary* %34 to i8*
+  %globalassign15 = call i8* @objc_assign_global(i8* %35, i8** bitcast (%struct.__CFDictionary** getelementptr inbounds ([10 x %struct.__CFDictionary*]* @main.staticGdictarray, i32 0, i64 1) to i8**))
+  %36 = load i8** @rhs, align 8
+  %globalassign16 = call i8* @objc_assign_global(i8* %36, i8** getelementptr inbounds (%struct.struct_with_ids_t* @main.staticGlobalStruct, i32 0, i32 0))
+  %37 = load i8** @rhs, align 8
+  %globalassign17 = call i8* @objc_assign_global(i8* %37, i8** getelementptr inbounds (%struct.struct_with_ids_t* @main.staticGlobalStruct, i32 0, i32 1, i64 0))
+  %38 = load i8** @rhs, align 8
+  %39 = bitcast i8* %38 to %struct.__CFDictionary*
+  %40 = bitcast %struct.__CFDictionary* %39 to i8*
+  %globalassign18 = call i8* @objc_assign_global(i8* %40, i8** bitcast (%struct.__CFDictionary** getelementptr inbounds (%struct.struct_with_ids_t* @main.staticGlobalStruct, i32 0, i32 2) to i8**))
+  %41 = load i8** @rhs, align 8
+  %42 = bitcast i8* %41 to %struct.__CFDictionary*
+  %43 = bitcast %struct.__CFDictionary* %42 to i8*
+  %globalassign19 = call i8* @objc_assign_global(i8* %43, i8** bitcast (%struct.__CFDictionary** getelementptr inbounds (%struct.struct_with_ids_t* @main.staticGlobalStruct, i32 0, i32 3, i64 0) to i8**))
+  %globalassign20 = call i8* @objc_assign_global(i8* null, i8** @ExID)
+  store i8* null, i8** %localID, align 8
+  %globalassign21 = call i8* @objc_assign_global(i8* null, i8** @FileStaticID)
+  %globalassign22 = call i8* @objc_assign_global(i8* null, i8** @FileExternID)
+  %globalassign23 = call i8* @objc_assign_global(i8* null, i8** bitcast (%struct.s0* @g0 to i8**))
+  %globalassign24 = call i8* @objc_assign_global(i8* null, i8** bitcast (%struct.s0* @g0 to i8**))
+  ret i32 0
+}
+
+declare i8* @objc_assign_global(i8*, i8**)
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+
+!0 = metadata !{i32 1, metadata !"Objective-C Version", i32 1}
+!1 = metadata !{i32 1, metadata !"Objective-C Image Info Version", i32 0}
+!2 = metadata !{i32 1, metadata !"Objective-C Image Info Section", metadata !"__OBJC, __image_info,regular"}
+!3 = metadata !{i32 1, metadata !"Objective-C Garbage Collection", i32 2}

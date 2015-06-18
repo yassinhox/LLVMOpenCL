@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/dwarf-comp-dir.ll -o /home/jazouani/llvm/build/test/CodeGen/X86/Output/dwarf-comp-dir.ll.tmp -filetype=obj &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-dwarfdump /home/jazouani/llvm/build/test/CodeGen/X86/Output/dwarf-comp-dir.ll.tmp | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/dwarf-comp-dir.ll

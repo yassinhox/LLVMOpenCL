@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-link /home/jazouani/llvm/llvm-3.2/test/Linker/Inputs/PR11464.a.ll /home/jazouani/llvm/llvm-3.2/test/Linker/Inputs/PR11464.b.ll

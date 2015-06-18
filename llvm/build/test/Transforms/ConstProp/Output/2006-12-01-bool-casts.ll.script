@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2006-12-01-bool-casts.ll -constprop -S |     grep "ret i32 -1" &&
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/ConstProp/2006-12-01-bool-casts.ll -constprop -S |     grep "ret i32 1"

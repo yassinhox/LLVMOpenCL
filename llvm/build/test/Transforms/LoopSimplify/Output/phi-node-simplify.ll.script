@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/LoopSimplify/phi-node-simplify.ll -loop-simplify -S | grep phi | /home/jazouani/llvm/build/Release+Asserts/bin/count 6

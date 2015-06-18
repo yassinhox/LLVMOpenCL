@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/codemodel.ll -code-model=small  | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix CHECK-SMALL /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/codemodel.ll &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/codemodel.ll -code-model=kernel | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck -check-prefix CHECK-KERNEL /home/jazouani/llvm/llvm-3.2/test/CodeGen/X86/codemodel.ll

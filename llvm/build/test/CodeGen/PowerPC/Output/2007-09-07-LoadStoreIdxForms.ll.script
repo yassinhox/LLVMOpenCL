@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/PowerPC/2007-09-07-LoadStoreIdxForms.ll -march=ppc64 | grep lwzx

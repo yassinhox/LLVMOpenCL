@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/ctpop.ll -march=sparc -mattr=-v9 | /home/jazouani/llvm/build/Release+Asserts/bin/not grep popc &&
+/home/jazouani/llvm/build/Release+Asserts/bin/llc < /home/jazouani/llvm/llvm-3.2/test/CodeGen/SPARC/ctpop.ll -march=sparcv9 -mattr=v9 | grep popc

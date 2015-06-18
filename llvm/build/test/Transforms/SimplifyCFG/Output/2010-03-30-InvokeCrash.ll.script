@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt /home/jazouani/llvm/llvm-3.2/test/Transforms/SimplifyCFG/2010-03-30-InvokeCrash.ll -simplifycfg -disable-output

@@ -1,0 +1,2 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -no-canonical-prefixes -target amd64-pc-dragonfly /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/dragonfly.c -### 2> /home/jazouani/llvm/build/tools/clang/test/Driver/Output/dragonfly.c.tmp.log &&
+FileCheck -input-file /home/jazouani/llvm/build/tools/clang/test/Driver/Output/dragonfly.c.tmp.log /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/dragonfly.c

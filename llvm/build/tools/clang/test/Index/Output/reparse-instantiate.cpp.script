@@ -1,0 +1,2 @@
+c-index-test -write-pch /home/jazouani/llvm/build/tools/clang/test/Index/Output/reparse-instantiate.cpp.tmp.pch -fno-delayed-template-parsing -x c++-header /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/Inputs/reparse-instantiate.h &&
+env CINDEXTEST_EDITING=1 c-index-test -test-load-source-reparse 5 local -fno-delayed-template-parsing -I /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/Inputs -include /home/jazouani/llvm/build/tools/clang/test/Index/Output/reparse-instantiate.cpp.tmp /home/jazouani/llvm/llvm-3.2/tools/clang/test/Index/reparse-instantiate.cpp

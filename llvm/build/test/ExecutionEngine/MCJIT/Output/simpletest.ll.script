@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/lli -mtriple=x86_64-unknown-linux-gnu -use-mcjit /home/jazouani/llvm/llvm-3.2/test/ExecutionEngine/MCJIT/simpletest.ll > /dev/null

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt < /home/jazouani/llvm/llvm-3.2/test/Transforms/InstCombine/udiv-simplify-bug-0.ll -instcombine -S | grep "ret i64 0" | /home/jazouani/llvm/build/Release+Asserts/bin/count 2

@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llc -mtriple=i386-apple-macosx -disable-cfi /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/eh_symbol.ll -o - | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/DebugInfo/X86/eh_symbol.ll

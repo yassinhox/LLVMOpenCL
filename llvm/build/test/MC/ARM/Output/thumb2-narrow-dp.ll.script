@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc -triple thumbv7 -show-encoding < /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb2-narrow-dp.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/MC/ARM/thumb2-narrow-dp.ll

@@ -1,0 +1,1824 @@
+Vtable for 'Test1::A' (3 entries).
+   0 | offset_to_top (0)
+   1 | Test1::A RTTI
+       -- (Test1::A, 0) vtable address --
+   2 | void Test1::A::f()
+
+VTable indices for 'Test1::A' (1 entries).
+    0 | void Test1::A::f()
+
+Vtable for 'Test2::A' (9 entries).
+   0 | offset_to_top (0)
+   1 | Test2::A RTTI
+       -- (Test2::A, 0) vtable address --
+   2 | void Test2::A::f()
+   3 | void Test2::A::f() const
+   4 | Test2::A *Test2::A::g(int)
+   5 | Test2::A::~A() [complete]
+   6 | Test2::A::~A() [deleting]
+   7 | void Test2::A::h()
+   8 | Test2::A &Test2::A::operator=(const Test2::A &)
+
+VTable indices for 'Test2::A' (7 entries).
+    0 | void Test2::A::f()
+    1 | void Test2::A::f() const
+    2 | Test2::A *Test2::A::g(int)
+    3 | Test2::A::~A() [complete]
+    4 | Test2::A::~A() [deleting]
+    5 | void Test2::A::h()
+    6 | Test2::A &Test2::A::operator=(const Test2::A &)
+
+Vtable for 'Test2::B' (6 entries).
+   0 | offset_to_top (0)
+   1 | Test2::B RTTI
+       -- (Test2::B, 0) vtable address --
+   2 | void Test2::B::f()
+   3 | void Test2::B::g() [pure]
+   4 | Test2::B::~B() [complete] [pure]
+   5 | Test2::B::~B() [deleting] [pure]
+
+VTable indices for 'Test2::B' (4 entries).
+    0 | void Test2::B::f()
+    1 | void Test2::B::g()
+    2 | Test2::B::~B() [complete]
+    3 | Test2::B::~B() [deleting]
+
+Vtable for 'Test3::A' (3 entries).
+   0 | offset_to_top (0)
+   1 | Test3::A RTTI
+       -- (Test3::A, 0) vtable address --
+   2 | void Test3::A::f()
+
+VTable indices for 'Test3::A' (1 entries).
+    0 | void Test3::A::f()
+
+Vtable for 'Test3::B' (4 entries).
+   0 | offset_to_top (0)
+   1 | Test3::B RTTI
+       -- (Test3::A, 0) vtable address --
+       -- (Test3::B, 0) vtable address --
+   2 | void Test3::B::f()
+   3 | void Test3::B::g()
+
+VTable indices for 'Test3::B' (2 entries).
+    0 | void Test3::B::f()
+    1 | void Test3::B::g()
+
+Vtable for 'Test3::C' (5 entries).
+   0 | offset_to_top (0)
+   1 | Test3::C RTTI
+       -- (Test3::A, 0) vtable address --
+       -- (Test3::C, 0) vtable address --
+   2 | void Test3::A::f()
+   3 | void Test3::C::g()
+   4 | void Test3::C::h()
+
+VTable indices for 'Test3::C' (2 entries).
+    1 | void Test3::C::g()
+    2 | void Test3::C::h()
+
+Vtable for 'Test3::D' (5 entries).
+   0 | offset_to_top (0)
+   1 | Test3::D RTTI
+       -- (Test3::A, 0) vtable address --
+       -- (Test3::B, 0) vtable address --
+       -- (Test3::D, 0) vtable address --
+   2 | void Test3::D::f()
+   3 | void Test3::D::g()
+   4 | void Test3::D::h()
+
+VTable indices for 'Test3::D' (3 entries).
+    0 | void Test3::D::f()
+    1 | void Test3::D::g()
+    2 | void Test3::D::h()
+
+Vtable for 'Test4::B' (4 entries).
+   0 | offset_to_top (0)
+   1 | Test4::B RTTI
+       -- (Test4::A, 0) vtable address --
+       -- (Test4::B, 0) vtable address --
+   2 | Test4::R3 *Test4::B::f()
+       [return adjustment: 4 non-virtual]
+   3 | Test4::R3 *Test4::B::f()
+
+Thunks for 'Test4::R3 *Test4::B::f()' (1 entry).
+   0 | return adjustment: 0 non-virtual
+
+VTable indices for 'Test4::B' (1 entries).
+    1 | Test4::R3 *Test4::B::f()
+
+Vtable for 'Test4::D' (4 entries).
+   0 | offset_to_top (0)
+   1 | Test4::D RTTI
+       -- (Test4::C, 0) vtable address --
+       -- (Test4::D, 0) vtable address --
+   2 | Test4::V2 *Test4::D::f()
+       [return adjustment: 0 non-virtual, -24 vbase offset offset]
+   3 | Test4::V2 *Test4::D::f()
+
+Thunks for 'Test4::V2 *Test4::D::f()' (1 entry).
+   0 | return adjustment: 0 non-virtual, -24 vbase offset offset
+
+VTable indices for 'Test4::D' (1 entries).
+    1 | Test4::V2 *Test4::D::f()
+
+Vtable for 'Test4::E' (4 entries).
+   0 | offset_to_top (0)
+   1 | Test4::E RTTI
+       -- (Test4::A, 0) vtable address --
+       -- (Test4::E, 0) vtable address --
+   2 | Test4::V3 *Test4::E::f()
+       [return adjustment: 4 non-virtual, -24 vbase offset offset]
+   3 | Test4::V3 *Test4::E::f()
+
+Thunks for 'Test4::V3 *Test4::E::f()' (1 entry).
+   0 | return adjustment: 0 non-virtual, -24 vbase offset offset
+
+VTable indices for 'Test4::E' (1 entries).
+    1 | Test4::V3 *Test4::E::f()
+
+Vtable for 'Test4::F' (5 entries).
+   0 | offset_to_top (0)
+   1 | Test4::F RTTI
+       -- (Test4::A, 0) vtable address --
+       -- (Test4::F, 0) vtable address --
+   2 | Test4::R3 *Test4::F::f() [pure]
+   3 | void Test4::F::g()
+   4 | Test4::R3 *Test4::F::f() [pure]
+
+VTable indices for 'Test4::F' (2 entries).
+    1 | void Test4::F::g()
+    2 | Test4::R3 *Test4::F::f()
+
+Vtable for 'Test5::C' (9 entries).
+   0 | offset_to_top (0)
+   1 | Test5::C RTTI
+       -- (Test5::A, 0) vtable address --
+       -- (Test5::B1, 0) vtable address --
+       -- (Test5::C, 0) vtable address --
+   2 | void Test5::B1::f()
+   3 | void Test5::A::g()
+   4 | void Test5::C::h()
+   5 | offset_to_top (-16)
+   6 | Test5::C RTTI
+       -- (Test5::A, 16) vtable address --
+       -- (Test5::B2, 16) vtable address --
+   7 | void Test5::A::f()
+   8 | void Test5::B2::g()
+
+VTable indices for 'Test5::C' (1 entries).
+    2 | void Test5::C::h()
+
+Vtable for 'Test6::C' (6 entries).
+   0 | offset_to_top (0)
+   1 | Test6::C RTTI
+       -- (Test6::A1, 0) vtable address --
+       -- (Test6::C, 0) vtable address --
+   2 | void Test6::C::f()
+   3 | offset_to_top (-16)
+   4 | Test6::C RTTI
+       -- (Test6::A2, 16) vtable address --
+   5 | void Test6::C::f()
+       [this adjustment: -16 non-virtual]
+
+Thunks for 'void Test6::C::f()' (1 entry).
+   0 | this adjustment: -16 non-virtual
+
+VTable indices for 'Test6::C' (1 entries).
+    0 | void Test6::C::f()
+
+Vtable for 'Test7::D' (10 entries).
+   0 | offset_to_top (0)
+   1 | Test7::D RTTI
+       -- (Test7::C, 0) vtable address --
+       -- (Test7::D, 0) vtable address --
+   2 | void Test7::C::c()
+   3 | void Test7::D::f()
+   4 | offset_to_top (-8)
+   5 | Test7::D RTTI
+       -- (Test7::A, 8) vtable address --
+       -- (Test7::B1, 8) vtable address --
+   6 | void Test7::D::f()
+       [this adjustment: -8 non-virtual]
+   7 | offset_to_top (-24)
+   8 | Test7::D RTTI
+       -- (Test7::A, 24) vtable address --
+       -- (Test7::B2, 24) vtable address --
+   9 | void Test7::D::f()
+       [this adjustment: -24 non-virtual]
+
+Thunks for 'void Test7::D::f()' (2 entries).
+   0 | this adjustment: -24 non-virtual
+   1 | this adjustment: -8 non-virtual
+
+VTable indices for 'Test7::D' (1 entries).
+    1 | void Test7::D::f()
+
+Vtable for 'Test8::B' (3 entries).
+   0 | offset_to_top (0)
+   1 | Test8::B RTTI
+       -- (Test8::B, 0) vtable address --
+   2 | void Test8::B::f()
+
+VTable indices for 'Test8::B' (1 entries).
+    0 | void Test8::B::f()
+
+Vtable for 'Test9::B' (5 entries).
+   0 | vbase_offset (16)
+   1 | vbase_offset (12)
+   2 | offset_to_top (0)
+   3 | Test9::B RTTI
+       -- (Test9::B, 0) vtable address --
+   4 | void Test9::B::f()
+
+Virtual base offset offsets for 'Test9::B' (2 entries).
+   Test9::A1 | -24
+   Test9::A2 | -32
+
+VTable indices for 'Test9::B' (1 entries).
+    0 | void Test9::B::f()
+
+Vtable for 'Test10::C' (7 entries).
+   0 | offset_to_top (0)
+   1 | Test10::C RTTI
+       -- (Test10::A1, 0) vtable address --
+       -- (Test10::B, 0) vtable address --
+       -- (Test10::C, 0) vtable address --
+   2 | void Test10::A1::a1()
+   3 | void Test10::C::f()
+   4 | offset_to_top (-8)
+   5 | Test10::C RTTI
+       -- (Test10::A2, 8) vtable address --
+   6 | void Test10::A2::a2()
+
+VTable indices for 'Test10::C' (1 entries).
+    1 | void Test10::C::f()
+
+Vtable for 'Test11::C' (8 entries).
+   0 | vbase_offset (24)
+   1 | vbase_offset (8)
+   2 | offset_to_top (0)
+   3 | Test11::C RTTI
+       -- (Test11::C, 0) vtable address --
+   4 | void Test11::C::f()
+   5 | vbase_offset (16)
+   6 | offset_to_top (-8)
+   7 | Test11::C RTTI
+       -- (Test11::B, 8) vtable address --
+
+Virtual base offset offsets for 'Test11::C' (2 entries).
+   Test11::A2 | -32
+   Test11::B | -24
+
+VTable indices for 'Test11::C' (1 entries).
+    0 | void Test11::C::f()
+
+Vtable for 'Test12::B' (19 entries).
+   0 | vbase_offset (8)
+   1 | offset_to_top (0)
+   2 | Test12::B RTTI
+       -- (Test12::B, 0) vtable address --
+   3 | void Test12::B::f()
+   4 | void Test12::B::a()
+   5 | vcall_offset (32)
+   6 | vcall_offset (16)
+   7 | vcall_offset (-8)
+   8 | vcall_offset (0)
+   9 | offset_to_top (-8)
+  10 | Test12::B RTTI
+       -- (Test12::A, 8) vtable address --
+       -- (Test12::A1, 8) vtable address --
+  11 | void Test12::A1::a1()
+  12 | void Test12::B::a()
+       [this adjustment: 0 non-virtual, -32 vcall offset offset]
+  13 | offset_to_top (-24)
+  14 | Test12::B RTTI
+       -- (Test12::A2, 24) vtable address --
+  15 | void Test12::A2::a2()
+  16 | offset_to_top (-40)
+  17 | Test12::B RTTI
+       -- (Test12::A3, 40) vtable address --
+  18 | void Test12::A3::a3()
+
+Virtual base offset offsets for 'Test12::B' (1 entry).
+   Test12::A | -24
+
+Thunks for 'void Test12::B::a()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -32 vcall offset offset
+
+VTable indices for 'Test12::B' (2 entries).
+    0 | void Test12::B::f()
+    1 | void Test12::B::a()
+
+Vtable for 'Test13::C' (6 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (0)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test13::C RTTI
+       -- (Test13::A, 0) vtable address --
+       -- (Test13::B, 0) vtable address --
+       -- (Test13::C, 0) vtable address --
+   5 | void Test13::C::f()
+
+Virtual base offset offsets for 'Test13::C' (2 entries).
+   Test13::A | -32
+   Test13::B | -40
+
+Thunks for 'void Test13::C::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test13::C' (1 entries).
+    0 | void Test13::C::f()
+
+Vtable for 'Test14::D' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test14::D RTTI
+       -- (Test14::A, 0) vtable address --
+       -- (Test14::B, 0) vtable address --
+       -- (Test14::C, 0) vtable address --
+       -- (Test14::D, 0) vtable address --
+   4 | void Test14::D::f()
+
+Virtual base offset offsets for 'Test14::D' (1 entry).
+   Test14::B | -32
+
+Thunks for 'void Test14::D::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test14::D' (1 entries).
+    0 | void Test14::D::f()
+
+Vtable for 'Test15::D' (11 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (8)
+   2 | offset_to_top (0)
+   3 | Test15::D RTTI
+       -- (Test15::A, 0) vtable address --
+       -- (Test15::D, 0) vtable address --
+   4 | void Test15::A::a()
+   5 | void Test15::D::f()
+   6 | vbase_offset (0)
+   7 | vcall_offset (0)
+   8 | offset_to_top (-8)
+   9 | Test15::D RTTI
+       -- (Test15::B, 8) vtable address --
+       -- (Test15::C, 8) vtable address --
+  10 | void Test15::B::b()
+
+Virtual base offset offsets for 'Test15::D' (2 entries).
+   Test15::B | -24
+   Test15::C | -32
+
+VTable indices for 'Test15::D' (1 entries).
+    1 | void Test15::D::f()
+
+Vtable for 'Test16::D' (15 entries).
+   0 | vbase_offset (8)
+   1 | offset_to_top (0)
+   2 | Test16::D RTTI
+       -- (Test16::D, 0) vtable address --
+   3 | void Test16::D::f()
+   4 | Test16::D::~D() [complete]
+   5 | Test16::D::~D() [deleting]
+   6 | vcall_offset (-8)
+   7 | offset_to_top (-8)
+   8 | Test16::D RTTI
+       -- (Test16::A, 8) vtable address --
+       -- (Test16::C, 8) vtable address --
+   9 | Test16::D::~D() [complete]
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+  10 | Test16::D::~D() [deleting]
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+  11 | offset_to_top (-16)
+  12 | Test16::D RTTI
+       -- (Test16::B, 16) vtable address --
+  13 | Test16::D::~D() [complete]
+       [this adjustment: -8 non-virtual, -24 vcall offset offset]
+  14 | Test16::D::~D() [deleting]
+       [this adjustment: -8 non-virtual, -24 vcall offset offset]
+
+Virtual base offset offsets for 'Test16::D' (1 entry).
+   Test16::C | -24
+
+Thunks for 'Test16::D::~D()' (2 entries).
+   0 | this adjustment: -8 non-virtual, -24 vcall offset offset
+   1 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test16::D' (3 entries).
+    0 | void Test16::D::f()
+    1 | Test16::D::~D() [complete]
+    2 | Test16::D::~D() [deleting]
+
+Vtable for 'Test17::E' (13 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (8)
+   2 | vbase_offset (0)
+   3 | vbase_offset (0)
+   4 | vcall_offset (0)
+   5 | offset_to_top (0)
+   6 | Test17::E RTTI
+       -- (Test17::A, 0) vtable address --
+       -- (Test17::B, 0) vtable address --
+       -- (Test17::D, 0) vtable address --
+       -- (Test17::E, 0) vtable address --
+   7 | void Test17::E::f()
+   8 | vbase_offset (-8)
+   9 | vcall_offset (-8)
+  10 | offset_to_top (-8)
+  11 | Test17::E RTTI
+       -- (Test17::C, 8) vtable address --
+  12 | void Test17::E::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Virtual base offset offsets for 'Test17::E' (4 entries).
+   Test17::A | -32
+   Test17::B | -40
+   Test17::C | -48
+   Test17::D | -56
+
+Thunks for 'void Test17::E::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test17::E' (1 entries).
+    0 | void Test17::E::f()
+
+Vtable for 'Test18::D' (24 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (0)
+   2 | vbase_offset (0)
+   3 | vcall_offset (8)
+   4 | vcall_offset (0)
+   5 | offset_to_top (0)
+   6 | Test18::D RTTI
+       -- (Test18::A, 0) vtable address --
+       -- (Test18::B, 0) vtable address --
+       -- (Test18::D, 0) vtable address --
+   7 | void Test18::D::f()
+   8 | void Test18::C::g()
+       [this adjustment: 0 non-virtual, -32 vcall offset offset]
+   9 | void Test18::D::h()
+  10 | vcall_offset (0)
+  11 | vcall_offset (-8)
+  12 | vbase_offset (-8)
+  13 | offset_to_top (-8)
+  14 | Test18::D RTTI
+       -- (Test18::A, 8) vtable address --
+       -- (Test18::C, 8) vtable address --
+  15 | void Test18::D::f()
+       [this adjustment: 0 non-virtual, -32 vcall offset offset]
+  16 | void Test18::C::g()
+  17 | vbase_offset (-16)
+  18 | vcall_offset (-8)
+  19 | vcall_offset (-16)
+  20 | offset_to_top (-16)
+  21 | Test18::D RTTI
+       -- (Test18::B, 16) vtable address --
+  22 | void Test18::D::f()
+       [this adjustment: -8 non-virtual, -32 vcall offset offset]
+  23 | [unused] void Test18::C::g()
+
+Virtual base offset offsets for 'Test18::D' (3 entries).
+   Test18::A | -40
+   Test18::B | -48
+   Test18::C | -56
+
+Thunks for 'void Test18::D::f()' (3 entries).
+   0 | this adjustment: -8 non-virtual, -32 vcall offset offset
+   1 | this adjustment: 0 non-virtual, -32 vcall offset offset
+   2 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test18::D' (2 entries).
+    0 | void Test18::D::f()
+    2 | void Test18::D::h()
+
+Vtable for 'Test19::D' (13 entries).
+   0 | vbase_offset (24)
+   1 | offset_to_top (0)
+   2 | Test19::D RTTI
+       -- (Test19::C, 0) vtable address --
+       -- (Test19::D, 0) vtable address --
+   3 | void Test19::C::c()
+   4 | void Test19::D::f()
+   5 | offset_to_top (-8)
+   6 | Test19::D RTTI
+       -- (Test19::A, 8) vtable address --
+       -- (Test19::B, 8) vtable address --
+   7 | void Test19::D::f()
+       [this adjustment: -8 non-virtual]
+   8 | void Test19::B::g()
+   9 | vcall_offset (-24)
+  10 | offset_to_top (-24)
+  11 | Test19::D RTTI
+       -- (Test19::A, 24) vtable address --
+  12 | void Test19::D::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Virtual base offset offsets for 'Test19::D' (1 entry).
+   Test19::A | -24
+
+Thunks for 'void Test19::D::f()' (2 entries).
+   0 | this adjustment: -8 non-virtual
+   1 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test19::D' (1 entries).
+    1 | void Test19::D::f()
+
+Vtable for 'Test20::C' (9 entries).
+   0 | offset_to_top (0)
+   1 | Test20::C RTTI
+       -- (Test20::A, 0) vtable address --
+       -- (Test20::C, 0) vtable address --
+   2 | void Test20::C::f() [pure]
+   3 | void Test20::A::g()
+   4 | void Test20::C::h()
+   5 | offset_to_top (-8)
+   6 | Test20::C RTTI
+       -- (Test20::A, 8) vtable address --
+       -- (Test20::B, 8) vtable address --
+   7 | void Test20::C::f() [pure]
+   8 | void Test20::A::g()
+
+VTable indices for 'Test20::C' (2 entries).
+    0 | void Test20::C::f()
+    2 | void Test20::C::h()
+
+Vtable for 'Test21::F' (16 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (0)
+   2 | vbase_offset (0)
+   3 | vbase_offset (0)
+   4 | vbase_offset (0)
+   5 | vcall_offset (0)
+   6 | offset_to_top (0)
+   7 | Test21::F RTTI
+       -- (Test21::A, 0) vtable address --
+       -- (Test21::B, 0) vtable address --
+       -- (Test21::C, 0) vtable address --
+       -- (Test21::D, 0) vtable address --
+       -- (Test21::F, 0) vtable address --
+   8 | void Test21::F::f()
+   9 | vbase_offset (-8)
+  10 | vbase_offset (-8)
+  11 | vbase_offset (-8)
+  12 | vcall_offset (-8)
+  13 | offset_to_top (-8)
+  14 | Test21::F RTTI
+       -- (Test21::E, 8) vtable address --
+  15 | [unused] void Test21::F::f()
+
+Virtual base offset offsets for 'Test21::F' (5 entries).
+   Test21::A | -32
+   Test21::B | -40
+   Test21::C | -48
+   Test21::D | -56
+   Test21::E | -64
+
+Thunks for 'void Test21::F::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test21::F' (1 entries).
+    0 | void Test21::F::f()
+
+Vtable for 'Test22::C' (8 entries).
+   0 | vbase_offset (16)
+   1 | vbase_offset (12)
+   2 | offset_to_top (0)
+   3 | Test22::C RTTI
+       -- (Test22::C, 0) vtable address --
+   4 | void Test22::C::f()
+   5 | vbase_offset (-4)
+   6 | offset_to_top (-16)
+   7 | Test22::C RTTI
+       -- (Test22::V2, 16) vtable address --
+
+Virtual base offset offsets for 'Test22::C' (2 entries).
+   Test22::V1 | -24
+   Test22::V2 | -32
+
+VTable indices for 'Test22::C' (1 entries).
+    0 | void Test22::C::f()
+
+Vtable for 'Test24::D' (10 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test24::D RTTI
+       -- (Test24::A, 0) vtable address --
+       -- (Test24::B, 0) vtable address --
+       -- (Test24::D, 0) vtable address --
+   4 | void Test24::D::f()
+   5 | vbase_offset (-8)
+   6 | vcall_offset (-8)
+   7 | offset_to_top (-8)
+   8 | Test24::D RTTI
+       -- (Test24::C, 8) vtable address --
+   9 | [unused] void Test24::D::f()
+
+Virtual base offset offsets for 'Test24::D' (1 entry).
+   Test24::A | -32
+
+Thunks for 'void Test24::D::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test24::D' (1 entries).
+    0 | void Test24::D::f()
+
+Vtable for 'Test25::C' (11 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test25::C RTTI
+       -- (Test25::A, 0) vtable address --
+       -- (Test25::C, 0) vtable address --
+       -- (Test25::V, 0) vtable address --
+   4 | void Test25::V::f()
+   5 | void Test25::C::g()
+   6 | vbase_offset (-8)
+   7 | vcall_offset (-8)
+   8 | offset_to_top (-8)
+   9 | Test25::C RTTI
+       -- (Test25::B, 8) vtable address --
+  10 | [unused] void Test25::V::f()
+
+Virtual base offset offsets for 'Test25::C' (1 entry).
+   Test25::V | -32
+
+VTable indices for 'Test25::C' (1 entries).
+    1 | void Test25::C::g()
+
+Vtable for 'Test26::D' (15 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (8)
+   2 | vbase_offset (0)
+   3 | vcall_offset (0)
+   4 | offset_to_top (0)
+   5 | Test26::D RTTI
+       -- (Test26::B, 0) vtable address --
+       -- (Test26::D, 0) vtable address --
+   6 | void Test26::B::c()
+   7 | void Test26::D::d()
+   8 | vcall_offset (0)
+   9 | vbase_offset (0)
+  10 | vcall_offset (0)
+  11 | offset_to_top (-8)
+  12 | Test26::D RTTI
+       -- (Test26::A, 8) vtable address --
+       -- (Test26::C, 8) vtable address --
+  13 | void Test26::A::a()
+  14 | void Test26::C::b()
+
+Virtual base offset offsets for 'Test26::D' (3 entries).
+   Test26::A | -48
+   Test26::B | -32
+   Test26::C | -40
+
+VTable indices for 'Test26::D' (1 entries).
+    1 | void Test26::D::d()
+
+Vtable for 'Test27::E' (13 entries).
+   0 | vbase_offset (16)
+   1 | offset_to_top (0)
+   2 | Test27::E RTTI
+       -- (Test27::A, 0) vtable address --
+       -- (Test27::D, 0) vtable address --
+       -- (Test27::E, 0) vtable address --
+   3 | void Test27::A::a()
+   4 | void Test27::D::d()
+   5 | void Test27::E::e()
+   6 | offset_to_top (-8)
+   7 | Test27::E RTTI
+       -- (Test27::C, 8) vtable address --
+   8 | void Test27::C::c()
+   9 | vcall_offset (0)
+  10 | offset_to_top (-16)
+  11 | Test27::E RTTI
+       -- (Test27::B, 16) vtable address --
+  12 | void Test27::B::b()
+
+Virtual base offset offsets for 'Test27::E' (1 entry).
+   Test27::B | -24
+
+VTable indices for 'Test27::E' (1 entries).
+    2 | void Test27::E::e()
+
+Vtable for 'Test28::E' (14 entries).
+   0 | vbase_offset (8)
+   1 | offset_to_top (0)
+   2 | Test28::E RTTI
+       -- (Test28::D, 0) vtable address --
+       -- (Test28::E, 0) vtable address --
+   3 | void Test28::E::e()
+   4 | vcall_offset (8)
+   5 | vcall_offset (0)
+   6 | vcall_offset (0)
+   7 | offset_to_top (-8)
+   8 | Test28::E RTTI
+       -- (Test28::A, 8) vtable address --
+       -- (Test28::C, 8) vtable address --
+   9 | void Test28::A::a()
+  10 | void Test28::C::c()
+  11 | offset_to_top (-16)
+  12 | Test28::E RTTI
+       -- (Test28::B, 16) vtable address --
+  13 | void Test28::B::b()
+
+Virtual base offset offsets for 'Test28::E' (1 entry).
+   Test28::C | -24
+
+VTable indices for 'Test28::E' (1 entries).
+    0 | void Test28::E::e()
+
+Vtable for 'Test29::B' (6 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test29::B RTTI
+       -- (Test29::A, 0) vtable address --
+       -- (Test29::B, 0) vtable address --
+   4 | Test29::V2 *Test29::B::f()
+       [return adjustment: 0 non-virtual, -24 vbase offset offset]
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+   5 | Test29::V2 *Test29::B::f()
+
+Virtual base offset offsets for 'Test29::B' (1 entry).
+   Test29::A | -32
+
+Thunks for 'Test29::V2 *Test29::B::f()' (1 entry).
+   0 | return adjustment: 0 non-virtual, -24 vbase offset offset
+       this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test29::B' (1 entries).
+    1 | Test29::V2 *Test29::B::f()
+
+Vtable for 'Test30::F' (11 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (0)
+   2 | vbase_offset (8)
+   3 | vcall_offset (0)
+   4 | offset_to_top (0)
+   5 | Test30::F RTTI
+       -- (Test30::C, 0) vtable address --
+       -- (Test30::E, 0) vtable address --
+       -- (Test30::F, 0) vtable address --
+   6 | void Test30::F::f()
+   7 | vbase_offset (-8)
+   8 | vbase_offset (-8)
+   9 | offset_to_top (-8)
+  10 | Test30::F RTTI
+       -- (Test30::B, 8) vtable address --
+       -- (Test30::D, 8) vtable address --
+
+Virtual base offset offsets for 'Test30::F' (3 entries).
+   Test30::A | -48
+   Test30::C | -40
+   Test30::D | -32
+
+Thunks for 'void Test30::F::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test30::F' (1 entries).
+    0 | void Test30::F::f()
+
+Vtable for 'Test31::D' (11 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (8)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test31::D RTTI
+       -- (Test31::B, 0) vtable address --
+       -- (Test31::D, 0) vtable address --
+   5 | void Test31::D::f()
+   6 | vbase_offset (-8)
+   7 | vcall_offset (-8)
+   8 | offset_to_top (-8)
+   9 | Test31::D RTTI
+       -- (Test31::C, 8) vtable address --
+  10 | void Test31::D::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Virtual base offset offsets for 'Test31::D' (2 entries).
+   Test31::B | -40
+   Test31::C | -32
+
+Thunks for 'void Test31::D::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test31::D' (1 entries).
+    0 | void Test31::D::f()
+
+Vtable for 'Test32::E' (12 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (8)
+   2 | vbase_offset (8)
+   3 | offset_to_top (0)
+   4 | Test32::E RTTI
+       -- (Test32::A, 0) vtable address --
+       -- (Test32::C, 0) vtable address --
+       -- (Test32::E, 0) vtable address --
+   5 | void Test32::E::f()
+   6 | vbase_offset (0)
+   7 | vbase_offset (0)
+   8 | vcall_offset (-8)
+   9 | offset_to_top (-8)
+  10 | Test32::E RTTI
+       -- (Test32::A, 8) vtable address --
+       -- (Test32::B, 8) vtable address --
+       -- (Test32::D, 8) vtable address --
+  11 | void Test32::E::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Virtual base offset offsets for 'Test32::E' (3 entries).
+   Test32::A | -32
+   Test32::B | -24
+   Test32::D | -40
+
+Thunks for 'void Test32::E::f()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test32::E' (1 entries).
+    0 | void Test32::E::f()
+
+Vtable for 'Test33::F' (30 entries).
+   0 | vbase_offset (24)
+   1 | vbase_offset (16)
+   2 | vbase_offset (16)
+   3 | vbase_offset (8)
+   4 | offset_to_top (0)
+   5 | Test33::F RTTI
+       -- (Test33::A, 0) vtable address --
+       -- (Test33::F, 0) vtable address --
+   6 | void Test33::A::a()
+   7 | void Test33::F::f()
+   8 | vcall_offset (0)
+   9 | vcall_offset (0)
+  10 | vbase_offset (16)
+  11 | vbase_offset (8)
+  12 | vbase_offset (8)
+  13 | offset_to_top (-8)
+  14 | Test33::F RTTI
+       -- (Test33::A, 8) vtable address --
+       -- (Test33::E, 8) vtable address --
+  15 | void Test33::A::a()
+  16 | void Test33::E::e()
+  17 | vbase_offset (0)
+  18 | vcall_offset (0)
+  19 | vbase_offset (8)
+  20 | vbase_offset (0)
+  21 | vcall_offset (0)
+  22 | offset_to_top (-16)
+  23 | Test33::F RTTI
+       -- (Test33::A, 16) vtable address --
+       -- (Test33::C, 16) vtable address --
+       -- (Test33::D, 16) vtable address --
+  24 | void Test33::A::a()
+  25 | void Test33::C::c()
+  26 | vcall_offset (0)
+  27 | offset_to_top (-24)
+  28 | Test33::F RTTI
+       -- (Test33::B, 24) vtable address --
+  29 | void Test33::B::b()
+
+Virtual base offset offsets for 'Test33::F' (4 entries).
+   Test33::A | -40
+   Test33::B | -48
+   Test33::C | -32
+   Test33::E | -24
+
+VTable indices for 'Test33::F' (1 entries).
+    1 | void Test33::F::f()
+
+Vtable for 'Test34::F' (23 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (8)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test34::F RTTI
+       -- (Test34::A, 0) vtable address --
+       -- (Test34::E, 0) vtable address --
+       -- (Test34::F, 0) vtable address --
+   5 | void Test34::A::a()
+   6 | void Test34::E::e()
+   7 | void Test34::F::f()
+   8 | vcall_offset (8)
+   9 | vcall_offset (0)
+  10 | vbase_offset (-8)
+  11 | offset_to_top (-8)
+  12 | Test34::F RTTI
+       -- (Test34::A, 8) vtable address --
+       -- (Test34::D, 8) vtable address --
+  13 | void Test34::A::a()
+  14 | vbase_offset (-16)
+  15 | vcall_offset (-16)
+  16 | offset_to_top (-16)
+  17 | Test34::F RTTI
+       -- (Test34::B, 16) vtable address --
+       -- (Test34::C, 16) vtable address --
+  18 | [unused] void Test34::A::a()
+  19 | void Test34::C::c()
+  20 | offset_to_top (-24)
+  21 | Test34::F RTTI
+       -- (Test34::A, 24) vtable address --
+  22 | void Test34::A::a()
+
+Virtual base offset offsets for 'Test34::F' (2 entries).
+   Test34::A | -40
+   Test34::D | -32
+
+VTable indices for 'Test34::F' (1 entries).
+    2 | void Test34::F::f()
+
+Vtable for 'Test35::H' (32 entries).
+   0 | vbase_offset (32)
+   1 | vbase_offset (0)
+   2 | vcall_offset (0)
+   3 | vcall_offset (0)
+   4 | vbase_offset (16)
+   5 | vbase_offset (8)
+   6 | offset_to_top (0)
+   7 | Test35::H RTTI
+       -- (Test35::C, 0) vtable address --
+       -- (Test35::D, 0) vtable address --
+       -- (Test35::F, 0) vtable address --
+       -- (Test35::H, 0) vtable address --
+   8 | void Test35::C::c()
+   9 | void Test35::D::d()
+  10 | void Test35::H::h()
+  11 | vbase_offset (0)
+  12 | vbase_offset (24)
+  13 | vcall_offset (0)
+  14 | vbase_offset (8)
+  15 | offset_to_top (-8)
+  16 | Test35::H RTTI
+       -- (Test35::B, 8) vtable address --
+       -- (Test35::G, 8) vtable address --
+  17 | void Test35::B::b()
+  18 | vcall_offset (0)
+  19 | offset_to_top (-16)
+  20 | Test35::H RTTI
+       -- (Test35::A, 16) vtable address --
+  21 | void Test35::A::a()
+  22 | vcall_offset (0)
+  23 | vcall_offset (0)
+  24 | vcall_offset (0)
+  25 | vbase_offset (-16)
+  26 | vbase_offset (-24)
+  27 | offset_to_top (-32)
+  28 | Test35::H RTTI
+       -- (Test35::C, 32) vtable address --
+       -- (Test35::D, 32) vtable address --
+       -- (Test35::E, 32) vtable address --
+  29 | void Test35::C::c()
+  30 | void Test35::D::d()
+  31 | void Test35::E::e()
+
+Virtual base offset offsets for 'Test35::H' (4 entries).
+   Test35::A | -32
+   Test35::B | -24
+   Test35::D | -56
+   Test35::E | -64
+
+VTable indices for 'Test35::H' (1 entries).
+    2 | void Test35::H::h()
+
+Vtable for 'Test36::D' (12 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (8)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test36::D RTTI
+       -- (Test36::C, 0) vtable address --
+       -- (Test36::D, 0) vtable address --
+   5 | void Test36::C::f()
+   6 | void Test36::D::g()
+   7 | vbase_offset (0)
+   8 | vcall_offset (-8)
+   9 | offset_to_top (-8)
+  10 | Test36::D RTTI
+       -- (Test36::A, 8) vtable address --
+       -- (Test36::B, 8) vtable address --
+  11 | void Test36::C::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Virtual base offset offsets for 'Test36::D' (2 entries).
+   Test36::A | -32
+   Test36::B | -40
+
+VTable indices for 'Test36::D' (1 entries).
+    1 | void Test36::D::g()
+
+Vtable for 'Test37::C' (6 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test37::C RTTI
+       -- (Test37::A, 0) vtable address --
+       -- (Test37::B, 0) vtable address --
+       -- (Test37::C, 0) vtable address --
+   4 | Test37::C *Test37::C::f()
+       [return adjustment: 0 non-virtual, -32 vbase offset offset]
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+   5 | Test37::C *Test37::C::f()
+
+Virtual base offset offsets for 'Test37::C' (1 entry).
+   Test37::A | -32
+
+Thunks for 'Test37::C *Test37::C::f()' (1 entry).
+   0 | return adjustment: 0 non-virtual, -32 vbase offset offset
+       this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test37::C' (1 entries).
+    1 | Test37::C *Test37::C::f()
+
+Vtable for 'Test38::B' (7 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test38::B RTTI
+       -- (Test38::A, 0) vtable address --
+       -- (Test38::B, 0) vtable address --
+   5 | void *Test38::B::foo()
+   6 | const void *Test38::B::foo() const
+
+Virtual base offset offsets for 'Test38::B' (1 entry).
+   Test38::A | -40
+
+Thunks for 'const void *Test38::B::foo() const' (1 entry).
+   0 | this adjustment: 0 non-virtual, -32 vcall offset offset
+
+Thunks for 'void *Test38::B::foo()' (1 entry).
+   0 | this adjustment: 0 non-virtual, -24 vcall offset offset
+
+VTable indices for 'Test38::B' (2 entries).
+    0 | void *Test38::B::foo()
+    1 | const void *Test38::B::foo() const
+
+/home/jazouani/llvm/llvm-3.2/tools/clang/test/CodeGenCXX/vtable-layout.cpp:1734:26: warning: deleted function definitions are a C++11 extension
+    virtual void foo() = delete;
+                         ^
+Vtable for 'Test39::B' (4 entries).
+   0 | offset_to_top (0)
+   1 | Test39::B RTTI
+       -- (Test39::A, 0) vtable address --
+       -- (Test39::B, 0) vtable address --
+   2 | void Test39::A::foo() [deleted]
+   3 | void Test39::B::foo2()
+
+VTable indices for 'Test39::B' (1 entries).
+    1 | void Test39::B::foo2()
+
+Construction vtable for ('Test11::B', 8) in 'Test11::C' (3 entries).
+   0 | vbase_offset (16)
+   1 | offset_to_top (0)
+   2 | Test11::B RTTI
+       -- (Test11::B, 8) vtable address --
+
+Construction vtable for ('Test13::B', 0) in 'Test13::C' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test13::B RTTI
+       -- (Test13::A, 0) vtable address --
+       -- (Test13::B, 0) vtable address --
+   4 | void Test13::B::f()
+
+Construction vtable for ('Test14::C', 0) in 'Test14::D' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test14::C RTTI
+       -- (Test14::A, 0) vtable address --
+       -- (Test14::B, 0) vtable address --
+       -- (Test14::C, 0) vtable address --
+   4 | void Test14::A::f()
+
+Construction vtable for ('Test15::C', 8) in 'Test15::D' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test15::C RTTI
+       -- (Test15::B, 8) vtable address --
+       -- (Test15::C, 8) vtable address --
+   4 | void Test15::B::b()
+
+Construction vtable for ('Test17::D', 0) in 'Test17::E' (12 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (0)
+   2 | vbase_offset (0)
+   3 | vcall_offset (0)
+   4 | offset_to_top (0)
+   5 | Test17::D RTTI
+       -- (Test17::A, 0) vtable address --
+       -- (Test17::B, 0) vtable address --
+       -- (Test17::D, 0) vtable address --
+   6 | void Test17::D::f()
+   7 | vbase_offset (-8)
+   8 | vcall_offset (-8)
+   9 | offset_to_top (-8)
+  10 | Test17::D RTTI
+       -- (Test17::C, 8) vtable address --
+  11 | void Test17::D::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Construction vtable for ('Test17::B', 0) in 'Test17::E' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test17::B RTTI
+       -- (Test17::A, 0) vtable address --
+       -- (Test17::B, 0) vtable address --
+   4 | void Test17::B::f()
+
+Construction vtable for ('Test17::C', 8) in 'Test17::E' (9 entries).
+   0 | vbase_offset (-8)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test17::C RTTI
+       -- (Test17::C, 8) vtable address --
+   4 | void Test17::C::f()
+   5 | vcall_offset (8)
+   6 | offset_to_top (8)
+   7 | Test17::C RTTI
+       -- (Test17::A, 0) vtable address --
+   8 | void Test17::C::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Construction vtable for ('Test18::B', 0) in 'Test18::D' (7 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test18::B RTTI
+       -- (Test18::A, 0) vtable address --
+       -- (Test18::B, 0) vtable address --
+   5 | void Test18::B::f()
+   6 | void Test18::A::g()
+
+Construction vtable for ('Test18::C', 8) in 'Test18::D' (20 entries).
+   0 | vcall_offset (0)
+   1 | vcall_offset (0)
+   2 | vbase_offset (-8)
+   3 | offset_to_top (0)
+   4 | Test18::C RTTI
+       -- (Test18::A, 8) vtable address --
+       -- (Test18::C, 8) vtable address --
+   5 | void Test18::A::f()
+   6 | void Test18::C::g()
+   7 | vbase_offset (-16)
+   8 | vcall_offset (-8)
+   9 | vcall_offset (0)
+  10 | offset_to_top (-8)
+  11 | Test18::C RTTI
+       -- (Test18::B, 16) vtable address --
+  12 | void Test18::B::f()
+  13 | [unused] void Test18::C::g()
+  14 | vcall_offset (8)
+  15 | vcall_offset (16)
+  16 | offset_to_top (8)
+  17 | Test18::C RTTI
+       -- (Test18::A, 0) vtable address --
+  18 | void Test18::B::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+  19 | void Test18::C::g()
+       [this adjustment: 0 non-virtual, -32 vcall offset offset]
+
+Construction vtable for ('Test18::B', 16) in 'Test18::D' (13 entries).
+   0 | vbase_offset (-16)
+   1 | vcall_offset (-16)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test18::B RTTI
+       -- (Test18::B, 16) vtable address --
+   5 | void Test18::B::f()
+   6 | [unused] void Test18::A::g()
+   7 | vcall_offset (0)
+   8 | vcall_offset (16)
+   9 | offset_to_top (16)
+  10 | Test18::B RTTI
+       -- (Test18::A, 0) vtable address --
+  11 | void Test18::B::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+  12 | void Test18::A::g()
+
+Construction vtable for ('Test21::D', 0) in 'Test21::F' (7 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (0)
+   2 | vbase_offset (0)
+   3 | vcall_offset (0)
+   4 | offset_to_top (0)
+   5 | Test21::D RTTI
+       -- (Test21::A, 0) vtable address --
+       -- (Test21::B, 0) vtable address --
+       -- (Test21::C, 0) vtable address --
+       -- (Test21::D, 0) vtable address --
+   6 | void Test21::A::f()
+
+Construction vtable for ('Test21::C', 0) in 'Test21::F' (6 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (0)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test21::C RTTI
+       -- (Test21::A, 0) vtable address --
+       -- (Test21::B, 0) vtable address --
+       -- (Test21::C, 0) vtable address --
+   5 | void Test21::A::f()
+
+Construction vtable for ('Test21::B', 0) in 'Test21::F' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test21::B RTTI
+       -- (Test21::A, 0) vtable address --
+       -- (Test21::B, 0) vtable address --
+   4 | void Test21::A::f()
+
+Construction vtable for ('Test21::E', 8) in 'Test21::F' (13 entries).
+   0 | vbase_offset (-8)
+   1 | vbase_offset (-8)
+   2 | vbase_offset (-8)
+   3 | vcall_offset (-8)
+   4 | offset_to_top (0)
+   5 | Test21::E RTTI
+       -- (Test21::E, 8) vtable address --
+   6 | [unused] void Test21::A::f()
+   7 | vbase_offset (0)
+   8 | vbase_offset (0)
+   9 | vcall_offset (0)
+  10 | offset_to_top (8)
+  11 | Test21::E RTTI
+       -- (Test21::A, 0) vtable address --
+       -- (Test21::B, 0) vtable address --
+       -- (Test21::C, 0) vtable address --
+  12 | void Test21::A::f()
+
+Construction vtable for ('Test22::V2', 16) in 'Test22::C' (3 entries).
+   0 | vbase_offset (-4)
+   1 | offset_to_top (0)
+   2 | Test22::V2 RTTI
+       -- (Test22::V2, 16) vtable address --
+
+Construction vtable for ('Test24::B', 0) in 'Test24::D' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test24::B RTTI
+       -- (Test24::A, 0) vtable address --
+       -- (Test24::B, 0) vtable address --
+   4 | void Test24::A::f()
+
+Construction vtable for ('Test24::C', 8) in 'Test24::D' (9 entries).
+   0 | vbase_offset (-8)
+   1 | vcall_offset (-8)
+   2 | offset_to_top (0)
+   3 | Test24::C RTTI
+       -- (Test24::C, 8) vtable address --
+   4 | [unused] void Test24::A::f()
+   5 | vcall_offset (0)
+   6 | offset_to_top (8)
+   7 | Test24::C RTTI
+       -- (Test24::A, 0) vtable address --
+   8 | void Test24::A::f()
+
+Construction vtable for ('Test25::A', 0) in 'Test25::C' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test25::A RTTI
+       -- (Test25::A, 0) vtable address --
+       -- (Test25::V, 0) vtable address --
+   4 | void Test25::V::f()
+
+Construction vtable for ('Test25::B', 8) in 'Test25::C' (9 entries).
+   0 | vbase_offset (-8)
+   1 | vcall_offset (-8)
+   2 | offset_to_top (0)
+   3 | Test25::B RTTI
+       -- (Test25::B, 8) vtable address --
+   4 | [unused] void Test25::V::f()
+   5 | vcall_offset (0)
+   6 | offset_to_top (8)
+   7 | Test25::B RTTI
+       -- (Test25::V, 0) vtable address --
+   8 | void Test25::V::f()
+
+Construction vtable for ('Test26::C', 8) in 'Test26::D' (7 entries).
+   0 | vcall_offset (0)
+   1 | vbase_offset (0)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test26::C RTTI
+       -- (Test26::A, 8) vtable address --
+       -- (Test26::C, 8) vtable address --
+   5 | void Test26::A::a()
+   6 | void Test26::C::b()
+
+Construction vtable for ('Test27::D', 0) in 'Test27::E' (9 entries).
+   0 | vbase_offset (16)
+   1 | offset_to_top (0)
+   2 | Test27::D RTTI
+       -- (Test27::A, 0) vtable address --
+       -- (Test27::D, 0) vtable address --
+   3 | void Test27::A::a()
+   4 | void Test27::D::d()
+   5 | vcall_offset (0)
+   6 | offset_to_top (-16)
+   7 | Test27::D RTTI
+       -- (Test27::B, 16) vtable address --
+   8 | void Test27::B::b()
+
+Construction vtable for ('Test28::D', 0) in 'Test28::E' (13 entries).
+   0 | vbase_offset (8)
+   1 | offset_to_top (0)
+   2 | Test28::D RTTI
+       -- (Test28::D, 0) vtable address --
+   3 | vcall_offset (8)
+   4 | vcall_offset (0)
+   5 | vcall_offset (0)
+   6 | offset_to_top (-8)
+   7 | Test28::D RTTI
+       -- (Test28::A, 8) vtable address --
+       -- (Test28::C, 8) vtable address --
+   8 | void Test28::A::a()
+   9 | void Test28::C::c()
+  10 | offset_to_top (-16)
+  11 | Test28::D RTTI
+       -- (Test28::B, 16) vtable address --
+  12 | void Test28::B::b()
+
+Construction vtable for ('Test30::E', 0) in 'Test30::F' (11 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (0)
+   2 | vbase_offset (8)
+   3 | vcall_offset (0)
+   4 | offset_to_top (0)
+   5 | Test30::E RTTI
+       -- (Test30::C, 0) vtable address --
+       -- (Test30::E, 0) vtable address --
+   6 | void Test30::C::f()
+   7 | vbase_offset (-8)
+   8 | vbase_offset (-8)
+   9 | offset_to_top (-8)
+  10 | Test30::E RTTI
+       -- (Test30::B, 8) vtable address --
+       -- (Test30::D, 8) vtable address --
+
+Construction vtable for ('Test30::D', 8) in 'Test30::F' (8 entries).
+   0 | vbase_offset (-8)
+   1 | vbase_offset (-8)
+   2 | offset_to_top (0)
+   3 | Test30::D RTTI
+       -- (Test30::B, 8) vtable address --
+       -- (Test30::D, 8) vtable address --
+   4 | vcall_offset (0)
+   5 | offset_to_top (8)
+   6 | Test30::D RTTI
+       -- (Test30::C, 0) vtable address --
+   7 | void Test30::C::f()
+
+Construction vtable for ('Test30::B', 8) in 'Test30::F' (3 entries).
+   0 | vbase_offset (-8)
+   1 | offset_to_top (0)
+   2 | Test30::B RTTI
+       -- (Test30::B, 8) vtable address --
+
+Construction vtable for ('Test31::C', 8) in 'Test31::D' (9 entries).
+   0 | vbase_offset (-8)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test31::C RTTI
+       -- (Test31::C, 8) vtable address --
+   4 | void Test31::C::f()
+   5 | vcall_offset (8)
+   6 | offset_to_top (8)
+   7 | Test31::C RTTI
+       -- (Test31::B, 0) vtable address --
+   8 | void Test31::C::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Construction vtable for ('Test32::C', 0) in 'Test32::E' (10 entries).
+   0 | vbase_offset (8)
+   1 | vbase_offset (8)
+   2 | offset_to_top (0)
+   3 | Test32::C RTTI
+       -- (Test32::A, 0) vtable address --
+       -- (Test32::C, 0) vtable address --
+   4 | void Test32::A::f()
+   5 | vbase_offset (0)
+   6 | vcall_offset (0)
+   7 | offset_to_top (-8)
+   8 | Test32::C RTTI
+       -- (Test32::A, 8) vtable address --
+       -- (Test32::B, 8) vtable address --
+   9 | void Test32::A::f()
+
+Construction vtable for ('Test32::B', 8) in 'Test32::E' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test32::B RTTI
+       -- (Test32::A, 8) vtable address --
+       -- (Test32::B, 8) vtable address --
+   4 | void Test32::A::f()
+
+Construction vtable for ('Test32::D', 8) in 'Test32::E' (6 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (0)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test32::D RTTI
+       -- (Test32::A, 8) vtable address --
+       -- (Test32::B, 8) vtable address --
+       -- (Test32::D, 8) vtable address --
+   5 | void Test32::A::f()
+
+Construction vtable for ('Test33::E', 8) in 'Test33::F' (22 entries).
+   0 | vcall_offset (0)
+   1 | vcall_offset (0)
+   2 | vbase_offset (16)
+   3 | vbase_offset (8)
+   4 | vbase_offset (8)
+   5 | offset_to_top (0)
+   6 | Test33::E RTTI
+       -- (Test33::A, 8) vtable address --
+       -- (Test33::E, 8) vtable address --
+   7 | void Test33::A::a()
+   8 | void Test33::E::e()
+   9 | vbase_offset (0)
+  10 | vcall_offset (0)
+  11 | vbase_offset (8)
+  12 | vbase_offset (0)
+  13 | vcall_offset (0)
+  14 | offset_to_top (-8)
+  15 | Test33::E RTTI
+       -- (Test33::A, 16) vtable address --
+       -- (Test33::C, 16) vtable address --
+       -- (Test33::D, 16) vtable address --
+  16 | void Test33::A::a()
+  17 | void Test33::C::c()
+  18 | vcall_offset (0)
+  19 | offset_to_top (-16)
+  20 | Test33::E RTTI
+       -- (Test33::B, 24) vtable address --
+  21 | void Test33::B::b()
+
+Construction vtable for ('Test33::D', 16) in 'Test33::F' (13 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | vbase_offset (8)
+   3 | vbase_offset (0)
+   4 | vcall_offset (0)
+   5 | offset_to_top (0)
+   6 | Test33::D RTTI
+       -- (Test33::A, 16) vtable address --
+       -- (Test33::C, 16) vtable address --
+       -- (Test33::D, 16) vtable address --
+   7 | void Test33::A::a()
+   8 | void Test33::C::c()
+   9 | vcall_offset (0)
+  10 | offset_to_top (-8)
+  11 | Test33::D RTTI
+       -- (Test33::B, 24) vtable address --
+  12 | void Test33::B::b()
+
+Construction vtable for ('Test33::C', 16) in 'Test33::F' (12 entries).
+   0 | vcall_offset (0)
+   1 | vbase_offset (8)
+   2 | vbase_offset (0)
+   3 | vcall_offset (0)
+   4 | offset_to_top (0)
+   5 | Test33::C RTTI
+       -- (Test33::A, 16) vtable address --
+       -- (Test33::C, 16) vtable address --
+   6 | void Test33::A::a()
+   7 | void Test33::C::c()
+   8 | vcall_offset (0)
+   9 | offset_to_top (-8)
+  10 | Test33::C RTTI
+       -- (Test33::B, 24) vtable address --
+  11 | void Test33::B::b()
+
+Construction vtable for ('Test34::E', 0) in 'Test34::F' (22 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (8)
+   2 | vcall_offset (0)
+   3 | offset_to_top (0)
+   4 | Test34::E RTTI
+       -- (Test34::A, 0) vtable address --
+       -- (Test34::E, 0) vtable address --
+   5 | void Test34::A::a()
+   6 | void Test34::E::e()
+   7 | vcall_offset (8)
+   8 | vcall_offset (0)
+   9 | vbase_offset (-8)
+  10 | offset_to_top (-8)
+  11 | Test34::E RTTI
+       -- (Test34::A, 8) vtable address --
+       -- (Test34::D, 8) vtable address --
+  12 | void Test34::A::a()
+  13 | vbase_offset (-16)
+  14 | vcall_offset (-16)
+  15 | offset_to_top (-16)
+  16 | Test34::E RTTI
+       -- (Test34::B, 16) vtable address --
+       -- (Test34::C, 16) vtable address --
+  17 | [unused] void Test34::A::a()
+  18 | void Test34::C::c()
+  19 | offset_to_top (-24)
+  20 | Test34::E RTTI
+       -- (Test34::A, 24) vtable address --
+  21 | void Test34::A::a()
+
+Construction vtable for ('Test34::D', 8) in 'Test34::F' (16 entries).
+   0 | vcall_offset (8)
+   1 | vcall_offset (0)
+   2 | vbase_offset (-8)
+   3 | offset_to_top (0)
+   4 | Test34::D RTTI
+       -- (Test34::A, 8) vtable address --
+       -- (Test34::D, 8) vtable address --
+   5 | void Test34::A::a()
+   6 | vbase_offset (-16)
+   7 | vcall_offset (-16)
+   8 | offset_to_top (-8)
+   9 | Test34::D RTTI
+       -- (Test34::B, 16) vtable address --
+       -- (Test34::C, 16) vtable address --
+  10 | [unused] void Test34::A::a()
+  11 | void Test34::C::c()
+  12 | vcall_offset (0)
+  13 | offset_to_top (8)
+  14 | Test34::D RTTI
+       -- (Test34::A, 0) vtable address --
+  15 | void Test34::A::a()
+
+Construction vtable for ('Test34::C', 16) in 'Test34::F' (10 entries).
+   0 | vbase_offset (-16)
+   1 | vcall_offset (-16)
+   2 | offset_to_top (0)
+   3 | Test34::C RTTI
+       -- (Test34::B, 16) vtable address --
+       -- (Test34::C, 16) vtable address --
+   4 | [unused] void Test34::A::a()
+   5 | void Test34::C::c()
+   6 | vcall_offset (0)
+   7 | offset_to_top (16)
+   8 | Test34::C RTTI
+       -- (Test34::A, 0) vtable address --
+   9 | void Test34::A::a()
+
+Construction vtable for ('Test34::B', 16) in 'Test34::F' (9 entries).
+   0 | vbase_offset (-16)
+   1 | vcall_offset (-16)
+   2 | offset_to_top (0)
+   3 | Test34::B RTTI
+       -- (Test34::B, 16) vtable address --
+   4 | [unused] void Test34::A::a()
+   5 | vcall_offset (0)
+   6 | offset_to_top (16)
+   7 | Test34::B RTTI
+       -- (Test34::A, 0) vtable address --
+   8 | void Test34::A::a()
+
+Construction vtable for ('Test35::F', 0) in 'Test35::H' (18 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | vcall_offset (0)
+   3 | vbase_offset (16)
+   4 | vbase_offset (8)
+   5 | offset_to_top (0)
+   6 | Test35::F RTTI
+       -- (Test35::C, 0) vtable address --
+       -- (Test35::D, 0) vtable address --
+       -- (Test35::F, 0) vtable address --
+   7 | void Test35::C::c()
+   8 | void Test35::D::d()
+   9 | vcall_offset (0)
+  10 | vbase_offset (8)
+  11 | offset_to_top (-8)
+  12 | Test35::F RTTI
+       -- (Test35::B, 8) vtable address --
+  13 | void Test35::B::b()
+  14 | vcall_offset (0)
+  15 | offset_to_top (-16)
+  16 | Test35::F RTTI
+       -- (Test35::A, 16) vtable address --
+  17 | void Test35::A::a()
+
+Construction vtable for ('Test35::G', 8) in 'Test35::H' (21 entries).
+   0 | vbase_offset (0)
+   1 | vbase_offset (24)
+   2 | vcall_offset (0)
+   3 | vbase_offset (8)
+   4 | offset_to_top (0)
+   5 | Test35::G RTTI
+       -- (Test35::B, 8) vtable address --
+       -- (Test35::G, 8) vtable address --
+   6 | void Test35::B::b()
+   7 | vcall_offset (0)
+   8 | vcall_offset (0)
+   9 | vcall_offset (0)
+  10 | vbase_offset (-16)
+  11 | vbase_offset (-24)
+  12 | offset_to_top (-24)
+  13 | Test35::G RTTI
+       -- (Test35::C, 32) vtable address --
+       -- (Test35::D, 32) vtable address --
+       -- (Test35::E, 32) vtable address --
+  14 | void Test35::C::c()
+  15 | void Test35::D::d()
+  16 | void Test35::E::e()
+  17 | vcall_offset (0)
+  18 | offset_to_top (-8)
+  19 | Test35::G RTTI
+       -- (Test35::A, 16) vtable address --
+  20 | void Test35::A::a()
+
+Construction vtable for ('Test35::D', 0) in 'Test35::H' (17 entries).
+   0 | vcall_offset (0)
+   1 | vcall_offset (0)
+   2 | vbase_offset (16)
+   3 | vbase_offset (8)
+   4 | offset_to_top (0)
+   5 | Test35::D RTTI
+       -- (Test35::C, 0) vtable address --
+       -- (Test35::D, 0) vtable address --
+   6 | void Test35::C::c()
+   7 | void Test35::D::d()
+   8 | vcall_offset (0)
+   9 | vbase_offset (8)
+  10 | offset_to_top (-8)
+  11 | Test35::D RTTI
+       -- (Test35::B, 8) vtable address --
+  12 | void Test35::B::b()
+  13 | vcall_offset (0)
+  14 | offset_to_top (-16)
+  15 | Test35::D RTTI
+       -- (Test35::A, 16) vtable address --
+  16 | void Test35::A::a()
+
+Construction vtable for ('Test35::B', 8) in 'Test35::H' (9 entries).
+   0 | vcall_offset (0)
+   1 | vbase_offset (8)
+   2 | offset_to_top (0)
+   3 | Test35::B RTTI
+       -- (Test35::B, 8) vtable address --
+   4 | void Test35::B::b()
+   5 | vcall_offset (0)
+   6 | offset_to_top (-8)
+   7 | Test35::B RTTI
+       -- (Test35::A, 16) vtable address --
+   8 | void Test35::A::a()
+
+Construction vtable for ('Test35::E', 32) in 'Test35::H' (19 entries).
+   0 | vcall_offset (0)
+   1 | vcall_offset (0)
+   2 | vcall_offset (0)
+   3 | vbase_offset (-16)
+   4 | vbase_offset (-24)
+   5 | offset_to_top (0)
+   6 | Test35::E RTTI
+       -- (Test35::C, 32) vtable address --
+       -- (Test35::D, 32) vtable address --
+       -- (Test35::E, 32) vtable address --
+   7 | void Test35::C::c()
+   8 | void Test35::D::d()
+   9 | void Test35::E::e()
+  10 | vcall_offset (0)
+  11 | vbase_offset (8)
+  12 | offset_to_top (24)
+  13 | Test35::E RTTI
+       -- (Test35::B, 8) vtable address --
+  14 | void Test35::B::b()
+  15 | vcall_offset (0)
+  16 | offset_to_top (16)
+  17 | Test35::E RTTI
+       -- (Test35::A, 16) vtable address --
+  18 | void Test35::A::a()
+
+Construction vtable for ('Test35::D', 32) in 'Test35::H' (15 entries).
+   0 | vbase_offset (-16)
+   1 | vbase_offset (-24)
+   2 | offset_to_top (0)
+   3 | Test35::D RTTI
+       -- (Test35::C, 32) vtable address --
+       -- (Test35::D, 32) vtable address --
+   4 | void Test35::C::c()
+   5 | void Test35::D::d()
+   6 | vcall_offset (0)
+   7 | vbase_offset (8)
+   8 | offset_to_top (24)
+   9 | Test35::D RTTI
+       -- (Test35::B, 8) vtable address --
+  10 | void Test35::B::b()
+  11 | vcall_offset (0)
+  12 | offset_to_top (16)
+  13 | Test35::D RTTI
+       -- (Test35::A, 16) vtable address --
+  14 | void Test35::A::a()
+
+Construction vtable for ('Test36::C', 0) in 'Test36::D' (9 entries).
+   0 | vbase_offset (8)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test36::C RTTI
+       -- (Test36::C, 0) vtable address --
+   4 | void Test36::C::f()
+   5 | vcall_offset (-8)
+   6 | offset_to_top (-8)
+   7 | Test36::C RTTI
+       -- (Test36::A, 8) vtable address --
+   8 | void Test36::C::f()
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+
+Construction vtable for ('Test36::B', 8) in 'Test36::D' (5 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test36::B RTTI
+       -- (Test36::A, 8) vtable address --
+       -- (Test36::B, 8) vtable address --
+   4 | void Test36::A::f()
+
+Construction vtable for ('Test37::B', 0) in 'Test37::C' (6 entries).
+   0 | vbase_offset (0)
+   1 | vcall_offset (0)
+   2 | offset_to_top (0)
+   3 | Test37::B RTTI
+       -- (Test37::A, 0) vtable address --
+       -- (Test37::B, 0) vtable address --
+   4 | Test37::B *Test37::B::f()
+       [return adjustment: 0 non-virtual, -32 vbase offset offset]
+       [this adjustment: 0 non-virtual, -24 vcall offset offset]
+   5 | Test37::B *Test37::B::f()
+
+Vtable for 'Test23::D' (7 entries).
+   0 | vbase_offset (20)
+   1 | vbase_offset (24)
+   2 | offset_to_top (0)
+   3 | Test23::D RTTI
+       -- (Test23::C, 0) vtable address --
+       -- (Test23::D, 0) vtable address --
+   4 | vbase_offset (-4)
+   5 | offset_to_top (-24)
+   6 | Test23::D RTTI
+       -- (Test23::B, 24) vtable address --
+
+Virtual base offset offsets for 'Test23::D' (2 entries).
+   Test23::A | -32
+   Test23::B | -24
+
+
+Construction vtable for ('Test23::C', 0) in 'Test23::D' (7 entries).
+   0 | vbase_offset (20)
+   1 | vbase_offset (24)
+   2 | offset_to_top (0)
+   3 | Test23::C RTTI
+       -- (Test23::C, 0) vtable address --
+   4 | vbase_offset (-4)
+   5 | offset_to_top (-24)
+   6 | Test23::C RTTI
+       -- (Test23::B, 24) vtable address --
+
+Construction vtable for ('Test23::B', 24) in 'Test23::D' (3 entries).
+   0 | vbase_offset (-4)
+   1 | offset_to_top (0)
+   2 | Test23::B RTTI
+       -- (Test23::B, 24) vtable address --
+
+Vtable for 'Test23::C' (7 entries).
+   0 | vbase_offset (28)
+   1 | vbase_offset (16)
+   2 | offset_to_top (0)
+   3 | Test23::C RTTI
+       -- (Test23::C, 0) vtable address --
+   4 | vbase_offset (12)
+   5 | offset_to_top (-16)
+   6 | Test23::C RTTI
+       -- (Test23::B, 16) vtable address --
+
+Virtual base offset offsets for 'Test23::C' (2 entries).
+   Test23::A | -32
+   Test23::B | -24
+
+
+Construction vtable for ('Test23::B', 16) in 'Test23::C' (3 entries).
+   0 | vbase_offset (12)
+   1 | offset_to_top (0)
+   2 | Test23::B RTTI
+       -- (Test23::B, 16) vtable address --
+
+Vtable for 'Test23::B' (3 entries).
+   0 | vbase_offset (12)
+   1 | offset_to_top (0)
+   2 | Test23::B RTTI
+       -- (Test23::B, 0) vtable address --
+
+Virtual base offset offsets for 'Test23::B' (1 entry).
+   Test23::A | -24
+
+
+1 warning generated.

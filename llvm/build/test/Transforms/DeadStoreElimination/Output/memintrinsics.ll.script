@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/opt -S -dse < /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadStoreElimination/memintrinsics.ll | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck /home/jazouani/llvm/llvm-3.2/test/Transforms/DeadStoreElimination/memintrinsics.ll

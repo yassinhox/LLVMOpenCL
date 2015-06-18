@@ -1,0 +1,3 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-as: <stdin>:6:1: error: expected top-level entity
+alias i32 @anAlias
+^

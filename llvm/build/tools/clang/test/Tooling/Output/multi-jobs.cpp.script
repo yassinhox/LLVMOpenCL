@@ -1,0 +1,1 @@
+clang-check "/home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/multi-jobs.cpp" -- -no-integrated-as -c 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Tooling/multi-jobs.cpp

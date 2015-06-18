@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/clang  -ccc-print-options -working-directory "C:\Test" input 2>&1 | FileCheck /home/jazouani/llvm/llvm-3.2/tools/clang/test/Driver/working-directory.c

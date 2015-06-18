@@ -1,0 +1,1 @@
+/home/jazouani/llvm/build/Release+Asserts/bin/llvm-mc /home/jazouani/llvm/llvm-3.2/test/MC/Mips/mips-coprocessor-encodings.s -triple=mips64-unknown-freebsd -show-encoding | /home/jazouani/llvm/build/Release+Asserts/bin/FileCheck --check-prefix=MIPS64 /home/jazouani/llvm/llvm-3.2/test/MC/Mips/mips-coprocessor-encodings.s
